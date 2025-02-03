@@ -2,13 +2,13 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 
 #include <QApplication>
-#include <QtGlobal>
-
+#include <QCommandLineParser>
 #include <QIcon>
 #include <QQmlApplicationEngine>
 #include <QQmlContext>
 #include <QQuickStyle>
 #include <QUrl>
+#include <QtGlobal>
 #include <QtQml/QQmlExtensionPlugin>
 
 #include "version-chessament.h"
@@ -17,6 +17,8 @@
 #include <KLocalizedQmlContext>
 #include <KLocalizedString>
 #include <QCoroQml>
+
+#include "controller.h"
 
 #ifdef Q_OS_WINDOWS
 #include <QFont>
@@ -72,12 +74,27 @@ int main(int argc, char *argv[])
     KAboutData::setApplicationData(aboutData);
     QGuiApplication::setWindowIcon(QIcon::fromTheme(u"org.kde.chessament"_s));
 
+    QCommandLineParser parser;
+
+    QCommandLineOption trfFile("import-trf"_L1, i18n("Import Tournament Report File."), u"file"_s);
+    parser.addOption(trfFile);
+
+    aboutData.setupCommandLine(&parser);
+    parser.process(app);
+    aboutData.processCommandLine(&parser);
+
     QQmlApplicationEngine engine;
 
     QCoro::Qml::registerTypes();
 
     KLocalization::setupLocalizedContext(&engine);
     engine.loadFromModule("org.kde.chessament", u"Main"_s);
+
+    if (parser.isSet(trfFile)) {
+        const auto fileName = parser.value(trfFile);
+        auto *controller = engine.singletonInstance<Controller *>("org.kde.chessament", "Controller");
+        controller->importTrf(QUrl::fromLocalFile(fileName));
+    }
 
     if (engine.rootObjects().isEmpty()) {
         return -1;
