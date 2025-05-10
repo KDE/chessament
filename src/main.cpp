@@ -23,6 +23,7 @@
 #include "standingsmodel.h"
 
 #ifdef Q_OS_WINDOWS
+#include <QFont>
 #include <Windows.h>
 #endif
 
