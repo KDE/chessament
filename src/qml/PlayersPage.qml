@@ -71,24 +71,13 @@ TablePage {
             DelegateChoice {
                 column: PlayersModel.RatingRole
 
-                QQC2.TextField {
-                    required property var model
+                RatingField {}
+            }
 
-                    anchors.fill: parent
-                    text: model.displayName
-                    horizontalAlignment: TextInput.AlignHCenter
-                    verticalAlignment: TextInput.AlignVCenter
-                    validator: IntValidator {
-                        bottom: 0
-                        top: 4000
-                    }
+            DelegateChoice {
+                column: PlayersModel.NationalRatingRole
 
-                    Component.onCompleted: selectAll()
-
-                    TableView.onCommit: {
-                        model.displayName = text;
-                    }
-                }
+                RatingField {}
             }
 
             DelegateChoice {

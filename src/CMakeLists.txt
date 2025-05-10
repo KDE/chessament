@@ -10,6 +10,8 @@ ecm_add_qml_module(chessament_static
     GENERATE_PLUGIN_SOURCE
     VERSION 1.0
     QML_FILES
+        qml/components/RatingField.qml
+
         qml/Main.qml
         qml/TablePage.qml
         qml/TableDelegate.qml
