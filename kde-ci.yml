@@ -1,0 +1,20 @@
+# SPDX-FileCopyrightText: None
+# SPDX-License-Identifier: CC0-1.0
+
+Dependencies:
+  - 'on': ['Linux', 'FreeBSD', 'Windows']
+    'require':
+      'frameworks/extra-cmake-modules': '@latest-kf6'
+      'frameworks/kconfig': '@latest-kf6'
+      'frameworks/kcoreaddons': '@latest-kf6'
+      'frameworks/ki18n': '@latest-kf6'
+      'frameworks/kirigami': '@latest-kf6'
+      'frameworks/kiconthemes': '@latest-kf6'
+      'frameworks/kitemmodels': '@latest-kf6'
+      'frameworks/qqc2-desktop-style': '@latest-kf6'
+      'libraries/kirigami-addons': '@latest-kf6'
+      'third-party/qtkeychain': '@latest'
+      'third-party/qcoro': '@latest'
+
+Options:
+  require-passing-tests-on: ['@all']
