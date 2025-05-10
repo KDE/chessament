@@ -1,5 +1,5 @@
 {
-    "id": "dev.alcarazzam.chessament",
+    "id": "org.kde.chessament",
     "branch": "master",
     "runtime": "org.kde.Platform",
     "runtime-version": "6.8",
@@ -17,7 +17,6 @@
         "--filesystem=home"
     ],
     "separate-locales": false,
-
     "modules": [
         {
             "name": "kirigami-addons",

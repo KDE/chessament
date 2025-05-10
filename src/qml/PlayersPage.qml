@@ -8,7 +8,7 @@ import QtQuick.Controls as QQC2
 import org.kde.kitemmodels
 import org.kde.kirigami as Kirigami
 
-import dev.alcarazzam.chessament
+import org.kde.chessament
 
 TablePage {
     id: root
@@ -47,7 +47,7 @@ TablePage {
             icon.name: "document-print"
             text: i18nc("@action:button", "Print")
             onTriggered: {
-                applicationWindow().pageStack.push(Qt.createComponent("dev.alcarazzam.chessament", "DocsPage").createObject(root));
+                applicationWindow().pageStack.push(Qt.createComponent("org.kde.chessament", "DocsPage").createObject(root));
             }
         }
     ]

@@ -6,7 +6,7 @@ pragma ComponentBehavior: Bound
 import QtQuick
 import org.kde.kirigamiaddons.settings as KirigamiSettings
 
-import dev.alcarazzam.chessament
+import org.kde.chessament
 
 KirigamiSettings.ConfigurationView {
     id: root
@@ -18,7 +18,7 @@ KirigamiSettings.ConfigurationView {
             moduleId: "general"
             text: i18nc("@action:button", "General")
             icon.name: "preferences-system-symbolic"
-            page: () => Qt.createComponent("dev.alcarazzam.chessament.settings", "GeneralPage")
+            page: () => Qt.createComponent("org.kde.chessament.settings", "GeneralPage")
             initialProperties: () => {
                 return {
                     application: root.application

@@ -74,9 +74,9 @@ if(BUILD_TESTING)
     add_subdirectory(autotests)
 endif()
 
-install(FILES dev.alcarazzam.chessament.desktop DESTINATION ${KDE_INSTALL_APPDIR})
-install(FILES dev.alcarazzam.chessament.appdata.xml DESTINATION ${KDE_INSTALL_METAINFODIR})
-install(FILES dev.alcarazzam.chessament.svg DESTINATION ${KDE_INSTALL_FULL_ICONDIR}/hicolor/scalable/apps)
+install(FILES org.kde.chessament.desktop DESTINATION ${KDE_INSTALL_APPDIR})
+install(FILES org.kde.chessament.appdata.xml DESTINATION ${KDE_INSTALL_METAINFODIR})
+install(FILES org.kde.chessament.svg DESTINATION ${KDE_INSTALL_FULL_ICONDIR}/hicolor/scalable/apps)
 ki18n_install(po)
 
 feature_summary(WHAT ALL INCLUDE_QUIET_PACKAGES FATAL_ON_MISSING_REQUIRED_PACKAGES)

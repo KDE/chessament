@@ -4,13 +4,13 @@
 version = 1
 
 [[annotations]]
-path = ["128-logo.png", "dev.alcarazzam.chessament.svg"]
+path = ["128-logo.png", "org.kde.chessament.svg"]
 precedence = "aggregate"
 SPDX-FileCopyrightText = "2025 Manuel Alcaraz Zambrano <manuelalcarazzam@gmail.com>"
 SPDX-License-Identifier = "LGPL-3.0-only"
 
 [[annotations]]
-path = "autotests/data/*.txt"
+path = ["autotests/data/*.txt", ".flatpak-manifest.json"]
 precedence = "aggregate"
 SPDX-FileCopyrightText = "None"
 SPDX-License-Identifier = "CC0-1.0"

@@ -10,8 +10,8 @@ import QtQuick.Layouts
 import org.kde.kirigami as Kirigami
 import org.kde.kirigamiaddons.statefulapp as StatefulApp
 
-import dev.alcarazzam.chessament
-import dev.alcarazzam.chessament.settings as Settings
+import org.kde.chessament
+import org.kde.chessament.settings as Settings
 
 StatefulApp.StatefulWindow {
     id: root
@@ -35,7 +35,7 @@ StatefulApp.StatefulWindow {
         target: root.application
 
         function onNewTournament() {
-            let dialog = Qt.createComponent("dev.alcarazzam.chessament", "NewTournamentDialog").createObject(root);
+            let dialog = Qt.createComponent("org.kde.chessament", "NewTournamentDialog").createObject(root);
             dialog.create.connect((fileUrl, name, rounds) => {
                 Controller.newTournament(fileUrl, name, rounds);
             });
@@ -79,9 +79,6 @@ StatefulApp.StatefulWindow {
         function onConnectAccount() {
             console.log("connect account");
             Controller.connectAccount();
-        // root.pageStack.pushDialogLayer(Qt.createComponent("dev.alcarazzam.chessament", "ConnectAccountPage"), {
-        //     application: root.application
-        // });
         }
     }
 
@@ -248,7 +245,7 @@ StatefulApp.StatefulWindow {
 
     function pageForView(view: string): var {
         if (!pageCache[view]) {
-            pageCache[view] = Qt.createComponent("dev.alcarazzam.chessament", view).createObject(root);
+            pageCache[view] = Qt.createComponent("org.kde.chessament", view).createObject(root);
         }
         return pageCache[view];
     }

@@ -4,17 +4,17 @@
   SPDX-License-Identifier: CC0-1.0
  -->
 <component type="desktop-application">
-  <id>dev.alcarazzam.chessament</id>
+  <id>org.kde.chessament</id>
   <provides>
     <binary>chessament</binary>
   </provides>
   <name>Chessament</name>
-  <summary>A chess tournament manager</summary>
+  <summary>Chess tournament manager</summary>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-3.0-or-later</project_license>
-  <developer id="dev.alcarazzam">
-    <name>Manuel Alcaraz</name>
-    <url>https://alcarazzam.dev</url>
+  <developer id="kde.org">
+    <name>The KDE Community</name>
+    <url>https://kde.org</url>
   </developer>
   <description>
     <p>Multiple paragraphs of long description, describing this software component.</p>
@@ -26,5 +26,5 @@
     <p>Keep in mind to XML-escape characters, and that this is not HTML markup.</p>
   </description>
   <url type="homepage">https://alcarazzam.dev/chessament/</url>
-  <launchable type="desktop-id">dev.alcarazzam.chessament.desktop</launchable>
+  <launchable type="desktop-id">org.kde.chessament.desktop</launchable>
 </component>

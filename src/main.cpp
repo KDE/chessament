@@ -28,7 +28,7 @@
 
 using namespace Qt::Literals::StringLiterals;
 
-void qml_register_types_dev_alcarazzam_chessament();
+void qml_register_types_org_kde_chessament();
 
 int main(int argc, char *argv[])
 {
@@ -78,16 +78,16 @@ int main(int argc, char *argv[])
                         u"https://alcarazzam.dev"_s);
     aboutData.setTranslator(i18nc("NAME OF TRANSLATORS", "Your names"), i18nc("EMAIL OF TRANSLATORS", "Your emails"));
     KAboutData::setApplicationData(aboutData);
-    QGuiApplication::setWindowIcon(QIcon::fromTheme(u"dev.alcarazzam.chessament"_s));
+    QGuiApplication::setWindowIcon(QIcon::fromTheme(u"org.kde.chessament"_s));
 
-    Q_IMPORT_QML_PLUGIN(dev_alcarazzam_chessament_settingsPlugin)
+    Q_IMPORT_QML_PLUGIN(org_kde_chessament_settingsPlugin)
 
-    qml_register_types_dev_alcarazzam_chessament();
+    qml_register_types_org_kde_chessament();
 
     QQmlApplicationEngine engine;
 
     KLocalization::setupLocalizedContext(&engine);
-    engine.loadFromModule("dev.alcarazzam.chessament", u"Main"_s);
+    engine.loadFromModule("org.kde.chessament", u"Main"_s);
 
     if (engine.rootObjects().isEmpty()) {
         return -1;

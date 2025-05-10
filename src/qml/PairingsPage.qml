@@ -7,7 +7,7 @@ import QtQuick.Controls as QQC2
 
 import org.kde.kirigami as Kirigami
 
-import dev.alcarazzam.chessament
+import org.kde.chessament
 
 TablePage {
     id: root

@@ -8,7 +8,7 @@ import QtWebEngine
 
 import org.kde.kirigami as Kirigami
 
-import dev.alcarazzam.chessament
+import org.kde.chessament
 
 Kirigami.Page {
     id: root

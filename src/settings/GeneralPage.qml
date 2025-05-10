@@ -6,7 +6,7 @@ pragma ComponentBehavior: Bound
 import org.kde.kirigami as Kirigami
 import org.kde.kirigamiaddons.formcard as FormCard
 
-import dev.alcarazzam.chessament
+import org.kde.chessament
 
 FormCard.FormCardPage {
     id: root

@@ -8,7 +8,7 @@ import QtQuick.Controls as QQC2
 import org.kde.kirigami as Kirigami
 import org.kde.kirigamiaddons.formcard as FormCard
 
-import dev.alcarazzam.chessament
+import org.kde.chessament
 
 QQC2.Dialog {
     id: root

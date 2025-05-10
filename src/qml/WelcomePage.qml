@@ -3,8 +3,9 @@
 
 import QtQuick
 
-import dev.alcarazzam.chessament
 import org.kde.kirigami as Kirigami
+
+import org.kde.chessament
 
 Kirigami.Page {
     id: root

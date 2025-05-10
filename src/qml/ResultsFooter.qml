@@ -8,7 +8,7 @@ import QtQuick.Layouts as Layouts
 
 import org.kde.kirigami as Kirigami
 
-import dev.alcarazzam.chessament
+import org.kde.chessament
 
 QQC2.ToolBar {
     id: root

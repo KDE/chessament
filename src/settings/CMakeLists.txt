@@ -4,8 +4,8 @@
 qt_add_library(chessament_settings STATIC)
 ecm_add_qml_module(chessament_settings
     GENERATE_PLUGIN_SOURCE
-    URI dev.alcarazzam.chessament.settings
-    OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/src/dev/alcarazzam/chessament/settings
+    URI org.kde.chessament.settings
+    OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/src/org/kde/chessament/settings
     QML_FILES
         ChessamentConfigurationView.qml
         GeneralPage.qml
