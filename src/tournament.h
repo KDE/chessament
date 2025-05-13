@@ -38,6 +38,8 @@ public:
     Q_PROPERTY(QString chiefArbiter READ chiefArbiter WRITE setChiefArbiter NOTIFY chiefArbiterChanged)
     Q_PROPERTY(QString deputyChiefArbiter READ deputyChiefArbiter WRITE setDeputyChiefArbiter NOTIFY deputyChiefArbiterChanged)
     Q_PROPERTY(QString timeControl READ timeControl WRITE setTimeControl NOTIFY timeControlChanged)
+
+    Q_PROPERTY(int numberOfPlayers READ numberOfPlayers NOTIFY numberOfPlayersChanged)
     Q_PROPERTY(int numberOfRounds READ numberOfRounds WRITE setNumberOfRounds NOTIFY numberOfRoundsChanged)
     Q_PROPERTY(int currentRound READ currentRound WRITE setCurrentRound NOTIFY currentRoundChanged)
     Q_PROPERTY(QList<Tiebreak *> tiebreaks READ tiebreaks WRITE setTiebreaks NOTIFY tiebreaksChanged)
@@ -78,7 +80,7 @@ public:
     QCoro::Task<std::expected<QList<Pairing *>, QString>> calculatePairings(int round);
     QCoro::Task<std::expected<bool, QString>> pairNextRound();
 
-    Q_INVOKABLE int numberOfPlayers();
+    int numberOfPlayers();
     int numberOfRatedPlayers();
 
     QString getPlayersListDocument();
@@ -213,6 +215,8 @@ Q_SIGNALS:
     void chiefArbiterChanged();
     void deputyChiefArbiterChanged();
     void timeControlChanged();
+
+    void numberOfPlayersChanged();
     void numberOfRoundsChanged();
     void currentRoundChanged();
     void tiebreaksChanged();

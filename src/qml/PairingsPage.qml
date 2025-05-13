@@ -21,7 +21,7 @@ TablePage {
     actions: [
         Kirigami.Action {
             text: i18n("Pair round %1", Controller.tournament.currentRound + 1)
-            visible: Controller.tournament.numberOfPlayers() > 0 && (Controller.tournament.currentRound + 1 <= Controller.tournament.numberOfRounds) && Controller.tournament.isRoundFinished(Controller.tournament.currentRound)
+            visible: Controller.tournament.numberOfPlayers > 0 && (Controller.tournament.currentRound + 1 <= Controller.tournament.numberOfRounds) && Controller.hasCurrentRoundFinished
             onTriggered: Controller.pairRound()
         },
         Kirigami.Action {

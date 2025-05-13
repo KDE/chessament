@@ -220,6 +220,8 @@ void Tournament::addPlayer(Player *player)
     }
 
     player->setId(query.lastInsertId().toInt());
+
+    Q_EMIT numberOfPlayersChanged();
 }
 
 void Tournament::savePlayer(Player *player)

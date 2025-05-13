@@ -91,7 +91,7 @@ const QString ADD_PAIRING_QUERY =
 
 const QString GET_PAIRINGS_QUERY =
     u"SELECT * FROM pairings "_s
-    u"JOIN rounds ON pairings.round = round.id "_s
+    u"JOIN rounds ON pairings.round = rounds.id "_s
     u"WHERE rounds.tournament = :tournament;"_s;
 
 const QString UPDATE_PAIRING_QUERY =

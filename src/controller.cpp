@@ -107,6 +107,11 @@ int Controller::currentRound()
     return m_currentRound;
 }
 
+bool Controller::hasCurrentRoundFinished()
+{
+    return m_tournament->isRoundFinished(m_currentRound);
+}
+
 void Controller::setCurrentRound(int currentRound)
 {
     if (m_currentRound == currentRound) {
@@ -208,6 +213,8 @@ bool Controller::setResult(int board, Pairing::PartialResult whiteResult, Pairin
 
     m_tournament->setResult(pairing, result);
     m_pairingModel->updatePairing(board);
+
+    Q_EMIT hasCurrentRoundFinishedChanged();
 
     return true;
 }
