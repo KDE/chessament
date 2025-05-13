@@ -1,0 +1,783 @@
+# SPDX-FileCopyrightText: 2025 Matjaž Jeran <matjaz.jeran@amis.net>
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2025-05-12 00:39+0000\n"
+"PO-Revision-Date: 2025-05-12 10:36+0200\n"
+"Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
+"Language-Team: Slovenian <lugos-slo@lugos.si>\n"
+"Language: sl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
+"%100==4 ? 3 : 0);\n"
+"X-Generator: Poedit 3.6\n"
+
+#: chessamentapplication.cpp:23
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "New tournament…"
+msgstr "Novi turnir…"
+
+#: chessamentapplication.cpp:44
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Import tournament report…"
+msgstr "Uvozi poročilo o turnirju…"
+
+#: chessamentapplication.cpp:53
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Export tournament report…"
+msgstr "Izvozi poročilo o turnirju…"
+
+#: chessamentapplication.cpp:61
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Connect account"
+msgstr "Poveži račun"
+
+#: controller.cpp:138
+#, kde-format
+msgid "Couldn't export tournament."
+msgstr "Turnirja ni bilo mogoče izvoziti."
+
+#: main.cpp:67 qml/WelcomePage.qml:15
+#, kde-format
+msgctxt "@title"
+msgid "Chessament"
+msgstr "Chessament"
+
+#: main.cpp:71
+#, kde-format
+msgid "Chess Tournament Manager"
+msgstr "Upravljalnik šahovskega turnirja"
+
+#: main.cpp:75
+#, kde-format
+msgid "© 2024 Manuel Alcaraz Zambrano"
+msgstr "© 2024 Manuel Alcaraz Zambrano"
+
+#: main.cpp:76
+#, kde-format
+msgctxt "@info:credit"
+msgid "Manuel Alcaraz Zambrano"
+msgstr "Manuel Alcaraz Zambrano"
+
+#: main.cpp:77
+#, kde-format
+msgctxt "@info:credit"
+msgid "Author & Maintainer"
+msgstr "Avtor in vzdrževalec"
+
+#: main.cpp:80
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Vaša imena"
+
+#: main.cpp:80
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "Vaši e-poštni naslovi"
+
+#: pairingmodel.cpp:65
+#, kde-format
+msgctxt "@title:column"
+msgid "Board"
+msgstr "Deska"
+
+#: pairingmodel.cpp:67 pairingmodel.cpp:75 playersmodel.cpp:125
+#: standingsmodel.cpp:62
+#, kde-format
+msgctxt "@title:column"
+msgid "No"
+msgstr "Št."
+
+#: pairingmodel.cpp:69
+#, kde-format
+msgctxt "@title:column"
+msgid "White player"
+msgstr "Beli igralec"
+
+#: pairingmodel.cpp:71
+#, kde-format
+msgctxt "@title:column"
+msgid "Result"
+msgstr "Rezultat"
+
+#: pairingmodel.cpp:73
+#, kde-format
+msgctxt "@title:column"
+msgid "Black Player"
+msgstr "Črni igralec"
+
+#: playersmodel.cpp:127 standingsmodel.cpp:64
+#, kde-format
+msgctxt "@title:column"
+msgid "Title"
+msgstr "Naziv"
+
+#: playersmodel.cpp:129 standingsmodel.cpp:66
+#, kde-format
+msgctxt "@title:column"
+msgid "Name"
+msgstr "Ime"
+
+#: playersmodel.cpp:131
+#, kde-format
+msgctxt "@title:column"
+msgid "Surname"
+msgstr "Priimek"
+
+#: playersmodel.cpp:133
+#, kde-format
+msgctxt "@title:column"
+msgid "Rating"
+msgstr "Rating"
+
+#: playersmodel.cpp:135
+#, kde-format
+msgctxt "@title:column"
+msgid "National rating"
+msgstr "Nacionalni rating"
+
+#: playersmodel.cpp:137
+#, kde-format
+msgctxt "@title:column"
+msgid "Player ID"
+msgstr "ID igralca"
+
+#: playersmodel.cpp:139
+#, kde-format
+msgctxt "@title:column"
+msgid "Birth date"
+msgstr "Datum rojstva"
+
+#: playersmodel.cpp:141
+#, kde-format
+msgctxt "@title:column"
+msgid "Federation"
+msgstr "Zveza"
+
+#: playersmodel.cpp:143
+#, kde-format
+msgctxt "@title:column"
+msgid "Origin"
+msgstr "Izvor"
+
+#: playersmodel.cpp:145
+#, kde-format
+msgctxt "@title:column"
+msgid "Sex"
+msgstr "Spol"
+
+#: qml/AddPlayerDialog.qml:16
+#, kde-format
+msgctxt "@title:window"
+msgid "Add player"
+msgstr "Dodaj igralca"
+
+#: qml/AddPlayerDialog.qml:53
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Title"
+msgstr "Naziv"
+
+#: qml/AddPlayerDialog.qml:59
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Name"
+msgstr "Ime"
+
+#: qml/AddPlayerDialog.qml:64
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Rating"
+msgstr "Rating"
+
+#: qml/AddPlayerDialog.qml:71
+#, kde-format
+msgctxt "@label:textbox"
+msgid "National rating"
+msgstr "Nacionalni rating"
+
+#: qml/AddPlayerDialog.qml:78
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Player ID"
+msgstr "ID igralca"
+
+#: qml/AddPlayerDialog.qml:79 qml/AddPlayerDialog.qml:85
+#: qml/AddPlayerDialog.qml:91 qml/AddPlayerDialog.qml:97
+#: qml/AddPlayerDialog.qml:103
+#, kde-format
+msgid "Optional"
+msgstr "Neobvezno"
+
+#: qml/AddPlayerDialog.qml:84
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Birth date"
+msgstr "Datum rojstva"
+
+#: qml/AddPlayerDialog.qml:90 qml/TournamentSettingsInformation.qml:37
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Federation"
+msgstr "Zveza"
+
+#: qml/AddPlayerDialog.qml:96
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Origin"
+msgstr "Izvor"
+
+#: qml/AddPlayerDialog.qml:102
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Sex"
+msgstr "Spol"
+
+#: qml/DocsPage.qml:22
+#, kde-format
+msgctxt "@action:button"
+msgid "Save As…"
+msgstr "Shrani kot…"
+
+#: qml/Main.qml:21
+#, kde-format
+msgctxt "@title:window"
+msgid "Chessament"
+msgstr "Chessament"
+
+#: qml/Main.qml:101
+#, kde-format
+msgctxt "@title"
+msgid "Error"
+msgstr "Napaka"
+
+#: qml/Main.qml:190
+#, kde-format
+msgid "Players"
+msgstr "Igralci"
+
+#: qml/Main.qml:197
+#, kde-format
+msgid "Pairings"
+msgstr "Pari"
+
+#: qml/Main.qml:204
+#, kde-format
+msgid "Standings"
+msgstr "Lestvice"
+
+#: qml/Main.qml:229
+#, kde-format
+msgctxt "@action:button"
+msgid "Settings"
+msgstr "Nastavitve"
+
+#: qml/NewTournamentDialog.qml:16
+#, kde-format
+msgctxt "@title"
+msgid "New tournament"
+msgstr "Novi turnir"
+
+#: qml/NewTournamentDialog.qml:29
+#, kde-format
+msgctxt "@label:textbox tournament name"
+msgid "Name:"
+msgstr "Ime:"
+
+#: qml/NewTournamentDialog.qml:33
+#, kde-format
+msgctxt "@label"
+msgid "Format"
+msgstr "Oblika"
+
+#: qml/NewTournamentDialog.qml:34
+#, kde-format
+msgctxt "@label"
+msgid "Swiss system"
+msgstr "Švicarski sistem"
+
+#: qml/NewTournamentDialog.qml:39
+#, kde-format
+msgctxt "@label"
+msgid "Number of rounds"
+msgstr "Število krogov"
+
+#: qml/PairingsPage.qml:23
+#, kde-format
+msgid "Pair round %1"
+msgstr "Pari krog %1"
+
+#: qml/PairingsPage.qml:32
+#, kde-format
+msgid "Round %1"
+msgstr "Krog %1"
+
+#: qml/PairingsPage.qml:77
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "No pairings for round %1 yet"
+msgstr "Še ni parov za krog %1"
+
+#: qml/PlayersPage.qml:42 qml/PlayersPage.qml:135
+#, kde-format
+msgctxt "@action:button"
+msgid "Add player"
+msgstr "Dodaj igralca"
+
+#: qml/PlayersPage.qml:48
+#, kde-format
+msgctxt "@action:button"
+msgid "Print"
+msgstr "Natisni"
+
+#: qml/PlayersPage.qml:131
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "No players yet"
+msgstr "Še ni igralcev"
+
+#: qml/ResultsFooter.qml:41
+#, kde-format
+msgctxt "@action:intoolbar"
+msgid "*"
+msgstr "*"
+
+#: qml/ResultsFooter.qml:51
+#, kde-format
+msgctxt "@action:intoolbar"
+msgid "1-0"
+msgstr "1-0"
+
+#: qml/ResultsFooter.qml:58
+#, kde-format
+msgctxt "@action:intoolbar"
+msgid "½-½"
+msgstr "½-½"
+
+#: qml/ResultsFooter.qml:65
+#, kde-format
+msgctxt "@action:intoolbar"
+msgid "0-1"
+msgstr "0-1"
+
+#: qml/ResultsFooter.qml:75
+#, kde-format
+msgctxt "@action:intoolbar"
+msgid "1F-0F"
+msgstr "1F-0F"
+
+#: qml/ResultsFooter.qml:82
+#, kde-format
+msgctxt "@action:intoolbar"
+msgid "0F-1F"
+msgstr "0F-1F"
+
+#: qml/ResultsFooter.qml:89
+#, kde-format
+msgctxt "@action:intoolbar"
+msgid "0F-0F"
+msgstr "0F-0F"
+
+#: qml/ResultsFooter.qml:99
+#, kde-format
+msgctxt "@action:intoolbar"
+msgid "1U-0U"
+msgstr "1U-0U"
+
+#: qml/ResultsFooter.qml:106
+#, kde-format
+msgctxt "@action:intoolbar"
+msgid "½U-½U"
+msgstr "½U-½U"
+
+#: qml/ResultsFooter.qml:113
+#, kde-format
+msgctxt "@action:intoolbar"
+msgid "0U-1U"
+msgstr "0U-1U"
+
+#: qml/ResultsFooter.qml:120
+#, kde-format
+msgctxt "@action:intoolbar"
+msgid "½U-0U"
+msgstr "½U-0U"
+
+#: qml/ResultsFooter.qml:127
+#, kde-format
+msgctxt "@action:intoolbar"
+msgid "0U-½U"
+msgstr "0U-½U"
+
+#: qml/ResultsFooter.qml:134
+#, kde-format
+msgctxt "@action:intoolbar"
+msgid "0U-0U"
+msgstr "0U-0U"
+
+#: qml/ResultsFooter.qml:144
+#, kde-format
+msgctxt "@action:intoolbar"
+msgid "½-0"
+msgstr "½-0"
+
+#: qml/ResultsFooter.qml:151
+#, kde-format
+msgctxt "@action:intoolbar"
+msgid "0-0"
+msgstr "0-0"
+
+#: qml/ResultsFooter.qml:158
+#, kde-format
+msgctxt "@action:intoolbar"
+msgid "0-½"
+msgstr "0-½"
+
+#: qml/StandingsPage.qml:36
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "No standings yet"
+msgstr "Še ni lestvice"
+
+#: qml/TournamentSettings.qml:14
+#, kde-format
+msgctxt "@action:button"
+msgid "Information"
+msgstr "Informacije"
+
+#: qml/TournamentSettings.qml:20
+#, kde-format
+msgctxt "@action:button"
+msgid "Format"
+msgstr "Oblika"
+
+#: qml/TournamentSettings.qml:26
+#, kde-format
+msgctxt "@action:button"
+msgid "Calendar"
+msgstr "Koledar"
+
+#: qml/TournamentSettingsCalendar.qml:14
+#, kde-format
+msgctxt "@title"
+msgid "Calendar"
+msgstr "Koledar"
+
+#: qml/TournamentSettingsCalendar.qml:24
+#, kde-format
+msgctxt "round number"
+msgid "Round %1"
+msgstr "Krog %1"
+
+#: qml/TournamentSettingsFormat.qml:11
+#, kde-format
+msgctxt "@title"
+msgid "Format"
+msgstr "Oblika"
+
+#: qml/TournamentSettingsFormat.qml:14
+#, kde-format
+msgctxt "@title:group"
+msgid "Format"
+msgstr "Oblika"
+
+#: qml/TournamentSettingsFormat.qml:18
+#, kde-format
+msgid "Swiss system"
+msgstr "Švicarski sistem"
+
+#: qml/TournamentSettingsFormat.qml:22
+#, kde-format
+msgid "Rounds"
+msgstr "Krogi"
+
+#: qml/TournamentSettingsFormat.qml:36
+#, kde-format
+msgctxt "@title:group"
+msgid "Pairings"
+msgstr "Pari"
+
+#: qml/TournamentSettingsFormat.qml:40
+#, kde-format
+msgid "Pairing engine"
+msgstr "Stroj za pare"
+
+#: qml/TournamentSettingsFormat.qml:41
+#, kde-format
+msgid "bbpPairings"
+msgstr "bbpPari"
+
+#: qml/TournamentSettingsFormat.qml:45
+#, kde-format
+msgid "Pairing allocated bye"
+msgstr "Dodeljeni pari bye"
+
+#: qml/TournamentSettingsFormat.qml:46
+#, kde-format
+msgid "The value of the pairing allocated bye"
+msgstr "Vrednost dodeljenega para bye"
+
+#: qml/TournamentSettingsInformation.qml:11
+#, kde-format
+msgctxt "@title"
+msgid "Information"
+msgstr "Informacije"
+
+#: qml/TournamentSettingsInformation.qml:14
+#, kde-format
+msgctxt "@title:group"
+msgid "Basic details"
+msgstr "Osnovni podatki"
+
+#: qml/TournamentSettingsInformation.qml:19
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Tournament name"
+msgstr "Ime turnirja"
+
+#: qml/TournamentSettingsInformation.qml:28
+#, kde-format
+msgctxt "@label:textbox"
+msgid "City"
+msgstr "Mesto"
+
+#: qml/TournamentSettingsInformation.qml:46
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Chief arbiter"
+msgstr "Glavni sodnik"
+
+#: qml/TournamentSettingsInformation.qml:55
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Deputy chief arbiter"
+msgstr "Namestnik glavnega sodnika"
+
+#: qml/WelcomePage.qml:20
+#, kde-format
+msgctxt "@title"
+msgid "Welcome to Chessament"
+msgstr "Dobrodošli v Chessamentu"
+
+#: qml/WelcomePage.qml:21
+#, kde-format
+msgctxt "@info"
+msgid "Chessament is a chess tournament manager"
+msgstr "Chessament je upravljalnik šahovskih turnirjev"
+
+#: settings/ChessamentConfigurationView.qml:19
+#, kde-format
+msgctxt "@action:button"
+msgid "General"
+msgstr "Splošno"
+
+#: settings/GeneralPage.qml:16
+#, kde-format
+msgctxt "@title"
+msgid "General"
+msgstr "Splošno"
+
+#: settings/GeneralPage.qml:19
+#, kde-format
+msgctxt "@title:group"
+msgid "Account"
+msgstr "Račun"
+
+#: settings/GeneralPage.qml:24
+#, kde-format
+msgctxt "@label:button"
+msgid "Connect Account"
+msgstr "Poveži račun"
+
+#: settings/GeneralPage.qml:31
+#, kde-format
+msgid "Logged in as %1"
+msgstr "Prijavljen kot %1"
+
+#: settings/GeneralPage.qml:36
+#, kde-format
+msgid "Logout"
+msgstr "Odjava"
+
+#: standingsmodel.cpp:60
+#, kde-format
+msgctxt "@title:colunm"
+msgid "Rank"
+msgstr "Rang"
+
+#: tournament.cpp:762
+#, kde-format
+msgid "Couldn't open file"
+msgstr "Datoteke ni bilo mogoče odpreti"
+
+#: trf.cpp:74
+#, kde-format
+msgid "Invalid pairing \"%1\""
+msgstr "Neveljaven par \"%1\""
+
+#: trf.cpp:80
+#, kde-format
+msgid "Invalid player for pairing \"%1\""
+msgstr "Neveljaven igralec za par \"%1\""
+
+#: trf.cpp:86
+#, kde-format
+msgid "Unknown result for pairing \"%1\""
+msgstr "Neznan rezultat pri združevanju \"%1\""
+
+#: trf.cpp:115 trf.cpp:122
+#, kde-format
+msgid "Player %1 not found"
+msgstr "Igralca \"%1\" ni mogoče najti"
+
+#: trf.cpp:128
+#, kde-format
+msgid "Unknown result on pairing %1 with %2"
+msgstr "Neznan rezultat pri uparjanju %1 z %2"
+
+#~ msgid "New tournament+//3//f/9-"
+#~ msgstr "Novi turnir+//3//f/9-"
+
+#~ msgctxt "qml/AddPlayerDialog.qml:53"
+#~ msgid "Title"
+#~ msgstr "Naziv"
+
+#~ msgctxt "qml/AddPlayerDialog.qml:59"
+#~ msgid "Name"
+#~ msgstr "Ime"
+
+#~ msgctxt "qml/AddPlayerDialog.qml:64"
+#~ msgid "Rating"
+#~ msgstr "Rating"
+
+#~ msgctxt "qml/AddPlayerDialog.qml:71"
+#~ msgid "National rating"
+#~ msgstr "Nationalni rating"
+
+#~ msgctxt "qml/AddPlayerDialog.qml:78"
+#~ msgid "Player ID"
+#~ msgstr "ID igralca"
+
+#~ msgctxt "qml/AddPlayerDialog.qml:84"
+#~ msgid "Birth date"
+#~ msgstr "Datum rojstva"
+
+#~ msgctxt ""
+#~ "qml/AddPlayerDialog.qml:90 qml/TournamentSettingsInformation.qml:37"
+#~ msgid "Federation"
+#~ msgstr "Zveza"
+
+#~ msgctxt "qml/AddPlayerDialog.qml:96"
+#~ msgid "Origin"
+#~ msgstr "Izvor"
+
+#~ msgctxt "qml/AddPlayerDialog.qml:102"
+#~ msgid "Sex"
+#~ msgstr "Spol"
+
+#~ msgid "Save As+//3//f/9-"
+#~ msgstr "Shrani kot+//3//f/9-"
+
+#~ msgctxt "qml/Main.qml:21"
+#~ msgid "Chessament"
+#~ msgstr "Chessament"
+
+#~ msgctxt "qml/PairingsPage.qml:32"
+#~ msgid "Round +ACU-1"
+#~ msgstr "Krog +ACU-1"
+
+#~ msgctxt "qml/PlayersPage.qml:42 qml/PlayersPage.qml:135"
+#~ msgid "Add player"
+#~ msgstr "Dodaj igralca"
+
+#~ msgid "+ACo-"
+#~ msgstr "+ACo-"
+
+#~ msgid "+//3//QAt//3//Q-"
+#~ msgstr "+//3//QAt//3//Q-"
+
+#~ msgid "1F+AC0-0F"
+#~ msgstr "1F+AC0-0F"
+
+#~ msgid "0F+AC0-1F"
+#~ msgstr "0F+AC0-1F"
+
+#~ msgid "0F+AC0-0F"
+#~ msgstr "0F+AC0-0F"
+
+#~ msgid "1U+AC0-0U"
+#~ msgstr "1U+AC0-0U"
+
+#~ msgid "+//3//Q-U+AC3//f/9-U"
+#~ msgstr "+//3//Q-U+AC3//f/9-U"
+
+#~ msgid "0U+AC0-1U"
+#~ msgstr "0U+AC0-1U"
+
+#~ msgid "+//3//Q-U+AC0-0U"
+#~ msgstr "+//3//Q-U+AC0-0U"
+
+#~ msgid "0U+AC3//f/9-U"
+#~ msgstr "0U+AC3//f/9-U"
+
+#~ msgid "0U+AC0-0U"
+#~ msgstr "0U+AC0-0U"
+
+#~ msgid "+//3//QAt-0"
+#~ msgstr "+//3//QAt-0"
+
+#~ msgid "0+AC0-0"
+#~ msgstr "0+AC0-0"
+
+#~ msgid "0+AC3//f/9-"
+#~ msgstr "0+AC3//f/9-"
+
+#~ msgctxt "qml/TournamentSettings.qml:20"
+#~ msgid "Format"
+#~ msgstr "Oblika"
+
+#~ msgctxt "qml/TournamentSettingsCalendar.qml:14"
+#~ msgid "Calendar"
+#~ msgstr "Koledar"
+
+#~ msgctxt "qml/TournamentSettingsCalendar.qml:24"
+#~ msgid "Round +ACU-1"
+#~ msgstr "Krog +ACU-1"
+
+#~ msgctxt "qml/TournamentSettingsFormat.qml:11"
+#~ msgid "Format"
+#~ msgstr "Oblika"
+
+#~ msgctxt "qml/TournamentSettingsFormat.qml:14"
+#~ msgid "Format"
+#~ msgstr "Oblika"
+
+#~ msgctxt "qml/TournamentSettingsFormat.qml:18"
+#~ msgid "Swiss system"
+#~ msgstr "Švicarski sistem"
+
+#~ msgctxt "qml/TournamentSettingsFormat.qml:36"
+#~ msgid "Pairings"
+#~ msgstr "Pari"
+
+#~ msgctxt "qml/TournamentSettingsInformation.qml:11"
+#~ msgid "Information"
+#~ msgstr "Informacije"
+
+#~ msgctxt "settings/GeneralPage.qml:16"
+#~ msgid "General"
+#~ msgstr "Splošno"
+
+#~ msgid "+ACI-Invalid pairing +ACIAIgAl-1+ACIAIg-+ACI-"
+#~ msgstr "+ACI-Neveljaven par +ACIAIgAl-1+ACIAIg-+ACI-"
+
+#~ msgid "+ACI-Unknown result for pairing +ACIAIgAl-1+ACIAIg-+ACI-"
+#~ msgstr "+ACI-Neznan rezultat za zdru+AX4-evanje +ACIAIgAl-1+ACIAIg-+ACI-"

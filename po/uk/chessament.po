@@ -1,0 +1,647 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the chessament package.
+#
+# Yuri Chornoivan <yurchor@ukr.net>, 2025.
+msgid ""
+msgstr ""
+"Project-Id-Version: chessament\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2025-05-12 00:39+0000\n"
+"PO-Revision-Date: 2025-05-12 21:02+0300\n"
+"Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
+"Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Lokalize 23.04.3\n"
+
+#: chessamentapplication.cpp:23
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "New tournament…"
+msgstr "Новий турнір…"
+
+#: chessamentapplication.cpp:44
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Import tournament report…"
+msgstr "Імпортувати звіт щодо турніру…"
+
+#: chessamentapplication.cpp:53
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Export tournament report…"
+msgstr "Експортувати звіт щодо турніру…"
+
+#: chessamentapplication.cpp:61
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Connect account"
+msgstr "З'єднати обліковий запис"
+
+#: controller.cpp:138
+#, kde-format
+msgid "Couldn't export tournament."
+msgstr "Не вдалося експортувати дані турніру."
+
+#: main.cpp:67 qml/WelcomePage.qml:15
+#, kde-format
+msgctxt "@title"
+msgid "Chessament"
+msgstr "Chessament"
+
+#: main.cpp:71
+#, kde-format
+msgid "Chess Tournament Manager"
+msgstr "Керування шаховим турніром"
+
+#: main.cpp:75
+#, kde-format
+msgid "© 2024 Manuel Alcaraz Zambrano"
+msgstr "© Manuel Alcaraz Zambrano, 2024"
+
+#: main.cpp:76
+#, kde-format
+msgctxt "@info:credit"
+msgid "Manuel Alcaraz Zambrano"
+msgstr "Manuel Alcaraz Zambrano"
+
+#: main.cpp:77
+#, kde-format
+msgctxt "@info:credit"
+msgid "Author & Maintainer"
+msgstr "Автор і супровідник"
+
+#: main.cpp:80
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Юрій Чорноіван"
+
+#: main.cpp:80
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "yurchor@ukr.net"
+
+#: pairingmodel.cpp:65
+#, kde-format
+msgctxt "@title:column"
+msgid "Board"
+msgstr "Дошка"
+
+#: pairingmodel.cpp:67 pairingmodel.cpp:75 playersmodel.cpp:125
+#: standingsmodel.cpp:62
+#, kde-format
+msgctxt "@title:column"
+msgid "No"
+msgstr "№"
+
+#: pairingmodel.cpp:69
+#, kde-format
+msgctxt "@title:column"
+msgid "White player"
+msgstr "Гравець білими"
+
+#: pairingmodel.cpp:71
+#, kde-format
+msgctxt "@title:column"
+msgid "Result"
+msgstr "Результат"
+
+#: pairingmodel.cpp:73
+#, kde-format
+msgctxt "@title:column"
+msgid "Black Player"
+msgstr "Гравець чорними"
+
+#: playersmodel.cpp:127 standingsmodel.cpp:64
+#, kde-format
+msgctxt "@title:column"
+msgid "Title"
+msgstr "Звертання"
+
+#: playersmodel.cpp:129 standingsmodel.cpp:66
+#, kde-format
+msgctxt "@title:column"
+msgid "Name"
+msgstr "Ім'я"
+
+#: playersmodel.cpp:131
+#, kde-format
+msgctxt "@title:column"
+msgid "Surname"
+msgstr "Прізвище"
+
+#: playersmodel.cpp:133
+#, kde-format
+msgctxt "@title:column"
+msgid "Rating"
+msgstr "Рейтинг"
+
+#: playersmodel.cpp:135
+#, kde-format
+msgctxt "@title:column"
+msgid "National rating"
+msgstr "Національний рейтинг"
+
+#: playersmodel.cpp:137
+#, kde-format
+msgctxt "@title:column"
+msgid "Player ID"
+msgstr "ІД гравця"
+
+#: playersmodel.cpp:139
+#, kde-format
+msgctxt "@title:column"
+msgid "Birth date"
+msgstr "Дата народження"
+
+#: playersmodel.cpp:141
+#, kde-format
+msgctxt "@title:column"
+msgid "Federation"
+msgstr "Федерація"
+
+#: playersmodel.cpp:143
+#, kde-format
+msgctxt "@title:column"
+msgid "Origin"
+msgstr "Походження"
+
+#: playersmodel.cpp:145
+#, kde-format
+msgctxt "@title:column"
+msgid "Sex"
+msgstr "Стать"
+
+#: qml/AddPlayerDialog.qml:16
+#, kde-format
+msgctxt "@title:window"
+msgid "Add player"
+msgstr "Додавання гравця"
+
+#: qml/AddPlayerDialog.qml:53
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Title"
+msgstr "Звертання"
+
+#: qml/AddPlayerDialog.qml:59
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Name"
+msgstr "Ім'я"
+
+#: qml/AddPlayerDialog.qml:64
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Rating"
+msgstr "Рейтинг"
+
+#: qml/AddPlayerDialog.qml:71
+#, kde-format
+msgctxt "@label:textbox"
+msgid "National rating"
+msgstr "Національний рейтинг"
+
+#: qml/AddPlayerDialog.qml:78
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Player ID"
+msgstr "ІД гравця"
+
+#: qml/AddPlayerDialog.qml:79 qml/AddPlayerDialog.qml:85
+#: qml/AddPlayerDialog.qml:91 qml/AddPlayerDialog.qml:97
+#: qml/AddPlayerDialog.qml:103
+#, kde-format
+msgid "Optional"
+msgstr "Необов'язкове"
+
+#: qml/AddPlayerDialog.qml:84
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Birth date"
+msgstr "Дата народження"
+
+#: qml/AddPlayerDialog.qml:90 qml/TournamentSettingsInformation.qml:37
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Federation"
+msgstr "Федерація"
+
+#: qml/AddPlayerDialog.qml:96
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Origin"
+msgstr "Походження"
+
+#: qml/AddPlayerDialog.qml:102
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Sex"
+msgstr "Стать"
+
+#: qml/DocsPage.qml:22
+#, kde-format
+msgctxt "@action:button"
+msgid "Save As…"
+msgstr "Зберегти як…"
+
+#: qml/Main.qml:21
+#, kde-format
+msgctxt "@title:window"
+msgid "Chessament"
+msgstr "Chessament"
+
+#: qml/Main.qml:101
+#, kde-format
+msgctxt "@title"
+msgid "Error"
+msgstr "Помилка"
+
+#: qml/Main.qml:190
+#, kde-format
+msgid "Players"
+msgstr "Гравці"
+
+#: qml/Main.qml:197
+#, kde-format
+msgid "Pairings"
+msgstr "Поділ на пари"
+
+#: qml/Main.qml:204
+#, kde-format
+msgid "Standings"
+msgstr "Результати"
+
+#: qml/Main.qml:229
+#, kde-format
+msgctxt "@action:button"
+msgid "Settings"
+msgstr "Параметри"
+
+#: qml/NewTournamentDialog.qml:16
+#, kde-format
+msgctxt "@title"
+msgid "New tournament"
+msgstr "Новий турнір"
+
+#: qml/NewTournamentDialog.qml:29
+#, kde-format
+msgctxt "@label:textbox tournament name"
+msgid "Name:"
+msgstr "Ім'я:"
+
+#: qml/NewTournamentDialog.qml:33
+#, kde-format
+msgctxt "@label"
+msgid "Format"
+msgstr "Формат"
+
+#: qml/NewTournamentDialog.qml:34
+#, kde-format
+msgctxt "@label"
+msgid "Swiss system"
+msgstr "Швейцарська система"
+
+#: qml/NewTournamentDialog.qml:39
+#, kde-format
+msgctxt "@label"
+msgid "Number of rounds"
+msgstr "Кількість раундів"
+
+#: qml/PairingsPage.qml:23
+#, kde-format
+msgid "Pair round %1"
+msgstr "Поділ на пари раунду %1"
+
+#: qml/PairingsPage.qml:32
+#, kde-format
+msgid "Round %1"
+msgstr "Раунд %1"
+
+#: qml/PairingsPage.qml:77
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "No pairings for round %1 yet"
+msgstr "Поділу на пари для раунду %1 ще немає"
+
+#: qml/PlayersPage.qml:42 qml/PlayersPage.qml:135
+#, kde-format
+msgctxt "@action:button"
+msgid "Add player"
+msgstr "Додати гравця"
+
+#: qml/PlayersPage.qml:48
+#, kde-format
+msgctxt "@action:button"
+msgid "Print"
+msgstr "Надрукувати"
+
+#: qml/PlayersPage.qml:131
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "No players yet"
+msgstr "Ще немає жодного гравця"
+
+#: qml/ResultsFooter.qml:41
+#, kde-format
+msgctxt "@action:intoolbar"
+msgid "*"
+msgstr "*"
+
+#: qml/ResultsFooter.qml:51
+#, kde-format
+msgctxt "@action:intoolbar"
+msgid "1-0"
+msgstr "1-0"
+
+#: qml/ResultsFooter.qml:58
+#, kde-format
+msgctxt "@action:intoolbar"
+msgid "½-½"
+msgstr "½-½"
+
+#: qml/ResultsFooter.qml:65
+#, kde-format
+msgctxt "@action:intoolbar"
+msgid "0-1"
+msgstr "0-1"
+
+#: qml/ResultsFooter.qml:75
+#, kde-format
+msgctxt "@action:intoolbar"
+msgid "1F-0F"
+msgstr "1F-0F"
+
+#: qml/ResultsFooter.qml:82
+#, kde-format
+msgctxt "@action:intoolbar"
+msgid "0F-1F"
+msgstr "0F-1F"
+
+#: qml/ResultsFooter.qml:89
+#, kde-format
+msgctxt "@action:intoolbar"
+msgid "0F-0F"
+msgstr "0F-0F"
+
+#: qml/ResultsFooter.qml:99
+#, kde-format
+msgctxt "@action:intoolbar"
+msgid "1U-0U"
+msgstr "1U-0U"
+
+#: qml/ResultsFooter.qml:106
+#, kde-format
+msgctxt "@action:intoolbar"
+msgid "½U-½U"
+msgstr "½U-½U"
+
+#: qml/ResultsFooter.qml:113
+#, kde-format
+msgctxt "@action:intoolbar"
+msgid "0U-1U"
+msgstr "0U-1U"
+
+#: qml/ResultsFooter.qml:120
+#, kde-format
+msgctxt "@action:intoolbar"
+msgid "½U-0U"
+msgstr "½U-0U"
+
+#: qml/ResultsFooter.qml:127
+#, kde-format
+msgctxt "@action:intoolbar"
+msgid "0U-½U"
+msgstr "0U-½U"
+
+#: qml/ResultsFooter.qml:134
+#, kde-format
+msgctxt "@action:intoolbar"
+msgid "0U-0U"
+msgstr "0U-0U"
+
+#: qml/ResultsFooter.qml:144
+#, kde-format
+msgctxt "@action:intoolbar"
+msgid "½-0"
+msgstr "½-0"
+
+#: qml/ResultsFooter.qml:151
+#, kde-format
+msgctxt "@action:intoolbar"
+msgid "0-0"
+msgstr "0-0"
+
+#: qml/ResultsFooter.qml:158
+#, kde-format
+msgctxt "@action:intoolbar"
+msgid "0-½"
+msgstr "0-½"
+
+#: qml/StandingsPage.qml:36
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "No standings yet"
+msgstr "Місця ще не розподілено"
+
+#: qml/TournamentSettings.qml:14
+#, kde-format
+msgctxt "@action:button"
+msgid "Information"
+msgstr "Відомості"
+
+#: qml/TournamentSettings.qml:20
+#, kde-format
+msgctxt "@action:button"
+msgid "Format"
+msgstr "Формат"
+
+#: qml/TournamentSettings.qml:26
+#, kde-format
+msgctxt "@action:button"
+msgid "Calendar"
+msgstr "Календар"
+
+#: qml/TournamentSettingsCalendar.qml:14
+#, kde-format
+msgctxt "@title"
+msgid "Calendar"
+msgstr "Календар"
+
+#: qml/TournamentSettingsCalendar.qml:24
+#, kde-format
+msgctxt "round number"
+msgid "Round %1"
+msgstr "Раунд %1"
+
+#: qml/TournamentSettingsFormat.qml:11
+#, kde-format
+msgctxt "@title"
+msgid "Format"
+msgstr "Формат"
+
+#: qml/TournamentSettingsFormat.qml:14
+#, kde-format
+msgctxt "@title:group"
+msgid "Format"
+msgstr "Формат"
+
+#: qml/TournamentSettingsFormat.qml:18
+#, kde-format
+msgid "Swiss system"
+msgstr "Швейцарська система"
+
+#: qml/TournamentSettingsFormat.qml:22
+#, kde-format
+msgid "Rounds"
+msgstr "Раунди"
+
+#: qml/TournamentSettingsFormat.qml:36
+#, kde-format
+msgctxt "@title:group"
+msgid "Pairings"
+msgstr "Поділ на пари"
+
+#: qml/TournamentSettingsFormat.qml:40
+#, kde-format
+msgid "Pairing engine"
+msgstr "Рушій розподілу на пари"
+
+#: qml/TournamentSettingsFormat.qml:41
+#, kde-format
+msgid "bbpPairings"
+msgstr "bbpPairings"
+
+#: qml/TournamentSettingsFormat.qml:45
+#, kde-format
+msgid "Pairing allocated bye"
+msgstr "Призначений фіктивний парний гравець"
+
+#: qml/TournamentSettingsFormat.qml:46
+#, kde-format
+msgid "The value of the pairing allocated bye"
+msgstr "Значення призначеного фіктивного парного гравця"
+
+#: qml/TournamentSettingsInformation.qml:11
+#, kde-format
+msgctxt "@title"
+msgid "Information"
+msgstr "Відомості"
+
+#: qml/TournamentSettingsInformation.qml:14
+#, kde-format
+msgctxt "@title:group"
+msgid "Basic details"
+msgstr "Основні параметри"
+
+#: qml/TournamentSettingsInformation.qml:19
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Tournament name"
+msgstr "Назва турніру"
+
+#: qml/TournamentSettingsInformation.qml:28
+#, kde-format
+msgctxt "@label:textbox"
+msgid "City"
+msgstr "Місто"
+
+#: qml/TournamentSettingsInformation.qml:46
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Chief arbiter"
+msgstr "Головний арбітр"
+
+#: qml/TournamentSettingsInformation.qml:55
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Deputy chief arbiter"
+msgstr "Заступник головного арбітра"
+
+#: qml/WelcomePage.qml:20
+#, kde-format
+msgctxt "@title"
+msgid "Welcome to Chessament"
+msgstr "Вітаємо у Chessament"
+
+#: qml/WelcomePage.qml:21
+#, kde-format
+msgctxt "@info"
+msgid "Chessament is a chess tournament manager"
+msgstr "Chessament — програма для керування шаховими турнірами"
+
+#: settings/ChessamentConfigurationView.qml:19
+#, kde-format
+msgctxt "@action:button"
+msgid "General"
+msgstr "Загальне"
+
+#: settings/GeneralPage.qml:16
+#, kde-format
+msgctxt "@title"
+msgid "General"
+msgstr "Загальне"
+
+#: settings/GeneralPage.qml:19
+#, kde-format
+msgctxt "@title:group"
+msgid "Account"
+msgstr "Обліковий запис"
+
+#: settings/GeneralPage.qml:24
+#, kde-format
+msgctxt "@label:button"
+msgid "Connect Account"
+msgstr "З'єднати обліковий запис"
+
+#: settings/GeneralPage.qml:31
+#, kde-format
+msgid "Logged in as %1"
+msgstr "Вхід до системи від імені %1"
+
+#: settings/GeneralPage.qml:36
+#, kde-format
+msgid "Logout"
+msgstr "Вийти"
+
+#: standingsmodel.cpp:60
+#, kde-format
+msgctxt "@title:colunm"
+msgid "Rank"
+msgstr "Ранг"
+
+#: tournament.cpp:762
+#, kde-format
+msgid "Couldn't open file"
+msgstr "Не вдалося відкрити файл"
+
+#: trf.cpp:74
+#, kde-format
+msgid "Invalid pairing \"%1\""
+msgstr "Некоректний розподіл на пари «%1»"
+
+#: trf.cpp:80
+#, kde-format
+msgid "Invalid player for pairing \"%1\""
+msgstr "Некоректний гравець для пари «%1»"
+
+#: trf.cpp:86
+#, kde-format
+msgid "Unknown result for pairing \"%1\""
+msgstr "Невідомий результат для поділу на пари «%1»"
+
+#: trf.cpp:115 trf.cpp:122
+#, kde-format
+msgid "Player %1 not found"
+msgstr "Гравця %1 не знайдено"
+
+#: trf.cpp:128
+#, kde-format
+msgid "Unknown result on pairing %1 with %2"
+msgstr "Невідомий результат для поділу на пари %1 з %2"
