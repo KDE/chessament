@@ -11,13 +11,19 @@
   <name>Chessament</name>
   <name xml:lang="ca">Chessament</name>
   <name xml:lang="es">Chessament</name>
+  <name xml:lang="ka">Chessament</name>
+  <name xml:lang="nl">Chessament</name>
   <name xml:lang="sl">Chessament</name>
+  <name xml:lang="tr">Chessament</name>
   <name xml:lang="uk">Chessament</name>
   <name xml:lang="x-test">xxChessamentxx</name>
   <summary>Chess tournament manager</summary>
   <summary xml:lang="ca">Gestor de torneigs d'escacs</summary>
   <summary xml:lang="es">Gestor de torneos de ajedrez</summary>
+  <summary xml:lang="ka">ჭადრაკის ტურნირის მმართველი</summary>
+  <summary xml:lang="nl">Beheerder van een schaaktoernooi</summary>
   <summary xml:lang="sl">Upravljalnik šahovskih turnirjev</summary>
+  <summary xml:lang="tr">Satranç turnuvası yöneticisi</summary>
   <summary xml:lang="uk">Керування шаховим турніром</summary>
   <summary xml:lang="x-test">xxChess tournament managerxx</summary>
   <metadata_license>CC0-1.0</metadata_license>
@@ -30,33 +36,48 @@
     <p>Multiple paragraphs of long description, describing this software component.</p>
     <p xml:lang="ca">Diversos paràgrafs de descripció llarga, descrivint aquest component de programari.</p>
     <p xml:lang="es">Varios párrafos largos que describen este componente de software.</p>
+    <p xml:lang="ka">გრძელი აღწერის მრავალი პარაგრაფი, რომელიც ამ პროგრამულ კომპონენტს აღწერს.</p>
+    <p xml:lang="nl">Meerdere paragrafen met lange beschrijvingen, die deze softwarecomponent beschrijven.</p>
     <p xml:lang="sl">Več odstavkov dolgega opisa, ki opisujejo to programsko komponento.</p>
+    <p xml:lang="tr">Bu yazılım bileşenini açıklayan birden çok uzun paragraflar.</p>
     <p xml:lang="uk">Декілька абзаців повного опису цього компонента програмного забезпечення.</p>
     <p xml:lang="x-test">xxMultiple paragraphs of long description, describing this software component.xx</p>
     <p>You can also use ordered and unordered lists:</p>
     <p xml:lang="ca">També podeu utilitzar llistes ordenades i no ordenades:</p>
     <p xml:lang="es">También se pueden usar listas ordenadas y desordenadas:</p>
+    <p xml:lang="ka">შეგიძლიათ გამოიყენოთ როგორც დალაგებული, ისე დაულაგებელი:</p>
+    <p xml:lang="nl">U kunt ook geordende en ongeordende lijsten gebruiken:</p>
     <p xml:lang="sl">Uporabite lahko tudi urejene in neurejene sezname:</p>
+    <p xml:lang="tr">Aynı zamanda sıralı veya sırasız listeler kullanabilirsiniz:</p>
     <p xml:lang="uk">Ви можете використовувати упорядковані і неупорядковані списки:</p>
     <p xml:lang="x-test">xxYou can also use ordered and unordered lists:xx</p>
     <ul>
       <li>Feature 1</li>
       <li xml:lang="ca">Característica 1</li>
       <li xml:lang="es">Artículo 1</li>
+      <li xml:lang="ka">ფუნქცია 1</li>
+      <li xml:lang="nl">Mogelijkheid 1</li>
       <li xml:lang="sl">Zmožnost 1</li>
+      <li xml:lang="tr">Özellik 1</li>
       <li xml:lang="uk">Можливість 1</li>
       <li xml:lang="x-test">xxFeature 1xx</li>
       <li>Feature 2</li>
       <li xml:lang="ca">Característica 2</li>
       <li xml:lang="es">Artículo 2</li>
+      <li xml:lang="ka">ფუნქცია 2</li>
+      <li xml:lang="nl">Mogelijkheid 2</li>
       <li xml:lang="sl">Zmožnost 1</li>
+      <li xml:lang="tr">Özellik 2</li>
       <li xml:lang="uk">Можливість 2</li>
       <li xml:lang="x-test">xxFeature 2xx</li>
     </ul>
     <p>Keep in mind to XML-escape characters, and that this is not HTML markup.</p>
     <p xml:lang="ca">Tingueu en compte d'escapar els caràcters XML, i que això no és marcatge HTML.</p>
     <p xml:lang="es">Recuerda «escapar» los caracteres en XML y que esto no es marcado HTML.</p>
+    <p xml:lang="ka">დაიმახსოვრეთ, რომ გამოიყენება XML-ის სპეციალური სიმბოლოები და არა HTML მარქაფი.</p>
+    <p xml:lang="nl">Houd XML-escape tekens in gedachte en dat dit geen HTML opmaak is.</p>
     <p xml:lang="sl">Upoštevajte ubežne znake XML in da to ni HTML markup.</p>
+    <p xml:lang="tr">Bunun HTML işaretleri olmadığını ve karakterleri XML biçiminde kaçırmanız gerektiğini unutmayın.</p>
     <p xml:lang="uk">Слід пам'ятати, що символи XML слід екранувати, і що це не зовсім розмітка HTML.</p>
     <p xml:lang="x-test">xxKeep in mind to XML-escape characters, and that this is not HTML markup.xx</p>
   </description>
