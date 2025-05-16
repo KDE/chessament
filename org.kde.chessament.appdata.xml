@@ -11,6 +11,7 @@
   <name>Chessament</name>
   <name xml:lang="ca">Chessament</name>
   <name xml:lang="es">Chessament</name>
+  <name xml:lang="fr">Chessament</name>
   <name xml:lang="he">Chessament</name>
   <name xml:lang="ka">Chessament</name>
   <name xml:lang="nl">Chessament</name>
@@ -21,6 +22,7 @@
   <summary>Chess tournament manager</summary>
   <summary xml:lang="ca">Gestor de torneigs d'escacs</summary>
   <summary xml:lang="es">Gestor de torneos de ajedrez</summary>
+  <summary xml:lang="fr">Gestionnaire de tournoi d’échecs</summary>
   <summary xml:lang="he">מנהל תחרויות שחמט</summary>
   <summary xml:lang="ka">ჭადრაკის ტურნირის მმართველი</summary>
   <summary xml:lang="nl">Beheerder van een schaaktoernooi</summary>
@@ -38,6 +40,7 @@
     <p>Multiple paragraphs of long description, describing this software component.</p>
     <p xml:lang="ca">Diversos paràgrafs de descripció llarga, descrivint aquest component de programari.</p>
     <p xml:lang="es">Varios párrafos largos que describen este componente de software.</p>
+    <p xml:lang="fr">Plusieurs paragraphes de description longue, décrivant ce composant logiciel.</p>
     <p xml:lang="he">מגוון פסקאות של תיאורים ארוכים שמתארים את רכיב התוכנה הזה.</p>
     <p xml:lang="ka">გრძელი აღწერის მრავალი პარაგრაფი, რომელიც ამ პროგრამულ კომპონენტს აღწერს.</p>
     <p xml:lang="nl">Meerdere paragrafen met lange beschrijvingen, die deze softwarecomponent beschrijven.</p>
@@ -48,6 +51,7 @@
     <p>You can also use ordered and unordered lists:</p>
     <p xml:lang="ca">També podeu utilitzar llistes ordenades i no ordenades:</p>
     <p xml:lang="es">También se pueden usar listas ordenadas y desordenadas:</p>
+    <p xml:lang="fr">Vous pouvez également utiliser des listes ordonnées et non ordonnées :</p>
     <p xml:lang="he">אפשר לסדר אותן גם באופן הבא:</p>
     <p xml:lang="ka">შეგიძლიათ გამოიყენოთ როგორც დალაგებული, ისე დაულაგებელი:</p>
     <p xml:lang="nl">U kunt ook geordende en ongeordende lijsten gebruiken:</p>
@@ -59,6 +63,7 @@
       <li>Feature 1</li>
       <li xml:lang="ca">Característica 1</li>
       <li xml:lang="es">Artículo 1</li>
+      <li xml:lang="fr">Caractéristique n°1</li>
       <li xml:lang="he">יכולת 1</li>
       <li xml:lang="ka">ფუნქცია 1</li>
       <li xml:lang="nl">Mogelijkheid 1</li>
@@ -69,6 +74,7 @@
       <li>Feature 2</li>
       <li xml:lang="ca">Característica 2</li>
       <li xml:lang="es">Artículo 2</li>
+      <li xml:lang="fr">Caractéristique n°2</li>
       <li xml:lang="he">יכולת 2</li>
       <li xml:lang="ka">ფუნქცია 2</li>
       <li xml:lang="nl">Mogelijkheid 2</li>
@@ -80,6 +86,7 @@
     <p>Keep in mind to XML-escape characters, and that this is not HTML markup.</p>
     <p xml:lang="ca">Tingueu en compte d'escapar els caràcters XML, i que això no és marcatge HTML.</p>
     <p xml:lang="es">Recuerda «escapar» los caracteres en XML y que esto no es marcado HTML.</p>
+    <p xml:lang="fr">N’oubliez pas d’échapper les caractères XML, et qu’il ne s’agit pas d’un balisage HTML.</p>
     <p xml:lang="he">חשוב לשים לב לתווי מילוט XML ושזה לא תחביר HTML.</p>
     <p xml:lang="ka">დაიმახსოვრეთ, რომ გამოიყენება XML-ის სპეციალური სიმბოლოები და არა HTML მარქაფი.</p>
     <p xml:lang="nl">Houd XML-escape tekens in gedachte en dat dit geen HTML opmaak is.</p>
