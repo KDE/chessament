@@ -4,13 +4,14 @@
 # Automatically generated, 2025.
 #
 # SPDX-FileCopyrightText: 2025 Sofía Priego <spriego@darksylvania.net>
+# SPDX-FileCopyrightText: 2025 Manuel Alcaraz Zambrano <manuelalcarazzam@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-14 00:40+0000\n"
-"PO-Revision-Date: 2025-05-12 12:58+0100\n"
-"Last-Translator: Sofía Priego <spriego@darksylvania.net>\n"
+"PO-Revision-Date: 2025-05-14 23:56+0100\n"
+"Last-Translator: Manuel Alcaraz Zambrano <manuelalcarazzam@gmail.com>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
@@ -80,13 +81,13 @@ msgstr "Autor y responsable"
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Sofía Priego"
+msgstr "Manuel Alcaraz Zambrano,Sofía Priego"
 
 #: main.cpp:80
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "spriego@darksylvania.net"
+msgstr "manuelalcarazzam@gmail.com,spriego@darksylvania.net"
 
 #: pairingmodel.cpp:65
 #, kde-format
@@ -99,7 +100,7 @@ msgstr "Tablero"
 #, kde-format
 msgctxt "@title:column"
 msgid "No"
-msgstr "No"
+msgstr "N.º"
 
 #: pairingmodel.cpp:69
 #, kde-format
@@ -277,7 +278,7 @@ msgstr "Emparejamientos"
 #: qml/Main.qml:204
 #, kde-format
 msgid "Standings"
-msgstr "Posiciones"
+msgstr "Clasificación"
 
 #: qml/Main.qml:229
 #, kde-format
@@ -318,7 +319,7 @@ msgstr "Número de rondas"
 #: qml/PairingsPage.qml:23
 #, kde-format
 msgid "Pair round %1"
-msgstr "Parejas ronda %1"
+msgstr "Emparejar ronda %1"
 
 #: qml/PairingsPage.qml:32
 #, kde-format
@@ -449,7 +450,7 @@ msgstr "0-½"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No standings yet"
-msgstr "Todavía no hay posiciones"
+msgstr "Todavía no hay clasificación"
 
 #: qml/TournamentSettings.qml:14
 #, kde-format
@@ -507,7 +508,7 @@ msgstr "Rondas"
 #, kde-format
 msgctxt "@title:group"
 msgid "Pairings"
-msgstr "Parejas"
+msgstr "Emparejamientos"
 
 #: qml/TournamentSettingsFormat.qml:40
 #, kde-format
@@ -615,7 +616,7 @@ msgstr "Cerrar sesión"
 #, kde-format
 msgctxt "@title:colunm"
 msgid "Rank"
-msgstr "Rango"
+msgstr "Posición"
 
 #: tournament.cpp:764
 #, kde-format
