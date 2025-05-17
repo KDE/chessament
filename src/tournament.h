@@ -80,6 +80,8 @@ public:
     QCoro::Task<std::expected<QList<Pairing *>, QString>> calculatePairings(int round);
     QCoro::Task<std::expected<bool, QString>> pairNextRound();
 
+    TournamentState getState();
+
     int numberOfPlayers();
     int numberOfRatedPlayers();
 

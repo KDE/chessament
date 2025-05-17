@@ -597,6 +597,11 @@ QCoro::Task<std::expected<bool, QString>> Tournament::pairNextRound()
     co_return true;
 }
 
+TournamentState Tournament::getState()
+{
+    return TournamentState{this};
+}
+
 QVariant Tournament::getOption(const QString &name)
 {
     QSqlQuery query(m_event->getDB());
@@ -701,6 +706,9 @@ QString Tournament::toTrf(TrfOptions options, int maxRound)
     QString result;
     QTextStream stream(&result);
 
+    auto state = getState();
+    auto standings = getStandings(-1);
+
     const auto space = u" "_s;
     const auto newLine = QLatin1Char('\n');
 
@@ -722,11 +730,14 @@ QString Tournament::toTrf(TrfOptions options, int maxRound)
         stream << u"XXC black1\n"_s;
     }
 
-    const auto pairings = getPairingsByPlayer(maxRound);
     const auto r = maxRound < 0 ? m_numberOfRounds : maxRound;
 
     for (const auto player : std::as_const(*m_players)) {
         const auto title = Player::titleString(player->title());
+        const auto standing = std::find_if(standings.constBegin(), standings.constEnd(), [&player](PlayerTiebreaks s) {
+            return s.first == player;
+        });
+        const auto rank = std::distance(standings.constBegin(), standing) + 1;
         const auto result = std::format("001 {:4} {:1}{:3} {:33} {:4} {:3} {:>11} {:10} {:4.1f} {:4}",
                                         player->startingRank(),
                                         player->sex().toStdString(),
@@ -736,15 +747,15 @@ QString Tournament::toTrf(TrfOptions options, int maxRound)
                                         player->federation().toStdString(),
                                         player->playerId().toStdString(),
                                         player->birthDate().toStdString(),
-                                        0.f, // TODO: real points
-                                        player->startingRank() // TODO: real rank
-        );
+                                        state.getPoints(player),
+                                        rank);
 
         stream << result.c_str();
 
+        auto pairings = state.getPairings(player);
         for (int i = 0; i < r; i++) {
-            if (i < pairings.value(player).size()) {
-                stream << pairings.value(player).value(i)->toTrf(player);
+            if (i < pairings.size()) {
+                stream << pairings.value(i)->toTrf(player);
             } else {
                 stream << u"          "_s;
             }

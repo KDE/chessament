@@ -50,6 +50,7 @@ void Controller::setTournament(Tournament *tournament)
 
     setHasOpenTournament(true);
     setCurrentPlayerByIndex(-1);
+    setCurrentRound(1);
 
     Q_EMIT tournamentChanged();
 }
@@ -109,7 +110,7 @@ int Controller::currentRound()
 
 bool Controller::hasCurrentRoundFinished()
 {
-    return m_tournament->isRoundFinished(m_currentRound);
+    return m_tournament->isRoundFinished(m_tournament->currentRound());
 }
 
 void Controller::setCurrentRound(int currentRound)
@@ -154,6 +155,8 @@ QCoro::Task<void> Controller::pairRound()
 
     setCurrentRound(m_tournament->currentRound());
     m_pairingModel->setPairings(m_tournament->getPairings(m_currentRound));
+
+    Q_EMIT hasCurrentRoundFinishedChanged();
 }
 
 QString Controller::getPlayersListDocument()
