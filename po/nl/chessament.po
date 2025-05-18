@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-14 00:40+0000\n"
+"POT-Creation-Date: 2025-05-18 00:39+0000\n"
 "PO-Revision-Date: 2025-05-12 12:00+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -41,7 +41,7 @@ msgctxt "@action:inmenu"
 msgid "Connect account"
 msgstr "Account verbinden"
 
-#: controller.cpp:143
+#: controller.cpp:144
 #, kde-format
 msgid "Couldn't export tournament."
 msgstr "Kon toernooi niet exporteren."
@@ -615,7 +615,7 @@ msgctxt "@title:colunm"
 msgid "Rank"
 msgstr "Rangorde"
 
-#: tournament.cpp:764
+#: tournament.cpp:775
 #, kde-format
 msgid "Couldn't open file"
 msgstr "Kon bestand niet openen"
