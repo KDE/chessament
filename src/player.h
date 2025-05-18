@@ -133,6 +133,7 @@ public:
 
     QJsonObject toJson() const;
     static Player *fromJson(const QJsonObject &json);
+    std::string toTrf(double points, int rank, bool normalize = true);
 
     friend QDebug operator<<(QDebug dbg, const Player &player);
 

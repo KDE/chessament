@@ -62,6 +62,8 @@ ecm_add_qml_module(chessament_static
         tournamentstate.cpp
         tournamentstate.h
         trf.cpp
+        utils.h
+        utils.cpp
     IMPORTS
         org.kde.kirigamiaddons.formcard
         org.kde.kirigamiaddons.statefulapp

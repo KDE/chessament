@@ -733,22 +733,11 @@ QString Tournament::toTrf(TrfOptions options, int maxRound)
     const auto r = maxRound < 0 ? m_numberOfRounds : maxRound;
 
     for (const auto player : std::as_const(*m_players)) {
-        const auto title = Player::titleString(player->title());
         const auto standing = std::find_if(standings.constBegin(), standings.constEnd(), [&player](PlayerTiebreaks s) {
             return s.first == player;
         });
         const auto rank = std::distance(standings.constBegin(), standing) + 1;
-        const auto result = std::format("001 {:4} {:1}{:3} {:33} {:4} {:3} {:>11} {:10} {:4.1f} {:4}",
-                                        player->startingRank(),
-                                        player->sex().toStdString(),
-                                        title.toStdString(),
-                                        player->name().toStdString(),
-                                        player->rating(),
-                                        player->federation().toStdString(),
-                                        player->playerId().toStdString(),
-                                        player->birthDate().toStdString(),
-                                        state.getPoints(player),
-                                        rank);
+        const auto result = player->toTrf(state.getPoints(player), rank);
 
         stream << result.c_str();
 

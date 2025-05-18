@@ -2,6 +2,9 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 
 #include "player.h"
+#include "utils.h"
+
+#include <format>
 
 using namespace Qt::Literals::StringLiterals;
 
@@ -284,6 +287,37 @@ Player *Player::fromJson(const QJsonObject &json)
     }
 
     return player;
+}
+
+std::string Player::toTrf(double points, int rank, bool normalize)
+{
+    const auto title = Player::titleString(m_title);
+    auto name = fullName();
+    auto federation = m_federation;
+    auto birth = m_birthDate;
+    auto playerid = m_playerId;
+    auto sex = m_sex;
+
+    if (normalize) {
+        sex = Utils::normalize(sex);
+        name = Utils::normalize(name);
+        federation = Utils::normalize(federation);
+        playerid = Utils::normalize(playerid);
+        birth = Utils::normalize(birth);
+    }
+
+    return std::format("001 {:4} {:1.1}{:3} {:33.33} {:4} {:3.3} {:>11} {:10.10} {:4.1f} {:4}",
+                       m_startingRank,
+                       sex.toStdString(),
+                       title.toStdString(),
+                       name.toStdString(),
+                       m_rating,
+                       federation.toStdString(),
+                       playerid.toStdString(),
+                       birth.toStdString(),
+                       points,
+                       rank)
+        .c_str();
 }
 
 QDebug operator<<(QDebug dbg, const Player &player)
