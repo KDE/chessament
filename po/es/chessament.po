@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-18 00:39+0000\n"
+"POT-Creation-Date: 2025-05-19 00:39+0000\n"
 "PO-Revision-Date: 2025-05-14 23:56+0100\n"
 "Last-Translator: Manuel Alcaraz Zambrano <manuelalcarazzam@gmail.com>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -618,7 +618,7 @@ msgctxt "@title:colunm"
 msgid "Rank"
 msgstr "Posición"
 
-#: tournament.cpp:775
+#: tournament.cpp:764
 #, kde-format
 msgid "Couldn't open file"
 msgstr "No se ha podido abrir el archivo"
