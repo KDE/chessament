@@ -10,6 +10,7 @@
 
 #include <algorithm>
 #include <iostream>
+#include <qassert.h>
 
 #include "db.h"
 #include "event.h"
@@ -162,6 +163,7 @@ int Tournament::currentRound()
 
 void Tournament::setCurrentRound(int currentRound)
 {
+    Q_ASSERT(currentRound >= 0);
     if (m_currentRound == currentRound) {
         return;
     }
@@ -386,21 +388,26 @@ void Tournament::setRounds(QList<Round *> rounds)
 void Tournament::addPairing(int round, Pairing *pairing)
 {
     while (m_rounds.size() < round) {
-        m_rounds << new Round();
+        QSqlQuery query(m_event->getDB());
+        query.prepare(ADD_ROUND_QUERY);
+        query.bindValue(u":number"_s, round);
+        query.bindValue(u":tournament"_s, m_id);
+        query.exec();
+
+        if (query.lastError().isValid()) {
+            qDebug() << "add pairing : round" << query.lastError();
+        }
+
+        auto round = new Round();
+        round->setId(query.lastInsertId().toInt());
+        m_rounds << round;
     }
+
     m_rounds.at(round - 1)->addPairing(pairing);
 
+    auto roundId = m_rounds.at(round - 1)->id();
+
     QSqlQuery query(m_event->getDB());
-    query.prepare(ADD_ROUND_QUERY);
-    query.bindValue(u":number"_s, round);
-    query.bindValue(u":tournament"_s, m_id);
-    query.exec();
-
-    if (query.lastError().isValid()) {
-        qDebug() << "add pairing : round" << query.lastError();
-    }
-
-    query = QSqlQuery(m_event->getDB());
     query.prepare(ADD_PAIRING_QUERY);
     query.bindValue(u":board"_s, pairing->board());
     query.bindValue(u":whitePlayer"_s, pairing->whitePlayer()->id());
@@ -411,7 +418,7 @@ void Tournament::addPairing(int round, Pairing *pairing)
     }
     query.bindValue(u":whiteResult"_s, std::to_underlying(pairing->whiteResult()));
     query.bindValue(u":blackResult"_s, std::to_underlying(pairing->blackResult()));
-    query.bindValue(u":round"_s, round);
+    query.bindValue(u":round"_s, roundId);
     query.exec();
 
     if (query.lastError().isValid()) {
@@ -450,6 +457,7 @@ void Tournament::setResult(Pairing *pairing, Pairing::Result result)
 
 QList<Pairing *> Tournament::getPairings(int round) const
 {
+    Q_ASSERT(round > 0);
     if (round <= m_rounds.size()) {
         return m_rounds.at(round - 1)->pairings();
     }
@@ -561,7 +569,8 @@ bool Tournament::isRoundFinished(int round)
     }
 
     auto finished = std::count_if(pairings.cbegin(), pairings.cend(), [](Pairing *p) {
-        return p->whiteResult() != Pairing::PartialResult::Unknown && p->blackResult() != Pairing::PartialResult::Unknown;
+        return Pairing::isRequestedBye(p->whiteResult())
+            || (p->whiteResult() != Pairing::PartialResult::Unknown && p->blackResult() != Pairing::PartialResult::Unknown);
     });
 
     return finished == pairings.size();
@@ -592,9 +601,35 @@ QCoro::Task<std::expected<bool, QString>> Tournament::pairNextRound()
         addPairing(m_currentRound + 1, pairing);
     }
 
+    sortPairings();
+
     setCurrentRound(m_currentRound + 1);
 
     co_return true;
+}
+
+void Tournament::removePairings(int round, bool keepByes)
+{
+    for (int i = round; i <= m_numberOfRounds; i++) {
+        QSqlQuery query(m_event->getDB());
+        if (keepByes) {
+            query.prepare(DELETE_PAIRINGS_NO_BYES_QUERY);
+        } else {
+            query.prepare(DELETE_PAIRINGS_QUERY);
+        }
+        query.bindValue(u":round"_s, m_rounds.at(i - 1)->id());
+        query.exec();
+
+        if (query.lastError().isValid()) {
+            qDebug() << "remove pairings" << query.lastError();
+        }
+
+        m_rounds.at(i - 1)->removePairings([keepByes](Pairing *pairing) {
+            return !keepByes || !Pairing::isRequestedBye(pairing->whiteResult());
+        });
+    }
+
+    setCurrentRound(round - 1);
 }
 
 TournamentState Tournament::getState()
@@ -804,6 +839,7 @@ bool Tournament::loadTournament()
 {
     loadOptions();
     loadPlayers();
+    loadRounds();
     loadPairings();
 
     return true;
@@ -860,6 +896,28 @@ void Tournament::loadPlayers()
     }
 }
 
+void Tournament::loadRounds()
+{
+    QSqlQuery query(m_event->getDB());
+    query.prepare(GET_ROUNDS_QUERY);
+    query.bindValue(u":tournament"_s, m_id);
+    query.exec();
+
+    int idNo = query.record().indexOf("id");
+    int numberNo = query.record().indexOf("number");
+
+    while (query.next()) {
+        auto round = new Round();
+        round->setId(query.value(idNo).toInt());
+        round->setNumber(query.value(numberNo).toInt());
+        m_rounds << round;
+    }
+
+    std::sort(m_rounds.begin(), m_rounds.end(), [](Round *a, Round *b) {
+        return a->number() < b->number();
+    });
+}
+
 void Tournament::loadPairings()
 {
     auto players = getPlayersById();
@@ -885,9 +943,6 @@ void Tournament::loadPairings()
                                    Pairing::PartialResult(query.value(whiteResultNo).toInt()),
                                    Pairing::PartialResult(query.value(blackResultNo).toInt()));
         pairing->setId(query.value(idNo).toInt());
-        while (m_rounds.size() < round) {
-            m_rounds << new Round();
-        }
         m_rounds.at(round - 1)->addPairing(pairing);
     }
 }

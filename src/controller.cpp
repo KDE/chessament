@@ -115,9 +115,7 @@ bool Controller::hasCurrentRoundFinished()
 
 void Controller::setCurrentRound(int currentRound)
 {
-    if (m_currentRound == currentRound) {
-        return;
-    }
+    Q_ASSERT(currentRound > 0);
     m_currentRound = currentRound;
     m_pairingModel->setPairings(m_tournament->getPairings(currentRound));
     Q_EMIT currentRoundChanged();
@@ -157,6 +155,12 @@ QCoro::Task<void> Controller::pairRound()
     m_pairingModel->setPairings(m_tournament->getPairings(m_currentRound));
 
     Q_EMIT hasCurrentRoundFinishedChanged();
+}
+
+void Controller::removePairings(bool keepByes)
+{
+    m_tournament->removePairings(m_currentRound, keepByes);
+    setCurrentRound(std::max(1, m_tournament->currentRound()));
 }
 
 QString Controller::getPlayersListDocument()

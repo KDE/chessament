@@ -30,6 +30,7 @@ TablePage {
                 model: Controller.tournament.numberOfRounds
                 currentIndex: Controller.currentRound - 1
                 displayText: i18n("Round %1", currentIndex + 1)
+                flat: true
                 delegate: QQC2.ItemDelegate {
                     required property int index
 
@@ -38,9 +39,21 @@ TablePage {
                     highlighted: roundSelector.highlightedIndex === index
                 }
                 onActivated: index => {
-                    root.tableView.selectionModel.clear();
-                    Controller.currentRound = index + 1;
+                    if (Controller.currentRound != index + 1) {
+                        root.tableView.selectionModel.clear();
+                        Controller.currentRound = index + 1;
+                    }
                 }
+            }
+        },
+        Kirigami.Action {
+            text: i18nc("@action:inmenu", "Remove pairings of this and following rounds…")
+            icon.name: "edit-delete"
+            displayHint: Kirigami.DisplayHint.AlwaysHide
+            onTriggered: {
+                Qt.createComponent("org.kde.chessament", "DeletePairingsDialog").createObject(root.QQC2.ApplicationWindow.window, {
+                    round: Controller.currentRound
+                }).open();
             }
         }
     ]

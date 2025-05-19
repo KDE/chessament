@@ -8,6 +8,34 @@ Round::Round()
 {
 }
 
+int Round::id()
+{
+    return m_id;
+}
+
+void Round::setId(int id)
+{
+    if (m_id == id) {
+        return;
+    }
+    m_id = id;
+    Q_EMIT idChanged();
+}
+
+int Round::number()
+{
+    return m_number;
+}
+
+void Round::setNumber(int number)
+{
+    if (m_number == number) {
+        return;
+    }
+    m_number = number;
+    Q_EMIT numberChanged();
+}
+
 QList<Pairing *> Round::pairings()
 {
     return m_pairings;
@@ -36,4 +64,9 @@ Pairing *Round::getPairing(int board)
 void Round::addPairing(Pairing *pairing)
 {
     m_pairings.append(pairing);
+}
+
+void Round::removePairings(std::function<bool(Pairing *)> predicate)
+{
+    m_pairings.removeIf(predicate);
 }
