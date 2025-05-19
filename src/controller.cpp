@@ -159,6 +159,12 @@ QCoro::Task<void> Controller::pairRound()
     Q_EMIT hasCurrentRoundFinishedChanged();
 }
 
+void Controller::removePairings(bool keepByes)
+{
+    m_tournament->removePairings(m_currentRound, keepByes);
+    setCurrentRound(m_tournament->currentRound());
+}
+
 QString Controller::getPlayersListDocument()
 {
     return m_tournament->getPlayersListDocument();

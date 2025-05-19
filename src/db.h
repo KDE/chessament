@@ -71,6 +71,8 @@ const QString ADD_ROUND_QUERY =
     u"INSERT OR IGNORE INTO rounds(number, tournament) "_s
     u"VALUES (:number, :tournament);"_s;
 
+const QString GET_ROUNDS_QUERY = u"SELECT * FROM rounds WHERE tournament = :tournament;"_s;
+
 const QString PAIRINGS_TABLE_SCHEMA =
     u"CREATE TABLE IF NOT EXISTS pairings("_s
     u"id INTEGER PRIMARY KEY,"_s
@@ -98,3 +100,7 @@ const QString UPDATE_PAIRING_QUERY =
     u"UPDATE pairings SET (board, whitePlayer, blackPlayer, whiteResult, blackResult) = "_s
     u"(:board, :whitePlayer, :blackPlayer, :whiteResult, :blackResult) "
     u"WHERE id = :id;"_s;
+
+const QString DELETE_PAIRINGS_QUERY = u"DELETE FROM pairings WHERE round = :round;"_s;
+
+const QString DELETE_PAIRINGS_NO_BYES_QUERY = u"DELETE FROM pairings WHERE round = :round AND whiteResult NOT IN (9, 10, 11);"_s;

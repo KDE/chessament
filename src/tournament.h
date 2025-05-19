@@ -79,6 +79,7 @@ public:
     Q_INVOKABLE bool isRoundFinished(int round);
     QCoro::Task<std::expected<QList<Pairing *>, QString>> calculatePairings(int round);
     QCoro::Task<std::expected<bool, QString>> pairNextRound();
+    void removePairings(int round, bool keepByes);
 
     TournamentState getState();
 
@@ -233,6 +234,7 @@ private:
     bool loadTournament();
     void loadOptions();
     void loadPlayers();
+    void loadRounds();
     void loadPairings();
 
     Event *m_event;

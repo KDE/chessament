@@ -30,6 +30,7 @@ TablePage {
                 model: Controller.tournament.numberOfRounds
                 currentIndex: Controller.currentRound - 1
                 displayText: i18n("Round %1", currentIndex + 1)
+                flat: true
                 delegate: QQC2.ItemDelegate {
                     required property int index
 
@@ -41,6 +42,15 @@ TablePage {
                     root.tableView.selectionModel.clear();
                     Controller.currentRound = index + 1;
                 }
+            }
+        },
+        Kirigami.Action {
+            text: i18nc("@action:inmenu", "Delete this round and subsequent ones…")
+            icon.name: "edit-delete"
+            displayHint: Kirigami.DisplayHint.AlwaysHide
+            onTriggered: {
+                const dialog = Qt.createComponent("org.kde.chessament", "DeleteRoundDialog").createObject();
+                dialog.open();
             }
         }
     ]
