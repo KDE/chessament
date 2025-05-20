@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-19 00:39+0000\n"
-"PO-Revision-Date: 2025-05-13 21:07+0300\n"
+"PO-Revision-Date: 2025-05-19 16:54+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Lokalize 25.04.0\n"
+"X-Generator: Lokalize 25.04.1\n"
 
 #: chessamentapplication.cpp:23
 #, kde-format
@@ -271,12 +271,12 @@ msgstr "שחקנים"
 #: qml/Main.qml:197
 #, kde-format
 msgid "Pairings"
-msgstr ""
+msgstr "שיבוצים"
 
 #: qml/Main.qml:204
 #, kde-format
 msgid "Standings"
-msgstr "העמדות"
+msgstr "עמדות"
 
 #: qml/Main.qml:229
 #, kde-format
@@ -306,179 +306,179 @@ msgstr "תצורה"
 #, kde-format
 msgctxt "@label"
 msgid "Swiss system"
-msgstr ""
+msgstr "השיטה השווייצרית"
 
 #: qml/NewTournamentDialog.qml:39
 #, kde-format
 msgctxt "@label"
 msgid "Number of rounds"
-msgstr ""
+msgstr "מספר הסיבובים"
 
 #: qml/PairingsPage.qml:23
 #, kde-format
 msgid "Pair round %1"
-msgstr ""
+msgstr "סיבוב שיבוץ %1"
 
 #: qml/PairingsPage.qml:32
 #, kde-format
 msgid "Round %1"
-msgstr ""
+msgstr "סיבוב %1"
 
 #: qml/PairingsPage.qml:77
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No pairings for round %1 yet"
-msgstr ""
+msgstr "אין עדיין שיבוצים לסיבוב %1"
 
 #: qml/PlayersPage.qml:42 qml/PlayersPage.qml:135
 #, kde-format
 msgctxt "@action:button"
 msgid "Add player"
-msgstr ""
+msgstr "הוספת שחקן/נית"
 
 #: qml/PlayersPage.qml:48
 #, kde-format
 msgctxt "@action:button"
 msgid "Print"
-msgstr ""
+msgstr "הדפסה"
 
 #: qml/PlayersPage.qml:131
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No players yet"
-msgstr ""
+msgstr "אין שחקנים עדיין"
 
 #: qml/ResultsFooter.qml:41
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "*"
-msgstr ""
+msgstr "*"
 
 #: qml/ResultsFooter.qml:51
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "1-0"
-msgstr ""
+msgstr "1-0"
 
 #: qml/ResultsFooter.qml:58
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "½-½"
-msgstr ""
+msgstr "½-½"
 
 #: qml/ResultsFooter.qml:65
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "0-1"
-msgstr ""
+msgstr "0-1"
 
 #: qml/ResultsFooter.qml:75
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "1F-0F"
-msgstr ""
+msgstr "1F-0F"
 
 #: qml/ResultsFooter.qml:82
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "0F-1F"
-msgstr ""
+msgstr "0F-1F"
 
 #: qml/ResultsFooter.qml:89
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "0F-0F"
-msgstr ""
+msgstr "0F-0F"
 
 #: qml/ResultsFooter.qml:99
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "1U-0U"
-msgstr ""
+msgstr "1U-0U"
 
 #: qml/ResultsFooter.qml:106
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "½U-½U"
-msgstr ""
+msgstr "½U-½U"
 
 #: qml/ResultsFooter.qml:113
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "0U-1U"
-msgstr ""
+msgstr "0U-1U"
 
 #: qml/ResultsFooter.qml:120
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "½U-0U"
-msgstr ""
+msgstr "½U-0U"
 
 #: qml/ResultsFooter.qml:127
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "0U-½U"
-msgstr ""
+msgstr "0U-½U"
 
 #: qml/ResultsFooter.qml:134
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "0U-0U"
-msgstr ""
+msgstr "0U-0U"
 
 #: qml/ResultsFooter.qml:144
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "½-0"
-msgstr ""
+msgstr "½-0"
 
 #: qml/ResultsFooter.qml:151
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "0-0"
-msgstr ""
+msgstr "0-0"
 
 #: qml/ResultsFooter.qml:158
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "0-½"
-msgstr ""
+msgstr "0-½"
 
 #: qml/StandingsPage.qml:36
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No standings yet"
-msgstr ""
+msgstr "אין עמדות עדיין"
 
 #: qml/TournamentSettings.qml:14
 #, kde-format
 msgctxt "@action:button"
 msgid "Information"
-msgstr ""
+msgstr "פרטים"
 
 #: qml/TournamentSettings.qml:20
 #, kde-format
 msgctxt "@action:button"
 msgid "Format"
-msgstr ""
+msgstr "תצורה"
 
 #: qml/TournamentSettings.qml:26
 #, kde-format
 msgctxt "@action:button"
 msgid "Calendar"
-msgstr ""
+msgstr "לוח שנה"
 
 #: qml/TournamentSettingsCalendar.qml:14
 #, kde-format
 msgctxt "@title"
 msgid "Calendar"
-msgstr ""
+msgstr "לוח שנה"
 
 #: qml/TournamentSettingsCalendar.qml:24
 #, kde-format
 msgctxt "round number"
 msgid "Round %1"
-msgstr ""
+msgstr "סיבוב %1"
 
 #: qml/TournamentSettingsFormat.qml:11
 #, kde-format
@@ -495,7 +495,7 @@ msgstr "תצורה"
 #: qml/TournamentSettingsFormat.qml:18
 #, kde-format
 msgid "Swiss system"
-msgstr ""
+msgstr "השיטה השווייצרית"
 
 #: qml/TournamentSettingsFormat.qml:22
 #, kde-format
@@ -506,12 +506,12 @@ msgstr "סיבובים"
 #, kde-format
 msgctxt "@title:group"
 msgid "Pairings"
-msgstr ""
+msgstr "שיבוצים"
 
 #: qml/TournamentSettingsFormat.qml:40
 #, kde-format
 msgid "Pairing engine"
-msgstr ""
+msgstr "מנוע שיבוץ"
 
 #: qml/TournamentSettingsFormat.qml:41
 #, kde-format
@@ -532,7 +532,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title"
 msgid "Information"
-msgstr ""
+msgstr "פרטים"
 
 #: qml/TournamentSettingsInformation.qml:14
 #, kde-format
@@ -544,25 +544,25 @@ msgstr "פרטים בסיסיים"
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Tournament name"
-msgstr ""
+msgstr "שם התחרות"
 
 #: qml/TournamentSettingsInformation.qml:28
 #, kde-format
 msgctxt "@label:textbox"
 msgid "City"
-msgstr ""
+msgstr "עיר"
 
 #: qml/TournamentSettingsInformation.qml:46
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Chief arbiter"
-msgstr ""
+msgstr "שופט ראשי"
 
 #: qml/TournamentSettingsInformation.qml:55
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Deputy chief arbiter"
-msgstr ""
+msgstr "סגן שופט ראשי"
 
 #: qml/WelcomePage.qml:20
 #, kde-format
@@ -574,7 +574,7 @@ msgstr "ברוך בואך ל־Chessament"
 #, kde-format
 msgctxt "@info"
 msgid "Chessament is a chess tournament manager"
-msgstr ""
+msgstr "Chessament הוא מנהל תחרויות שחמט"
 
 #: settings/ChessamentConfigurationView.qml:19
 #, kde-format
@@ -614,12 +614,12 @@ msgstr "יציאה"
 #, kde-format
 msgctxt "@title:colunm"
 msgid "Rank"
-msgstr ""
+msgstr "דירוג"
 
 #: tournament.cpp:764
 #, kde-format
 msgid "Couldn't open file"
-msgstr ""
+msgstr "לא ניתן לפתוח את הקובץ"
 
 #: trf.cpp:74
 #, kde-format
@@ -639,7 +639,7 @@ msgstr ""
 #: trf.cpp:115 trf.cpp:122
 #, kde-format
 msgid "Player %1 not found"
-msgstr ""
+msgstr "השחקן %1 לא נמצא"
 
 #: trf.cpp:128
 #, kde-format
