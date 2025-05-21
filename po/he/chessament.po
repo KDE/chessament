@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-19 00:39+0000\n"
-"PO-Revision-Date: 2025-05-19 16:54+0300\n"
+"PO-Revision-Date: 2025-05-20 08:02+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -516,7 +516,7 @@ msgstr "מנוע שיבוץ"
 #: qml/TournamentSettingsFormat.qml:41
 #, kde-format
 msgid "bbpPairings"
-msgstr ""
+msgstr "bbpPairings"
 
 #: qml/TournamentSettingsFormat.qml:45
 #, kde-format
@@ -624,17 +624,17 @@ msgstr "לא ניתן לפתוח את הקובץ"
 #: trf.cpp:74
 #, kde-format
 msgid "Invalid pairing \"%1\""
-msgstr ""
+msgstr "השיבוץ „%1” שגוי"
 
 #: trf.cpp:80
 #, kde-format
 msgid "Invalid player for pairing \"%1\""
-msgstr ""
+msgstr "שחקן שגוי לשיבוץ „%1”"
 
 #: trf.cpp:86
 #, kde-format
 msgid "Unknown result for pairing \"%1\""
-msgstr ""
+msgstr "תוצאה לא ידועה לשיבוץ „%1”"
 
 #: trf.cpp:115 trf.cpp:122
 #, kde-format
@@ -644,4 +644,4 @@ msgstr "השחקן %1 לא נמצא"
 #: trf.cpp:128
 #, kde-format
 msgid "Unknown result on pairing %1 with %2"
-msgstr ""
+msgstr "תוצאה לא ידועה לשיבוץ של %1 עם %2"
