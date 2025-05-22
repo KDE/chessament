@@ -11,6 +11,7 @@
   <name>Chessament</name>
   <name xml:lang="ar">شطرنج</name>
   <name xml:lang="ca">Chessament</name>
+  <name xml:lang="ca-valencia">Chessament</name>
   <name xml:lang="es">Chessament</name>
   <name xml:lang="fr">Chessament</name>
   <name xml:lang="gl">Chessament</name>
@@ -24,6 +25,7 @@
   <summary>Chess tournament manager</summary>
   <summary xml:lang="ar">مدير بطولة شطرنج</summary>
   <summary xml:lang="ca">Gestor de torneigs d'escacs</summary>
+  <summary xml:lang="ca-valencia">Gestor de torneigs d'escacs</summary>
   <summary xml:lang="es">Gestor de torneos de ajedrez</summary>
   <summary xml:lang="fr">Gestionnaire de tournoi d'échecs</summary>
   <summary xml:lang="gl">Xestor de torneos de xadrez</summary>
@@ -44,6 +46,7 @@
     <p>Multiple paragraphs of long description, describing this software component.</p>
     <p xml:lang="ar">ليس بعد</p>
     <p xml:lang="ca">Diversos paràgrafs de descripció llarga, descrivint aquest component de programari.</p>
+    <p xml:lang="ca-valencia">Múltiples paràgrafs de descripció llarga, descrivint este component de programari.</p>
     <p xml:lang="es">Varios párrafos largos que describen este componente de software.</p>
     <p xml:lang="fr">Plusieurs paragraphes de description longue, décrivant ce composant logiciel.</p>
     <p xml:lang="gl">Varios parágrafos de descrición longa, que describa este compoñente de software.</p>
@@ -57,6 +60,7 @@
     <p>You can also use ordered and unordered lists:</p>
     <p xml:lang="ar">ليس بعد</p>
     <p xml:lang="ca">També podeu utilitzar llistes ordenades i no ordenades:</p>
+    <p xml:lang="ca-valencia">També podeu utilitzar llistes ordenades i no ordenades:</p>
     <p xml:lang="es">También se pueden usar listas ordenadas y desordenadas:</p>
     <p xml:lang="fr">Vous pouvez également utiliser des listes ordonnées et non ordonnées :</p>
     <p xml:lang="gl">Tamén pode usar listas, numeradas ou non:</p>
@@ -71,6 +75,7 @@
       <li>Feature 1</li>
       <li xml:lang="ar">ليس بعد</li>
       <li xml:lang="ca">Característica 1</li>
+      <li xml:lang="ca-valencia">Característica 1</li>
       <li xml:lang="es">Artículo 1</li>
       <li xml:lang="fr">Caractéristique n°1</li>
       <li xml:lang="gl">Funcionalidade 1</li>
@@ -84,6 +89,7 @@
       <li>Feature 2</li>
       <li xml:lang="ar">ليس بعد</li>
       <li xml:lang="ca">Característica 2</li>
+      <li xml:lang="ca-valencia">Característica 2</li>
       <li xml:lang="es">Artículo 2</li>
       <li xml:lang="fr">Caractéristique n°2</li>
       <li xml:lang="gl">Funcionalidade 2</li>
@@ -98,6 +104,7 @@
     <p>Keep in mind to XML-escape characters, and that this is not HTML markup.</p>
     <p xml:lang="ar">ليس بعد</p>
     <p xml:lang="ca">Tingueu en compte d'escapar els caràcters XML, i que això no és marcatge HTML.</p>
+    <p xml:lang="ca-valencia">Cal tindre en compte d'escapar els caràcters XML, i que açò no és marcatge HTML.</p>
     <p xml:lang="es">Recuerda «escapar» los caracteres en XML y que esto no es marcado HTML.</p>
     <p xml:lang="fr">N'oubliez pas d'échapper les caractères XML, et qu'il ne s'agit pas d'un balisage HTML.</p>
     <p xml:lang="gl">Non esqueza escapar caracteres para XML, e que isto non é HTML.</p>
