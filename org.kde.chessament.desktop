@@ -4,6 +4,7 @@
 Name=Chessament
 Name[ar]=شطرنج
 Name[ca]=Chessament
+Name[ca@valencia]=Chessament
 Name[es]=Chessament
 Name[fr]=Chessament
 Name[gl]=Chessament
@@ -17,6 +18,7 @@ Name[x-test]=xxChessamentxx
 Comment=Chess Tournament Manager
 Comment[ar]=مدير بطولة شطرنج
 Comment[ca]=Gestor de torneigs d'escacs
+Comment[ca@valencia]=Gestor de torneigs d'escacs
 Comment[es]=Gestor de torneos de ajedrez
 Comment[fr]=Gestionnaire de tournoi d'échecs
 Comment[gl]=Xestor de torneos de xadrez.
