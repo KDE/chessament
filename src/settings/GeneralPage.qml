@@ -16,10 +16,13 @@ FormCard.FormCardPage {
     title: i18nc("@title", "General")
 
     FormCard.FormHeader {
+        visible: Config.developer
         title: i18nc("@title:group", "Account")
     }
 
     FormCard.FormCard {
+        visible: Config.developer
+
         FormCard.FormButtonDelegate {
             text: i18nc("@label:button", "Connect Account")
             action: Kirigami.Action {

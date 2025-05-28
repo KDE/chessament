@@ -8,6 +8,12 @@ SPDX-FileCopyrightText: 2024 Manuel Alcaraz Zambrano <manuelalcarazzam@gmail.com
 SPDX-License-Identifier: LGPL-3.0-or-later
 -->
     <kcfgfile name="chessamentrc" />
+    <group name="General">
+        <entry key="Developer" type="bool">
+            <label>Enable experimental/developer options.</label>
+            <default>false</default>
+        </entry>
+    </group>
     <group name="Account">
         <entry key="Username" type="string">
         </entry>
