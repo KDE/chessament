@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-19 00:39+0000\n"
+"POT-Creation-Date: 2025-05-29 00:39+0000\n"
 "PO-Revision-Date: 2025-05-12 15:16+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -43,7 +43,7 @@ msgctxt "@action:inmenu"
 msgid "Connect account"
 msgstr "Connecta amb el compte"
 
-#: controller.cpp:144
+#: controller.cpp:142
 #, kde-format
 msgid "Couldn't export tournament."
 msgstr "No s'ha pogut exportar el torneig."
@@ -246,6 +246,25 @@ msgctxt "@label:textbox"
 msgid "Sex"
 msgstr "Sexe"
 
+#: qml/DeletePairingsDialog.qml:16
+#, fuzzy, kde-format
+#| msgid "bbpPairings"
+msgctxt "@title"
+msgid "Remove pairings"
+msgstr "bbpPairings"
+
+#: qml/DeletePairingsDialog.qml:24
+#, kde-format
+msgctxt "@action:check"
+msgid "Keep byes"
+msgstr ""
+
+#: qml/DeletePairingsDialog.qml:31
+#, kde-format
+msgctxt "@action:button Remove pairings"
+msgid "Remove"
+msgstr ""
+
 #: qml/DocsPage.qml:22
 #, kde-format
 msgctxt "@action:button"
@@ -325,7 +344,13 @@ msgstr "Ronda d'emparellament %1"
 msgid "Round %1"
 msgstr "Ronda %1"
 
-#: qml/PairingsPage.qml:77
+#: qml/PairingsPage.qml:50
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Remove pairings of this and following rounds…"
+msgstr ""
+
+#: qml/PairingsPage.qml:90
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No pairings for round %1 yet"
@@ -589,24 +614,24 @@ msgctxt "@title"
 msgid "General"
 msgstr "General"
 
-#: settings/GeneralPage.qml:19
+#: settings/GeneralPage.qml:20
 #, kde-format
 msgctxt "@title:group"
 msgid "Account"
 msgstr "Compte"
 
-#: settings/GeneralPage.qml:24
+#: settings/GeneralPage.qml:27
 #, kde-format
 msgctxt "@label:button"
 msgid "Connect Account"
 msgstr "Connecta amb el compte"
 
-#: settings/GeneralPage.qml:31
+#: settings/GeneralPage.qml:34
 #, kde-format
 msgid "Logged in as %1"
 msgstr "Connectat com a %1"
 
-#: settings/GeneralPage.qml:36
+#: settings/GeneralPage.qml:39
 #, kde-format
 msgid "Logout"
 msgstr "Sortida"
@@ -617,7 +642,7 @@ msgctxt "@title:colunm"
 msgid "Rank"
 msgstr "Posició"
 
-#: tournament.cpp:764
+#: tournament.cpp:799
 #, kde-format
 msgid "Couldn't open file"
 msgstr "No s'ha pogut obrir el fitxer"

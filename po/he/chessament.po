@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-19 00:39+0000\n"
+"POT-Creation-Date: 2025-05-29 00:39+0000\n"
 "PO-Revision-Date: 2025-05-20 08:02+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -42,7 +42,7 @@ msgctxt "@action:inmenu"
 msgid "Connect account"
 msgstr "חיבור חשבון"
 
-#: controller.cpp:144
+#: controller.cpp:142
 #, kde-format
 msgid "Couldn't export tournament."
 msgstr "לא ניתן לייצא תחרות."
@@ -245,6 +245,25 @@ msgctxt "@label:textbox"
 msgid "Sex"
 msgstr "מגדר"
 
+#: qml/DeletePairingsDialog.qml:16
+#, fuzzy, kde-format
+#| msgid "bbpPairings"
+msgctxt "@title"
+msgid "Remove pairings"
+msgstr "bbpPairings"
+
+#: qml/DeletePairingsDialog.qml:24
+#, kde-format
+msgctxt "@action:check"
+msgid "Keep byes"
+msgstr ""
+
+#: qml/DeletePairingsDialog.qml:31
+#, kde-format
+msgctxt "@action:button Remove pairings"
+msgid "Remove"
+msgstr ""
+
 #: qml/DocsPage.qml:22
 #, kde-format
 msgctxt "@action:button"
@@ -324,7 +343,13 @@ msgstr "סיבוב שיבוץ %1"
 msgid "Round %1"
 msgstr "סיבוב %1"
 
-#: qml/PairingsPage.qml:77
+#: qml/PairingsPage.qml:50
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Remove pairings of this and following rounds…"
+msgstr ""
+
+#: qml/PairingsPage.qml:90
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No pairings for round %1 yet"
@@ -588,24 +613,24 @@ msgctxt "@title"
 msgid "General"
 msgstr "כללי"
 
-#: settings/GeneralPage.qml:19
+#: settings/GeneralPage.qml:20
 #, kde-format
 msgctxt "@title:group"
 msgid "Account"
 msgstr "חשבון"
 
-#: settings/GeneralPage.qml:24
+#: settings/GeneralPage.qml:27
 #, kde-format
 msgctxt "@label:button"
 msgid "Connect Account"
 msgstr "חיבור חשבון"
 
-#: settings/GeneralPage.qml:31
+#: settings/GeneralPage.qml:34
 #, kde-format
 msgid "Logged in as %1"
 msgstr "נכנסת למערכת בתור %1"
 
-#: settings/GeneralPage.qml:36
+#: settings/GeneralPage.qml:39
 #, kde-format
 msgid "Logout"
 msgstr "יציאה"
@@ -616,7 +641,7 @@ msgctxt "@title:colunm"
 msgid "Rank"
 msgstr "דירוג"
 
-#: tournament.cpp:764
+#: tournament.cpp:799
 #, kde-format
 msgid "Couldn't open file"
 msgstr "לא ניתן לפתוח את הקובץ"

@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-19 00:39+0000\n"
+"POT-Creation-Date: 2025-05-29 00:39+0000\n"
 "PO-Revision-Date: 2025-05-14 13:35+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
@@ -39,7 +39,7 @@ msgctxt "@action:inmenu"
 msgid "Connect account"
 msgstr "Connecter le compte"
 
-#: controller.cpp:144
+#: controller.cpp:142
 #, kde-format
 msgid "Couldn't export tournament."
 msgstr "Impossible d'exporter le tournoi."
@@ -242,6 +242,25 @@ msgctxt "@label:textbox"
 msgid "Sex"
 msgstr "Sexe"
 
+#: qml/DeletePairingsDialog.qml:16
+#, fuzzy, kde-format
+#| msgid "bbpPairings"
+msgctxt "@title"
+msgid "Remove pairings"
+msgstr "Couplage « bbp »"
+
+#: qml/DeletePairingsDialog.qml:24
+#, kde-format
+msgctxt "@action:check"
+msgid "Keep byes"
+msgstr ""
+
+#: qml/DeletePairingsDialog.qml:31
+#, kde-format
+msgctxt "@action:button Remove pairings"
+msgid "Remove"
+msgstr ""
+
 #: qml/DocsPage.qml:22
 #, kde-format
 msgctxt "@action:button"
@@ -321,7 +340,13 @@ msgstr "Tour de l'adversaire %1"
 msgid "Round %1"
 msgstr "Tour %1"
 
-#: qml/PairingsPage.qml:77
+#: qml/PairingsPage.qml:50
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Remove pairings of this and following rounds…"
+msgstr ""
+
+#: qml/PairingsPage.qml:90
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No pairings for round %1 yet"
@@ -585,24 +610,24 @@ msgctxt "@title"
 msgid "General"
 msgstr "Général"
 
-#: settings/GeneralPage.qml:19
+#: settings/GeneralPage.qml:20
 #, kde-format
 msgctxt "@title:group"
 msgid "Account"
 msgstr "Compte"
 
-#: settings/GeneralPage.qml:24
+#: settings/GeneralPage.qml:27
 #, kde-format
 msgctxt "@label:button"
 msgid "Connect Account"
 msgstr "Connecter le compte"
 
-#: settings/GeneralPage.qml:31
+#: settings/GeneralPage.qml:34
 #, kde-format
 msgid "Logged in as %1"
 msgstr "Connecté en tant que %1"
 
-#: settings/GeneralPage.qml:36
+#: settings/GeneralPage.qml:39
 #, kde-format
 msgid "Logout"
 msgstr "Déconnecter"
@@ -613,7 +638,7 @@ msgctxt "@title:colunm"
 msgid "Rank"
 msgstr "Rang"
 
-#: tournament.cpp:764
+#: tournament.cpp:799
 #, kde-format
 msgid "Couldn't open file"
 msgstr "Impossible d'ouvrir le fichier"
