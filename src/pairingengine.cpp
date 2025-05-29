@@ -23,7 +23,7 @@ QCoro::Task<std::expected<QList<Pairing *>, QString>> PairingEngine::pair(int ro
     const auto &path = QStandardPaths::findExecutable(u"bbpPairings"_s);
     if (path.isEmpty()) {
         co_return std::unexpected(
-            i18nc("bbpPairings is the name of a program, should not be translated", "The pairing engine bbpPairings could not be found. It it installed?"));
+            i18nc("bbpPairings is the name of a program, should not be translated", "The pairing engine bbpPairings could not be found. Is it installed?"));
     }
 
     QProcess process;
