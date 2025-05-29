@@ -149,6 +149,7 @@ QCoro::Task<void> Controller::pairRound()
 
     if (!pairings.has_value()) {
         setError(pairings.error());
+        co_return;
     }
 
     setCurrentRound(m_tournament->currentRound());
