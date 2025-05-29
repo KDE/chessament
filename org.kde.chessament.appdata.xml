@@ -13,9 +13,11 @@
   <name xml:lang="ca">Chessament</name>
   <name xml:lang="ca-valencia">Chessament</name>
   <name xml:lang="es">Chessament</name>
+  <name xml:lang="fi">Chessament</name>
   <name xml:lang="fr">Chessament</name>
   <name xml:lang="gl">Chessament</name>
   <name xml:lang="he">Chessament</name>
+  <name xml:lang="it">Chessament</name>
   <name xml:lang="ka">Chessament</name>
   <name xml:lang="nl">Chessament</name>
   <name xml:lang="sl">Chessament</name>
@@ -27,9 +29,11 @@
   <summary xml:lang="ca">Gestor de torneigs d'escacs</summary>
   <summary xml:lang="ca-valencia">Gestor de torneigs d'escacs</summary>
   <summary xml:lang="es">Gestor de torneos de ajedrez</summary>
+  <summary xml:lang="fi">Šakkiturnausten hallinta</summary>
   <summary xml:lang="fr">Gestionnaire de tournoi d'échecs</summary>
   <summary xml:lang="gl">Xestor de torneos de xadrez</summary>
   <summary xml:lang="he">מנהל תחרויות שחמט</summary>
+  <summary xml:lang="it">Gestore di tornei di scacchi</summary>
   <summary xml:lang="ka">ჭადრაკის ტურნირის მმართველი</summary>
   <summary xml:lang="nl">Beheerder van een schaaktoernooi</summary>
   <summary xml:lang="sl">Upravljalnik šahovskih turnirjev</summary>
