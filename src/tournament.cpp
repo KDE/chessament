@@ -569,11 +569,29 @@ bool Tournament::isRoundFinished(int round)
     }
 
     auto finished = std::count_if(pairings.cbegin(), pairings.cend(), [](Pairing *p) {
-        return Pairing::isRequestedBye(p->whiteResult())
-            || (p->whiteResult() != Pairing::PartialResult::Unknown && p->blackResult() != Pairing::PartialResult::Unknown);
+        return Pairing::isBye(p->whiteResult()) || (p->whiteResult() != Pairing::PartialResult::Unknown && p->blackResult() != Pairing::PartialResult::Unknown);
     });
 
     return finished == pairings.size();
+}
+
+bool Tournament::isRoundFullyPaired(int round)
+{
+    Q_ASSERT(round >= 1);
+    Q_ASSERT(round <= m_rounds.size());
+
+    auto pairings = m_rounds.value(round - 1)->pairings();
+
+    QSet<Player *> players;
+
+    for (const auto &pairing : pairings) {
+        players.insert(pairing->whitePlayer());
+        if (pairing->blackPlayer() != nullptr) {
+            players.insert(pairing->blackPlayer());
+        }
+    }
+
+    return m_players->size() == players.size();
 }
 
 QCoro::Task<std::expected<QList<Pairing *>, QString>> Tournament::calculatePairings(int round)

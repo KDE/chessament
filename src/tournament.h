@@ -77,6 +77,7 @@ public:
     QList<Pairing *> getPairings(int round) const;
     void sortPairings();
     Q_INVOKABLE bool isRoundFinished(int round);
+    bool isRoundFullyPaired(int round);
     QCoro::Task<std::expected<QList<Pairing *>, QString>> calculatePairings(int round);
     QCoro::Task<std::expected<bool, QString>> pairNextRound();
     void removePairings(int round, bool keepByes);

@@ -8,7 +8,7 @@
 std::expected<bool, QString> Tournament::readTrf(QTextStream trf)
 {
     QMap<int, Player *> players = {};
-    QMap<std::tuple<int, int, int>, std::pair<Pairing::PartialResult, Pairing::PartialResult>> pairingsToAdd = {};
+    QMap<std::tuple<int, int, int>, Pairing::Result> pairingsToAdd = {};
 
     while (!trf.atEnd()) {
         auto line = trf.readLine();
@@ -66,35 +66,45 @@ std::expected<bool, QString> Tournament::readTrf(QTextStream trf)
 
             for (int roundNumber = 1;; roundNumber++) {
                 round = playerRounds.mid(10 * (roundNumber - 1), 8);
-                if (round.isEmpty()) {
+                if (round.isEmpty() || round == u"        "_s) {
                     break;
                 }
 
                 if (round.size() != 8) {
-                    return std::unexpected(i18n("Invalid pairing \"%1\"", round));
+                    return std::unexpected(i18n("Invalid pairing \"%1\".", round));
                 }
 
-                bool ok;
-                auto opponent = round.first(4).toInt(&ok);
-                if (!ok) {
-                    return std::unexpected(i18n("Invalid player for pairing \"%1\"", round));
+                std::tuple<int, int, int> pairing{};
+
+                auto opponent = round.first(4);
+                int opponentId = 0;
+                bool hasOpponent = !(opponent == u"    "_s || opponent == u"0000"_s);
+
+                if (hasOpponent) {
+                    bool ok;
+                    opponentId = opponent.toInt(&ok);
+                    if (!ok || opponentId <= 0) {
+                        return std::unexpected(i18n("Invalid player \"%1\" on pairing \"%2\".", QString::number(opponentId), round));
+                    }
                 }
 
                 auto color = Pairing::colorForString(round.at(5));
                 auto result = Pairing::partialResultForTRF(round.at(7));
                 if (result == Pairing::PartialResult::Unknown) {
-                    return std::unexpected(i18n("Unknown result for pairing \"%1\"", round));
+                    return std::unexpected(i18n("Unknown result \"%1\" on pairing \"%2\".", round.at(7), round));
+                }
+                if (!hasOpponent && !Pairing::isBye(result)) {
+                    return std::unexpected(i18n("Pairing \"%1\" has no opponent.", round));
                 }
 
-                std::tuple<int, int, int> pairing{};
-                if (color == Pairing::Color::White || opponent == 0) {
-                    pairing = {roundNumber, startingRank, opponent};
+                if (color == Pairing::Color::White || !hasOpponent) {
+                    pairing = {roundNumber, startingRank, opponentId};
                 } else {
-                    pairing = {roundNumber, opponent, startingRank};
+                    pairing = {roundNumber, opponentId, startingRank};
                 }
 
                 auto newPairing = pairingsToAdd[pairing];
-                if (color == Pairing::Color::White || opponent == 0) {
+                if (color == Pairing::Color::White || !hasOpponent) {
                     newPairing.first = result;
                 } else {
                     newPairing.second = result;
@@ -112,20 +122,20 @@ std::expected<bool, QString> Tournament::readTrf(QTextStream trf)
         const auto [r, w, b] = pairing.key();
 
         if (!players.contains(w)) {
-            return std::unexpected(i18n("Player %1 not found", w));
+            return std::unexpected(i18n("Player \"%1\" not found.", w));
         }
         auto whitePlayer = players.value(w);
 
         Player *blackPlayer = nullptr;
         if (b != 0) {
             if (!players.contains(b)) {
-                return std::unexpected(i18n("Player %1 not found", b));
+                return std::unexpected(i18n("Player \"%1\" not found.", b));
             }
             blackPlayer = players.value(b);
         }
 
         if (pairing.value().first == Pairing::PartialResult::Unknown && pairing.value().second == Pairing::PartialResult::Unknown) {
-            return std::unexpected(i18n("Unknown result on pairing %1 with %2", w, b));
+            return std::unexpected(i18n("Unknown result on pairing \"%1\" with \"%2\".", QString::number(w), QString::number(b)));
         }
         auto par = new Pairing(1, whitePlayer, blackPlayer, pairing.value().first, pairing.value().second);
 
@@ -133,9 +143,16 @@ std::expected<bool, QString> Tournament::readTrf(QTextStream trf)
     }
 
     setNumberOfRounds(m_rounds.size());
-    setCurrentRound(m_rounds.size()); // TODO: really calculate?
 
     sortPairings();
+
+    setCurrentRound(m_rounds.size());
+    for (int i = 1; i <= m_numberOfRounds; ++i) {
+        if (!isRoundFullyPaired(i)) {
+            setCurrentRound(i - 1);
+            break;
+        }
+    }
 
     return true;
 }
