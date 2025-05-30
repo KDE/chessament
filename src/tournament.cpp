@@ -481,7 +481,7 @@ void Tournament::sortPairings()
     for (int i = 0; i < m_rounds.size(); i++) {
         auto pairings = m_rounds.at(i)->pairings();
 
-        TournamentState state(this, i);
+        auto state = getState(i);
 
         std::sort(pairings.begin(), pairings.end(), [i, &state](Pairing *a, Pairing *b) -> bool {
             int aRank;
@@ -510,8 +510,8 @@ void Tournament::sortPairings()
                 return true;
             }
 
-            int aScore;
-            int aTotal;
+            double aScore;
+            double aTotal;
             if (a->whitePlayer()->startingRank() < a->blackPlayer()->startingRank()) {
                 aScore = state.getPoints(a->whitePlayer());
                 aTotal = aScore + state.getPoints(a->blackPlayer());
@@ -519,8 +519,8 @@ void Tournament::sortPairings()
                 aScore = state.getPoints(a->blackPlayer());
                 aTotal = aScore + state.getPoints(a->whitePlayer());
             }
-            int bScore;
-            int bTotal;
+            double bScore;
+            double bTotal;
             if (b->whitePlayer()->startingRank() < b->blackPlayer()->startingRank()) {
                 bScore = state.getPoints(b->whitePlayer());
                 bTotal = bScore + state.getPoints(b->blackPlayer());
@@ -631,9 +631,9 @@ void Tournament::removePairings(int round, bool keepByes)
     setCurrentRound(round - 1);
 }
 
-TournamentState Tournament::getState()
+TournamentState Tournament::getState(int maxRound)
 {
-    return TournamentState{this};
+    return TournamentState{this, maxRound};
 }
 
 QVariant Tournament::getOption(const QString &name)

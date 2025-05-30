@@ -54,6 +54,7 @@ QCoro::Task<std::expected<QList<Pairing *>, QString>> PairingEngine::pair(int ro
     const auto players = tournament->getPlayersByStartingRank();
 
     const auto output = QString::fromUtf8(process.readAll());
+    std::cout << output.toStdString();
     const auto lines = output.split(u'\n');
 
     uint board = 1;

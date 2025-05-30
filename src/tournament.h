@@ -81,7 +81,7 @@ public:
     QCoro::Task<std::expected<bool, QString>> pairNextRound();
     void removePairings(int round, bool keepByes);
 
-    TournamentState getState();
+    TournamentState getState(int maxRound = -1);
 
     int numberOfPlayers();
     int numberOfRatedPlayers();
