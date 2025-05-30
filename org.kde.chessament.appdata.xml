@@ -19,6 +19,7 @@
   <name xml:lang="he">Chessament</name>
   <name xml:lang="it">Chessament</name>
   <name xml:lang="ka">Chessament</name>
+  <name xml:lang="lv">Chessament</name>
   <name xml:lang="nl">Chessament</name>
   <name xml:lang="sl">Chessament</name>
   <name xml:lang="tr">Chessament</name>
@@ -35,6 +36,7 @@
   <summary xml:lang="he">מנהל תחרויות שחמט</summary>
   <summary xml:lang="it">Gestore di tornei di scacchi</summary>
   <summary xml:lang="ka">ჭადრაკის ტურნირის მმართველი</summary>
+  <summary xml:lang="lv">Šaha turnīru pārvaldnieks</summary>
   <summary xml:lang="nl">Beheerder van een schaaktoernooi</summary>
   <summary xml:lang="sl">Upravljalnik šahovskih turnirjev</summary>
   <summary xml:lang="tr">Satranç turnuvası yöneticisi</summary>
@@ -48,6 +50,14 @@
   </developer>
   <description>
     <p>Chessament is a chess tournament manager. It currently supports individual Swiss-system tournaments.</p>
+    <p xml:lang="ca">El Chessament és un gestor de torneigs d'escacs. Actualment permet torneigs individuals segons el sistema suís.</p>
+    <p xml:lang="he">Chessament הוא מנהל תחרויות שחמט. כרגע הוא תומך בתחרויות עצמאיות בשיטה השווייצרית.</p>
+    <p xml:lang="ka">Chessament ჭადრაკის ტურნამენტის მმართველია. მას ამჟამად ინდივიდუალური შვეიცარიული სისტემის ტურნამენტების მხარდაჭერა გააჩნია.</p>
+    <p xml:lang="nl">Chessament is een beheerder van schaaktoernooien. Het ondersteunt op dit moment individuele toernooien volgens het Zwitserse systeem.</p>
+    <p xml:lang="sl">Chessament je upravitelj šahovskih turnirjev. Trenutno podpira posamezne turnirje po švicarskem sistemu.</p>
+    <p xml:lang="tr">Chessament, bir satranç turnuvası yöneticisidir. Şu anda yalnızca İsviçre tarzı turnuvaları destekler.</p>
+    <p xml:lang="uk">Chessament — програма для керування шаховими турнірами. У поточній версії передбачено турніри за індивідуальною швейцарською системою.</p>
+    <p xml:lang="x-test">xxChessament is a chess tournament manager. It currently supports individual Swiss-system tournaments.xx</p>
   </description>
   <url type="homepage">https://alcarazzam.dev/chessament/</url>
   <launchable type="desktop-id">org.kde.chessament.desktop</launchable>
