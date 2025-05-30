@@ -30,7 +30,9 @@ QCoro::Task<std::expected<QList<Pairing *>, QString>> PairingEngine::pair(int ro
     auto proc = qCoro(process);
 
     QTemporaryFile file;
-    file.open();
+    if (!file.open()) {
+        co_return std::unexpected(i18n("Could not create temporary file."));
+    }
 
     // TODO: initial color
     auto trf = tournament->toTrf(Tournament::TrfOption::NumberOfRounds | Tournament::TrfOption::InitialColorWhite, round);
@@ -43,7 +45,9 @@ QCoro::Task<std::expected<QList<Pairing *>, QString>> PairingEngine::pair(int ro
     co_await proc.waitForFinished(std::chrono::milliseconds(3s));
 
     if (process.exitCode() != 0) {
-        co_return std::unexpected(u"Non zero exit code "_s + QString::number(process.exitCode()));
+        co_return std::unexpected(i18nc("bbpPairings is the name of a program, should not be translated",
+                                        "bbpPairings terminated with a non zero exit code: %1",
+                                        QString::number(process.exitCode())));
     }
 
     QList<Pairing *> pairings;
@@ -57,23 +61,36 @@ QCoro::Task<std::expected<QList<Pairing *>, QString>> PairingEngine::pair(int ro
         if (line.isEmpty()) {
             continue;
         }
-        const auto playerIds = line.split(u' ');
+        const auto playerIds = line.split(u' ', Qt::SkipEmptyParts);
 
         if (playerIds.size() != 2) {
-            co_return std::unexpected(u"Invalid pairing: "_s + line);
+            co_return std::unexpected(i18n("Invalid pairing \"%1\".", line));
         }
 
-        // TODO: check for multiple byes
-        const auto whiteId = playerIds[0].toUInt();
-        const auto blackId = playerIds[1].toUInt();
+        bool ok;
+        const auto whiteId = playerIds[0].toUInt(&ok);
+        if (!ok) {
+            co_return std::unexpected(i18n("Invalid player \"%1\" on pairing \"%2\".", playerIds[0], line));
+        }
+        const auto blackId = playerIds[1].toUInt(&ok);
+        if (!ok) {
+            co_return std::unexpected(i18n("Invalid player \"%1\" on pairing \"%2\".", playerIds[1], line));
+        }
 
-        Pairing::Result result = std::make_pair(Pairing::PartialResult::PairingBye, Pairing::PartialResult::Unknown);
+        Pairing::Result result = {Pairing::PartialResult::PairingBye, Pairing::PartialResult::Unknown};
 
-        const auto white = players[whiteId];
+        if (!players.contains(whiteId)) {
+            co_return std::unexpected(i18n("Invalid player \"%1\" on pairing \"%2\".", QString::number(whiteId), line));
+        }
+        const auto white = players.value(whiteId);
+
         Player *black = nullptr;
 
         if (blackId != 0) {
-            black = players[blackId];
+            if (!players.contains(whiteId)) {
+                co_return std::unexpected(i18n("Invalid player \"%1\" on pairing \"%2\".", QString::number(blackId), line));
+            }
+            black = players.value(blackId);
             result.first = Pairing::PartialResult::Unknown;
         }
 

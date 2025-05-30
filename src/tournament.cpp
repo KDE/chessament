@@ -593,8 +593,7 @@ QCoro::Task<std::expected<bool, QString>> Tournament::pairNextRound()
     const auto pairings = co_await calculatePairings(m_currentRound + 1);
 
     if (!pairings.has_value()) {
-        qDebug() << "pair next round error" << pairings.error();
-        co_return std::unexpected(pairings.error());
+        co_return std::unexpected(i18n("An error ocurred while pairing the round: %1", pairings.error()));
     }
 
     for (const auto &pairing : *pairings) {
