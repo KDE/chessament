@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-29 00:39+0000\n"
-"PO-Revision-Date: 2025-05-20 08:02+0300\n"
+"POT-Creation-Date: 2025-05-30 00:40+0000\n"
+"PO-Revision-Date: 2025-05-29 16:24+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -86,6 +86,12 @@ msgstr "צוות התרגום של KDE ישראל"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "kde-l10n-he@kde.org"
+
+#: pairingengine.cpp:26
+#, kde-format
+msgctxt "bbpPairings is the name of a program, should not be translated"
+msgid "The pairing engine bbpPairings could not be found. Is it installed?"
+msgstr ""
 
 #: pairingmodel.cpp:65
 #, kde-format
@@ -246,11 +252,10 @@ msgid "Sex"
 msgstr "מגדר"
 
 #: qml/DeletePairingsDialog.qml:16
-#, fuzzy, kde-format
-#| msgid "bbpPairings"
+#, kde-format
 msgctxt "@title"
 msgid "Remove pairings"
-msgstr "bbpPairings"
+msgstr "הסרת שיבוצים"
 
 #: qml/DeletePairingsDialog.qml:24
 #, kde-format
@@ -262,7 +267,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button Remove pairings"
 msgid "Remove"
-msgstr ""
+msgstr "הסרה"
 
 #: qml/DocsPage.qml:22
 #, kde-format
@@ -347,7 +352,7 @@ msgstr "סיבוב %1"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove pairings of this and following rounds…"
-msgstr ""
+msgstr "הסרת שיבוצים בסיבוב הזה ובבאים אחריו…"
 
 #: qml/PairingsPage.qml:90
 #, kde-format
