@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-30 00:40+0000\n"
+"POT-Creation-Date: 2025-05-31 00:39+0000\n"
 "PO-Revision-Date: 2025-05-12 14:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -90,6 +90,28 @@ msgstr ""
 #, kde-format
 msgctxt "bbpPairings is the name of a program, should not be translated"
 msgid "The pairing engine bbpPairings could not be found. Is it installed?"
+msgstr ""
+
+#: pairingengine.cpp:34
+#, kde-format
+msgid "Could not create temporary file."
+msgstr ""
+
+#: pairingengine.cpp:49
+#, kde-format
+msgctxt "bbpPairings is the name of a program, should not be translated"
+msgid "bbpPairings terminated with a non zero exit code: %1"
+msgstr ""
+
+#: pairingengine.cpp:68 trf.cpp:74
+#, kde-format
+msgid "Invalid pairing \"%1\"."
+msgstr ""
+
+#: pairingengine.cpp:74 pairingengine.cpp:78 pairingengine.cpp:84
+#: pairingengine.cpp:92 trf.cpp:87
+#, kde-format
+msgid "Invalid player \"%1\" on pairing \"%2\"."
 msgstr ""
 
 #: pairingmodel.cpp:65
@@ -645,32 +667,32 @@ msgctxt "@title:colunm"
 msgid "Rank"
 msgstr ""
 
-#: tournament.cpp:799
+#: tournament.cpp:614
+#, kde-format
+msgid "An error ocurred while pairing the round: %1"
+msgstr ""
+
+#: tournament.cpp:816
 #, kde-format
 msgid "Couldn't open file"
 msgstr ""
 
-#: trf.cpp:74
+#: trf.cpp:94
 #, kde-format
-msgid "Invalid pairing \"%1\""
+msgid "Unknown result \"%1\" on pairing \"%2\"."
 msgstr ""
 
-#: trf.cpp:80
+#: trf.cpp:97
 #, kde-format
-msgid "Invalid player for pairing \"%1\""
+msgid "Pairing \"%1\" has no opponent."
 msgstr ""
 
-#: trf.cpp:86
+#: trf.cpp:125 trf.cpp:132
 #, kde-format
-msgid "Unknown result for pairing \"%1\""
+msgid "Player \"%1\" not found."
 msgstr ""
 
-#: trf.cpp:115 trf.cpp:122
+#: trf.cpp:138
 #, kde-format
-msgid "Player %1 not found"
-msgstr ""
-
-#: trf.cpp:128
-#, kde-format
-msgid "Unknown result on pairing %1 with %2"
+msgid "Unknown result on pairing \"%1\" with \"%2\"."
 msgstr ""

@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-30 00:40+0000\n"
-"PO-Revision-Date: 2025-05-29 06:41+0200\n"
+"POT-Creation-Date: 2025-05-31 00:39+0000\n"
+"PO-Revision-Date: 2025-05-30 06:49+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -89,6 +89,31 @@ msgstr "Vaši e-poštni naslovi"
 msgctxt "bbpPairings is the name of a program, should not be translated"
 msgid "The pairing engine bbpPairings could not be found. Is it installed?"
 msgstr ""
+"Programa za uparjanje bbpPairings ni bilo mogoče najti. Ali je nameščen?"
+
+#: pairingengine.cpp:34
+#, kde-format
+msgid "Could not create temporary file."
+msgstr ""
+
+#: pairingengine.cpp:49
+#, kde-format
+msgctxt "bbpPairings is the name of a program, should not be translated"
+msgid "bbpPairings terminated with a non zero exit code: %1"
+msgstr ""
+
+#: pairingengine.cpp:68 trf.cpp:74
+#, fuzzy, kde-format
+#| msgid "Invalid pairing \"%1\""
+msgid "Invalid pairing \"%1\"."
+msgstr "Neveljaven par \"%1\""
+
+#: pairingengine.cpp:74 pairingengine.cpp:78 pairingengine.cpp:84
+#: pairingengine.cpp:92 trf.cpp:87
+#, fuzzy, kde-format
+#| msgid "Invalid player for pairing \"%1\""
+msgid "Invalid player \"%1\" on pairing \"%2\"."
+msgstr "Neveljaven igralec za par \"%1\""
 
 #: pairingmodel.cpp:65
 #, kde-format
@@ -643,34 +668,37 @@ msgctxt "@title:colunm"
 msgid "Rank"
 msgstr "Rang"
 
-#: tournament.cpp:799
+#: tournament.cpp:614
+#, kde-format
+msgid "An error ocurred while pairing the round: %1"
+msgstr ""
+
+#: tournament.cpp:816
 #, kde-format
 msgid "Couldn't open file"
 msgstr "Datoteke ni bilo mogoče odpreti"
 
-#: trf.cpp:74
-#, kde-format
-msgid "Invalid pairing \"%1\""
-msgstr "Neveljaven par \"%1\""
-
-#: trf.cpp:80
-#, kde-format
-msgid "Invalid player for pairing \"%1\""
-msgstr "Neveljaven igralec za par \"%1\""
-
-#: trf.cpp:86
-#, kde-format
-msgid "Unknown result for pairing \"%1\""
+#: trf.cpp:94
+#, fuzzy, kde-format
+#| msgid "Unknown result for pairing \"%1\""
+msgid "Unknown result \"%1\" on pairing \"%2\"."
 msgstr "Neznan rezultat pri združevanju \"%1\""
 
-#: trf.cpp:115 trf.cpp:122
+#: trf.cpp:97
 #, kde-format
-msgid "Player %1 not found"
+msgid "Pairing \"%1\" has no opponent."
+msgstr ""
+
+#: trf.cpp:125 trf.cpp:132
+#, fuzzy, kde-format
+#| msgid "Player %1 not found"
+msgid "Player \"%1\" not found."
 msgstr "Igralca \"%1\" ni mogoče najti"
 
-#: trf.cpp:128
-#, kde-format
-msgid "Unknown result on pairing %1 with %2"
+#: trf.cpp:138
+#, fuzzy, kde-format
+#| msgid "Unknown result on pairing %1 with %2"
+msgid "Unknown result on pairing \"%1\" with \"%2\"."
 msgstr "Neznan rezultat pri paru %1 z %2"
 
 #~ msgid "New tournament+//3//f/9-"
