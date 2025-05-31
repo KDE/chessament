@@ -9,6 +9,7 @@ import org.kde.kitemmodels
 import org.kde.kirigami as Kirigami
 
 import org.kde.chessament
+import org.kde.chessament.libtournament
 
 TablePage {
     id: root

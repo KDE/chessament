@@ -18,10 +18,6 @@
 #include <KLocalizedQmlContext>
 #include <KLocalizedString>
 
-#include "pairingmodel.h"
-#include "playersmodel.h"
-#include "standingsmodel.h"
-
 #ifdef Q_OS_WINDOWS
 #include <QFont>
 #include <Windows.h>

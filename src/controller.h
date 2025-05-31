@@ -7,11 +7,11 @@
 #include <QQmlEngine>
 
 #include "account.h"
-#include "event.h"
+#include "libtournament/event.h"
+#include "libtournament/tournament.h"
 #include "pairingmodel.h"
 #include "playersmodel.h"
 #include "standingsmodel.h"
-#include "tournament.h"
 
 class Controller : public QObject
 {

@@ -3,12 +3,13 @@
 
 add_subdirectory(settings)
 
+add_subdirectory(libtournament)
+
 qt_add_library(chessament_static STATIC)
 ecm_add_qml_module(chessament_static
     URI org.kde.chessament
     OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/src/org/kde/chessament
     GENERATE_PLUGIN_SOURCE
-    VERSION 1.0
     QML_FILES
         qml/components/RatingField.qml
 
@@ -35,40 +36,15 @@ ecm_add_qml_module(chessament_static
         QtQuick
     SOURCES
         account.cpp
-        account.h
-        db.h
         controller.cpp
-        documents.cpp
-        event.cpp
-        event.h
-        pairing.cpp
-        pairing.h
-        pairingengine.cpp
-        pairingengine.h
-        player.cpp
-        player.h
         playersmodel.cpp
-        playersmodel.h
         pairingmodel.cpp
-        pairingmodel.h
-        round.h
-        round.cpp
         standingsmodel.cpp
-        standingsmodel.h
-        tiebreak.h
-        tiebreaks.cpp
-        tiebreaks.h
-        tournament.cpp
-        tournament.h
-        tournamentstate.cpp
-        tournamentstate.h
-        trf.cpp
-        utils.h
-        utils.cpp
     IMPORTS
         org.kde.kirigamiaddons.formcard
         org.kde.kirigamiaddons.statefulapp
         org.kde.kirigami
+        org.kde.chessament.libtournament
         org.kde.chessament.settings
 )
 
@@ -78,6 +54,7 @@ target_sources(chessament_static PUBLIC
 )
 
 target_link_libraries(chessament_static PUBLIC
+    libtournament
     Qt6::Core
     Qt6::Gui
     Qt6::Qml

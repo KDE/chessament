@@ -5,7 +5,7 @@
 
 #include <QAbstractTableModel>
 
-#include "player.h"
+#include "libtournament/player.h"
 
 class PlayersModel : public QAbstractTableModel
 {

@@ -6,7 +6,7 @@
 #include <KLocalizedString>
 #include <QAbstractTableModel>
 
-#include "tournament.h"
+#include "libtournament/tournament.h"
 
 class StandingsModel : public QAbstractTableModel
 {

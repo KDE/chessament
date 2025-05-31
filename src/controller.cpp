@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 
 #include "controller.h"
-#include "pairing.h"
+#include "libtournament/pairing.h"
 
 using namespace Qt::Literals::StringLiterals;
 
