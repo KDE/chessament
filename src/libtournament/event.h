@@ -28,6 +28,8 @@ public:
     Tournament *createTournament();
     std::expected<Tournament *, QString> importTournament(const QString &fileName);
     void saveAs(const QString &fileName);
+    void close();
+    bool remove();
 
 public Q_SLOTS:
     void setFileName(const QString &fileName);
