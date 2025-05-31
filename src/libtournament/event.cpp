@@ -3,6 +3,7 @@
 
 #include "event.h"
 
+#include <QFile>
 #include <QSqlError>
 #include <QSqlQuery>
 #include <QSqlRecord>
@@ -64,6 +65,24 @@ void Event::saveAs(const QString &fileName)
     if (query.lastError().isValid()) {
         qDebug() << "save copy" << query.lastError();
     }
+}
+
+void Event::close()
+{
+    getDB().close();
+    QSqlDatabase::removeDatabase(m_connName);
+}
+
+bool Event::remove()
+{
+    close();
+
+    if (!m_fileName.isEmpty()) {
+        QFile db(m_fileName);
+        return db.remove();
+    }
+
+    return true;
 }
 
 QSqlDatabase Event::getDB()

@@ -3,6 +3,7 @@
 
 #include <QObject>
 #include <QString>
+#include <QTemporaryFile>
 #include <QTest>
 
 #include "event.h"
@@ -19,6 +20,7 @@ private Q_SLOTS:
     void testToJson();
     void testTrf();
     void testImportTrf();
+    void testLoadTournament();
 };
 
 void TournamentTest::testNewTournament()
@@ -76,6 +78,51 @@ void TournamentTest::testImportTrf()
     QCOMPARE(t->numberOfRatedPlayers(), 82);
     QCOMPARE(t->numberOfRounds(), 9);
     QCOMPARE(t->rounds().size(), 9);
+
+    QCOMPARE(t->getPairings(1).size(), 44);
+    for (int i = 2; i <= 9; ++i) {
+        QCOMPARE(t->getPairings(i).size(), 46);
+    }
+}
+
+void TournamentTest::testLoadTournament()
+{
+    auto e = new Event();
+    auto tournament = e->importTournament(QLatin1String(DATA_DIR) + u"/tournament_1.txt"_s);
+
+    QVERIFY(tournament.has_value());
+
+    QTemporaryFile file;
+    QVERIFY(file.open());
+    QVERIFY(!file.fileName().isEmpty());
+
+    e->saveAs(file.fileName());
+    e->close();
+    delete e;
+
+    e = new Event(file.fileName());
+    QCOMPARE(e->tournaments().size(), 1);
+
+    auto t = e->tournaments().first();
+
+    QCOMPARE(t->name(), u"Test Tournament"_s);
+    QCOMPARE(t->city(), u"Place"_s);
+    QCOMPARE(t->federation(), u"ESP"_s);
+    QCOMPARE(t->chiefArbiter(), u"Chief Arbiter"_s);
+    QCOMPARE(t->deputyChiefArbiter(), u"Arbiter"_s);
+    QCOMPARE(t->timeControl(), u"8 min/player + 3 s/move"_s);
+
+    QCOMPARE(t->numberOfPlayers(), 88);
+    QCOMPARE(t->numberOfRatedPlayers(), 82);
+    QCOMPARE(t->numberOfRounds(), 9);
+    QCOMPARE(t->rounds().size(), 9);
+
+    QCOMPARE(t->getPairings(1).size(), 44);
+    for (int i = 2; i <= 9; ++i) {
+        QCOMPARE(t->getPairings(i).size(), 46);
+    }
+
+    e->close();
 }
 
 QTEST_GUILESS_MAIN(TournamentTest)
