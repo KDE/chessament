@@ -1,11 +1,24 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="48" height="48" version="1.1" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
- <defs>
-  <linearGradient id="f" x2="0" y1="42.827" y2="4.113" gradientUnits="userSpaceOnUse">
-   <stop stop-color="#8455ff" offset="0"/>
-   <stop stop-color="#57ffe9" offset="1"/>
-  </linearGradient>
- </defs>
- <path d="m44 24a20 20 0 0 1-20 20 20 20 0 0 1-20-20 20 20 0 0 1 20-20 20 20 0 0 1 20 20z" fill="url(#f)" stroke-linecap="round" stroke-linejoin="bevel" stroke-width="2"/>
- <path d="m29.105 15.805-10.983 17.579-1.6066-1.0195 10.983-17.579zm-10.18-3.0277v12.188h-2.4098v-9.284l-3.3367 0.88052v-1.9927l5.4685-1.7919zm15.896 20.468v1.9773h-9.2377v-1.6683l4.4489-4.1863q0.69514-0.6488 1.0968-1.1586t0.57156-0.91141q0.18537-0.41709 0.18537-0.75694 0-0.74149-0.49432-1.2204-0.49432-0.47888-1.4057-0.47888-1.1586 0-1.7147 0.58701-0.54067 0.58701-0.54067 1.4675h-2.4407q0-1.1122 0.55612-2.0236 0.55612-0.91141 1.5911-1.4521 1.035-0.55612 2.4871-0.55612 1.3903 0 2.3789 0.44798t1.5139 1.2667q0.52522 0.80328 0.52522 1.931 0 0.81873-0.37074 1.5293-0.3553 0.71059-1.0195 1.4212t-1.5757 1.5293l-2.7033 2.2554z" stroke-width="2.6364" aria-label="½"/>
+<svg version="1.1" viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <linearGradient id="c-1" x2=".044553693" y1="31.885" y2="46.256767" gradientTransform="matrix(2.2627417 -2.2627417 1.212183 1.212183 -32.172479 -.970852)" gradientUnits="userSpaceOnUse">
+            <stop offset="0"/>
+            <stop stop-opacity="0" offset="1"/>
+        </linearGradient>
+        <linearGradient id="c-3" x2=".044551823" y1="31.885" y2="39.815746" gradientTransform="matrix(2.2627413,-2.2627413,1.3131982,1.3131982,-11.386776,-4.1851575)" gradientUnits="userSpaceOnUse">
+            <stop offset="0"/>
+            <stop stop-opacity="0" offset="1"/>
+        </linearGradient>
+    </defs>
+    <g>
+        <rect x="4" y="16" width="48" height="25" ry="3.7878788" fill="#a76c21" stroke-width=".870388"/>
+        <rect x="12" y="13" width="8" height="4.9999995" rx="0" ry="1" fill="#a05a2c" stroke-width="2.23198"/>
+        <rect x="36" y="13" width="8" height="4.9999995" rx="0" ry="1" fill="#a05a2c" stroke-width="2.23198"/>
+        <rect x="4" y="15.99611" width="48" height="24.00778" ry="3.00389" fill="#c49b63" stroke-width=".852942"/>
+    </g>
+    <path d="M 10.343145,33.656855 21.656855,22.343145 40,41 H 19 Z" fill="url(#c-1)" opacity=".2" stroke-linejoin="bevel" stroke-width="4.68432"/>
+    <circle cx="16" cy="28" r="8" fill="#d4d4d4" stroke-width="1.10938"/>
+    <path d="m34.343146 33.656854 11.313708-11.313708 6.343146 6.656854v9.546875-0.179688c0 3.078125-2.039065 2.629613-4 2.632813h-6z" fill="url(#c-3)" opacity=".2" stroke-linejoin="bevel" stroke-width="4.8756"/>
+    <circle cx="40" cy="28" r="8" fill="#d4d4d4" stroke-width="1.10938"/>
+    <rect x="15" y="21" width="2" height="7" ry="1" fill="#1a1a1a" fill-rule="evenodd" stroke-width="4.52553"/>
+    <rect transform="rotate(49.274154)" x="46.317135" y="-19.045275" width="2" height="7" ry="1" fill="#1a1a1a" fill-rule="evenodd" stroke-width="4.52553"/>
 </svg>
