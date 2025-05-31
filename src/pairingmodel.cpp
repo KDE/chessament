@@ -30,6 +30,9 @@ QVariant PairingModel::data(const QModelIndex &index, int role) const
 
     switch (index.column()) {
     case BoardRole:
+        if (Pairing::isBye(pairing->whiteResult())) {
+            return u""_s;
+        }
         return pairing->board();
     case WhiteStartingRankRole:
         return pairing->whitePlayer()->startingRank();
