@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-31 00:39+0000\n"
-"PO-Revision-Date: 2025-05-30 06:49+0200\n"
+"POT-Creation-Date: 2025-06-01 00:40+0000\n"
+"PO-Revision-Date: 2025-05-31 22:02+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -44,103 +44,132 @@ msgstr "Poveži račun"
 msgid "Couldn't export tournament."
 msgstr "Turnirja ni bilo mogoče izvoziti."
 
-#: main.cpp:67 qml/WelcomePage.qml:15
-#, kde-format
-msgctxt "@title"
-msgid "Chessament"
-msgstr "Chessament"
-
-#: main.cpp:71
-#, kde-format
-msgid "Chess Tournament Manager"
-msgstr "Upravljalnik šahovskega turnirja"
-
-#: main.cpp:75
-#, kde-format
-msgid "© 2024 Manuel Alcaraz Zambrano"
-msgstr "© 2024 Manuel Alcaraz Zambrano"
-
-#: main.cpp:76
-#, kde-format
-msgctxt "@info:credit"
-msgid "Manuel Alcaraz Zambrano"
-msgstr "Manuel Alcaraz Zambrano"
-
-#: main.cpp:77
-#, kde-format
-msgctxt "@info:credit"
-msgid "Author & Maintainer"
-msgstr "Avtor in vzdrževalec"
-
-#: main.cpp:80
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Vaša imena"
-
-#: main.cpp:80
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "Vaši e-poštni naslovi"
-
-#: pairingengine.cpp:26
+#: libtournament/pairingengine.cpp:26
 #, kde-format
 msgctxt "bbpPairings is the name of a program, should not be translated"
 msgid "The pairing engine bbpPairings could not be found. Is it installed?"
 msgstr ""
 "Programa za uparjanje bbpPairings ni bilo mogoče najti. Ali je nameščen?"
 
-#: pairingengine.cpp:34
+#: libtournament/pairingengine.cpp:34
 #, kde-format
 msgid "Could not create temporary file."
-msgstr ""
+msgstr "Začasne datoteke ni bilo mogoče ustvariti."
 
-#: pairingengine.cpp:49
+#: libtournament/pairingengine.cpp:49
 #, kde-format
 msgctxt "bbpPairings is the name of a program, should not be translated"
 msgid "bbpPairings terminated with a non zero exit code: %1"
-msgstr ""
+msgstr "bbpPairings se je končal z neničelno kodo izhoda: %1"
 
-#: pairingengine.cpp:68 trf.cpp:74
-#, fuzzy, kde-format
-#| msgid "Invalid pairing \"%1\""
+#: libtournament/pairingengine.cpp:68 libtournament/trf.cpp:74
+#, kde-format
 msgid "Invalid pairing \"%1\"."
-msgstr "Neveljaven par \"%1\""
+msgstr "Neveljaven par \"%1\"."
 
-#: pairingengine.cpp:74 pairingengine.cpp:78 pairingengine.cpp:84
-#: pairingengine.cpp:92 trf.cpp:87
-#, fuzzy, kde-format
-#| msgid "Invalid player for pairing \"%1\""
+#: libtournament/pairingengine.cpp:74 libtournament/pairingengine.cpp:78
+#: libtournament/pairingengine.cpp:84 libtournament/pairingengine.cpp:92
+#: libtournament/trf.cpp:87
+#, kde-format
 msgid "Invalid player \"%1\" on pairing \"%2\"."
-msgstr "Neveljaven igralec za par \"%1\""
+msgstr "Neveljaven igralec \"%1\" v paru \"%2\"."
 
-#: pairingmodel.cpp:65
+#: libtournament/tournament.cpp:614
+#, kde-format
+msgid "An error ocurred while pairing the round: %1"
+msgstr "Pri uparjanju kroga je prišlo do napake: %1"
+
+#: libtournament/tournament.cpp:816
+#, kde-format
+msgid "Couldn't open file"
+msgstr "Datoteke ni bilo mogoče odpreti"
+
+#: libtournament/trf.cpp:94
+#, kde-format
+msgid "Unknown result \"%1\" on pairing \"%2\"."
+msgstr "Neznan rezultat \"%1\" pri uparjanju \"%2\"."
+
+#: libtournament/trf.cpp:97
+#, kde-format
+msgid "Pairing \"%1\" has no opponent."
+msgstr "Uparjanje \"%1\" nima nasprotnika."
+
+#: libtournament/trf.cpp:125 libtournament/trf.cpp:132
+#, kde-format
+msgid "Player \"%1\" not found."
+msgstr "Igralca \"%1\" ni mogoče najti."
+
+#: libtournament/trf.cpp:138
+#, kde-format
+msgid "Unknown result on pairing \"%1\" with \"%2\"."
+msgstr "Neznan rezultat pri paru %1 z %2."
+
+#: main.cpp:63 qml/WelcomePage.qml:15
+#, kde-format
+msgctxt "@title"
+msgid "Chessament"
+msgstr "Chessament"
+
+#: main.cpp:67
+#, kde-format
+msgid "Chess Tournament Manager"
+msgstr "Upravljalnik šahovskega turnirja"
+
+#: main.cpp:71
+#, kde-format
+msgid "© 2024 Manuel Alcaraz Zambrano"
+msgstr "© 2024 Manuel Alcaraz Zambrano"
+
+#: main.cpp:72
+#, kde-format
+msgctxt "@info:credit"
+msgid "Manuel Alcaraz Zambrano"
+msgstr "Manuel Alcaraz Zambrano"
+
+#: main.cpp:73
+#, kde-format
+msgctxt "@info:credit"
+msgid "Author & Maintainer"
+msgstr "Avtor in vzdrževalec"
+
+#: main.cpp:76
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Vaša imena"
+
+#: main.cpp:76
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "Vaši e-poštni naslovi"
+
+#: pairingmodel.cpp:68
 #, kde-format
 msgctxt "@title:column"
 msgid "Board"
 msgstr "Deska"
 
-#: pairingmodel.cpp:67 pairingmodel.cpp:75 playersmodel.cpp:125
+#: pairingmodel.cpp:70 pairingmodel.cpp:78 playersmodel.cpp:125
 #: standingsmodel.cpp:62
 #, kde-format
 msgctxt "@title:column"
 msgid "No"
 msgstr "Št."
 
-#: pairingmodel.cpp:69
+#: pairingmodel.cpp:72
 #, kde-format
 msgctxt "@title:column"
 msgid "White player"
 msgstr "Beli igralec"
 
-#: pairingmodel.cpp:71
+#: pairingmodel.cpp:74
 #, kde-format
 msgctxt "@title:column"
 msgid "Result"
 msgstr "Rezultat"
 
-#: pairingmodel.cpp:73
+#: pairingmodel.cpp:76
 #, kde-format
 msgctxt "@title:column"
 msgid "Black Player"
@@ -382,19 +411,19 @@ msgctxt "@info:placeholder"
 msgid "No pairings for round %1 yet"
 msgstr "Še ni parov za krog %1"
 
-#: qml/PlayersPage.qml:42 qml/PlayersPage.qml:135
+#: qml/PlayersPage.qml:43 qml/PlayersPage.qml:136
 #, kde-format
 msgctxt "@action:button"
 msgid "Add player"
 msgstr "Dodaj igralca"
 
-#: qml/PlayersPage.qml:48
+#: qml/PlayersPage.qml:49
 #, kde-format
 msgctxt "@action:button"
 msgid "Print"
 msgstr "Natisni"
 
-#: qml/PlayersPage.qml:131
+#: qml/PlayersPage.qml:132
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No players yet"
@@ -667,39 +696,6 @@ msgstr "Odjava"
 msgctxt "@title:colunm"
 msgid "Rank"
 msgstr "Rang"
-
-#: tournament.cpp:614
-#, kde-format
-msgid "An error ocurred while pairing the round: %1"
-msgstr ""
-
-#: tournament.cpp:816
-#, kde-format
-msgid "Couldn't open file"
-msgstr "Datoteke ni bilo mogoče odpreti"
-
-#: trf.cpp:94
-#, fuzzy, kde-format
-#| msgid "Unknown result for pairing \"%1\""
-msgid "Unknown result \"%1\" on pairing \"%2\"."
-msgstr "Neznan rezultat pri združevanju \"%1\""
-
-#: trf.cpp:97
-#, kde-format
-msgid "Pairing \"%1\" has no opponent."
-msgstr ""
-
-#: trf.cpp:125 trf.cpp:132
-#, fuzzy, kde-format
-#| msgid "Player %1 not found"
-msgid "Player \"%1\" not found."
-msgstr "Igralca \"%1\" ni mogoče najti"
-
-#: trf.cpp:138
-#, fuzzy, kde-format
-#| msgid "Unknown result on pairing %1 with %2"
-msgid "Unknown result on pairing \"%1\" with \"%2\"."
-msgstr "Neznan rezultat pri paru %1 z %2"
 
 #~ msgid "New tournament+//3//f/9-"
 #~ msgstr "Novi turnir+//3//f/9-"

@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-31 00:39+0000\n"
-"PO-Revision-Date: 2025-05-30 23:06+0300\n"
+"POT-Creation-Date: 2025-06-01 00:40+0000\n"
+"PO-Revision-Date: 2025-05-31 20:25+0300\n"
 "Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -46,102 +46,131 @@ msgstr "Hesap Bağla"
 msgid "Couldn't export tournament."
 msgstr "Turnuva dışa aktarılamadı."
 
-#: main.cpp:67 qml/WelcomePage.qml:15
-#, kde-format
-msgctxt "@title"
-msgid "Chessament"
-msgstr "Chessament"
-
-#: main.cpp:71
-#, kde-format
-msgid "Chess Tournament Manager"
-msgstr "Satranç Turnuvası Yöneticisi"
-
-#: main.cpp:75
-#, kde-format
-msgid "© 2024 Manuel Alcaraz Zambrano"
-msgstr "© 2024 Manuel Alcaraz Zambrano"
-
-#: main.cpp:76
-#, kde-format
-msgctxt "@info:credit"
-msgid "Manuel Alcaraz Zambrano"
-msgstr "Manuel Alcaraz Zambrano"
-
-#: main.cpp:77
-#, kde-format
-msgctxt "@info:credit"
-msgid "Author & Maintainer"
-msgstr "Yazar ve bakımcı"
-
-#: main.cpp:80
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Emir SARI"
-
-#: main.cpp:80
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "emir_sari@icloud.com"
-
-#: pairingengine.cpp:26
+#: libtournament/pairingengine.cpp:26
 #, kde-format
 msgctxt "bbpPairings is the name of a program, should not be translated"
 msgid "The pairing engine bbpPairings could not be found. Is it installed?"
 msgstr "Eşleştirme işletkesi bbpPairings bulunamadı. Kurulu mu?"
 
-#: pairingengine.cpp:34
+#: libtournament/pairingengine.cpp:34
 #, kde-format
 msgid "Could not create temporary file."
-msgstr ""
+msgstr "Geçici dosya oluşturulamadı."
 
-#: pairingengine.cpp:49
+#: libtournament/pairingengine.cpp:49
 #, kde-format
 msgctxt "bbpPairings is the name of a program, should not be translated"
 msgid "bbpPairings terminated with a non zero exit code: %1"
-msgstr ""
+msgstr "bbpPairings, sıfır olmayan bir çıkış koduyla sonlandı: %1"
 
-#: pairingengine.cpp:68 trf.cpp:74
-#, fuzzy, kde-format
-#| msgid "Invalid pairing \"%1\""
+#: libtournament/pairingengine.cpp:68 libtournament/trf.cpp:74
+#, kde-format
 msgid "Invalid pairing \"%1\"."
-msgstr "Geçersiz eşleşme “%1”"
+msgstr "Geçersiz eşleşme “%1”."
 
-#: pairingengine.cpp:74 pairingengine.cpp:78 pairingengine.cpp:84
-#: pairingengine.cpp:92 trf.cpp:87
-#, fuzzy, kde-format
-#| msgid "Invalid player for pairing \"%1\""
+#: libtournament/pairingengine.cpp:74 libtournament/pairingengine.cpp:78
+#: libtournament/pairingengine.cpp:84 libtournament/pairingengine.cpp:92
+#: libtournament/trf.cpp:87
+#, kde-format
 msgid "Invalid player \"%1\" on pairing \"%2\"."
-msgstr "“%1” eşleşmesi için geçersiz oyuncu"
+msgstr "“%2” eşleşmesinde geçersiz oyuncu “%1”."
 
-#: pairingmodel.cpp:65
+#: libtournament/tournament.cpp:614
+#, kde-format
+msgid "An error ocurred while pairing the round: %1"
+msgstr "Raunt eşleştirilirken bir hata oluştu: %1"
+
+#: libtournament/tournament.cpp:816
+#, kde-format
+msgid "Couldn't open file"
+msgstr "Dosya açılamadı"
+
+#: libtournament/trf.cpp:94
+#, kde-format
+msgid "Unknown result \"%1\" on pairing \"%2\"."
+msgstr "“%2” eşleşmesinde bilinmeyen sonuç “%1”."
+
+#: libtournament/trf.cpp:97
+#, kde-format
+msgid "Pairing \"%1\" has no opponent."
+msgstr "“%1” eşleşmesinin bir rakibi yok."
+
+#: libtournament/trf.cpp:125 libtournament/trf.cpp:132
+#, kde-format
+msgid "Player \"%1\" not found."
+msgstr "Oyuncu “%1” bulunamadı."
+
+#: libtournament/trf.cpp:138
+#, kde-format
+msgid "Unknown result on pairing \"%1\" with \"%2\"."
+msgstr "“%1” kişisini “%2” ile eşleştirirken bilinmeyen sonuç."
+
+#: main.cpp:63 qml/WelcomePage.qml:15
+#, kde-format
+msgctxt "@title"
+msgid "Chessament"
+msgstr "Chessament"
+
+#: main.cpp:67
+#, kde-format
+msgid "Chess Tournament Manager"
+msgstr "Satranç Turnuvası Yöneticisi"
+
+#: main.cpp:71
+#, kde-format
+msgid "© 2024 Manuel Alcaraz Zambrano"
+msgstr "© 2024 Manuel Alcaraz Zambrano"
+
+#: main.cpp:72
+#, kde-format
+msgctxt "@info:credit"
+msgid "Manuel Alcaraz Zambrano"
+msgstr "Manuel Alcaraz Zambrano"
+
+#: main.cpp:73
+#, kde-format
+msgctxt "@info:credit"
+msgid "Author & Maintainer"
+msgstr "Yazar ve bakımcı"
+
+#: main.cpp:76
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Emir SARI"
+
+#: main.cpp:76
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "emir_sari@icloud.com"
+
+#: pairingmodel.cpp:68
 #, kde-format
 msgctxt "@title:column"
 msgid "Board"
 msgstr "Tahta"
 
-#: pairingmodel.cpp:67 pairingmodel.cpp:75 playersmodel.cpp:125
+#: pairingmodel.cpp:70 pairingmodel.cpp:78 playersmodel.cpp:125
 #: standingsmodel.cpp:62
 #, kde-format
 msgctxt "@title:column"
 msgid "No"
 msgstr "Hayır"
 
-#: pairingmodel.cpp:69
+#: pairingmodel.cpp:72
 #, kde-format
 msgctxt "@title:column"
 msgid "White player"
 msgstr "Beyaz Oyuncu"
 
-#: pairingmodel.cpp:71
+#: pairingmodel.cpp:74
 #, kde-format
 msgctxt "@title:column"
 msgid "Result"
 msgstr "Sonuç"
 
-#: pairingmodel.cpp:73
+#: pairingmodel.cpp:76
 #, kde-format
 msgctxt "@title:column"
 msgid "Black Player"
@@ -383,19 +412,19 @@ msgctxt "@info:placeholder"
 msgid "No pairings for round %1 yet"
 msgstr "Raunt %1 için henüz bir eşleşme yok"
 
-#: qml/PlayersPage.qml:42 qml/PlayersPage.qml:135
+#: qml/PlayersPage.qml:43 qml/PlayersPage.qml:136
 #, kde-format
 msgctxt "@action:button"
 msgid "Add player"
 msgstr "Oyuncu Ekle"
 
-#: qml/PlayersPage.qml:48
+#: qml/PlayersPage.qml:49
 #, kde-format
 msgctxt "@action:button"
 msgid "Print"
 msgstr "Yazdır"
 
-#: qml/PlayersPage.qml:131
+#: qml/PlayersPage.qml:132
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No players yet"
@@ -668,36 +697,3 @@ msgstr "Oturumu Kapat"
 msgctxt "@title:colunm"
 msgid "Rank"
 msgstr "Rütbe"
-
-#: tournament.cpp:614
-#, kde-format
-msgid "An error ocurred while pairing the round: %1"
-msgstr ""
-
-#: tournament.cpp:816
-#, kde-format
-msgid "Couldn't open file"
-msgstr "Dosya açılamadı"
-
-#: trf.cpp:94
-#, fuzzy, kde-format
-#| msgid "Unknown result for pairing \"%1\""
-msgid "Unknown result \"%1\" on pairing \"%2\"."
-msgstr "“%1” eşleşmesi için bilinmeyen sonuç"
-
-#: trf.cpp:97
-#, kde-format
-msgid "Pairing \"%1\" has no opponent."
-msgstr ""
-
-#: trf.cpp:125 trf.cpp:132
-#, fuzzy, kde-format
-#| msgid "Player %1 not found"
-msgid "Player \"%1\" not found."
-msgstr "Oyuncu %1 bulunamadı"
-
-#: trf.cpp:138
-#, fuzzy, kde-format
-#| msgid "Unknown result on pairing %1 with %2"
-msgid "Unknown result on pairing \"%1\" with \"%2\"."
-msgstr "%1 kişisini %2 ile eşleştirirken bilinmeyen sonuç"

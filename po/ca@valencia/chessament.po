@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-31 00:39+0000\n"
+"POT-Creation-Date: 2025-06-01 00:40+0000\n"
 "PO-Revision-Date: 2025-05-12 15:16+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -48,102 +48,136 @@ msgstr "Connecta amb el compte"
 msgid "Couldn't export tournament."
 msgstr "No s'ha pogut exportar el torneig."
 
-#: main.cpp:67 qml/WelcomePage.qml:15
-#, kde-format
-msgctxt "@title"
-msgid "Chessament"
-msgstr "Chessament"
-
-#: main.cpp:71
-#, kde-format
-msgid "Chess Tournament Manager"
-msgstr "Gestor de torneigs d'escacs"
-
-#: main.cpp:75
-#, kde-format
-msgid "© 2024 Manuel Alcaraz Zambrano"
-msgstr "© 2024 Manuel Alcaraz Zambrano"
-
-#: main.cpp:76
-#, kde-format
-msgctxt "@info:credit"
-msgid "Manuel Alcaraz Zambrano"
-msgstr "Manuel Alcaraz Zambrano"
-
-#: main.cpp:77
-#, kde-format
-msgctxt "@info:credit"
-msgid "Author & Maintainer"
-msgstr "Autoria i mantenidor"
-
-#: main.cpp:80
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Josep M. Ferrer"
-
-#: main.cpp:80
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "txemaq@gmail.com"
-
-#: pairingengine.cpp:26
+#: libtournament/pairingengine.cpp:26
 #, kde-format
 msgctxt "bbpPairings is the name of a program, should not be translated"
 msgid "The pairing engine bbpPairings could not be found. Is it installed?"
 msgstr ""
 
-#: pairingengine.cpp:34
+#: libtournament/pairingengine.cpp:34
 #, kde-format
 msgid "Could not create temporary file."
 msgstr ""
 
-#: pairingengine.cpp:49
+#: libtournament/pairingengine.cpp:49
 #, kde-format
 msgctxt "bbpPairings is the name of a program, should not be translated"
 msgid "bbpPairings terminated with a non zero exit code: %1"
 msgstr ""
 
-#: pairingengine.cpp:68 trf.cpp:74
+#: libtournament/pairingengine.cpp:68 libtournament/trf.cpp:74
 #, fuzzy, kde-format
 #| msgid "Invalid pairing \"%1\""
 msgid "Invalid pairing \"%1\"."
 msgstr "Emparellament no vàlid «%1»"
 
-#: pairingengine.cpp:74 pairingengine.cpp:78 pairingengine.cpp:84
-#: pairingengine.cpp:92 trf.cpp:87
+#: libtournament/pairingengine.cpp:74 libtournament/pairingengine.cpp:78
+#: libtournament/pairingengine.cpp:84 libtournament/pairingengine.cpp:92
+#: libtournament/trf.cpp:87
 #, fuzzy, kde-format
 #| msgid "Invalid player for pairing \"%1\""
 msgid "Invalid player \"%1\" on pairing \"%2\"."
 msgstr "Jugador no vàlid per a l'emparellament «%1»"
 
-#: pairingmodel.cpp:65
+#: libtournament/tournament.cpp:614
+#, kde-format
+msgid "An error ocurred while pairing the round: %1"
+msgstr ""
+
+#: libtournament/tournament.cpp:816
+#, kde-format
+msgid "Couldn't open file"
+msgstr "No s'ha pogut obrir el fitxer"
+
+#: libtournament/trf.cpp:94
+#, fuzzy, kde-format
+#| msgid "Unknown result for pairing \"%1\""
+msgid "Unknown result \"%1\" on pairing \"%2\"."
+msgstr "Resultat desconegut per a l'emparellament «%1»"
+
+#: libtournament/trf.cpp:97
+#, kde-format
+msgid "Pairing \"%1\" has no opponent."
+msgstr ""
+
+#: libtournament/trf.cpp:125 libtournament/trf.cpp:132
+#, fuzzy, kde-format
+#| msgid "Player %1 not found"
+msgid "Player \"%1\" not found."
+msgstr "No s'ha trobat el jugador %1"
+
+#: libtournament/trf.cpp:138
+#, fuzzy, kde-format
+#| msgid "Unknown result on pairing %1 with %2"
+msgid "Unknown result on pairing \"%1\" with \"%2\"."
+msgstr "Resultat desconegut en l'emparellament de %1 amb %2"
+
+#: main.cpp:63 qml/WelcomePage.qml:15
+#, kde-format
+msgctxt "@title"
+msgid "Chessament"
+msgstr "Chessament"
+
+#: main.cpp:67
+#, kde-format
+msgid "Chess Tournament Manager"
+msgstr "Gestor de torneigs d'escacs"
+
+#: main.cpp:71
+#, kde-format
+msgid "© 2024 Manuel Alcaraz Zambrano"
+msgstr "© 2024 Manuel Alcaraz Zambrano"
+
+#: main.cpp:72
+#, kde-format
+msgctxt "@info:credit"
+msgid "Manuel Alcaraz Zambrano"
+msgstr "Manuel Alcaraz Zambrano"
+
+#: main.cpp:73
+#, kde-format
+msgctxt "@info:credit"
+msgid "Author & Maintainer"
+msgstr "Autoria i mantenidor"
+
+#: main.cpp:76
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Josep M. Ferrer"
+
+#: main.cpp:76
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "txemaq@gmail.com"
+
+#: pairingmodel.cpp:68
 #, kde-format
 msgctxt "@title:column"
 msgid "Board"
 msgstr "Tauler"
 
-#: pairingmodel.cpp:67 pairingmodel.cpp:75 playersmodel.cpp:125
+#: pairingmodel.cpp:70 pairingmodel.cpp:78 playersmodel.cpp:125
 #: standingsmodel.cpp:62
 #, kde-format
 msgctxt "@title:column"
 msgid "No"
 msgstr "No"
 
-#: pairingmodel.cpp:69
+#: pairingmodel.cpp:72
 #, kde-format
 msgctxt "@title:column"
 msgid "White player"
 msgstr "Jugador de blanques"
 
-#: pairingmodel.cpp:71
+#: pairingmodel.cpp:74
 #, kde-format
 msgctxt "@title:column"
 msgid "Result"
 msgstr "Resultat"
 
-#: pairingmodel.cpp:73
+#: pairingmodel.cpp:76
 #, kde-format
 msgctxt "@title:column"
 msgid "Black Player"
@@ -386,19 +420,19 @@ msgctxt "@info:placeholder"
 msgid "No pairings for round %1 yet"
 msgstr "Encara no hi ha emparellaments per a la ronda %1"
 
-#: qml/PlayersPage.qml:42 qml/PlayersPage.qml:135
+#: qml/PlayersPage.qml:43 qml/PlayersPage.qml:136
 #, kde-format
 msgctxt "@action:button"
 msgid "Add player"
 msgstr "Afig un jugador"
 
-#: qml/PlayersPage.qml:48
+#: qml/PlayersPage.qml:49
 #, kde-format
 msgctxt "@action:button"
 msgid "Print"
 msgstr "Imprimix"
 
-#: qml/PlayersPage.qml:131
+#: qml/PlayersPage.qml:132
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No players yet"
@@ -671,36 +705,3 @@ msgstr "Eixida"
 msgctxt "@title:colunm"
 msgid "Rank"
 msgstr "Posició"
-
-#: tournament.cpp:614
-#, kde-format
-msgid "An error ocurred while pairing the round: %1"
-msgstr ""
-
-#: tournament.cpp:816
-#, kde-format
-msgid "Couldn't open file"
-msgstr "No s'ha pogut obrir el fitxer"
-
-#: trf.cpp:94
-#, fuzzy, kde-format
-#| msgid "Unknown result for pairing \"%1\""
-msgid "Unknown result \"%1\" on pairing \"%2\"."
-msgstr "Resultat desconegut per a l'emparellament «%1»"
-
-#: trf.cpp:97
-#, kde-format
-msgid "Pairing \"%1\" has no opponent."
-msgstr ""
-
-#: trf.cpp:125 trf.cpp:132
-#, fuzzy, kde-format
-#| msgid "Player %1 not found"
-msgid "Player \"%1\" not found."
-msgstr "No s'ha trobat el jugador %1"
-
-#: trf.cpp:138
-#, fuzzy, kde-format
-#| msgid "Unknown result on pairing %1 with %2"
-msgid "Unknown result on pairing \"%1\" with \"%2\"."
-msgstr "Resultat desconegut en l'emparellament de %1 amb %2"
