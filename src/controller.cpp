@@ -4,6 +4,8 @@
 #include "controller.h"
 #include "libtournament/pairing.h"
 
+#include <QRandomGenerator>
+
 using namespace Qt::Literals::StringLiterals;
 
 Controller::Controller(QObject *parent)
@@ -143,8 +145,17 @@ void Controller::exportTrf(const QUrl &fileUrl)
     }
 }
 
-QCoro::Task<void> Controller::pairRound()
+QCoro::Task<void> Controller::pairRound(uint color)
 {
+    if (m_tournament->currentRound() == 0) {
+        Tournament::InitialColor initialColor;
+        if (color == 2) {
+            initialColor = Tournament::InitialColor(QRandomGenerator::global()->bounded(2));
+        } else {
+            initialColor = Tournament::InitialColor(color);
+        }
+        m_tournament->setInitialColor(initialColor);
+    }
     const auto pairings = co_await m_tournament->pairNextRound();
 
     if (!pairings.has_value()) {

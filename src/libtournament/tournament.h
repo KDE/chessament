@@ -82,6 +82,14 @@ public:
     QCoro::Task<std::expected<bool, QString>> pairNextRound();
     void removePairings(int round, bool keepByes);
 
+    enum class InitialColor {
+        White,
+        Black,
+    };
+    Q_ENUM(InitialColor);
+
+    InitialColor initialColor();
+
     TournamentState getState(int maxRound = -1);
 
     int numberOfPlayers();
@@ -179,9 +187,9 @@ public:
     }
 
     enum class TrfOption {
-        NumberOfRounds = 1,
-        InitialColorWhite,
-        InitialColorBlack
+        NumberOfRounds = 0x1,
+        InitialColorWhite = 0x2,
+        InitialColorBlack = 0x4,
     };
     Q_DECLARE_FLAGS(TrfOptions, TrfOption)
 
@@ -210,6 +218,8 @@ public Q_SLOTS:
 
     void setPlayers(QList<Player *> *players);
     void setRounds(QList<Round *> rounds);
+
+    void setInitialColor(InitialColor color);
 
 Q_SIGNALS:
     void idChanged();
@@ -253,6 +263,8 @@ private:
 
     QList<Player *> *m_players;
     QList<Round *> m_rounds;
+
+    InitialColor m_initialColor;
 
     friend class Event;
 };

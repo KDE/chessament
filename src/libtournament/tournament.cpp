@@ -385,6 +385,15 @@ void Tournament::setRounds(QList<Round *> rounds)
     Q_EMIT roundsChanged();
 }
 
+void Tournament::setInitialColor(Tournament::InitialColor color)
+{
+    if (m_initialColor == color) {
+        return;
+    }
+    m_initialColor = color;
+    setOption(u"initial_color"_s, std::to_underlying(color));
+}
+
 void Tournament::addPairing(int round, Pairing *pairing)
 {
     while (m_rounds.size() < round) {
@@ -649,6 +658,11 @@ void Tournament::removePairings(int round, bool keepByes)
     setCurrentRound(round - 1);
 }
 
+Tournament::InitialColor Tournament::initialColor()
+{
+    return m_initialColor;
+}
+
 TournamentState Tournament::getState(int maxRound)
 {
     return TournamentState{this, maxRound};
@@ -772,13 +786,13 @@ QString Tournament::toTrf(TrfOptions options, int maxRound)
     stream << reportFieldString(ReportField::ChiefArbiter) << space << m_chiefArbiter << newLine;
     stream << reportFieldString(ReportField::TimeControl) << space << m_timeControl << newLine;
 
-    if (options.testAnyFlag(TrfOption::NumberOfRounds)) {
+    if (options & TrfOption::NumberOfRounds) {
         stream << u"XXR "_s + QString::number(m_numberOfRounds) << newLine;
     }
 
-    if (options.testAnyFlag(TrfOption::InitialColorWhite)) {
+    if (options & TrfOption::InitialColorWhite) {
         stream << u"XXC white1\n"_s;
-    } else if (options.testAnyFlag(TrfOption::InitialColorBlack)) {
+    } else if (options & TrfOption::InitialColorBlack) {
         stream << u"XXC black1\n"_s;
     }
 
@@ -872,6 +886,7 @@ void Tournament::loadOptions()
     setTimeControl(getOption(u"time_control"_s).toString());
     setNumberOfRounds(getOption(u"number_of_rounds"_s).toInt());
     setCurrentRound(getOption(u"current_round"_s).toInt());
+    setInitialColor(Tournament::InitialColor(getOption(u"initial_color"_s).toInt()));
 }
 
 void Tournament::loadPlayers()

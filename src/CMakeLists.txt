@@ -23,6 +23,7 @@ ecm_add_qml_module(chessament_static
         qml/ResultsFooter.qml
         qml/StandingsPage.qml
         qml/PairingsPage.qml
+        qml/PairRoundDialog.qml
         qml/PlayersPage.qml
         qml/WelcomePage.qml
 

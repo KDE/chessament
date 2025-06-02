@@ -78,6 +78,7 @@ void TournamentTest::testImportTrf()
     QCOMPARE(t->numberOfRatedPlayers(), 82);
     QCOMPARE(t->numberOfRounds(), 9);
     QCOMPARE(t->rounds().size(), 9);
+    QCOMPARE(t->initialColor(), Tournament::InitialColor::White);
 
     QCOMPARE(t->getPairings(1).size(), 44);
     for (int i = 2; i <= 9; ++i) {
@@ -116,6 +117,7 @@ void TournamentTest::testLoadTournament()
     QCOMPARE(t->numberOfRatedPlayers(), 82);
     QCOMPARE(t->numberOfRounds(), 9);
     QCOMPARE(t->rounds().size(), 9);
+    QCOMPARE(t->initialColor(), Tournament::InitialColor::White);
 
     QCOMPARE(t->getPairings(1).size(), 44);
     for (int i = 2; i <= 9; ++i) {
