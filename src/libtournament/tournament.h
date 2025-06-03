@@ -68,7 +68,7 @@ public:
     QMap<uint, Player *> getPlayersByStartingRank();
     QMap<uint, Player *> getPlayersById();
     QHash<Player *, QList<Pairing *>> getPairingsByPlayer(int maxRound = -1);
-    QList<PlayerTiebreaks> getStandings(int round = 0);
+    QList<PlayerTiebreaks> getStandings(int round = -1);
 
     QList<Round *> rounds() const;
     void addPairing(int round, Pairing *pairing);

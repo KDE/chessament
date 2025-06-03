@@ -48,7 +48,7 @@ QHash<int, QByteArray> StandingsModel::roleNames() const
 Qt::ItemFlags StandingsModel::flags(const QModelIndex &index) const
 {
     Q_UNUSED(index)
-    return Qt::ItemIsSelectable | Qt::ItemIsEnabled | Qt::ItemIsEditable;
+    return Qt::ItemIsSelectable | Qt::ItemIsEnabled;
 }
 
 QVariant StandingsModel::headerData(int section, Qt::Orientation orientation, int role) const
@@ -73,6 +73,6 @@ void StandingsModel::setTournament(Tournament *tournament)
 {
     beginResetModel();
     m_tournament = tournament;
-    m_standings = m_tournament->getStandings(std::numeric_limits<int>::max());
+    m_standings = m_tournament->getStandings();
     endResetModel();
 }

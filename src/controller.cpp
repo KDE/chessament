@@ -48,11 +48,11 @@ void Controller::setTournament(Tournament *tournament)
 
     m_playersModel->setPlayers(m_tournament->players());
     m_pairingModel->setPairings(m_tournament->getPairings(1));
-    m_standingsModel->setTournament(m_tournament);
 
     setHasOpenTournament(true);
     setCurrentPlayerByIndex(-1);
     setCurrentRound(1);
+    setAreStandingsValid(false);
 
     Q_EMIT tournamentChanged();
 }
@@ -123,6 +123,20 @@ void Controller::setCurrentRound(int currentRound)
     Q_EMIT currentRoundChanged();
 }
 
+bool Controller::areStandingsValid()
+{
+    return m_areStandingsValid;
+}
+
+void Controller::setAreStandingsValid(bool valid)
+{
+    if (m_areStandingsValid == valid) {
+        return;
+    }
+    m_areStandingsValid = valid;
+    Q_EMIT areStandingsValidChanged();
+}
+
 void Controller::importTrf(const QUrl &fileUrl)
 {
     auto event = new Event();
@@ -166,6 +180,7 @@ QCoro::Task<void> Controller::pairRound(uint color)
     setCurrentRound(m_tournament->currentRound());
     m_pairingModel->setPairings(m_tournament->getPairings(m_currentRound));
 
+    setAreStandingsValid(false);
     Q_EMIT hasCurrentRoundFinishedChanged();
 }
 
@@ -173,6 +188,7 @@ void Controller::removePairings(bool keepByes)
 {
     m_tournament->removePairings(m_currentRound, keepByes);
     setCurrentRound(std::max(1, m_tournament->currentRound()));
+    setAreStandingsValid(false);
 }
 
 QString Controller::getPlayersListDocument()
@@ -233,6 +249,7 @@ bool Controller::setResult(int board, Pairing::PartialResult whiteResult, Pairin
     m_tournament->setResult(pairing, result);
     m_pairingModel->updatePairing(board);
 
+    setAreStandingsValid(false);
     Q_EMIT hasCurrentRoundFinishedChanged();
 
     return true;
@@ -301,6 +318,13 @@ void Controller::setCurrentView(const QString &currentView)
         return;
     }
     m_currentView = currentView;
+
+    if (m_currentView == u"StandingsPage"_s && !m_areStandingsValid) {
+        qDebug() << "reloading standings";
+        m_standingsModel->setTournament(m_tournament);
+        setAreStandingsValid(true);
+    }
+
     Q_EMIT currentViewChanged();
 }
 

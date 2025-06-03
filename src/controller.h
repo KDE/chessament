@@ -26,6 +26,7 @@ class Controller : public QObject
     Q_PROPERTY(Player *currentPlayer READ currentPlayer WRITE setCurrentPlayer NOTIFY currentPlayerChanged)
     Q_PROPERTY(int currentRound READ currentRound WRITE setCurrentRound NOTIFY currentRoundChanged)
     Q_PROPERTY(bool hasCurrentRoundFinished READ hasCurrentRoundFinished NOTIFY hasCurrentRoundFinishedChanged)
+    Q_PROPERTY(bool areStandingsValid READ areStandingsValid NOTIFY areStandingsValidChanged)
 
     Q_PROPERTY(PlayersModel *playersModel READ playersModel CONSTANT)
     Q_PROPERTY(PairingModel *pairingModel READ pairingModel CONSTANT)
@@ -46,6 +47,7 @@ public:
     Player *currentPlayer() const;
     int currentRound();
     bool hasCurrentRoundFinished();
+    bool areStandingsValid();
 
     Q_INVOKABLE void addPlayer(const QString &title,
                                const QString &name,
@@ -86,6 +88,7 @@ public Q_SLOTS:
     void setCurrentPlayer(Player *currentPlayer);
     void setCurrentPlayerByIndex(int currentPlayer);
     void setCurrentRound(int currentRound);
+    void setAreStandingsValid(bool valid);
     void setCurrentView(const QString &currentView);
     void setError(const QString &error);
 
@@ -96,6 +99,7 @@ Q_SIGNALS:
     void currentPlayerChanged();
     void currentRoundChanged();
     void hasCurrentRoundFinishedChanged();
+    void areStandingsValidChanged();
     void currentViewChanged();
     void errorChanged();
 
@@ -106,6 +110,7 @@ private:
     bool m_hasOpenTournament = false;
     int m_currentPlayerIndex = -1;
     int m_currentRound = 1;
+    bool m_areStandingsValid = false;
 
     Player *m_currentPlayer = nullptr;
     PlayersModel *m_playersModel;

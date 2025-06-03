@@ -295,7 +295,7 @@ QHash<Player *, QList<Pairing *>> Tournament::getPairingsByPlayer(int maxRound)
 
 QList<PlayerTiebreaks> Tournament::getStandings(int round)
 {
-    TournamentState state(this, round);
+    auto state = getState(round);
     QList<PlayerTiebreaks> standings;
 
     // Sort by tiebreaks
@@ -365,7 +365,7 @@ QList<PlayerTiebreaks> Tournament::getStandings(int round)
         }
         QString t = u"{\"id\": "_s + QString::number(s.first->startingRank()) + u", \"tiebreaks\": ["_s + l.join(u", "_s) + u"]}"_s;
         // qDebug() << i + 1 << s.first->name() << t;
-        std::cout << t.toStdString() << std::endl;
+        // std::cout << t.toStdString() << std::endl;
     }
 
     return standings;
@@ -773,7 +773,7 @@ QString Tournament::toTrf(TrfOptions options, int maxRound)
     QTextStream stream(&result);
 
     auto state = getState();
-    auto standings = getStandings(-1);
+    auto standings = getStandings();
 
     const auto space = u" "_s;
     const auto newLine = QLatin1Char('\n');
