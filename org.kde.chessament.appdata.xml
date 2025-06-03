@@ -61,6 +61,6 @@
     <p xml:lang="uk">Chessament — програма для керування шаховими турнірами. У поточній версії передбачено турніри за індивідуальною швейцарською системою.</p>
     <p xml:lang="x-test">xxChessament is a chess tournament manager. It currently supports individual Swiss-system tournaments.xx</p>
   </description>
-  <url type="homepage">https://alcarazzam.dev/chessament/</url>
+  <url type="homepage">https://apps.kde.org/chessament/</url>
   <launchable type="desktop-id">org.kde.chessament.desktop</launchable>
 </component>
