@@ -25,8 +25,6 @@
 
 using namespace Qt::Literals::StringLiterals;
 
-void qml_register_types_org_kde_chessament();
-
 int main(int argc, char *argv[])
 {
     QCoreApplication::setAttribute(Qt::AA_ShareOpenGLContexts);
@@ -76,10 +74,6 @@ int main(int argc, char *argv[])
     aboutData.setTranslator(i18nc("NAME OF TRANSLATORS", "Your names"), i18nc("EMAIL OF TRANSLATORS", "Your emails"));
     KAboutData::setApplicationData(aboutData);
     QGuiApplication::setWindowIcon(QIcon::fromTheme(u"org.kde.chessament"_s));
-
-    Q_IMPORT_QML_PLUGIN(org_kde_chessament_settingsPlugin)
-
-    qml_register_types_org_kde_chessament();
 
     QQmlApplicationEngine engine;
 
