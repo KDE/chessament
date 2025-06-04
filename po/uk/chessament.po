@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-01 00:40+0000\n"
+"POT-Creation-Date: 2025-06-04 00:40+0000\n"
 "PO-Revision-Date: 2025-05-31 07:33+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -42,7 +42,7 @@ msgctxt "@action:inmenu"
 msgid "Connect account"
 msgstr "З'єднати обліковий запис"
 
-#: controller.cpp:142
+#: controller.cpp:158
 #, kde-format
 msgid "Couldn't export tournament."
 msgstr "Не вдалося експортувати дані турніру."
@@ -59,30 +59,30 @@ msgstr ""
 msgid "Could not create temporary file."
 msgstr "Не вдалося створити тимчасовий файл."
 
-#: libtournament/pairingengine.cpp:49
+#: libtournament/pairingengine.cpp:59
 #, kde-format
 msgctxt "bbpPairings is the name of a program, should not be translated"
 msgid "bbpPairings terminated with a non zero exit code: %1"
 msgstr "Роботу bbpPairings перервано з ненульовим кодом виходу: %1"
 
-#: libtournament/pairingengine.cpp:68 libtournament/trf.cpp:74
+#: libtournament/pairingengine.cpp:78 libtournament/trf.cpp:74
 #, kde-format
 msgid "Invalid pairing \"%1\"."
 msgstr "Некоректний розподіл на пари «%1»."
 
-#: libtournament/pairingengine.cpp:74 libtournament/pairingengine.cpp:78
-#: libtournament/pairingengine.cpp:84 libtournament/pairingengine.cpp:92
+#: libtournament/pairingengine.cpp:84 libtournament/pairingengine.cpp:88
+#: libtournament/pairingengine.cpp:94 libtournament/pairingengine.cpp:102
 #: libtournament/trf.cpp:87
 #, kde-format
 msgid "Invalid player \"%1\" on pairing \"%2\"."
 msgstr "Некоректний гравець «%1» у поділі на пари «%2»."
 
-#: libtournament/tournament.cpp:614
+#: libtournament/tournament.cpp:623
 #, kde-format
 msgid "An error ocurred while pairing the round: %1"
 msgstr "Під час поділу на пари для раунду сталася помилка: %1"
 
-#: libtournament/tournament.cpp:816
+#: libtournament/tournament.cpp:830
 #, kde-format
 msgid "Couldn't open file"
 msgstr "Не вдалося відкрити файл"
@@ -107,41 +107,41 @@ msgstr "Гравця «%1» не знайдено."
 msgid "Unknown result on pairing \"%1\" with \"%2\"."
 msgstr "Невідомий результат для поділу на пари «%1» з «%2»."
 
-#: main.cpp:63 qml/WelcomePage.qml:15
+#: main.cpp:61 qml/WelcomePage.qml:15
 #, kde-format
 msgctxt "@title"
 msgid "Chessament"
 msgstr "Chessament"
 
-#: main.cpp:67
+#: main.cpp:65
 #, kde-format
 msgid "Chess Tournament Manager"
 msgstr "Керування шаховим турніром"
 
-#: main.cpp:71
+#: main.cpp:69
 #, kde-format
 msgid "© 2024 Manuel Alcaraz Zambrano"
 msgstr "© Manuel Alcaraz Zambrano, 2024"
 
-#: main.cpp:72
+#: main.cpp:70
 #, kde-format
 msgctxt "@info:credit"
 msgid "Manuel Alcaraz Zambrano"
 msgstr "Manuel Alcaraz Zambrano"
 
-#: main.cpp:73
+#: main.cpp:71
 #, kde-format
 msgctxt "@info:credit"
 msgid "Author & Maintainer"
 msgstr "Автор і супровідник"
 
-#: main.cpp:76
+#: main.cpp:74
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "Юрій Чорноіван"
 
-#: main.cpp:76
+#: main.cpp:74
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
@@ -397,22 +397,53 @@ msgstr "Кількість раундів"
 msgid "Pair round %1"
 msgstr "Поділ на пари раунду %1"
 
-#: qml/PairingsPage.qml:32
+#: qml/PairingsPage.qml:34
 #, kde-format
 msgid "Round %1"
 msgstr "Раунд %1"
 
-#: qml/PairingsPage.qml:50
+#: qml/PairingsPage.qml:52
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove pairings of this and following rounds…"
 msgstr "Вилучити поділ на пари для цього і наступного раундів…"
 
-#: qml/PairingsPage.qml:90
+#: qml/PairingsPage.qml:92
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No pairings for round %1 yet"
 msgstr "Поділу на пари для раунду %1 ще немає"
+
+#: qml/PairRoundDialog.qml:17
+#, fuzzy, kde-format
+#| msgid "Pair round %1"
+msgctxt "@title %1 is a number >= 1"
+msgid "Pair round %1"
+msgstr "Поділ на пари раунду %1"
+
+#: qml/PairRoundDialog.qml:26
+#, kde-format
+msgctxt "@label:listbox"
+msgid "First player color:"
+msgstr ""
+
+#: qml/PairRoundDialog.qml:34
+#, kde-format
+msgctxt "@item:inlistbox As in 'Random color'"
+msgid "Random"
+msgstr ""
+
+#: qml/PairRoundDialog.qml:38
+#, kde-format
+msgctxt "@item:inlistbox As in 'White pieces'"
+msgid "White"
+msgstr ""
+
+#: qml/PairRoundDialog.qml:42
+#, kde-format
+msgctxt "@item:inlistbox As in 'Black pieces'"
+msgid "Black"
+msgstr ""
 
 #: qml/PlayersPage.qml:43 qml/PlayersPage.qml:136
 #, kde-format
