@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-04 00:40+0000\n"
-"PO-Revision-Date: 2025-05-31 07:33+0300\n"
+"PO-Revision-Date: 2025-06-04 19:55+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -415,8 +415,7 @@ msgid "No pairings for round %1 yet"
 msgstr "Поділу на пари для раунду %1 ще немає"
 
 #: qml/PairRoundDialog.qml:17
-#, fuzzy, kde-format
-#| msgid "Pair round %1"
+#, kde-format
 msgctxt "@title %1 is a number >= 1"
 msgid "Pair round %1"
 msgstr "Поділ на пари раунду %1"
@@ -425,25 +424,25 @@ msgstr "Поділ на пари раунду %1"
 #, kde-format
 msgctxt "@label:listbox"
 msgid "First player color:"
-msgstr ""
+msgstr "Колір першого гравця:"
 
 #: qml/PairRoundDialog.qml:34
 #, kde-format
 msgctxt "@item:inlistbox As in 'Random color'"
 msgid "Random"
-msgstr ""
+msgstr "Випадковий"
 
 #: qml/PairRoundDialog.qml:38
 #, kde-format
 msgctxt "@item:inlistbox As in 'White pieces'"
 msgid "White"
-msgstr ""
+msgstr "Білий"
 
 #: qml/PairRoundDialog.qml:42
 #, kde-format
 msgctxt "@item:inlistbox As in 'Black pieces'"
 msgid "Black"
-msgstr ""
+msgstr "Чорний"
 
 #: qml/PlayersPage.qml:43 qml/PlayersPage.qml:136
 #, kde-format
