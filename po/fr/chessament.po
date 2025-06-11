@@ -1,18 +1,19 @@
 # SPDX-FileCopyrightText: 2025 Xavier Besnard <xavier.besnard@kde.org>
+# SPDX-FileCopyrightText: 2025 Thomas Vergnaud <thomas.vergnaud@mailo.fr>
 msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-04 00:40+0000\n"
-"PO-Revision-Date: 2025-05-14 13:35+0200\n"
-"Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
-"Language-Team: French <French <kde-francophone@kde.org>>\n"
+"PO-Revision-Date: 2025-06-08 13:43+0200\n"
+"Last-Translator: Thomas Vergnaud <thomas.vergnaud@mailo.fr>\n"
+"Language-Team: French <kde-francophone@kde.org>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.04.1\n"
+"X-Generator: Lokalize 24.12.3\n"
 
 #: chessamentapplication.cpp:23
 #, kde-format
@@ -47,37 +48,35 @@ msgstr "Impossible d'exporter le tournoi."
 #, kde-format
 msgctxt "bbpPairings is the name of a program, should not be translated"
 msgid "The pairing engine bbpPairings could not be found. Is it installed?"
-msgstr ""
+msgstr "Le moteur de couplage bbpPairings est introuvable. Est-il installé ?"
 
 #: libtournament/pairingengine.cpp:34
 #, kde-format
 msgid "Could not create temporary file."
-msgstr ""
+msgstr "Impossible de créer un fichier temporaire."
 
 #: libtournament/pairingengine.cpp:59
 #, kde-format
 msgctxt "bbpPairings is the name of a program, should not be translated"
 msgid "bbpPairings terminated with a non zero exit code: %1"
-msgstr ""
+msgstr "bbpPairings terminé avec un code de sortie non nul : %1"
 
 #: libtournament/pairingengine.cpp:78 libtournament/trf.cpp:74
-#, fuzzy, kde-format
-#| msgid "Invalid pairing \"%1\""
+#, kde-format
 msgid "Invalid pairing \"%1\"."
-msgstr "Couplage « %1 » non valable"
+msgstr "Couplage « %1 » non valable."
 
 #: libtournament/pairingengine.cpp:84 libtournament/pairingengine.cpp:88
 #: libtournament/pairingengine.cpp:94 libtournament/pairingengine.cpp:102
 #: libtournament/trf.cpp:87
-#, fuzzy, kde-format
-#| msgid "Invalid player for pairing \"%1\""
+#, kde-format
 msgid "Invalid player \"%1\" on pairing \"%2\"."
-msgstr "Lecteur non valable pour le couplage « %1 »"
+msgstr "Joueur « %1 » non valable pour le couplage « %2 »."
 
 #: libtournament/tournament.cpp:623
 #, kde-format
 msgid "An error ocurred while pairing the round: %1"
-msgstr ""
+msgstr "Une erreur s'est produite lors du couplage de la manche : %1"
 
 #: libtournament/tournament.cpp:830
 #, kde-format
@@ -85,27 +84,24 @@ msgid "Couldn't open file"
 msgstr "Impossible d'ouvrir le fichier"
 
 #: libtournament/trf.cpp:94
-#, fuzzy, kde-format
-#| msgid "Unknown result for pairing \"%1\""
+#, kde-format
 msgid "Unknown result \"%1\" on pairing \"%2\"."
-msgstr "Résultat inconnu pour le couplage « %1 »"
+msgstr "Résultat inconnu « %1 » pour le couplage « %2 »."
 
 #: libtournament/trf.cpp:97
 #, kde-format
 msgid "Pairing \"%1\" has no opponent."
-msgstr ""
+msgstr "Le couplage « %1 » n'a pas d'adversaire."
 
 #: libtournament/trf.cpp:125 libtournament/trf.cpp:132
-#, fuzzy, kde-format
-#| msgid "Player %1 not found"
+#, kde-format
 msgid "Player \"%1\" not found."
-msgstr "Joueur %1 introuvable"
+msgstr "Joueur « %1 » introuvable."
 
 #: libtournament/trf.cpp:138
-#, fuzzy, kde-format
-#| msgid "Unknown result on pairing %1 with %2"
+#, kde-format
 msgid "Unknown result on pairing \"%1\" with \"%2\"."
-msgstr "Résultat inconnu lors du couplage de %1 avec %2"
+msgstr "Résultat inconnu lors du couplage de « %1 » avec « %2 »."
 
 #: main.cpp:61 qml/WelcomePage.qml:15
 #, kde-format
@@ -306,23 +302,22 @@ msgid "Sex"
 msgstr "Sexe"
 
 #: qml/DeletePairingsDialog.qml:16
-#, fuzzy, kde-format
-#| msgid "bbpPairings"
+#, kde-format
 msgctxt "@title"
 msgid "Remove pairings"
-msgstr "Couplage « bbp »"
+msgstr "Suppression des couplages"
 
 #: qml/DeletePairingsDialog.qml:24
 #, kde-format
 msgctxt "@action:check"
 msgid "Keep byes"
-msgstr ""
+msgstr "Conserver les byes"
 
 #: qml/DeletePairingsDialog.qml:31
 #, kde-format
 msgctxt "@action:button Remove pairings"
 msgid "Remove"
-msgstr ""
+msgstr "Retirer"
 
 #: qml/DocsPage.qml:22
 #, kde-format
@@ -407,7 +402,7 @@ msgstr "Tour %1"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove pairings of this and following rounds…"
-msgstr ""
+msgstr "Supprimer les couplages de ce tour et des suivants…"
 
 #: qml/PairingsPage.qml:92
 #, kde-format
