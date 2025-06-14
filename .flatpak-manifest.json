@@ -2,10 +2,10 @@
     "id": "org.kde.chessament",
     "branch": "master",
     "runtime": "org.kde.Platform",
-    "runtime-version": "6.8",
+    "runtime-version": "6.9",
     "sdk": "org.kde.Sdk",
     "base": "io.qt.qtwebengine.BaseApp",
-    "base-version": "6.8",
+    "base-version": "6.9",
     "command": "chessament",
     "tags": ["nightly"],
     "desktop-file-name-suffix": " (Nightly)",
@@ -34,20 +34,68 @@
             ]
         },
         {
-            "name": "qcoro",
-            "buildsystem": "cmake-ninja",
-            "config-opts": [ "-DQCORO_BUILD_EXAMPLES=OFF", "-DBUILD_TESTING=OFF" ],
+            "name": "libsecret",
+            "buildsystem": "meson",
+            "config-opts": [
+                "-Dmanpage=false",
+                "-Dvapi=false",
+                "-Dgtk_doc=false",
+                "-Dintrospection=false",
+                "-Dcrypto=disabled"
+            ],
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/danvratil/qcoro/archive/refs/tags/v0.11.0.tar.gz",
-                    "sha256": "9942c5b4c533192f6c5954dc6d10178b3829075e6a621b67df73f0a4b74d8297",
+                    "url": "https://download.gnome.org/sources/libsecret/0.21/libsecret-0.21.6.tar.xz",
+                    "sha256": "747b8c175be108c880d3adfb9c3537ea66e520e4ad2dccf5dce58003aeeca090",
+                    "x-checker-data": {
+                        "type": "gnome",
+                        "name": "libsecret",
+                        "stable-only": true
+                    }
+                }
+            ]
+        },
+        {
+            "name": "qtkeychain",
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://github.com/frankosterfeld/qtkeychain/archive/refs/tags/0.15.0.tar.gz",
+                    "sha256": "f4254dc8f0933b06d90672d683eab08ef770acd8336e44dfa030ce041dc2ca22",
                     "x-checker-data": {
                         "type": "anitya",
-                        "project-id": 236236,
+                        "project-id": 4138,
                         "stable-only": true,
-                        "url-template": "https://github.com/danvratil/qcoro/archive/refs/tags/v$version.tar.gz"
+                        "url-template": "https://github.com/frankosterfeld/qtkeychain/archive/refs/tags/$version.tar.gz"
                     }
+                }
+            ],
+            "config-opts": [
+                "-DBUILD_WITH_QT6=ON",
+                "-DCMAKE_INSTALL_LIBDIR=/app/lib",
+                "-DLIB_INSTALL_DIR=/app/lib",
+                "-DBUILD_TRANSLATIONS=NO",
+                "-DBUILD_TESTING=OFF"
+            ]
+        },
+        {
+            "name": "bbpPairings",
+            "buildsystem": "simple",
+            "build-commands": [
+                "make -j$FLATPAK_BUILDER_N_JOBS",
+                "cp bbpPairings.exe /app/bin/bbpPairings"
+            ],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/BieremaBoyzProgramming/bbpPairings.git",
+                    "commit": "f3536408413f28dae435012e8c56e0c6f8318890"
+                },
+                {
+                    "type": "patch",
+                    "path": "bbppairings-remove-werror.patch"
                 }
             ]
         },
