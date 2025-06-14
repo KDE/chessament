@@ -22,8 +22,8 @@ StatefulApp.StatefulWindow {
 
     windowName: "Main"
 
-    minimumWidth: Kirigami.Units.gridUnit * 20
-    minimumHeight: Kirigami.Units.gridUnit * 20
+    minimumWidth: Kirigami.Units.gridUnit * 40
+    minimumHeight: Kirigami.Units.gridUnit * 30
 
     application: ChessamentApplication {
         configurationView: Settings.ChessamentConfigurationView {
@@ -107,7 +107,7 @@ StatefulApp.StatefulWindow {
         id: drawer
 
         modal: false
-        width: 100
+        width: 120
         leftPadding: 0
         rightPadding: 0
         topPadding: 0
@@ -129,7 +129,7 @@ StatefulApp.StatefulWindow {
                         icon.name: "application-menu"
                         onClicked: optionPopup.popup()
 
-                        x: 50 - width / 2
+                        x: 60 - width / 2
 
                         QQC2.Menu {
                             id: optionPopup
@@ -180,6 +180,9 @@ StatefulApp.StatefulWindow {
             visible: Controller.hasOpenTournament
             Layout.fillHeight: true
             Layout.fillWidth: true
+
+            QQC2.ScrollBar.vertical.policy: QQC2.ScrollBar.AlwaysOff
+            QQC2.ScrollBar.horizontal.policy: QQC2.ScrollBar.AlwaysOff
 
             ColumnLayout {
                 width: scrollView.width
