@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-04 00:40+0000\n"
+"POT-Creation-Date: 2025-06-15 00:40+0000\n"
 "PO-Revision-Date: 2025-05-28 10:46+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -340,22 +340,22 @@ msgctxt "@title"
 msgid "Error"
 msgstr "Virhe"
 
-#: qml/Main.qml:190
+#: qml/Main.qml:193
 #, kde-format
 msgid "Players"
 msgstr "Pelaajat"
 
-#: qml/Main.qml:197
+#: qml/Main.qml:200
 #, kde-format
 msgid "Pairings"
 msgstr ""
 
-#: qml/Main.qml:204
+#: qml/Main.qml:207
 #, kde-format
 msgid "Standings"
 msgstr "Sijoitukset"
 
-#: qml/Main.qml:229
+#: qml/Main.qml:232
 #, kde-format
 msgctxt "@action:button"
 msgid "Settings"

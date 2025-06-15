@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-04 00:40+0000\n"
+"POT-Creation-Date: 2025-06-15 00:40+0000\n"
 "PO-Revision-Date: 2025-06-10 04:51+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -340,22 +340,22 @@ msgctxt "@title"
 msgid "Error"
 msgstr "שגיאה"
 
-#: qml/Main.qml:190
+#: qml/Main.qml:193
 #, kde-format
 msgid "Players"
 msgstr "שחקנים"
 
-#: qml/Main.qml:197
+#: qml/Main.qml:200
 #, kde-format
 msgid "Pairings"
 msgstr "שיבוצים"
 
-#: qml/Main.qml:204
+#: qml/Main.qml:207
 #, kde-format
 msgid "Standings"
 msgstr "עמדות"
 
-#: qml/Main.qml:229
+#: qml/Main.qml:232
 #, kde-format
 msgctxt "@action:button"
 msgid "Settings"
