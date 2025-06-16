@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-15 00:40+0000\n"
-"PO-Revision-Date: 2025-05-28 09:08+0200\n"
+"PO-Revision-Date: 2025-06-14 17:41+0200\n"
 "Last-Translator: Vincenzo Reale <>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.04.1\n"
+"X-Generator: Lokalize 25.04.2\n"
 
 #: chessamentapplication.cpp:23
 #, kde-format
@@ -51,36 +51,35 @@ msgstr "Impossibile esportare il torneo."
 msgctxt "bbpPairings is the name of a program, should not be translated"
 msgid "The pairing engine bbpPairings could not be found. Is it installed?"
 msgstr ""
+"Il motore di abbinamento bbpPairings non è stato trovato. È installato?"
 
 #: libtournament/pairingengine.cpp:34
 #, kde-format
 msgid "Could not create temporary file."
-msgstr ""
+msgstr "Impossibile creare il file temporaneo."
 
 #: libtournament/pairingengine.cpp:59
 #, kde-format
 msgctxt "bbpPairings is the name of a program, should not be translated"
 msgid "bbpPairings terminated with a non zero exit code: %1"
-msgstr ""
+msgstr "bbpPairings terminato con un codice di uscita diverso da zero: %1"
 
 #: libtournament/pairingengine.cpp:78 libtournament/trf.cpp:74
-#, fuzzy, kde-format
-#| msgid "Invalid pairing \"%1\""
+#, kde-format
 msgid "Invalid pairing \"%1\"."
-msgstr "Abbinamento «%1» non valido"
+msgstr "Abbinamento «%1» non valido."
 
 #: libtournament/pairingengine.cpp:84 libtournament/pairingengine.cpp:88
 #: libtournament/pairingengine.cpp:94 libtournament/pairingengine.cpp:102
 #: libtournament/trf.cpp:87
-#, fuzzy, kde-format
-#| msgid "Invalid player for pairing \"%1\""
+#, kde-format
 msgid "Invalid player \"%1\" on pairing \"%2\"."
-msgstr "Giocatore non valido per l'abbinamento «%1»"
+msgstr "Giocatore «%1» non valido per l'abbinamento «%2»."
 
 #: libtournament/tournament.cpp:623
 #, kde-format
 msgid "An error ocurred while pairing the round: %1"
-msgstr ""
+msgstr "Si è verificato un errore durante l'abbinamento del turno: %1"
 
 #: libtournament/tournament.cpp:830
 #, kde-format
@@ -88,27 +87,24 @@ msgid "Couldn't open file"
 msgstr "Impossibile aprire il file"
 
 #: libtournament/trf.cpp:94
-#, fuzzy, kde-format
-#| msgid "Unknown result for pairing \"%1\""
+#, kde-format
 msgid "Unknown result \"%1\" on pairing \"%2\"."
-msgstr "Risultato sconosciuto per l'abbinamento «%1»"
+msgstr "Risultato «%1» sconosciuto per l'abbinamento «%2»."
 
 #: libtournament/trf.cpp:97
 #, kde-format
 msgid "Pairing \"%1\" has no opponent."
-msgstr ""
+msgstr "L'abbinamento «%1» non ha avversari."
 
 #: libtournament/trf.cpp:125 libtournament/trf.cpp:132
-#, fuzzy, kde-format
-#| msgid "Player %1 not found"
+#, kde-format
 msgid "Player \"%1\" not found."
-msgstr "Giocatore %1 non trovato"
+msgstr "Giocatore «%1» non trovato."
 
 #: libtournament/trf.cpp:138
-#, fuzzy, kde-format
-#| msgid "Unknown result on pairing %1 with %2"
+#, kde-format
 msgid "Unknown result on pairing \"%1\" with \"%2\"."
-msgstr "Risultato sconosciuto per l'abbinamento %1 con %2"
+msgstr "Risultato sconosciuto per l'abbinamento «%1» con «%2»."
 
 #: main.cpp:61 qml/WelcomePage.qml:15
 #, kde-format
@@ -309,23 +305,22 @@ msgid "Sex"
 msgstr "Sesso"
 
 #: qml/DeletePairingsDialog.qml:16
-#, fuzzy, kde-format
-#| msgid "Pairings"
+#, kde-format
 msgctxt "@title"
 msgid "Remove pairings"
-msgstr "Abbinamenti"
+msgstr "Rimuovi gli abbinamenti"
 
 #: qml/DeletePairingsDialog.qml:24
 #, kde-format
 msgctxt "@action:check"
 msgid "Keep byes"
-msgstr ""
+msgstr "Mantieni i bye"
 
 #: qml/DeletePairingsDialog.qml:31
 #, kde-format
 msgctxt "@action:button Remove pairings"
 msgid "Remove"
-msgstr ""
+msgstr "Rimuovi"
 
 #: qml/DocsPage.qml:22
 #, kde-format
@@ -410,7 +405,7 @@ msgstr "Turno %1"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove pairings of this and following rounds…"
-msgstr ""
+msgstr "Rimuovi gli abbinamenti di questo e dei turni successivi…"
 
 #: qml/PairingsPage.qml:92
 #, kde-format
@@ -419,8 +414,7 @@ msgid "No pairings for round %1 yet"
 msgstr "Ancora nessun abbinamento per il turno %1"
 
 #: qml/PairRoundDialog.qml:17
-#, fuzzy, kde-format
-#| msgid "Pair round %1"
+#, kde-format
 msgctxt "@title %1 is a number >= 1"
 msgid "Pair round %1"
 msgstr "Abbinamento turno %1"
@@ -429,25 +423,25 @@ msgstr "Abbinamento turno %1"
 #, kde-format
 msgctxt "@label:listbox"
 msgid "First player color:"
-msgstr ""
+msgstr "Colore del primo giocatore:"
 
 #: qml/PairRoundDialog.qml:34
 #, kde-format
 msgctxt "@item:inlistbox As in 'Random color'"
 msgid "Random"
-msgstr ""
+msgstr "Casuale"
 
 #: qml/PairRoundDialog.qml:38
 #, kde-format
 msgctxt "@item:inlistbox As in 'White pieces'"
 msgid "White"
-msgstr ""
+msgstr "Bianco"
 
 #: qml/PairRoundDialog.qml:42
 #, kde-format
 msgctxt "@item:inlistbox As in 'Black pieces'"
 msgid "Black"
-msgstr ""
+msgstr "Nero"
 
 #: qml/PlayersPage.qml:43 qml/PlayersPage.qml:136
 #, kde-format
@@ -635,17 +629,17 @@ msgstr "Motore degli abbinamenti"
 #: qml/TournamentSettingsFormat.qml:41
 #, kde-format
 msgid "bbpPairings"
-msgstr ""
+msgstr "bbpPairings"
 
 #: qml/TournamentSettingsFormat.qml:45
 #, kde-format
 msgid "Pairing allocated bye"
-msgstr ""
+msgstr "Abbinamento assegnato per bye"
 
 #: qml/TournamentSettingsFormat.qml:46
 #, kde-format
 msgid "The value of the pairing allocated bye"
-msgstr ""
+msgstr "Il valore dell'abbinamento assegnato per bye"
 
 #: qml/TournamentSettingsInformation.qml:11
 #, kde-format
