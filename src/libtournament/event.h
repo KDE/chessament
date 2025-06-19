@@ -17,18 +17,19 @@ class Event : public QObject
     QML_UNCREATABLE("")
 
     Q_PROPERTY(QString fileName READ fileName WRITE setFileName NOTIFY fileNameChanged)
-    Q_PROPERTY(QList<Tournament *> tournaments READ tournaments CONSTANT)
 
 public:
     explicit Event(const QString &fileName = {});
 
+    ~Event();
+
     QString fileName();
-    QList<Tournament *> tournaments();
+    int numberOfTournaments();
+    Tournament *getTournament(uint index);
 
     Tournament *createTournament();
     std::expected<Tournament *, QString> importTournament(const QString &fileName);
     void saveAs(const QString &fileName);
-    void close();
     bool remove();
 
 public Q_SLOTS:
@@ -40,6 +41,7 @@ Q_SIGNALS:
 private:
     QSqlDatabase getDB();
     bool openDatabase(const QString &fileName);
+    void closeDatabase();
     void createTables();
     int getDBVersion();
     void setDBVersion(int version);
@@ -48,7 +50,7 @@ private:
     QString m_connName;
     QString m_fileName;
 
-    QList<Tournament *> m_tournaments;
+    std::vector<std::unique_ptr<Tournament>> m_tournaments;
 
     friend class Tournament;
 };

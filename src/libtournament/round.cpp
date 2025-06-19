@@ -5,10 +5,11 @@
 
 Round::Round()
     : QObject()
+    , m_pairings(std::make_unique<std::vector<std::unique_ptr<Pairing>>>())
 {
 }
 
-int Round::id()
+int Round::id() const
 {
     return m_id;
 }
@@ -22,7 +23,7 @@ void Round::setId(int id)
     Q_EMIT idChanged();
 }
 
-int Round::number()
+int Round::number() const
 {
     return m_number;
 }
@@ -36,37 +37,30 @@ void Round::setNumber(int number)
     Q_EMIT numberChanged();
 }
 
-QList<Pairing *> Round::pairings()
+std::vector<std::unique_ptr<Pairing>> *Round::pairings() const
 {
-    return m_pairings;
-}
-
-void Round::setPairings(QList<Pairing *> pairings)
-{
-    if (m_pairings == pairings) {
-        return;
-    }
-    m_pairings = pairings;
-    Q_EMIT pairingsChanged();
+    return m_pairings.get();
 }
 
 Pairing *Round::getPairing(int board)
 {
-    const auto it = std::find_if(m_pairings.begin(), m_pairings.end(), [board](Pairing *p) {
+    const auto it = std::find_if(m_pairings->begin(), m_pairings->end(), [board](const std::unique_ptr<Pairing> &p) {
         return p->board() == board;
     });
 
-    Q_ASSERT(it != m_pairings.end());
+    Q_ASSERT(it != m_pairings->end());
 
-    return *it;
+    return it->get();
 }
 
-void Round::addPairing(Pairing *pairing)
+void Round::addPairing(std::unique_ptr<Pairing> pairing)
 {
-    m_pairings.append(pairing);
+    m_pairings->push_back(std::move(pairing));
 }
 
 void Round::removePairings(std::function<bool(Pairing *)> predicate)
 {
-    m_pairings.removeIf(predicate);
+    std::erase_if(*m_pairings, [predicate](const std::unique_ptr<Pairing> &pairing) {
+        return predicate(pairing.get());
+    });
 }

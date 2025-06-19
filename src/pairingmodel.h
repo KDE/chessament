@@ -32,10 +32,10 @@ public:
     QVariant headerData(int section, Qt::Orientation orientation, int role = Qt::DisplayRole) const override;
     QHash<int, QByteArray> roleNames() const override;
 
-    void setPairings(QList<Pairing *> pairings);
+    void setPairings(std::vector<std::unique_ptr<Pairing>> *pairings);
     Q_INVOKABLE void updatePairing(int board);
     Q_INVOKABLE Pairing *getPairing(int board);
 
 private:
-    QList<Pairing *> m_pairings;
+    std::vector<std::unique_ptr<Pairing>> *m_pairings = nullptr;
 };

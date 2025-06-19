@@ -115,7 +115,7 @@ std::expected<bool, QString> Tournament::readTrf(QTextStream trf)
     }
 
     for (const auto &player : std::as_const(players)) {
-        addPlayer(player);
+        addPlayer(std::unique_ptr<Player>(player));
     }
 
     for (auto pairing = pairingsToAdd.cbegin(), end = pairingsToAdd.cend(); pairing != end; ++pairing) {
@@ -137,9 +137,9 @@ std::expected<bool, QString> Tournament::readTrf(QTextStream trf)
         if (pairing.value().first == Pairing::PartialResult::Unknown && pairing.value().second == Pairing::PartialResult::Unknown) {
             return std::unexpected(i18n("Unknown result on pairing \"%1\" with \"%2\".", QString::number(w), QString::number(b)));
         }
-        auto par = new Pairing(1, whitePlayer, blackPlayer, pairing.value().first, pairing.value().second);
+        auto par = std::make_unique<Pairing>(1, whitePlayer, blackPlayer, pairing.value().first, pairing.value().second);
 
-        addPairing(r, par);
+        addPairing(r, std::move(par));
     }
 
     setNumberOfRounds(m_rounds.size());
@@ -156,7 +156,7 @@ std::expected<bool, QString> Tournament::readTrf(QTextStream trf)
 
     if (m_currentRound > 0) {
         Tournament::InitialColor color;
-        const auto pairing = getPairings(1).constFirst();
+        const auto pairing = getPairings(1)->front().get();
         if (pairing->whitePlayer()->startingRank() < pairing->blackPlayer()->startingRank()) {
             color = Tournament::InitialColor::White;
         } else {

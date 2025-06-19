@@ -111,20 +111,25 @@ public:
                     const QString &origin,
                     const QString &sex);
 
-    int id();
-    int startingRank();
+    ~Player()
+    {
+        qDebug() << "delete player";
+    }
+
+    int id() const;
+    int startingRank() const;
     Title title() const;
     QString name() const;
     QString surname() const;
-    int rating();
-    int nationalRating();
+    int rating() const;
+    int nationalRating() const;
     QString playerId() const;
     QString birthDate() const;
     QString federation() const;
     QString origin() const;
     QString sex() const;
 
-    Q_INVOKABLE QString titleString()
+    Q_INVOKABLE QString titleString() const
     {
         return Player::titleString(m_title);
     };
@@ -132,7 +137,7 @@ public:
     QString fullName() const;
 
     QJsonObject toJson() const;
-    static Player *fromJson(const QJsonObject &json);
+    static std::unique_ptr<Player> fromJson(const QJsonObject &json);
     std::string toTrf(double points, int rank, bool normalize = true);
 
     friend QDebug operator<<(QDebug dbg, const Player &player);

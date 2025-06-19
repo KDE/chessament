@@ -44,9 +44,6 @@ public:
     Q_PROPERTY(int currentRound READ currentRound WRITE setCurrentRound NOTIFY currentRoundChanged)
     Q_PROPERTY(QList<Tiebreak *> tiebreaks READ tiebreaks WRITE setTiebreaks NOTIFY tiebreaksChanged)
 
-    Q_PROPERTY(QList<Player *> *players READ players WRITE setPlayers NOTIFY playersChanged)
-    Q_PROPERTY(QList<Round *> rounds READ rounds WRITE setRounds NOTIFY roundsChanged)
-
     ~Tournament();
 
     QString id() const;
@@ -62,23 +59,24 @@ public:
 
     Event *getEvent() const;
 
-    QList<Player *> *players();
-    void addPlayer(Player *player);
+    std::vector<std::unique_ptr<Player>> *players();
+    void addPlayer(std::unique_ptr<Player> player);
     void savePlayer(Player *player);
     QMap<uint, Player *> getPlayersByStartingRank();
     QMap<uint, Player *> getPlayersById();
     QHash<Player *, QList<Pairing *>> getPairingsByPlayer(int maxRound = -1);
     QList<PlayerTiebreaks> getStandings(int round = -1);
 
-    QList<Round *> rounds() const;
-    void addPairing(int round, Pairing *pairing);
+    std::vector<std::unique_ptr<Round>> rounds() const;
+    void addPairing(int round, std::unique_ptr<Pairing> pairing);
     void savePairing(Pairing *pairing);
     void setResult(Pairing *pairing, std::pair<Pairing::PartialResult, Pairing::PartialResult> result);
-    QList<Pairing *> getPairings(int round) const;
+    Pairing *getPairing(int round, int board);
+    std::vector<std::unique_ptr<Pairing>> *getPairings(int round) const;
     void sortPairings();
     Q_INVOKABLE bool isRoundFinished(int round);
     bool isRoundFullyPaired(int round);
-    QCoro::Task<std::expected<QList<Pairing *>, QString>> calculatePairings(int round);
+    QCoro::Task<std::expected<QList<std::pair<uint, uint>>, QString>> calculatePairings(int round);
     QCoro::Task<std::expected<bool, QString>> pairNextRound();
     void removePairings(int round, bool keepByes);
 
@@ -216,9 +214,6 @@ public Q_SLOTS:
     void setCurrentRound(int currentRound);
     void setTiebreaks(QList<Tiebreak *> tiebreaks);
 
-    void setPlayers(QList<Player *> *players);
-    void setRounds(QList<Round *> rounds);
-
     void setInitialColor(Tournament::InitialColor color);
 
 Q_SIGNALS:
@@ -234,9 +229,6 @@ Q_SIGNALS:
     void numberOfRoundsChanged();
     void currentRoundChanged();
     void tiebreaksChanged();
-
-    void playersChanged();
-    void roundsChanged();
 
 private:
     explicit Tournament(Event *event, const QString &id = {});
@@ -261,8 +253,8 @@ private:
     int m_currentRound = 0;
     QList<Tiebreak *> m_tiebreaks;
 
-    QList<Player *> *m_players;
-    QList<Round *> m_rounds;
+    std::unique_ptr<std::vector<std::unique_ptr<Player>>> m_players;
+    std::vector<std::unique_ptr<Round>> m_rounds;
 
     Tournament::InitialColor m_initialColor;
 

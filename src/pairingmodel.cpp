@@ -12,7 +12,10 @@ PairingModel::PairingModel(QObject *parent)
 
 int PairingModel::rowCount(const QModelIndex &) const
 {
-    return m_pairings.size();
+    if (m_pairings == nullptr) {
+        return 0;
+    }
+    return m_pairings->size();
 }
 
 int PairingModel::columnCount(const QModelIndex &) const
@@ -24,9 +27,9 @@ QVariant PairingModel::data(const QModelIndex &index, int role) const
 {
     Q_UNUSED(role)
 
-    Q_ASSERT(index.row() >= 0 && index.row() < m_pairings.size());
+    Q_ASSERT(index.row() >= 0 && static_cast<std::size_t>(index.row()) < m_pairings->size());
 
-    auto pairing = m_pairings.at(index.row());
+    auto pairing = m_pairings->at(index.row()).get();
 
     switch (index.column()) {
     case BoardRole:
@@ -80,14 +83,21 @@ QVariant PairingModel::headerData(int section, Qt::Orientation orientation, int 
     return QVariant();
 }
 
-void PairingModel::setPairings(QList<Pairing *> pairings)
+void PairingModel::setPairings(std::vector<std::unique_ptr<Pairing>> *pairings)
 {
-    int rowDiff = pairings.size() - m_pairings.size();
+    int rowDiff, currentRows;
+    if (m_pairings == nullptr) {
+        rowDiff = pairings->size();
+        currentRows = 0;
+    } else {
+        rowDiff = pairings->size() - m_pairings->size();
+        currentRows = m_pairings->size();
+    }
 
     if (rowDiff > 0) {
-        beginInsertRows({}, m_pairings.size(), pairings.size() - 1);
+        beginInsertRows({}, currentRows, pairings->size() - 1);
     } else if (rowDiff < 0) {
-        beginRemoveRows({}, pairings.size(), m_pairings.size() - 1);
+        beginRemoveRows({}, pairings->size(), currentRows - 1);
     }
 
     m_pairings = pairings;
@@ -111,8 +121,8 @@ Pairing *PairingModel::getPairing(int board)
     if (board < 0) {
         return nullptr;
     }
-    Q_ASSERT(board < m_pairings.size());
-    auto pairing = m_pairings.at(board);
+    Q_ASSERT(static_cast<std::size_t>(board) < m_pairings->size());
+    auto pairing = m_pairings->at(board).get();
     QQmlEngine::setObjectOwnership(pairing, QJSEngine::CppOwnership);
     return pairing;
 }

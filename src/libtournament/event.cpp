@@ -17,9 +17,10 @@ Event::Event(const QString &fileName)
     loadTournaments();
 }
 
-QList<Tournament *> Event::tournaments()
+Event::~Event()
 {
-    return m_tournaments;
+    qDebug() << "delete event";
+    closeDatabase();
 }
 
 QString Event::fileName()
@@ -36,22 +37,35 @@ void Event::setFileName(const QString &fileName)
     Q_EMIT fileNameChanged();
 }
 
+int Event::numberOfTournaments()
+{
+    return m_tournaments.size();
+}
+
+Tournament *Event::getTournament(uint index)
+{
+    return m_tournaments.at(index).get();
+}
+
 Tournament *Event::createTournament()
 {
-    auto tournament = new Tournament(this);
-    m_tournaments.append(tournament);
+    auto tournament = std::unique_ptr<Tournament>(new Tournament(this));
+    m_tournaments.push_back(std::move(tournament));
 
-    return tournament;
+    return m_tournaments.back().get();
 }
 
 std::expected<Tournament *, QString> Event::importTournament(const QString &fileName)
 {
-    auto tournament = new Tournament(this);
+    auto tournament = std::unique_ptr<Tournament>(new Tournament(this));
     auto error = tournament->loadTrf(fileName);
 
     if (error.has_value()) {
-        return tournament;
+        m_tournaments.push_back(std::move(tournament));
+
+        return m_tournaments.back().get();
     }
+
     return std::unexpected(error.error());
 }
 
@@ -67,15 +81,9 @@ void Event::saveAs(const QString &fileName)
     }
 }
 
-void Event::close()
-{
-    getDB().close();
-    QSqlDatabase::removeDatabase(m_connName);
-}
-
 bool Event::remove()
 {
-    close();
+    closeDatabase();
 
     if (!m_fileName.isEmpty()) {
         QFile db(m_fileName);
@@ -113,6 +121,12 @@ bool Event::openDatabase(const QString &fileName)
 
     createTables();
     return true;
+}
+
+void Event::closeDatabase()
+{
+    getDB().close();
+    QSqlDatabase::removeDatabase(m_connName);
 }
 
 void Event::createTables()
@@ -170,7 +184,7 @@ void Event::loadTournaments()
     while (query.next()) {
         auto id = query.value(idNo).toString();
 
-        auto tournament = new Tournament(this, id);
-        m_tournaments << tournament;
+        auto tournament = std::unique_ptr<Tournament>(new Tournament(this, id));
+        m_tournaments.push_back(std::move(tournament));
     }
 }

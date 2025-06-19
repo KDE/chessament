@@ -19,10 +19,9 @@ class Controller : public QObject
     QML_ELEMENT
     QML_SINGLETON
 
-    Q_PROPERTY(Event *event READ getEvent WRITE setEvent NOTIFY eventChanged)
+    Q_PROPERTY(Event *event READ getEvent NOTIFY eventChanged)
     Q_PROPERTY(Tournament *tournament READ tournament WRITE setTournament NOTIFY tournamentChanged)
     Q_PROPERTY(bool hasOpenTournament READ hasOpenTournament WRITE setHasOpenTournament NOTIFY hasOpenTournamentChanged)
-    Q_PROPERTY(int currentPlayerIndex READ currentPlayerIndex WRITE setCurrentPlayerByIndex NOTIFY currentPlayerChanged)
     Q_PROPERTY(Player *currentPlayer READ currentPlayer WRITE setCurrentPlayer NOTIFY currentPlayerChanged)
     Q_PROPERTY(int currentRound READ currentRound WRITE setCurrentRound NOTIFY currentRoundChanged)
     Q_PROPERTY(bool hasCurrentRoundFinished READ hasCurrentRoundFinished NOTIFY hasCurrentRoundFinishedChanged)
@@ -43,12 +42,12 @@ public:
     Event *getEvent() const;
     Tournament *tournament() const;
     bool hasOpenTournament();
-    int currentPlayerIndex();
     Player *currentPlayer() const;
     int currentRound();
     bool hasCurrentRoundFinished();
     bool areStandingsValid();
 
+    void setEvent(std::unique_ptr<Event> event);
     Q_INVOKABLE void addPlayer(const QString &title,
                                const QString &name,
                                int rating,
@@ -82,11 +81,9 @@ public:
     QString error() const;
 
 public Q_SLOTS:
-    void setEvent(Event *event);
     void setTournament(Tournament *tournament);
     void setHasOpenTournament(bool hasOpenTournament);
     void setCurrentPlayer(Player *currentPlayer);
-    void setCurrentPlayerByIndex(int currentPlayer);
     void setCurrentRound(int currentRound);
     void setAreStandingsValid(bool valid);
     void setCurrentView(const QString &currentView);
@@ -104,11 +101,10 @@ Q_SIGNALS:
     void errorChanged();
 
 private:
-    Event *m_event;
+    std::unique_ptr<Event> m_event;
     Tournament *m_tournament;
 
     bool m_hasOpenTournament = false;
-    int m_currentPlayerIndex = -1;
     int m_currentRound = 1;
     bool m_areStandingsValid = false;
 

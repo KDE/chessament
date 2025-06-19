@@ -47,7 +47,7 @@ Player::Player(int startingRank,
     setSex(sex);
 }
 
-int Player::id()
+int Player::id() const
 {
     return m_id;
 }
@@ -61,7 +61,7 @@ void Player::setId(int id)
     Q_EMIT idChanged();
 }
 
-int Player::startingRank()
+int Player::startingRank() const
 {
     return m_startingRank;
 }
@@ -123,7 +123,7 @@ void Player::setSurname(const QString &surname)
     Q_EMIT surnameChanged();
 }
 
-int Player::rating()
+int Player::rating() const
 {
     return m_rating;
 }
@@ -137,7 +137,7 @@ void Player::setRating(int rating)
     Q_EMIT ratingChanged();
 }
 
-int Player::nationalRating()
+int Player::nationalRating() const
 {
     return m_nationalRating;
 }
@@ -248,9 +248,9 @@ QJsonObject Player::toJson() const
     return json;
 }
 
-Player *Player::fromJson(const QJsonObject &json)
+std::unique_ptr<Player> Player::fromJson(const QJsonObject &json)
 {
-    auto *player = new Player();
+    auto player = std::make_unique<Player>();
 
     if (const auto v = json[u"starting_rank"_s]; v.isDouble()) {
         player->m_startingRank = v.toInt();

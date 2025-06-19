@@ -25,14 +25,14 @@ private Q_SLOTS:
 
 void TournamentTest::testNewTournament()
 {
-    auto e = new Event();
+    auto e = std::make_unique<Event>();
     auto t = e->createTournament();
     QCOMPARE(t->name(), u""_s);
 }
 
 void TournamentTest::testToJson()
 {
-    auto e = new Event();
+    auto e = std::make_unique<Event>();
     auto t = e->createTournament();
     t->setName(u"Test tournament"_s);
 
@@ -43,7 +43,7 @@ void TournamentTest::testToJson()
 
 void TournamentTest::testTrf()
 {
-    auto e = new Event();
+    auto e = std::make_unique<Event>();
     auto t = e->createTournament();
     t->setName(u"Test tournament"_s);
 
@@ -51,7 +51,7 @@ void TournamentTest::testTrf()
 
     QVERIFY(trf.contains(u"012 Test tournament"_s));
 
-    e = new Event();
+    e = std::make_unique<Event>();
     t = e->createTournament();
     auto ok = t->readTrf(QTextStream(&trf));
 
@@ -60,7 +60,7 @@ void TournamentTest::testTrf()
 
 void TournamentTest::testImportTrf()
 {
-    auto e = new Event();
+    auto e = std::make_unique<Event>();
     auto tournament = e->importTournament(QLatin1String(DATA_DIR) + u"/tournament_1.txt"_s);
 
     QVERIFY(tournament.has_value());
@@ -77,18 +77,17 @@ void TournamentTest::testImportTrf()
     QCOMPARE(t->numberOfPlayers(), 88);
     QCOMPARE(t->numberOfRatedPlayers(), 82);
     QCOMPARE(t->numberOfRounds(), 9);
-    QCOMPARE(t->rounds().size(), 9);
     QCOMPARE(t->initialColor(), Tournament::InitialColor::White);
 
-    QCOMPARE(t->getPairings(1).size(), 44);
+    QCOMPARE(t->getPairings(1)->size(), 44);
     for (int i = 2; i <= 9; ++i) {
-        QCOMPARE(t->getPairings(i).size(), 46);
+        QCOMPARE(t->getPairings(i)->size(), 46);
     }
 }
 
 void TournamentTest::testLoadTournament()
 {
-    auto e = new Event();
+    auto e = std::make_unique<Event>();
     auto tournament = e->importTournament(QLatin1String(DATA_DIR) + u"/tournament_1.txt"_s);
 
     QVERIFY(tournament.has_value());
@@ -98,13 +97,11 @@ void TournamentTest::testLoadTournament()
     QVERIFY(!file.fileName().isEmpty());
 
     e->saveAs(file.fileName());
-    e->close();
-    delete e;
 
-    e = new Event(file.fileName());
-    QCOMPARE(e->tournaments().size(), 1);
+    e = std::make_unique<Event>(file.fileName());
+    QCOMPARE(e->numberOfTournaments(), 1);
 
-    auto t = e->tournaments().constFirst();
+    auto t = e->getTournament(0);
 
     QCOMPARE(t->name(), u"Test Tournament"_s);
     QCOMPARE(t->city(), u"Place"_s);
@@ -116,15 +113,12 @@ void TournamentTest::testLoadTournament()
     QCOMPARE(t->numberOfPlayers(), 88);
     QCOMPARE(t->numberOfRatedPlayers(), 82);
     QCOMPARE(t->numberOfRounds(), 9);
-    QCOMPARE(t->rounds().size(), 9);
     QCOMPARE(t->initialColor(), Tournament::InitialColor::White);
 
-    QCOMPARE(t->getPairings(1).size(), 44);
+    QCOMPARE(t->getPairings(1)->size(), 44);
     for (int i = 2; i <= 9; ++i) {
-        QCOMPARE(t->getPairings(i).size(), 46);
+        QCOMPARE(t->getPairings(i)->size(), 46);
     }
-
-    e->close();
 }
 
 QTEST_GUILESS_MAIN(TournamentTest)

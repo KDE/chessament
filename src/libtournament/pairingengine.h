@@ -11,7 +11,6 @@
 
 class Tournament;
 
-#include "pairing.h"
 #include "tournament.h"
 
 class PairingEngine : public QObject
@@ -21,5 +20,5 @@ class PairingEngine : public QObject
 public:
     explicit PairingEngine();
 
-    QCoro::Task<std::expected<QList<Pairing *>, QString>> pair(int round, Tournament *tournament);
+    QCoro::Task<std::expected<QList<std::pair<uint, uint>>, QString>> pair(int round, Tournament *tournament);
 };

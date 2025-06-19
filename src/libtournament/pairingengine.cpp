@@ -2,7 +2,6 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 
 #include "pairingengine.h"
-#include "pairing.h"
 
 #include <KLocalizedString>
 #include <QProcess>
@@ -18,7 +17,7 @@ PairingEngine::PairingEngine()
 {
 }
 
-QCoro::Task<std::expected<QList<Pairing *>, QString>> PairingEngine::pair(int round, Tournament *tournament)
+QCoro::Task<std::expected<QList<std::pair<uint, uint>>, QString>> PairingEngine::pair(int round, Tournament *tournament)
 {
     const auto &path = QStandardPaths::findExecutable(u"bbpPairings"_s);
     if (path.isEmpty()) {
@@ -60,14 +59,13 @@ QCoro::Task<std::expected<QList<Pairing *>, QString>> PairingEngine::pair(int ro
                                         QString::number(process.exitCode())));
     }
 
-    QList<Pairing *> pairings;
+    auto pairings = QList<std::pair<uint, uint>>();
     const auto players = tournament->getPlayersByStartingRank();
 
     const auto output = QString::fromUtf8(process.readAll());
     std::cout << output.toStdString();
     const auto lines = output.split(u'\n');
 
-    uint board = 1;
     for (const auto &line : lines.mid(1)) {
         if (line.isEmpty()) {
             continue;
@@ -88,24 +86,15 @@ QCoro::Task<std::expected<QList<Pairing *>, QString>> PairingEngine::pair(int ro
             co_return std::unexpected(i18n("Invalid player \"%1\" on pairing \"%2\".", playerIds[1], line));
         }
 
-        Pairing::Result result = {Pairing::PartialResult::PairingBye, Pairing::PartialResult::Unknown};
-
         if (!players.contains(whiteId)) {
             co_return std::unexpected(i18n("Invalid player \"%1\" on pairing \"%2\".", QString::number(whiteId), line));
         }
-        const auto white = players.value(whiteId);
 
-        Player *black = nullptr;
-
-        if (blackId != 0) {
-            if (!players.contains(whiteId)) {
-                co_return std::unexpected(i18n("Invalid player \"%1\" on pairing \"%2\".", QString::number(blackId), line));
-            }
-            black = players.value(blackId);
-            result.first = Pairing::PartialResult::Unknown;
+        if (blackId != 0 && !players.contains(blackId)) {
+            co_return std::unexpected(i18n("Invalid player \"%1\" on pairing \"%2\".", QString::number(blackId), line));
         }
 
-        pairings << new Pairing(board++, white, black, result.first, result.second);
+        pairings.append({whiteId, blackId});
     }
 
     co_return pairings;

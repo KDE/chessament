@@ -9,7 +9,6 @@ import org.kde.kitemmodels
 import org.kde.kirigami as Kirigami
 
 import org.kde.chessament
-import org.kde.chessament.libtournament
 
 TablePage {
     id: root
@@ -26,14 +25,6 @@ TablePage {
         sourceModel: Controller.playersModel
         sortColumn: 0
         sortOrder: Qt.AscendingOrder
-    }
-
-    Connections {
-        target: root.tableView.selectionModel
-
-        function onCurrentChanged(current, previous) {
-            Controller.setCurrentPlayerByIndex(current.row);
-        }
     }
 
     actions: [
@@ -93,8 +84,8 @@ TablePage {
                     popup.onClosed: root.tableView.closeEditor()
 
                     onActivated: {
-                        let index = root.model.index(delegate.row, delegate.column);
-                        root.model.setData(index, comboBox.currentText);
+                        let i = root.model.index(delegate.row, delegate.column);
+                        root.model.setData(i, comboBox.currentText);
                         root.tableView.closeEditor();
                     }
 

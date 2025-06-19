@@ -22,15 +22,15 @@ Controller::Controller(QObject *parent)
 
 Event *Controller::getEvent() const
 {
-    return m_event;
+    return m_event.get();
 }
 
-void Controller::setEvent(Event *event)
+void Controller::setEvent(std::unique_ptr<Event> event)
 {
     if (m_event == event) {
         return;
     }
-    m_event = event;
+    m_event = std::move(event);
     Q_EMIT eventChanged();
 }
 
@@ -48,9 +48,9 @@ void Controller::setTournament(Tournament *tournament)
 
     m_playersModel->setPlayers(m_tournament->players());
     m_pairingModel->setPairings(m_tournament->getPairings(1));
+    m_standingsModel->setTournament(m_tournament);
 
     setHasOpenTournament(true);
-    setCurrentPlayerByIndex(-1);
     setCurrentRound(1);
     setAreStandingsValid(false);
 
@@ -71,25 +71,6 @@ void Controller::setHasOpenTournament(bool hasOpenTournament)
     Q_EMIT hasOpenTournamentChanged();
 }
 
-int Controller::currentPlayerIndex()
-{
-    return m_currentPlayerIndex;
-}
-
-void Controller::setCurrentPlayerByIndex(int currentPlayerIndex)
-{
-    if (m_currentPlayerIndex == currentPlayerIndex) {
-        return;
-    }
-    m_currentPlayerIndex = currentPlayerIndex;
-    if (m_currentPlayerIndex >= 0) {
-        m_currentPlayer = m_tournament->players()->at(m_currentPlayerIndex);
-    } else {
-        m_currentPlayer = nullptr;
-    }
-    Q_EMIT currentPlayerChanged();
-}
-
 Player *Controller::currentPlayer() const
 {
     return m_currentPlayer;
@@ -101,7 +82,6 @@ void Controller::setCurrentPlayer(Player *currentPlayer)
         return;
     }
     m_currentPlayer = currentPlayer;
-    m_currentPlayerIndex = m_tournament->players()->indexOf(m_currentPlayer);
     Q_EMIT currentPlayerChanged();
 }
 
@@ -139,11 +119,11 @@ void Controller::setAreStandingsValid(bool valid)
 
 void Controller::importTrf(const QUrl &fileUrl)
 {
-    auto event = new Event();
+    auto event = std::make_unique<Event>();
     auto tournament = event->importTournament(fileUrl.toLocalFile());
 
     if (tournament.has_value()) {
-        setEvent(event);
+        setEvent(std::move(event));
         setTournament(*tournament);
 
         setCurrentView(u"PlayersPage"_s);
@@ -205,16 +185,17 @@ void Controller::addPlayer(const QString &title,
                            const QString &origin,
                            const QString &sex)
 {
-    auto startingRank = m_tournament->players()->size() + 1;
-    auto player = new Player(startingRank, Player::titleForString(title), name, {}, rating, nationalRating, playerId, birthDate, {}, origin, sex);
+    auto startingRank = m_tournament->numberOfPlayers();
+    auto player = std::make_unique<
+        Player>(startingRank, Player::titleForString(title), name, QString(), rating, nationalRating, playerId, birthDate, QString(), origin, sex);
 
-    m_tournament->addPlayer(player);
-    m_playersModel->addPlayer(player);
+    m_tournament->addPlayer(std::move(player));
+    m_playersModel->addPlayer(m_tournament->players()->back().get());
 }
 
 void Controller::savePlayer()
 {
-    m_playersModel->updatePlayer(m_currentPlayerIndex, m_currentPlayer);
+    m_playersModel->updatePlayer(m_currentPlayer);
 }
 
 bool Controller::setResult(int board, Qt::Key key)
@@ -241,8 +222,7 @@ bool Controller::setResult(int board, Qt::Key key)
 
 bool Controller::setResult(int board, Pairing::PartialResult whiteResult, Pairing::PartialResult blackResult)
 {
-    auto round = m_tournament->rounds().at(m_currentRound - 1);
-    auto pairing = round->getPairing(board);
+    auto pairing = m_tournament->getPairing(m_currentRound, board);
 
     Pairing::Result result = {whiteResult, blackResult};
 
@@ -257,22 +237,22 @@ bool Controller::setResult(int board, Pairing::PartialResult whiteResult, Pairin
 
 void Controller::newTournament(const QUrl &fileUrl, const QString &name, int numberOfRounds)
 {
-    auto event = new Event(fileUrl.toLocalFile());
+    auto event = std::make_unique<Event>(fileUrl.toLocalFile());
     auto tournament = event->createTournament();
     tournament->setName(name);
     tournament->setNumberOfRounds(numberOfRounds);
 
-    setEvent(event);
+    setEvent(std::move(event));
     setTournament(tournament);
     setCurrentView(u"PlayersPage"_s);
 }
 
 void Controller::openEvent(const QUrl &fileUrl)
 {
-    auto event = new Event(fileUrl.toLocalFile());
+    auto event = std::make_unique<Event>(fileUrl.toLocalFile());
 
-    setEvent(event);
-    setTournament(event->tournaments().constFirst());
+    setEvent(std::move(event));
+    setTournament(m_event->getTournament(0));
     setCurrentView(u"PlayersPage"_s);
 }
 

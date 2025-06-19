@@ -296,6 +296,11 @@ public:
 
     explicit Pairing(int board, Player *whitePlayer, Player *blackPlayer, PartialResult whiteResult, PartialResult blackResult);
 
+    ~Pairing()
+    {
+        qDebug() << "delete pairing";
+    }
+
     int id();
     int board();
     Player *whitePlayer();

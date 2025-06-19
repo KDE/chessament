@@ -39,13 +39,13 @@ public:
     QHash<int, QByteArray> roleNames() const override;
     Qt::ItemFlags flags(const QModelIndex &index) const override;
 
-    void setPlayers(QList<Player *> *players);
+    void setPlayers(std::vector<std::unique_ptr<Player>> *players);
     void addPlayer(Player *player);
-    void updatePlayer(int i, Player *player);
+    void updatePlayer(Player *player);
 
 Q_SIGNALS:
     void playerChanged(Player *player);
 
 private:
-    QList<Player *> *m_players;
+    std::vector<std::unique_ptr<Player>> *m_players;
 };
