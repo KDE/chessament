@@ -17,7 +17,7 @@ class Event : public QObject
     QML_UNCREATABLE("")
 
     Q_PROPERTY(QString fileName READ fileName WRITE setFileName NOTIFY fileNameChanged)
-    Q_PROPERTY(QList<Tournament *> tournaments READ tournaments)
+    Q_PROPERTY(QList<Tournament *> tournaments READ tournaments CONSTANT)
 
 public:
     explicit Event(const QString &fileName = {});

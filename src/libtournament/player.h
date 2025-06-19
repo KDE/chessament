@@ -43,7 +43,7 @@ public:
     };
     Q_ENUM(Title)
 
-    static QString titleString(Title title)
+    static QString titleString(Player::Title title)
     {
         switch (title) {
         case Title::GM:
@@ -100,7 +100,7 @@ public:
     explicit Player();
     explicit Player(int startingRank, const QString &name, int rating);
     explicit Player(int startingRank,
-                    Title title,
+                    Player::Title title,
                     const QString &name,
                     const QString &surname,
                     int rating,
@@ -140,7 +140,7 @@ public:
 public Q_SLOTS:
     void setId(int id);
     void setStartingRank(int startingRank);
-    void setTitle(Title title);
+    void setTitle(Player::Title title);
     void setTitle(const QString &titleString);
     void setName(const QString &name);
     void setSurname(const QString &surname);
@@ -169,7 +169,7 @@ Q_SIGNALS:
 private:
     int m_id = 0;
     int m_startingRank = 1;
-    Title m_title;
+    Player::Title m_title;
     QString m_name;
     QString m_surname;
     int m_rating = 0;

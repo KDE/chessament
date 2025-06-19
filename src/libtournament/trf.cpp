@@ -156,7 +156,7 @@ std::expected<bool, QString> Tournament::readTrf(QTextStream trf)
 
     if (m_currentRound > 0) {
         Tournament::InitialColor color;
-        const auto pairing = getPairings(1).first();
+        const auto pairing = getPairings(1).constFirst();
         if (pairing->whitePlayer()->startingRank() < pairing->blackPlayer()->startingRank()) {
             color = Tournament::InitialColor::White;
         } else {

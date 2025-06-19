@@ -9,8 +9,6 @@
 #include <QSqlRecord>
 
 #include <algorithm>
-#include <iostream>
-#include <qassert.h>
 
 #include "db.h"
 #include "event.h"
@@ -593,7 +591,7 @@ bool Tournament::isRoundFullyPaired(int round)
 
     QSet<Player *> players;
 
-    for (const auto &pairing : pairings) {
+    for (const auto &pairing : std::as_const(pairings)) {
         players.insert(pairing->whitePlayer());
         if (pairing->blackPlayer() != nullptr) {
             players.insert(pairing->blackPlayer());

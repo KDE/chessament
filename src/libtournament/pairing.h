@@ -312,11 +312,11 @@ public Q_SLOTS:
     void setId(int id);
     void setBoard(int board);
     void setWhitePlayer(Player *whitePlayer);
-    void setWhiteResult(PartialResult whiteResult);
+    void setWhiteResult(Pairing::PartialResult whiteResult);
     void setBlackPlayer(Player *blackPlayer);
-    void setBlackResult(PartialResult blackResult);
-    void setResult(Result result);
-    void setResult(PartialResult whiteResult, PartialResult blackResult);
+    void setBlackResult(Pairing::PartialResult blackResult);
+    void setResult(Pairing::Result result);
+    void setResult(Pairing::PartialResult whiteResult, Pairing::PartialResult blackResult);
 
 Q_SIGNALS:
     void idChanged();
@@ -330,7 +330,7 @@ private:
     int m_id = 0;
     int m_board;
     Player *m_whitePlayer;
-    PartialResult m_whiteResult = PartialResult::Unknown;
+    Pairing::PartialResult m_whiteResult = PartialResult::Unknown;
     Player *m_blackPlayer;
-    PartialResult m_blackResult = PartialResult::Unknown;
+    Pairing::PartialResult m_blackResult = PartialResult::Unknown;
 };

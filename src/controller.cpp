@@ -272,7 +272,7 @@ void Controller::openEvent(const QUrl &fileUrl)
     auto event = new Event(fileUrl.toLocalFile());
 
     setEvent(event);
-    setTournament(event->tournaments().first());
+    setTournament(event->tournaments().constFirst());
     setCurrentView(u"PlayersPage"_s);
 }
 

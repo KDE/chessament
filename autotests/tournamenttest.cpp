@@ -104,7 +104,7 @@ void TournamentTest::testLoadTournament()
     e = new Event(file.fileName());
     QCOMPARE(e->tournaments().size(), 1);
 
-    auto t = e->tournaments().first();
+    auto t = e->tournaments().constFirst();
 
     QCOMPARE(t->name(), u"Test Tournament"_s);
     QCOMPARE(t->city(), u"Place"_s);

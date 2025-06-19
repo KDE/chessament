@@ -219,7 +219,7 @@ public Q_SLOTS:
     void setPlayers(QList<Player *> *players);
     void setRounds(QList<Round *> rounds);
 
-    void setInitialColor(InitialColor color);
+    void setInitialColor(Tournament::InitialColor color);
 
 Q_SIGNALS:
     void idChanged();
@@ -264,7 +264,7 @@ private:
     QList<Player *> *m_players;
     QList<Round *> m_rounds;
 
-    InitialColor m_initialColor;
+    Tournament::InitialColor m_initialColor;
 
     friend class Event;
 };
