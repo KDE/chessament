@@ -269,7 +269,7 @@ QHash<Player *, QList<Pairing *>> Tournament::getPairingsByPlayer(int maxRound)
     QHash<Player *, QList<Pairing *>> pairings;
 
     auto r = maxRound < 0 ? m_rounds.size() : maxRound;
-    for (size_t i = 0; i < r; i++) {
+    for (std::size_t i = 0; i < r; i++) {
         if (i >= m_rounds.size()) {
             break;
         }
@@ -771,7 +771,7 @@ QString Tournament::toTrf(TrfOptions options, int maxRound)
     QString result;
     QTextStream stream(&result);
 
-    auto state = getState();
+    auto state = getState(maxRound);
     auto standings = getStandings();
 
     const auto space = u" "_s;
