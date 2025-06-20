@@ -2,8 +2,7 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 
 #include "standingsmodel.h"
-
-#include <limits>
+#include "tournamentstate.h"
 
 StandingsModel::StandingsModel(QObject *parent)
     : QAbstractTableModel(parent)
@@ -73,6 +72,6 @@ void StandingsModel::setTournament(Tournament *tournament)
 {
     beginResetModel();
     m_tournament = tournament;
-    m_standings = m_tournament->getStandings();
+    m_standings = m_tournament->getStandings(TournamentState{tournament});
     endResetModel();
 }
