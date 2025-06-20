@@ -10,6 +10,11 @@
 
 #include "tournament.h"
 
+/*!
+ * \class Event
+ * \inmodule libtournament
+ * \inheaderfile libtournament/event.h
+ */
 class Event : public QObject
 {
     Q_OBJECT
@@ -23,13 +28,48 @@ public:
 
     ~Event();
 
+    /*!
+     * \property Event::fileName
+     * \brief the file name of the event
+     *
+     * This property holds the file name of the event.
+     */
     QString fileName();
+
+    /*!
+     * Returns the number of tournaments in the event.
+     */
     int numberOfTournaments();
+
+    /*!
+     * Returns the tournament with index \a index.
+     */
     Tournament *getTournament(uint index);
 
+    /*!
+     * Returns a new tournament.
+     */
     Tournament *createTournament();
+
+    /*!
+     * Imports a Tournament Report File (TRF) as a new tournament.
+     *
+     * \a fileName The location of the file
+     */
     std::expected<Tournament *, QString> importTournament(const QString &fileName);
+
+    /*!
+     * Saves the event in a new file.
+     *
+     * \a fileName The file name.
+     */
     void saveAs(const QString &fileName);
+
+    /*!
+     * Deletes the event.
+     *
+     * Returns true if successful; false otherwise.
+     */
     bool remove();
 
 public Q_SLOTS:

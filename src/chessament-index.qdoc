@@ -1,0 +1,13 @@
+/*!
+    \page chessament-index.html
+    \title Chessament
+
+    Manage chess tournaments.
+
+    \section1 API Reference
+
+    \list
+        \li \l{libtournament C++ Classes}
+    \endlist
+*/
+

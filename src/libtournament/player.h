@@ -10,6 +10,11 @@
 
 using namespace Qt::StringLiterals;
 
+/*!
+ * \class Player
+ * \inmodule libtournament
+ * \inheaderfile libtournament/player.h
+ */
 class Player : public QObject
 {
     Q_OBJECT
@@ -30,6 +35,21 @@ class Player : public QObject
     Q_PROPERTY(QString sex READ sex WRITE setSex NOTIFY sexChanged)
 
 public:
+    /*!
+     * \enum Player::Title
+     *
+     * This enum type specifies the title of a player.
+     *
+     * \value None No title.
+     * \value GM Grandmaster.
+     * \value IM International Master.
+     * \value FM FIDE Master.
+     * \value CM Candidate Master.
+     * \value WGM Woman Grandmaster.
+     * \value WIM Woman International Master.
+     * \value WFM Woman FIDE Master.
+     * \value WCM Woman Candidate Master.
+     */
     enum class Title {
         None,
         GM,
@@ -116,17 +136,100 @@ public:
         qDebug() << "delete player";
     }
 
+    /*!
+     * \property Player::id
+     * \brief the ID of the player
+     *
+     * This property holds the database ID of the player.
+     */
     int id() const;
+
+    /*!
+     * \property Player::startingRank
+     * \brief the ID of the player
+     *
+     * This property holds the starting rank of the player.
+     */
     int startingRank() const;
+
+    /*!
+     * \property Player::title
+     * \brief the title of the player
+     *
+     * This property holds the title of the player.
+     */
     Title title() const;
+
+    /*!
+     * \property Player::name
+     * \brief the name of the player
+     *
+     * This property holds the name of the player.
+     */
     QString name() const;
+
+    /*!
+     * \property Player::surname
+     * \brief the surname of the player
+     *
+     * This property holds the surname of the player.
+     */
     QString surname() const;
+
+    /*!
+     * \property Player::rating
+     * \brief the rating of the player
+     *
+     * This property holds the rating of the player.
+     */
     int rating() const;
+
+    /*!
+     * \property Player::nationalRating
+     * \brief the national rating of the player
+     *
+     * This property holds the national rating of the player.
+     */
     int nationalRating() const;
+
+    /*!
+     * \property Player::playerId
+     * \brief the player ID of the player
+     *
+     * This property holds the player ID of the player.
+     */
     QString playerId() const;
+
+    /*!
+     * \property Player::birthDate
+     * \brief the birth date of the player
+     *
+     * This property holds the birth date of the player.
+     */
     QString birthDate() const;
+
+    /*!
+     * \property Player::federation
+     * \brief the federation of the player
+     *
+     * This property holds the federation of the player.
+     */
     QString federation() const;
+
+    /*!
+     * \property Player::origin
+     * \brief the origin of the player
+     *
+     * This property holds the origin the player.
+     */
     QString origin() const;
+
+    /*!
+     * \property Player::sex
+     * \brief the sex of the player
+     *
+     * This property holds the sex of the player.
+     */
     QString sex() const;
 
     Q_INVOKABLE QString titleString() const
@@ -134,10 +237,36 @@ public:
         return Player::titleString(m_title);
     };
 
+    /*!
+     * Returns the full name of the player.
+     */
     QString fullName() const;
 
+    /*!
+     * Returns a JSON representation of the player.
+     *
+     * \sa fromJson()
+     */
     QJsonObject toJson() const;
+
+    /*!
+     * Creates a player from its JSON representation.
+     *
+     * \a json The JSON representation of the player.
+     *
+     * \sa toJson()
+     */
     static std::unique_ptr<Player> fromJson(const QJsonObject &json);
+
+    /*!
+     * Returns the TRF player field for this player.
+     *
+     * \a points The points of the player in the tournament.
+     *
+     * \a rank The rank of the player in the tournament.
+     *
+     * \a normalize Whether normalize fields to use latin characters only.
+     */
     std::string toTrf(double points, int rank, bool normalize = true);
 
     friend QDebug operator<<(QDebug dbg, const Player &player);

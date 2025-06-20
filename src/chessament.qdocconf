@@ -1,0 +1,32 @@
+include($KDE_DOCS/global/qt-module-defaults.qdocconf)
+
+project = Chessament
+description = Manage chess tournaments
+
+documentationinheaders = true
+
+headerdirs += .
+sourcedirs += .
+
+outputformats = HTML
+
+depends += kde qtcore kirigami
+
+navigation.landingpage = "Chessament"
+
+qhp.projects            = Chessament
+
+qhp.Chessament.file                = chessament.qhp
+qhp.Chessament.namespace           = org.kde.chessament.$QT_VERSION_TAG
+qhp.Chessament.virtualFolder       = chessament
+qhp.Chessament.indexTitle          = Chessament
+qhp.Chessament.indexRoot           =
+
+qhp.Chessament.subprojects         = libtournament
+qhp.Chessament.subprojects.libtournament.title = libtournament C++ Classes
+qhp.Chessament.subprojects.libtournament.indexTitle = libtournament C++ Classes
+qhp.Chessament.subprojects.libtournament.selectors = class fake:headerfile
+qhp.Chessament.subprojects.libtournament.sortPages = true
+
+tagfile = chessament.tags
+

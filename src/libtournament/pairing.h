@@ -10,6 +10,11 @@
 
 #include "player.h"
 
+/*!
+ * \class Pairing
+ * \inmodule libtournament
+ * \inheaderfile libtournament/pairing.h
+ */
 class Pairing : public QObject
 {
     Q_OBJECT
@@ -25,6 +30,15 @@ class Pairing : public QObject
     Q_PROPERTY(PartialResult blackResult READ blackResult NOTIFY blackResultChanged)
 
 public:
+    /*!
+     * \enum Pairing::Color
+     *
+     * This enum type specifies the piece color of a player in a game.
+     *
+     * \value Unknown Unknown, or the player doesn't have a color asigned (byes).
+     * \value White White pieces.
+     * \value Black Black pieces.
+     */
     enum class Color {
         Unknown,
         White,
@@ -67,6 +81,25 @@ public:
         Q_UNREACHABLE();
     }
 
+    /*!
+     * \enum Pairing::PartialResult
+     *
+     * This enum type specifies the result of a player in a game.
+     *
+     * \value Unknown Unknown
+     * \value Win The player won.
+     * \value Lost The player lost.
+     * \value Draw The player drew.
+     * \value WinForfeit The player won by forfeit.
+     * \value LostForfeit The player lost by forfeit.
+     * \value WinUnrated The player won but the game can't be rated.
+     * \value LostUnrated The player lost but the game can't be rated.
+     * \value DrawUnrated The player drew but the game can't be rated.
+     * \value HalfBye The player had a half-point bye.
+     * \value FullBye The player had a full-point bye.
+     * \value ZeroBye The player had a zero-point bye.
+     * \value PairingBye The player has a pairing allocated bye.
+     */
     enum class PartialResult {
         Unknown,
         // Regular results
@@ -301,11 +334,52 @@ public:
         qDebug() << "delete pairing";
     }
 
+    /*!
+     * \property Pairing::id
+     * \brief the ID of the pairing
+     *
+     * This property holds the database ID of the pairing.
+     */
     int id();
+
+    /*!
+     * \property Pairing::board
+     * \brief the board of the pairing
+     *
+     * This property holds the board of the pairing.
+     */
     int board();
+
+    /*!
+     * \property Pairing::whitePlayer
+     * \brief the player with the white pieces
+     *
+     * This property holds the player with the white pieces.
+     */
     Player *whitePlayer();
+
+    /*!
+     * \property Pairing::whiteResult
+     * \brief the result of the white player
+     *
+     * This property holds the result of the player with the white pieces.
+     */
     PartialResult whiteResult();
+
+    /*!
+     * \property Pairing::blackPlayer
+     * \brief the player with the black pieces
+     *
+     * This property holds the player with the black pieces.
+     */
     Player *blackPlayer();
+
+    /*!
+     * \property Pairing::blackResult
+     * \brief the result of the black player
+     *
+     * This property holds the result of the player with the black pieces.
+     */
     PartialResult blackResult();
 
     QString resultString();
