@@ -1,0 +1,7 @@
+/*!
+    \module libtournament
+    \title libtournament C++ Classes
+
+    \brief C++ library to manage chess tournaments.
+
+*/

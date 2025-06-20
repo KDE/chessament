@@ -1,0 +1,16 @@
+include($KDE_DOCS/global/qt-module-defaults.qdocconf)
+
+project = libtournament
+description = Todo
+
+documentationinheaders = true
+
+headerdirs += .
+sourcedirs += .
+
+outputformats = HTML
+
+depends += kde qtcore
+
+tagfile = libtournament.tags
+

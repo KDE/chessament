@@ -95,3 +95,9 @@ ecm_add_app_icon(CHESSAMENT_ICON ICONS ${CMAKE_SOURCE_DIR}/128-logo.png)
 target_sources(chessament PRIVATE ${CHESSAMENT_ICON})
 
 install(TARGETS chessament ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
+
+if(BUILD_DOCS)
+    include(ECMGenerateQDoc)
+    ecm_generate_qdoc(chessament chessament.qdocconf)
+endif()
+

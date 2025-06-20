@@ -820,9 +820,9 @@ QString Tournament::toTrf(TrfOptions options, int maxRound)
     return result;
 }
 
-std::expected<bool, QString> Tournament::loadTrf(const QString &filename)
+std::expected<bool, QString> Tournament::loadTrf(const QString &fileName)
 {
-    QFile file(filename);
+    QFile file(fileName);
 
     if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
         return std::unexpected(i18n("Couldn't open file"));

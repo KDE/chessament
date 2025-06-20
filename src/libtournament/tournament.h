@@ -24,13 +24,17 @@ class Event;
 
 using namespace Qt::StringLiterals;
 
+/*!
+ * \class Tournament
+ * \inmodule libtournament
+ * \inheaderfile libtournament/tournament.h
+ */
 class Tournament : public QObject
 {
     Q_OBJECT
     QML_ELEMENT
     QML_UNCREATABLE("")
 
-public:
     Q_PROPERTY(QString id READ id WRITE setId NOTIFY idChanged)
     Q_PROPERTY(QString name READ name WRITE setName NOTIFY nameChanged)
     Q_PROPERTY(QString city READ city WRITE setCity NOTIFY cityChanged)
@@ -44,53 +48,232 @@ public:
     Q_PROPERTY(int currentRound READ currentRound WRITE setCurrentRound NOTIFY currentRoundChanged)
     Q_PROPERTY(QList<Tiebreak *> tiebreaks READ tiebreaks WRITE setTiebreaks NOTIFY tiebreaksChanged)
 
+public:
     ~Tournament();
 
+    /*!
+     * \property Tournament::id
+     * \brief the ID of the tournament
+     *
+     * This property holds the database ID of the tournament.
+     */
     QString id() const;
+
+    /*!
+     * \property Tournament::name
+     * \brief the name of the tournament
+     *
+     * This property holds the name of the tournament.
+     */
     QString name() const;
+
+    /*!
+     * \property Tournament::city
+     * \brief the location of the tournament
+     *
+     * This property holds the location of the tournament.
+     */
     QString city() const;
+
+    /*!
+     * \property Tournament::federation
+     * \brief the federation of the tournament
+     *
+     * This property holds the federation of the tournament.
+     */
     QString federation() const;
+
+    /*!
+     * \property Tournament::chiefArbiter
+     * \brief the Chief Arbiter of the tournament
+     *
+     * This property holds the Chief Arbiter of the tournament.
+     */
     QString chiefArbiter() const;
+
+    /*!
+     * \property Tournament::deputyChiefArbiter
+     * \brief the Deputy Chief Arbiter of the tournament
+     *
+     * This property holds the Deputy Chief Arbiter of the tournament.
+     */
     QString deputyChiefArbiter() const;
+
+    /*!
+     * \property Tournament::timeControl
+     * \brief the time control of the tournament
+     *
+     * This property holds the time control of the tournament.
+     */
     QString timeControl() const;
+
+    /*!
+     * \property Tournament::numberOfRounds
+     * \brief the number of rounds of the tournament
+     *
+     * This property holds the number of rounds of the tournament.
+     */
     int numberOfRounds();
+
+    /*!
+     * \property Tournament::currentRound
+     * \brief the number of the current round of the tournament
+     *
+     * This property holds the number of the current round of the tournament.
+     */
     int currentRound();
+
+    /*!
+     * \property Tournament::tiebreaks
+     * \brief the tiebreaks of the tournament
+     *
+     * This property holds the list of tiebreaks of the tournament.
+     */
     QList<Tiebreak *> tiebreaks();
 
     Event *getEvent() const;
 
+    /*!
+     * Returns the players of the tournament.
+     */
     std::vector<std::unique_ptr<Player>> *players();
+
+    /*!
+     * Adds \a player to the tournament.
+     */
     void addPlayer(std::unique_ptr<Player> player);
+
+    /*!
+     * Saves \a player to the database.
+     */
     void savePlayer(Player *player);
+
+    /*!
+     * Returns the players grouped by their starting rank.
+     */
     QMap<uint, Player *> getPlayersByStartingRank();
+
+    /*!
+     * Returns the players grouped by their id.
+     */
     QMap<uint, Player *> getPlayersById();
+
+    /*!
+     * Returns the pairings of each player.
+     *
+     * \a maxRound The number of the highest round to consider. Negative number to use all rounds.
+     */
     QHash<Player *, QList<Pairing *>> getPairingsByPlayer(int maxRound = -1);
+
+    /*
+     * Returns the standings of the tournament.
+     *
+     * \a state Helper object to compute the standings.
+     */
     QList<PlayerTiebreaks> getStandings(TournamentState state);
 
+    /*!
+     * Returns the rounds of the tournament.
+     */
     std::vector<std::unique_ptr<Round>> rounds() const;
+
+    /*!
+     * Adds the \a pairing to the round \a round.
+     */
     void addPairing(int round, std::unique_ptr<Pairing> pairing);
+
+    /*!
+     * Saves \a pairing to the database.
+     */
     void savePairing(Pairing *pairing);
+
+    /*!
+     * Sets the \a result to the the \a pairing and saves it to the database.
+     *
+     * \sa savePairing()
+     */
     void setResult(Pairing *pairing, std::pair<Pairing::PartialResult, Pairing::PartialResult> result);
+
+    /*!
+     * Returns the pairing corresponding to the \a round and \a board.
+     */
     Pairing *getPairing(int round, int board);
+
+    /*!
+     * Returns the pairing of the \a round.
+     */
     std::vector<std::unique_ptr<Pairing>> *getPairings(int round) const;
+
+    /*!
+     * Sorts the pairings of all rounds.
+     */
     void sortPairings();
+
+    /*!
+     * Returns whether \a round has finished.
+     *
+     * A round has finished if all its pairings have a result.
+     */
     Q_INVOKABLE bool isRoundFinished(int round);
+
+    /*!
+     * Returns whether \a round is fully paired.
+     */
     bool isRoundFullyPaired(int round);
+
     QCoro::Task<std::expected<QList<std::pair<uint, uint>>, QString>> calculatePairings(int round);
+
+    /*!
+     * Pairs the next round of the tournament.
+     *
+     * The caller must ensure that the current round has finished and the next one is ready to be paired.
+     */
     QCoro::Task<std::expected<bool, QString>> pairNextRound();
+
+    /*!
+     * Removes the pairing from \a round and subsequent rounds.
+     *
+     * \a keepByes Whether to keep byes.
+     */
     void removePairings(int round, bool keepByes);
 
+    /*!
+     * \enum Tournament::InitialColor
+     *
+     * This enum type represents the piece color of the first player of the tournament for the first round.
+     *
+     * \value White White pieces.
+     * \value Black Black pieces.
+     */
     enum class InitialColor {
         White,
         Black,
     };
     Q_ENUM(InitialColor);
 
+    /*!
+     * Returns the initial color of the tournament.
+     */
     InitialColor initialColor();
 
+    /*!
+     * Returns a helper object.
+     *
+     * \a maxRound The number of the highest round to include.
+     */
     TournamentState getState(int maxRound = -1);
 
+    /*!
+     * \property Tournament::numberOfPlayers
+     * \brief the number of players in the tournament
+     *
+     * This property holds the number of players in the tournament.
+     */
     int numberOfPlayers();
+
+    /*!
+     * Returns the number of rated players in the tournament.
+     */
     int numberOfRatedPlayers();
 
     QString getPlayersListDocument();
@@ -184,6 +367,17 @@ public:
         return ReportField::Unknown;
     }
 
+    /*!
+     * \enum Tournament::TrfOption
+     *
+     * This enum type specifies the options for the Tournament Report File export.
+     *
+     * \value NumberOfRounds Adds the number of rounds of the tournament for pairing engines.
+     * \value InitialColorWhite Adds an indication for pairing engines that the first player had the white pieces in the first round.
+     * \value InitialColorBlack Adds an indication for pairing engines that the first player had the black pieces in the first round.
+     *
+     * \sa toTrf(), exportTrf()
+     */
     enum class TrfOption {
         NumberOfRounds = 0x1,
         InitialColorWhite = 0x2,
@@ -191,15 +385,74 @@ public:
     };
     Q_DECLARE_FLAGS(TrfOptions, TrfOption)
 
+    /*!
+     * Returns the value of the option \a name
+     *
+     * \sa setOption()
+     */
     QVariant getOption(const QString &name);
+
+    /*!
+     * Sets the option \a name to \a value.
+     *
+     * \sa getOption()
+     */
     void setOption(const QString &name, QVariant value);
 
+    /*!
+     * Returns a JSON represetation of the tournament.
+     *
+     * \sa read()
+     */
     QJsonObject toJson() const;
+
+    /*!
+     * Loads the tournament from its JSON represetation.
+     *
+     * \a json The JSON represetation.
+     *
+     * \sa toJson()
+     */
     void read(const QJsonObject &json);
 
+    /*!
+     * Returns the Tournament Report File (TRF).
+     *
+     * \a options
+     *
+     * \a maxRound The number of the highest round to include. Negative number to means to include all rounds.
+     *
+     * \sa exportTrf()
+     */
     QString toTrf(TrfOptions options = {}, int maxRound = -1);
+
+    /*!
+     * Imports the tournament from a Tournament Report File (TRF).
+     *
+     * \a trf The content of the TRF.
+     *
+     * Returns true if successful; false otherwise.
+     */
     std::expected<bool, QString> readTrf(QTextStream trf);
-    std::expected<bool, QString> loadTrf(const QString &filename);
+
+    /*!
+     * Imports the tournament from a Tournament Report File (TRF).
+     *
+     * \a fileName The file name of the TRF.
+     *
+     * Returns true if successful; false otherwise.
+     */
+    std::expected<bool, QString> loadTrf(const QString &fileName);
+
+    /*!
+     * Saves the Tournament Report File (TRF) to a file.
+     *
+     * Returns true if success; false otherwise.
+     *
+     * \a fileName The file name.
+     *
+     * \sa toTrf()
+     */
     bool exportTrf(const QString &fileName);
 
 public Q_SLOTS:
