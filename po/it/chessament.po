@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-15 00:40+0000\n"
+"POT-Creation-Date: 2025-06-20 00:39+0000\n"
 "PO-Revision-Date: 2025-06-14 17:41+0200\n"
 "Last-Translator: Vincenzo Reale <>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -76,12 +76,12 @@ msgstr "Abbinamento «%1» non valido."
 msgid "Invalid player \"%1\" on pairing \"%2\"."
 msgstr "Giocatore «%1» non valido per l'abbinamento «%2»."
 
-#: libtournament/tournament.cpp:623
+#: libtournament/tournament.cpp:621
 #, kde-format
 msgid "An error ocurred while pairing the round: %1"
 msgstr "Si è verificato un errore durante l'abbinamento del turno: %1"
 
-#: libtournament/tournament.cpp:830
+#: libtournament/tournament.cpp:828
 #, kde-format
 msgid "Couldn't open file"
 msgstr "Impossibile aprire il file"

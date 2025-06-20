@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-15 00:40+0000\n"
+"POT-Creation-Date: 2025-06-20 00:39+0000\n"
 "PO-Revision-Date: 2025-05-14 23:56+0100\n"
 "Last-Translator: Manuel Alcaraz Zambrano <manuelalcarazzam@gmail.com>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -80,12 +80,12 @@ msgstr "Emparejamiento «%1» no válido"
 msgid "Invalid player \"%1\" on pairing \"%2\"."
 msgstr "Jugador no válido para el emparejamiento «%1»"
 
-#: libtournament/tournament.cpp:623
+#: libtournament/tournament.cpp:621
 #, kde-format
 msgid "An error ocurred while pairing the round: %1"
 msgstr ""
 
-#: libtournament/tournament.cpp:830
+#: libtournament/tournament.cpp:828
 #, kde-format
 msgid "Couldn't open file"
 msgstr "No se ha podido abrir el archivo"
