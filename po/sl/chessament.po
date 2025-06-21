@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-20 00:39+0000\n"
+"POT-Creation-Date: 2025-06-21 00:39+0000\n"
 "PO-Revision-Date: 2025-06-08 16:16+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -39,42 +39,42 @@ msgctxt "@action:inmenu"
 msgid "Connect account"
 msgstr "Poveži račun"
 
-#: controller.cpp:158
+#: controller.cpp:138
 #, kde-format
 msgid "Couldn't export tournament."
 msgstr "Turnirja ni bilo mogoče izvoziti."
 
-#: libtournament/pairingengine.cpp:26
+#: libtournament/pairingengine.cpp:25
 #, kde-format
 msgctxt "bbpPairings is the name of a program, should not be translated"
 msgid "The pairing engine bbpPairings could not be found. Is it installed?"
 msgstr ""
 "Programa za uparjanje bbpPairings ni bilo mogoče najti. Ali je nameščen?"
 
-#: libtournament/pairingengine.cpp:34
+#: libtournament/pairingengine.cpp:33
 #, kde-format
 msgid "Could not create temporary file."
 msgstr "Začasne datoteke ni bilo mogoče ustvariti."
 
-#: libtournament/pairingengine.cpp:59
+#: libtournament/pairingengine.cpp:58
 #, kde-format
 msgctxt "bbpPairings is the name of a program, should not be translated"
 msgid "bbpPairings terminated with a non zero exit code: %1"
 msgstr "bbpPairings se je končal z neničelno kodo izhoda: %1"
 
-#: libtournament/pairingengine.cpp:78 libtournament/trf.cpp:74
+#: libtournament/pairingengine.cpp:76 libtournament/trf.cpp:74
 #, kde-format
 msgid "Invalid pairing \"%1\"."
 msgstr "Neveljaven par \"%1\"."
 
-#: libtournament/pairingengine.cpp:84 libtournament/pairingengine.cpp:88
-#: libtournament/pairingengine.cpp:94 libtournament/pairingengine.cpp:102
+#: libtournament/pairingengine.cpp:82 libtournament/pairingengine.cpp:86
+#: libtournament/pairingengine.cpp:90 libtournament/pairingengine.cpp:94
 #: libtournament/trf.cpp:87
 #, kde-format
 msgid "Invalid player \"%1\" on pairing \"%2\"."
 msgstr "Neveljaven igralec \"%1\" v paru \"%2\"."
 
-#: libtournament/tournament.cpp:621
+#: libtournament/tournament.cpp:606
 #, kde-format
 msgid "An error ocurred while pairing the round: %1"
 msgstr "Pri uparjanju kroga je prišlo do napake: %1"
@@ -144,44 +144,44 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "matjaz.jeran@amis.net"
 
-#: pairingmodel.cpp:68
+#: pairingmodel.cpp:71
 #, kde-format
 msgctxt "@title:column"
 msgid "Board"
 msgstr "Deska"
 
-#: pairingmodel.cpp:70 pairingmodel.cpp:78 playersmodel.cpp:125
-#: standingsmodel.cpp:62
+#: pairingmodel.cpp:73 pairingmodel.cpp:81 playersmodel.cpp:125
+#: standingsmodel.cpp:61
 #, kde-format
 msgctxt "@title:column"
 msgid "No"
 msgstr "Št."
 
-#: pairingmodel.cpp:72
+#: pairingmodel.cpp:75
 #, kde-format
 msgctxt "@title:column"
 msgid "White player"
 msgstr "Beli igralec"
 
-#: pairingmodel.cpp:74
+#: pairingmodel.cpp:77
 #, kde-format
 msgctxt "@title:column"
 msgid "Result"
 msgstr "Rezultat"
 
-#: pairingmodel.cpp:76
+#: pairingmodel.cpp:79
 #, kde-format
 msgctxt "@title:column"
 msgid "Black Player"
 msgstr "Črni igralec"
 
-#: playersmodel.cpp:127 standingsmodel.cpp:64
+#: playersmodel.cpp:127 standingsmodel.cpp:63
 #, kde-format
 msgctxt "@title:column"
 msgid "Title"
 msgstr "Naziv"
 
-#: playersmodel.cpp:129 standingsmodel.cpp:66
+#: playersmodel.cpp:129 standingsmodel.cpp:65
 #, kde-format
 msgctxt "@title:column"
 msgid "Name"
@@ -441,19 +441,19 @@ msgctxt "@item:inlistbox As in 'Black pieces'"
 msgid "Black"
 msgstr "Črni"
 
-#: qml/PlayersPage.qml:43 qml/PlayersPage.qml:136
+#: qml/PlayersPage.qml:34 qml/PlayersPage.qml:127
 #, kde-format
 msgctxt "@action:button"
 msgid "Add player"
 msgstr "Dodaj igralca"
 
-#: qml/PlayersPage.qml:49
+#: qml/PlayersPage.qml:40
 #, kde-format
 msgctxt "@action:button"
 msgid "Print"
 msgstr "Natisni"
 
-#: qml/PlayersPage.qml:132
+#: qml/PlayersPage.qml:123
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No players yet"
@@ -721,7 +721,7 @@ msgstr "Prijavljen kot %1"
 msgid "Logout"
 msgstr "Odjava"
 
-#: standingsmodel.cpp:60
+#: standingsmodel.cpp:59
 #, kde-format
 msgctxt "@title:colunm"
 msgid "Rank"
