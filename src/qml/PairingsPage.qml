@@ -20,7 +20,7 @@ TablePage {
 
     actions: [
         Kirigami.Action {
-            text: i18n("Pair round %1", Controller.tournament.currentRound + 1)
+            text: i18n("Pair Round %1", Controller.tournament.currentRound + 1)
             visible: Controller.tournament.numberOfPlayers > 0 && (Controller.tournament.currentRound + 1 <= Controller.tournament.numberOfRounds) && Controller.hasCurrentRoundFinished
             onTriggered: {
                 Qt.createComponent("org.kde.chessament", "PairRoundDialog").createObject(root.QQC2.ApplicationWindow.window, {}).open();

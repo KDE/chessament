@@ -242,6 +242,26 @@ void Tournament::savePlayer(Player *player)
     }
 }
 
+void Tournament::sortPlayers()
+{
+    std::sort(m_players->begin(), m_players->end(), [](const std::unique_ptr<Player> &p1, const std::unique_ptr<Player> &p2) {
+        if (p1->rating() == p2->rating()) {
+            if (Player::titleStrengthLevel(p1->title()) == Player::titleStrengthLevel(p2->title())) {
+                auto cmp = p1->fullName().toLower().localeAwareCompare(p2->fullName().toLower());
+                return cmp < 0;
+            }
+            return Player::titleStrengthLevel(p1->title()) < Player::titleStrengthLevel(p2->title());
+        }
+        return p1->rating() > p2->rating();
+    });
+
+    for (std::size_t i = 0; i < m_players->size(); i++) {
+        auto player = m_players->at(i).get();
+        player->setStartingRank(i + 1);
+        savePlayer(player);
+    }
+}
+
 QMap<uint, Player *> Tournament::getPlayersByStartingRank()
 {
     QMap<uint, Player *> players;

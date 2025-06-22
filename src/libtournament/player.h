@@ -63,6 +63,31 @@ public:
     };
     Q_ENUM(Title)
 
+    static constexpr uint titleStrengthLevel(Player::Title title)
+    {
+        switch (title) {
+        case Title::GM:
+            return 0;
+        case Title::IM:
+            return 1;
+        case Title::WGM:
+            return 2;
+        case Title::FM:
+            return 3;
+        case Title::WIM:
+            return 4;
+        case Title::CM:
+            return 5;
+        case Title::WFM:
+            return 6;
+        case Title::WCM:
+            return 7;
+        case Title::None:
+            return 8;
+        }
+        Q_UNREACHABLE();
+    }
+
     static QString titleString(Player::Title title)
     {
         switch (title) {

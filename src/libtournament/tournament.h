@@ -149,6 +149,11 @@ public:
     void savePlayer(Player *player);
 
     /*!
+     * Sorts players.
+     */
+    void sortPlayers();
+
+    /*!
      * Returns the players grouped by their starting rank.
      */
     QMap<uint, Player *> getPlayersByStartingRank();

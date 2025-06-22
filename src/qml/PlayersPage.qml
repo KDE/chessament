@@ -3,7 +3,7 @@
 pragma ComponentBehavior: Bound
 
 import QtQuick
-import QtQuick.Controls as QQC2
+import QtQuick.Controls as Controls
 
 import org.kde.kitemmodels
 import org.kde.kirigami as Kirigami
@@ -28,6 +28,13 @@ TablePage {
     }
 
     actions: [
+        Kirigami.Action {
+            icon.name: "view-sort-symbolic"
+            text: i18nc("@action:button", "Sort Players…")
+            onTriggered: {
+                Qt.createComponent("org.kde.chessament", "SortPlayersDialog").createObject(root.Controls.ApplicationWindow.window, {}).open();
+            }
+        },
         Kirigami.Action {
             id: addAction
             icon.name: "list-add"
@@ -75,7 +82,7 @@ TablePage {
             DelegateChoice {
                 column: PlayersModel.TitleRole
 
-                QQC2.ComboBox {
+                Controls.ComboBox {
                     id: comboBox
 
                     anchors.fill: parent
@@ -98,7 +105,7 @@ TablePage {
             }
 
             DelegateChoice {
-                QQC2.TextField {
+                Controls.TextField {
                     required property var model
 
                     anchors.fill: parent

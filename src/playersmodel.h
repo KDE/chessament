@@ -42,6 +42,7 @@ public:
     void setPlayers(std::vector<std::unique_ptr<Player>> *players);
     void addPlayer(Player *player);
     void updatePlayer(Player *player);
+    void reloadPlayers();
 
 Q_SIGNALS:
     void playerChanged(Player *player);

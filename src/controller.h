@@ -57,6 +57,7 @@ public:
                                const QString &origin,
                                const QString &sex);
     Q_INVOKABLE void savePlayer();
+    Q_INVOKABLE void sortPlayers();
     Q_INVOKABLE bool setResult(int board, Qt::Key key);
     Q_INVOKABLE bool setResult(int board, Pairing::PartialResult whiteResult, Pairing::PartialResult blackResult);
     Q_INVOKABLE void newTournament(const QUrl &fileUrl, const QString &name, int numberOfRounds);
@@ -64,7 +65,7 @@ public:
     Q_INVOKABLE void saveEventAs(const QUrl &fileUrl);
     Q_INVOKABLE void importTrf(const QUrl &fileUrl);
     Q_INVOKABLE void exportTrf(const QUrl &fileUrl);
-    Q_INVOKABLE QCoro::Task<void> pairRound(uint color);
+    Q_INVOKABLE QCoro::Task<void> pairRound(bool sortPlayers, uint color);
     Q_INVOKABLE void removePairings(bool keepByes);
 
     Q_INVOKABLE QString getPlayersListDocument();

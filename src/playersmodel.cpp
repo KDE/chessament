@@ -167,3 +167,8 @@ void PlayersModel::updatePlayer(Player *player)
     Q_UNUSED(player);
     Q_EMIT dataChanged(index(player->startingRank() - 1, 0), index(player->startingRank() - 1, columnCount() - 1), {});
 }
+
+void PlayersModel::reloadPlayers()
+{
+    Q_EMIT dataChanged(index(0, 0), index(rowCount() - 1, columnCount() - 1), {});
+}

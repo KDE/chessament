@@ -140,8 +140,12 @@ void Controller::exportTrf(const QUrl &fileUrl)
     }
 }
 
-QCoro::Task<void> Controller::pairRound(uint color)
+QCoro::Task<void> Controller::pairRound(bool sortPlayers, uint color)
 {
+    if (m_tournament->currentRound() == 0 && sortPlayers) {
+        m_tournament->sortPlayers();
+    }
+
     if (m_tournament->currentRound() == 0) {
         Tournament::InitialColor initialColor;
         if (color == 2) {
@@ -159,7 +163,7 @@ QCoro::Task<void> Controller::pairRound(uint color)
     }
 
     setCurrentRound(m_tournament->currentRound());
-    m_pairingModel->setPairings(m_tournament->getPairings(m_currentRound));
+    m_pairingModel->setPairings(m_tournament->getPairings(m_tournament->currentRound()));
 
     setAreStandingsValid(false);
     Q_EMIT hasCurrentRoundFinishedChanged();
@@ -197,6 +201,12 @@ void Controller::addPlayer(const QString &title,
 void Controller::savePlayer()
 {
     m_playersModel->updatePlayer(m_currentPlayer);
+}
+
+void Controller::sortPlayers()
+{
+    m_tournament->sortPlayers();
+    m_playersModel->reloadPlayers();
 }
 
 bool Controller::setResult(int board, Qt::Key key)
