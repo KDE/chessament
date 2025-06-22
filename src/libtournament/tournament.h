@@ -119,7 +119,7 @@ public:
      * \property Tournament::currentRound
      * \brief the number of the current round of the tournament
      *
-     * This property holds the number of the current round of the tournament.
+     * The current round is the number of the last paired round, or 0 if the tournament has not started yet.
      */
     int currentRound();
 

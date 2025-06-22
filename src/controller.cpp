@@ -92,7 +92,7 @@ int Controller::currentRound()
 
 bool Controller::hasCurrentRoundFinished()
 {
-    return m_tournament->isRoundFinished(m_tournament->currentRound());
+    return m_tournament->currentRound() == 0 || m_tournament->isRoundFinished(m_tournament->currentRound());
 }
 
 void Controller::setCurrentRound(int currentRound)
