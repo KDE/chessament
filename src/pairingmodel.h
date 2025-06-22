@@ -38,4 +38,6 @@ public:
 
 private:
     std::vector<std::unique_ptr<Pairing>> *m_pairings = nullptr;
+
+    std::size_t m_currentRows = 0;
 };

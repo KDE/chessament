@@ -97,7 +97,8 @@ bool Controller::hasCurrentRoundFinished()
 
 void Controller::setCurrentRound(int currentRound)
 {
-    Q_ASSERT(currentRound > 0);
+    Q_ASSERT(currentRound >= 1);
+
     m_currentRound = currentRound;
     m_pairingModel->setPairings(m_tournament->getPairings(currentRound));
     Q_EMIT currentRoundChanged();
