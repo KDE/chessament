@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-21 00:39+0000\n"
+"POT-Creation-Date: 2025-06-23 00:39+0000\n"
 "PO-Revision-Date: 2025-06-04 19:55+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -42,7 +42,7 @@ msgctxt "@action:inmenu"
 msgid "Connect account"
 msgstr "З'єднати обліковий запис"
 
-#: controller.cpp:138
+#: controller.cpp:139
 #, kde-format
 msgid "Couldn't export tournament."
 msgstr "Не вдалося експортувати дані турніру."
