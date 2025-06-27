@@ -4,7 +4,6 @@
 add_library(libtournament STATIC)
 
 target_sources(libtournament PRIVATE
-    documents.cpp
     event.cpp
     pairing.cpp
     pairingengine.cpp

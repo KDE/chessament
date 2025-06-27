@@ -43,8 +43,8 @@ TablePage {
         },
         Kirigami.Action {
             id: printAction
-            icon.name: "document-print"
-            text: i18nc("@action:button", "Print")
+            icon.name: "document-print-symbolic"
+            text: i18nc("@action:button", "Print…")
             onTriggered: {
                 applicationWindow().pageStack.push(Qt.createComponent("org.kde.chessament", "DocsPage").createObject(root));
             }
@@ -68,19 +68,19 @@ TablePage {
 
         TableView.editDelegate: DelegateChooser {
             DelegateChoice {
-                column: PlayersModel.RatingRole
+                column: PlayersModel.Rating
 
                 RatingField {}
             }
 
             DelegateChoice {
-                column: PlayersModel.NationalRatingRole
+                column: PlayersModel.NationalRating
 
                 RatingField {}
             }
 
             DelegateChoice {
-                column: PlayersModel.TitleRole
+                column: PlayersModel.Title
 
                 Controls.ComboBox {
                     id: comboBox

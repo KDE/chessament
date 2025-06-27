@@ -14,20 +14,21 @@ class PlayersModel : public QAbstractTableModel
     QML_UNCREATABLE("")
 
 public:
-    enum PlayerRoles {
-        StartingRankRole = 0,
-        TitleRole,
-        NameRole,
-        SurnameRole,
-        RatingRole,
-        NationalRatingRole,
-        PlayerIdRole,
-        BirthDateRole,
-        FederationRole,
-        OriginRole,
-        SexRole,
+    enum Columns {
+        StartingRank,
+        Title,
+        Name,
+        Surname,
+        Rating,
+        NationalRating,
+        PlayerId,
+        BirthDate,
+        Federation,
+        Origin,
+        Gender,
+        FullName,
     };
-    Q_ENUM(PlayerRoles)
+    Q_ENUM(Columns)
 
     explicit PlayersModel(QObject *parent = nullptr);
 
@@ -39,6 +40,7 @@ public:
     QHash<int, QByteArray> roleNames() const override;
     Qt::ItemFlags flags(const QModelIndex &index) const override;
 
+    void setColumns(const QList<int> &columns);
     void setPlayers(std::vector<std::unique_ptr<Player>> *players);
     void addPlayer(Player *player);
     void updatePlayer(Player *player);
@@ -49,4 +51,6 @@ Q_SIGNALS:
 
 private:
     std::vector<std::unique_ptr<Player>> *m_players;
+
+    QList<int> m_columns = {StartingRank, Title, Name, Surname, Rating, NationalRating, PlayerId, BirthDate, Federation, Origin, Gender};
 };

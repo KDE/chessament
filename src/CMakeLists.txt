@@ -39,6 +39,8 @@ ecm_add_qml_module(chessament_static
     SOURCES
         account.cpp
         controller.cpp
+        document.cpp
+        documents.cpp
         playersmodel.cpp
         pairingmodel.cpp
         standingsmodel.cpp
@@ -55,6 +57,14 @@ target_sources(chessament_static PUBLIC
     chessamentapplication.h
 )
 
+qt_add_resources(chessament_static "documents"
+    PREFIX "/"
+    FILES
+        documents/default/document.html
+        documents/default/theme.css
+        documents/default/style.css
+)
+
 target_link_libraries(chessament_static PUBLIC
     libtournament
     Qt6::Core
@@ -68,6 +78,8 @@ target_link_libraries(chessament_static PUBLIC
     Qt6::Widgets
     Qt6::Network
     Qt6::NetworkAuth
+    Qt6::Pdf
+    Qt6::PrintSupport
     KF6::I18n
     KF6::I18nQml
     KF6::CoreAddons

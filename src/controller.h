@@ -5,6 +5,7 @@
 
 #include <QObject>
 #include <QQmlEngine>
+#include <QTemporaryFile>
 
 #include "account.h"
 #include "libtournament/event.h"
@@ -68,7 +69,9 @@ public:
     Q_INVOKABLE QCoro::Task<void> pairRound(bool sortPlayers, uint color);
     Q_INVOKABLE void removePairings(bool keepByes);
 
-    Q_INVOKABLE QString getPlayersListDocument();
+    Q_INVOKABLE QString getStartingRankDocument();
+    Q_INVOKABLE QString createTempFile();
+    Q_INVOKABLE void printDocument();
 
     PlayersModel *playersModel() const;
     PairingModel *pairingModel() const;
@@ -118,4 +121,6 @@ private:
 
     QString m_currentView;
     QString m_error;
+
+    std::unique_ptr<QTemporaryFile> m_tempfile;
 };

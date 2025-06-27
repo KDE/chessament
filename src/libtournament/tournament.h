@@ -281,8 +281,6 @@ public:
      */
     int numberOfRatedPlayers();
 
-    QString getPlayersListDocument();
-
     enum class ReportField {
         Player = 1,
         TournamentName,
