@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-23 00:39+0000\n"
+"POT-Creation-Date: 2025-06-27 00:40+0000\n"
 "PO-Revision-Date: 2025-06-10 04:51+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -76,12 +76,12 @@ msgstr "השיבוץ „%1” שגוי."
 msgid "Invalid player \"%1\" on pairing \"%2\"."
 msgstr "שחקן שגוי „%1” לשיבוץ „%2”."
 
-#: libtournament/tournament.cpp:606
+#: libtournament/tournament.cpp:626
 #, kde-format
 msgid "An error ocurred while pairing the round: %1"
 msgstr "אירעה שגיאה בעת השיבוץ לסיבוב: %1"
 
-#: libtournament/tournament.cpp:828
+#: libtournament/tournament.cpp:848
 #, kde-format
 msgid "Couldn't open file"
 msgstr "לא ניתן לפתוח את הקובץ"
@@ -392,8 +392,9 @@ msgid "Number of rounds"
 msgstr "מספר הסיבובים"
 
 #: qml/PairingsPage.qml:23
-#, kde-format
-msgid "Pair round %1"
+#, fuzzy, kde-format
+#| msgid "Pair round %1"
+msgid "Pair Round %1"
 msgstr "סיבוב שיבוץ %1"
 
 #: qml/PairingsPage.qml:34
@@ -414,48 +415,64 @@ msgid "No pairings for round %1 yet"
 msgstr "אין עדיין שיבוצים לסיבוב %1"
 
 #: qml/PairRoundDialog.qml:17
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Pair round %1"
 msgctxt "@title %1 is a number >= 1"
-msgid "Pair round %1"
+msgid "Pair Round %1"
 msgstr "סיבוב שיבוץ %1"
 
 #: qml/PairRoundDialog.qml:26
+#, fuzzy, kde-format
+#| msgctxt "@info:placeholder"
+#| msgid "No players yet"
+msgctxt "@option:check"
+msgid "Sort players"
+msgstr "אין שחקנים עדיין"
+
+#: qml/PairRoundDialog.qml:33
 #, kde-format
 msgctxt "@label:listbox"
 msgid "First player color:"
 msgstr "צבע השחקן הראשון:"
 
-#: qml/PairRoundDialog.qml:34
+#: qml/PairRoundDialog.qml:41
 #, kde-format
 msgctxt "@item:inlistbox As in 'Random color'"
 msgid "Random"
 msgstr "אקראי"
 
-#: qml/PairRoundDialog.qml:38
+#: qml/PairRoundDialog.qml:45
 #, kde-format
 msgctxt "@item:inlistbox As in 'White pieces'"
 msgid "White"
 msgstr "לבן"
 
-#: qml/PairRoundDialog.qml:42
+#: qml/PairRoundDialog.qml:49
 #, kde-format
 msgctxt "@item:inlistbox As in 'Black pieces'"
 msgid "Black"
 msgstr "שחור"
 
-#: qml/PlayersPage.qml:34 qml/PlayersPage.qml:127
+#: qml/PlayersPage.qml:33
+#, fuzzy, kde-format
+#| msgid "Players"
+msgctxt "@action:button"
+msgid "Sort Players…"
+msgstr "שחקנים"
+
+#: qml/PlayersPage.qml:41 qml/PlayersPage.qml:134
 #, kde-format
 msgctxt "@action:button"
 msgid "Add player"
 msgstr "הוספת שחקן/נית"
 
-#: qml/PlayersPage.qml:40
+#: qml/PlayersPage.qml:47
 #, kde-format
 msgctxt "@action:button"
 msgid "Print"
 msgstr "הדפסה"
 
-#: qml/PlayersPage.qml:123
+#: qml/PlayersPage.qml:130
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No players yet"
@@ -556,6 +573,21 @@ msgstr "0-0"
 msgctxt "@action:intoolbar"
 msgid "0-½"
 msgstr "0-½"
+
+#: qml/SortPlayersDialog.qml:17
+#, fuzzy, kde-format
+#| msgid "Players"
+msgctxt "@title"
+msgid "Sort Players"
+msgstr "שחקנים"
+
+#: qml/SortPlayersDialog.qml:26
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Changing the initial ranking after the fourth round has been paired is not "
+"allowed in official tournaments."
+msgstr ""
 
 #: qml/StandingsPage.qml:36
 #, kde-format
@@ -728,3 +760,7 @@ msgstr "יציאה"
 msgctxt "@title:colunm"
 msgid "Rank"
 msgstr "דירוג"
+
+#~ msgctxt "@title %1 is a number >= 1"
+#~ msgid "Pair round %1"
+#~ msgstr "סיבוב שיבוץ %1"

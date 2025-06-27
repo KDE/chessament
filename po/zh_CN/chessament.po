@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-23 00:39+0000\n"
+"POT-Creation-Date: 2025-06-27 00:40+0000\n"
 "PO-Revision-Date: 2025-05-12 14:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -75,12 +75,12 @@ msgstr ""
 msgid "Invalid player \"%1\" on pairing \"%2\"."
 msgstr ""
 
-#: libtournament/tournament.cpp:606
+#: libtournament/tournament.cpp:626
 #, kde-format
 msgid "An error ocurred while pairing the round: %1"
 msgstr ""
 
-#: libtournament/tournament.cpp:828
+#: libtournament/tournament.cpp:848
 #, kde-format
 msgid "Couldn't open file"
 msgstr ""
@@ -392,7 +392,7 @@ msgstr ""
 
 #: qml/PairingsPage.qml:23
 #, kde-format
-msgid "Pair round %1"
+msgid "Pair Round %1"
 msgstr ""
 
 #: qml/PairingsPage.qml:34
@@ -415,46 +415,58 @@ msgstr ""
 #: qml/PairRoundDialog.qml:17
 #, kde-format
 msgctxt "@title %1 is a number >= 1"
-msgid "Pair round %1"
+msgid "Pair Round %1"
 msgstr ""
 
 #: qml/PairRoundDialog.qml:26
+#, kde-format
+msgctxt "@option:check"
+msgid "Sort players"
+msgstr ""
+
+#: qml/PairRoundDialog.qml:33
 #, kde-format
 msgctxt "@label:listbox"
 msgid "First player color:"
 msgstr ""
 
-#: qml/PairRoundDialog.qml:34
+#: qml/PairRoundDialog.qml:41
 #, kde-format
 msgctxt "@item:inlistbox As in 'Random color'"
 msgid "Random"
 msgstr ""
 
-#: qml/PairRoundDialog.qml:38
+#: qml/PairRoundDialog.qml:45
 #, kde-format
 msgctxt "@item:inlistbox As in 'White pieces'"
 msgid "White"
 msgstr ""
 
-#: qml/PairRoundDialog.qml:42
+#: qml/PairRoundDialog.qml:49
 #, kde-format
 msgctxt "@item:inlistbox As in 'Black pieces'"
 msgid "Black"
 msgstr ""
 
-#: qml/PlayersPage.qml:34 qml/PlayersPage.qml:127
+#: qml/PlayersPage.qml:33
+#, kde-format
+msgctxt "@action:button"
+msgid "Sort Players…"
+msgstr ""
+
+#: qml/PlayersPage.qml:41 qml/PlayersPage.qml:134
 #, kde-format
 msgctxt "@action:button"
 msgid "Add player"
 msgstr ""
 
-#: qml/PlayersPage.qml:40
+#: qml/PlayersPage.qml:47
 #, kde-format
 msgctxt "@action:button"
 msgid "Print"
 msgstr ""
 
-#: qml/PlayersPage.qml:123
+#: qml/PlayersPage.qml:130
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No players yet"
@@ -554,6 +566,20 @@ msgstr ""
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "0-½"
+msgstr ""
+
+#: qml/SortPlayersDialog.qml:17
+#, kde-format
+msgctxt "@title"
+msgid "Sort Players"
+msgstr ""
+
+#: qml/SortPlayersDialog.qml:26
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Changing the initial ranking after the fourth round has been paired is not "
+"allowed in official tournaments."
 msgstr ""
 
 #: qml/StandingsPage.qml:36

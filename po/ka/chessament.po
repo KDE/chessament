@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-23 00:39+0000\n"
+"POT-Creation-Date: 2025-06-27 00:40+0000\n"
 "PO-Revision-Date: 2025-06-04 04:13+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -76,12 +76,12 @@ msgstr "არასწორი დაწყვილება \"%1\"."
 msgid "Invalid player \"%1\" on pairing \"%2\"."
 msgstr "არასწორი მოთამაშე \"%1\" დაწყვილებისთვის \"%2\"."
 
-#: libtournament/tournament.cpp:606
+#: libtournament/tournament.cpp:626
 #, kde-format
 msgid "An error ocurred while pairing the round: %1"
 msgstr "შეცდომა რაუნდის წყვილების შერჩევისას: %1"
 
-#: libtournament/tournament.cpp:828
+#: libtournament/tournament.cpp:848
 #, kde-format
 msgid "Couldn't open file"
 msgstr "ფაილი ვერ გავხსენი"
@@ -392,8 +392,9 @@ msgid "Number of rounds"
 msgstr "რაუნდების რაოდენობა"
 
 #: qml/PairingsPage.qml:23
-#, kde-format
-msgid "Pair round %1"
+#, fuzzy, kde-format
+#| msgid "Pair round %1"
+msgid "Pair Round %1"
 msgstr "წყვილის რაუნდი %1"
 
 #: qml/PairingsPage.qml:34
@@ -414,48 +415,64 @@ msgid "No pairings for round %1 yet"
 msgstr "რაუნდისთვის %1, ჯერ, წყვილები არაა"
 
 #: qml/PairRoundDialog.qml:17
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Pair round %1"
 msgctxt "@title %1 is a number >= 1"
-msgid "Pair round %1"
+msgid "Pair Round %1"
 msgstr "წყვილის რაუნდი %1"
 
 #: qml/PairRoundDialog.qml:26
+#, fuzzy, kde-format
+#| msgctxt "@info:placeholder"
+#| msgid "No players yet"
+msgctxt "@option:check"
+msgid "Sort players"
+msgstr "ჯერ მოთამაშეები არაა"
+
+#: qml/PairRoundDialog.qml:33
 #, kde-format
 msgctxt "@label:listbox"
 msgid "First player color:"
 msgstr "პირველი მოთამაშის ფერი:"
 
-#: qml/PairRoundDialog.qml:34
+#: qml/PairRoundDialog.qml:41
 #, kde-format
 msgctxt "@item:inlistbox As in 'Random color'"
 msgid "Random"
 msgstr "შემთხვევითი"
 
-#: qml/PairRoundDialog.qml:38
+#: qml/PairRoundDialog.qml:45
 #, kde-format
 msgctxt "@item:inlistbox As in 'White pieces'"
 msgid "White"
 msgstr "თეთრი"
 
-#: qml/PairRoundDialog.qml:42
+#: qml/PairRoundDialog.qml:49
 #, kde-format
 msgctxt "@item:inlistbox As in 'Black pieces'"
 msgid "Black"
 msgstr "შავი"
 
-#: qml/PlayersPage.qml:34 qml/PlayersPage.qml:127
+#: qml/PlayersPage.qml:33
+#, fuzzy, kde-format
+#| msgid "Players"
+msgctxt "@action:button"
+msgid "Sort Players…"
+msgstr "მოთამაშეები"
+
+#: qml/PlayersPage.qml:41 qml/PlayersPage.qml:134
 #, kde-format
 msgctxt "@action:button"
 msgid "Add player"
 msgstr "მოთამაშის დამატება"
 
-#: qml/PlayersPage.qml:40
+#: qml/PlayersPage.qml:47
 #, kde-format
 msgctxt "@action:button"
 msgid "Print"
 msgstr "დაბეჭდვა"
 
-#: qml/PlayersPage.qml:123
+#: qml/PlayersPage.qml:130
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No players yet"
@@ -556,6 +573,21 @@ msgstr "0-0"
 msgctxt "@action:intoolbar"
 msgid "0-½"
 msgstr "0-½"
+
+#: qml/SortPlayersDialog.qml:17
+#, fuzzy, kde-format
+#| msgid "Players"
+msgctxt "@title"
+msgid "Sort Players"
+msgstr "მოთამაშეები"
+
+#: qml/SortPlayersDialog.qml:26
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Changing the initial ranking after the fourth round has been paired is not "
+"allowed in official tournaments."
+msgstr ""
 
 #: qml/StandingsPage.qml:36
 #, kde-format
@@ -728,3 +760,7 @@ msgstr "გასვლა"
 msgctxt "@title:colunm"
 msgid "Rank"
 msgstr "რანგი"
+
+#~ msgctxt "@title %1 is a number >= 1"
+#~ msgid "Pair round %1"
+#~ msgstr "წყვილის რაუნდი %1"
