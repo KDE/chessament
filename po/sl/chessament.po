@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-27 00:40+0000\n"
-"PO-Revision-Date: 2025-06-08 16:16+0200\n"
+"PO-Revision-Date: 2025-06-27 06:21+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -390,10 +390,9 @@ msgid "Number of rounds"
 msgstr "Število krogov"
 
 #: qml/PairingsPage.qml:23
-#, fuzzy, kde-format
-#| msgid "Pair round %1"
+#, kde-format
 msgid "Pair Round %1"
-msgstr "Pari krog %1"
+msgstr "Krog para %1"
 
 #: qml/PairingsPage.qml:34
 #, kde-format
@@ -413,19 +412,16 @@ msgid "No pairings for round %1 yet"
 msgstr "Še ni parov za krog %1"
 
 #: qml/PairRoundDialog.qml:17
-#, fuzzy, kde-format
-#| msgid "Pair round %1"
+#, kde-format
 msgctxt "@title %1 is a number >= 1"
 msgid "Pair Round %1"
-msgstr "Pari krog %1"
+msgstr "Krog para %1"
 
 #: qml/PairRoundDialog.qml:26
-#, fuzzy, kde-format
-#| msgctxt "@info:placeholder"
-#| msgid "No players yet"
+#, kde-format
 msgctxt "@option:check"
 msgid "Sort players"
-msgstr "Še ni igralcev"
+msgstr "Razvrsti igralce"
 
 #: qml/PairRoundDialog.qml:33
 #, kde-format
@@ -452,11 +448,10 @@ msgid "Black"
 msgstr "Črni"
 
 #: qml/PlayersPage.qml:33
-#, fuzzy, kde-format
-#| msgid "Players"
+#, kde-format
 msgctxt "@action:button"
 msgid "Sort Players…"
-msgstr "Igralci"
+msgstr "Razvrsti igralce…"
 
 #: qml/PlayersPage.qml:41 qml/PlayersPage.qml:134
 #, kde-format
@@ -573,11 +568,10 @@ msgid "0-½"
 msgstr "0-½"
 
 #: qml/SortPlayersDialog.qml:17
-#, fuzzy, kde-format
-#| msgid "Players"
+#, kde-format
 msgctxt "@title"
 msgid "Sort Players"
-msgstr "Igralci"
+msgstr "Razvrsti igralce"
 
 #: qml/SortPlayersDialog.qml:26
 #, kde-format
@@ -586,6 +580,8 @@ msgid ""
 "Changing the initial ranking after the fourth round has been paired is not "
 "allowed in official tournaments."
 msgstr ""
+"Spreminjanje začetne lestvice po tem, ko je bil par v četrtem krogu že "
+"določen, na uradnih turnirjih ni dovoljeno."
 
 #: qml/StandingsPage.qml:36
 #, kde-format

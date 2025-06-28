@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-27 00:40+0000\n"
-"PO-Revision-Date: 2025-06-04 23:26+0200\n"
+"PO-Revision-Date: 2025-06-27 11:37+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.04.1\n"
+"X-Generator: Lokalize 25.04.2\n"
 
 #: chessamentapplication.cpp:23
 #, kde-format
@@ -392,8 +392,7 @@ msgid "Number of rounds"
 msgstr "Aantal ronden"
 
 #: qml/PairingsPage.qml:23
-#, fuzzy, kde-format
-#| msgid "Pair round %1"
+#, kde-format
 msgid "Pair Round %1"
 msgstr "Paar ronde %1"
 
@@ -415,19 +414,16 @@ msgid "No pairings for round %1 yet"
 msgstr "Nog geen paringen voor ronde %1"
 
 #: qml/PairRoundDialog.qml:17
-#, fuzzy, kde-format
-#| msgid "Pair round %1"
+#, kde-format
 msgctxt "@title %1 is a number >= 1"
 msgid "Pair Round %1"
 msgstr "Paar ronde %1"
 
 #: qml/PairRoundDialog.qml:26
-#, fuzzy, kde-format
-#| msgctxt "@info:placeholder"
-#| msgid "No players yet"
+#, kde-format
 msgctxt "@option:check"
 msgid "Sort players"
-msgstr "Nog geen spelers"
+msgstr "Spelers sorteren"
 
 #: qml/PairRoundDialog.qml:33
 #, kde-format
@@ -454,11 +450,10 @@ msgid "Black"
 msgstr "Zwart"
 
 #: qml/PlayersPage.qml:33
-#, fuzzy, kde-format
-#| msgid "Players"
+#, kde-format
 msgctxt "@action:button"
 msgid "Sort Players…"
-msgstr "Spelers"
+msgstr "Spelers sorteren…"
 
 #: qml/PlayersPage.qml:41 qml/PlayersPage.qml:134
 #, kde-format
@@ -575,11 +570,10 @@ msgid "0-½"
 msgstr "0-½"
 
 #: qml/SortPlayersDialog.qml:17
-#, fuzzy, kde-format
-#| msgid "Players"
+#, kde-format
 msgctxt "@title"
 msgid "Sort Players"
-msgstr "Spelers"
+msgstr "Spelers sorteren"
 
 #: qml/SortPlayersDialog.qml:26
 #, kde-format
@@ -588,6 +582,8 @@ msgid ""
 "Changing the initial ranking after the fourth round has been paired is not "
 "allowed in official tournaments."
 msgstr ""
+"Dat de initiële ranking na de vierde ronde gepaard is is niet toegestaan in "
+"officiële toernooien."
 
 #: qml/StandingsPage.qml:36
 #, kde-format

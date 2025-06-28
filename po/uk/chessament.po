@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-27 00:40+0000\n"
-"PO-Revision-Date: 2025-06-04 19:55+0300\n"
+"PO-Revision-Date: 2025-06-27 10:55+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -393,8 +393,7 @@ msgid "Number of rounds"
 msgstr "Кількість раундів"
 
 #: qml/PairingsPage.qml:23
-#, fuzzy, kde-format
-#| msgid "Pair round %1"
+#, kde-format
 msgid "Pair Round %1"
 msgstr "Поділ на пари раунду %1"
 
@@ -416,19 +415,16 @@ msgid "No pairings for round %1 yet"
 msgstr "Поділу на пари для раунду %1 ще немає"
 
 #: qml/PairRoundDialog.qml:17
-#, fuzzy, kde-format
-#| msgid "Pair round %1"
+#, kde-format
 msgctxt "@title %1 is a number >= 1"
 msgid "Pair Round %1"
 msgstr "Поділ на пари раунду %1"
 
 #: qml/PairRoundDialog.qml:26
-#, fuzzy, kde-format
-#| msgctxt "@info:placeholder"
-#| msgid "No players yet"
+#, kde-format
 msgctxt "@option:check"
 msgid "Sort players"
-msgstr "Ще немає жодного гравця"
+msgstr "Упорядкування гравців"
 
 #: qml/PairRoundDialog.qml:33
 #, kde-format
@@ -455,11 +451,10 @@ msgid "Black"
 msgstr "Чорний"
 
 #: qml/PlayersPage.qml:33
-#, fuzzy, kde-format
-#| msgid "Players"
+#, kde-format
 msgctxt "@action:button"
 msgid "Sort Players…"
-msgstr "Гравці"
+msgstr "Упорядкувати гравців…"
 
 #: qml/PlayersPage.qml:41 qml/PlayersPage.qml:134
 #, kde-format
@@ -576,11 +571,10 @@ msgid "0-½"
 msgstr "0-½"
 
 #: qml/SortPlayersDialog.qml:17
-#, fuzzy, kde-format
-#| msgid "Players"
+#, kde-format
 msgctxt "@title"
 msgid "Sort Players"
-msgstr "Гравці"
+msgstr "Упорядкування гравців"
 
 #: qml/SortPlayersDialog.qml:26
 #, kde-format
@@ -589,6 +583,8 @@ msgid ""
 "Changing the initial ranking after the fourth round has been paired is not "
 "allowed in official tournaments."
 msgstr ""
+"Зміну початкових рангів після розподілу пар у четвертому раунді в офіційних "
+"турнірах заборонено."
 
 #: qml/StandingsPage.qml:36
 #, kde-format

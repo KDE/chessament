@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-27 00:40+0000\n"
-"PO-Revision-Date: 2025-06-04 08:59+0200\n"
+"PO-Revision-Date: 2025-06-27 08:11+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -394,8 +394,7 @@ msgid "Number of rounds"
 msgstr "Nombre de rondes"
 
 #: qml/PairingsPage.qml:23
-#, fuzzy, kde-format
-#| msgid "Pair round %1"
+#, kde-format
 msgid "Pair Round %1"
 msgstr "Ronda d'emparellament %1"
 
@@ -417,19 +416,16 @@ msgid "No pairings for round %1 yet"
 msgstr "Encara no hi ha emparellaments per a la ronda %1"
 
 #: qml/PairRoundDialog.qml:17
-#, fuzzy, kde-format
-#| msgid "Pair round %1"
+#, kde-format
 msgctxt "@title %1 is a number >= 1"
 msgid "Pair Round %1"
 msgstr "Ronda d'emparellament %1"
 
 #: qml/PairRoundDialog.qml:26
-#, fuzzy, kde-format
-#| msgctxt "@info:placeholder"
-#| msgid "No players yet"
+#, kde-format
 msgctxt "@option:check"
 msgid "Sort players"
-msgstr "Encara no hi ha cap jugador"
+msgstr "Ordena els jugadors"
 
 #: qml/PairRoundDialog.qml:33
 #, kde-format
@@ -456,11 +452,10 @@ msgid "Black"
 msgstr "Negres"
 
 #: qml/PlayersPage.qml:33
-#, fuzzy, kde-format
-#| msgid "Players"
+#, kde-format
 msgctxt "@action:button"
 msgid "Sort Players…"
-msgstr "Jugadors"
+msgstr "Ordena els jugadors…"
 
 #: qml/PlayersPage.qml:41 qml/PlayersPage.qml:134
 #, kde-format
@@ -577,11 +572,10 @@ msgid "0-½"
 msgstr "0-½"
 
 #: qml/SortPlayersDialog.qml:17
-#, fuzzy, kde-format
-#| msgid "Players"
+#, kde-format
 msgctxt "@title"
 msgid "Sort Players"
-msgstr "Jugadors"
+msgstr "Ordenació dels jugadors"
 
 #: qml/SortPlayersDialog.qml:26
 #, kde-format
@@ -590,6 +584,8 @@ msgid ""
 "Changing the initial ranking after the fourth round has been paired is not "
 "allowed in official tournaments."
 msgstr ""
+"No està permès canviar el rànquing inicial després que s'hagi emparellat la "
+"quarta ronda en tornejos oficials."
 
 #: qml/StandingsPage.qml:36
 #, kde-format

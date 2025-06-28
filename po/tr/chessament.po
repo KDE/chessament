@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-27 00:40+0000\n"
-"PO-Revision-Date: 2025-06-04 13:12+0300\n"
+"PO-Revision-Date: 2025-06-27 10:02+0300\n"
 "Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.04.1\n"
+"X-Generator: Lokalize 25.04.2\n"
 
 #: chessamentapplication.cpp:23
 #, kde-format
@@ -391,10 +391,9 @@ msgid "Number of rounds"
 msgstr "Raunt sayısı"
 
 #: qml/PairingsPage.qml:23
-#, fuzzy, kde-format
-#| msgid "Pair round %1"
+#, kde-format
 msgid "Pair Round %1"
-msgstr "Eşleştir: Raunt %1"
+msgstr "Eşleştir: %1. Raunt"
 
 #: qml/PairingsPage.qml:34
 #, kde-format
@@ -414,19 +413,16 @@ msgid "No pairings for round %1 yet"
 msgstr "Raunt %1 için henüz bir eşleşme yok"
 
 #: qml/PairRoundDialog.qml:17
-#, fuzzy, kde-format
-#| msgid "Pair round %1"
+#, kde-format
 msgctxt "@title %1 is a number >= 1"
 msgid "Pair Round %1"
-msgstr "Eşleştir: Raunt %1"
+msgstr "Eşleştir: %1. Raunt"
 
 #: qml/PairRoundDialog.qml:26
-#, fuzzy, kde-format
-#| msgctxt "@info:placeholder"
-#| msgid "No players yet"
+#, kde-format
 msgctxt "@option:check"
 msgid "Sort players"
-msgstr "Henüz oyuncu yok"
+msgstr "Oyuncuları sırala"
 
 #: qml/PairRoundDialog.qml:33
 #, kde-format
@@ -453,11 +449,10 @@ msgid "Black"
 msgstr "Siyah"
 
 #: qml/PlayersPage.qml:33
-#, fuzzy, kde-format
-#| msgid "Players"
+#, kde-format
 msgctxt "@action:button"
 msgid "Sort Players…"
-msgstr "Oyuncular"
+msgstr "Oyuncuları Sırala…"
 
 #: qml/PlayersPage.qml:41 qml/PlayersPage.qml:134
 #, kde-format
@@ -574,11 +569,10 @@ msgid "0-½"
 msgstr "0-½"
 
 #: qml/SortPlayersDialog.qml:17
-#, fuzzy, kde-format
-#| msgid "Players"
+#, kde-format
 msgctxt "@title"
 msgid "Sort Players"
-msgstr "Oyuncular"
+msgstr "Oyuncuları Sırala"
 
 #: qml/SortPlayersDialog.qml:26
 #, kde-format
@@ -587,6 +581,8 @@ msgid ""
 "Changing the initial ranking after the fourth round has been paired is not "
 "allowed in official tournaments."
 msgstr ""
+"Dördüncü raunttan sonra ilk puan sıralamasını değiştirmeye resmî "
+"turnuvalarda izin verilmez."
 
 #: qml/StandingsPage.qml:36
 #, kde-format
