@@ -475,7 +475,8 @@ std::vector<std::unique_ptr<Pairing>> *Tournament::getPairings(int round) const
     if (static_cast<std::size_t>(round) <= m_rounds.size()) {
         return m_rounds.at(round - 1)->pairings();
     }
-    return {};
+
+    return nullptr;
 }
 
 int Tournament::numberOfPlayers()

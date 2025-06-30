@@ -85,6 +85,12 @@ QVariant PairingModel::headerData(int section, Qt::Orientation orientation, int 
 
 void PairingModel::setPairings(std::vector<std::unique_ptr<Pairing>> *pairings)
 {
+    m_pairings = pairings;
+
+    if (m_pairings == nullptr) {
+        return;
+    }
+
     auto rowDiff = pairings->size() - m_currentRows;
 
     if (rowDiff > 0) {
@@ -93,7 +99,6 @@ void PairingModel::setPairings(std::vector<std::unique_ptr<Pairing>> *pairings)
         beginRemoveRows({}, pairings->size(), m_currentRows - 1);
     }
 
-    m_pairings = pairings;
     m_currentRows = m_pairings->size();
 
     if (rowDiff > 0) {
