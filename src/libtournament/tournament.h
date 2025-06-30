@@ -44,6 +44,7 @@ class Tournament : public QObject
     Q_PROPERTY(QString timeControl READ timeControl WRITE setTimeControl NOTIFY timeControlChanged)
 
     Q_PROPERTY(int numberOfPlayers READ numberOfPlayers NOTIFY numberOfPlayersChanged)
+    Q_PROPERTY(int numberOfRatedPlayers READ numberOfRatedPlayers NOTIFY numberOfRatedPlayersChanged)
     Q_PROPERTY(int numberOfRounds READ numberOfRounds WRITE setNumberOfRounds NOTIFY numberOfRoundsChanged)
     Q_PROPERTY(int currentRound READ currentRound WRITE setCurrentRound NOTIFY currentRoundChanged)
     Q_PROPERTY(QList<Tiebreak *> tiebreaks READ tiebreaks WRITE setTiebreaks NOTIFY tiebreaksChanged)
@@ -482,6 +483,7 @@ Q_SIGNALS:
     void timeControlChanged();
 
     void numberOfPlayersChanged();
+    void numberOfRatedPlayersChanged();
     void numberOfRoundsChanged();
     void currentRoundChanged();
     void tiebreaksChanged();

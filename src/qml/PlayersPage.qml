@@ -4,6 +4,7 @@ pragma ComponentBehavior: Bound
 
 import QtQuick
 import QtQuick.Controls as Controls
+import QtQuick.Layouts as Layouts
 
 import org.kde.kitemmodels
 import org.kde.kirigami as Kirigami
@@ -31,6 +32,7 @@ TablePage {
         Kirigami.Action {
             icon.name: "view-sort-symbolic"
             text: i18nc("@action:button", "Sort Players…")
+            enabled: Controller.tournament.numberOfPlayers > 1
             onTriggered: {
                 Qt.createComponent("org.kde.chessament", "SortPlayersDialog").createObject(root.Controls.ApplicationWindow.window, {}).open();
             }
@@ -133,6 +135,28 @@ TablePage {
             icon.name: "list-add"
             text: i18nc("@action:button", "Add player")
             onTriggered: addPlayerDialog.open()
+        }
+    }
+
+    footer: Controls.ToolBar {
+        visible: Controller.tournament.numberOfPlayers !== 0
+
+        Layouts.RowLayout {
+            anchors {
+                top: parent.top
+                left: parent.left
+                bottom: parent.bottom
+                leftMargin: Kirigami.Units.smallSpacing
+            }
+
+            Controls.Label {
+                text: {
+                    const players = i18ncp("@info:status Number of players", "1 player", "%1 players", Controller.tournament.numberOfPlayers);
+                    const rated = i18ncp("@info:status Number of rated players", "1 rated", "%1 rated", Controller.tournament.numberOfRatedPlayers);
+
+                    return i18nc("@info:status players, rated", "%1, %2", players, rated);
+                }
+            }
         }
     }
 }

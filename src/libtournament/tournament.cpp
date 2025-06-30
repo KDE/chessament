@@ -216,6 +216,7 @@ void Tournament::addPlayer(std::unique_ptr<Player> player)
     m_players->push_back(std::move(player));
 
     Q_EMIT numberOfPlayersChanged();
+    Q_EMIT numberOfRatedPlayersChanged();
 }
 
 void Tournament::savePlayer(Player *player)
@@ -240,6 +241,8 @@ void Tournament::savePlayer(Player *player)
     if (query.lastError().isValid()) {
         qDebug() << "save player" << *player << query.lastError();
     }
+
+    Q_EMIT numberOfRatedPlayersChanged();
 }
 
 void Tournament::sortPlayers()
