@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-27 00:40+0000\n"
+"POT-Creation-Date: 2025-06-30 00:39+0000\n"
 "PO-Revision-Date: 2025-06-27 08:11+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -47,6 +47,12 @@ msgstr "Connecta amb el compte"
 #, kde-format
 msgid "Couldn't export tournament."
 msgstr "No s'ha pogut exportar el torneig."
+
+#: documents.cpp:21
+#, kde-format
+msgctxt "@title"
+msgid "Starting Rank"
+msgstr ""
 
 #: libtournament/pairingengine.cpp:25
 #, kde-format
@@ -154,7 +160,7 @@ msgctxt "@title:column"
 msgid "Board"
 msgstr "Tauler"
 
-#: pairingmodel.cpp:73 pairingmodel.cpp:81 playersmodel.cpp:125
+#: pairingmodel.cpp:73 pairingmodel.cpp:81 playersmodel.cpp:145
 #: standingsmodel.cpp:61
 #, kde-format
 msgctxt "@title:column"
@@ -179,65 +185,73 @@ msgctxt "@title:column"
 msgid "Black Player"
 msgstr "Jugador de negres"
 
-#: playersmodel.cpp:127 standingsmodel.cpp:63
+#: playersmodel.cpp:147 standingsmodel.cpp:63
 #, kde-format
 msgctxt "@title:column"
 msgid "Title"
 msgstr "Títol"
 
-#: playersmodel.cpp:129 standingsmodel.cpp:65
+#: playersmodel.cpp:149 standingsmodel.cpp:65
 #, kde-format
 msgctxt "@title:column"
 msgid "Name"
 msgstr "Nom"
 
-#: playersmodel.cpp:131
+#: playersmodel.cpp:151
 #, kde-format
 msgctxt "@title:column"
 msgid "Surname"
 msgstr "Cognom"
 
-#: playersmodel.cpp:133
+#: playersmodel.cpp:153
 #, kde-format
 msgctxt "@title:column"
 msgid "Rating"
 msgstr "Puntuació"
 
-#: playersmodel.cpp:135
+#: playersmodel.cpp:155
 #, kde-format
 msgctxt "@title:column"
 msgid "National rating"
 msgstr "Puntuació nacional"
 
-#: playersmodel.cpp:137
+#: playersmodel.cpp:157
 #, kde-format
 msgctxt "@title:column"
 msgid "Player ID"
 msgstr "ID de jugador"
 
-#: playersmodel.cpp:139
+#: playersmodel.cpp:159
 #, kde-format
 msgctxt "@title:column"
 msgid "Birth date"
 msgstr "Data de naixement"
 
-#: playersmodel.cpp:141
+#: playersmodel.cpp:161
 #, kde-format
 msgctxt "@title:column"
 msgid "Federation"
 msgstr "Federació"
 
-#: playersmodel.cpp:143
+#: playersmodel.cpp:163
 #, kde-format
 msgctxt "@title:column"
 msgid "Origin"
 msgstr "Origen"
 
-#: playersmodel.cpp:145
+#: playersmodel.cpp:165
 #, kde-format
 msgctxt "@title:column"
 msgid "Sex"
 msgstr "Sexe"
+
+#: playersmodel.cpp:167
+#, fuzzy, kde-format
+#| msgctxt "@title:column"
+#| msgid "Name"
+msgctxt "@title:column"
+msgid "Full Name"
+msgstr "Nom"
 
 #: qml/AddPlayerDialog.qml:16
 #, kde-format
@@ -324,7 +338,15 @@ msgctxt "@action:button Remove pairings"
 msgid "Remove"
 msgstr "Elimina"
 
-#: qml/DocsPage.qml:22
+#: qml/DocsPage.qml:23 qml/PlayersPage.qml:47
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Print"
+msgctxt "@action:button"
+msgid "Print…"
+msgstr "Imprimix"
+
+#: qml/DocsPage.qml:34
 #, kde-format
 msgctxt "@action:button"
 msgid "Save As…"
@@ -462,12 +484,6 @@ msgstr "Ordena els jugadors…"
 msgctxt "@action:button"
 msgid "Add player"
 msgstr "Afig un jugador"
-
-#: qml/PlayersPage.qml:47
-#, kde-format
-msgctxt "@action:button"
-msgid "Print"
-msgstr "Imprimix"
 
 #: qml/PlayersPage.qml:130
 #, kde-format

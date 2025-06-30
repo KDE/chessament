@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-27 00:40+0000\n"
+"POT-Creation-Date: 2025-06-30 00:39+0000\n"
 "PO-Revision-Date: 2025-06-27 06:21+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -43,6 +43,12 @@ msgstr "Poveži račun"
 #, kde-format
 msgid "Couldn't export tournament."
 msgstr "Turnirja ni bilo mogoče izvoziti."
+
+#: documents.cpp:21
+#, kde-format
+msgctxt "@title"
+msgid "Starting Rank"
+msgstr ""
 
 #: libtournament/pairingengine.cpp:25
 #, kde-format
@@ -150,7 +156,7 @@ msgctxt "@title:column"
 msgid "Board"
 msgstr "Deska"
 
-#: pairingmodel.cpp:73 pairingmodel.cpp:81 playersmodel.cpp:125
+#: pairingmodel.cpp:73 pairingmodel.cpp:81 playersmodel.cpp:145
 #: standingsmodel.cpp:61
 #, kde-format
 msgctxt "@title:column"
@@ -175,65 +181,73 @@ msgctxt "@title:column"
 msgid "Black Player"
 msgstr "Črni igralec"
 
-#: playersmodel.cpp:127 standingsmodel.cpp:63
+#: playersmodel.cpp:147 standingsmodel.cpp:63
 #, kde-format
 msgctxt "@title:column"
 msgid "Title"
 msgstr "Naziv"
 
-#: playersmodel.cpp:129 standingsmodel.cpp:65
+#: playersmodel.cpp:149 standingsmodel.cpp:65
 #, kde-format
 msgctxt "@title:column"
 msgid "Name"
 msgstr "Ime"
 
-#: playersmodel.cpp:131
+#: playersmodel.cpp:151
 #, kde-format
 msgctxt "@title:column"
 msgid "Surname"
 msgstr "Priimek"
 
-#: playersmodel.cpp:133
+#: playersmodel.cpp:153
 #, kde-format
 msgctxt "@title:column"
 msgid "Rating"
 msgstr "Rating"
 
-#: playersmodel.cpp:135
+#: playersmodel.cpp:155
 #, kde-format
 msgctxt "@title:column"
 msgid "National rating"
 msgstr "Nacionalni rating"
 
-#: playersmodel.cpp:137
+#: playersmodel.cpp:157
 #, kde-format
 msgctxt "@title:column"
 msgid "Player ID"
 msgstr "ID igralca"
 
-#: playersmodel.cpp:139
+#: playersmodel.cpp:159
 #, kde-format
 msgctxt "@title:column"
 msgid "Birth date"
 msgstr "Datum rojstva"
 
-#: playersmodel.cpp:141
+#: playersmodel.cpp:161
 #, kde-format
 msgctxt "@title:column"
 msgid "Federation"
 msgstr "Zveza"
 
-#: playersmodel.cpp:143
+#: playersmodel.cpp:163
 #, kde-format
 msgctxt "@title:column"
 msgid "Origin"
 msgstr "Izvor"
 
-#: playersmodel.cpp:145
+#: playersmodel.cpp:165
 #, kde-format
 msgctxt "@title:column"
 msgid "Sex"
 msgstr "Spol"
+
+#: playersmodel.cpp:167
+#, fuzzy, kde-format
+#| msgctxt "@title:column"
+#| msgid "Name"
+msgctxt "@title:column"
+msgid "Full Name"
+msgstr "Ime"
 
 #: qml/AddPlayerDialog.qml:16
 #, kde-format
@@ -320,7 +334,15 @@ msgctxt "@action:button Remove pairings"
 msgid "Remove"
 msgstr "Odstrani"
 
-#: qml/DocsPage.qml:22
+#: qml/DocsPage.qml:23 qml/PlayersPage.qml:47
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Print"
+msgctxt "@action:button"
+msgid "Print…"
+msgstr "Natisni"
+
+#: qml/DocsPage.qml:34
 #, kde-format
 msgctxt "@action:button"
 msgid "Save As…"
@@ -458,12 +480,6 @@ msgstr "Razvrsti igralce…"
 msgctxt "@action:button"
 msgid "Add player"
 msgstr "Dodaj igralca"
-
-#: qml/PlayersPage.qml:47
-#, kde-format
-msgctxt "@action:button"
-msgid "Print"
-msgstr "Natisni"
 
 #: qml/PlayersPage.qml:130
 #, kde-format

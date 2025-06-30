@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-27 00:40+0000\n"
+"POT-Creation-Date: 2025-06-30 00:39+0000\n"
 "PO-Revision-Date: 2025-06-27 10:55+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -46,6 +46,12 @@ msgstr "З'єднати обліковий запис"
 #, kde-format
 msgid "Couldn't export tournament."
 msgstr "Не вдалося експортувати дані турніру."
+
+#: documents.cpp:21
+#, kde-format
+msgctxt "@title"
+msgid "Starting Rank"
+msgstr ""
 
 #: libtournament/pairingengine.cpp:25
 #, kde-format
@@ -153,7 +159,7 @@ msgctxt "@title:column"
 msgid "Board"
 msgstr "Дошка"
 
-#: pairingmodel.cpp:73 pairingmodel.cpp:81 playersmodel.cpp:125
+#: pairingmodel.cpp:73 pairingmodel.cpp:81 playersmodel.cpp:145
 #: standingsmodel.cpp:61
 #, kde-format
 msgctxt "@title:column"
@@ -178,65 +184,73 @@ msgctxt "@title:column"
 msgid "Black Player"
 msgstr "Гравець чорними"
 
-#: playersmodel.cpp:127 standingsmodel.cpp:63
+#: playersmodel.cpp:147 standingsmodel.cpp:63
 #, kde-format
 msgctxt "@title:column"
 msgid "Title"
 msgstr "Звертання"
 
-#: playersmodel.cpp:129 standingsmodel.cpp:65
+#: playersmodel.cpp:149 standingsmodel.cpp:65
 #, kde-format
 msgctxt "@title:column"
 msgid "Name"
 msgstr "Ім'я"
 
-#: playersmodel.cpp:131
+#: playersmodel.cpp:151
 #, kde-format
 msgctxt "@title:column"
 msgid "Surname"
 msgstr "Прізвище"
 
-#: playersmodel.cpp:133
+#: playersmodel.cpp:153
 #, kde-format
 msgctxt "@title:column"
 msgid "Rating"
 msgstr "Рейтинг"
 
-#: playersmodel.cpp:135
+#: playersmodel.cpp:155
 #, kde-format
 msgctxt "@title:column"
 msgid "National rating"
 msgstr "Національний рейтинг"
 
-#: playersmodel.cpp:137
+#: playersmodel.cpp:157
 #, kde-format
 msgctxt "@title:column"
 msgid "Player ID"
 msgstr "ІД гравця"
 
-#: playersmodel.cpp:139
+#: playersmodel.cpp:159
 #, kde-format
 msgctxt "@title:column"
 msgid "Birth date"
 msgstr "Дата народження"
 
-#: playersmodel.cpp:141
+#: playersmodel.cpp:161
 #, kde-format
 msgctxt "@title:column"
 msgid "Federation"
 msgstr "Федерація"
 
-#: playersmodel.cpp:143
+#: playersmodel.cpp:163
 #, kde-format
 msgctxt "@title:column"
 msgid "Origin"
 msgstr "Походження"
 
-#: playersmodel.cpp:145
+#: playersmodel.cpp:165
 #, kde-format
 msgctxt "@title:column"
 msgid "Sex"
 msgstr "Стать"
+
+#: playersmodel.cpp:167
+#, fuzzy, kde-format
+#| msgctxt "@title:column"
+#| msgid "Name"
+msgctxt "@title:column"
+msgid "Full Name"
+msgstr "Ім'я"
 
 #: qml/AddPlayerDialog.qml:16
 #, kde-format
@@ -323,7 +337,15 @@ msgctxt "@action:button Remove pairings"
 msgid "Remove"
 msgstr "Вилучити"
 
-#: qml/DocsPage.qml:22
+#: qml/DocsPage.qml:23 qml/PlayersPage.qml:47
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Print"
+msgctxt "@action:button"
+msgid "Print…"
+msgstr "Надрукувати"
+
+#: qml/DocsPage.qml:34
 #, kde-format
 msgctxt "@action:button"
 msgid "Save As…"
@@ -461,12 +483,6 @@ msgstr "Упорядкувати гравців…"
 msgctxt "@action:button"
 msgid "Add player"
 msgstr "Додати гравця"
-
-#: qml/PlayersPage.qml:47
-#, kde-format
-msgctxt "@action:button"
-msgid "Print"
-msgstr "Надрукувати"
 
 #: qml/PlayersPage.qml:130
 #, kde-format
