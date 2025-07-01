@@ -324,12 +324,3 @@ void Controller::setError(const QString &error)
     m_error = error;
     Q_EMIT errorChanged();
 }
-
-QString Controller::createTempFile()
-{
-    m_tempfile = std::make_unique<QTemporaryFile>();
-
-    Q_ASSERT(m_tempfile->open());
-
-    return m_tempfile->fileName();
-}

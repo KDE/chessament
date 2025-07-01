@@ -1,9 +1,12 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
-// SPDX-FileCopyrightText: 2024 Manuel Alcaraz Zambrano <manuelalcarazzam@gmail.com>
+// SPDX-FileCopyrightText: 2024-2025 Manuel Alcaraz Zambrano <manuelalcarazzam@gmail.com>
+
 pragma ComponentBehavior: Bound
 
+import QtCore
 import QtQuick
 import QtQuick.Controls as Controls
+import QtQuick.Dialogs as Dialogs
 import QtQuick.Layouts as Layouts
 
 import org.kde.kitemmodels
@@ -18,6 +21,18 @@ TablePage {
 
     AddPlayerDialog {
         id: addPlayerDialog
+    }
+
+    Dialogs.FileDialog {
+        id: saveDialog
+        fileMode: Dialogs.FileDialog.SaveFile
+        defaultSuffix: "pdf"
+        nameFilters: ["PDF Files (*.pdf)"]
+        currentFolder: StandardPaths.standardLocations(StandardPaths.HomeLocation)[0]
+        onAccepted: {
+            const fileName = new URL(selectedFile).pathname;
+            Controller.savePlayersDocument(fileName);
+        }
     }
 
     model: KSortFilterProxyModel {
@@ -38,18 +53,21 @@ TablePage {
             }
         },
         Kirigami.Action {
-            id: addAction
-            icon.name: "list-add"
-            text: i18nc("@action:button", "Add player")
-            onTriggered: addPlayerDialog.open()
-        },
-        Kirigami.Action {
             id: printAction
             icon.name: "document-print-symbolic"
             text: i18nc("@action:button", "Print…")
-            onTriggered: {
-                applicationWindow().pageStack.push(Qt.createComponent("org.kde.chessament", "DocsPage").createObject(root));
-            }
+            onTriggered: Controller.printPlayersDocument()
+        },
+        Kirigami.Action {
+            icon.name: "document-export-symbolic"
+            text: i18nc("@action:button", "Export as PDF…")
+            onTriggered: saveDialog.open()
+        },
+        Kirigami.Action {
+            id: addAction
+            icon.name: "list-add-symbolic"
+            text: i18nc("@action:button", "Add Player…")
+            onTriggered: addPlayerDialog.open()
         }
     ]
 

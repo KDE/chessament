@@ -18,7 +18,6 @@ ecm_add_qml_module(chessament_static
         qml/TableDelegate.qml
         qml/AddPlayerDialog.qml
         qml/DeletePairingsDialog.qml
-        qml/DocsPage.qml
         qml/NewTournamentDialog.qml
         qml/ResultsFooter.qml
         qml/SortPlayersDialog.qml
@@ -57,14 +56,6 @@ target_sources(chessament_static PUBLIC
     chessamentapplication.h
 )
 
-qt_add_resources(chessament_static "documents"
-    PREFIX "/"
-    FILES
-        documents/default/document.html
-        documents/default/theme.css
-        documents/default/style.css
-)
-
 target_link_libraries(chessament_static PUBLIC
     libtournament
     Qt6::Core
@@ -74,11 +65,8 @@ target_link_libraries(chessament_static PUBLIC
     Qt6::QuickControls2
     Qt6::Sql
     Qt6::Svg
-    Qt6::WebEngineQuick
-    Qt6::Widgets
     Qt6::Network
     Qt6::NetworkAuth
-    Qt6::Pdf
     Qt6::PrintSupport
     KF6::I18n
     KF6::I18nQml

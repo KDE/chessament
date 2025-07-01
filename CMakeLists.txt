@@ -44,7 +44,7 @@ ecm_set_disabled_deprecation_versions(
     KF ${KF6_MIN_VERSION}
 )
 
-find_package(Qt6 ${QT6_MIN_VERSION} REQUIRED COMPONENTS Core Gui Qml QuickControls2 Sql Svg Network NetworkAuth Pdf PrintSupport WebEngineQuick Widgets)
+find_package(Qt6 ${QT6_MIN_VERSION} REQUIRED COMPONENTS Core Gui Qml QuickControls2 Sql Svg Network NetworkAuth PrintSupport)
 find_package(KF6 ${KF6_MIN_VERSION} REQUIRED COMPONENTS Kirigami CoreAddons Config IconThemes I18n ItemModels)
 
 find_package(QCoro6 0.11 REQUIRED COMPONENTS Core)

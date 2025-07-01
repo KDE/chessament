@@ -156,11 +156,6 @@ public:
                     const QString &origin,
                     const QString &sex);
 
-    ~Player()
-    {
-        qDebug() << "delete player";
-    }
-
     /*!
      * \property Player::id
      * \brief the ID of the player

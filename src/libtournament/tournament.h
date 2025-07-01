@@ -20,6 +20,7 @@
 #include "round.h"
 #include "tiebreak.h"
 
+class Document;
 class Event;
 
 using namespace Qt::StringLiterals;

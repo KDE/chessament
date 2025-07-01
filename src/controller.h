@@ -5,6 +5,7 @@
 
 #include <QObject>
 #include <QQmlEngine>
+#include <QQuickTextDocument>
 #include <QTemporaryFile>
 
 #include "account.h"
@@ -69,9 +70,9 @@ public:
     Q_INVOKABLE QCoro::Task<void> pairRound(bool sortPlayers, uint color);
     Q_INVOKABLE void removePairings(bool keepByes);
 
-    Q_INVOKABLE QString getStartingRankDocument();
-    Q_INVOKABLE QString createTempFile();
-    Q_INVOKABLE void printDocument();
+    std::unique_ptr<Document> playersDocument();
+    Q_INVOKABLE void savePlayersDocument(const QString &fileName);
+    Q_INVOKABLE void printPlayersDocument();
 
     PlayersModel *playersModel() const;
     PairingModel *pairingModel() const;

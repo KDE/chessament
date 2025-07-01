@@ -6,6 +6,7 @@
 #include <QString>
 
 class QAbstractItemModel;
+class QTextDocument;
 
 class Document
 {
@@ -16,8 +17,11 @@ public:
     void addTable(const QAbstractItemModel &model);
 
     QString toHTML() const;
+    void saveAs(const QString &fileName);
+    void print();
 
 private:
-    QString m_html;
+    std::unique_ptr<QTextDocument> m_doc;
+
     QString m_content;
 };

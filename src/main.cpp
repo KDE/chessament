@@ -10,7 +10,6 @@
 #include <QQuickStyle>
 #include <QUrl>
 #include <QtQml/QQmlExtensionPlugin>
-#include <QtWebEngineQuick/qtwebenginequickglobal.h>
 
 #include "version-chessament.h"
 #include <KAboutData>
@@ -27,9 +26,6 @@ using namespace Qt::Literals::StringLiterals;
 
 int main(int argc, char *argv[])
 {
-    QCoreApplication::setAttribute(Qt::AA_ShareOpenGLContexts);
-    QtWebEngineQuick::initialize();
-
     KIconTheme::initTheme();
     QIcon::setFallbackThemeName("breeze"_L1);
     QApplication app(argc, argv);

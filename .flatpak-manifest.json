@@ -4,8 +4,6 @@
     "runtime": "org.kde.Platform",
     "runtime-version": "6.9",
     "sdk": "org.kde.Sdk",
-    "base": "io.qt.qtwebengine.BaseApp",
-    "base-version": "6.9",
     "command": "chessament",
     "tags": ["nightly"],
     "desktop-file-name-suffix": " (Nightly)",

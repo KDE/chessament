@@ -329,11 +329,6 @@ public:
 
     explicit Pairing(int board, Player *whitePlayer, Player *blackPlayer, PartialResult whiteResult, PartialResult blackResult);
 
-    ~Pairing()
-    {
-        qDebug() << "delete pairing";
-    }
-
     /*!
      * \property Pairing::id
      * \brief the ID of the pairing
