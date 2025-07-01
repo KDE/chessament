@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-30 00:39+0000\n"
-"PO-Revision-Date: 2025-06-27 11:37+0200\n"
+"POT-Creation-Date: 2025-07-01 00:39+0000\n"
+"PO-Revision-Date: 2025-06-30 18:09+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -50,7 +50,7 @@ msgstr "Kon toernooi niet exporteren."
 #, kde-format
 msgctxt "@title"
 msgid "Starting Rank"
-msgstr ""
+msgstr "Ranking wordt gestart"
 
 #: libtournament/pairingengine.cpp:25
 #, kde-format
@@ -82,12 +82,12 @@ msgstr "Ongeldige paring \"%1\"."
 msgid "Invalid player \"%1\" on pairing \"%2\"."
 msgstr "Ongeldige speler \"%1\" voor paring \"%2\"."
 
-#: libtournament/tournament.cpp:626
+#: libtournament/tournament.cpp:630
 #, kde-format
 msgid "An error ocurred while pairing the round: %1"
 msgstr "Er deed zich een fout voor tijdens paring van ronde: %1"
 
-#: libtournament/tournament.cpp:848
+#: libtournament/tournament.cpp:852
 #, kde-format
 msgid "Couldn't open file"
 msgstr "Kon bestand niet openen"
@@ -244,12 +244,10 @@ msgid "Sex"
 msgstr "Sex"
 
 #: playersmodel.cpp:167
-#, fuzzy, kde-format
-#| msgctxt "@title:column"
-#| msgid "Name"
+#, kde-format
 msgctxt "@title:column"
 msgid "Full Name"
-msgstr "Naam"
+msgstr "Volledige naam"
 
 #: qml/AddPlayerDialog.qml:16
 #, kde-format
@@ -336,13 +334,11 @@ msgctxt "@action:button Remove pairings"
 msgid "Remove"
 msgstr "Verwijderen"
 
-#: qml/DocsPage.qml:23 qml/PlayersPage.qml:47
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Print"
+#: qml/DocsPage.qml:23 qml/PlayersPage.qml:49
+#, kde-format
 msgctxt "@action:button"
 msgid "Print…"
-msgstr "Afdrukken"
+msgstr "Afdrukken…"
 
 #: qml/DocsPage.qml:34
 #, kde-format
@@ -471,23 +467,47 @@ msgctxt "@item:inlistbox As in 'Black pieces'"
 msgid "Black"
 msgstr "Zwart"
 
-#: qml/PlayersPage.qml:33
+#: qml/PlayersPage.qml:34
 #, kde-format
 msgctxt "@action:button"
 msgid "Sort Players…"
 msgstr "Spelers sorteren…"
 
-#: qml/PlayersPage.qml:41 qml/PlayersPage.qml:134
+#: qml/PlayersPage.qml:43 qml/PlayersPage.qml:136
 #, kde-format
 msgctxt "@action:button"
 msgid "Add player"
 msgstr "Speler toevoegen"
 
-#: qml/PlayersPage.qml:130
+#: qml/PlayersPage.qml:132
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No players yet"
 msgstr "Nog geen spelers"
+
+#: qml/PlayersPage.qml:154
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Add player"
+msgctxt "@info:status Number of players"
+msgid "1 player"
+msgid_plural "%1 players"
+msgstr[0] "Speler toevoegen"
+msgstr[1] "Speler toevoegen"
+
+#: qml/PlayersPage.qml:155
+#, kde-format
+msgctxt "@info:status Number of rated players"
+msgid "1 rated"
+msgid_plural "%1 rated"
+msgstr[0] ""
+msgstr[1] ""
+
+#: qml/PlayersPage.qml:157
+#, kde-format
+msgctxt "@info:status players, rated"
+msgid "%1, %2"
+msgstr ""
 
 #: qml/ResultsFooter.qml:41
 #, kde-format

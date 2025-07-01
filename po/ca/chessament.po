@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-30 00:39+0000\n"
-"PO-Revision-Date: 2025-06-27 08:11+0200\n"
+"POT-Creation-Date: 2025-07-01 00:39+0000\n"
+"PO-Revision-Date: 2025-06-30 09:18+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -52,7 +52,7 @@ msgstr "No s'ha pogut exportar el torneig."
 #, kde-format
 msgctxt "@title"
 msgid "Starting Rank"
-msgstr ""
+msgstr "Posició de sortida"
 
 #: libtournament/pairingengine.cpp:25
 #, kde-format
@@ -84,12 +84,12 @@ msgstr "Emparellament no vàlid «%1»."
 msgid "Invalid player \"%1\" on pairing \"%2\"."
 msgstr "Jugador «%1» no vàlid a l'emparellament «%2»."
 
-#: libtournament/tournament.cpp:626
+#: libtournament/tournament.cpp:630
 #, kde-format
 msgid "An error ocurred while pairing the round: %1"
 msgstr "S'ha produït un error en emparellar la ronda: %1"
 
-#: libtournament/tournament.cpp:848
+#: libtournament/tournament.cpp:852
 #, kde-format
 msgid "Couldn't open file"
 msgstr "No s'ha pogut obrir el fitxer"
@@ -246,12 +246,10 @@ msgid "Sex"
 msgstr "Sexe"
 
 #: playersmodel.cpp:167
-#, fuzzy, kde-format
-#| msgctxt "@title:column"
-#| msgid "Name"
+#, kde-format
 msgctxt "@title:column"
 msgid "Full Name"
-msgstr "Nom"
+msgstr "Nom complet"
 
 #: qml/AddPlayerDialog.qml:16
 #, kde-format
@@ -338,13 +336,11 @@ msgctxt "@action:button Remove pairings"
 msgid "Remove"
 msgstr "Elimina"
 
-#: qml/DocsPage.qml:23 qml/PlayersPage.qml:47
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Print"
+#: qml/DocsPage.qml:23 qml/PlayersPage.qml:49
+#, kde-format
 msgctxt "@action:button"
 msgid "Print…"
-msgstr "Imprimeix"
+msgstr "Imprimeix…"
 
 #: qml/DocsPage.qml:34
 #, kde-format
@@ -473,23 +469,47 @@ msgctxt "@item:inlistbox As in 'Black pieces'"
 msgid "Black"
 msgstr "Negres"
 
-#: qml/PlayersPage.qml:33
+#: qml/PlayersPage.qml:34
 #, kde-format
 msgctxt "@action:button"
 msgid "Sort Players…"
 msgstr "Ordena els jugadors…"
 
-#: qml/PlayersPage.qml:41 qml/PlayersPage.qml:134
+#: qml/PlayersPage.qml:43 qml/PlayersPage.qml:136
 #, kde-format
 msgctxt "@action:button"
 msgid "Add player"
 msgstr "Afegeix un jugador"
 
-#: qml/PlayersPage.qml:130
+#: qml/PlayersPage.qml:132
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No players yet"
 msgstr "Encara no hi ha cap jugador"
+
+#: qml/PlayersPage.qml:154
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Add player"
+msgctxt "@info:status Number of players"
+msgid "1 player"
+msgid_plural "%1 players"
+msgstr[0] "Afegeix un jugador"
+msgstr[1] "Afegeix un jugador"
+
+#: qml/PlayersPage.qml:155
+#, kde-format
+msgctxt "@info:status Number of rated players"
+msgid "1 rated"
+msgid_plural "%1 rated"
+msgstr[0] ""
+msgstr[1] ""
+
+#: qml/PlayersPage.qml:157
+#, kde-format
+msgctxt "@info:status players, rated"
+msgid "%1, %2"
+msgstr ""
 
 #: qml/ResultsFooter.qml:41
 #, kde-format

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-30 00:39+0000\n"
+"POT-Creation-Date: 2025-07-01 00:39+0000\n"
 "PO-Revision-Date: 2025-05-12 14:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -81,12 +81,12 @@ msgstr ""
 msgid "Invalid player \"%1\" on pairing \"%2\"."
 msgstr ""
 
-#: libtournament/tournament.cpp:626
+#: libtournament/tournament.cpp:630
 #, kde-format
 msgid "An error ocurred while pairing the round: %1"
 msgstr ""
 
-#: libtournament/tournament.cpp:848
+#: libtournament/tournament.cpp:852
 #, kde-format
 msgid "Couldn't open file"
 msgstr ""
@@ -333,7 +333,7 @@ msgctxt "@action:button Remove pairings"
 msgid "Remove"
 msgstr ""
 
-#: qml/DocsPage.qml:23 qml/PlayersPage.qml:47
+#: qml/DocsPage.qml:23 qml/PlayersPage.qml:49
 #, kde-format
 msgctxt "@action:button"
 msgid "Print…"
@@ -466,22 +466,42 @@ msgctxt "@item:inlistbox As in 'Black pieces'"
 msgid "Black"
 msgstr ""
 
-#: qml/PlayersPage.qml:33
+#: qml/PlayersPage.qml:34
 #, kde-format
 msgctxt "@action:button"
 msgid "Sort Players…"
 msgstr ""
 
-#: qml/PlayersPage.qml:41 qml/PlayersPage.qml:134
+#: qml/PlayersPage.qml:43 qml/PlayersPage.qml:136
 #, kde-format
 msgctxt "@action:button"
 msgid "Add player"
 msgstr ""
 
-#: qml/PlayersPage.qml:130
+#: qml/PlayersPage.qml:132
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No players yet"
+msgstr ""
+
+#: qml/PlayersPage.qml:154
+#, kde-format
+msgctxt "@info:status Number of players"
+msgid "1 player"
+msgid_plural "%1 players"
+msgstr[0] ""
+
+#: qml/PlayersPage.qml:155
+#, kde-format
+msgctxt "@info:status Number of rated players"
+msgid "1 rated"
+msgid_plural "%1 rated"
+msgstr[0] ""
+
+#: qml/PlayersPage.qml:157
+#, kde-format
+msgctxt "@info:status players, rated"
+msgid "%1, %2"
 msgstr ""
 
 #: qml/ResultsFooter.qml:41

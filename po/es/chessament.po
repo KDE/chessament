@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-30 00:39+0000\n"
+"POT-Creation-Date: 2025-07-01 00:39+0000\n"
 "PO-Revision-Date: 2025-05-14 23:56+0100\n"
 "Last-Translator: Manuel Alcaraz Zambrano <manuelalcarazzam@gmail.com>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -86,12 +86,12 @@ msgstr "Emparejamiento «%1» no válido"
 msgid "Invalid player \"%1\" on pairing \"%2\"."
 msgstr "Jugador no válido para el emparejamiento «%1»"
 
-#: libtournament/tournament.cpp:626
+#: libtournament/tournament.cpp:630
 #, kde-format
 msgid "An error ocurred while pairing the round: %1"
 msgstr ""
 
-#: libtournament/tournament.cpp:848
+#: libtournament/tournament.cpp:852
 #, kde-format
 msgid "Couldn't open file"
 msgstr "No se ha podido abrir el archivo"
@@ -344,7 +344,7 @@ msgctxt "@action:button Remove pairings"
 msgid "Remove"
 msgstr ""
 
-#: qml/DocsPage.qml:23 qml/PlayersPage.qml:47
+#: qml/DocsPage.qml:23 qml/PlayersPage.qml:49
 #, fuzzy, kde-format
 #| msgctxt "@action:button"
 #| msgid "Print"
@@ -483,24 +483,48 @@ msgctxt "@item:inlistbox As in 'Black pieces'"
 msgid "Black"
 msgstr ""
 
-#: qml/PlayersPage.qml:33
+#: qml/PlayersPage.qml:34
 #, fuzzy, kde-format
 #| msgid "Players"
 msgctxt "@action:button"
 msgid "Sort Players…"
 msgstr "Jugadores"
 
-#: qml/PlayersPage.qml:41 qml/PlayersPage.qml:134
+#: qml/PlayersPage.qml:43 qml/PlayersPage.qml:136
 #, kde-format
 msgctxt "@action:button"
 msgid "Add player"
 msgstr "Añadir jugador"
 
-#: qml/PlayersPage.qml:130
+#: qml/PlayersPage.qml:132
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No players yet"
 msgstr "Todavía no hay jugadores"
+
+#: qml/PlayersPage.qml:154
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Add player"
+msgctxt "@info:status Number of players"
+msgid "1 player"
+msgid_plural "%1 players"
+msgstr[0] "Añadir jugador"
+msgstr[1] "Añadir jugador"
+
+#: qml/PlayersPage.qml:155
+#, kde-format
+msgctxt "@info:status Number of rated players"
+msgid "1 rated"
+msgid_plural "%1 rated"
+msgstr[0] ""
+msgstr[1] ""
+
+#: qml/PlayersPage.qml:157
+#, kde-format
+msgctxt "@info:status players, rated"
+msgid "%1, %2"
+msgstr ""
 
 #: qml/ResultsFooter.qml:41
 #, kde-format
