@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-01 00:39+0000\n"
-"PO-Revision-Date: 2025-06-30 04:33+0200\n"
+"PO-Revision-Date: 2025-07-01 04:08+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -486,28 +486,26 @@ msgid "No players yet"
 msgstr "ჯერ მოთამაშეები არაა"
 
 #: qml/PlayersPage.qml:154
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Add player"
+#, kde-format
 msgctxt "@info:status Number of players"
 msgid "1 player"
 msgid_plural "%1 players"
-msgstr[0] "მოთამაშის დამატება"
-msgstr[1] "მოთამაშის დამატება"
+msgstr[0] "1 მოთამაშე"
+msgstr[1] "%1 მოთამაშე"
 
 #: qml/PlayersPage.qml:155
 #, kde-format
 msgctxt "@info:status Number of rated players"
 msgid "1 rated"
 msgid_plural "%1 rated"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "1 რეიტინგული"
+msgstr[1] "%1 რეიტინგული"
 
 #: qml/PlayersPage.qml:157
 #, kde-format
 msgctxt "@info:status players, rated"
 msgid "%1, %2"
-msgstr ""
+msgstr "%1, %2"
 
 #: qml/ResultsFooter.qml:41
 #, kde-format

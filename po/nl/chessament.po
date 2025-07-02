@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-01 00:39+0000\n"
-"PO-Revision-Date: 2025-06-30 18:09+0200\n"
+"PO-Revision-Date: 2025-07-01 12:09+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -486,28 +486,26 @@ msgid "No players yet"
 msgstr "Nog geen spelers"
 
 #: qml/PlayersPage.qml:154
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Add player"
+#, kde-format
 msgctxt "@info:status Number of players"
 msgid "1 player"
 msgid_plural "%1 players"
-msgstr[0] "Speler toevoegen"
-msgstr[1] "Speler toevoegen"
+msgstr[0] "1 speler"
+msgstr[1] "%1 spelers"
 
 #: qml/PlayersPage.qml:155
 #, kde-format
 msgctxt "@info:status Number of rated players"
 msgid "1 rated"
 msgid_plural "%1 rated"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "1 met rating"
+msgstr[1] "%1 met rating"
 
 #: qml/PlayersPage.qml:157
 #, kde-format
 msgctxt "@info:status players, rated"
 msgid "%1, %2"
-msgstr ""
+msgstr "%1, %2"
 
 #: qml/ResultsFooter.qml:41
 #, kde-format

@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-01 00:39+0000\n"
-"PO-Revision-Date: 2025-06-30 09:18+0200\n"
+"PO-Revision-Date: 2025-07-01 12:02+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -488,28 +488,26 @@ msgid "No players yet"
 msgstr "Encara no hi ha cap jugador"
 
 #: qml/PlayersPage.qml:154
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Add player"
+#, kde-format
 msgctxt "@info:status Number of players"
 msgid "1 player"
 msgid_plural "%1 players"
-msgstr[0] "Afegeix un jugador"
-msgstr[1] "Afegeix un jugador"
+msgstr[0] "1 jugador"
+msgstr[1] "%1 jugadors"
 
 #: qml/PlayersPage.qml:155
 #, kde-format
 msgctxt "@info:status Number of rated players"
 msgid "1 rated"
 msgid_plural "%1 rated"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "1 avaluat"
+msgstr[1] "%1 avaluats"
 
 #: qml/PlayersPage.qml:157
 #, kde-format
 msgctxt "@info:status players, rated"
 msgid "%1, %2"
-msgstr ""
+msgstr "%1, %2"
 
 #: qml/ResultsFooter.qml:41
 #, kde-format
@@ -794,7 +792,3 @@ msgstr "Sortida"
 msgctxt "@title:colunm"
 msgid "Rank"
 msgstr "Posició"
-
-#~ msgctxt "@title %1 is a number >= 1"
-#~ msgid "Pair round %1"
-#~ msgstr "Ronda d'emparellament %1"

@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-01 00:39+0000\n"
-"PO-Revision-Date: 2025-06-30 15:45+0300\n"
+"PO-Revision-Date: 2025-07-01 16:02+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -487,32 +487,30 @@ msgid "No players yet"
 msgstr "Ще немає жодного гравця"
 
 #: qml/PlayersPage.qml:154
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Add player"
+#, kde-format
 msgctxt "@info:status Number of players"
 msgid "1 player"
 msgid_plural "%1 players"
-msgstr[0] "Додавання гравця"
-msgstr[1] "Додавання гравця"
-msgstr[2] "Додавання гравця"
-msgstr[3] "Додавання гравця"
+msgstr[0] "%1 гравець"
+msgstr[1] "%1 гравці"
+msgstr[2] "%1 гравців"
+msgstr[3] "%1 гравець"
 
 #: qml/PlayersPage.qml:155
 #, kde-format
 msgctxt "@info:status Number of rated players"
 msgid "1 rated"
 msgid_plural "%1 rated"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "%1 з рейтингом"
+msgstr[1] "%1 з рейтингом"
+msgstr[2] "%1 з рейтингом"
+msgstr[3] "%1 з рейтингом"
 
 #: qml/PlayersPage.qml:157
 #, kde-format
 msgctxt "@info:status players, rated"
 msgid "%1, %2"
-msgstr ""
+msgstr "%1, %2"
 
 #: qml/ResultsFooter.qml:41
 #, kde-format
