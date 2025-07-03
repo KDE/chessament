@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-01 00:39+0000\n"
-"PO-Revision-Date: 2025-06-28 17:47+0400\n"
+"PO-Revision-Date: 2025-07-03 09:58+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -51,7 +51,7 @@ msgstr "تعذر تصدير البطولة."
 #, kde-format
 msgctxt "@title"
 msgid "Starting Rank"
-msgstr ""
+msgstr "رتبة البداية"
 
 #: libtournament/pairingengine.cpp:25
 #, kde-format
@@ -244,12 +244,10 @@ msgid "Sex"
 msgstr "جنس"
 
 #: playersmodel.cpp:167
-#, fuzzy, kde-format
-#| msgctxt "@title:column"
-#| msgid "Name"
+#, kde-format
 msgctxt "@title:column"
 msgid "Full Name"
-msgstr "الاسم"
+msgstr "الاسم الكامل"
 
 #: qml/AddPlayerDialog.qml:16
 #, kde-format
@@ -337,12 +335,10 @@ msgid "Remove"
 msgstr "أزِل"
 
 #: qml/DocsPage.qml:23 qml/PlayersPage.qml:49
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Print"
+#, kde-format
 msgctxt "@action:button"
 msgid "Print…"
-msgstr "اطبع"
+msgstr "اطبع…"
 
 #: qml/DocsPage.qml:34
 #, kde-format
@@ -519,7 +515,7 @@ msgstr[5] ""
 #, kde-format
 msgctxt "@info:status players, rated"
 msgid "%1, %2"
-msgstr ""
+msgstr "%1، %2"
 
 #: qml/ResultsFooter.qml:41
 #, kde-format

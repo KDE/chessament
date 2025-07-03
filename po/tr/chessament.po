@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-01 00:39+0000\n"
-"PO-Revision-Date: 2025-06-27 10:02+0300\n"
+"PO-Revision-Date: 2025-07-02 16:52+0300\n"
 "Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -50,7 +50,7 @@ msgstr "Turnuva dışa aktarılamadı."
 #, kde-format
 msgctxt "@title"
 msgid "Starting Rank"
-msgstr ""
+msgstr "Başlangıç Derecesi"
 
 #: libtournament/pairingengine.cpp:25
 #, kde-format
@@ -243,12 +243,10 @@ msgid "Sex"
 msgstr "Cinsiyet"
 
 #: playersmodel.cpp:167
-#, fuzzy, kde-format
-#| msgctxt "@title:column"
-#| msgid "Name"
+#, kde-format
 msgctxt "@title:column"
 msgid "Full Name"
-msgstr "Adı"
+msgstr "Tam Ad"
 
 #: qml/AddPlayerDialog.qml:16
 #, kde-format
@@ -336,12 +334,10 @@ msgid "Remove"
 msgstr "Kaldır"
 
 #: qml/DocsPage.qml:23 qml/PlayersPage.qml:49
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Print"
+#, kde-format
 msgctxt "@action:button"
 msgid "Print…"
-msgstr "Yazdır"
+msgstr "Yazdır…"
 
 #: qml/DocsPage.qml:34
 #, kde-format
@@ -489,28 +485,26 @@ msgid "No players yet"
 msgstr "Henüz oyuncu yok"
 
 #: qml/PlayersPage.qml:154
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Add player"
+#, kde-format
 msgctxt "@info:status Number of players"
 msgid "1 player"
 msgid_plural "%1 players"
-msgstr[0] "Oyuncu Ekle"
-msgstr[1] "Oyuncu Ekle"
+msgstr[0] "1 oyuncu"
+msgstr[1] "%1 oyuncu"
 
 #: qml/PlayersPage.qml:155
 #, kde-format
 msgctxt "@info:status Number of rated players"
 msgid "1 rated"
 msgid_plural "%1 rated"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "1 dereceli"
+msgstr[1] "%1 dereceli"
 
 #: qml/PlayersPage.qml:157
 #, kde-format
 msgctxt "@info:status players, rated"
 msgid "%1, %2"
-msgstr ""
+msgstr "%1, %2"
 
 #: qml/ResultsFooter.qml:41
 #, kde-format
@@ -794,7 +788,7 @@ msgstr "Oturumu Kapat"
 #, kde-format
 msgctxt "@title:colunm"
 msgid "Rank"
-msgstr "Rütbe"
+msgstr "Derece"
 
 #~ msgctxt "@title %1 is a number >= 1"
 #~ msgid "Pair round %1"

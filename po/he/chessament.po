@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-01 00:39+0000\n"
-"PO-Revision-Date: 2025-06-28 19:22+0300\n"
+"PO-Revision-Date: 2025-07-02 14:16+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -51,7 +51,7 @@ msgstr "לא ניתן לייצא תחרות."
 #, kde-format
 msgctxt "@title"
 msgid "Starting Rank"
-msgstr ""
+msgstr "דירוג התחלתי"
 
 #: libtournament/pairingengine.cpp:25
 #, kde-format
@@ -244,12 +244,10 @@ msgid "Sex"
 msgstr "מגדר"
 
 #: playersmodel.cpp:167
-#, fuzzy, kde-format
-#| msgctxt "@title:column"
-#| msgid "Name"
+#, kde-format
 msgctxt "@title:column"
 msgid "Full Name"
-msgstr "שם"
+msgstr "שם מלא"
 
 #: qml/AddPlayerDialog.qml:16
 #, kde-format
@@ -337,12 +335,10 @@ msgid "Remove"
 msgstr "הסרה"
 
 #: qml/DocsPage.qml:23 qml/PlayersPage.qml:49
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Print"
+#, kde-format
 msgctxt "@action:button"
 msgid "Print…"
-msgstr "הדפסה"
+msgstr "הדפסה…"
 
 #: qml/DocsPage.qml:34
 #, kde-format
@@ -490,32 +486,30 @@ msgid "No players yet"
 msgstr "אין שחקנים עדיין"
 
 #: qml/PlayersPage.qml:154
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Add player"
+#, kde-format
 msgctxt "@info:status Number of players"
 msgid "1 player"
 msgid_plural "%1 players"
-msgstr[0] "הוספת שחקן/נית"
-msgstr[1] "הוספת שחקן/נית"
-msgstr[2] "הוספת שחקן/נית"
-msgstr[3] "הוספת שחקן/נית"
+msgstr[0] "שחקן/נית"
+msgstr[1] "%1 שחקנים/ות"
+msgstr[2] "%1 שחקנים/ות"
+msgstr[3] "%1 שחקנים/ות"
 
 #: qml/PlayersPage.qml:155
 #, kde-format
 msgctxt "@info:status Number of rated players"
 msgid "1 rated"
 msgid_plural "%1 rated"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "אחד מדורג"
+msgstr[1] "שניים מדורגים"
+msgstr[2] "%1 מדורגים"
+msgstr[3] "%1 מדורגים"
 
 #: qml/PlayersPage.qml:157
 #, kde-format
 msgctxt "@info:status players, rated"
 msgid "%1, %2"
-msgstr ""
+msgstr "%1, %2"
 
 #: qml/ResultsFooter.qml:41
 #, kde-format
