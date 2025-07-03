@@ -73,6 +73,9 @@ public:
     std::unique_ptr<Document> playersDocument();
     Q_INVOKABLE void savePlayersDocument(const QString &fileName);
     Q_INVOKABLE void printPlayersDocument();
+    std::unique_ptr<Document> pairingsDocument();
+    Q_INVOKABLE void savePairingsDocument(const QString &fileName);
+    Q_INVOKABLE void printPairingsDocument();
 
     PlayersModel *playersModel() const;
     PairingModel *pairingModel() const;

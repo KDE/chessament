@@ -14,15 +14,15 @@ class PairingModel : public QAbstractTableModel
     QML_UNCREATABLE("")
 
 public:
-    enum PairingRoles {
-        BoardRole = 0,
-        WhiteStartingRankRole,
-        WhiteNameRole,
-        ResultRole,
-        BlackNameRole,
-        BlackStartingRankRole,
+    enum Columns {
+        Board = 0,
+        WhiteStartingRank,
+        WhiteName,
+        Result,
+        BlackName,
+        BlackStartingRank,
     };
-    Q_ENUM(PairingRoles)
+    Q_ENUM(Columns)
 
     explicit PairingModel(QObject *parent = nullptr);
 
@@ -32,6 +32,7 @@ public:
     QVariant headerData(int section, Qt::Orientation orientation, int role = Qt::DisplayRole) const override;
     QHash<int, QByteArray> roleNames() const override;
 
+    void setColumns(const QList<int> &columns);
     void setPairings(std::vector<std::unique_ptr<Pairing>> *pairings);
     Q_INVOKABLE void updatePairing(int board);
     Q_INVOKABLE Pairing *getPairing(int board);
@@ -40,4 +41,5 @@ private:
     std::vector<std::unique_ptr<Pairing>> *m_pairings = nullptr;
 
     std::size_t m_currentRows = 0;
+    QList<int> m_columns = {Board, WhiteStartingRank, WhiteName, Result, BlackName, BlackStartingRank};
 };

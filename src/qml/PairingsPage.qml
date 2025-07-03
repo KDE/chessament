@@ -2,8 +2,10 @@
 // SPDX-FileCopyrightText: 2024 Manuel Alcaraz Zambrano <manuelalcarazzam@gmail.com>
 pragma ComponentBehavior: Bound
 
+import QtCore
 import QtQuick
 import QtQuick.Controls as QQC2
+import QtQuick.Dialogs as Dialogs
 
 import org.kde.kirigami as Kirigami
 
@@ -18,6 +20,18 @@ TablePage {
 
     selectionBehavior: TableView.SelectRows
 
+    Dialogs.FileDialog {
+        id: saveDialog
+        fileMode: Dialogs.FileDialog.SaveFile
+        defaultSuffix: "pdf"
+        nameFilters: ["PDF Files (*.pdf)"]
+        currentFolder: StandardPaths.standardLocations(StandardPaths.HomeLocation)[0]
+        onAccepted: {
+            const fileName = new URL(selectedFile).pathname;
+            Controller.savePairingsDocument(fileName);
+        }
+    }
+
     actions: [
         Kirigami.Action {
             text: i18n("Pair Round %1", Controller.tournament.currentRound + 1)
@@ -25,6 +39,17 @@ TablePage {
             onTriggered: {
                 Qt.createComponent("org.kde.chessament", "PairRoundDialog").createObject(root.QQC2.ApplicationWindow.window, {}).open();
             }
+        },
+        Kirigami.Action {
+            id: printAction
+            icon.name: "document-print-symbolic"
+            text: i18nc("@action:button", "Print…")
+            onTriggered: Controller.printPairingsDocument()
+        },
+        Kirigami.Action {
+            icon.name: "document-export-symbolic"
+            text: i18nc("@action:button", "Export as PDF…")
+            onTriggered: saveDialog.open()
         },
         Kirigami.Action {
             displayComponent: QQC2.ComboBox {

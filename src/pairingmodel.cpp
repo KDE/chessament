@@ -27,34 +27,55 @@ QVariant PairingModel::data(const QModelIndex &index, int role) const
 {
     Q_UNUSED(role)
 
+    if (!index.isValid()) {
+        return {};
+    }
+
     Q_ASSERT(index.row() >= 0 && static_cast<std::size_t>(index.row()) < m_pairings->size());
 
     auto pairing = m_pairings->at(index.row()).get();
+    int column = m_columns.at(index.column());
 
-    switch (index.column()) {
-    case BoardRole:
-        if (Pairing::isBye(pairing->whiteResult())) {
-            return u""_s;
+    if (role == Qt::DisplayRole) {
+        switch (column) {
+        case Board:
+            if (Pairing::isBye(pairing->whiteResult())) {
+                return QString{};
+            }
+            return pairing->board();
+        case WhiteStartingRank:
+            return pairing->whitePlayer()->startingRank();
+        case WhiteName:
+            return pairing->whitePlayer()->fullName();
+        case Result:
+            if (pairing->whiteResult() == Pairing::PartialResult::Unknown) {
+                return QString{};
+            }
+            return pairing->resultString();
+        case BlackName:
+            if (pairing->blackPlayer() == nullptr) {
+                return QLatin1String("");
+            }
+            return pairing->blackPlayer()->fullName();
+        case BlackStartingRank:
+            if (pairing->blackPlayer() == nullptr) {
+                return QLatin1String("");
+            }
+            return pairing->blackPlayer()->startingRank();
         }
-        return pairing->board();
-    case WhiteStartingRankRole:
-        return pairing->whitePlayer()->startingRank();
-    case WhiteNameRole:
-        return pairing->whitePlayer()->fullName();
-    case ResultRole:
-        return pairing->resultString();
-    case BlackNameRole:
-        if (pairing->blackPlayer() == nullptr) {
-            return QLatin1String("");
+    } else if (role == Qt::TextAlignmentRole) {
+        switch (column) {
+        case Result:
+            return Qt::AlignCenter;
+        case WhiteName:
+        case BlackName:
+            return Qt::AlignLeading;
+        default:
+            return Qt::AlignTrailing;
         }
-        return pairing->blackPlayer()->fullName();
-    case BlackStartingRankRole:
-        if (pairing->blackPlayer() == nullptr) {
-            return QLatin1String("");
-        }
-        return pairing->blackPlayer()->startingRank();
     }
-    return QVariant();
+
+    return {};
 }
 
 QHash<int, QByteArray> PairingModel::roleNames() const
@@ -66,21 +87,27 @@ QVariant PairingModel::headerData(int section, Qt::Orientation orientation, int 
 {
     Q_UNUSED(orientation)
     Q_UNUSED(role)
-    switch (section) {
-    case BoardRole:
+    switch (m_columns.at(section)) {
+    case Board:
         return i18nc("@title:column", "Board");
-    case WhiteStartingRankRole:
+    case WhiteStartingRank:
         return i18nc("@title:column", "No");
-    case WhiteNameRole:
+    case WhiteName:
         return i18nc("@title:column", "White player");
-    case ResultRole:
+    case Result:
         return i18nc("@title:column", "Result");
-    case BlackNameRole:
+    case BlackName:
         return i18nc("@title:column", "Black Player");
-    case BlackStartingRankRole:
+    case BlackStartingRank:
         return i18nc("@title:column", "No");
     }
-    return QVariant();
+
+    return {};
+}
+
+void PairingModel::setColumns(const QList<int> &columns)
+{
+    m_columns = columns;
 }
 
 void PairingModel::setPairings(std::vector<std::unique_ptr<Pairing>> *pairings)

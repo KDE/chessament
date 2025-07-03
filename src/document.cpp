@@ -73,6 +73,9 @@ void Document::addTable(const QAbstractItemModel &model)
             QString textAlign = u"left"_s;
             if (alignment.isValid()) {
                 switch (alignment.toInt()) {
+                case Qt::AlignCenter:
+                    textAlign = u"center"_s;
+                    break;
                 case Qt::AlignTrailing:
                     textAlign = u"right"_s;
                     break;
