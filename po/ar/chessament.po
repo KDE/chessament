@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-01 00:39+0000\n"
+"POT-Creation-Date: 2025-07-04 00:40+0000\n"
 "PO-Revision-Date: 2025-07-03 09:58+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -47,11 +47,18 @@ msgstr "اتصل بحساب"
 msgid "Couldn't export tournament."
 msgstr "تعذر تصدير البطولة."
 
-#: documents.cpp:21
+#: documents.cpp:16
 #, kde-format
 msgctxt "@title"
 msgid "Starting Rank"
 msgstr "رتبة البداية"
+
+#: documents.cpp:44
+#, fuzzy, kde-format
+#| msgid "Pairings"
+msgctxt "@title"
+msgid "Round %1 Pairings"
+msgstr "الإقران"
 
 #: libtournament/pairingengine.cpp:25
 #, kde-format
@@ -112,72 +119,72 @@ msgstr "اللاعب ”%1“ غير موجود."
 msgid "Unknown result on pairing \"%1\" with \"%2\"."
 msgstr "نتيجة غير معروفة عند إقران ”%1“ مع ”%2“."
 
-#: main.cpp:61 qml/WelcomePage.qml:15
+#: main.cpp:57 qml/WelcomePage.qml:15
 #, kde-format
 msgctxt "@title"
 msgid "Chessament"
 msgstr "شطرنج"
 
-#: main.cpp:65
+#: main.cpp:61
 #, kde-format
 msgid "Chess Tournament Manager"
 msgstr "مدير بطولة شطرنج"
 
-#: main.cpp:69
+#: main.cpp:65
 #, kde-format
 msgid "© 2024 Manuel Alcaraz Zambrano"
 msgstr "© 2024 مانويل ألكاراز زامبرانو 2024"
 
-#: main.cpp:70
+#: main.cpp:66
 #, kde-format
 msgctxt "@info:credit"
 msgid "Manuel Alcaraz Zambrano"
 msgstr "مانويل ألكاراز زامبرانو"
 
-#: main.cpp:71
+#: main.cpp:67
 #, kde-format
 msgctxt "@info:credit"
 msgid "Author & Maintainer"
 msgstr "المؤلّف والصائن"
 
-#: main.cpp:74
+#: main.cpp:70
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "زايد السعيدي"
 
-#: main.cpp:74
+#: main.cpp:70
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "zayed.alsaidi@gmail.com"
 
-#: pairingmodel.cpp:71
+#: pairingmodel.cpp:92
 #, kde-format
 msgctxt "@title:column"
 msgid "Board"
 msgstr "اللوحة"
 
-#: pairingmodel.cpp:73 pairingmodel.cpp:81 playersmodel.cpp:145
+#: pairingmodel.cpp:94 pairingmodel.cpp:102 playersmodel.cpp:145
 #: standingsmodel.cpp:61
 #, kde-format
 msgctxt "@title:column"
 msgid "No"
 msgstr "لا"
 
-#: pairingmodel.cpp:75
+#: pairingmodel.cpp:96
 #, kde-format
 msgctxt "@title:column"
 msgid "White player"
 msgstr "اللاعب الأبيض"
 
-#: pairingmodel.cpp:77
+#: pairingmodel.cpp:98
 #, kde-format
 msgctxt "@title:column"
 msgid "Result"
 msgstr "النتيجة"
 
-#: pairingmodel.cpp:79
+#: pairingmodel.cpp:100
 #, kde-format
 msgctxt "@title:column"
 msgid "Black Player"
@@ -334,18 +341,6 @@ msgctxt "@action:button Remove pairings"
 msgid "Remove"
 msgstr "أزِل"
 
-#: qml/DocsPage.qml:23 qml/PlayersPage.qml:49
-#, kde-format
-msgctxt "@action:button"
-msgid "Print…"
-msgstr "اطبع…"
-
-#: qml/DocsPage.qml:34
-#, kde-format
-msgctxt "@action:button"
-msgid "Save As…"
-msgstr "احفظ باسم…"
-
 #: qml/Main.qml:21
 #, kde-format
 msgctxt "@title:window"
@@ -409,23 +404,35 @@ msgctxt "@label"
 msgid "Number of rounds"
 msgstr "عدد الجولات"
 
-#: qml/PairingsPage.qml:23
+#: qml/PairingsPage.qml:37
 #, kde-format
 msgid "Pair Round %1"
 msgstr "زوج جولة %1"
 
-#: qml/PairingsPage.qml:34
+#: qml/PairingsPage.qml:46 qml/PlayersPage.qml:58
+#, kde-format
+msgctxt "@action:button"
+msgid "Print…"
+msgstr "اطبع…"
+
+#: qml/PairingsPage.qml:51 qml/PlayersPage.qml:63
+#, kde-format
+msgctxt "@action:button"
+msgid "Export as PDF…"
+msgstr ""
+
+#: qml/PairingsPage.qml:59
 #, kde-format
 msgid "Round %1"
 msgstr "الجولة %1"
 
-#: qml/PairingsPage.qml:52
+#: qml/PairingsPage.qml:77
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove pairings of this and following rounds…"
 msgstr "أزل الأزواج من هذه الجولة والجولات التالية…"
 
-#: qml/PairingsPage.qml:92
+#: qml/PairingsPage.qml:117
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No pairings for round %1 yet"
@@ -467,25 +474,33 @@ msgctxt "@item:inlistbox As in 'Black pieces'"
 msgid "Black"
 msgstr "أسود"
 
-#: qml/PlayersPage.qml:34
+#: qml/PlayersPage.qml:49
 #, kde-format
 msgctxt "@action:button"
 msgid "Sort Players…"
 msgstr "افرز اللاعبين…"
 
-#: qml/PlayersPage.qml:43 qml/PlayersPage.qml:136
-#, kde-format
+#: qml/PlayersPage.qml:69
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Add player"
 msgctxt "@action:button"
-msgid "Add player"
+msgid "Add Player…"
 msgstr "أضف لاعبًا"
 
-#: qml/PlayersPage.qml:132
+#: qml/PlayersPage.qml:150
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No players yet"
 msgstr "لم يُعثر على لاعبين بعد"
 
 #: qml/PlayersPage.qml:154
+#, kde-format
+msgctxt "@action:button"
+msgid "Add player"
+msgstr "أضف لاعبًا"
+
+#: qml/PlayersPage.qml:172
 #, fuzzy, kde-format
 #| msgctxt "@title:window"
 #| msgid "Add player"
@@ -499,7 +514,7 @@ msgstr[3] "أضف لاعبًا"
 msgstr[4] "أضف لاعبًا"
 msgstr[5] "أضف لاعبًا"
 
-#: qml/PlayersPage.qml:155
+#: qml/PlayersPage.qml:173
 #, kde-format
 msgctxt "@info:status Number of rated players"
 msgid "1 rated"
@@ -511,7 +526,7 @@ msgstr[3] ""
 msgstr[4] ""
 msgstr[5] ""
 
-#: qml/PlayersPage.qml:157
+#: qml/PlayersPage.qml:175
 #, kde-format
 msgctxt "@info:status players, rated"
 msgid "%1, %2"
@@ -799,6 +814,10 @@ msgstr "اخرج"
 msgctxt "@title:colunm"
 msgid "Rank"
 msgstr "الرتبة"
+
+#~ msgctxt "@action:button"
+#~ msgid "Save As…"
+#~ msgstr "احفظ باسم…"
 
 #~ msgctxt "@title %1 is a number >= 1"
 #~ msgid "Pair round %1"

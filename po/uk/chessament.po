@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-01 00:39+0000\n"
+"POT-Creation-Date: 2025-07-04 00:40+0000\n"
 "PO-Revision-Date: 2025-07-01 16:02+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -47,11 +47,18 @@ msgstr "З'єднати обліковий запис"
 msgid "Couldn't export tournament."
 msgstr "Не вдалося експортувати дані турніру."
 
-#: documents.cpp:21
+#: documents.cpp:16
 #, kde-format
 msgctxt "@title"
 msgid "Starting Rank"
 msgstr "Початковий ранг"
+
+#: documents.cpp:44
+#, fuzzy, kde-format
+#| msgid "Pairings"
+msgctxt "@title"
+msgid "Round %1 Pairings"
+msgstr "Поділ на пари"
 
 #: libtournament/pairingengine.cpp:25
 #, kde-format
@@ -113,72 +120,72 @@ msgstr "Гравця «%1» не знайдено."
 msgid "Unknown result on pairing \"%1\" with \"%2\"."
 msgstr "Невідомий результат для поділу на пари «%1» з «%2»."
 
-#: main.cpp:61 qml/WelcomePage.qml:15
+#: main.cpp:57 qml/WelcomePage.qml:15
 #, kde-format
 msgctxt "@title"
 msgid "Chessament"
 msgstr "Chessament"
 
-#: main.cpp:65
+#: main.cpp:61
 #, kde-format
 msgid "Chess Tournament Manager"
 msgstr "Керування шаховим турніром"
 
-#: main.cpp:69
+#: main.cpp:65
 #, kde-format
 msgid "© 2024 Manuel Alcaraz Zambrano"
 msgstr "© Manuel Alcaraz Zambrano, 2024"
 
-#: main.cpp:70
+#: main.cpp:66
 #, kde-format
 msgctxt "@info:credit"
 msgid "Manuel Alcaraz Zambrano"
 msgstr "Manuel Alcaraz Zambrano"
 
-#: main.cpp:71
+#: main.cpp:67
 #, kde-format
 msgctxt "@info:credit"
 msgid "Author & Maintainer"
 msgstr "Автор і супровідник"
 
-#: main.cpp:74
+#: main.cpp:70
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "Юрій Чорноіван"
 
-#: main.cpp:74
+#: main.cpp:70
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "yurchor@ukr.net"
 
-#: pairingmodel.cpp:71
+#: pairingmodel.cpp:92
 #, kde-format
 msgctxt "@title:column"
 msgid "Board"
 msgstr "Дошка"
 
-#: pairingmodel.cpp:73 pairingmodel.cpp:81 playersmodel.cpp:145
+#: pairingmodel.cpp:94 pairingmodel.cpp:102 playersmodel.cpp:145
 #: standingsmodel.cpp:61
 #, kde-format
 msgctxt "@title:column"
 msgid "No"
 msgstr "№"
 
-#: pairingmodel.cpp:75
+#: pairingmodel.cpp:96
 #, kde-format
 msgctxt "@title:column"
 msgid "White player"
 msgstr "Гравець білими"
 
-#: pairingmodel.cpp:77
+#: pairingmodel.cpp:98
 #, kde-format
 msgctxt "@title:column"
 msgid "Result"
 msgstr "Результат"
 
-#: pairingmodel.cpp:79
+#: pairingmodel.cpp:100
 #, kde-format
 msgctxt "@title:column"
 msgid "Black Player"
@@ -335,18 +342,6 @@ msgctxt "@action:button Remove pairings"
 msgid "Remove"
 msgstr "Вилучити"
 
-#: qml/DocsPage.qml:23 qml/PlayersPage.qml:49
-#, kde-format
-msgctxt "@action:button"
-msgid "Print…"
-msgstr "Надрукувати…"
-
-#: qml/DocsPage.qml:34
-#, kde-format
-msgctxt "@action:button"
-msgid "Save As…"
-msgstr "Зберегти як…"
-
 #: qml/Main.qml:21
 #, kde-format
 msgctxt "@title:window"
@@ -410,23 +405,35 @@ msgctxt "@label"
 msgid "Number of rounds"
 msgstr "Кількість раундів"
 
-#: qml/PairingsPage.qml:23
+#: qml/PairingsPage.qml:37
 #, kde-format
 msgid "Pair Round %1"
 msgstr "Поділ на пари раунду %1"
 
-#: qml/PairingsPage.qml:34
+#: qml/PairingsPage.qml:46 qml/PlayersPage.qml:58
+#, kde-format
+msgctxt "@action:button"
+msgid "Print…"
+msgstr "Надрукувати…"
+
+#: qml/PairingsPage.qml:51 qml/PlayersPage.qml:63
+#, kde-format
+msgctxt "@action:button"
+msgid "Export as PDF…"
+msgstr ""
+
+#: qml/PairingsPage.qml:59
 #, kde-format
 msgid "Round %1"
 msgstr "Раунд %1"
 
-#: qml/PairingsPage.qml:52
+#: qml/PairingsPage.qml:77
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove pairings of this and following rounds…"
 msgstr "Вилучити поділ на пари для цього і наступного раундів…"
 
-#: qml/PairingsPage.qml:92
+#: qml/PairingsPage.qml:117
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No pairings for round %1 yet"
@@ -468,25 +475,33 @@ msgctxt "@item:inlistbox As in 'Black pieces'"
 msgid "Black"
 msgstr "Чорний"
 
-#: qml/PlayersPage.qml:34
+#: qml/PlayersPage.qml:49
 #, kde-format
 msgctxt "@action:button"
 msgid "Sort Players…"
 msgstr "Упорядкувати гравців…"
 
-#: qml/PlayersPage.qml:43 qml/PlayersPage.qml:136
-#, kde-format
+#: qml/PlayersPage.qml:69
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Add player"
 msgctxt "@action:button"
-msgid "Add player"
+msgid "Add Player…"
 msgstr "Додати гравця"
 
-#: qml/PlayersPage.qml:132
+#: qml/PlayersPage.qml:150
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No players yet"
 msgstr "Ще немає жодного гравця"
 
 #: qml/PlayersPage.qml:154
+#, kde-format
+msgctxt "@action:button"
+msgid "Add player"
+msgstr "Додати гравця"
+
+#: qml/PlayersPage.qml:172
 #, kde-format
 msgctxt "@info:status Number of players"
 msgid "1 player"
@@ -496,7 +511,7 @@ msgstr[1] "%1 гравці"
 msgstr[2] "%1 гравців"
 msgstr[3] "%1 гравець"
 
-#: qml/PlayersPage.qml:155
+#: qml/PlayersPage.qml:173
 #, kde-format
 msgctxt "@info:status Number of rated players"
 msgid "1 rated"
@@ -506,7 +521,7 @@ msgstr[1] "%1 з рейтингом"
 msgstr[2] "%1 з рейтингом"
 msgstr[3] "%1 з рейтингом"
 
-#: qml/PlayersPage.qml:157
+#: qml/PlayersPage.qml:175
 #, kde-format
 msgctxt "@info:status players, rated"
 msgid "%1, %2"
@@ -795,6 +810,10 @@ msgstr "Вийти"
 msgctxt "@title:colunm"
 msgid "Rank"
 msgstr "Ранг"
+
+#~ msgctxt "@action:button"
+#~ msgid "Save As…"
+#~ msgstr "Зберегти як…"
 
 #~ msgctxt "@title %1 is a number >= 1"
 #~ msgid "Pair round %1"
