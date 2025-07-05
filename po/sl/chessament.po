@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-04 00:40+0000\n"
-"PO-Revision-Date: 2025-07-01 07:24+0200\n"
+"PO-Revision-Date: 2025-07-04 06:15+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -51,11 +51,10 @@ msgid "Starting Rank"
 msgstr "Začni rangiranje"
 
 #: documents.cpp:44
-#, fuzzy, kde-format
-#| msgid "Pairings"
+#, kde-format
 msgctxt "@title"
 msgid "Round %1 Pairings"
-msgstr "Pari"
+msgstr "Krog %1 Parov"
 
 #: libtournament/pairingengine.cpp:25
 #, kde-format
@@ -417,7 +416,7 @@ msgstr "Natisni…"
 #, kde-format
 msgctxt "@action:button"
 msgid "Export as PDF…"
-msgstr ""
+msgstr "Izvozi kot PDF…"
 
 #: qml/PairingsPage.qml:59
 #, kde-format
@@ -479,12 +478,10 @@ msgid "Sort Players…"
 msgstr "Razvrsti igralce…"
 
 #: qml/PlayersPage.qml:69
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Add player"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add Player…"
-msgstr "Dodaj igralca"
+msgstr "Dodaj igralca…"
 
 #: qml/PlayersPage.qml:150
 #, kde-format

@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-04 00:40+0000\n"
-"PO-Revision-Date: 2025-07-02 16:52+0300\n"
+"PO-Revision-Date: 2025-07-04 15:53+0300\n"
 "Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -53,11 +53,10 @@ msgid "Starting Rank"
 msgstr "Başlangıç Derecesi"
 
 #: documents.cpp:44
-#, fuzzy, kde-format
-#| msgid "Pairings"
+#, kde-format
 msgctxt "@title"
 msgid "Round %1 Pairings"
-msgstr "Eşleşmeler"
+msgstr "Raunt %1 Eşleşmeleri"
 
 #: libtournament/pairingengine.cpp:25
 #, kde-format
@@ -418,7 +417,7 @@ msgstr "Yazdır…"
 #, kde-format
 msgctxt "@action:button"
 msgid "Export as PDF…"
-msgstr ""
+msgstr "PDF Olarak Dışa Aktar…"
 
 #: qml/PairingsPage.qml:59
 #, kde-format
@@ -480,12 +479,10 @@ msgid "Sort Players…"
 msgstr "Oyuncuları Sırala…"
 
 #: qml/PlayersPage.qml:69
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Add player"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add Player…"
-msgstr "Oyuncu Ekle"
+msgstr "Oyuncu Ekle…"
 
 #: qml/PlayersPage.qml:150
 #, kde-format

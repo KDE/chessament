@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-04 00:40+0000\n"
-"PO-Revision-Date: 2025-07-01 12:02+0200\n"
+"PO-Revision-Date: 2025-07-04 09:31+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -55,11 +55,10 @@ msgid "Starting Rank"
 msgstr "Posició de sortida"
 
 #: documents.cpp:44
-#, fuzzy, kde-format
-#| msgid "Pairings"
+#, kde-format
 msgctxt "@title"
 msgid "Round %1 Pairings"
-msgstr "Emparellaments"
+msgstr "Emparellaments de la ronda %1"
 
 #: libtournament/pairingengine.cpp:25
 #, kde-format
@@ -421,7 +420,7 @@ msgstr "Imprimeix…"
 #, kde-format
 msgctxt "@action:button"
 msgid "Export as PDF…"
-msgstr ""
+msgstr "Exporta com a PDF…"
 
 #: qml/PairingsPage.qml:59
 #, kde-format
@@ -483,12 +482,10 @@ msgid "Sort Players…"
 msgstr "Ordena els jugadors…"
 
 #: qml/PlayersPage.qml:69
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Add player"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add Player…"
-msgstr "Afegeix un jugador"
+msgstr "Afegeix un jugador…"
 
 #: qml/PlayersPage.qml:150
 #, kde-format
@@ -807,7 +804,3 @@ msgstr "Sortida"
 msgctxt "@title:colunm"
 msgid "Rank"
 msgstr "Posició"
-
-#~ msgctxt "@action:button"
-#~ msgid "Save As…"
-#~ msgstr "Desa com a…"
