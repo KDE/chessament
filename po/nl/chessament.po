@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-04 00:40+0000\n"
-"PO-Revision-Date: 2025-07-01 12:09+0200\n"
+"PO-Revision-Date: 2025-07-04 11:04+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -53,11 +53,10 @@ msgid "Starting Rank"
 msgstr "Ranking wordt gestart"
 
 #: documents.cpp:44
-#, fuzzy, kde-format
-#| msgid "Pairings"
+#, kde-format
 msgctxt "@title"
 msgid "Round %1 Pairings"
-msgstr "Paringen"
+msgstr "Paringen in ronde %1"
 
 #: libtournament/pairingengine.cpp:25
 #, kde-format
@@ -419,7 +418,7 @@ msgstr "Afdrukken…"
 #, kde-format
 msgctxt "@action:button"
 msgid "Export as PDF…"
-msgstr ""
+msgstr "Exporteren als PDF…"
 
 #: qml/PairingsPage.qml:59
 #, kde-format
@@ -481,12 +480,10 @@ msgid "Sort Players…"
 msgstr "Spelers sorteren…"
 
 #: qml/PlayersPage.qml:69
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Add player"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add Player…"
-msgstr "Speler toevoegen"
+msgstr "Speler toevoegen…"
 
 #: qml/PlayersPage.qml:150
 #, kde-format
