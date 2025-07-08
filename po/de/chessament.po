@@ -3,39 +3,39 @@
 # Copyright (C) 2025 This file is copyright:
 # This file is distributed under the same license as the chessament package.
 # SPDX-FileCopyrightText: 2025 Alois Spitzbart <spitz234@hotmail.com>
-# Automatically generated, 2025.
+# SPDX-FileCopyrightText: 2025 Philipp Kiemle <l10n@prly.mozmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-04 00:40+0000\n"
-"PO-Revision-Date: 2025-06-08 21:39+0200\n"
-"Last-Translator: Alois Spitzbart <spitz234@hotmail.com>\n"
+"PO-Revision-Date: 2025-06-25 18:44+0200\n"
+"Last-Translator: Philipp Kiemle <l10n@prly.mozmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.04.1\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: chessamentapplication.cpp:23
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "New tournament…"
-msgstr "Neues Turnier …"
+msgstr "Neues Turnier …"
 
 #: chessamentapplication.cpp:44
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Import tournament report…"
-msgstr "Turnierbericht importieren …"
+msgstr "Turnierbericht importieren …"
 
 #: chessamentapplication.cpp:53
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Export tournament report…"
-msgstr "Turnierbericht exportieren …"
+msgstr "Turnierbericht exportieren …"
 
 #: chessamentapplication.cpp:61
 #, kde-format
@@ -438,7 +438,7 @@ msgstr "Runde %1"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove pairings of this and following rounds…"
-msgstr "Paarungen von dieser und den folgenden Runden entfernen …"
+msgstr "Paarungen von dieser und den folgenden Runden entfernen …"
 
 #: qml/PairingsPage.qml:117
 #, kde-format
@@ -465,25 +465,25 @@ msgstr "Bisher noch keine Spieler"
 #, kde-format
 msgctxt "@label:listbox"
 msgid "First player color:"
-msgstr ""
+msgstr "Farbe des ersten Spielers:"
 
 #: qml/PairRoundDialog.qml:41
 #, kde-format
 msgctxt "@item:inlistbox As in 'Random color'"
 msgid "Random"
-msgstr ""
+msgstr "Zufällig"
 
 #: qml/PairRoundDialog.qml:45
 #, kde-format
 msgctxt "@item:inlistbox As in 'White pieces'"
 msgid "White"
-msgstr ""
+msgstr "Weiß"
 
 #: qml/PairRoundDialog.qml:49
 #, kde-format
 msgctxt "@item:inlistbox As in 'Black pieces'"
 msgid "Black"
-msgstr ""
+msgstr "Schwarz"
 
 #: qml/PlayersPage.qml:49
 #, fuzzy, kde-format
@@ -546,7 +546,7 @@ msgstr "*"
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "1-0"
-msgstr "1-0"
+msgstr "1–0"
 
 #: qml/ResultsFooter.qml:58
 #, kde-format
@@ -558,7 +558,7 @@ msgstr "½-½"
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "0-1"
-msgstr "0-1"
+msgstr "0–1"
 
 #: qml/ResultsFooter.qml:75
 #, kde-format
@@ -624,7 +624,7 @@ msgstr "½-0"
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "0-0"
-msgstr "0-0"
+msgstr "0–0"
 
 #: qml/ResultsFooter.qml:158
 #, kde-format
