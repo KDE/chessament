@@ -75,7 +75,8 @@ public:
     {
         if (p == m_whitePlayer) {
             return Pairing::pointsForResult(m_whiteResult);
-        } else if (p == m_blackPlayer) {
+        }
+        if (p == m_blackPlayer) {
             return Pairing::pointsForResult(m_blackResult);
         }
         Q_UNREACHABLE();
@@ -335,7 +336,7 @@ public:
      *
      * This property holds the database ID of the pairing.
      */
-    int id();
+    int id() const;
 
     /*!
      * \property Pairing::board
@@ -343,7 +344,7 @@ public:
      *
      * This property holds the board of the pairing.
      */
-    int board();
+    int board() const;
 
     /*!
      * \property Pairing::whitePlayer

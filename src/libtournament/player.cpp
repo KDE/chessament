@@ -8,13 +8,7 @@
 
 using namespace Qt::Literals::StringLiterals;
 
-Player::Player()
-    : QObject()
-{
-}
-
 Player::Player(int startingRank, const QString &name, int rating)
-    : QObject()
 {
     setStartingRank(startingRank);
     setName(name);
@@ -32,7 +26,6 @@ Player::Player(int startingRank,
                const QString &federation,
                const QString &origin,
                const QString &sex)
-    : QObject()
 {
     setStartingRank(startingRank);
     setTitle(title);
@@ -316,8 +309,7 @@ std::string Player::toTrf(double points, int rank, bool normalize)
                        playerid.toStdString(),
                        birth.toStdString(),
                        points,
-                       rank)
-        .c_str();
+                       rank);
 }
 
 QDebug operator<<(QDebug dbg, const Player &player)

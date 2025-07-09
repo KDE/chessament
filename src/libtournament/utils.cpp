@@ -10,7 +10,7 @@ using namespace Qt::StringLiterals;
 namespace Utils
 {
 
-QString normalize(QString text)
+QString normalize(const QString &text)
 {
     return text.normalized(QString::NormalizationForm_KD).remove(QRegularExpression{u"[^a-zA-Z0-9\\s]"_s});
 }

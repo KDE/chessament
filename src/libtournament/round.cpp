@@ -4,8 +4,7 @@
 #include "round.h"
 
 Round::Round()
-    : QObject()
-    , m_pairings(std::make_unique<std::vector<std::unique_ptr<Pairing>>>())
+    : m_pairings(std::make_unique<std::vector<std::unique_ptr<Pairing>>>())
 {
 }
 
@@ -60,7 +59,7 @@ void Round::addPairing(std::unique_ptr<Pairing> pairing)
 
 void Round::removePairings(std::function<bool(Pairing *)> predicate)
 {
-    std::erase_if(*m_pairings, [predicate](const std::unique_ptr<Pairing> &pairing) {
+    std::erase_if(*m_pairings, [&predicate](const std::unique_ptr<Pairing> &pairing) {
         return predicate(pairing.get());
     });
 }

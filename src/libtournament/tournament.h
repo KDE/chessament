@@ -51,8 +51,6 @@ class Tournament : public QObject
     Q_PROPERTY(QList<Tiebreak *> tiebreaks READ tiebreaks WRITE setTiebreaks NOTIFY tiebreaksChanged)
 
 public:
-    ~Tournament();
-
     /*!
      * \property Tournament::id
      * \brief the ID of the tournament
@@ -115,7 +113,7 @@ public:
      *
      * This property holds the number of rounds of the tournament.
      */
-    int numberOfRounds();
+    int numberOfRounds() const;
 
     /*!
      * \property Tournament::currentRound
@@ -123,7 +121,7 @@ public:
      *
      * The current round is the number of the last paired round, or 0 if the tournament has not started yet.
      */
-    int currentRound();
+    int currentRound() const;
 
     /*!
      * \property Tournament::tiebreaks
@@ -402,7 +400,7 @@ public:
      *
      * \sa getOption()
      */
-    void setOption(const QString &name, QVariant value);
+    void setOption(const QString &name, const QVariant &value);
 
     /*!
      * Returns a JSON represetation of the tournament.
@@ -470,7 +468,7 @@ public Q_SLOTS:
     void setTimeControl(const QString &timeControl);
     void setNumberOfRounds(int numberOfRounds);
     void setCurrentRound(int currentRound);
-    void setTiebreaks(QList<Tiebreak *> tiebreaks);
+    void setTiebreaks(const QList<Tiebreak *> &tiebreaks);
 
     void setInitialColor(Tournament::InitialColor color);
 

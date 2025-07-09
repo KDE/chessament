@@ -11,7 +11,6 @@
 #include "db.h"
 
 Event::Event(const QString &fileName)
-    : QObject()
 {
     openDatabase(fileName);
     loadTournaments();
@@ -19,7 +18,6 @@ Event::Event(const QString &fileName)
 
 Event::~Event()
 {
-    qDebug() << "delete event";
     closeDatabase();
 }
 
@@ -37,7 +35,7 @@ void Event::setFileName(const QString &fileName)
     Q_EMIT fileNameChanged();
 }
 
-int Event::numberOfTournaments()
+size_t Event::numberOfTournaments()
 {
     return m_tournaments.size();
 }

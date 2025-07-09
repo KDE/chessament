@@ -39,7 +39,7 @@ public:
     /*!
      * Returns the number of tournaments in the event.
      */
-    int numberOfTournaments();
+    size_t numberOfTournaments();
 
     /*!
      * Returns the tournament with index \a index.

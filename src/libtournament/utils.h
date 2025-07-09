@@ -7,7 +7,5 @@
 
 namespace Utils
 {
-
-QString normalize(QString text);
-
+QString normalize(const QString &text);
 }

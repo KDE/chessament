@@ -19,7 +19,6 @@ Tournament::Tournament(Event *event, const QString &id)
     : m_event(event)
     , m_id(id)
     , m_players(std::make_unique<std::vector<std::unique_ptr<Player>>>())
-    , m_rounds(std::vector<std::unique_ptr<Round>>())
 {
     m_tiebreaks = {new Points(), new Buchholz()};
 
@@ -28,11 +27,6 @@ Tournament::Tournament(Event *event, const QString &id)
     } else {
         loadTournament();
     }
-}
-
-Tournament::~Tournament()
-{
-    qDebug() << "delete tournament";
 }
 
 QString Tournament::id() const
@@ -139,7 +133,7 @@ void Tournament::setTimeControl(const QString &timeControl)
     Q_EMIT timeControlChanged();
 }
 
-int Tournament::numberOfRounds()
+int Tournament::numberOfRounds() const
 {
     return m_numberOfRounds;
 }
@@ -154,7 +148,7 @@ void Tournament::setNumberOfRounds(int numberOfRounds)
     Q_EMIT numberOfRoundsChanged();
 }
 
-int Tournament::currentRound()
+int Tournament::currentRound() const
 {
     return m_currentRound;
 }
@@ -175,7 +169,7 @@ QList<Tiebreak *> Tournament::tiebreaks()
     return m_tiebreaks;
 }
 
-void Tournament::setTiebreaks(QList<Tiebreak *> tiebreaks)
+void Tournament::setTiebreaks(const QList<Tiebreak *> &tiebreaks)
 {
     if (m_tiebreaks == tiebreaks) {
         return;
@@ -259,7 +253,7 @@ void Tournament::sortPlayers()
     });
 
     for (std::size_t i = 0; i < m_players->size(); i++) {
-        auto player = m_players->at(i).get();
+        auto *player = m_players->at(i).get();
         player->setStartingRank(i + 1);
         savePlayer(player);
     }
@@ -314,7 +308,7 @@ QList<PlayerTiebreaks> Tournament::getStandings(TournamentState state)
 
     // Sort by tiebreaks
     auto sortStandings = [&standings]() {
-        std::sort(standings.begin(), standings.end(), [](PlayerTiebreaks p1, PlayerTiebreaks p2) {
+        std::sort(standings.begin(), standings.end(), [](const PlayerTiebreaks &p1, const PlayerTiebreaks &p2) {
             for (int i = 0; i < p1.second.size(); i++) {
                 if (p1.second.at(i) == p2.second.at(i)) {
                     continue;
@@ -371,8 +365,7 @@ QList<PlayerTiebreaks> Tournament::getStandings(TournamentState state)
     }
 
     // Print standings for debugging
-    for (int i = 0; i < standings.size(); i++) {
-        const auto s = standings.at(i);
+    for (const auto &s : standings) {
         QStringList l;
         for (const auto x : s.second) {
             l << QString::number(x);
@@ -519,12 +512,13 @@ void Tournament::sortPairings()
             if (aRank == 0 && bRank == 0) {
                 if (std::to_underlying(a->whiteResult()) == std::to_underlying(b->whiteResult())) {
                     return a->whitePlayer()->startingRank() < b->whitePlayer()->startingRank();
-                } else {
-                    return std::to_underlying(a->whiteResult()) > std::to_underlying(b->whiteResult());
                 }
-            } else if (aRank == 0) {
+                return std::to_underlying(a->whiteResult()) > std::to_underlying(b->whiteResult());
+            }
+            if (aRank == 0) {
                 return false;
-            } else if (bRank == 0) {
+            }
+            if (bRank == 0) {
                 return true;
             }
 
@@ -633,8 +627,8 @@ QCoro::Task<std::expected<bool, QString>> Tournament::pairNextRound()
     const auto players = getPlayersByStartingRank();
 
     uint board = 1;
-    for (auto &pairing : *pairings) {
-        const auto whitePlayer = players.value(pairing.first);
+    for (const auto &pairing : *pairings) {
+        const auto &whitePlayer = players.value(pairing.first);
         Player *blackPlayer = nullptr;
         Pairing::PartialResult whiteResult = Pairing::PartialResult::PairingBye;
 
@@ -709,7 +703,7 @@ QVariant Tournament::getOption(const QString &name)
     return query.value(0);
 }
 
-void Tournament::setOption(const QString &name, QVariant value)
+void Tournament::setOption(const QString &name, const QVariant &value)
 {
     QSqlQuery query(m_event->getDB());
     query.prepare(UPDATE_OPTION_QUERY);

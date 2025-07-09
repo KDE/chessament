@@ -18,7 +18,7 @@ class PairingEngine : public QObject
     Q_OBJECT
 
 public:
-    explicit PairingEngine();
+    explicit PairingEngine() = default;
 
     QCoro::Task<std::expected<QList<std::pair<uint, uint>>, QString>> pair(int round, Tournament *tournament);
 };

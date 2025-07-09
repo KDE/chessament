@@ -142,7 +142,7 @@ public:
         return Title::None;
     }
 
-    explicit Player();
+    explicit Player() = default;
     explicit Player(int startingRank, const QString &name, int rating);
     explicit Player(int startingRank,
                     Player::Title title,

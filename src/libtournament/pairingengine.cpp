@@ -12,11 +12,6 @@
 
 using namespace std::literals::chrono_literals;
 
-PairingEngine::PairingEngine()
-    : QObject()
-{
-}
-
 QCoro::Task<std::expected<QList<std::pair<uint, uint>>, QString>> PairingEngine::pair(int round, Tournament *tournament)
 {
     const auto &path = QStandardPaths::findExecutable(u"bbpPairings"_s);

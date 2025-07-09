@@ -4,7 +4,6 @@
 #include "pairing.h"
 
 Pairing::Pairing(int board, Player *whitePlayer, Player *blackPlayer, PartialResult whiteResult, PartialResult blackResult)
-    : QObject()
 {
     m_board = board;
     m_whitePlayer = whitePlayer;
@@ -13,7 +12,7 @@ Pairing::Pairing(int board, Player *whitePlayer, Player *blackPlayer, PartialRes
     m_blackResult = blackResult;
 }
 
-int Pairing::id()
+int Pairing::id() const
 {
     return m_id;
 }
@@ -27,7 +26,7 @@ void Pairing::setId(int id)
     Q_EMIT idChanged();
 }
 
-int Pairing::board()
+int Pairing::board() const
 {
     return m_board;
 }
