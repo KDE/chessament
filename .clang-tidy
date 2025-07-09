@@ -10,6 +10,7 @@ Checks: >
   misc-*,
   modernize-*,
   -modernize-use-trailing-return-type,
+  -modernize-raw-string-literal,
   performance-*,
   portability-*,
   readability-*,

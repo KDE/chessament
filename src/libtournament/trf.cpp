@@ -1,137 +1,55 @@
-// SPDX-FileCopyrightText: 2024 Manuel Alcaraz Zambrano <manuelalcarazzam@gmail.com>
+// SPDX-FileCopyrightText: 2024-2025 Manuel Alcaraz Zambrano <manuelalcarazzam@gmail.com>
 // SPDX-License-Identifier: GPL-3.0-or-later
 
+#include "trf.h"
 #include "tournament.h"
 
 #include <KLocalizedString>
 
-std::expected<bool, QString> Tournament::readTrf(QTextStream trf)
+bool operator==(const TRFReader::pairing &a, const TRFReader::pairing &b) noexcept
 {
-    QMap<int, Player *> players = {};
-    QMap<std::tuple<int, int, int>, Pairing::Result> pairingsToAdd = {};
+    return a.round == b.round && a.white == b.white && a.black == b.black;
+}
 
-    while (!trf.atEnd()) {
-        auto line = trf.readLine();
+TRFReader::TRFReader(Tournament *tournament)
+    : m_tournament(tournament)
+{
+}
 
-        if (line.isEmpty()) {
+std::expected<void, QString> TRFReader::read(QTextStream *trf)
+{
+    QString line;
+    while (!trf->atEnd()) {
+        trf->readLineInto(&line);
+        QStringView view(line);
+
+        if (view.isEmpty()) {
             continue;
         }
 
-        auto fieldType = line.mid(0, 3);
-        auto field = Tournament::reportFieldForString(fieldType);
-
-        if (field == Tournament::ReportField::TournamentName) {
-            auto name = line.mid(4).trimmed();
-            setName(name);
-        } else if (field == Tournament::ReportField::City) {
-            auto city = line.mid(4).trimmed();
-            setCity(city);
-        } else if (field == Tournament::ReportField::Federation) {
-            auto federation = line.mid(4).trimmed();
-            setFederation(federation);
-        } else if (field == Tournament::ReportField::ChiefArbiter) {
-            auto chiefArbiter = line.mid(4).trimmed();
-            setChiefArbiter(chiefArbiter);
-        } else if (field == Tournament::ReportField::DeputyChiefArbiter) {
-            auto deputyChiefArbiter = line.mid(4).trimmed();
-            setDeputyChiefArbiter(deputyChiefArbiter);
-        } else if (field == Tournament::ReportField::TimeControl) {
-            auto timeControl = line.mid(4).trimmed();
-            setTimeControl(timeControl);
-        } else if (field == Tournament::ReportField::Player) {
-            auto startingRank = line.sliced(4, 4).toInt();
-            auto sex = line.sliced(9, 1).trimmed();
-            auto title = Player::titleForString(line.sliced(10, 3).trimmed());
-            auto name = line.sliced(14, 33).trimmed();
-            auto rating = line.sliced(48, 4).toInt();
-            auto federation = line.sliced(53, 5).trimmed();
-            auto playerId = line.sliced(57, 11).trimmed();
-            auto birthDate = line.sliced(69, 10).trimmed();
-
-            QString surname;
-            if (name.contains(','_L1)) {
-                const auto parts = name.split(u","_s);
-                if (parts.length() == 2) {
-                    surname = parts[0];
-                    name = parts[1];
-                }
-            }
-
-            auto player = new Player(startingRank, title, name, surname, rating, 0, playerId, birthDate, federation, {}, sex);
-            players[startingRank] = player;
-
-            // Read round
-            auto playerRounds = line.mid(91);
-            QString round;
-
-            for (int roundNumber = 1;; roundNumber++) {
-                round = playerRounds.mid(10 * (roundNumber - 1), 8);
-                if (round.isEmpty() || round == u"        "_s) {
-                    break;
-                }
-
-                if (round.size() != 8) {
-                    return std::unexpected(i18n("Invalid pairing \"%1\".", round));
-                }
-
-                std::tuple<int, int, int> pairing{};
-
-                auto opponent = round.first(4);
-                int opponentId = 0;
-                bool hasOpponent = !(opponent == u"    "_s || opponent == u"0000"_s);
-
-                if (hasOpponent) {
-                    bool ok;
-                    opponentId = opponent.toInt(&ok);
-                    if (!ok || opponentId <= 0) {
-                        return std::unexpected(i18n("Invalid player \"%1\" on pairing \"%2\".", QString::number(opponentId), round));
-                    }
-                }
-
-                auto color = Pairing::colorForString(round.at(5));
-                auto result = Pairing::partialResultForTRF(round.at(7));
-                if (result == Pairing::PartialResult::Unknown) {
-                    return std::unexpected(i18n("Unknown result \"%1\" on pairing \"%2\".", round.at(7), round));
-                }
-                if (!hasOpponent && !Pairing::isBye(result)) {
-                    return std::unexpected(i18n("Pairing \"%1\" has no opponent.", round));
-                }
-
-                if (color == Pairing::Color::White || !hasOpponent) {
-                    pairing = {roundNumber, startingRank, opponentId};
-                } else {
-                    pairing = {roundNumber, opponentId, startingRank};
-                }
-
-                auto newPairing = pairingsToAdd[pairing];
-                if (color == Pairing::Color::White || !hasOpponent) {
-                    newPairing.first = result;
-                } else {
-                    newPairing.second = result;
-                }
-                pairingsToAdd[pairing] = newPairing;
-            }
+        if (const auto ok = readField(view); !ok) {
+            return ok;
         }
     }
 
-    for (const auto &player : std::as_const(players)) {
-        addPlayer(std::unique_ptr<Player>(player));
+    for (const auto &player : std::as_const(m_players)) {
+        m_tournament->addPlayer(std::unique_ptr<Player>(player));
     }
 
-    for (auto pairing = pairingsToAdd.cbegin(), end = pairingsToAdd.cend(); pairing != end; ++pairing) {
+    for (auto pairing = m_pairings.cbegin(), end = m_pairings.cend(); pairing != end; ++pairing) {
         const auto [r, w, b] = pairing.key();
 
-        if (!players.contains(w)) {
+        if (!m_players.contains(w)) {
             return std::unexpected(i18n("Player \"%1\" not found.", w));
         }
-        auto whitePlayer = players.value(w);
+        const auto whitePlayer = m_players.value(w);
 
         Player *blackPlayer = nullptr;
         if (b != 0) {
-            if (!players.contains(b)) {
+            if (!m_players.contains(b)) {
                 return std::unexpected(i18n("Player \"%1\" not found.", b));
             }
-            blackPlayer = players.value(b);
+            blackPlayer = m_players.value(b);
         }
 
         if (pairing.value().first == Pairing::PartialResult::Unknown && pairing.value().second == Pairing::PartialResult::Unknown) {
@@ -139,31 +57,157 @@ std::expected<bool, QString> Tournament::readTrf(QTextStream trf)
         }
         auto par = std::make_unique<Pairing>(1, whitePlayer, blackPlayer, pairing.value().first, pairing.value().second);
 
-        addPairing(r, std::move(par));
+        m_tournament->addPairing(r, std::move(par));
     }
 
-    setNumberOfRounds(m_rounds.size());
+    m_tournament->setNumberOfRounds(m_tournament->m_rounds.size());
 
-    sortPairings();
+    m_tournament->sortPairings();
 
-    setCurrentRound(m_rounds.size());
-    for (int i = 1; i <= m_numberOfRounds; ++i) {
-        if (!isRoundFullyPaired(i)) {
-            setCurrentRound(i - 1);
+    m_tournament->setCurrentRound(m_tournament->m_rounds.size());
+    for (int i = 1; i <= m_tournament->m_numberOfRounds; ++i) {
+        if (!m_tournament->isRoundFullyPaired(i)) {
+            m_tournament->setCurrentRound(i - 1);
             break;
         }
     }
 
-    if (m_currentRound > 0) {
+    if (m_tournament->m_currentRound > 0) {
         Tournament::InitialColor color;
-        const auto pairing = getPairings(1)->front().get();
+        const auto pairing = m_tournament->getPairings(1)->front().get();
         if (pairing->whitePlayer()->startingRank() < pairing->blackPlayer()->startingRank()) {
             color = Tournament::InitialColor::White;
         } else {
             color = Tournament::InitialColor::Black;
         }
-        setInitialColor(color);
+        m_tournament->setInitialColor(color);
     }
 
-    return true;
+    return {};
+}
+
+std::expected<void, QString> TRFReader::readField(QStringView line)
+{
+    const auto fieldType = line.mid(0, 3);
+    const auto field = Tournament::reportFieldForString(fieldType);
+    const auto value = line.mid(4);
+
+    switch (field) {
+    case Tournament::ReportField::TournamentName:
+        m_tournament->m_name = value.trimmed().toString();
+        break;
+    case Tournament::ReportField::City:
+        m_tournament->m_city = value.trimmed().toString();
+        break;
+    case Tournament::ReportField::Federation:
+        m_tournament->m_federation = value.trimmed().toString();
+        break;
+    case Tournament::ReportField::ChiefArbiter:
+        m_tournament->m_chiefArbiter = value.trimmed().toString();
+        break;
+    case Tournament::ReportField::DeputyChiefArbiter:
+        m_tournament->m_deputyChiefArbiter = value.trimmed().toString();
+        break;
+    case Tournament::ReportField::TimeControl:
+        m_tournament->m_timeControl = value.trimmed().toString();
+        break;
+    case Tournament::ReportField::Player: {
+        if (const auto player = readPlayer(line); !player) {
+            return std::unexpected(player.error());
+        }
+        break;
+    }
+    default:
+        break;
+    }
+
+    return {};
+}
+
+std::expected<void, QString> TRFReader::readPlayer(QStringView line)
+{
+    const auto startingRank = line.sliced(4, 4).toInt();
+    const auto sex = line.sliced(9, 1).trimmed().toString();
+    const auto title = Player::titleForString(line.sliced(10, 3).trimmed().toString());
+    auto name = line.sliced(14, 33).trimmed().toString();
+    const auto rating = line.sliced(48, 4).toInt();
+    const auto federation = line.sliced(53, 5).trimmed().toString();
+    const auto playerId = line.sliced(57, 11).trimmed().toString();
+    const auto birthDate = line.sliced(69, 10).trimmed().toString();
+
+    QString surname;
+    if (name.contains(','_L1)) {
+        const auto parts = name.split(','_L1);
+        if (parts.length() == 2) {
+            surname = parts[0];
+            name = parts[1];
+        }
+    }
+
+    const auto player = new Player(startingRank, title, name, surname, rating, 0, playerId, birthDate, federation, {}, sex);
+    m_players[startingRank] = player;
+
+    // Read round
+    const auto playerRounds = line.mid(91);
+    QStringView round;
+
+    for (qsizetype roundNumber = 1;; roundNumber++) {
+        round = playerRounds.mid(10 * (roundNumber - 1), 8);
+
+        if (round.isEmpty() || round == "        "_L1) {
+            break;
+        }
+
+        if (const auto pairing = readPairing(startingRank, roundNumber, round); !pairing) {
+            return pairing;
+        }
+    }
+
+    return {};
+}
+
+std::expected<void, QString> TRFReader::readPairing(int startingRank, int round, QStringView text)
+{
+    if (text.size() != 8) {
+        return std::unexpected(i18n("Invalid pairing \"%1\".", text.toString()));
+    }
+
+    TRFReader::pairing pairing;
+
+    const auto opponent = text.first(4);
+    const bool hasOpponent = !(opponent == "    "_L1 || opponent == "0000"_L1);
+    int opponentId = 0;
+
+    if (hasOpponent) {
+        bool ok;
+        opponentId = opponent.toInt(&ok);
+        if (!ok || opponentId <= 0) {
+            return std::unexpected(i18n("Invalid player \"%1\" on pairing \"%2\".", QString::number(opponentId), text.toString()));
+        }
+    }
+
+    auto color = Pairing::colorForString(text.at(5));
+    auto result = Pairing::partialResultForTRF(text.at(7));
+    if (result == Pairing::PartialResult::Unknown) {
+        return std::unexpected(i18n("Unknown result \"%1\" on pairing \"%2\".", text.at(7), text.toString()));
+    }
+    if (!hasOpponent && !Pairing::isBye(result)) {
+        return std::unexpected(i18n("Pairing \"%1\" has no opponent.", text.toString()));
+    }
+
+    if (color == Pairing::Color::White || !hasOpponent) {
+        pairing = {.round = round, .white = startingRank, .black = opponentId};
+    } else {
+        pairing = {.round = round, .white = opponentId, .black = startingRank};
+    }
+
+    auto newPairing = m_pairings[pairing];
+    if (color == Pairing::Color::White || !hasOpponent) {
+        newPairing.first = result;
+    } else {
+        newPairing.second = result;
+    }
+    m_pairings[pairing] = newPairing;
+
+    return {};
 }

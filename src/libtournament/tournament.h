@@ -336,7 +336,7 @@ public:
         }
     };
 
-    static ReportField reportFieldForString(const QString &number)
+    static ReportField reportFieldForString(QStringView number)
     {
         if (number == QStringLiteral("001")) {
             return ReportField::Player;
@@ -436,7 +436,7 @@ public:
      *
      * Returns true if successful; false otherwise.
      */
-    std::expected<bool, QString> readTrf(QTextStream trf);
+    std::expected<void, QString> readTrf(QTextStream trf);
 
     /*!
      * Imports the tournament from a Tournament Report File (TRF).
@@ -445,7 +445,7 @@ public:
      *
      * Returns true if successful; false otherwise.
      */
-    std::expected<bool, QString> loadTrf(const QString &fileName);
+    std::expected<void, QString> loadTrf(const QString &fileName);
 
     /*!
      * Saves the Tournament Report File (TRF) to a file.
@@ -516,6 +516,7 @@ private:
     Tournament::InitialColor m_initialColor;
 
     friend class Event;
+    friend class TRFReader;
 };
 
 Q_DECLARE_OPERATORS_FOR_FLAGS(Tournament::TrfOptions)

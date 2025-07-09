@@ -14,6 +14,7 @@
 #include "event.h"
 #include "tiebreaks.h"
 #include "tournamentstate.h"
+#include "trf.h"
 
 Tournament::Tournament(Event *event, const QString &id)
     : m_event(event)
@@ -783,6 +784,12 @@ void Tournament::read(const QJsonObject &json)
     }
 }
 
+std::expected<void, QString> Tournament::readTrf(QTextStream trf)
+{
+    TRFReader reader{this};
+    return reader.read(&trf);
+}
+
 QString Tournament::toTrf(TrfOptions options, int maxRound)
 {
     QString result;
@@ -838,7 +845,7 @@ QString Tournament::toTrf(TrfOptions options, int maxRound)
     return result;
 }
 
-std::expected<bool, QString> Tournament::loadTrf(const QString &fileName)
+std::expected<void, QString> Tournament::loadTrf(const QString &fileName)
 {
     QFile file(fileName);
 
