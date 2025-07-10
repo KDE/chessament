@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-04 00:40+0000\n"
+"POT-Creation-Date: 2025-07-10 00:40+0000\n"
 "PO-Revision-Date: 2025-06-22 16:06+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.gal>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -59,42 +59,42 @@ msgctxt "@title"
 msgid "Round %1 Pairings"
 msgstr "Emparellamentos"
 
-#: libtournament/pairingengine.cpp:25
+#: libtournament/pairingengine.cpp:20
 #, kde-format
 msgctxt "bbpPairings is the name of a program, should not be translated"
 msgid "The pairing engine bbpPairings could not be found. Is it installed?"
 msgstr ""
 "Non foi posíbel atopar o motor de emparellamento bbpPairings. Está instalado?"
 
-#: libtournament/pairingengine.cpp:33
+#: libtournament/pairingengine.cpp:28
 #, kde-format
 msgid "Could not create temporary file."
 msgstr "Non foi posíbel crear o ficheiro temporal."
 
-#: libtournament/pairingengine.cpp:58
+#: libtournament/pairingengine.cpp:53
 #, kde-format
 msgctxt "bbpPairings is the name of a program, should not be translated"
 msgid "bbpPairings terminated with a non zero exit code: %1"
 msgstr "bbpPairings rematou cun código de saída distinto de cero: %1"
 
-#: libtournament/pairingengine.cpp:76 libtournament/trf.cpp:74
+#: libtournament/pairingengine.cpp:71 libtournament/trf.cpp:74
 #, kde-format
 msgid "Invalid pairing \"%1\"."
 msgstr "O emparellamento «%1» é incorrecto."
 
-#: libtournament/pairingengine.cpp:82 libtournament/pairingengine.cpp:86
-#: libtournament/pairingengine.cpp:90 libtournament/pairingengine.cpp:94
+#: libtournament/pairingengine.cpp:77 libtournament/pairingengine.cpp:81
+#: libtournament/pairingengine.cpp:85 libtournament/pairingengine.cpp:89
 #: libtournament/trf.cpp:87
 #, kde-format
 msgid "Invalid player \"%1\" on pairing \"%2\"."
 msgstr "A participante «%1» do emparellamento «%2» non é válida."
 
-#: libtournament/tournament.cpp:630
+#: libtournament/tournament.cpp:624
 #, kde-format
 msgid "An error ocurred while pairing the round: %1"
 msgstr "Produciuse un erro ao emparellar a rolda: %1"
 
-#: libtournament/tournament.cpp:852
+#: libtournament/tournament.cpp:846
 #, kde-format
 msgid "Couldn't open file"
 msgstr "Non foi posíbel abrir o ficheiro"

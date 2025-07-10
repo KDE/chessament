@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-04 00:40+0000\n"
+"POT-Creation-Date: 2025-07-10 00:40+0000\n"
 "PO-Revision-Date: 2025-07-04 06:15+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -56,42 +56,42 @@ msgctxt "@title"
 msgid "Round %1 Pairings"
 msgstr "Krog %1 Parov"
 
-#: libtournament/pairingengine.cpp:25
+#: libtournament/pairingengine.cpp:20
 #, kde-format
 msgctxt "bbpPairings is the name of a program, should not be translated"
 msgid "The pairing engine bbpPairings could not be found. Is it installed?"
 msgstr ""
 "Programa za uparjanje bbpPairings ni bilo mogoče najti. Ali je nameščen?"
 
-#: libtournament/pairingengine.cpp:33
+#: libtournament/pairingengine.cpp:28
 #, kde-format
 msgid "Could not create temporary file."
 msgstr "Začasne datoteke ni bilo mogoče ustvariti."
 
-#: libtournament/pairingengine.cpp:58
+#: libtournament/pairingengine.cpp:53
 #, kde-format
 msgctxt "bbpPairings is the name of a program, should not be translated"
 msgid "bbpPairings terminated with a non zero exit code: %1"
 msgstr "bbpPairings se je končal z neničelno kodo izhoda: %1"
 
-#: libtournament/pairingengine.cpp:76 libtournament/trf.cpp:74
+#: libtournament/pairingengine.cpp:71 libtournament/trf.cpp:74
 #, kde-format
 msgid "Invalid pairing \"%1\"."
 msgstr "Neveljaven par \"%1\"."
 
-#: libtournament/pairingengine.cpp:82 libtournament/pairingengine.cpp:86
-#: libtournament/pairingengine.cpp:90 libtournament/pairingengine.cpp:94
+#: libtournament/pairingengine.cpp:77 libtournament/pairingengine.cpp:81
+#: libtournament/pairingengine.cpp:85 libtournament/pairingengine.cpp:89
 #: libtournament/trf.cpp:87
 #, kde-format
 msgid "Invalid player \"%1\" on pairing \"%2\"."
 msgstr "Neveljaven igralec \"%1\" v paru \"%2\"."
 
-#: libtournament/tournament.cpp:630
+#: libtournament/tournament.cpp:624
 #, kde-format
 msgid "An error ocurred while pairing the round: %1"
 msgstr "Pri uparjanju kroga je prišlo do napake: %1"
 
-#: libtournament/tournament.cpp:852
+#: libtournament/tournament.cpp:846
 #, kde-format
 msgid "Couldn't open file"
 msgstr "Datoteke ni bilo mogoče odpreti"

@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-04 00:40+0000\n"
+"POT-Creation-Date: 2025-07-10 00:40+0000\n"
 "PO-Revision-Date: 2025-06-08 13:43+0200\n"
 "Last-Translator: Thomas Vergnaud <thomas.vergnaud@mailo.fr>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
@@ -57,41 +57,41 @@ msgctxt "@title"
 msgid "Round %1 Pairings"
 msgstr "Couplages"
 
-#: libtournament/pairingengine.cpp:25
+#: libtournament/pairingengine.cpp:20
 #, kde-format
 msgctxt "bbpPairings is the name of a program, should not be translated"
 msgid "The pairing engine bbpPairings could not be found. Is it installed?"
 msgstr "Le moteur de couplage bbpPairings est introuvable. Est-il installé ?"
 
-#: libtournament/pairingengine.cpp:33
+#: libtournament/pairingengine.cpp:28
 #, kde-format
 msgid "Could not create temporary file."
 msgstr "Impossible de créer un fichier temporaire."
 
-#: libtournament/pairingengine.cpp:58
+#: libtournament/pairingengine.cpp:53
 #, kde-format
 msgctxt "bbpPairings is the name of a program, should not be translated"
 msgid "bbpPairings terminated with a non zero exit code: %1"
 msgstr "bbpPairings terminé avec un code de sortie non nul : %1"
 
-#: libtournament/pairingengine.cpp:76 libtournament/trf.cpp:74
+#: libtournament/pairingengine.cpp:71 libtournament/trf.cpp:74
 #, kde-format
 msgid "Invalid pairing \"%1\"."
 msgstr "Couplage « %1 » non valable."
 
-#: libtournament/pairingengine.cpp:82 libtournament/pairingengine.cpp:86
-#: libtournament/pairingengine.cpp:90 libtournament/pairingengine.cpp:94
+#: libtournament/pairingengine.cpp:77 libtournament/pairingengine.cpp:81
+#: libtournament/pairingengine.cpp:85 libtournament/pairingengine.cpp:89
 #: libtournament/trf.cpp:87
 #, kde-format
 msgid "Invalid player \"%1\" on pairing \"%2\"."
 msgstr "Joueur « %1 » non valable pour le couplage « %2 »."
 
-#: libtournament/tournament.cpp:630
+#: libtournament/tournament.cpp:624
 #, kde-format
 msgid "An error ocurred while pairing the round: %1"
 msgstr "Une erreur s'est produite lors du couplage de la manche : %1"
 
-#: libtournament/tournament.cpp:852
+#: libtournament/tournament.cpp:846
 #, kde-format
 msgid "Couldn't open file"
 msgstr "Impossible d'ouvrir le fichier"
