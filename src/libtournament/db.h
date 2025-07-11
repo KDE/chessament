@@ -68,7 +68,7 @@ const QString ROUNDS_TABLE_SCHEMA =
     u");"_s;
 
 const QString ADD_ROUND_QUERY =
-    u"INSERT OR IGNORE INTO rounds(number, tournament) "_s
+    u"INSERT INTO rounds(number, tournament) "_s
     u"VALUES (:number, :tournament);"_s;
 
 const QString GET_ROUNDS_QUERY = u"SELECT * FROM rounds WHERE tournament = :tournament;"_s;
@@ -94,7 +94,8 @@ const QString ADD_PAIRING_QUERY =
 const QString GET_PAIRINGS_QUERY =
     u"SELECT * FROM pairings "_s
     u"JOIN rounds ON pairings.round = rounds.id "_s
-    u"WHERE rounds.tournament = :tournament;"_s;
+    u"WHERE rounds.tournament = :tournament "_s
+    u"ORDER BY rounds.number, pairings.board;"_s;
 
 const QString UPDATE_PAIRING_QUERY =
     u"UPDATE pairings SET (board, whitePlayer, blackPlayer, whiteResult, blackResult) = "_s

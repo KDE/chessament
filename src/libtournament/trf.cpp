@@ -37,27 +37,28 @@ std::expected<void, QString> TRFReader::read(QTextStream *trf)
     }
 
     for (auto pairing = m_pairings.cbegin(), end = m_pairings.cend(); pairing != end; ++pairing) {
-        const auto [r, w, b] = pairing.key();
+        const auto key = pairing.key();
+        const auto result = pairing.value();
 
-        if (!m_players.contains(w)) {
-            return std::unexpected(i18n("Player \"%1\" not found.", w));
+        if (!m_players.contains(key.white)) {
+            return std::unexpected(i18n("Player \"%1\" not found.", key.white));
         }
-        const auto whitePlayer = m_players.value(w);
+        const auto whitePlayer = m_players.value(key.white);
 
         Player *blackPlayer = nullptr;
-        if (b != 0) {
-            if (!m_players.contains(b)) {
-                return std::unexpected(i18n("Player \"%1\" not found.", b));
+        if (key.black != 0) {
+            if (!m_players.contains(key.black)) {
+                return std::unexpected(i18n("Player \"%1\" not found.", key.black));
             }
-            blackPlayer = m_players.value(b);
+            blackPlayer = m_players.value(key.black);
         }
 
-        if (pairing.value().first == Pairing::PartialResult::Unknown && pairing.value().second == Pairing::PartialResult::Unknown) {
-            return std::unexpected(i18n("Unknown result on pairing \"%1\" with \"%2\".", QString::number(w), QString::number(b)));
+        if (result.first == Pairing::PartialResult::Unknown && result.second == Pairing::PartialResult::Unknown) {
+            return std::unexpected(i18n("Unknown result on pairing \"%1\" with \"%2\".", QString::number(key.white), QString::number(key.black)));
         }
         auto par = std::make_unique<Pairing>(1, whitePlayer, blackPlayer, pairing.value().first, pairing.value().second);
 
-        m_tournament->addPairing(r, std::move(par));
+        m_tournament->addPairing(key.round, std::move(par));
     }
 
     m_tournament->setNumberOfRounds(m_tournament->m_rounds.size());
@@ -94,22 +95,22 @@ std::expected<void, QString> TRFReader::readField(QStringView line)
 
     switch (field) {
     case Tournament::ReportField::TournamentName:
-        m_tournament->m_name = value.trimmed().toString();
+        m_tournament->setName(value.trimmed().toString());
         break;
     case Tournament::ReportField::City:
-        m_tournament->m_city = value.trimmed().toString();
+        m_tournament->setCity(value.trimmed().toString());
         break;
     case Tournament::ReportField::Federation:
-        m_tournament->m_federation = value.trimmed().toString();
+        m_tournament->setFederation(value.trimmed().toString());
         break;
     case Tournament::ReportField::ChiefArbiter:
-        m_tournament->m_chiefArbiter = value.trimmed().toString();
+        m_tournament->setChiefArbiter(value.trimmed().toString());
         break;
     case Tournament::ReportField::DeputyChiefArbiter:
-        m_tournament->m_deputyChiefArbiter = value.trimmed().toString();
+        m_tournament->setDeputyChiefArbiter(value.trimmed().toString());
         break;
     case Tournament::ReportField::TimeControl:
-        m_tournament->m_timeControl = value.trimmed().toString();
+        m_tournament->setTimeControl(value.trimmed().toString());
         break;
     case Tournament::ReportField::Player: {
         if (const auto player = readPlayer(line); !player) {
