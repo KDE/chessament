@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-10 00:40+0000\n"
+"POT-Creation-Date: 2025-07-11 00:40+0000\n"
 "PO-Revision-Date: 2025-07-04 04:58+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -76,47 +76,47 @@ msgctxt "bbpPairings is the name of a program, should not be translated"
 msgid "bbpPairings terminated with a non zero exit code: %1"
 msgstr "bbpPairings დასრულდა არანულოვანი გასვლის კოდით: %1"
 
-#: libtournament/pairingengine.cpp:71 libtournament/trf.cpp:74
+#: libtournament/pairingengine.cpp:71 libtournament/trf.cpp:172
 #, kde-format
 msgid "Invalid pairing \"%1\"."
 msgstr "არასწორი დაწყვილება \"%1\"."
 
 #: libtournament/pairingengine.cpp:77 libtournament/pairingengine.cpp:81
 #: libtournament/pairingengine.cpp:85 libtournament/pairingengine.cpp:89
-#: libtournament/trf.cpp:87
+#: libtournament/trf.cpp:185
 #, kde-format
 msgid "Invalid player \"%1\" on pairing \"%2\"."
 msgstr "არასწორი მოთამაშე \"%1\" დაწყვილებისთვის \"%2\"."
 
-#: libtournament/tournament.cpp:624
+#: libtournament/tournament.cpp:625
 #, kde-format
 msgid "An error ocurred while pairing the round: %1"
 msgstr "შეცდომა რაუნდის წყვილების შერჩევისას: %1"
 
-#: libtournament/tournament.cpp:846
+#: libtournament/tournament.cpp:853
 #, kde-format
 msgid "Couldn't open file"
 msgstr "ფაილი ვერ გავხსენი"
 
-#: libtournament/trf.cpp:94
-#, kde-format
-msgid "Unknown result \"%1\" on pairing \"%2\"."
-msgstr "უცნობი შედეგი '%1' დაწყვილებისთვის \"%2\"."
-
-#: libtournament/trf.cpp:97
-#, kde-format
-msgid "Pairing \"%1\" has no opponent."
-msgstr "წყვილს \"%1\" ოპონენტი არ გააჩნია."
-
-#: libtournament/trf.cpp:125 libtournament/trf.cpp:132
+#: libtournament/trf.cpp:43 libtournament/trf.cpp:50
 #, kde-format
 msgid "Player \"%1\" not found."
 msgstr "მოთამაშე %1 აღმოჩენილი არაა."
 
-#: libtournament/trf.cpp:138
+#: libtournament/trf.cpp:56
 #, kde-format
 msgid "Unknown result on pairing \"%1\" with \"%2\"."
 msgstr "უცნობი შედეგი %1-ის %2-სთან დაწყვილებიდან."
+
+#: libtournament/trf.cpp:192
+#, kde-format
+msgid "Unknown result \"%1\" on pairing \"%2\"."
+msgstr "უცნობი შედეგი '%1' დაწყვილებისთვის \"%2\"."
+
+#: libtournament/trf.cpp:195
+#, kde-format
+msgid "Pairing \"%1\" has no opponent."
+msgstr "წყვილს \"%1\" ოპონენტი არ გააჩნია."
 
 #: main.cpp:57 qml/WelcomePage.qml:15
 #, kde-format

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-10 00:40+0000\n"
+"POT-Creation-Date: 2025-07-11 00:40+0000\n"
 "PO-Revision-Date: 2025-05-12 14:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -75,46 +75,46 @@ msgctxt "bbpPairings is the name of a program, should not be translated"
 msgid "bbpPairings terminated with a non zero exit code: %1"
 msgstr ""
 
-#: libtournament/pairingengine.cpp:71 libtournament/trf.cpp:74
+#: libtournament/pairingengine.cpp:71 libtournament/trf.cpp:172
 #, kde-format
 msgid "Invalid pairing \"%1\"."
 msgstr ""
 
 #: libtournament/pairingengine.cpp:77 libtournament/pairingengine.cpp:81
 #: libtournament/pairingengine.cpp:85 libtournament/pairingengine.cpp:89
-#: libtournament/trf.cpp:87
+#: libtournament/trf.cpp:185
 #, kde-format
 msgid "Invalid player \"%1\" on pairing \"%2\"."
 msgstr ""
 
-#: libtournament/tournament.cpp:624
+#: libtournament/tournament.cpp:625
 #, kde-format
 msgid "An error ocurred while pairing the round: %1"
 msgstr ""
 
-#: libtournament/tournament.cpp:846
+#: libtournament/tournament.cpp:853
 #, kde-format
 msgid "Couldn't open file"
 msgstr ""
 
-#: libtournament/trf.cpp:94
-#, kde-format
-msgid "Unknown result \"%1\" on pairing \"%2\"."
-msgstr ""
-
-#: libtournament/trf.cpp:97
-#, kde-format
-msgid "Pairing \"%1\" has no opponent."
-msgstr ""
-
-#: libtournament/trf.cpp:125 libtournament/trf.cpp:132
+#: libtournament/trf.cpp:43 libtournament/trf.cpp:50
 #, kde-format
 msgid "Player \"%1\" not found."
 msgstr ""
 
-#: libtournament/trf.cpp:138
+#: libtournament/trf.cpp:56
 #, kde-format
 msgid "Unknown result on pairing \"%1\" with \"%2\"."
+msgstr ""
+
+#: libtournament/trf.cpp:192
+#, kde-format
+msgid "Unknown result \"%1\" on pairing \"%2\"."
+msgstr ""
+
+#: libtournament/trf.cpp:195
+#, kde-format
+msgid "Pairing \"%1\" has no opponent."
 msgstr ""
 
 #: main.cpp:57 qml/WelcomePage.qml:15
