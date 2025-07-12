@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-11 00:40+0000\n"
-"PO-Revision-Date: 2025-06-04 09:13+0300\n"
+"POT-Creation-Date: 2025-07-12 00:40+0000\n"
+"PO-Revision-Date: 2025-07-11 17:59+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -76,45 +76,44 @@ msgctxt "bbpPairings is the name of a program, should not be translated"
 msgid "bbpPairings terminated with a non zero exit code: %1"
 msgstr ""
 
-#: libtournament/pairingengine.cpp:71 libtournament/trf.cpp:172
+#: libtournament/pairingengine.cpp:71 libtournament/trf.cpp:173
 #, kde-format
 msgid "Invalid pairing \"%1\"."
 msgstr ""
 
 #: libtournament/pairingengine.cpp:77 libtournament/pairingengine.cpp:81
 #: libtournament/pairingengine.cpp:85 libtournament/pairingengine.cpp:89
-#: libtournament/trf.cpp:185
+#: libtournament/trf.cpp:186
 #, kde-format
 msgid "Invalid player \"%1\" on pairing \"%2\"."
 msgstr ""
 
-#: libtournament/tournament.cpp:625
+#: libtournament/tournament.cpp:629
 #, kde-format
 msgid "An error ocurred while pairing the round: %1"
 msgstr ""
 
-#: libtournament/tournament.cpp:853
+#: libtournament/tournament.cpp:857
 #, kde-format
 msgid "Couldn't open file"
 msgstr "Tiedostoa ei voitu avata"
 
-#: libtournament/trf.cpp:43 libtournament/trf.cpp:50
-#, fuzzy, kde-format
-#| msgid "Player %1 not found"
+#: libtournament/trf.cpp:44 libtournament/trf.cpp:51
+#, kde-format
 msgid "Player \"%1\" not found."
-msgstr "Pelaajaa %1 ei löytynyt"
+msgstr "Pelaajaa ”%1” ei löytynyt."
 
-#: libtournament/trf.cpp:56
+#: libtournament/trf.cpp:57
 #, kde-format
 msgid "Unknown result on pairing \"%1\" with \"%2\"."
 msgstr ""
 
-#: libtournament/trf.cpp:192
+#: libtournament/trf.cpp:193
 #, kde-format
 msgid "Unknown result \"%1\" on pairing \"%2\"."
 msgstr ""
 
-#: libtournament/trf.cpp:195
+#: libtournament/trf.cpp:196
 #, kde-format
 msgid "Pairing \"%1\" has no opponent."
 msgstr ""
@@ -462,25 +461,25 @@ msgstr "Ei vielä pelaajia"
 #, kde-format
 msgctxt "@label:listbox"
 msgid "First player color:"
-msgstr ""
+msgstr "Ensimmäisen pelaajan väri:"
 
 #: qml/PairRoundDialog.qml:41
 #, kde-format
 msgctxt "@item:inlistbox As in 'Random color'"
 msgid "Random"
-msgstr ""
+msgstr "Satunnainen"
 
 #: qml/PairRoundDialog.qml:45
 #, kde-format
 msgctxt "@item:inlistbox As in 'White pieces'"
 msgid "White"
-msgstr ""
+msgstr "Valkoinen"
 
 #: qml/PairRoundDialog.qml:49
 #, kde-format
 msgctxt "@item:inlistbox As in 'Black pieces'"
 msgid "Black"
-msgstr ""
+msgstr "Musta"
 
 #: qml/PlayersPage.qml:49
 #, fuzzy, kde-format
@@ -774,7 +773,7 @@ msgstr "Tervetuloa Chessamentiin"
 #, kde-format
 msgctxt "@info"
 msgid "Chessament is a chess tournament manager"
-msgstr ""
+msgstr "Chessament on šakkiturnausten hallintasovellus"
 
 #: settings/ChessamentConfigurationView.qml:19
 #, kde-format
@@ -814,7 +813,7 @@ msgstr "Kirjaudu ulos"
 #, kde-format
 msgctxt "@title:colunm"
 msgid "Rank"
-msgstr ""
+msgstr "Sijoitus"
 
 #~ msgctxt "@action:button"
 #~ msgid "Save As…"

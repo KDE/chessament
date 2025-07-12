@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-11 00:40+0000\n"
+"POT-Creation-Date: 2025-07-12 00:40+0000\n"
 "PO-Revision-Date: 2025-07-04 11:04+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -76,44 +76,44 @@ msgctxt "bbpPairings is the name of a program, should not be translated"
 msgid "bbpPairings terminated with a non zero exit code: %1"
 msgstr "bbpPairings beëindigd met een niet-nul exitcode: %1"
 
-#: libtournament/pairingengine.cpp:71 libtournament/trf.cpp:172
+#: libtournament/pairingengine.cpp:71 libtournament/trf.cpp:173
 #, kde-format
 msgid "Invalid pairing \"%1\"."
 msgstr "Ongeldige paring \"%1\"."
 
 #: libtournament/pairingengine.cpp:77 libtournament/pairingengine.cpp:81
 #: libtournament/pairingengine.cpp:85 libtournament/pairingengine.cpp:89
-#: libtournament/trf.cpp:185
+#: libtournament/trf.cpp:186
 #, kde-format
 msgid "Invalid player \"%1\" on pairing \"%2\"."
 msgstr "Ongeldige speler \"%1\" voor paring \"%2\"."
 
-#: libtournament/tournament.cpp:625
+#: libtournament/tournament.cpp:629
 #, kde-format
 msgid "An error ocurred while pairing the round: %1"
 msgstr "Er deed zich een fout voor tijdens paring van ronde: %1"
 
-#: libtournament/tournament.cpp:853
+#: libtournament/tournament.cpp:857
 #, kde-format
 msgid "Couldn't open file"
 msgstr "Kon bestand niet openen"
 
-#: libtournament/trf.cpp:43 libtournament/trf.cpp:50
+#: libtournament/trf.cpp:44 libtournament/trf.cpp:51
 #, kde-format
 msgid "Player \"%1\" not found."
 msgstr "Speler \"%1\" niet gevonden."
 
-#: libtournament/trf.cpp:56
+#: libtournament/trf.cpp:57
 #, kde-format
 msgid "Unknown result on pairing \"%1\" with \"%2\"."
 msgstr "Onbekend resultaat op paring \"%1\" met \"%2\"."
 
-#: libtournament/trf.cpp:192
+#: libtournament/trf.cpp:193
 #, kde-format
 msgid "Unknown result \"%1\" on pairing \"%2\"."
 msgstr "Onbekend resultaat \"%1\" bij paring \"%2\""
 
-#: libtournament/trf.cpp:195
+#: libtournament/trf.cpp:196
 #, kde-format
 msgid "Pairing \"%1\" has no opponent."
 msgstr "Paring \"%1\" heeft geen tegenstander."

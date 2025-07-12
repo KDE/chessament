@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-11 00:40+0000\n"
+"POT-Creation-Date: 2025-07-12 00:40+0000\n"
 "PO-Revision-Date: 2025-07-04 12:20+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -77,44 +77,44 @@ msgctxt "bbpPairings is the name of a program, should not be translated"
 msgid "bbpPairings terminated with a non zero exit code: %1"
 msgstr "Роботу bbpPairings перервано з ненульовим кодом виходу: %1"
 
-#: libtournament/pairingengine.cpp:71 libtournament/trf.cpp:172
+#: libtournament/pairingengine.cpp:71 libtournament/trf.cpp:173
 #, kde-format
 msgid "Invalid pairing \"%1\"."
 msgstr "Некоректний розподіл на пари «%1»."
 
 #: libtournament/pairingengine.cpp:77 libtournament/pairingengine.cpp:81
 #: libtournament/pairingengine.cpp:85 libtournament/pairingengine.cpp:89
-#: libtournament/trf.cpp:185
+#: libtournament/trf.cpp:186
 #, kde-format
 msgid "Invalid player \"%1\" on pairing \"%2\"."
 msgstr "Некоректний гравець «%1» у поділі на пари «%2»."
 
-#: libtournament/tournament.cpp:625
+#: libtournament/tournament.cpp:629
 #, kde-format
 msgid "An error ocurred while pairing the round: %1"
 msgstr "Під час поділу на пари для раунду сталася помилка: %1"
 
-#: libtournament/tournament.cpp:853
+#: libtournament/tournament.cpp:857
 #, kde-format
 msgid "Couldn't open file"
 msgstr "Не вдалося відкрити файл"
 
-#: libtournament/trf.cpp:43 libtournament/trf.cpp:50
+#: libtournament/trf.cpp:44 libtournament/trf.cpp:51
 #, kde-format
 msgid "Player \"%1\" not found."
 msgstr "Гравця «%1» не знайдено."
 
-#: libtournament/trf.cpp:56
+#: libtournament/trf.cpp:57
 #, kde-format
 msgid "Unknown result on pairing \"%1\" with \"%2\"."
 msgstr "Невідомий результат для поділу на пари «%1» з «%2»."
 
-#: libtournament/trf.cpp:192
+#: libtournament/trf.cpp:193
 #, kde-format
 msgid "Unknown result \"%1\" on pairing \"%2\"."
 msgstr "Невідомий результат «%1» у поділі на пари «%2»."
 
-#: libtournament/trf.cpp:195
+#: libtournament/trf.cpp:196
 #, kde-format
 msgid "Pairing \"%1\" has no opponent."
 msgstr "У парах «%1» немає суперника."

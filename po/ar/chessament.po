@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-11 00:40+0000\n"
+"POT-Creation-Date: 2025-07-12 00:40+0000\n"
 "PO-Revision-Date: 2025-07-03 09:58+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -77,44 +77,44 @@ msgctxt "bbpPairings is the name of a program, should not be translated"
 msgid "bbpPairings terminated with a non zero exit code: %1"
 msgstr "انتهى bbpPairings برمز خروج غير صفري: %1"
 
-#: libtournament/pairingengine.cpp:71 libtournament/trf.cpp:172
+#: libtournament/pairingengine.cpp:71 libtournament/trf.cpp:173
 #, kde-format
 msgid "Invalid pairing \"%1\"."
 msgstr "الاقتران غير صالح ”%1“."
 
 #: libtournament/pairingengine.cpp:77 libtournament/pairingengine.cpp:81
 #: libtournament/pairingengine.cpp:85 libtournament/pairingengine.cpp:89
-#: libtournament/trf.cpp:185
+#: libtournament/trf.cpp:186
 #, kde-format
 msgid "Invalid player \"%1\" on pairing \"%2\"."
 msgstr "اللاعب غير صالح ”%1“ على الاقتران ”%2“."
 
-#: libtournament/tournament.cpp:625
+#: libtournament/tournament.cpp:629
 #, kde-format
 msgid "An error ocurred while pairing the round: %1"
 msgstr "حدث خطأ أثناء إقران الجولة: %1"
 
-#: libtournament/tournament.cpp:853
+#: libtournament/tournament.cpp:857
 #, kde-format
 msgid "Couldn't open file"
 msgstr "لا يمكن فتح الملف"
 
-#: libtournament/trf.cpp:43 libtournament/trf.cpp:50
+#: libtournament/trf.cpp:44 libtournament/trf.cpp:51
 #, kde-format
 msgid "Player \"%1\" not found."
 msgstr "اللاعب ”%1“ غير موجود."
 
-#: libtournament/trf.cpp:56
+#: libtournament/trf.cpp:57
 #, kde-format
 msgid "Unknown result on pairing \"%1\" with \"%2\"."
 msgstr "نتيجة غير معروفة عند إقران ”%1“ مع ”%2“."
 
-#: libtournament/trf.cpp:192
+#: libtournament/trf.cpp:193
 #, kde-format
 msgid "Unknown result \"%1\" on pairing \"%2\"."
 msgstr "نتيجة غير معروفة ”%1“ على الاقتران ”%2“."
 
-#: libtournament/trf.cpp:195
+#: libtournament/trf.cpp:196
 #, kde-format
 msgid "Pairing \"%1\" has no opponent."
 msgstr "الاقتران ”%1“ ليس له خصم ”%1“."

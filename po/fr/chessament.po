@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-11 00:40+0000\n"
+"POT-Creation-Date: 2025-07-12 00:40+0000\n"
 "PO-Revision-Date: 2025-06-08 13:43+0200\n"
 "Last-Translator: Thomas Vergnaud <thomas.vergnaud@mailo.fr>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
@@ -74,44 +74,44 @@ msgctxt "bbpPairings is the name of a program, should not be translated"
 msgid "bbpPairings terminated with a non zero exit code: %1"
 msgstr "bbpPairings terminé avec un code de sortie non nul : %1"
 
-#: libtournament/pairingengine.cpp:71 libtournament/trf.cpp:172
+#: libtournament/pairingengine.cpp:71 libtournament/trf.cpp:173
 #, kde-format
 msgid "Invalid pairing \"%1\"."
 msgstr "Couplage « %1 » non valable."
 
 #: libtournament/pairingengine.cpp:77 libtournament/pairingengine.cpp:81
 #: libtournament/pairingengine.cpp:85 libtournament/pairingengine.cpp:89
-#: libtournament/trf.cpp:185
+#: libtournament/trf.cpp:186
 #, kde-format
 msgid "Invalid player \"%1\" on pairing \"%2\"."
 msgstr "Joueur « %1 » non valable pour le couplage « %2 »."
 
-#: libtournament/tournament.cpp:625
+#: libtournament/tournament.cpp:629
 #, kde-format
 msgid "An error ocurred while pairing the round: %1"
 msgstr "Une erreur s'est produite lors du couplage de la manche : %1"
 
-#: libtournament/tournament.cpp:853
+#: libtournament/tournament.cpp:857
 #, kde-format
 msgid "Couldn't open file"
 msgstr "Impossible d'ouvrir le fichier"
 
-#: libtournament/trf.cpp:43 libtournament/trf.cpp:50
+#: libtournament/trf.cpp:44 libtournament/trf.cpp:51
 #, kde-format
 msgid "Player \"%1\" not found."
 msgstr "Joueur « %1 » introuvable."
 
-#: libtournament/trf.cpp:56
+#: libtournament/trf.cpp:57
 #, kde-format
 msgid "Unknown result on pairing \"%1\" with \"%2\"."
 msgstr "Résultat inconnu lors du couplage de « %1 » avec « %2 »."
 
-#: libtournament/trf.cpp:192
+#: libtournament/trf.cpp:193
 #, kde-format
 msgid "Unknown result \"%1\" on pairing \"%2\"."
 msgstr "Résultat inconnu « %1 » pour le couplage « %2 »."
 
-#: libtournament/trf.cpp:195
+#: libtournament/trf.cpp:196
 #, kde-format
 msgid "Pairing \"%1\" has no opponent."
 msgstr "Le couplage « %1 » n'a pas d'adversaire."
