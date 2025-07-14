@@ -21,602 +21,602 @@ msgstr ""
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "New tournament…"
-msgstr ""
+msgstr "新比赛..."
 
 #: chessamentapplication.cpp:44
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Import tournament report…"
-msgstr ""
+msgstr "导入比赛报告..."
 
 #: chessamentapplication.cpp:53
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Export tournament report…"
-msgstr ""
+msgstr "导出比赛报告..."
 
 #: chessamentapplication.cpp:61
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Connect account"
-msgstr ""
+msgstr "关联账户"
 
 #: controller.cpp:139
 #, kde-format
 msgid "Couldn't export tournament."
-msgstr ""
+msgstr "无法导出比赛。"
 
 #: documents.cpp:16
 #, kde-format
 msgctxt "@title"
 msgid "Starting Rank"
-msgstr ""
+msgstr "初始排名"
 
 #: documents.cpp:44
 #, kde-format
 msgctxt "@title"
 msgid "Round %1 Pairings"
-msgstr ""
+msgstr "第 %1 轮对阵"
 
 #: libtournament/pairingengine.cpp:20
 #, kde-format
 msgctxt "bbpPairings is the name of a program, should not be translated"
 msgid "The pairing engine bbpPairings could not be found. Is it installed?"
-msgstr ""
+msgstr "未找到对阵引擎 bbpPairings。是否已安装？"
 
 #: libtournament/pairingengine.cpp:28
 #, kde-format
 msgid "Could not create temporary file."
-msgstr ""
+msgstr "无法创建临时文件。"
 
 #: libtournament/pairingengine.cpp:53
 #, kde-format
 msgctxt "bbpPairings is the name of a program, should not be translated"
 msgid "bbpPairings terminated with a non zero exit code: %1"
-msgstr ""
+msgstr "对阵引擎 bbpPairings 已终止，非零退出代码：%1"
 
 #: libtournament/pairingengine.cpp:71 libtournament/trf.cpp:173
 #, kde-format
 msgid "Invalid pairing \"%1\"."
-msgstr ""
+msgstr "无效对阵“%1”。"
 
 #: libtournament/pairingengine.cpp:77 libtournament/pairingengine.cpp:81
 #: libtournament/pairingengine.cpp:85 libtournament/pairingengine.cpp:89
 #: libtournament/trf.cpp:186
 #, kde-format
 msgid "Invalid player \"%1\" on pairing \"%2\"."
-msgstr ""
+msgstr "对阵“%2”中的无效选手“%1”。"
 
 #: libtournament/tournament.cpp:629
 #, kde-format
 msgid "An error ocurred while pairing the round: %1"
-msgstr ""
+msgstr "在生成本轮对阵时发生错误：%1"
 
 #: libtournament/tournament.cpp:857
 #, kde-format
 msgid "Couldn't open file"
-msgstr ""
+msgstr "无法打开文件"
 
 #: libtournament/trf.cpp:44 libtournament/trf.cpp:51
 #, kde-format
 msgid "Player \"%1\" not found."
-msgstr ""
+msgstr "无法找到玩家“%1”。"
 
 #: libtournament/trf.cpp:57
 #, kde-format
 msgid "Unknown result on pairing \"%1\" with \"%2\"."
-msgstr ""
+msgstr "配对“%1”和“%2”时出现未知结果。"
 
 #: libtournament/trf.cpp:193
 #, kde-format
 msgid "Unknown result \"%1\" on pairing \"%2\"."
-msgstr ""
+msgstr "对阵“%2”时出现未知结果“%1”。"
 
 #: libtournament/trf.cpp:196
 #, kde-format
 msgid "Pairing \"%1\" has no opponent."
-msgstr ""
+msgstr "对阵“%1”无对手。"
 
 #: main.cpp:57 qml/WelcomePage.qml:15
 #, kde-format
 msgctxt "@title"
 msgid "Chessament"
-msgstr ""
+msgstr "Chessament"
 
 #: main.cpp:61
 #, kde-format
 msgid "Chess Tournament Manager"
-msgstr ""
+msgstr "国际象棋赛事管理系统"
 
 #: main.cpp:65
 #, kde-format
 msgid "© 2024 Manuel Alcaraz Zambrano"
-msgstr ""
+msgstr "© 2024 Manuel Alcaraz Zambrano"
 
 #: main.cpp:66
 #, kde-format
 msgctxt "@info:credit"
 msgid "Manuel Alcaraz Zambrano"
-msgstr ""
+msgstr "Manuel Alcaraz Zambrano"
 
 #: main.cpp:67
 #, kde-format
 msgctxt "@info:credit"
 msgid "Author & Maintainer"
-msgstr ""
+msgstr "作者和维护者"
 
 #: main.cpp:70
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr ""
+msgstr "KDE 中国, Eric Zhao"
 
 #: main.cpp:70
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr ""
+msgstr "kde-china@kde.org, zhaojiale20060708@outlook.com"
 
 #: pairingmodel.cpp:92
 #, kde-format
 msgctxt "@title:column"
 msgid "Board"
-msgstr ""
+msgstr "棋盘"
 
 #: pairingmodel.cpp:94 pairingmodel.cpp:102 playersmodel.cpp:145
 #: standingsmodel.cpp:61
 #, kde-format
 msgctxt "@title:column"
 msgid "No"
-msgstr ""
+msgstr "序数"
 
 #: pairingmodel.cpp:96
 #, kde-format
 msgctxt "@title:column"
 msgid "White player"
-msgstr ""
+msgstr "执白"
 
 #: pairingmodel.cpp:98
 #, kde-format
 msgctxt "@title:column"
 msgid "Result"
-msgstr ""
+msgstr "结果"
 
 #: pairingmodel.cpp:100
 #, kde-format
 msgctxt "@title:column"
 msgid "Black Player"
-msgstr ""
+msgstr "执黑"
 
 #: playersmodel.cpp:147 standingsmodel.cpp:63
 #, kde-format
 msgctxt "@title:column"
 msgid "Title"
-msgstr ""
+msgstr "标题"
 
 #: playersmodel.cpp:149 standingsmodel.cpp:65
 #, kde-format
 msgctxt "@title:column"
 msgid "Name"
-msgstr ""
+msgstr "姓名"
 
 #: playersmodel.cpp:151
 #, kde-format
 msgctxt "@title:column"
 msgid "Surname"
-msgstr ""
+msgstr "姓氏"
 
 #: playersmodel.cpp:153
 #, kde-format
 msgctxt "@title:column"
 msgid "Rating"
-msgstr ""
+msgstr "评分"
 
 #: playersmodel.cpp:155
 #, kde-format
 msgctxt "@title:column"
 msgid "National rating"
-msgstr ""
+msgstr "国家级评级"
 
 #: playersmodel.cpp:157
 #, kde-format
 msgctxt "@title:column"
 msgid "Player ID"
-msgstr ""
+msgstr "玩家 ID"
 
 #: playersmodel.cpp:159
 #, kde-format
 msgctxt "@title:column"
 msgid "Birth date"
-msgstr ""
+msgstr "出生日期"
 
 #: playersmodel.cpp:161
 #, kde-format
 msgctxt "@title:column"
 msgid "Federation"
-msgstr ""
+msgstr "已知实例"
 
 #: playersmodel.cpp:163
 #, kde-format
 msgctxt "@title:column"
 msgid "Origin"
-msgstr ""
+msgstr "来源"
 
 #: playersmodel.cpp:165
 #, kde-format
 msgctxt "@title:column"
 msgid "Sex"
-msgstr ""
+msgstr "性别"
 
 #: playersmodel.cpp:167
 #, kde-format
 msgctxt "@title:column"
 msgid "Full Name"
-msgstr ""
+msgstr "全名"
 
 #: qml/AddPlayerDialog.qml:16
 #, kde-format
 msgctxt "@title:window"
 msgid "Add player"
-msgstr ""
+msgstr "添加玩家"
 
 #: qml/AddPlayerDialog.qml:53
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Title"
-msgstr ""
+msgstr "标题"
 
 #: qml/AddPlayerDialog.qml:59
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Name"
-msgstr ""
+msgstr "姓名"
 
 #: qml/AddPlayerDialog.qml:64
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Rating"
-msgstr ""
+msgstr "评分"
 
 #: qml/AddPlayerDialog.qml:71
 #, kde-format
 msgctxt "@label:textbox"
 msgid "National rating"
-msgstr ""
+msgstr "国家级评级"
 
 #: qml/AddPlayerDialog.qml:78
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Player ID"
-msgstr ""
+msgstr "玩家 ID"
 
 #: qml/AddPlayerDialog.qml:79 qml/AddPlayerDialog.qml:85
 #: qml/AddPlayerDialog.qml:91 qml/AddPlayerDialog.qml:97
 #: qml/AddPlayerDialog.qml:103
 #, kde-format
 msgid "Optional"
-msgstr ""
+msgstr "可选"
 
 #: qml/AddPlayerDialog.qml:84
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Birth date"
-msgstr ""
+msgstr "出生日期"
 
 #: qml/AddPlayerDialog.qml:90 qml/TournamentSettingsInformation.qml:37
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Federation"
-msgstr ""
+msgstr "已知实例"
 
 #: qml/AddPlayerDialog.qml:96
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Origin"
-msgstr ""
+msgstr "来源"
 
 #: qml/AddPlayerDialog.qml:102
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Sex"
-msgstr ""
+msgstr "性别"
 
 #: qml/DeletePairingsDialog.qml:16
 #, kde-format
 msgctxt "@title"
 msgid "Remove pairings"
-msgstr ""
+msgstr "删除配对"
 
 #: qml/DeletePairingsDialog.qml:24
 #, kde-format
 msgctxt "@action:check"
 msgid "Keep byes"
-msgstr ""
+msgstr "保留轮空"
 
 #: qml/DeletePairingsDialog.qml:31
 #, kde-format
 msgctxt "@action:button Remove pairings"
 msgid "Remove"
-msgstr ""
+msgstr "移除"
 
 #: qml/Main.qml:21
 #, kde-format
 msgctxt "@title:window"
 msgid "Chessament"
-msgstr ""
+msgstr "Chessament"
 
 #: qml/Main.qml:101
 #, kde-format
 msgctxt "@title"
 msgid "Error"
-msgstr ""
+msgstr "错误"
 
 #: qml/Main.qml:193
 #, kde-format
 msgid "Players"
-msgstr ""
+msgstr "玩家"
 
 #: qml/Main.qml:200
 #, kde-format
 msgid "Pairings"
-msgstr ""
+msgstr "配对"
 
 #: qml/Main.qml:207
 #, kde-format
 msgid "Standings"
-msgstr ""
+msgstr "排名"
 
 #: qml/Main.qml:232
 #, kde-format
 msgctxt "@action:button"
 msgid "Settings"
-msgstr ""
+msgstr "设置"
 
 #: qml/NewTournamentDialog.qml:16
 #, kde-format
 msgctxt "@title"
 msgid "New tournament"
-msgstr ""
+msgstr "新比赛"
 
 #: qml/NewTournamentDialog.qml:29
 #, kde-format
 msgctxt "@label:textbox tournament name"
 msgid "Name:"
-msgstr ""
+msgstr "姓名："
 
 #: qml/NewTournamentDialog.qml:33
 #, kde-format
 msgctxt "@label"
 msgid "Format"
-msgstr ""
+msgstr "格式"
 
 #: qml/NewTournamentDialog.qml:34
 #, kde-format
 msgctxt "@label"
 msgid "Swiss system"
-msgstr ""
+msgstr "瑞士制"
 
 #: qml/NewTournamentDialog.qml:39
 #, kde-format
 msgctxt "@label"
 msgid "Number of rounds"
-msgstr ""
+msgstr "回合数"
 
 #: qml/PairingsPage.qml:37
 #, kde-format
 msgid "Pair Round %1"
-msgstr ""
+msgstr "配对轮次 %1"
 
 #: qml/PairingsPage.qml:46 qml/PlayersPage.qml:58
 #, kde-format
 msgctxt "@action:button"
 msgid "Print…"
-msgstr ""
+msgstr "打印..."
 
 #: qml/PairingsPage.qml:51 qml/PlayersPage.qml:63
 #, kde-format
 msgctxt "@action:button"
 msgid "Export as PDF…"
-msgstr ""
+msgstr "导出为 PDF..."
 
 #: qml/PairingsPage.qml:59
 #, kde-format
 msgid "Round %1"
-msgstr ""
+msgstr "第 %1 轮"
 
 #: qml/PairingsPage.qml:77
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove pairings of this and following rounds…"
-msgstr ""
+msgstr "删除当前及后续轮次的配对..."
 
 #: qml/PairingsPage.qml:117
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No pairings for round %1 yet"
-msgstr ""
+msgstr "第 %1 轮暂无对手"
 
 #: qml/PairRoundDialog.qml:17
 #, kde-format
 msgctxt "@title %1 is a number >= 1"
 msgid "Pair Round %1"
-msgstr ""
+msgstr "配对轮次 %1"
 
 #: qml/PairRoundDialog.qml:26
 #, kde-format
 msgctxt "@option:check"
 msgid "Sort players"
-msgstr ""
+msgstr "对玩家排序"
 
 #: qml/PairRoundDialog.qml:33
 #, kde-format
 msgctxt "@label:listbox"
 msgid "First player color:"
-msgstr ""
+msgstr "第一个玩家的颜色："
 
 #: qml/PairRoundDialog.qml:41
 #, kde-format
 msgctxt "@item:inlistbox As in 'Random color'"
 msgid "Random"
-msgstr ""
+msgstr "随机"
 
 #: qml/PairRoundDialog.qml:45
 #, kde-format
 msgctxt "@item:inlistbox As in 'White pieces'"
 msgid "White"
-msgstr ""
+msgstr "白色"
 
 #: qml/PairRoundDialog.qml:49
 #, kde-format
 msgctxt "@item:inlistbox As in 'Black pieces'"
 msgid "Black"
-msgstr ""
+msgstr "黑色"
 
 #: qml/PlayersPage.qml:49
 #, kde-format
 msgctxt "@action:button"
 msgid "Sort Players…"
-msgstr ""
+msgstr "对玩家排序..."
 
 #: qml/PlayersPage.qml:69
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Player…"
-msgstr ""
+msgstr "添加玩家..."
 
 #: qml/PlayersPage.qml:150
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No players yet"
-msgstr ""
+msgstr "暂无玩家"
 
 #: qml/PlayersPage.qml:154
 #, kde-format
 msgctxt "@action:button"
 msgid "Add player"
-msgstr ""
+msgstr "添加玩家"
 
 #: qml/PlayersPage.qml:172
 #, kde-format
 msgctxt "@info:status Number of players"
 msgid "1 player"
 msgid_plural "%1 players"
-msgstr[0] ""
+msgstr[0] "%1 名玩家"
 
 #: qml/PlayersPage.qml:173
 #, kde-format
 msgctxt "@info:status Number of rated players"
 msgid "1 rated"
 msgid_plural "%1 rated"
-msgstr[0] ""
+msgstr[0] "%1 级"
 
 #: qml/PlayersPage.qml:175
 #, kde-format
 msgctxt "@info:status players, rated"
 msgid "%1, %2"
-msgstr ""
+msgstr "%1，%2"
 
 #: qml/ResultsFooter.qml:41
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "*"
-msgstr ""
+msgstr "*"
 
 #: qml/ResultsFooter.qml:51
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "1-0"
-msgstr ""
+msgstr "1-0"
 
 #: qml/ResultsFooter.qml:58
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "½-½"
-msgstr ""
+msgstr "½-½"
 
 #: qml/ResultsFooter.qml:65
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "0-1"
-msgstr ""
+msgstr "0-1"
 
 #: qml/ResultsFooter.qml:75
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "1F-0F"
-msgstr ""
+msgstr "1F-0F"
 
 #: qml/ResultsFooter.qml:82
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "0F-1F"
-msgstr ""
+msgstr "0F-1F"
 
 #: qml/ResultsFooter.qml:89
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "0F-0F"
-msgstr ""
+msgstr "0F-0F"
 
 #: qml/ResultsFooter.qml:99
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "1U-0U"
-msgstr ""
+msgstr "1U-0U"
 
 #: qml/ResultsFooter.qml:106
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "½U-½U"
-msgstr ""
+msgstr "½U-½U"
 
 #: qml/ResultsFooter.qml:113
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "0U-1U"
-msgstr ""
+msgstr "0U-1U"
 
 #: qml/ResultsFooter.qml:120
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "½U-0U"
-msgstr ""
+msgstr "½U-0U"
 
 #: qml/ResultsFooter.qml:127
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "0U-½U"
-msgstr ""
+msgstr "0U-½U"
 
 #: qml/ResultsFooter.qml:134
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "0U-0U"
-msgstr ""
+msgstr "0U-0U"
 
 #: qml/ResultsFooter.qml:144
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "½-0"
-msgstr ""
+msgstr "½-0"
 
 #: qml/ResultsFooter.qml:151
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "0-0"
-msgstr ""
+msgstr "0-0"
 
 #: qml/ResultsFooter.qml:158
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "0-½"
-msgstr ""
+msgstr "0-½"
 
 #: qml/SortPlayersDialog.qml:17
 #, kde-format
 msgctxt "@title"
 msgid "Sort Players"
-msgstr ""
+msgstr "对玩家排序"
 
 #: qml/SortPlayersDialog.qml:26
 #, kde-format
@@ -624,176 +624,176 @@ msgctxt "@info"
 msgid ""
 "Changing the initial ranking after the fourth round has been paired is not "
 "allowed in official tournaments."
-msgstr ""
+msgstr "在官方比赛中，第四轮配对完成后不得更改初始排名。"
 
 #: qml/StandingsPage.qml:36
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No standings yet"
-msgstr ""
+msgstr "暂无排名"
 
 #: qml/TournamentSettings.qml:14
 #, kde-format
 msgctxt "@action:button"
 msgid "Information"
-msgstr ""
+msgstr "信息"
 
 #: qml/TournamentSettings.qml:20
 #, kde-format
 msgctxt "@action:button"
 msgid "Format"
-msgstr ""
+msgstr "格式"
 
 #: qml/TournamentSettings.qml:26
 #, kde-format
 msgctxt "@action:button"
 msgid "Calendar"
-msgstr ""
+msgstr "日历"
 
 #: qml/TournamentSettingsCalendar.qml:14
 #, kde-format
 msgctxt "@title"
 msgid "Calendar"
-msgstr ""
+msgstr "日历"
 
 #: qml/TournamentSettingsCalendar.qml:24
 #, kde-format
 msgctxt "round number"
 msgid "Round %1"
-msgstr ""
+msgstr "第 %1 轮"
 
 #: qml/TournamentSettingsFormat.qml:11
 #, kde-format
 msgctxt "@title"
 msgid "Format"
-msgstr ""
+msgstr "格式"
 
 #: qml/TournamentSettingsFormat.qml:14
 #, kde-format
 msgctxt "@title:group"
 msgid "Format"
-msgstr ""
+msgstr "格式"
 
 #: qml/TournamentSettingsFormat.qml:18
 #, kde-format
 msgid "Swiss system"
-msgstr ""
+msgstr "瑞士制"
 
 #: qml/TournamentSettingsFormat.qml:22
 #, kde-format
 msgid "Rounds"
-msgstr ""
+msgstr "回合数"
 
 #: qml/TournamentSettingsFormat.qml:36
 #, kde-format
 msgctxt "@title:group"
 msgid "Pairings"
-msgstr ""
+msgstr "配对"
 
 #: qml/TournamentSettingsFormat.qml:40
 #, kde-format
 msgid "Pairing engine"
-msgstr ""
+msgstr "配对引擎"
 
 #: qml/TournamentSettingsFormat.qml:41
 #, kde-format
 msgid "bbpPairings"
-msgstr ""
+msgstr "bbpPairings"
 
 #: qml/TournamentSettingsFormat.qml:45
 #, kde-format
 msgid "Pairing allocated bye"
-msgstr ""
+msgstr "已分配轮空对阵"
 
 #: qml/TournamentSettingsFormat.qml:46
 #, kde-format
 msgid "The value of the pairing allocated bye"
-msgstr ""
+msgstr "轮空对阵的积分权重"
 
 #: qml/TournamentSettingsInformation.qml:11
 #, kde-format
 msgctxt "@title"
 msgid "Information"
-msgstr ""
+msgstr "信息"
 
 #: qml/TournamentSettingsInformation.qml:14
 #, kde-format
 msgctxt "@title:group"
 msgid "Basic details"
-msgstr ""
+msgstr "基本详情"
 
 #: qml/TournamentSettingsInformation.qml:19
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Tournament name"
-msgstr ""
+msgstr "比赛名称"
 
 #: qml/TournamentSettingsInformation.qml:28
 #, kde-format
 msgctxt "@label:textbox"
 msgid "City"
-msgstr ""
+msgstr "城市"
 
 #: qml/TournamentSettingsInformation.qml:46
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Chief arbiter"
-msgstr ""
+msgstr "裁判长"
 
 #: qml/TournamentSettingsInformation.qml:55
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Deputy chief arbiter"
-msgstr ""
+msgstr "副裁判长"
 
 #: qml/WelcomePage.qml:20
 #, kde-format
 msgctxt "@title"
 msgid "Welcome to Chessament"
-msgstr ""
+msgstr "欢迎来到 Chessament"
 
 #: qml/WelcomePage.qml:21
 #, kde-format
 msgctxt "@info"
 msgid "Chessament is a chess tournament manager"
-msgstr ""
+msgstr "Chessament 是一款国际象棋赛事管理器"
 
 #: settings/ChessamentConfigurationView.qml:19
 #, kde-format
 msgctxt "@action:button"
 msgid "General"
-msgstr ""
+msgstr "常规"
 
 #: settings/GeneralPage.qml:16
 #, kde-format
 msgctxt "@title"
 msgid "General"
-msgstr ""
+msgstr "常规"
 
 #: settings/GeneralPage.qml:20
 #, kde-format
 msgctxt "@title:group"
 msgid "Account"
-msgstr ""
+msgstr "账户"
 
 #: settings/GeneralPage.qml:27
 #, kde-format
 msgctxt "@label:button"
 msgid "Connect Account"
-msgstr ""
+msgstr "关联账户"
 
 #: settings/GeneralPage.qml:34
 #, kde-format
 msgid "Logged in as %1"
-msgstr ""
+msgstr "以 %1 身份登录"
 
 #: settings/GeneralPage.qml:39
 #, kde-format
 msgid "Logout"
-msgstr ""
+msgstr "退出登录"
 
 #: standingsmodel.cpp:59
 #, kde-format
 msgctxt "@title:colunm"
 msgid "Rank"
-msgstr ""
+msgstr "排名"
