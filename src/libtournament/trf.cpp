@@ -36,6 +36,10 @@ std::expected<void, QString> TRFReader::read(QTextStream *trf)
         m_tournament->addPlayer(std::unique_ptr<Player>(player));
     }
 
+    std::sort(m_tournament->m_players->begin(), m_tournament->m_players->end(), [](const std::unique_ptr<Player> &a, const std::unique_ptr<Player> &b) {
+        return a->startingRank() < b->startingRank();
+    });
+
     for (auto pairing = m_pairings.cbegin(), end = m_pairings.cend(); pairing != end; ++pairing) {
         const auto key = pairing.key();
         const auto result = pairing.value();
@@ -74,14 +78,16 @@ std::expected<void, QString> TRFReader::read(QTextStream *trf)
     }
 
     if (m_tournament->m_currentRound > 0) {
-        Tournament::InitialColor color;
         const auto pairing = m_tournament->getPairings(1)->front().get();
-        if (pairing->whitePlayer()->startingRank() < pairing->blackPlayer()->startingRank()) {
-            color = Tournament::InitialColor::White;
-        } else {
-            color = Tournament::InitialColor::Black;
+        if (pairing->blackPlayer() != nullptr) {
+            Tournament::InitialColor color;
+            if (pairing->whitePlayer()->startingRank() < pairing->blackPlayer()->startingRank()) {
+                color = Tournament::InitialColor::White;
+            } else {
+                color = Tournament::InitialColor::Black;
+            }
+            m_tournament->setInitialColor(color);
         }
-        m_tournament->setInitialColor(color);
     }
 
     return {};

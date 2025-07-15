@@ -195,7 +195,18 @@ public:
     {
         switch (result) {
         case PartialResult::HalfBye:
-        case PartialResult::FullBye:
+        case PartialResult::ZeroBye:
+            return true;
+        default:
+            return false;
+        }
+    }
+
+    static bool isVUR(PartialResult result)
+    {
+        switch (result) {
+        case PartialResult::LostForfeit:
+        case PartialResult::HalfBye:
         case PartialResult::ZeroBye:
             return true;
         default:
@@ -377,6 +388,17 @@ public:
      * This property holds the result of the player with the black pieces.
      */
     PartialResult blackResult();
+
+    Pairing::PartialResult getResultOfPlayer(Player *p)
+    {
+        if (p == m_whitePlayer) {
+            return m_whiteResult;
+        }
+        if (p == m_blackPlayer) {
+            return m_blackResult;
+        }
+        Q_UNREACHABLE();
+    }
 
     QString resultString();
     QString toTrf(Player *player);

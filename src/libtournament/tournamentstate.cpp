@@ -36,9 +36,12 @@ double TournamentState::getPointsForTiebreaks(Player *player)
                 hadVUR = true;
             } else {
                 points += (*pairing)->getPointsOfPlayer(player);
-                hadVUR = ((*pairing)->whiteResult() == Pairing::PartialResult::LostForfeit && (*pairing)->blackResult() == Pairing::PartialResult::LostForfeit)
-                    || ((*pairing)->whiteResult() == Pairing::PartialResult::LostForfeit && (*pairing)->whitePlayer() == player)
-                    || ((*pairing)->blackResult() == Pairing::PartialResult::LostForfeit && (*pairing)->blackPlayer() == player);
+                const auto result = (*pairing)->getResultOfPlayer(player);
+                if (pairing == pairings.rbegin()) {
+                    hadVUR = Pairing::isVUR(result);
+                } else {
+                    hadVUR &= Pairing::isVUR(result);
+                }
             }
         } else {
             points += (*pairing)->getPointsOfPlayer(player);

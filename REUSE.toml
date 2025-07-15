@@ -10,7 +10,7 @@ SPDX-FileCopyrightText = "2025 Manuel Alcaraz Zambrano <manuelalcarazzam@gmail.c
 SPDX-License-Identifier = "LGPL-3.0-only"
 
 [[annotations]]
-path = ["autotests/data/*.txt", ".flatpak-manifest.json"]
+path = ["autotests/data/*.txt", "autotests/data/*.trf", "autotests/data/*.standings", ".flatpak-manifest.json"]
 precedence = "aggregate"
 SPDX-FileCopyrightText = "None"
 SPDX-License-Identifier = "CC0-1.0"
