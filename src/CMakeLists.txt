@@ -43,6 +43,7 @@ ecm_add_qml_module(chessament_static
         playersmodel.cpp
         pairingmodel.cpp
         standingsmodel.cpp
+        tiebreakmodel.cpp
     IMPORTS
         org.kde.kirigamiaddons.formcard
         org.kde.kirigamiaddons.statefulapp

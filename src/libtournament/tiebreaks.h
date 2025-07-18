@@ -5,13 +5,20 @@
 
 #include "tiebreak.h"
 
+using namespace Qt::Literals::StringLiterals;
+
 class Points : public Tiebreak
 {
 public:
-    QString name() override
+    [[nodiscard]] QString name() const override
     {
-        return QStringLiteral("Points");
+        return "Points"_L1;
     };
+
+    QString code() override
+    {
+        return "__pts"_L1;
+    }
 
     double calculate(Tournament *tournament, TournamentState state, QList<Player *> players, Player *player) override;
 };
@@ -19,10 +26,15 @@ public:
 class Buchholz : public Tiebreak
 {
 public:
-    QString name() override
+    [[nodiscard]] QString name() const override
     {
-        return QStringLiteral("Buchholz");
+        return "Buchholz"_L1;
     };
+
+    QString code() override
+    {
+        return "BH"_L1;
+    }
 
     double calculate(Tournament *tournament, TournamentState state, QList<Player *> players, Player *player) override;
 };

@@ -2,7 +2,18 @@
 // SPDX-FileCopyrightText: 2024 Manuel Alcaraz Zambrano <manuelalcarazzam@gmail.com>
 
 #include "tiebreaks.h"
+#include "tiebreak.h"
 #include "tournamentstate.h"
+
+QVariant Tiebreak::option(const QString &key, const QVariant &defaultValue) const
+{
+    return m_options.value(key, defaultValue);
+}
+
+QMap<QString, QVariantMap> Tiebreak::availableOptions() const
+{
+    return {};
+}
 
 double Points::calculate(Tournament *tournament, TournamentState state, QList<Player *> players, Player *player)
 {

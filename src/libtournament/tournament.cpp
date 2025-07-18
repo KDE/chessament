@@ -134,6 +134,20 @@ void Tournament::setTimeControl(const QString &timeControl)
     Q_EMIT timeControlChanged();
 }
 
+QList<Tiebreak *> Tournament::tiebreaks()
+{
+    return m_tiebreaks;
+}
+
+void Tournament::setTiebreaks(const QList<Tiebreak *> &tiebreaks)
+{
+    if (m_tiebreaks == tiebreaks) {
+        return;
+    }
+    m_tiebreaks = tiebreaks;
+    Q_EMIT tiebreaksChanged();
+}
+
 int Tournament::numberOfRounds() const
 {
     return m_numberOfRounds;
@@ -163,20 +177,6 @@ void Tournament::setCurrentRound(int currentRound)
     m_currentRound = currentRound;
     setOption(u"current_round"_s, currentRound);
     Q_EMIT currentRoundChanged();
-}
-
-QList<Tiebreak *> Tournament::tiebreaks()
-{
-    return m_tiebreaks;
-}
-
-void Tournament::setTiebreaks(const QList<Tiebreak *> &tiebreaks)
-{
-    if (m_tiebreaks == tiebreaks) {
-        return;
-    }
-    m_tiebreaks = tiebreaks;
-    Q_EMIT tiebreaksChanged();
 }
 
 std::vector<std::unique_ptr<Player>> *Tournament::players()

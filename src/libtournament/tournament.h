@@ -43,6 +43,7 @@ class Tournament : public QObject
     Q_PROPERTY(QString chiefArbiter READ chiefArbiter WRITE setChiefArbiter NOTIFY chiefArbiterChanged)
     Q_PROPERTY(QString deputyChiefArbiter READ deputyChiefArbiter WRITE setDeputyChiefArbiter NOTIFY deputyChiefArbiterChanged)
     Q_PROPERTY(QString timeControl READ timeControl WRITE setTimeControl NOTIFY timeControlChanged)
+    Q_PROPERTY(QList<Tiebreak *> tiebreaks READ tiebreaks WRITE setTiebreaks NOTIFY tiebreaksChanged)
 
     Q_PROPERTY(int numberOfPlayers READ numberOfPlayers NOTIFY numberOfPlayersChanged)
     Q_PROPERTY(int numberOfRatedPlayers READ numberOfRatedPlayers NOTIFY numberOfRatedPlayersChanged)
@@ -108,6 +109,14 @@ public:
     QString timeControl() const;
 
     /*!
+     * \property Tournament::tiebreaks
+     * \brief the tiebreaks of the tournament
+     *
+     * This property holds the list of tiebreaks of the tournament.
+     */
+    QList<Tiebreak *> tiebreaks();
+
+    /*!
      * \property Tournament::numberOfRounds
      * \brief the number of rounds of the tournament
      *
@@ -122,14 +131,6 @@ public:
      * The current round is the number of the last paired round, or 0 if the tournament has not started yet.
      */
     int currentRound() const;
-
-    /*!
-     * \property Tournament::tiebreaks
-     * \brief the tiebreaks of the tournament
-     *
-     * This property holds the list of tiebreaks of the tournament.
-     */
-    QList<Tiebreak *> tiebreaks();
 
     Event *getEvent() const;
 
@@ -480,12 +481,12 @@ Q_SIGNALS:
     void chiefArbiterChanged();
     void deputyChiefArbiterChanged();
     void timeControlChanged();
+    void tiebreaksChanged();
 
     void numberOfPlayersChanged();
     void numberOfRatedPlayersChanged();
     void numberOfRoundsChanged();
     void currentRoundChanged();
-    void tiebreaksChanged();
 
 private:
     explicit Tournament(Event *event, const QString &id = {});
