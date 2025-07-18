@@ -21,7 +21,7 @@ Tournament::Tournament(Event *event, const QString &id)
     , m_id(id)
     , m_players(std::make_unique<std::vector<std::unique_ptr<Player>>>())
 {
-    m_tiebreaks = {new Points(), new Buchholz()};
+    m_tiebreaks = {new Points()};
 
     if (m_id.isEmpty()) {
         createNewTournament();
@@ -134,6 +134,21 @@ void Tournament::setTimeControl(const QString &timeControl)
     Q_EMIT timeControlChanged();
 }
 
+QList<Tiebreak *> Tournament::tiebreaks() const
+{
+    return m_tiebreaks;
+}
+
+void Tournament::setTiebreaks(const QList<Tiebreak *> &tiebreaks)
+{
+    if (m_tiebreaks == tiebreaks) {
+        return;
+    }
+    m_tiebreaks = tiebreaks;
+    saveTiebreaks();
+    Q_EMIT tiebreaksChanged();
+}
+
 int Tournament::numberOfRounds() const
 {
     return m_numberOfRounds;
@@ -163,20 +178,6 @@ void Tournament::setCurrentRound(int currentRound)
     m_currentRound = currentRound;
     setOption(u"current_round"_s, currentRound);
     Q_EMIT currentRoundChanged();
-}
-
-QList<Tiebreak *> Tournament::tiebreaks()
-{
-    return m_tiebreaks;
-}
-
-void Tournament::setTiebreaks(const QList<Tiebreak *> &tiebreaks)
-{
-    if (m_tiebreaks == tiebreaks) {
-        return;
-    }
-    m_tiebreaks = tiebreaks;
-    Q_EMIT tiebreaksChanged();
 }
 
 std::vector<std::unique_ptr<Player>> *Tournament::players()
@@ -689,6 +690,20 @@ TournamentState Tournament::getState(int maxRound)
     return TournamentState{this, maxRound};
 }
 
+void Tournament::saveTiebreaks()
+{
+    QJsonArray values;
+
+    for (const auto &tiebreak : tiebreaks()) {
+        values << tiebreak->toJson();
+    }
+
+    const auto doc = QJsonDocument{QJsonObject{{"tiebreaks"_L1, values}}};
+    const auto text = doc.toJson(QJsonDocument::Compact);
+
+    setOption("tiebreaks"_L1, text);
+}
+
 QVariant Tournament::getOption(const QString &name)
 {
     QSqlQuery query(m_event->getDB());
@@ -899,6 +914,7 @@ bool Tournament::loadTournament()
     loadPlayers();
     loadRounds();
     loadPairings();
+    loadTiebreaks();
 
     return true;
 }
@@ -1003,5 +1019,35 @@ void Tournament::loadPairings()
                                                  Pairing::PartialResult(query.value(blackResultNo).toInt()));
         pairing->setId(query.value(idNo).toInt());
         m_rounds.at(round - 1)->addPairing(std::move(pairing));
+    }
+}
+
+void Tournament::loadTiebreaks()
+{
+    const auto json = QJsonDocument::fromJson(getOption("tiebreaks"_L1).toByteArray());
+
+    if (const auto tbs = json["tiebreaks"_L1]; tbs.isArray()) {
+        m_tiebreaks.clear();
+
+        for (const auto value : tbs.toArray()) {
+            const auto obj = value.toObject();
+            const auto id = obj["id"_L1].toString();
+
+            Tiebreak *tiebreak;
+
+            if (id == "pts"_L1) {
+                tiebreak = new Points();
+            } else if (id == "bh"_L1) {
+                tiebreak = new Buchholz();
+            } else {
+                continue;
+            }
+
+            if (const auto options = obj["options"_L1]; options.isObject()) {
+                tiebreak->setOptions(options.toObject().toVariantMap());
+            }
+
+            m_tiebreaks << tiebreak;
+        }
     }
 }

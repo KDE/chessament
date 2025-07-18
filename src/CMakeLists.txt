@@ -12,11 +12,13 @@ ecm_add_qml_module(chessament_static
     GENERATE_PLUGIN_SOURCE
     QML_FILES
         qml/components/RatingField.qml
+        qml/components/TiebreakDelegate.qml
 
         qml/Main.qml
         qml/TablePage.qml
         qml/TableDelegate.qml
         qml/AddPlayerDialog.qml
+        qml/AddTiebreakDialog.qml
         qml/DeletePairingsDialog.qml
         qml/NewTournamentDialog.qml
         qml/ResultsFooter.qml
@@ -32,6 +34,7 @@ ecm_add_qml_module(chessament_static
         qml/TournamentSettingsCalendar.qml
         qml/TournamentSettingsInformation.qml
         qml/TournamentSettingsFormat.qml
+        qml/TiebreakDialog.qml
     DEPENDENCIES
         QtCore
         QtQuick
@@ -43,6 +46,7 @@ ecm_add_qml_module(chessament_static
         playersmodel.cpp
         pairingmodel.cpp
         standingsmodel.cpp
+        tiebreakmodel.cpp
     IMPORTS
         org.kde.kirigamiaddons.formcard
         org.kde.kirigamiaddons.statefulapp

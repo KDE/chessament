@@ -3,6 +3,7 @@
 
 #pragma once
 
+#include <KLocalizedString>
 #include <QCoroTask>
 #include <QFile>
 #include <QFlags>
@@ -43,6 +44,7 @@ class Tournament : public QObject
     Q_PROPERTY(QString chiefArbiter READ chiefArbiter WRITE setChiefArbiter NOTIFY chiefArbiterChanged)
     Q_PROPERTY(QString deputyChiefArbiter READ deputyChiefArbiter WRITE setDeputyChiefArbiter NOTIFY deputyChiefArbiterChanged)
     Q_PROPERTY(QString timeControl READ timeControl WRITE setTimeControl NOTIFY timeControlChanged)
+    Q_PROPERTY(QList<Tiebreak *> tiebreaks READ tiebreaks WRITE setTiebreaks NOTIFY tiebreaksChanged)
 
     Q_PROPERTY(int numberOfPlayers READ numberOfPlayers NOTIFY numberOfPlayersChanged)
     Q_PROPERTY(int numberOfRatedPlayers READ numberOfRatedPlayers NOTIFY numberOfRatedPlayersChanged)
@@ -108,6 +110,14 @@ public:
     QString timeControl() const;
 
     /*!
+     * \property Tournament::tiebreaks
+     * \brief the tiebreaks of the tournament
+     *
+     * This property holds the list of tiebreaks of the tournament.
+     */
+    QList<Tiebreak *> tiebreaks() const;
+
+    /*!
      * \property Tournament::numberOfRounds
      * \brief the number of rounds of the tournament
      *
@@ -122,14 +132,6 @@ public:
      * The current round is the number of the last paired round, or 0 if the tournament has not started yet.
      */
     int currentRound() const;
-
-    /*!
-     * \property Tournament::tiebreaks
-     * \brief the tiebreaks of the tournament
-     *
-     * This property holds the list of tiebreaks of the tournament.
-     */
-    QList<Tiebreak *> tiebreaks();
 
     Event *getEvent() const;
 
@@ -176,6 +178,20 @@ public:
      * \a state Helper object to compute the standings.
      */
     QList<PlayerTiebreaks> getStandings(TournamentState state);
+
+    Q_INVOKABLE QList<QVariantMap> availableTiebreaks()
+    {
+        return {
+            {
+                {"id"_L1, "pts"_L1},
+                {"name"_L1, i18nc("Game points", "Points")},
+            },
+            {
+                {"id"_L1, "bh"_L1},
+                {"name"_L1, i18nc("Buchholz tiebreak", "Buchholz")},
+            },
+        };
+    }
 
     /*!
      * Returns the rounds of the tournament.
@@ -388,6 +404,8 @@ public:
     };
     Q_DECLARE_FLAGS(TrfOptions, TrfOption)
 
+    void saveTiebreaks();
+
     /*!
      * Returns the value of the option \a name
      *
@@ -480,12 +498,12 @@ Q_SIGNALS:
     void chiefArbiterChanged();
     void deputyChiefArbiterChanged();
     void timeControlChanged();
+    void tiebreaksChanged();
 
     void numberOfPlayersChanged();
     void numberOfRatedPlayersChanged();
     void numberOfRoundsChanged();
     void currentRoundChanged();
-    void tiebreaksChanged();
 
 private:
     explicit Tournament(Event *event, const QString &id = {});
@@ -496,6 +514,7 @@ private:
     void loadPlayers();
     void loadRounds();
     void loadPairings();
+    void loadTiebreaks();
 
     Event *m_event;
 

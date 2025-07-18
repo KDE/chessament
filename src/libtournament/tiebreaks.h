@@ -5,13 +5,27 @@
 
 #include "tiebreak.h"
 
+#include <KLocalizedString>
+
+using namespace Qt::Literals::StringLiterals;
+
 class Points : public Tiebreak
 {
 public:
-    QString name() override
+    [[nodiscard]] QString id() override
     {
-        return QStringLiteral("Points");
+        return "pts"_L1;
+    }
+
+    [[nodiscard]] QString name() override
+    {
+        return i18nc("Game points", "Points");
     };
+
+    [[nodiscard]] QString code() override
+    {
+        return "__pts"_L1;
+    }
 
     double calculate(Tournament *tournament, TournamentState state, QList<Player *> players, Player *player) override;
 };
@@ -19,10 +33,27 @@ public:
 class Buchholz : public Tiebreak
 {
 public:
-    QString name() override
+    [[nodiscard]] QString id() override
     {
-        return QStringLiteral("Buchholz");
+        return "bh"_L1;
+    }
+
+    [[nodiscard]] QString name() override
+    {
+        return i18nc("Buchholz tiebreak", "Buchholz");
     };
+
+    [[nodiscard]] QString code() override
+    {
+        return "BH"_L1;
+    }
+
+    [[nodiscard]] bool isConfigurable() override
+    {
+        return false; // TODO: implement modifiers
+    }
+
+    [[nodiscard]] QList<QVariantMap> options() override;
 
     double calculate(Tournament *tournament, TournamentState state, QList<Player *> players, Player *player) override;
 };

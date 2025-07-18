@@ -7,6 +7,7 @@
 #include <QTest>
 
 #include "event.h"
+#include "tiebreaks.h"
 #include "tournament.h"
 #include "tournamentstate.h"
 
@@ -72,6 +73,8 @@ void BuchholzTest::testBuchholz()
     auto tournament = event->importTournament(fileName);
 
     QVERIFY(tournament.has_value());
+
+    (*tournament)->setTiebreaks({new Points(), new Buchholz()});
 
     const auto state = (*tournament)->getState();
     const auto standings = (*tournament)->getStandings(state);
