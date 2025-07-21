@@ -19,7 +19,7 @@
 #include "pairingengine.h"
 #include "player.h"
 #include "round.h"
-#include "tiebreak.h"
+#include "tiebreaks/tiebreak.h"
 
 class Document;
 class Event;
@@ -177,7 +177,7 @@ public:
      *
      * \a state Helper object to compute the standings.
      */
-    QList<PlayerTiebreaks> getStandings(TournamentState state);
+    QList<PlayerTiebreaks> getStandings(State state);
 
     Q_INVOKABLE QList<QVariantMap> availableTiebreaks()
     {
@@ -282,7 +282,7 @@ public:
      *
      * \a maxRound The number of the highest round to include.
      */
-    TournamentState getState(int maxRound = -1);
+    State getState(int maxRound = -1);
 
     /*!
      * \property Tournament::numberOfPlayers

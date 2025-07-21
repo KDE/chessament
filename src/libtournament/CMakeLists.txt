@@ -9,11 +9,14 @@ target_sources(libtournament PRIVATE
     pairingengine.cpp
     player.cpp
     round.cpp
-    tiebreaks.cpp
+    state.cpp
     tournament.cpp
-    tournamentstate.cpp
     trf.cpp
     utils.cpp
+
+    tiebreaks/tiebreak.cpp
+    tiebreaks/buchholz.cpp
+    tiebreaks/points.cpp
 )
 
 ecm_add_qml_module(libtournament

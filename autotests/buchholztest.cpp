@@ -7,9 +7,10 @@
 #include <QTest>
 
 #include "event.h"
-#include "tiebreaks.h"
+#include "state.h"
+#include "tiebreaks/buchholz.h"
+#include "tiebreaks/points.h"
 #include "tournament.h"
-#include "tournamentstate.h"
 
 using namespace Qt::Literals::StringLiterals;
 

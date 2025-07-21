@@ -12,8 +12,9 @@
 
 #include "db.h"
 #include "event.h"
-#include "tiebreaks.h"
-#include "tournamentstate.h"
+#include "state.h"
+#include "tiebreaks/buchholz.h"
+#include "tiebreaks/points.h"
 #include "trf.h"
 
 Tournament::Tournament(Event *event, const QString &id)
@@ -304,7 +305,7 @@ QHash<Player *, QList<Pairing *>> Tournament::getPairingsByPlayer(int maxRound)
     return pairings;
 }
 
-QList<PlayerTiebreaks> Tournament::getStandings(TournamentState state)
+QList<PlayerTiebreaks> Tournament::getStandings(State state)
 {
     QList<PlayerTiebreaks> standings;
 
@@ -685,9 +686,9 @@ Tournament::InitialColor Tournament::initialColor()
     return m_initialColor;
 }
 
-TournamentState Tournament::getState(int maxRound)
+State Tournament::getState(int maxRound)
 {
-    return TournamentState{this, maxRound};
+    return State{this, maxRound};
 }
 
 void Tournament::saveTiebreaks()

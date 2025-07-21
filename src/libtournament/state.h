@@ -5,10 +5,10 @@
 
 #include "tournament.h"
 
-class TournamentState
+class State
 {
 public:
-    explicit TournamentState(Tournament *tournament, int maxRound = -1);
+    explicit State(Tournament *tournament, int maxRound = -1);
 
     QList<Pairing *> getPairings(Player *player);
     double getPoints(Player *player);

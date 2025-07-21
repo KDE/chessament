@@ -10,7 +10,7 @@
 class Tournament;
 class Player;
 class Pairing;
-class TournamentState;
+class State;
 
 class Tiebreak
 {
@@ -35,7 +35,7 @@ public:
 
     void setOptions(const QVariantMap &options);
 
-    virtual double calculate(Tournament *tournament, TournamentState state, QList<Player *> players, Player *player) = 0;
+    virtual double calculate(Tournament *tournament, State state, QList<Player *> players, Player *player) = 0;
 
     QJsonObject toJson();
 

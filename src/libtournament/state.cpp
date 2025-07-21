@@ -1,21 +1,21 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 // SPDX-FileCopyrightText: 2024 Manuel Alcaraz Zambrano <manuelalcarazzam@gmail.com>
 
-#include "tournamentstate.h"
+#include "state.h"
 
-TournamentState::TournamentState(Tournament *tournament, int maxRound)
+State::State(Tournament *tournament, int maxRound)
 {
     m_tournament = tournament;
     m_maxRound = maxRound;
     m_pairingsByPlayer = m_tournament->getPairingsByPlayer(m_maxRound);
 }
 
-QList<Pairing *> TournamentState::getPairings(Player *player)
+QList<Pairing *> State::getPairings(Player *player)
 {
     return m_pairingsByPlayer.value(player);
 }
 
-double TournamentState::getPoints(Player *player)
+double State::getPoints(Player *player)
 {
     double points = 0.;
     for (const auto &pairing : m_pairingsByPlayer.value(player)) {
@@ -24,7 +24,7 @@ double TournamentState::getPoints(Player *player)
     return points;
 }
 
-double TournamentState::getPointsForTiebreaks(Player *player)
+double State::getPointsForTiebreaks(Player *player)
 {
     double points = 0.;
     bool hadVUR = false;

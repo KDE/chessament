@@ -3,7 +3,8 @@
 
 #include "tiebreakmodel.h"
 
-#include "libtournament/tiebreaks.h"
+#include "libtournament/tiebreaks/buchholz.h"
+#include "libtournament/tiebreaks/points.h"
 #include "libtournament/tournament.h"
 
 TiebreakModel::TiebreakModel(QObject *parent)
