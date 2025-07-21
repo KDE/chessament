@@ -10,16 +10,20 @@ PairingModel::PairingModel(QObject *parent)
 {
 }
 
-int PairingModel::rowCount(const QModelIndex &) const
+int PairingModel::rowCount(const QModelIndex &parent) const
 {
+    Q_UNUSED(parent);
+
     if (m_pairings == nullptr) {
         return 0;
     }
-    return m_pairings->size();
+    return static_cast<int>(m_pairings->size());
 }
 
-int PairingModel::columnCount(const QModelIndex &) const
+int PairingModel::columnCount(const QModelIndex &parent) const
 {
+    Q_UNUSED(parent);
+
     return 6;
 }
 
@@ -118,12 +122,12 @@ void PairingModel::setPairings(std::vector<std::unique_ptr<Pairing>> *pairings)
         return;
     }
 
-    auto rowDiff = pairings->size() - m_currentRows;
+    uint rowDiff = pairings->size() - m_currentRows;
 
     if (rowDiff > 0) {
-        beginInsertRows({}, m_currentRows, pairings->size() - 1);
+        beginInsertRows({}, static_cast<int>(m_currentRows), static_cast<int>(pairings->size() - 1));
     } else if (rowDiff < 0) {
-        beginRemoveRows({}, pairings->size(), m_currentRows - 1);
+        beginRemoveRows({}, static_cast<int>(pairings->size()), static_cast<int>(m_currentRows - 1));
     }
 
     m_currentRows = m_pairings->size();
