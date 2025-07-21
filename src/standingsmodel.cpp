@@ -9,14 +9,22 @@ StandingsModel::StandingsModel(QObject *parent)
 {
 }
 
-int StandingsModel::rowCount(const QModelIndex &) const
+int StandingsModel::rowCount(const QModelIndex &parent) const
 {
-    return m_standings.size();
+    Q_UNUSED(parent);
+
+    return static_cast<int>(m_standings.size());
 }
 
-int StandingsModel::columnCount(const QModelIndex &) const
+int StandingsModel::columnCount(const QModelIndex &parent) const
 {
-    return 4 + m_tournament->tiebreaks().size();
+    Q_UNUSED(parent);
+
+    if (m_standings.isEmpty()) {
+        return 4;
+    }
+
+    return 4 + static_cast<int>(m_standings.at(0).second.length());
 }
 
 QVariant StandingsModel::data(const QModelIndex &index, int role) const

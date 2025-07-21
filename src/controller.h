@@ -27,7 +27,7 @@ class Controller : public QObject
     Q_PROPERTY(Player *currentPlayer READ currentPlayer WRITE setCurrentPlayer NOTIFY currentPlayerChanged)
     Q_PROPERTY(int currentRound READ currentRound WRITE setCurrentRound NOTIFY currentRoundChanged)
     Q_PROPERTY(bool hasCurrentRoundFinished READ hasCurrentRoundFinished NOTIFY hasCurrentRoundFinishedChanged)
-    Q_PROPERTY(bool areStandingsValid READ areStandingsValid NOTIFY areStandingsValidChanged)
+    Q_PROPERTY(bool areStandingsValid READ areStandingsValid WRITE setAreStandingsValid NOTIFY areStandingsValidChanged)
 
     Q_PROPERTY(PlayersModel *playersModel READ playersModel CONSTANT)
     Q_PROPERTY(PairingModel *pairingModel READ pairingModel CONSTANT)
@@ -69,6 +69,7 @@ public:
     Q_INVOKABLE void exportTrf(const QUrl &fileUrl);
     Q_INVOKABLE QCoro::Task<void> pairRound(bool sortPlayers, uint color);
     Q_INVOKABLE void removePairings(bool keepByes);
+    Q_INVOKABLE void reloadStandings();
 
     std::unique_ptr<Document> playersDocument();
     Q_INVOKABLE void savePlayersDocument(const QString &fileName);

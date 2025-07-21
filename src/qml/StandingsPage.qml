@@ -2,6 +2,7 @@
 // SPDX-FileCopyrightText: 2024 Manuel Alcaraz Zambrano <manuelalcarazzam@gmail.com>
 pragma ComponentBehavior: Bound
 
+import QtQml
 import QtQuick
 
 import org.kde.kirigami as Kirigami
@@ -16,6 +17,16 @@ TablePage {
     model: Controller.standingsModel
 
     selectionBehavior: TableView.SelectRows
+
+    Connections {
+        target: Controller
+
+        function onAreStandingsValidChanged() {
+            if (!Controller.areStandingsValid && Controller.currentView === "StandingsPage") {
+                Controller.reloadStandings();
+            }
+        }
+    }
 
     delegate: TableDelegate {
         id: delegate

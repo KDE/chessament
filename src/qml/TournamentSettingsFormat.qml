@@ -64,6 +64,10 @@ FormCard.FormCardPage {
             model: TiebreakModel {
                 id: tiebreakModel
                 tournament: Controller.tournament
+
+                onDataChanged: Controller.areStandingsValid = false
+                onRowsInserted: Controller.areStandingsValid = false
+                onRowsRemoved: Controller.areStandingsValid = false
             }
 
             TiebreakDelegate {

@@ -176,6 +176,13 @@ void Controller::removePairings(bool keepByes)
     setAreStandingsValid(false);
 }
 
+void Controller::reloadStandings()
+{
+    qDebug() << "reloading standings";
+    m_standingsModel->setTournament(m_tournament);
+    setAreStandingsValid(true);
+}
+
 void Controller::addPlayer(const QString &title,
                            const QString &name,
                            int rating,
@@ -306,9 +313,7 @@ void Controller::setCurrentView(const QString &currentView)
     m_currentView = currentView;
 
     if (m_currentView == u"StandingsPage"_s && !m_areStandingsValid) {
-        qDebug() << "reloading standings";
-        m_standingsModel->setTournament(m_tournament);
-        setAreStandingsValid(true);
+        reloadStandings();
     }
 
     Q_EMIT currentViewChanged();

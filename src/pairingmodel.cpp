@@ -122,7 +122,7 @@ void PairingModel::setPairings(std::vector<std::unique_ptr<Pairing>> *pairings)
         return;
     }
 
-    uint rowDiff = pairings->size() - m_currentRows;
+    auto rowDiff = static_cast<long int>(pairings->size() - m_currentRows);
 
     if (rowDiff > 0) {
         beginInsertRows({}, static_cast<int>(m_currentRows), static_cast<int>(pairings->size() - 1));
