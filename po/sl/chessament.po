@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-18 00:39+0000\n"
+"POT-Creation-Date: 2025-07-22 00:40+0000\n"
 "PO-Revision-Date: 2025-07-04 06:15+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -86,12 +86,12 @@ msgstr "Neveljaven par \"%1\"."
 msgid "Invalid player \"%1\" on pairing \"%2\"."
 msgstr "Neveljaven igralec \"%1\" v paru \"%2\"."
 
-#: libtournament/tournament.cpp:629
+#: libtournament/tournament.cpp:631
 #, kde-format
 msgid "An error ocurred while pairing the round: %1"
 msgstr "Pri uparjanju kroga je prišlo do napake: %1"
 
-#: libtournament/tournament.cpp:857
+#: libtournament/tournament.cpp:873
 #, kde-format
 msgid "Couldn't open file"
 msgstr "Datoteke ni bilo mogoče odpreti"
@@ -156,32 +156,32 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "matjaz.jeran@amis.net"
 
-#: pairingmodel.cpp:92
+#: pairingmodel.cpp:96
 #, kde-format
 msgctxt "@title:column"
 msgid "Board"
 msgstr "Deska"
 
-#: pairingmodel.cpp:94 pairingmodel.cpp:102 playersmodel.cpp:145
+#: pairingmodel.cpp:98 pairingmodel.cpp:106 playersmodel.cpp:145
 #: standingsmodel.cpp:61
 #, kde-format
 msgctxt "@title:column"
 msgid "No"
 msgstr "Št."
 
-#: pairingmodel.cpp:96
+#: pairingmodel.cpp:100
 #, kde-format
 msgctxt "@title:column"
 msgid "White player"
 msgstr "Beli igralec"
 
-#: pairingmodel.cpp:98
+#: pairingmodel.cpp:102
 #, kde-format
 msgctxt "@title:column"
 msgid "Result"
 msgstr "Rezultat"
 
-#: pairingmodel.cpp:100
+#: pairingmodel.cpp:104
 #, kde-format
 msgctxt "@title:column"
 msgid "Black Player"
@@ -319,6 +319,55 @@ msgstr "Izvor"
 msgctxt "@label:textbox"
 msgid "Sex"
 msgstr "Spol"
+
+#: qml/AddTiebreakDialog.qml:19
+#, kde-format
+msgctxt "@title:window"
+msgid "Add Tiebreak"
+msgstr ""
+
+#: qml/components/TiebreakDelegate.qml:30
+#: qml/components/TiebreakDelegate.qml:35
+#, kde-format
+msgctxt "@action:button"
+msgid "Configure tiebreak"
+msgstr ""
+
+#: qml/components/TiebreakDelegate.qml:51
+#, kde-format
+msgctxt "@action:button Move tiebreak up"
+msgid "Move Up"
+msgstr ""
+
+#: qml/components/TiebreakDelegate.qml:56
+#, kde-format
+msgctxt "@action:button Move tiebreak up"
+msgid "Move up"
+msgstr ""
+
+#: qml/components/TiebreakDelegate.qml:63
+#, kde-format
+msgctxt "@action:button Move tiebreak down"
+msgid "Move Down"
+msgstr ""
+
+#: qml/components/TiebreakDelegate.qml:68
+#, kde-format
+msgctxt "@action:button Move tiebreak down"
+msgid "Move down"
+msgstr ""
+
+#: qml/components/TiebreakDelegate.qml:75
+#, kde-format
+msgctxt "@action:button"
+msgid "Delete Tiebreak"
+msgstr ""
+
+#: qml/components/TiebreakDelegate.qml:80
+#, kde-format
+msgctxt "@action:button"
+msgid "Delete tiebreak"
+msgstr ""
 
 #: qml/DeletePairingsDialog.qml:16
 #, kde-format
@@ -639,6 +688,12 @@ msgctxt "@info:placeholder"
 msgid "No standings yet"
 msgstr "Še ni lestvice"
 
+#: qml/TiebreakDialog.qml:17
+#, kde-format
+msgctxt "@title:window"
+msgid "Edit Tiebreak"
+msgstr ""
+
 #: qml/TournamentSettings.qml:14
 #, kde-format
 msgctxt "@action:button"
@@ -669,53 +724,65 @@ msgctxt "round number"
 msgid "Round %1"
 msgstr "Krog %1"
 
-#: qml/TournamentSettingsFormat.qml:11
+#: qml/TournamentSettingsFormat.qml:16
 #, kde-format
 msgctxt "@title"
 msgid "Format"
 msgstr "Oblika"
 
-#: qml/TournamentSettingsFormat.qml:14
+#: qml/TournamentSettingsFormat.qml:19
 #, kde-format
 msgctxt "@title:group"
 msgid "Format"
 msgstr "Oblika"
 
-#: qml/TournamentSettingsFormat.qml:18
+#: qml/TournamentSettingsFormat.qml:23
 #, kde-format
 msgid "Swiss system"
 msgstr "Švicarski sistem"
 
-#: qml/TournamentSettingsFormat.qml:22
+#: qml/TournamentSettingsFormat.qml:27
 #, kde-format
 msgid "Rounds"
 msgstr "Krogi"
 
-#: qml/TournamentSettingsFormat.qml:36
+#: qml/TournamentSettingsFormat.qml:41
 #, kde-format
 msgctxt "@title:group"
 msgid "Pairings"
 msgstr "Pari"
 
-#: qml/TournamentSettingsFormat.qml:40
+#: qml/TournamentSettingsFormat.qml:45
 #, kde-format
 msgid "Pairing engine"
 msgstr "Stroj za pare"
 
-#: qml/TournamentSettingsFormat.qml:41
+#: qml/TournamentSettingsFormat.qml:46
 #, kde-format
 msgid "bbpPairings"
 msgstr "bbpPairings"
 
-#: qml/TournamentSettingsFormat.qml:45
+#: qml/TournamentSettingsFormat.qml:51
 #, kde-format
 msgid "Pairing allocated bye"
 msgstr "Dodeljen bye parom"
 
-#: qml/TournamentSettingsFormat.qml:46
+#: qml/TournamentSettingsFormat.qml:52
 #, kde-format
 msgid "The value of the pairing allocated bye"
 msgstr "Vrednost bye dodeljenemu paru"
+
+#: qml/TournamentSettingsFormat.qml:58
+#, kde-format
+msgctxt "@title:group"
+msgid "Tiebreaks"
+msgstr ""
+
+#: qml/TournamentSettingsFormat.qml:78
+#, kde-format
+msgctxt "@action:button"
+msgid "Add Tiebreak"
+msgstr ""
 
 #: qml/TournamentSettingsInformation.qml:11
 #, kde-format
