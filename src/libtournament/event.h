@@ -24,9 +24,9 @@ class Event : public QObject
     Q_PROPERTY(QString fileName READ fileName WRITE setFileName NOTIFY fileNameChanged)
 
 public:
-    explicit Event(const QString &fileName = {});
+    explicit Event() = default;
 
-    ~Event();
+    ~Event() override;
 
     /*!
      * \property Event::fileName
@@ -41,6 +41,8 @@ public:
      */
     size_t numberOfTournaments();
 
+    std::expected<void, QString> open(const QString &fileName = {});
+
     /*!
      * Returns the tournament with index \a index.
      */
@@ -49,7 +51,7 @@ public:
     /*!
      * Returns a new tournament.
      */
-    Tournament *createTournament();
+    std::expected<Tournament *, QString> createTournament();
 
     /*!
      * Imports a Tournament Report File (TRF) as a new tournament.
@@ -80,12 +82,12 @@ Q_SIGNALS:
 
 private:
     QSqlDatabase getDB();
-    bool openDatabase(const QString &fileName);
+    std::expected<void, QString> openDatabase();
     void closeDatabase();
-    void createTables();
-    int getDBVersion();
-    void setDBVersion(int version);
-    void loadTournaments();
+    std::expected<void, QString> createTables();
+    std::expected<int, QString> getDBVersion();
+    std::expected<void, QString> setDBVersion(int version);
+    std::expected<void, QString> loadTournaments();
 
     QString m_connName;
     QString m_fileName;

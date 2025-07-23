@@ -10,12 +10,6 @@
 
 #include "db.h"
 
-Event::Event(const QString &fileName)
-{
-    openDatabase(fileName);
-    loadTournaments();
-}
-
 Event::~Event()
 {
     closeDatabase();
@@ -40,14 +34,32 @@ size_t Event::numberOfTournaments()
     return m_tournaments.size();
 }
 
+std::expected<void, QString> Event::open(const QString &fileName)
+{
+    setFileName(fileName);
+
+    if (auto ok = openDatabase(); !ok) {
+        return ok;
+    }
+    if (auto ok = loadTournaments(); !ok) {
+        return ok;
+    }
+
+    return {};
+}
+
 Tournament *Event::getTournament(uint index)
 {
     return m_tournaments.at(index).get();
 }
 
-Tournament *Event::createTournament()
+std::expected<Tournament *, QString> Event::createTournament()
 {
     auto tournament = std::unique_ptr<Tournament>(new Tournament(this));
+    if (auto ok = tournament->createNewTournament(); !ok) {
+        return std::unexpected(ok.error());
+    }
+
     m_tournaments.push_back(std::move(tournament));
 
     return m_tournaments.back().get();
@@ -55,16 +67,17 @@ Tournament *Event::createTournament()
 
 std::expected<Tournament *, QString> Event::importTournament(const QString &fileName)
 {
-    auto tournament = std::unique_ptr<Tournament>(new Tournament(this));
-    auto error = tournament->loadTrf(fileName);
-
-    if (error.has_value()) {
-        m_tournaments.push_back(std::move(tournament));
-
-        return m_tournaments.back().get();
+    auto tournament = createTournament();
+    if (!tournament) {
+        return tournament;
     }
 
-    return std::unexpected(error.error());
+    auto ok = (*tournament)->loadTrf(fileName);
+    if (!ok) {
+        return std::unexpected(ok.error());
+    }
+
+    return m_tournaments.back().get();
 }
 
 void Event::saveAs(const QString &fileName)
@@ -96,29 +109,29 @@ QSqlDatabase Event::getDB()
     return QSqlDatabase::database(m_connName);
 }
 
-bool Event::openDatabase(const QString &fileName)
+std::expected<void, QString> Event::openDatabase()
 {
-    QString dbName;
+    Q_ASSERT(m_connName.isEmpty());
 
-    if (fileName.isEmpty()) {
-        m_connName = QUuid::createUuid().toString(QUuid::WithoutBraces);
-        dbName = u":memory:"_s;
-    } else {
-        m_connName = fileName;
-        dbName = fileName;
-    }
-    qDebug() << m_connName;
+    m_connName = QUuid::createUuid().toString(QUuid::WithoutBraces);
+
+    qDebug() << m_fileName;
+    QString dbName = m_fileName.isEmpty() ? ":memory:"_L1 : m_fileName;
 
     auto db = QSqlDatabase::addDatabase(u"QSQLITE"_s, m_connName);
     db.setDatabaseName(dbName);
 
     if (!db.open()) {
         qDebug() << "error while opening database";
-        return false;
+        return std::unexpected(db.lastError().text());
     }
 
-    createTables();
-    return true;
+    if (auto ok = createTables(); !ok) {
+        qDebug() << "error creating tables" << ok.error();
+        return ok;
+    }
+
+    return {};
 }
 
 void Event::closeDatabase()
@@ -127,62 +140,107 @@ void Event::closeDatabase()
     QSqlDatabase::removeDatabase(m_connName);
 }
 
-void Event::createTables()
+std::expected<void, QString> Event::createTables()
 {
     QSqlQuery query(u"PRAGMA foreign_keys = ON;"_s, getDB());
+
+    if (query.lastError().isValid()) {
+        return std::unexpected(query.lastError().text());
+    }
 
     query = QSqlQuery(getDB());
     query.prepare(TOURNAMENTS_TABLE_SCHEMA);
     query.exec();
 
+    if (query.lastError().isValid()) {
+        return std::unexpected(query.lastError().text());
+    }
+
     query = QSqlQuery(getDB());
     query.prepare(OPTIONS_TABLE_SCHEMA);
     query.exec();
+
+    if (query.lastError().isValid()) {
+        return std::unexpected(query.lastError().text());
+    }
 
     query = QSqlQuery(getDB());
     query.prepare(PLAYERS_TABLE_SCHEMA);
     query.exec();
 
+    if (query.lastError().isValid()) {
+        return std::unexpected(query.lastError().text());
+    }
+
     query = QSqlQuery(getDB());
     query.prepare(ROUNDS_TABLE_SCHEMA);
     query.exec();
+
+    if (query.lastError().isValid()) {
+        return std::unexpected(query.lastError().text());
+    }
 
     query = QSqlQuery(getDB());
     query.prepare(PAIRINGS_TABLE_SCHEMA);
     query.exec();
 
-    setDBVersion(1);
+    if (query.lastError().isValid()) {
+        return std::unexpected(query.lastError().text());
+    }
+
+    if (auto ok = setDBVersion(1); !ok) {
+        return ok;
+    }
+
+    return {};
 }
 
-int Event::getDBVersion()
+std::expected<int, QString> Event::getDBVersion()
 {
     QSqlQuery query(u"PRAGMA user_version;"_s, getDB());
+
+    if (query.lastError().isValid()) {
+        return std::unexpected(query.lastError().text());
+    }
+
     return query.value(0).toInt();
 }
 
-void Event::setDBVersion(int version)
+std::expected<void, QString> Event::setDBVersion(int version)
 {
     QSqlQuery query(getDB());
     query.prepare(u"PRAGMA user_version = %1;"_s.arg(version)); // Can't bind in a PRAGMA statement
     query.exec();
 
     if (query.lastError().isValid()) {
-        qDebug() << "set db version" << query.lastError();
+        return std::unexpected(query.lastError().text());
     }
+
+    return {};
 }
 
-void Event::loadTournaments()
+std::expected<void, QString> Event::loadTournaments()
 {
     QSqlQuery query(getDB());
     query.prepare(GET_TOURNAMENTS_QUERY);
     query.exec();
+
+    if (query.lastError().isValid()) {
+        return std::unexpected(query.lastError().text());
+    }
 
     int idNo = query.record().indexOf("id");
 
     while (query.next()) {
         auto id = query.value(idNo).toString();
 
-        auto tournament = std::unique_ptr<Tournament>(new Tournament(this, id));
+        auto tournament = std::unique_ptr<Tournament>(new Tournament(this));
+        if (auto ok = tournament->loadTournament(id); !ok) {
+            return ok;
+        }
+
         m_tournaments.push_back(std::move(tournament));
     }
+
+    return {};
 }

@@ -71,8 +71,9 @@ void BuchholzTest::testBuchholz()
     const auto expectedStandings = readStandings(fileName + ".standings"_L1);
 
     auto event = std::make_unique<Event>();
-    auto tournament = event->importTournament(fileName);
+    QVERIFY(event->open());
 
+    auto tournament = event->importTournament(fileName);
     QVERIFY(tournament.has_value());
 
     (*tournament)->setTiebreaks({new Points(), new Buchholz()});

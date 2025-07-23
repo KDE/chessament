@@ -121,16 +121,22 @@ void Controller::setAreStandingsValid(bool valid)
 void Controller::importTrf(const QUrl &fileUrl)
 {
     auto event = std::make_unique<Event>();
+
+    if (auto ok = event->open(); !ok) {
+        setError(ok.error());
+        return;
+    }
+
     auto tournament = event->importTournament(fileUrl.toLocalFile());
 
-    if (tournament.has_value()) {
-        setEvent(std::move(event));
-        setTournament(*tournament);
-
-        setCurrentView(u"PlayersPage"_s);
-    } else {
+    if (!tournament) {
         setError(tournament.error());
+        return;
     }
+
+    setEvent(std::move(event));
+    setTournament(*tournament);
+    setCurrentView(u"PlayersPage"_s);
 }
 
 void Controller::exportTrf(const QUrl &fileUrl)
@@ -196,7 +202,11 @@ void Controller::addPlayer(const QString &title,
     auto player = std::make_unique<
         Player>(startingRank, Player::titleForString(title), name, QString(), rating, nationalRating, playerId, birthDate, QString(), origin, sex);
 
-    m_tournament->addPlayer(std::move(player));
+    if (auto ok = m_tournament->addPlayer(std::move(player)); !ok) {
+        setError(ok.error());
+        return;
+    }
+
     m_playersModel->addPlayer(m_tournament->players()->back().get());
 }
 
@@ -239,7 +249,11 @@ bool Controller::setResult(int board, Pairing::PartialResult whiteResult, Pairin
 
     Pairing::Result result = {whiteResult, blackResult};
 
-    m_tournament->setResult(pairing, result);
+    if (auto ok = m_tournament->setResult(pairing, result); !ok) {
+        setError(ok.error());
+        return false;
+    }
+
     m_pairingModel->updatePairing(board);
 
     setAreStandingsValid(false);
@@ -250,19 +264,35 @@ bool Controller::setResult(int board, Pairing::PartialResult whiteResult, Pairin
 
 void Controller::newTournament(const QUrl &fileUrl, const QString &name, int numberOfRounds)
 {
-    auto event = std::make_unique<Event>(fileUrl.toLocalFile());
+    auto event = std::make_unique<Event>();
+
+    if (auto ok = event->open(fileUrl.toLocalFile()); !ok) {
+        setError(ok.error());
+        return;
+    }
+
     auto tournament = event->createTournament();
-    tournament->setName(name);
-    tournament->setNumberOfRounds(numberOfRounds);
+    if (!tournament) {
+        setError(tournament.error());
+        return;
+    }
+
+    (*tournament)->setName(name);
+    (*tournament)->setNumberOfRounds(numberOfRounds);
 
     setEvent(std::move(event));
-    setTournament(tournament);
+    setTournament(*tournament);
     setCurrentView(u"PlayersPage"_s);
 }
 
 void Controller::openEvent(const QUrl &fileUrl)
 {
-    auto event = std::make_unique<Event>(fileUrl.toLocalFile());
+    auto event = std::make_unique<Event>();
+
+    if (auto ok = event->open(fileUrl.toLocalFile()); !ok) {
+        setError(ok.error());
+        return;
+    }
 
     setEvent(std::move(event));
     setTournament(m_event->getTournament(0));

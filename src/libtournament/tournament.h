@@ -143,7 +143,7 @@ public:
     /*!
      * Adds \a player to the tournament.
      */
-    void addPlayer(std::unique_ptr<Player> player);
+    std::expected<void, QString> addPlayer(std::unique_ptr<Player> player);
 
     /*!
      * Saves \a player to the database.
@@ -201,19 +201,19 @@ public:
     /*!
      * Adds the \a pairing to the round \a round.
      */
-    void addPairing(int round, std::unique_ptr<Pairing> pairing);
+    std::expected<void, QString> addPairing(int round, std::unique_ptr<Pairing> pairing);
 
     /*!
      * Saves \a pairing to the database.
      */
-    void savePairing(Pairing *pairing);
+    std::expected<void, QString> savePairing(Pairing *pairing);
 
     /*!
      * Sets the \a result to the the \a pairing and saves it to the database.
      *
      * \sa savePairing()
      */
-    void setResult(Pairing *pairing, std::pair<Pairing::PartialResult, Pairing::PartialResult> result);
+    std::expected<void, QString> setResult(Pairing *pairing, std::pair<Pairing::PartialResult, Pairing::PartialResult> result);
 
     /*!
      * Returns the pairing corresponding to the \a round and \a board.
@@ -228,7 +228,7 @@ public:
     /*!
      * Sorts the pairings of all rounds.
      */
-    void sortPairings();
+    std::expected<void, QString> sortPairings();
 
     /*!
      * Returns whether \a round has finished.
@@ -506,15 +506,15 @@ Q_SIGNALS:
     void currentRoundChanged();
 
 private:
-    explicit Tournament(Event *event, const QString &id = {});
+    explicit Tournament(Event *event);
 
-    bool createNewTournament();
-    bool loadTournament();
+    std::expected<void, QString> createNewTournament();
+    std::expected<void, QString> loadTournament(const QString &id = {});
     void loadOptions();
-    void loadPlayers();
-    void loadRounds();
-    void loadPairings();
-    void loadTiebreaks();
+    std::expected<void, QString> loadPlayers();
+    std::expected<void, QString> loadRounds();
+    std::expected<void, QString> loadPairings();
+    std::expected<void, QString> loadTiebreaks();
 
     Event *m_event;
 

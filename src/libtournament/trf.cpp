@@ -33,7 +33,9 @@ std::expected<void, QString> TRFReader::read(QTextStream *trf)
     }
 
     for (const auto &player : std::as_const(m_players)) {
-        m_tournament->addPlayer(std::unique_ptr<Player>(player));
+        if (auto ok = m_tournament->addPlayer(std::unique_ptr<Player>(player)); !ok) {
+            return ok;
+        }
     }
 
     std::sort(m_tournament->m_players->begin(), m_tournament->m_players->end(), [](const std::unique_ptr<Player> &a, const std::unique_ptr<Player> &b) {
@@ -62,12 +64,16 @@ std::expected<void, QString> TRFReader::read(QTextStream *trf)
         }
         auto par = std::make_unique<Pairing>(1, whitePlayer, blackPlayer, pairing.value().first, pairing.value().second);
 
-        m_tournament->addPairing(key.round, std::move(par));
+        if (auto ok = m_tournament->addPairing(key.round, std::move(par)); !ok) {
+            return ok;
+        }
     }
 
     m_tournament->setNumberOfRounds(m_tournament->m_rounds.size());
 
-    m_tournament->sortPairings();
+    if (auto ok = m_tournament->sortPairings(); !ok) {
+        return ok;
+    }
 
     m_tournament->setCurrentRound(m_tournament->m_rounds.size());
     for (int i = 1; i <= m_tournament->m_numberOfRounds; ++i) {

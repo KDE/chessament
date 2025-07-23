@@ -17,18 +17,11 @@
 #include "tiebreaks/points.h"
 #include "trf.h"
 
-Tournament::Tournament(Event *event, const QString &id)
+Tournament::Tournament(Event *event)
     : m_event(event)
-    , m_id(id)
     , m_players(std::make_unique<std::vector<std::unique_ptr<Player>>>())
 {
     m_tiebreaks = {new Points()};
-
-    if (m_id.isEmpty()) {
-        createNewTournament();
-    } else {
-        loadTournament();
-    }
 }
 
 QString Tournament::id() const
@@ -186,7 +179,7 @@ std::vector<std::unique_ptr<Player>> *Tournament::players()
     return m_players.get();
 }
 
-void Tournament::addPlayer(std::unique_ptr<Player> player)
+std::expected<void, QString> Tournament::addPlayer(std::unique_ptr<Player> player)
 {
     QSqlQuery query(m_event->getDB());
     query.prepare(ADD_PLAYER_QUERY);
@@ -206,6 +199,7 @@ void Tournament::addPlayer(std::unique_ptr<Player> player)
 
     if (query.lastError().isValid()) {
         qDebug() << "add player" << *player << query.lastError();
+        return std::unexpected(query.lastError().text());
     }
 
     player->setId(query.lastInsertId().toInt());
@@ -214,6 +208,8 @@ void Tournament::addPlayer(std::unique_ptr<Player> player)
 
     Q_EMIT numberOfPlayersChanged();
     Q_EMIT numberOfRatedPlayersChanged();
+
+    return {};
 }
 
 void Tournament::savePlayer(Player *player)
@@ -390,7 +386,7 @@ void Tournament::setInitialColor(Tournament::InitialColor color)
     setOption(u"initial_color"_s, std::to_underlying(color));
 }
 
-void Tournament::addPairing(int round, std::unique_ptr<Pairing> pairing)
+std::expected<void, QString> Tournament::addPairing(int round, std::unique_ptr<Pairing> pairing)
 {
     Q_ASSERT(round >= 1);
 
@@ -404,6 +400,7 @@ void Tournament::addPairing(int round, std::unique_ptr<Pairing> pairing)
 
             if (query.lastError().isValid()) {
                 qDebug() << "add pairing : round" << query.lastError();
+                return std::unexpected(query.lastError().text());
             }
 
             auto round = std::make_unique<Round>();
@@ -430,14 +427,17 @@ void Tournament::addPairing(int round, std::unique_ptr<Pairing> pairing)
 
     if (query.lastError().isValid()) {
         qDebug() << "add pairing : pairing" << query.lastError();
+        return std::unexpected(query.lastError().text());
     }
 
     pairing->setId(query.lastInsertId().toInt());
 
     m_rounds.at(round - 1)->addPairing(std::move(pairing));
+
+    return {};
 }
 
-void Tournament::savePairing(Pairing *pairing)
+std::expected<void, QString> Tournament::savePairing(Pairing *pairing)
 {
     QSqlQuery query(m_event->getDB());
     query.prepare(UPDATE_PAIRING_QUERY);
@@ -455,13 +455,21 @@ void Tournament::savePairing(Pairing *pairing)
 
     if (query.lastError().isValid()) {
         qDebug() << "save pairing" << query.lastError();
+        return std::unexpected(query.lastError().text());
     }
+
+    return {};
 }
 
-void Tournament::setResult(Pairing *pairing, Pairing::Result result)
+std::expected<void, QString> Tournament::setResult(Pairing *pairing, Pairing::Result result)
 {
     pairing->setResult(result);
-    savePairing(pairing);
+
+    if (auto ok = savePairing(pairing); !ok) {
+        return ok;
+    }
+
+    return {};
 }
 
 Pairing *Tournament::getPairing(int round, int board)
@@ -494,7 +502,7 @@ int Tournament::numberOfRatedPlayers()
     });
 }
 
-void Tournament::sortPairings()
+std::expected<void, QString> Tournament::sortPairings()
 {
     for (uint i = 0; i < m_rounds.size(); i++) {
         auto pairings = m_rounds.at(i)->pairings();
@@ -565,11 +573,15 @@ void Tournament::sortPairings()
         for (std::size_t i = 0; i < pairings->size(); i++) {
             pairings->at(i)->setBoard(i + 1);
 
-            savePairing(pairings->at(i).get());
+            if (auto ok = savePairing(pairings->at(i).get()); !ok) {
+                return ok;
+            }
         }
 
         // m_rounds.at(i)->setPairings(pairings);
     }
+
+    return {};
 }
 
 bool Tournament::isRoundFinished(int round)
@@ -645,12 +657,16 @@ QCoro::Task<std::expected<bool, QString>> Tournament::pairNextRound()
         }
 
         auto p = std::make_unique<Pairing>(board, whitePlayer, blackPlayer, whiteResult, Pairing::PartialResult::Unknown);
-        addPairing(m_currentRound + 1, std::move(p));
+        if (auto ok = addPairing(m_currentRound + 1, std::move(p)); !ok) {
+            co_return std::unexpected(ok.error());
+        }
 
         board++;
     }
 
-    sortPairings();
+    if (auto ok = sortPairings(); !ok) {
+        co_return std::unexpected(ok.error());
+    }
 
     setCurrentRound(m_currentRound + 1);
 
@@ -891,8 +907,10 @@ bool Tournament::exportTrf(const QString &fileName)
     return true;
 }
 
-bool Tournament::createNewTournament()
+std::expected<void, QString> Tournament::createNewTournament()
 {
+    Q_ASSERT(m_id.isEmpty());
+
     const auto newId = QUuid::createUuid().toString(QUuid::WithoutBraces);
 
     QSqlQuery query(m_event->getDB());
@@ -902,22 +920,35 @@ bool Tournament::createNewTournament()
 
     if (query.lastError().isValid()) {
         qDebug() << "create tournament" << query.lastError();
-        return false;
+        return std::unexpected(query.lastError().text());
     }
 
     setId(newId);
-    return true;
+
+    return {};
 }
 
-bool Tournament::loadTournament()
+std::expected<void, QString> Tournament::loadTournament(const QString &id)
 {
-    loadOptions();
-    loadPlayers();
-    loadRounds();
-    loadPairings();
-    loadTiebreaks();
+    Q_ASSERT(m_id.isEmpty());
 
-    return true;
+    setId(id);
+
+    loadOptions();
+    if (auto ok = loadPlayers(); !ok) {
+        return ok;
+    }
+    if (auto ok = loadRounds(); !ok) {
+        return ok;
+    }
+    if (auto ok = loadPairings(); !ok) {
+        return ok;
+    }
+    if (auto ok = loadTiebreaks(); !ok) {
+        return ok;
+    }
+
+    return {};
 }
 
 void Tournament::loadOptions()
@@ -933,7 +964,7 @@ void Tournament::loadOptions()
     setInitialColor(Tournament::InitialColor(getOption(u"initial_color"_s).toInt()));
 }
 
-void Tournament::loadPlayers()
+std::expected<void, QString> Tournament::loadPlayers()
 {
     m_players->clear();
 
@@ -941,6 +972,10 @@ void Tournament::loadPlayers()
     query.prepare(GET_PLAYERS_QUERY);
     query.bindValue(u":tournament"_s, m_id);
     query.exec();
+
+    if (query.lastError().isValid()) {
+        return std::unexpected(query.lastError().text());
+    }
 
     int idNo = query.record().indexOf("id");
     int stRankNo = query.record().indexOf("startingRank");
@@ -970,14 +1005,20 @@ void Tournament::loadPlayers()
         player->setId(query.value(idNo).toInt());
         m_players->push_back(std::move(player));
     }
+
+    return {};
 }
 
-void Tournament::loadRounds()
+std::expected<void, QString> Tournament::loadRounds()
 {
     QSqlQuery query(m_event->getDB());
     query.prepare(GET_ROUNDS_QUERY);
     query.bindValue(u":tournament"_s, m_id);
     query.exec();
+
+    if (query.lastError().isValid()) {
+        return std::unexpected(query.lastError().text());
+    }
 
     int idNo = query.record().indexOf("id");
     int numberNo = query.record().indexOf("number");
@@ -992,9 +1033,11 @@ void Tournament::loadRounds()
     std::sort(m_rounds.begin(), m_rounds.end(), [](const std::unique_ptr<Round> &a, const std::unique_ptr<Round> &b) {
         return a->number() < b->number();
     });
+
+    return {};
 }
 
-void Tournament::loadPairings()
+std::expected<void, QString> Tournament::loadPairings()
 {
     auto players = getPlayersById();
 
@@ -1002,6 +1045,10 @@ void Tournament::loadPairings()
     query.prepare(GET_PAIRINGS_QUERY);
     query.bindValue(u":tournament"_s, m_id);
     query.exec();
+
+    if (query.lastError().isValid()) {
+        return std::unexpected(query.lastError().text());
+    }
 
     int idNo = query.record().indexOf("id");
     int boardNo = query.record().indexOf("board");
@@ -1021,9 +1068,11 @@ void Tournament::loadPairings()
         pairing->setId(query.value(idNo).toInt());
         m_rounds.at(round - 1)->addPairing(std::move(pairing));
     }
+
+    return {};
 }
 
-void Tournament::loadTiebreaks()
+std::expected<void, QString> Tournament::loadTiebreaks()
 {
     const auto json = QJsonDocument::fromJson(getOption("tiebreaks"_L1).toByteArray());
 
@@ -1051,4 +1100,6 @@ void Tournament::loadTiebreaks()
             m_tiebreaks << tiebreak;
         }
     }
+
+    return {};
 }

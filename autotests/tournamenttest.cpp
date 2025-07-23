@@ -25,44 +25,61 @@ private Q_SLOTS:
 
 void TournamentTest::testNewTournament()
 {
-    auto e = std::make_unique<Event>();
-    auto t = e->createTournament();
-    QCOMPARE(t->name(), u""_s);
+    auto event = std::make_unique<Event>();
+    QVERIFY(event->open());
+
+    auto t = event->createTournament();
+
+    QVERIFY(t.has_value());
+    QCOMPARE((*t)->name(), u""_s);
 }
 
 void TournamentTest::testToJson()
 {
-    auto e = std::make_unique<Event>();
-    auto t = e->createTournament();
-    t->setName(u"Test tournament"_s);
+    auto event = std::make_unique<Event>();
+    QVERIFY(event->open());
 
-    auto json = t->toJson();
+    auto t = event->createTournament();
+    QVERIFY(t.has_value());
+
+    (*t)->setName(u"Test tournament"_s);
+
+    auto json = (*t)->toJson();
 
     QCOMPARE(json[u"tournament"_s].toObject()[u"name"_s], u"Test tournament"_s);
 }
 
 void TournamentTest::testTrf()
 {
-    auto e = std::make_unique<Event>();
-    auto t = e->createTournament();
-    t->setName(u"Test tournament"_s);
+    auto event = std::make_unique<Event>();
+    QVERIFY(event->open());
 
-    auto trf = t->toTrf();
+    auto t = event->createTournament();
+    QVERIFY(t.has_value());
+
+    (*t)->setName(u"Test tournament"_s);
+
+    auto trf = (*t)->toTrf();
 
     QVERIFY(trf.contains(u"012 Test tournament"_s));
 
-    e = std::make_unique<Event>();
-    t = e->createTournament();
-    auto ok = t->readTrf(QTextStream(&trf));
+    event = std::make_unique<Event>();
+    QVERIFY(event->open());
+
+    t = event->createTournament();
+    QVERIFY(t.has_value());
+
+    auto ok = (*t)->readTrf(QTextStream(&trf));
 
     QVERIFY(ok.has_value() && ok);
 }
 
 void TournamentTest::testImportTrf()
 {
-    auto e = std::make_unique<Event>();
-    auto tournament = e->importTournament(QLatin1String(DATA_DIR) + u"/tournament_1.txt"_s);
+    auto event = std::make_unique<Event>();
+    QVERIFY(event->open());
 
+    auto tournament = event->importTournament(QLatin1String(DATA_DIR) + u"/tournament_1.txt"_s);
     QVERIFY(tournament.has_value());
 
     auto t = *tournament;
@@ -87,21 +104,24 @@ void TournamentTest::testImportTrf()
 
 void TournamentTest::testLoadTournament()
 {
-    auto e = std::make_unique<Event>();
-    auto tournament = e->importTournament(QLatin1String(DATA_DIR) + u"/tournament_1.txt"_s);
+    auto event = std::make_unique<Event>();
+    QVERIFY(event->open());
 
+    auto tournament = event->importTournament(QLatin1String(DATA_DIR) + u"/tournament_1.txt"_s);
     QVERIFY(tournament.has_value());
 
     QTemporaryFile file;
     QVERIFY(file.open());
     QVERIFY(!file.fileName().isEmpty());
 
-    e->saveAs(file.fileName());
+    event->saveAs(file.fileName());
 
-    e = std::make_unique<Event>(file.fileName());
-    QCOMPARE(e->numberOfTournaments(), 1);
+    event = std::make_unique<Event>();
+    QVERIFY(event->open(file.fileName()).has_value());
 
-    auto t = e->getTournament(0);
+    QCOMPARE(event->numberOfTournaments(), 1);
+
+    auto t = event->getTournament(0);
 
     QCOMPARE(t->name(), u"Test Tournament"_s);
     QCOMPARE(t->city(), u"Place"_s);
