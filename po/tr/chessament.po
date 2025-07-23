@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-22 00:40+0000\n"
-"PO-Revision-Date: 2025-07-04 15:53+0300\n"
+"POT-Creation-Date: 2025-07-23 00:40+0000\n"
+"PO-Revision-Date: 2025-07-22 21:32+0300\n"
 "Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -164,7 +164,7 @@ msgid "Board"
 msgstr "Tahta"
 
 #: pairingmodel.cpp:98 pairingmodel.cpp:106 playersmodel.cpp:145
-#: standingsmodel.cpp:61
+#: standingsmodel.cpp:69
 #, kde-format
 msgctxt "@title:column"
 msgid "No"
@@ -188,13 +188,13 @@ msgctxt "@title:column"
 msgid "Black Player"
 msgstr "Siyah Oyuncu"
 
-#: playersmodel.cpp:147 standingsmodel.cpp:63
+#: playersmodel.cpp:147 standingsmodel.cpp:71
 #, kde-format
 msgctxt "@title:column"
 msgid "Title"
 msgstr "Başlık"
 
-#: playersmodel.cpp:149 standingsmodel.cpp:65
+#: playersmodel.cpp:149 standingsmodel.cpp:73
 #, kde-format
 msgctxt "@title:column"
 msgid "Name"
@@ -325,50 +325,50 @@ msgstr "Cinsiyet"
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Tiebreak"
-msgstr ""
+msgstr "Eşitlik Bozma Ekle"
 
 #: qml/components/TiebreakDelegate.qml:30
 #: qml/components/TiebreakDelegate.qml:35
 #, kde-format
 msgctxt "@action:button"
 msgid "Configure tiebreak"
-msgstr ""
+msgstr "Eşitlik Bozmayı Yapılandır"
 
 #: qml/components/TiebreakDelegate.qml:51
 #, kde-format
 msgctxt "@action:button Move tiebreak up"
 msgid "Move Up"
-msgstr ""
+msgstr "Yukarı Taşı"
 
 #: qml/components/TiebreakDelegate.qml:56
 #, kde-format
 msgctxt "@action:button Move tiebreak up"
 msgid "Move up"
-msgstr ""
+msgstr "Yukarı Taşı"
 
 #: qml/components/TiebreakDelegate.qml:63
 #, kde-format
 msgctxt "@action:button Move tiebreak down"
 msgid "Move Down"
-msgstr ""
+msgstr "Aşağı Taşı"
 
 #: qml/components/TiebreakDelegate.qml:68
 #, kde-format
 msgctxt "@action:button Move tiebreak down"
 msgid "Move down"
-msgstr ""
+msgstr "Aşağı Taşı"
 
 #: qml/components/TiebreakDelegate.qml:75
 #, kde-format
 msgctxt "@action:button"
 msgid "Delete Tiebreak"
-msgstr ""
+msgstr "Eşitlik Bozmayı Sil"
 
 #: qml/components/TiebreakDelegate.qml:80
 #, kde-format
 msgctxt "@action:button"
 msgid "Delete tiebreak"
-msgstr ""
+msgstr "Eşitlik Bozmayı Sil"
 
 #: qml/DeletePairingsDialog.qml:16
 #, kde-format
@@ -679,7 +679,7 @@ msgstr ""
 "Dördüncü raunttan sonra ilk puan sıralamasını değiştirmeye resmî "
 "turnuvalarda izin verilmez."
 
-#: qml/StandingsPage.qml:36
+#: qml/StandingsPage.qml:47
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No standings yet"
@@ -689,7 +689,7 @@ msgstr "Henüz puan yok"
 #, kde-format
 msgctxt "@title:window"
 msgid "Edit Tiebreak"
-msgstr ""
+msgstr "Eşitlik Bozmayı Düzenle"
 
 #: qml/TournamentSettings.qml:14
 #, kde-format
@@ -773,13 +773,13 @@ msgstr "Eşleşme kaynaklı bay geçme değeri"
 #, kde-format
 msgctxt "@title:group"
 msgid "Tiebreaks"
-msgstr ""
+msgstr "Eşitlik Bozmalar"
 
-#: qml/TournamentSettingsFormat.qml:78
+#: qml/TournamentSettingsFormat.qml:82
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Tiebreak"
-msgstr ""
+msgstr "Eşitlik Bozma Ekle"
 
 #: qml/TournamentSettingsInformation.qml:11
 #, kde-format
@@ -863,7 +863,7 @@ msgstr "%1 olarak oturum açıldı"
 msgid "Logout"
 msgstr "Oturumu Kapat"
 
-#: standingsmodel.cpp:59
+#: standingsmodel.cpp:67
 #, kde-format
 msgctxt "@title:colunm"
 msgid "Rank"

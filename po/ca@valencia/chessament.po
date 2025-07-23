@@ -3,13 +3,13 @@
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# Josep M. Ferrer <txemaq@gmail.com>, 2025.
+# SPDX-FileCopyrightText: 2025 Josep M. Ferrer <txemaq@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-22 00:40+0000\n"
-"PO-Revision-Date: 2025-07-04 09:31+0200\n"
+"POT-Creation-Date: 2025-07-23 00:40+0000\n"
+"PO-Revision-Date: 2025-07-22 09:46+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 25.04.3\n"
 
 #: chessamentapplication.cpp:23
 #, kde-format
@@ -167,7 +167,7 @@ msgid "Board"
 msgstr "Tauler"
 
 #: pairingmodel.cpp:98 pairingmodel.cpp:106 playersmodel.cpp:145
-#: standingsmodel.cpp:61
+#: standingsmodel.cpp:69
 #, kde-format
 msgctxt "@title:column"
 msgid "No"
@@ -191,13 +191,13 @@ msgctxt "@title:column"
 msgid "Black Player"
 msgstr "Jugador de negres"
 
-#: playersmodel.cpp:147 standingsmodel.cpp:63
+#: playersmodel.cpp:147 standingsmodel.cpp:71
 #, kde-format
 msgctxt "@title:column"
 msgid "Title"
 msgstr "Títol"
 
-#: playersmodel.cpp:149 standingsmodel.cpp:65
+#: playersmodel.cpp:149 standingsmodel.cpp:73
 #, kde-format
 msgctxt "@title:column"
 msgid "Name"
@@ -328,50 +328,50 @@ msgstr "Sexe"
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Tiebreak"
-msgstr ""
+msgstr "Addició de desempat"
 
 #: qml/components/TiebreakDelegate.qml:30
 #: qml/components/TiebreakDelegate.qml:35
 #, kde-format
 msgctxt "@action:button"
 msgid "Configure tiebreak"
-msgstr ""
+msgstr "Configura el desempat"
 
 #: qml/components/TiebreakDelegate.qml:51
 #, kde-format
 msgctxt "@action:button Move tiebreak up"
 msgid "Move Up"
-msgstr ""
+msgstr "Mou cap amunt"
 
 #: qml/components/TiebreakDelegate.qml:56
 #, kde-format
 msgctxt "@action:button Move tiebreak up"
 msgid "Move up"
-msgstr ""
+msgstr "Mou cap amunt"
 
 #: qml/components/TiebreakDelegate.qml:63
 #, kde-format
 msgctxt "@action:button Move tiebreak down"
 msgid "Move Down"
-msgstr ""
+msgstr "Mou cap avall"
 
 #: qml/components/TiebreakDelegate.qml:68
 #, kde-format
 msgctxt "@action:button Move tiebreak down"
 msgid "Move down"
-msgstr ""
+msgstr "Mou cap avall"
 
 #: qml/components/TiebreakDelegate.qml:75
 #, kde-format
 msgctxt "@action:button"
 msgid "Delete Tiebreak"
-msgstr ""
+msgstr "Suprimix el desempat"
 
 #: qml/components/TiebreakDelegate.qml:80
 #, kde-format
 msgctxt "@action:button"
 msgid "Delete tiebreak"
-msgstr ""
+msgstr "Suprimix el desempat"
 
 #: qml/DeletePairingsDialog.qml:16
 #, kde-format
@@ -682,7 +682,7 @@ msgstr ""
 "No està permés canviar el rànquing inicial després que s'haja emparellat la "
 "quarta ronda en tornejos oficials."
 
-#: qml/StandingsPage.qml:36
+#: qml/StandingsPage.qml:47
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No standings yet"
@@ -692,7 +692,7 @@ msgstr "Encara no hi ha cap resultat"
 #, kde-format
 msgctxt "@title:window"
 msgid "Edit Tiebreak"
-msgstr ""
+msgstr "Edició de desempat"
 
 #: qml/TournamentSettings.qml:14
 #, kde-format
@@ -776,13 +776,13 @@ msgstr "El valor de l'exempció d'emparellament assignat"
 #, kde-format
 msgctxt "@title:group"
 msgid "Tiebreaks"
-msgstr ""
+msgstr "Desempats"
 
-#: qml/TournamentSettingsFormat.qml:78
+#: qml/TournamentSettingsFormat.qml:82
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Tiebreak"
-msgstr ""
+msgstr "Afig un desempat"
 
 #: qml/TournamentSettingsInformation.qml:11
 #, kde-format
@@ -866,7 +866,7 @@ msgstr "Connectat com a %1"
 msgid "Logout"
 msgstr "Eixida"
 
-#: standingsmodel.cpp:59
+#: standingsmodel.cpp:67
 #, kde-format
 msgctxt "@title:colunm"
 msgid "Rank"

@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-22 00:40+0000\n"
-"PO-Revision-Date: 2025-07-04 06:15+0200\n"
+"POT-Creation-Date: 2025-07-23 00:40+0000\n"
+"PO-Revision-Date: 2025-07-22 06:57+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -163,7 +163,7 @@ msgid "Board"
 msgstr "Deska"
 
 #: pairingmodel.cpp:98 pairingmodel.cpp:106 playersmodel.cpp:145
-#: standingsmodel.cpp:61
+#: standingsmodel.cpp:69
 #, kde-format
 msgctxt "@title:column"
 msgid "No"
@@ -187,13 +187,13 @@ msgctxt "@title:column"
 msgid "Black Player"
 msgstr "Črni igralec"
 
-#: playersmodel.cpp:147 standingsmodel.cpp:63
+#: playersmodel.cpp:147 standingsmodel.cpp:71
 #, kde-format
 msgctxt "@title:column"
 msgid "Title"
 msgstr "Naziv"
 
-#: playersmodel.cpp:149 standingsmodel.cpp:65
+#: playersmodel.cpp:149 standingsmodel.cpp:73
 #, kde-format
 msgctxt "@title:column"
 msgid "Name"
@@ -324,50 +324,50 @@ msgstr "Spol"
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Tiebreak"
-msgstr ""
+msgstr "Dodaj tiebreak"
 
 #: qml/components/TiebreakDelegate.qml:30
 #: qml/components/TiebreakDelegate.qml:35
 #, kde-format
 msgctxt "@action:button"
 msgid "Configure tiebreak"
-msgstr ""
+msgstr "Konfiguriraj tiebreak"
 
 #: qml/components/TiebreakDelegate.qml:51
 #, kde-format
 msgctxt "@action:button Move tiebreak up"
 msgid "Move Up"
-msgstr ""
+msgstr "Pomakni gor"
 
 #: qml/components/TiebreakDelegate.qml:56
 #, kde-format
 msgctxt "@action:button Move tiebreak up"
 msgid "Move up"
-msgstr ""
+msgstr "Pomakni gor"
 
 #: qml/components/TiebreakDelegate.qml:63
 #, kde-format
 msgctxt "@action:button Move tiebreak down"
 msgid "Move Down"
-msgstr ""
+msgstr "Pomakni dol"
 
 #: qml/components/TiebreakDelegate.qml:68
 #, kde-format
 msgctxt "@action:button Move tiebreak down"
 msgid "Move down"
-msgstr ""
+msgstr "Pomakni dol"
 
 #: qml/components/TiebreakDelegate.qml:75
 #, kde-format
 msgctxt "@action:button"
 msgid "Delete Tiebreak"
-msgstr ""
+msgstr "Zbriši Tiebreak"
 
 #: qml/components/TiebreakDelegate.qml:80
 #, kde-format
 msgctxt "@action:button"
 msgid "Delete tiebreak"
-msgstr ""
+msgstr "Zbriši tiebreak"
 
 #: qml/DeletePairingsDialog.qml:16
 #, kde-format
@@ -682,7 +682,7 @@ msgstr ""
 "Spreminjanje začetne lestvice po tem, ko je bil par v četrtem krogu že "
 "določen, na uradnih turnirjih ni dovoljeno."
 
-#: qml/StandingsPage.qml:36
+#: qml/StandingsPage.qml:47
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No standings yet"
@@ -692,7 +692,7 @@ msgstr "Še ni lestvice"
 #, kde-format
 msgctxt "@title:window"
 msgid "Edit Tiebreak"
-msgstr ""
+msgstr "Uredi Tiebreak"
 
 #: qml/TournamentSettings.qml:14
 #, kde-format
@@ -776,13 +776,13 @@ msgstr "Vrednost bye dodeljenemu paru"
 #, kde-format
 msgctxt "@title:group"
 msgid "Tiebreaks"
-msgstr ""
+msgstr "Tiebreaki"
 
-#: qml/TournamentSettingsFormat.qml:78
+#: qml/TournamentSettingsFormat.qml:82
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Tiebreak"
-msgstr ""
+msgstr "Dodaj Tiebreak"
 
 #: qml/TournamentSettingsInformation.qml:11
 #, kde-format
@@ -866,7 +866,7 @@ msgstr "Prijavljen kot %1"
 msgid "Logout"
 msgstr "Odjava"
 
-#: standingsmodel.cpp:59
+#: standingsmodel.cpp:67
 #, kde-format
 msgctxt "@title:colunm"
 msgid "Rank"

@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-22 00:40+0000\n"
+"POT-Creation-Date: 2025-07-23 00:40+0000\n"
 "PO-Revision-Date: 2025-06-08 13:43+0200\n"
 "Last-Translator: Thomas Vergnaud <thomas.vergnaud@mailo.fr>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
@@ -163,7 +163,7 @@ msgid "Board"
 msgstr "Échiquier"
 
 #: pairingmodel.cpp:98 pairingmodel.cpp:106 playersmodel.cpp:145
-#: standingsmodel.cpp:61
+#: standingsmodel.cpp:69
 #, kde-format
 msgctxt "@title:column"
 msgid "No"
@@ -187,13 +187,13 @@ msgctxt "@title:column"
 msgid "Black Player"
 msgstr "Joueur noir"
 
-#: playersmodel.cpp:147 standingsmodel.cpp:63
+#: playersmodel.cpp:147 standingsmodel.cpp:71
 #, kde-format
 msgctxt "@title:column"
 msgid "Title"
 msgstr "Titre"
 
-#: playersmodel.cpp:149 standingsmodel.cpp:65
+#: playersmodel.cpp:149 standingsmodel.cpp:73
 #, kde-format
 msgctxt "@title:column"
 msgid "Name"
@@ -690,7 +690,7 @@ msgid ""
 "allowed in official tournaments."
 msgstr ""
 
-#: qml/StandingsPage.qml:36
+#: qml/StandingsPage.qml:47
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No standings yet"
@@ -786,7 +786,7 @@ msgctxt "@title:group"
 msgid "Tiebreaks"
 msgstr ""
 
-#: qml/TournamentSettingsFormat.qml:78
+#: qml/TournamentSettingsFormat.qml:82
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Tiebreak"
@@ -874,7 +874,7 @@ msgstr "Connecté en tant que %1"
 msgid "Logout"
 msgstr "Déconnecter"
 
-#: standingsmodel.cpp:59
+#: standingsmodel.cpp:67
 #, kde-format
 msgctxt "@title:colunm"
 msgid "Rank"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-22 00:40+0000\n"
+"POT-Creation-Date: 2025-07-23 00:40+0000\n"
 "PO-Revision-Date: 2025-07-14 20:39+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -166,7 +166,7 @@ msgid "Board"
 msgstr "اللوحة"
 
 #: pairingmodel.cpp:98 pairingmodel.cpp:106 playersmodel.cpp:145
-#: standingsmodel.cpp:61
+#: standingsmodel.cpp:69
 #, kde-format
 msgctxt "@title:column"
 msgid "No"
@@ -190,13 +190,13 @@ msgctxt "@title:column"
 msgid "Black Player"
 msgstr "اللاعب الأسود"
 
-#: playersmodel.cpp:147 standingsmodel.cpp:63
+#: playersmodel.cpp:147 standingsmodel.cpp:71
 #, kde-format
 msgctxt "@title:column"
 msgid "Title"
 msgstr "العنوان"
 
-#: playersmodel.cpp:149 standingsmodel.cpp:65
+#: playersmodel.cpp:149 standingsmodel.cpp:73
 #, kde-format
 msgctxt "@title:column"
 msgid "Name"
@@ -690,7 +690,7 @@ msgid ""
 msgstr ""
 "لا يُسمح بتغيير الترتيب المبدئي بعد إقران الجولة الرابعة في البطولات الرسمية."
 
-#: qml/StandingsPage.qml:36
+#: qml/StandingsPage.qml:47
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No standings yet"
@@ -786,7 +786,7 @@ msgctxt "@title:group"
 msgid "Tiebreaks"
 msgstr ""
 
-#: qml/TournamentSettingsFormat.qml:78
+#: qml/TournamentSettingsFormat.qml:82
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Tiebreak"
@@ -874,7 +874,7 @@ msgstr "والج ك‍%1"
 msgid "Logout"
 msgstr "اخرج"
 
-#: standingsmodel.cpp:59
+#: standingsmodel.cpp:67
 #, kde-format
 msgctxt "@title:colunm"
 msgid "Rank"
