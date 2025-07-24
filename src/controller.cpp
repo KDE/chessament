@@ -3,8 +3,11 @@
 
 #include "controller.h"
 #include "libtournament/pairing.h"
+#include "libtournament/state.h"
 
+#include <QCoroFuture>
 #include <QRandomGenerator>
+#include <QtConcurrent>
 
 using namespace Qt::Literals::StringLiterals;
 
@@ -182,10 +185,20 @@ void Controller::removePairings(bool keepByes)
     setAreStandingsValid(false);
 }
 
-void Controller::reloadStandings()
+QCoro::QmlTask Controller::reloadStandings()
 {
     qDebug() << "reloading standings";
-    m_standingsModel->setTournament(m_tournament);
+    return updateStandings();
+}
+
+QCoro::Task<> Controller::updateStandings()
+{
+    const auto standings = co_await QtConcurrent::run([this]() {
+        return m_tournament->getStandings(m_tournament->getState());
+    });
+
+    m_standingsModel->setStandings(standings);
+
     setAreStandingsValid(true);
 }
 

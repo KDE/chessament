@@ -16,6 +16,7 @@
 #include <KIconTheme>
 #include <KLocalizedQmlContext>
 #include <KLocalizedString>
+#include <QCoroQml>
 
 #ifdef Q_OS_WINDOWS
 #include <QFont>
@@ -72,6 +73,8 @@ int main(int argc, char *argv[])
     QGuiApplication::setWindowIcon(QIcon::fromTheme(u"org.kde.chessament"_s));
 
     QQmlApplicationEngine engine;
+
+    QCoro::Qml::registerTypes();
 
     KLocalization::setupLocalizedContext(&engine);
     engine.loadFromModule("org.kde.chessament", u"Main"_s);

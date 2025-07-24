@@ -76,10 +76,14 @@ QVariant StandingsModel::headerData(int section, Qt::Orientation orientation, in
     }
 }
 
-void StandingsModel::setTournament(Tournament *tournament)
+void StandingsModel::setStandings(QList<PlayerTiebreaks> standings)
 {
     beginResetModel();
-    m_tournament = tournament;
-    m_standings = m_tournament->getStandings(State{tournament});
+    m_standings = std::move(standings);
     endResetModel();
+}
+
+void StandingsModel::setTournament(Tournament *tournament)
+{
+    m_tournament = tournament;
 }

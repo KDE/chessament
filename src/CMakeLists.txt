@@ -55,6 +55,8 @@ ecm_add_qml_module(chessament_static
         org.kde.chessament.settings
 )
 
+kde_source_files_enable_exceptions(controller.cpp)
+
 target_sources(chessament_static PUBLIC
     chessamentapplication.cpp
     chessamentapplication.h
@@ -62,6 +64,7 @@ target_sources(chessament_static PUBLIC
 
 target_link_libraries(chessament_static PUBLIC
     libtournament
+    Qt6::Concurrent
     Qt6::Core
     Qt6::Gui
     Qt6::Qml
@@ -81,6 +84,7 @@ target_link_libraries(chessament_static PUBLIC
     KF6::ItemModels
     KirigamiAddonsStatefulApp
     QCoro6::Core
+    QCoro6::Qml
     ${QTKEYCHAIN_LIBRARIES}
 )
 target_include_directories(chessament_static PUBLIC ${CMAKE_BINARY_DIR})

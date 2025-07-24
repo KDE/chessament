@@ -32,6 +32,7 @@ public:
     QHash<int, QByteArray> roleNames() const override;
     Qt::ItemFlags flags(const QModelIndex &index) const override;
 
+    void setStandings(QList<PlayerTiebreaks> standings);
     void setTournament(Tournament *tournament);
 
 private:
