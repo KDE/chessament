@@ -1,0 +1,871 @@
+# Translation for chessament.po to Euskara/Basque (eu).
+# Copyright (C) 2025 This file is copyright:
+# This file is distributed under the same license as the chessament package.
+# KDE euskaratzeko proiektuaren arduraduna <xalba@ni.eus>.
+#
+# Translators:
+# SPDX-FileCopyrightText: 2025 Iñigo Salvador Azurmendi <xalba@ni.eus>
+msgid ""
+msgstr ""
+"Project-Id-Version: chessament\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2025-07-23 00:40+0000\n"
+"PO-Revision-Date: 2025-07-23 19:07+0200\n"
+"Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
+"Language-Team: Basque <kde-i18n-eu@kde.org>\n"
+"Language: eu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 25.04.3\n"
+
+#: chessamentapplication.cpp:23
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "New tournament…"
+msgstr "Txapelketa berria…"
+
+#: chessamentapplication.cpp:44
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Import tournament report…"
+msgstr "Inportatu txapelketaren txostena…"
+
+#: chessamentapplication.cpp:53
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Export tournament report…"
+msgstr "Esportatu txapelketaren txostena…"
+
+#: chessamentapplication.cpp:61
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Connect account"
+msgstr "Konektatu kontua"
+
+#: controller.cpp:139
+#, kde-format
+msgid "Couldn't export tournament."
+msgstr "Ezin izan du txapelketa esportatu."
+
+#: documents.cpp:16
+#, kde-format
+msgctxt "@title"
+msgid "Starting Rank"
+msgstr ""
+
+#: documents.cpp:44
+#, kde-format
+msgctxt "@title"
+msgid "Round %1 Pairings"
+msgstr ""
+
+#: libtournament/pairingengine.cpp:20
+#, kde-format
+msgctxt "bbpPairings is the name of a program, should not be translated"
+msgid "The pairing engine bbpPairings could not be found. Is it installed?"
+msgstr ""
+
+#: libtournament/pairingengine.cpp:28
+#, kde-format
+msgid "Could not create temporary file."
+msgstr ""
+
+#: libtournament/pairingengine.cpp:53
+#, kde-format
+msgctxt "bbpPairings is the name of a program, should not be translated"
+msgid "bbpPairings terminated with a non zero exit code: %1"
+msgstr ""
+
+#: libtournament/pairingengine.cpp:71 libtournament/trf.cpp:179
+#, kde-format
+msgid "Invalid pairing \"%1\"."
+msgstr ""
+
+#: libtournament/pairingengine.cpp:77 libtournament/pairingengine.cpp:81
+#: libtournament/pairingengine.cpp:85 libtournament/pairingengine.cpp:89
+#: libtournament/trf.cpp:192
+#, kde-format
+msgid "Invalid player \"%1\" on pairing \"%2\"."
+msgstr ""
+
+#: libtournament/tournament.cpp:631
+#, kde-format
+msgid "An error ocurred while pairing the round: %1"
+msgstr ""
+
+#: libtournament/tournament.cpp:873
+#, kde-format
+msgid "Couldn't open file"
+msgstr "Ezin izan du fitxategia ireki"
+
+#: libtournament/trf.cpp:48 libtournament/trf.cpp:55
+#, kde-format
+msgid "Player \"%1\" not found."
+msgstr "\"%1\" jokalaria ez da aurkitu."
+
+#: libtournament/trf.cpp:61
+#, kde-format
+msgid "Unknown result on pairing \"%1\" with \"%2\"."
+msgstr ""
+
+#: libtournament/trf.cpp:199
+#, kde-format
+msgid "Unknown result \"%1\" on pairing \"%2\"."
+msgstr ""
+
+#: libtournament/trf.cpp:202
+#, kde-format
+msgid "Pairing \"%1\" has no opponent."
+msgstr ""
+
+#: main.cpp:57 qml/WelcomePage.qml:15
+#, kde-format
+msgctxt "@title"
+msgid "Chessament"
+msgstr "Chessament"
+
+#: main.cpp:61
+#, kde-format
+msgid "Chess Tournament Manager"
+msgstr "Xake txapelketa kudeatzailea"
+
+#: main.cpp:65
+#, kde-format
+msgid "© 2024 Manuel Alcaraz Zambrano"
+msgstr "© 2024 Manuel Alcaraz Zambrano"
+
+#: main.cpp:66
+#, kde-format
+msgctxt "@info:credit"
+msgid "Manuel Alcaraz Zambrano"
+msgstr "Manuel Alcaraz Zambrano"
+
+#: main.cpp:67
+#, kde-format
+msgctxt "@info:credit"
+msgid "Author & Maintainer"
+msgstr "Egilea eta mantentzailea"
+
+#: main.cpp:70
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Iñigo Salvador Azurmendi"
+
+#: main.cpp:70
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "xalba@ni.eus"
+
+#: pairingmodel.cpp:96
+#, kde-format
+msgctxt "@title:column"
+msgid "Board"
+msgstr "Taula"
+
+#: pairingmodel.cpp:98 pairingmodel.cpp:106 playersmodel.cpp:145
+#: standingsmodel.cpp:69
+#, kde-format
+msgctxt "@title:column"
+msgid "No"
+msgstr "Ez"
+
+#: pairingmodel.cpp:100
+#, kde-format
+msgctxt "@title:column"
+msgid "White player"
+msgstr "Jokalari Zuria"
+
+#: pairingmodel.cpp:102
+#, kde-format
+msgctxt "@title:column"
+msgid "Result"
+msgstr "Emaitza"
+
+#: pairingmodel.cpp:104
+#, kde-format
+msgctxt "@title:column"
+msgid "Black Player"
+msgstr "Jokalari Beltza"
+
+#: playersmodel.cpp:147 standingsmodel.cpp:71
+#, kde-format
+msgctxt "@title:column"
+msgid "Title"
+msgstr "Titulua"
+
+#: playersmodel.cpp:149 standingsmodel.cpp:73
+#, kde-format
+msgctxt "@title:column"
+msgid "Name"
+msgstr "Izena"
+
+#: playersmodel.cpp:151
+#, kde-format
+msgctxt "@title:column"
+msgid "Surname"
+msgstr "Abizena"
+
+#: playersmodel.cpp:153
+#, fuzzy, kde-format
+msgctxt "@title:column"
+msgid "Rating"
+msgstr "Balorazioa"
+
+#: playersmodel.cpp:155
+#, kde-format
+msgctxt "@title:column"
+msgid "National rating"
+msgstr ""
+
+#: playersmodel.cpp:157
+#, kde-format
+msgctxt "@title:column"
+msgid "Player ID"
+msgstr "Jokalariaren ID"
+
+#: playersmodel.cpp:159
+#, kde-format
+msgctxt "@title:column"
+msgid "Birth date"
+msgstr "Jaioteguna"
+
+#: playersmodel.cpp:161
+#, kde-format
+msgctxt "@title:column"
+msgid "Federation"
+msgstr "Federazioa"
+
+#: playersmodel.cpp:163
+#, kde-format
+msgctxt "@title:column"
+msgid "Origin"
+msgstr "Jatorria"
+
+#: playersmodel.cpp:165
+#, kde-format
+msgctxt "@title:column"
+msgid "Sex"
+msgstr ""
+
+#: playersmodel.cpp:167
+#, kde-format
+msgctxt "@title:column"
+msgid "Full Name"
+msgstr "Izen osoa"
+
+#: qml/AddPlayerDialog.qml:16
+#, kde-format
+msgctxt "@title:window"
+msgid "Add player"
+msgstr "Gehitu jokalaria"
+
+#: qml/AddPlayerDialog.qml:53
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Title"
+msgstr "Titulua"
+
+#: qml/AddPlayerDialog.qml:59
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Name"
+msgstr "Izena"
+
+#: qml/AddPlayerDialog.qml:64
+#, fuzzy, kde-format
+msgctxt "@label:textbox"
+msgid "Rating"
+msgstr "Balorazioa"
+
+#: qml/AddPlayerDialog.qml:71
+#, kde-format
+msgctxt "@label:textbox"
+msgid "National rating"
+msgstr ""
+
+#: qml/AddPlayerDialog.qml:78
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Player ID"
+msgstr "Jokalariaren ID"
+
+#: qml/AddPlayerDialog.qml:79 qml/AddPlayerDialog.qml:85
+#: qml/AddPlayerDialog.qml:91 qml/AddPlayerDialog.qml:97
+#: qml/AddPlayerDialog.qml:103
+#, kde-format
+msgid "Optional"
+msgstr "Aukerakoa"
+
+#: qml/AddPlayerDialog.qml:84
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Birth date"
+msgstr "Jaioteguna"
+
+#: qml/AddPlayerDialog.qml:90 qml/TournamentSettingsInformation.qml:37
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Federation"
+msgstr "Federazioa"
+
+#: qml/AddPlayerDialog.qml:96
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Origin"
+msgstr "Jatorria"
+
+#: qml/AddPlayerDialog.qml:102
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Sex"
+msgstr ""
+
+#: qml/AddTiebreakDialog.qml:19
+#, kde-format
+msgctxt "@title:window"
+msgid "Add Tiebreak"
+msgstr ""
+
+#: qml/components/TiebreakDelegate.qml:30
+#: qml/components/TiebreakDelegate.qml:35
+#, kde-format
+msgctxt "@action:button"
+msgid "Configure tiebreak"
+msgstr ""
+
+#: qml/components/TiebreakDelegate.qml:51
+#, kde-format
+msgctxt "@action:button Move tiebreak up"
+msgid "Move Up"
+msgstr "Eraman gora"
+
+#: qml/components/TiebreakDelegate.qml:56
+#, kde-format
+msgctxt "@action:button Move tiebreak up"
+msgid "Move up"
+msgstr "Eraman gora"
+
+#: qml/components/TiebreakDelegate.qml:63
+#, kde-format
+msgctxt "@action:button Move tiebreak down"
+msgid "Move Down"
+msgstr "Eraman behera"
+
+#: qml/components/TiebreakDelegate.qml:68
+#, kde-format
+msgctxt "@action:button Move tiebreak down"
+msgid "Move down"
+msgstr "Eraman behera"
+
+#: qml/components/TiebreakDelegate.qml:75
+#, kde-format
+msgctxt "@action:button"
+msgid "Delete Tiebreak"
+msgstr ""
+
+#: qml/components/TiebreakDelegate.qml:80
+#, kde-format
+msgctxt "@action:button"
+msgid "Delete tiebreak"
+msgstr ""
+
+#: qml/DeletePairingsDialog.qml:16
+#, kde-format
+msgctxt "@title"
+msgid "Remove pairings"
+msgstr ""
+
+#: qml/DeletePairingsDialog.qml:24
+#, kde-format
+msgctxt "@action:check"
+msgid "Keep byes"
+msgstr ""
+
+#: qml/DeletePairingsDialog.qml:31
+#, kde-format
+msgctxt "@action:button Remove pairings"
+msgid "Remove"
+msgstr "Kendu"
+
+#: qml/Main.qml:21
+#, kde-format
+msgctxt "@title:window"
+msgid "Chessament"
+msgstr "Chessament"
+
+#: qml/Main.qml:101
+#, kde-format
+msgctxt "@title"
+msgid "Error"
+msgstr "Errorea"
+
+#: qml/Main.qml:193
+#, kde-format
+msgid "Players"
+msgstr "Jokalariak"
+
+#: qml/Main.qml:200
+#, kde-format
+msgid "Pairings"
+msgstr ""
+
+#: qml/Main.qml:207
+#, fuzzy, kde-format
+msgid "Standings"
+msgstr "Posizioak"
+
+#: qml/Main.qml:232
+#, kde-format
+msgctxt "@action:button"
+msgid "Settings"
+msgstr "Ezarpenak"
+
+#: qml/NewTournamentDialog.qml:16
+#, kde-format
+msgctxt "@title"
+msgid "New tournament"
+msgstr "Txapelketa berria"
+
+#: qml/NewTournamentDialog.qml:29
+#, kde-format
+msgctxt "@label:textbox tournament name"
+msgid "Name:"
+msgstr "Izena:"
+
+#: qml/NewTournamentDialog.qml:33
+#, kde-format
+msgctxt "@label"
+msgid "Format"
+msgstr "Formatua"
+
+#: qml/NewTournamentDialog.qml:34
+#, kde-format
+msgctxt "@label"
+msgid "Swiss system"
+msgstr "Suitzako sistema"
+
+#: qml/NewTournamentDialog.qml:39
+#, kde-format
+msgctxt "@label"
+msgid "Number of rounds"
+msgstr "Txanda kopurua"
+
+#: qml/PairingsPage.qml:37
+#, kde-format
+msgid "Pair Round %1"
+msgstr ""
+
+#: qml/PairingsPage.qml:46 qml/PlayersPage.qml:58
+#, kde-format
+msgctxt "@action:button"
+msgid "Print…"
+msgstr "Inprimatu..."
+
+#: qml/PairingsPage.qml:51 qml/PlayersPage.qml:63
+#, kde-format
+msgctxt "@action:button"
+msgid "Export as PDF…"
+msgstr "Esportatu PDF gisa…"
+
+#: qml/PairingsPage.qml:59
+#, kde-format
+msgid "Round %1"
+msgstr "%1. txanda"
+
+#: qml/PairingsPage.qml:77
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Remove pairings of this and following rounds…"
+msgstr ""
+
+#: qml/PairingsPage.qml:117
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "No pairings for round %1 yet"
+msgstr ""
+
+#: qml/PairRoundDialog.qml:17
+#, kde-format
+msgctxt "@title %1 is a number >= 1"
+msgid "Pair Round %1"
+msgstr ""
+
+#: qml/PairRoundDialog.qml:26
+#, kde-format
+msgctxt "@option:check"
+msgid "Sort players"
+msgstr "Sailkatu jokalariak"
+
+#: qml/PairRoundDialog.qml:33
+#, kde-format
+msgctxt "@label:listbox"
+msgid "First player color:"
+msgstr "Lehenengo jokalariaren kolorea:"
+
+#: qml/PairRoundDialog.qml:41
+#, kde-format
+msgctxt "@item:inlistbox As in 'Random color'"
+msgid "Random"
+msgstr "Ausazkoa"
+
+#: qml/PairRoundDialog.qml:45
+#, kde-format
+msgctxt "@item:inlistbox As in 'White pieces'"
+msgid "White"
+msgstr "Zuria"
+
+#: qml/PairRoundDialog.qml:49
+#, kde-format
+msgctxt "@item:inlistbox As in 'Black pieces'"
+msgid "Black"
+msgstr "Beltza"
+
+#: qml/PlayersPage.qml:49
+#, kde-format
+msgctxt "@action:button"
+msgid "Sort Players…"
+msgstr "Sailkatu jokalariak…"
+
+#: qml/PlayersPage.qml:69
+#, kde-format
+msgctxt "@action:button"
+msgid "Add Player…"
+msgstr "Gehitu jokalaria…"
+
+#: qml/PlayersPage.qml:150
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "No players yet"
+msgstr "Oraindik jokalaririk ez"
+
+#: qml/PlayersPage.qml:154
+#, kde-format
+msgctxt "@action:button"
+msgid "Add player"
+msgstr "Gehitu jokalaria"
+
+#: qml/PlayersPage.qml:172
+#, kde-format
+msgctxt "@info:status Number of players"
+msgid "1 player"
+msgid_plural "%1 players"
+msgstr[0] "Jokalari 1"
+msgstr[1] "%1 Jokalari"
+
+#: qml/PlayersPage.qml:173
+#, fuzzy, kde-format
+msgctxt "@info:status Number of rated players"
+msgid "1 rated"
+msgid_plural "%1 rated"
+msgstr[0] "Baloratua"
+msgstr[1] "Baloratua"
+
+#: qml/PlayersPage.qml:175
+#, kde-format
+msgctxt "@info:status players, rated"
+msgid "%1, %2"
+msgstr "%1, %2"
+
+#: qml/ResultsFooter.qml:41
+#, kde-format
+msgctxt "@action:intoolbar"
+msgid "*"
+msgstr "*"
+
+#: qml/ResultsFooter.qml:51
+#, kde-format
+msgctxt "@action:intoolbar"
+msgid "1-0"
+msgstr "1-0"
+
+#: qml/ResultsFooter.qml:58
+#, kde-format
+msgctxt "@action:intoolbar"
+msgid "½-½"
+msgstr "½-½"
+
+#: qml/ResultsFooter.qml:65
+#, kde-format
+msgctxt "@action:intoolbar"
+msgid "0-1"
+msgstr "0-1"
+
+#: qml/ResultsFooter.qml:75
+#, kde-format
+msgctxt "@action:intoolbar"
+msgid "1F-0F"
+msgstr "1F-0F"
+
+#: qml/ResultsFooter.qml:82
+#, kde-format
+msgctxt "@action:intoolbar"
+msgid "0F-1F"
+msgstr "0F-1F"
+
+#: qml/ResultsFooter.qml:89
+#, kde-format
+msgctxt "@action:intoolbar"
+msgid "0F-0F"
+msgstr "0F-0F"
+
+#: qml/ResultsFooter.qml:99
+#, kde-format
+msgctxt "@action:intoolbar"
+msgid "1U-0U"
+msgstr "1U-0U"
+
+#: qml/ResultsFooter.qml:106
+#, kde-format
+msgctxt "@action:intoolbar"
+msgid "½U-½U"
+msgstr "½U-½U"
+
+#: qml/ResultsFooter.qml:113
+#, kde-format
+msgctxt "@action:intoolbar"
+msgid "0U-1U"
+msgstr "0U-1U"
+
+#: qml/ResultsFooter.qml:120
+#, kde-format
+msgctxt "@action:intoolbar"
+msgid "½U-0U"
+msgstr "½U-0U"
+
+#: qml/ResultsFooter.qml:127
+#, kde-format
+msgctxt "@action:intoolbar"
+msgid "0U-½U"
+msgstr "0U-½U"
+
+#: qml/ResultsFooter.qml:134
+#, kde-format
+msgctxt "@action:intoolbar"
+msgid "0U-0U"
+msgstr "0U-0U"
+
+#: qml/ResultsFooter.qml:144
+#, kde-format
+msgctxt "@action:intoolbar"
+msgid "½-0"
+msgstr "½-0"
+
+#: qml/ResultsFooter.qml:151
+#, kde-format
+msgctxt "@action:intoolbar"
+msgid "0-0"
+msgstr "0-0"
+
+#: qml/ResultsFooter.qml:158
+#, kde-format
+msgctxt "@action:intoolbar"
+msgid "0-½"
+msgstr "0-½"
+
+#: qml/SortPlayersDialog.qml:17
+#, kde-format
+msgctxt "@title"
+msgid "Sort Players"
+msgstr "Sailkatu jokalariak"
+
+#: qml/SortPlayersDialog.qml:26
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Changing the initial ranking after the fourth round has been paired is not "
+"allowed in official tournaments."
+msgstr ""
+
+#: qml/StandingsPage.qml:47
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "No standings yet"
+msgstr ""
+
+#: qml/TiebreakDialog.qml:17
+#, kde-format
+msgctxt "@title:window"
+msgid "Edit Tiebreak"
+msgstr ""
+
+#: qml/TournamentSettings.qml:14
+#, kde-format
+msgctxt "@action:button"
+msgid "Information"
+msgstr "Informazioa"
+
+#: qml/TournamentSettings.qml:20
+#, kde-format
+msgctxt "@action:button"
+msgid "Format"
+msgstr "Formatua"
+
+#: qml/TournamentSettings.qml:26
+#, kde-format
+msgctxt "@action:button"
+msgid "Calendar"
+msgstr "Egutegia"
+
+#: qml/TournamentSettingsCalendar.qml:14
+#, kde-format
+msgctxt "@title"
+msgid "Calendar"
+msgstr "Egutegia"
+
+#: qml/TournamentSettingsCalendar.qml:24
+#, kde-format
+msgctxt "round number"
+msgid "Round %1"
+msgstr "%1. txanda"
+
+#: qml/TournamentSettingsFormat.qml:16
+#, kde-format
+msgctxt "@title"
+msgid "Format"
+msgstr "Formatua"
+
+#: qml/TournamentSettingsFormat.qml:19
+#, kde-format
+msgctxt "@title:group"
+msgid "Format"
+msgstr "Formatua"
+
+#: qml/TournamentSettingsFormat.qml:23
+#, kde-format
+msgid "Swiss system"
+msgstr "Suitzako sistema"
+
+#: qml/TournamentSettingsFormat.qml:27
+#, kde-format
+msgid "Rounds"
+msgstr "Txandak"
+
+#: qml/TournamentSettingsFormat.qml:41
+#, kde-format
+msgctxt "@title:group"
+msgid "Pairings"
+msgstr ""
+
+#: qml/TournamentSettingsFormat.qml:45
+#, kde-format
+msgid "Pairing engine"
+msgstr ""
+
+#: qml/TournamentSettingsFormat.qml:46
+#, kde-format
+msgid "bbpPairings"
+msgstr ""
+
+#: qml/TournamentSettingsFormat.qml:51
+#, kde-format
+msgid "Pairing allocated bye"
+msgstr ""
+
+#: qml/TournamentSettingsFormat.qml:52
+#, kde-format
+msgid "The value of the pairing allocated bye"
+msgstr ""
+
+#: qml/TournamentSettingsFormat.qml:58
+#, kde-format
+msgctxt "@title:group"
+msgid "Tiebreaks"
+msgstr ""
+
+#: qml/TournamentSettingsFormat.qml:82
+#, kde-format
+msgctxt "@action:button"
+msgid "Add Tiebreak"
+msgstr ""
+
+#: qml/TournamentSettingsInformation.qml:11
+#, kde-format
+msgctxt "@title"
+msgid "Information"
+msgstr "Informazioa"
+
+#: qml/TournamentSettingsInformation.qml:14
+#, kde-format
+msgctxt "@title:group"
+msgid "Basic details"
+msgstr "Oinarrizko xehetasunak"
+
+#: qml/TournamentSettingsInformation.qml:19
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Tournament name"
+msgstr "Txapelketaren izena"
+
+#: qml/TournamentSettingsInformation.qml:28
+#, kde-format
+msgctxt "@label:textbox"
+msgid "City"
+msgstr "Hiria"
+
+#: qml/TournamentSettingsInformation.qml:46
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Chief arbiter"
+msgstr "Epaile nagusia"
+
+#: qml/TournamentSettingsInformation.qml:55
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Deputy chief arbiter"
+msgstr "Epaile nagusiordea"
+
+#: qml/WelcomePage.qml:20
+#, kde-format
+msgctxt "@title"
+msgid "Welcome to Chessament"
+msgstr "Ongi etorri Chessament-era"
+
+#: qml/WelcomePage.qml:21
+#, kde-format
+msgctxt "@info"
+msgid "Chessament is a chess tournament manager"
+msgstr "Chessament xake txapelketa kudeatzaile bat da"
+
+#: settings/ChessamentConfigurationView.qml:19
+#, kde-format
+msgctxt "@action:button"
+msgid "General"
+msgstr "Orokorra"
+
+#: settings/GeneralPage.qml:16
+#, kde-format
+msgctxt "@title"
+msgid "General"
+msgstr "Orokorra"
+
+#: settings/GeneralPage.qml:20
+#, kde-format
+msgctxt "@title:group"
+msgid "Account"
+msgstr "Kontua"
+
+#: settings/GeneralPage.qml:27
+#, kde-format
+msgctxt "@label:button"
+msgid "Connect Account"
+msgstr "Konektatu kontua"
+
+#: settings/GeneralPage.qml:34
+#, kde-format
+msgid "Logged in as %1"
+msgstr "Saioa %1 gisa hasita"
+
+#: settings/GeneralPage.qml:39
+#, kde-format
+msgid "Logout"
+msgstr "Saioa itxi"
+
+#: standingsmodel.cpp:67
+#, fuzzy, kde-format
+msgctxt "@title:colunm"
+msgid "Rank"
+msgstr "Sailkapena"
