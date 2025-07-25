@@ -256,7 +256,7 @@ public:
      *
      * \a keepByes Whether to keep byes.
      */
-    void removePairings(int round, bool keepByes);
+    std::expected<void, QString> removePairings(int round, bool keepByes);
 
     /*!
      * \enum Tournament::InitialColor

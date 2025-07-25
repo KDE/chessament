@@ -180,7 +180,11 @@ QCoro::Task<void> Controller::pairRound(bool sortPlayers, uint color)
 
 void Controller::removePairings(bool keepByes)
 {
-    m_tournament->removePairings(m_currentRound, keepByes);
+    if (auto ok = m_tournament->removePairings(m_currentRound, keepByes); !ok) {
+        setError(ok.error());
+        return;
+    }
+
     setCurrentRound(std::max(1, m_tournament->currentRound()));
     setAreStandingsValid(false);
 }

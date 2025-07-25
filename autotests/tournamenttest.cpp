@@ -21,6 +21,8 @@ private Q_SLOTS:
     void testTrf();
     void testImportTrf();
     void testLoadTournament();
+    void testRemovePairings_data();
+    void testRemovePairings();
 };
 
 void TournamentTest::testNewTournament()
@@ -138,6 +140,33 @@ void TournamentTest::testLoadTournament()
     QCOMPARE(t->getPairings(1)->size(), 44);
     for (int i = 2; i <= 9; ++i) {
         QCOMPARE(t->getPairings(i)->size(), 46);
+    }
+}
+
+void TournamentTest::testRemovePairings_data()
+{
+    QTest::addColumn<bool>("keepByes");
+    QTest::addColumn<QList<int>>("pairings");
+
+    QTest::newRow("keepByes = false") << false << QList<int>{44, 46, 46, 46, 0, 0, 0, 0, 0};
+    QTest::newRow("keepByes = true") << true << QList<int>{44, 46, 46, 46, 3, 3, 4, 4, 4};
+}
+
+void TournamentTest::testRemovePairings()
+{
+    QFETCH(bool, keepByes);
+    QFETCH(QList<int>, pairings);
+
+    auto event = std::make_unique<Event>();
+    QVERIFY(event->open());
+
+    auto tournament = event->importTournament(QLatin1String(DATA_DIR) + u"/tournament_1.txt"_s);
+    QVERIFY(tournament.has_value());
+
+    QVERIFY((*tournament)->removePairings(5, keepByes));
+
+    for (int i = 1; i <= 9; ++i) {
+        QCOMPARE((*tournament)->getPairings(i)->size(), pairings[i - 1]);
     }
 }
 

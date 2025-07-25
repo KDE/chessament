@@ -673,9 +673,12 @@ QCoro::Task<std::expected<bool, QString>> Tournament::pairNextRound()
     co_return true;
 }
 
-void Tournament::removePairings(int round, bool keepByes)
+std::expected<void, QString> Tournament::removePairings(int round, bool keepByes)
 {
-    for (int i = round; i <= m_numberOfRounds; i++) {
+    Q_ASSERT(round >= 1);
+    Q_ASSERT(round <= m_numberOfRounds);
+
+    for (size_t i = round; i <= m_rounds.size(); i++) {
         QSqlQuery query(m_event->getDB());
         if (keepByes) {
             query.prepare(DELETE_PAIRINGS_NO_BYES_QUERY);
@@ -687,6 +690,7 @@ void Tournament::removePairings(int round, bool keepByes)
 
         if (query.lastError().isValid()) {
             qDebug() << "remove pairings" << query.lastError();
+            return std::unexpected(query.lastError().text());
         }
 
         m_rounds.at(i - 1)->removePairings([keepByes](Pairing *pairing) {
@@ -695,6 +699,8 @@ void Tournament::removePairings(int round, bool keepByes)
     }
 
     setCurrentRound(round - 1);
+
+    return {};
 }
 
 Tournament::InitialColor Tournament::initialColor()
