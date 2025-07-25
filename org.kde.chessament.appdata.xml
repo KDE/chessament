@@ -14,6 +14,7 @@
   <name xml:lang="ca-valencia">Chessament</name>
   <name xml:lang="de">Chessament</name>
   <name xml:lang="es">Chessament</name>
+  <name xml:lang="eu">Chessament</name>
   <name xml:lang="fi">Chessament</name>
   <name xml:lang="fr">Chessament</name>
   <name xml:lang="gl">Chessament</name>
@@ -34,6 +35,7 @@
   <summary xml:lang="ca-valencia">Gestor de torneigs d'escacs</summary>
   <summary xml:lang="de">Schachturniermanager</summary>
   <summary xml:lang="es">Gestor de torneos de ajedrez</summary>
+  <summary xml:lang="eu">Xake txapelketa kudeatzailea</summary>
   <summary xml:lang="fi">Šakkiturnausten hallinta</summary>
   <summary xml:lang="fr">Gestionnaire de tournoi d'échecs</summary>
   <summary xml:lang="gl">Xestor de torneos de xadrez</summary>
@@ -60,6 +62,7 @@
     <p xml:lang="ca">El Chessament és un gestor de torneigs d'escacs. Actualment permet torneigs individuals segons el sistema suís.</p>
     <p xml:lang="ca-valencia">Chessament és un gestor de torneigs d'escacs. Actualment permet torneigs individuals segons el sistema suís.</p>
     <p xml:lang="de">Chessament ist ein Schachturniermanager. Er unterstützt derzeit individuelle Turniere nach dem Schweizer System.</p>
+    <p xml:lang="eu">Chessament xake txapelketa kudeatzaile bat da. Gaur egun, Suitzako sistemako banakako txapelketak onartzen ditu.</p>
     <p xml:lang="fi">Chessament on šakkiturnausten hallinta. Toistaiseksi se tukee yksittäisiä sveitsiläistyylisiä turnauksia.</p>
     <p xml:lang="fr">Chessament est un gestionnaire de tournoi d'échecs. Il prend actuellement en charges les tournois individuels du système suisse.</p>
     <p xml:lang="gl">Chessament é un xestor de torneos de xadrez. Actualmente permite torneos individuais mediante o sistema suízo.</p>
