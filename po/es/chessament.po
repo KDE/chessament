@@ -5,14 +5,13 @@
 #
 # SPDX-FileCopyrightText: 2025 Sofía Priego <spriego@darksylvania.net>
 # SPDX-FileCopyrightText: 2025 Manuel Alcaraz Zambrano <manuelalcarazzam@gmail.com>
-# SPDX-FileCopyrightText: 2025 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-23 00:40+0000\n"
-"PO-Revision-Date: 2025-07-23 01:04+0100\n"
-"Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
+"POT-Creation-Date: 2025-07-25 00:40+0000\n"
+"PO-Revision-Date: 2025-07-23 01:07+0100\n"
+"Last-Translator: Manuel Alcaraz Zambrano <manuelalcarazzam@gmail.com>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
@@ -45,7 +44,7 @@ msgctxt "@action:inmenu"
 msgid "Connect account"
 msgstr "Conectar cuenta"
 
-#: controller.cpp:139
+#: controller.cpp:148
 #, kde-format
 msgid "Couldn't export tournament."
 msgstr "No se puede exportar el torneo."
@@ -81,83 +80,83 @@ msgctxt "bbpPairings is the name of a program, should not be translated"
 msgid "bbpPairings terminated with a non zero exit code: %1"
 msgstr "bbpPairings finalizó con un código de salida distinto de cero: %1"
 
-#: libtournament/pairingengine.cpp:71 libtournament/trf.cpp:179
+#: libtournament/pairingengine.cpp:71 libtournament/trf.cpp:185
 #, kde-format
 msgid "Invalid pairing \"%1\"."
 msgstr "Emparejamiento «%1» no válido."
 
 #: libtournament/pairingengine.cpp:77 libtournament/pairingengine.cpp:81
 #: libtournament/pairingengine.cpp:85 libtournament/pairingengine.cpp:89
-#: libtournament/trf.cpp:192
+#: libtournament/trf.cpp:198
 #, kde-format
 msgid "Invalid player \"%1\" on pairing \"%2\"."
 msgstr "Jugador «%1» no válido para el emparejamiento «%2»."
 
-#: libtournament/tournament.cpp:631
+#: libtournament/tournament.cpp:643
 #, kde-format
 msgid "An error ocurred while pairing the round: %1"
 msgstr "Ocurrió un error mientras se emparejaba la ronda: %1"
 
-#: libtournament/tournament.cpp:873
+#: libtournament/tournament.cpp:889
 #, kde-format
 msgid "Couldn't open file"
 msgstr "No se ha podido abrir el archivo"
 
-#: libtournament/trf.cpp:48 libtournament/trf.cpp:55
+#: libtournament/trf.cpp:50 libtournament/trf.cpp:57
 #, kde-format
 msgid "Player \"%1\" not found."
 msgstr "No se encuentra el jugador %1."
 
-#: libtournament/trf.cpp:61
+#: libtournament/trf.cpp:63
 #, kde-format
 msgid "Unknown result on pairing \"%1\" with \"%2\"."
 msgstr "Resultado desconocido en el emparejamiento de «%1» con «%2»."
 
-#: libtournament/trf.cpp:199
+#: libtournament/trf.cpp:205
 #, kde-format
 msgid "Unknown result \"%1\" on pairing \"%2\"."
 msgstr "Resultado «%1» desconocido en el emparejamiento «%2»."
 
-#: libtournament/trf.cpp:202
+#: libtournament/trf.cpp:208
 #, kde-format
 msgid "Pairing \"%1\" has no opponent."
 msgstr "El emparejamiento «%1» no tiene oponente."
 
-#: main.cpp:57 qml/WelcomePage.qml:15
+#: main.cpp:58 qml/WelcomePage.qml:15
 #, kde-format
 msgctxt "@title"
 msgid "Chessament"
 msgstr "Chessament"
 
-#: main.cpp:61
+#: main.cpp:62
 #, kde-format
 msgid "Chess Tournament Manager"
 msgstr "Gestor de torneos de ajedrez"
 
-#: main.cpp:65
+#: main.cpp:66
 #, kde-format
 msgid "© 2024 Manuel Alcaraz Zambrano"
 msgstr "© 2024 Manuel Alcaraz Zambrano"
 
-#: main.cpp:66
+#: main.cpp:67
 #, kde-format
 msgctxt "@info:credit"
 msgid "Manuel Alcaraz Zambrano"
 msgstr "Manuel Alcaraz Zambrano"
 
-#: main.cpp:67
+#: main.cpp:68
 #, kde-format
 msgctxt "@info:credit"
 msgid "Author & Maintainer"
 msgstr "Autor y responsable"
 
-#: main.cpp:70
+#: main.cpp:71
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "Manuel Alcaraz Zambrano,Sofía Priego"
 
-#: main.cpp:70
+#: main.cpp:71
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
