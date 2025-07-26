@@ -296,10 +296,10 @@ QHash<Player *, QList<Pairing *>> Tournament::getPairingsByPlayer(int maxRound)
             break;
         }
         const auto round = m_rounds.at(i).get();
-        for (const auto &pairing : *round->pairings()) {
-            pairings[pairing->whitePlayer()] << pairing.get();
+        for (const auto &pairing : round->pairings()) {
+            pairings[pairing->whitePlayer()] << pairing;
             if (pairing->blackPlayer() != nullptr) {
-                pairings[pairing->blackPlayer()] << pairing.get();
+                pairings[pairing->blackPlayer()] << pairing;
             }
         }
     }
@@ -331,7 +331,7 @@ QList<PlayerTiebreaks> Tournament::getStandings(State state)
     // Calculate tiebreaks
     QList<Player *> players;
     for (const auto &tiebreak : std::as_const(m_tiebreaks)) {
-        std::size_t i = 0;
+        uint i = 0;
         players.clear();
         while (i < m_players.size()) {
             if (players.isEmpty()) {
@@ -487,13 +487,13 @@ Pairing *Tournament::getPairing(int round, int board)
     return m_rounds.at(round - 1)->getPairing(board);
 }
 
-std::vector<std::unique_ptr<Pairing>> *Tournament::getPairings(int round) const
+QList<Pairing *> Tournament::getPairings(int round) const
 {
     if (static_cast<std::size_t>(round) <= m_rounds.size()) {
         return m_rounds.at(round - 1)->pairings();
     }
 
-    return nullptr;
+    return {};
 }
 
 int Tournament::numberOfPlayers()
@@ -510,12 +510,12 @@ int Tournament::numberOfRatedPlayers()
 
 std::expected<void, QString> Tournament::sortPairings()
 {
-    for (uint i = 0; i < m_rounds.size(); i++) {
-        auto pairings = m_rounds.at(i)->pairings();
+    for (size_t i = 0; i < m_rounds.size(); i++) {
+        auto &pairings = m_rounds[i]->m_pairings;
 
-        auto state = getState(i);
+        auto state = getState(static_cast<int>(i));
 
-        std::sort(pairings->begin(), pairings->end(), [i, &state](const std::unique_ptr<Pairing> &a, const std::unique_ptr<Pairing> &b) -> bool {
+        std::ranges::sort(pairings, [i, &state](const std::unique_ptr<Pairing> &a, const std::unique_ptr<Pairing> &b) -> bool {
             int aRank;
             if (a->blackPlayer() == nullptr) {
                 aRank = 0;
@@ -576,10 +576,10 @@ std::expected<void, QString> Tournament::sortPairings()
             return aRank < bRank;
         });
 
-        for (std::size_t i = 0; i < pairings->size(); i++) {
-            pairings->at(i)->setBoard(i + 1);
+        for (size_t i = 0; i < pairings.size(); i++) {
+            pairings.at(i)->setBoard(static_cast<int>(i) + 1);
 
-            if (auto ok = savePairing(pairings->at(i).get()); !ok) {
+            if (auto ok = savePairing(pairings[i].get()); !ok) {
                 return ok;
             }
         }
@@ -595,7 +595,7 @@ bool Tournament::isRoundFinished(int round)
     qDebug() << "is round finished" << round;
     Q_ASSERT(round >= 1);
 
-    std::vector<std::unique_ptr<Pairing>> *pairings;
+    QList<Pairing *> pairings;
 
     if (static_cast<std::size_t>(round) <= m_rounds.size()) {
         pairings = m_rounds.at(round - 1)->pairings();
@@ -603,11 +603,11 @@ bool Tournament::isRoundFinished(int round)
         return false; // TODO: ok?
     }
 
-    auto finished = std::count_if(pairings->cbegin(), pairings->cend(), [](const std::unique_ptr<Pairing> &p) {
+    auto finished = std::count_if(pairings.cbegin(), pairings.cend(), [](Pairing *p) {
         return Pairing::isBye(p->whiteResult()) || (p->whiteResult() != Pairing::PartialResult::Unknown && p->blackResult() != Pairing::PartialResult::Unknown);
     });
 
-    return static_cast<std::size_t>(finished) == pairings->size();
+    return finished == pairings.size();
 }
 
 bool Tournament::isRoundFullyPaired(int round)
@@ -615,11 +615,11 @@ bool Tournament::isRoundFullyPaired(int round)
     Q_ASSERT(round >= 1);
     Q_ASSERT(static_cast<std::size_t>(round) <= m_rounds.size());
 
-    auto pairings = m_rounds.at(round - 1)->pairings();
+    const auto pairings = m_rounds.at(round - 1)->pairings();
 
     QSet<Player *> players;
 
-    for (const auto &pairing : *pairings) {
+    for (const auto &pairing : pairings) {
         players.insert(pairing->whitePlayer());
         if (pairing->blackPlayer() != nullptr) {
             players.insert(pairing->blackPlayer());

@@ -223,7 +223,7 @@ public:
     /*!
      * Returns the pairing of the \a round.
      */
-    std::vector<std::unique_ptr<Pairing>> *getPairings(int round) const;
+    [[nodiscard]] QList<Pairing *> getPairings(int round) const;
 
     /*!
      * Sorts the pairings of all rounds.

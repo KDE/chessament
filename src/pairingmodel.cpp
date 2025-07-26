@@ -14,17 +14,14 @@ int PairingModel::rowCount(const QModelIndex &parent) const
 {
     Q_UNUSED(parent);
 
-    if (m_pairings == nullptr) {
-        return 0;
-    }
-    return static_cast<int>(m_pairings->size());
+    return static_cast<int>(m_pairings.size());
 }
 
 int PairingModel::columnCount(const QModelIndex &parent) const
 {
     Q_UNUSED(parent);
 
-    return 6;
+    return static_cast<int>(m_columns.size());
 }
 
 QVariant PairingModel::data(const QModelIndex &index, int role) const
@@ -35,9 +32,9 @@ QVariant PairingModel::data(const QModelIndex &index, int role) const
         return {};
     }
 
-    Q_ASSERT(index.row() >= 0 && static_cast<std::size_t>(index.row()) < m_pairings->size());
+    Q_ASSERT(index.row() >= 0 && index.row() < m_pairings.size());
 
-    auto pairing = m_pairings->at(index.row()).get();
+    auto pairing = m_pairings.at(index.row());
     int column = m_columns.at(index.column());
 
     if (role == Qt::DisplayRole) {
@@ -114,23 +111,17 @@ void PairingModel::setColumns(const QList<int> &columns)
     m_columns = columns;
 }
 
-void PairingModel::setPairings(std::vector<std::unique_ptr<Pairing>> *pairings)
+void PairingModel::setPairings(const QList<Pairing *> &pairings)
 {
-    m_pairings = pairings;
-
-    if (m_pairings == nullptr) {
-        return;
-    }
-
-    auto rowDiff = static_cast<long int>(pairings->size() - m_currentRows);
+    auto rowDiff = static_cast<long int>(pairings.size() - m_pairings.size());
 
     if (rowDiff > 0) {
-        beginInsertRows({}, static_cast<int>(m_currentRows), static_cast<int>(pairings->size() - 1));
+        beginInsertRows({}, static_cast<int>(m_pairings.size()), static_cast<int>(pairings.size() - 1));
     } else if (rowDiff < 0) {
-        beginRemoveRows({}, static_cast<int>(pairings->size()), static_cast<int>(m_currentRows - 1));
+        beginRemoveRows({}, static_cast<int>(pairings.size()), static_cast<int>(m_pairings.size() - 1));
     }
 
-    m_currentRows = m_pairings->size();
+    m_pairings = pairings;
 
     if (rowDiff > 0) {
         endInsertRows();
@@ -151,8 +142,8 @@ Pairing *PairingModel::getPairing(int board)
     if (board < 0) {
         return nullptr;
     }
-    Q_ASSERT(static_cast<std::size_t>(board) < m_pairings->size());
-    auto pairing = m_pairings->at(board).get();
+    Q_ASSERT(board < m_pairings.size());
+    auto pairing = m_pairings.at(board);
     QQmlEngine::setObjectOwnership(pairing, QJSEngine::CppOwnership);
     return pairing;
 }

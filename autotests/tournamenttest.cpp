@@ -98,9 +98,9 @@ void TournamentTest::testImportTrf()
     QCOMPARE(t->numberOfRounds(), 9);
     QCOMPARE(t->initialColor(), Tournament::InitialColor::White);
 
-    QCOMPARE(t->getPairings(1)->size(), 44);
+    QCOMPARE(t->getPairings(1).size(), 44);
     for (int i = 2; i <= 9; ++i) {
-        QCOMPARE(t->getPairings(i)->size(), 46);
+        QCOMPARE(t->getPairings(i).size(), 46);
     }
 }
 
@@ -137,9 +137,9 @@ void TournamentTest::testLoadTournament()
     QCOMPARE(t->numberOfRounds(), 9);
     QCOMPARE(t->initialColor(), Tournament::InitialColor::White);
 
-    QCOMPARE(t->getPairings(1)->size(), 44);
+    QCOMPARE(t->getPairings(1).size(), 44);
     for (int i = 2; i <= 9; ++i) {
-        QCOMPARE(t->getPairings(i)->size(), 46);
+        QCOMPARE(t->getPairings(i).size(), 46);
     }
 }
 
@@ -166,7 +166,7 @@ void TournamentTest::testRemovePairings()
     QVERIFY((*tournament)->removePairings(5, keepByes));
 
     for (int i = 1; i <= 9; ++i) {
-        QCOMPARE((*tournament)->getPairings(i)->size(), pairings[i - 1]);
+        QCOMPARE((*tournament)->getPairings(i).size(), pairings[i - 1]);
     }
 }
 

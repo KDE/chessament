@@ -84,7 +84,7 @@ std::expected<void, QString> TRFReader::read(QTextStream *trf)
     }
 
     if (m_tournament->m_currentRound > 0) {
-        const auto pairing = m_tournament->getPairings(1)->front().get();
+        const auto pairing = m_tournament->getPairings(1).constFirst();
         if (pairing->blackPlayer() != nullptr) {
             Tournament::InitialColor color;
             if (pairing->whitePlayer()->startingRank() < pairing->blackPlayer()->startingRank()) {

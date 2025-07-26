@@ -33,13 +33,12 @@ public:
     QHash<int, QByteArray> roleNames() const override;
 
     void setColumns(const QList<int> &columns);
-    void setPairings(std::vector<std::unique_ptr<Pairing>> *pairings);
+    void setPairings(const QList<Pairing *> &pairings);
     Q_INVOKABLE void updatePairing(int board);
     Q_INVOKABLE Pairing *getPairing(int board);
 
 private:
-    std::vector<std::unique_ptr<Pairing>> *m_pairings = nullptr;
+    QList<Pairing *> m_pairings;
 
-    std::size_t m_currentRows = 0;
     QList<int> m_columns = {Board, WhiteStartingRank, WhiteName, Result, BlackName, BlackStartingRank};
 };

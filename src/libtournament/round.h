@@ -20,12 +20,12 @@ class Round : public QObject
     Q_PROPERTY(int number READ number WRITE setNumber NOTIFY numberChanged)
 
 public:
-    explicit Round();
+    explicit Round() = default;
 
     int id() const;
     int number() const;
 
-    std::vector<std::unique_ptr<Pairing>> *pairings() const;
+    [[nodiscard]] QList<Pairing *> pairings() const;
     Pairing *getPairing(int board);
     void addPairing(std::unique_ptr<Pairing> pairing);
     void removePairings(std::function<bool(Pairing *)> predicate);
@@ -42,5 +42,7 @@ private:
     int m_id;
     int m_number;
 
-    std::unique_ptr<std::vector<std::unique_ptr<Pairing>>> m_pairings;
+    std::vector<std::unique_ptr<Pairing>> m_pairings;
+
+    friend class Tournament;
 };
