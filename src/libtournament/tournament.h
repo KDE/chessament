@@ -138,7 +138,7 @@ public:
     /*!
      * Returns the players of the tournament.
      */
-    std::vector<std::unique_ptr<Player>> *players();
+    [[nodiscard]] QList<Player *> players() const;
 
     /*!
      * Adds \a player to the tournament.
@@ -529,7 +529,7 @@ private:
     int m_currentRound = 0;
     QList<Tiebreak *> m_tiebreaks;
 
-    std::unique_ptr<std::vector<std::unique_ptr<Player>>> m_players;
+    std::vector<std::unique_ptr<Player>> m_players;
     std::vector<std::unique_ptr<Round>> m_rounds;
 
     Tournament::InitialColor m_initialColor;

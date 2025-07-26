@@ -10,14 +10,18 @@ PlayersModel::PlayersModel(QObject *parent)
 {
 }
 
-int PlayersModel::rowCount(const QModelIndex &) const
+int PlayersModel::rowCount(const QModelIndex &parent) const
 {
-    return m_players->size();
+    Q_UNUSED(parent);
+
+    return static_cast<int>(m_players.size());
 }
 
-int PlayersModel::columnCount(const QModelIndex &) const
+int PlayersModel::columnCount(const QModelIndex &parent) const
 {
-    return m_columns.size();
+    Q_UNUSED(parent);
+
+    return static_cast<int>(m_columns.size());
 }
 
 QVariant PlayersModel::data(const QModelIndex &index, int role) const
@@ -28,7 +32,7 @@ QVariant PlayersModel::data(const QModelIndex &index, int role) const
         return {};
     }
 
-    auto player = m_players->at(index.row()).get();
+    const auto player = m_players.at(index.row());
     int column = m_columns.at(index.column());
 
     if (role == Qt::DisplayRole) {
@@ -81,7 +85,7 @@ bool PlayersModel::setData(const QModelIndex &index, const QVariant &value, int 
         return false;
     }
 
-    auto player = m_players->at(index.row()).get();
+    const auto player = m_players.at(index.row());
 
     switch (m_columns.at(index.column())) {
     case PlayersModel::Columns::StartingRank:
@@ -174,7 +178,7 @@ void PlayersModel::setColumns(const QList<int> &columns)
     m_columns = columns;
 }
 
-void PlayersModel::setPlayers(std::vector<std::unique_ptr<Player>> *players)
+void PlayersModel::setPlayers(const QList<Player *> &players)
 {
     beginResetModel();
     m_players = players;
@@ -183,15 +187,15 @@ void PlayersModel::setPlayers(std::vector<std::unique_ptr<Player>> *players)
 
 void PlayersModel::addPlayer(Player *player)
 {
-    Q_UNUSED(player);
-
-    beginInsertRows({}, m_players->size() - 1, m_players->size() - 1);
+    beginInsertRows({}, static_cast<int>(m_players.size()), static_cast<int>(m_players.size()));
+    m_players << player;
     endInsertRows();
 }
 
 void PlayersModel::updatePlayer(Player *player)
 {
     Q_UNUSED(player);
+
     Q_EMIT dataChanged(index(player->startingRank() - 1, 0), index(player->startingRank() - 1, columnCount() - 1), {});
 }
 

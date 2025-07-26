@@ -41,7 +41,7 @@ public:
     Qt::ItemFlags flags(const QModelIndex &index) const override;
 
     void setColumns(const QList<int> &columns);
-    void setPlayers(std::vector<std::unique_ptr<Player>> *players);
+    void setPlayers(const QList<Player *> &players);
     void addPlayer(Player *player);
     void updatePlayer(Player *player);
     void reloadPlayers();
@@ -50,7 +50,7 @@ Q_SIGNALS:
     void playerChanged(Player *player);
 
 private:
-    std::vector<std::unique_ptr<Player>> *m_players;
+    QList<Player *> m_players;
 
     QList<int> m_columns = {StartingRank, Title, Name, Surname, Rating, NationalRating, PlayerId, BirthDate, Federation, Origin, Gender};
 };

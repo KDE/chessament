@@ -19,7 +19,6 @@
 
 Tournament::Tournament(Event *event)
     : m_event(event)
-    , m_players(std::make_unique<std::vector<std::unique_ptr<Player>>>())
 {
     m_tiebreaks = {new Points()};
 }
@@ -174,9 +173,16 @@ void Tournament::setCurrentRound(int currentRound)
     Q_EMIT currentRoundChanged();
 }
 
-std::vector<std::unique_ptr<Player>> *Tournament::players()
+QList<Player *> Tournament::players() const
 {
-    return m_players.get();
+    QList<Player *> result;
+    result.reserve(static_cast<qsizetype>(m_players.size()));
+
+    for (const auto &player : std::as_const(m_players)) {
+        result << player.get();
+    }
+
+    return result;
 }
 
 std::expected<void, QString> Tournament::addPlayer(std::unique_ptr<Player> player)
@@ -204,7 +210,7 @@ std::expected<void, QString> Tournament::addPlayer(std::unique_ptr<Player> playe
 
     player->setId(query.lastInsertId().toInt());
 
-    m_players->push_back(std::move(player));
+    m_players.push_back(std::move(player));
 
     Q_EMIT numberOfPlayersChanged();
     Q_EMIT numberOfRatedPlayersChanged();
@@ -240,7 +246,7 @@ void Tournament::savePlayer(Player *player)
 
 void Tournament::sortPlayers()
 {
-    std::sort(m_players->begin(), m_players->end(), [](const std::unique_ptr<Player> &p1, const std::unique_ptr<Player> &p2) {
+    std::sort(m_players.begin(), m_players.end(), [](const std::unique_ptr<Player> &p1, const std::unique_ptr<Player> &p2) {
         if (p1->rating() == p2->rating()) {
             if (Player::titleStrengthLevel(p1->title()) == Player::titleStrengthLevel(p2->title())) {
                 auto cmp = p1->fullName().toLower().localeAwareCompare(p2->fullName().toLower());
@@ -251,8 +257,8 @@ void Tournament::sortPlayers()
         return p1->rating() > p2->rating();
     });
 
-    for (std::size_t i = 0; i < m_players->size(); i++) {
-        auto *player = m_players->at(i).get();
+    for (std::size_t i = 0; i < m_players.size(); i++) {
+        auto *player = m_players.at(i).get();
         player->setStartingRank(i + 1);
         savePlayer(player);
     }
@@ -262,7 +268,7 @@ QMap<uint, Player *> Tournament::getPlayersByStartingRank()
 {
     QMap<uint, Player *> players;
 
-    for (const auto &player : std::as_const(*m_players)) {
+    for (const auto &player : std::as_const(m_players)) {
         players[player->startingRank()] = player.get();
     }
 
@@ -273,7 +279,7 @@ QMap<uint, Player *> Tournament::getPlayersById()
 {
     QMap<uint, Player *> players;
 
-    for (const auto &player : std::as_const(*m_players)) {
+    for (const auto &player : std::as_const(m_players)) {
         players[player->id()] = player.get();
     }
 
@@ -318,7 +324,7 @@ QList<PlayerTiebreaks> Tournament::getStandings(State state)
         });
     };
 
-    for (const auto &player : std::as_const(*m_players)) {
+    for (const auto &player : std::as_const(m_players)) {
         standings << std::make_pair(player.get(), Tiebreaks{});
     }
 
@@ -327,7 +333,7 @@ QList<PlayerTiebreaks> Tournament::getStandings(State state)
     for (const auto &tiebreak : std::as_const(m_tiebreaks)) {
         std::size_t i = 0;
         players.clear();
-        while (i < m_players->size()) {
+        while (i < m_players.size()) {
             if (players.isEmpty()) {
                 players << standings.at(i).first;
                 i++;
@@ -492,12 +498,12 @@ std::vector<std::unique_ptr<Pairing>> *Tournament::getPairings(int round) const
 
 int Tournament::numberOfPlayers()
 {
-    return m_players->size();
+    return m_players.size();
 }
 
 int Tournament::numberOfRatedPlayers()
 {
-    return std::count_if(m_players->cbegin(), m_players->cend(), [](auto const &p) {
+    return std::count_if(m_players.cbegin(), m_players.cend(), [](auto const &p) {
         return p->rating() > 0;
     });
 }
@@ -620,7 +626,7 @@ bool Tournament::isRoundFullyPaired(int round)
         }
     }
 
-    return static_cast<qsizetype>(m_players->size()) == players.size();
+    return static_cast<qsizetype>(m_players.size()) == players.size();
 }
 
 QCoro::Task<std::expected<QList<std::pair<uint, uint>>, QString>> Tournament::calculatePairings(int round)
@@ -775,7 +781,7 @@ QJsonObject Tournament::toJson() const
     tournament[QStringLiteral("number_of_rounds")] = m_numberOfRounds;
 
     QJsonArray players;
-    for (const auto &player : std::as_const(*m_players)) {
+    for (const auto &player : std::as_const(m_players)) {
         players << player->toJson();
     }
 
@@ -818,10 +824,10 @@ void Tournament::read(const QJsonObject &json)
 
     if (auto v = json[QStringLiteral("players")]; v.isArray()) {
         auto players = v.toArray();
-        m_players->clear();
-        m_players->reserve(players.size());
+        m_players.clear();
+        m_players.reserve(players.size());
         for (const auto &player : std::as_const(players)) {
-            m_players->push_back(Player::fromJson(player.toObject()));
+            m_players.push_back(Player::fromJson(player.toObject()));
         }
     }
 }
@@ -863,7 +869,7 @@ QString Tournament::toTrf(TrfOptions options, int maxRound)
 
     const auto r = maxRound < 0 ? m_numberOfRounds : maxRound;
 
-    for (const auto &player : std::as_const(*m_players)) {
+    for (const auto &player : std::as_const(m_players)) {
         const auto standing = std::find_if(standings.constBegin(), standings.constEnd(), [&player](PlayerTiebreaks s) {
             return s.first == player.get();
         });
@@ -972,7 +978,7 @@ void Tournament::loadOptions()
 
 std::expected<void, QString> Tournament::loadPlayers()
 {
-    m_players->clear();
+    m_players.clear();
 
     QSqlQuery query(m_event->getDB());
     query.prepare(GET_PLAYERS_QUERY);
@@ -1009,7 +1015,7 @@ std::expected<void, QString> Tournament::loadPlayers()
                                                query.value(originNo).toString(),
                                                query.value(sexNo).toString());
         player->setId(query.value(idNo).toInt());
-        m_players->push_back(std::move(player));
+        m_players.push_back(std::move(player));
     }
 
     return {};

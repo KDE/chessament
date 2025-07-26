@@ -149,10 +149,10 @@ void Controller::exportTrf(const QUrl &fileUrl)
     }
 }
 
-QCoro::Task<void> Controller::pairRound(bool sortPlayers, uint color)
+QCoro::Task<void> Controller::pairRound(bool sort, uint color)
 {
-    if (m_tournament->currentRound() == 0 && sortPlayers) {
-        m_tournament->sortPlayers();
+    if (m_tournament->currentRound() == 0 && sort) {
+        sortPlayers();
     }
 
     if (m_tournament->currentRound() == 0) {
@@ -224,12 +224,7 @@ void Controller::addPlayer(const QString &title,
         return;
     }
 
-    m_playersModel->addPlayer(m_tournament->players()->back().get());
-}
-
-void Controller::savePlayer()
-{
-    m_playersModel->updatePlayer(m_currentPlayer);
+    m_playersModel->addPlayer(m_tournament->players().last());
 }
 
 void Controller::sortPlayers()

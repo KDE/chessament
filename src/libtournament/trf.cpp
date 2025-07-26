@@ -38,7 +38,7 @@ std::expected<void, QString> TRFReader::read(QTextStream *trf)
         }
     }
 
-    std::sort(m_tournament->m_players->begin(), m_tournament->m_players->end(), [](const std::unique_ptr<Player> &a, const std::unique_ptr<Player> &b) {
+    std::sort(m_tournament->m_players.begin(), m_tournament->m_players.end(), [](const std::unique_ptr<Player> &a, const std::unique_ptr<Player> &b) {
         return a->startingRank() < b->startingRank();
     });
 
