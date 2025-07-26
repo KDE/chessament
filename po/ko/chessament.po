@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-25 00:40+0000\n"
+"POT-Creation-Date: 2025-07-26 00:40+0000\n"
 "PO-Revision-Date: 2025-07-21 00:46+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -92,7 +92,7 @@ msgstr ""
 msgid "An error ocurred while pairing the round: %1"
 msgstr ""
 
-#: libtournament/tournament.cpp:889
+#: libtournament/tournament.cpp:895
 #, kde-format
 msgid "Couldn't open file"
 msgstr ""

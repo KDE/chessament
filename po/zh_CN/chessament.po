@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-25 00:40+0000\n"
+"POT-Creation-Date: 2025-07-26 00:40+0000\n"
 "PO-Revision-Date: 2025-05-12 14:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -92,7 +92,7 @@ msgstr "对阵“%2”中的无效选手“%1”。"
 msgid "An error ocurred while pairing the round: %1"
 msgstr "在生成本轮对阵时发生错误：%1"
 
-#: libtournament/tournament.cpp:889
+#: libtournament/tournament.cpp:895
 #, kde-format
 msgid "Couldn't open file"
 msgstr "无法打开文件"
@@ -325,50 +325,50 @@ msgstr "性别"
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Tiebreak"
-msgstr ""
+msgstr "添加决胜局"
 
 #: qml/components/TiebreakDelegate.qml:30
 #: qml/components/TiebreakDelegate.qml:35
 #, kde-format
 msgctxt "@action:button"
 msgid "Configure tiebreak"
-msgstr ""
+msgstr "设置决胜局"
 
 #: qml/components/TiebreakDelegate.qml:51
 #, kde-format
 msgctxt "@action:button Move tiebreak up"
 msgid "Move Up"
-msgstr ""
+msgstr "上移"
 
 #: qml/components/TiebreakDelegate.qml:56
 #, kde-format
 msgctxt "@action:button Move tiebreak up"
 msgid "Move up"
-msgstr ""
+msgstr "上移"
 
 #: qml/components/TiebreakDelegate.qml:63
 #, kde-format
 msgctxt "@action:button Move tiebreak down"
 msgid "Move Down"
-msgstr ""
+msgstr "下移"
 
 #: qml/components/TiebreakDelegate.qml:68
 #, kde-format
 msgctxt "@action:button Move tiebreak down"
 msgid "Move down"
-msgstr ""
+msgstr "下移"
 
 #: qml/components/TiebreakDelegate.qml:75
 #, kde-format
 msgctxt "@action:button"
 msgid "Delete Tiebreak"
-msgstr ""
+msgstr "删除决胜局"
 
 #: qml/components/TiebreakDelegate.qml:80
 #, kde-format
 msgctxt "@action:button"
 msgid "Delete tiebreak"
-msgstr ""
+msgstr "删除决胜局"
 
 #: qml/DeletePairingsDialog.qml:16
 #, kde-format
@@ -685,7 +685,7 @@ msgstr "暂无排名"
 #, kde-format
 msgctxt "@title:window"
 msgid "Edit Tiebreak"
-msgstr ""
+msgstr "编辑决胜局"
 
 #: qml/TournamentSettings.qml:14
 #, kde-format
@@ -769,13 +769,13 @@ msgstr "轮空对阵的积分权重"
 #, kde-format
 msgctxt "@title:group"
 msgid "Tiebreaks"
-msgstr ""
+msgstr "决胜局"
 
 #: qml/TournamentSettingsFormat.qml:82
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Tiebreak"
-msgstr ""
+msgstr "添加决胜局"
 
 #: qml/TournamentSettingsInformation.qml:11
 #, kde-format

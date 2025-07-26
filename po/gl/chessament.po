@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-25 00:40+0000\n"
+"POT-Creation-Date: 2025-07-26 00:40+0000\n"
 "PO-Revision-Date: 2025-06-22 16:06+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.gal>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -94,7 +94,7 @@ msgstr "A participante «%1» do emparellamento «%2» non é válida."
 msgid "An error ocurred while pairing the round: %1"
 msgstr "Produciuse un erro ao emparellar a rolda: %1"
 
-#: libtournament/tournament.cpp:889
+#: libtournament/tournament.cpp:895
 #, kde-format
 msgid "Couldn't open file"
 msgstr "Non foi posíbel abrir o ficheiro"
