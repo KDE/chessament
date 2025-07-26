@@ -244,7 +244,7 @@ void Tournament::savePlayer(Player *player)
 
 void Tournament::sortPlayers()
 {
-    std::sort(m_players.begin(), m_players.end(), [](const std::unique_ptr<Player> &p1, const std::unique_ptr<Player> &p2) {
+    std::ranges::sort(m_players, [](const std::unique_ptr<Player> &p1, const std::unique_ptr<Player> &p2) {
         if (p1->rating() == p2->rating()) {
             if (Player::titleStrengthLevel(p1->title()) == Player::titleStrengthLevel(p2->title())) {
                 auto cmp = p1->name().toLower().localeAwareCompare(p2->name().toLower());
@@ -260,6 +260,27 @@ void Tournament::sortPlayers()
         player->setStartingRank(i + 1);
         savePlayer(player);
     }
+}
+
+void Tournament::changePlayerStartingRank(Player *player, int startingRank)
+{
+    Q_ASSERT(startingRank >= 1);
+
+    const auto rank = std::min(startingRank, numberOfPlayers());
+
+    const auto &players = m_players;
+    for (const auto &p : players) {
+        if (p->startingRank() >= rank && p->startingRank() < player->startingRank()) {
+            p->setStartingRank(p->startingRank() + 1);
+            savePlayer(p.get());
+        } else if (p->startingRank() > player->startingRank() && p->startingRank() <= rank) {
+            p->setStartingRank(p->startingRank() - 1);
+            savePlayer(p.get());
+        }
+    }
+
+    player->setStartingRank(rank);
+    savePlayer(player);
 }
 
 QMap<uint, Player *> Tournament::getPlayersByStartingRank()

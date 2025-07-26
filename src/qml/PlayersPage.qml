@@ -88,6 +88,12 @@ TablePage {
 
         TableView.editDelegate: DelegateChooser {
             DelegateChoice {
+                column: PlayersModel.StartingRank
+
+                StartingRankField {}
+            }
+
+            DelegateChoice {
                 column: PlayersModel.Rating
 
                 RatingField {}

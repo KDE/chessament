@@ -12,6 +12,7 @@ ecm_add_qml_module(chessament_static
     GENERATE_PLUGIN_SOURCE
     QML_FILES
         qml/components/RatingField.qml
+        qml/components/StartingRankField.qml
         qml/components/TiebreakDelegate.qml
 
         qml/Main.qml

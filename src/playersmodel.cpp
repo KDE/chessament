@@ -5,6 +5,8 @@
 
 #include <KLocalizedString>
 
+#include "libtournament/tournament.h"
+
 PlayersModel::PlayersModel(QObject *parent)
     : QAbstractTableModel(parent)
 {
@@ -82,11 +84,17 @@ bool PlayersModel::setData(const QModelIndex &index, const QVariant &value, int 
     }
 
     const auto player = m_players.at(index.row());
+    const auto field = static_cast<Columns>(m_columns.at(index.column()));
 
-    switch (m_columns.at(index.column())) {
-    case PlayersModel::Columns::StartingRank:
-        player->setStartingRank(value.toInt());
+    switch (field) {
+    case PlayersModel::Columns::StartingRank: {
+        auto rank = value.toInt();
+        if (rank == player->startingRank() || rank <= 0) {
+            return false;
+        }
+        m_tournament->changePlayerStartingRank(player, rank);
         break;
+    }
     case PlayersModel::Columns::Title:
         player->setTitle(Player::titleForString(value.toString()));
         break;
@@ -117,7 +125,7 @@ bool PlayersModel::setData(const QModelIndex &index, const QVariant &value, int 
     }
 
     Q_EMIT dataChanged(index, index, {});
-    Q_EMIT playerChanged(player);
+    Q_EMIT playerChanged(player, field);
 
     return true;
 }
@@ -165,6 +173,11 @@ QVariant PlayersModel::headerData(int section, Qt::Orientation orientation, int 
 void PlayersModel::setColumns(const QList<int> &columns)
 {
     m_columns = columns;
+}
+
+void PlayersModel::setTournament(Tournament *tournament)
+{
+    m_tournament = tournament;
 }
 
 void PlayersModel::setPlayers(const QList<Player *> &players)

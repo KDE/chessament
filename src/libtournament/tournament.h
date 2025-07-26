@@ -156,6 +156,13 @@ public:
     void sortPlayers();
 
     /*!
+     * Changes the starting rank of \a player to \a startingRank.
+     *
+     * It adjusts the starting rank of other players if necessary.
+     */
+    void changePlayerStartingRank(Player *player, int startingRank);
+
+    /*!
      * Returns the players grouped by their starting rank.
      */
     QMap<uint, Player *> getPlayersByStartingRank();

@@ -7,6 +7,8 @@
 
 #include "libtournament/player.h"
 
+class Tournament;
+
 class PlayersModel : public QAbstractTableModel
 {
     Q_OBJECT
@@ -39,15 +41,17 @@ public:
     [[nodiscard]] Qt::ItemFlags flags(const QModelIndex &index) const override;
 
     void setColumns(const QList<int> &columns);
+    void setTournament(Tournament *tournament);
     void setPlayers(const QList<Player *> &players);
     void addPlayer(Player *player);
     void updatePlayer(Player *player);
     void reloadPlayers();
 
 Q_SIGNALS:
-    void playerChanged(Player *player);
+    void playerChanged(Player *player, Columns field);
 
 private:
+    Tournament *m_tournament;
     QList<Player *> m_players;
 
     QList<int> m_columns = {StartingRank, Title, Name, Rating, NationalRating, PlayerId, BirthDate, Federation, Origin, Gender};

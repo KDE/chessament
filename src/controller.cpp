@@ -18,8 +18,12 @@ Controller::Controller(QObject *parent)
     , m_standingsModel(new StandingsModel(this))
     , m_account(new Account)
 {
-    connect(m_playersModel, &PlayersModel::playerChanged, this, [this](Player *player) {
-        m_tournament->savePlayer(player);
+    connect(m_playersModel, &PlayersModel::playerChanged, this, [this](Player *player, PlayersModel::Columns field) {
+        if (field == PlayersModel::Columns::StartingRank) {
+            m_playersModel->reloadPlayers();
+        } else {
+            m_tournament->savePlayer(player);
+        }
     });
 }
 
@@ -49,6 +53,7 @@ void Controller::setTournament(Tournament *tournament)
     }
     m_tournament = tournament;
 
+    m_playersModel->setTournament(m_tournament);
     m_playersModel->setPlayers(m_tournament->players());
     m_pairingModel->setPairings(m_tournament->getPairings(1));
     m_standingsModel->setTournament(m_tournament);
@@ -197,7 +202,7 @@ QCoro::QmlTask Controller::reloadStandings()
 
 QCoro::Task<> Controller::updateStandings()
 {
-    const auto standings = co_await QtConcurrent::run([this]() {
+    const auto standings = co_await QtConcurrent::run([this]() -> QList<PlayerTiebreaks> {
         return m_tournament->getStandings(m_tournament->getState());
     });
 
