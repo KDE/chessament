@@ -42,10 +42,10 @@ class Controller : public QObject
 public:
     explicit Controller(QObject *parent = nullptr);
 
-    Event *getEvent() const;
-    Tournament *tournament() const;
+    [[nodiscard]] Event *getEvent() const;
+    [[nodiscard]] Tournament *tournament() const;
     bool hasOpenTournament();
-    Player *currentPlayer() const;
+    [[nodiscard]] Player *currentPlayer() const;
     int currentRound();
     bool hasCurrentRoundFinished();
     bool areStandingsValid();
@@ -78,16 +78,16 @@ public:
     Q_INVOKABLE void savePairingsDocument(const QString &fileName);
     Q_INVOKABLE void printPairingsDocument();
 
-    PlayersModel *playersModel() const;
-    PairingModel *pairingModel() const;
-    StandingsModel *standingsModel() const;
+    [[nodiscard]] PlayersModel *playersModel() const;
+    [[nodiscard]] PairingModel *pairingModel() const;
+    [[nodiscard]] StandingsModel *standingsModel() const;
 
-    Account *account() const;
+    [[nodiscard]] Account *account() const;
 
     Q_INVOKABLE void connectAccount();
 
-    QString currentView() const;
-    QString error() const;
+    [[nodiscard]] QString currentView() const;
+    [[nodiscard]] QString error() const;
 
 public Q_SLOTS:
     void setTournament(Tournament *tournament);

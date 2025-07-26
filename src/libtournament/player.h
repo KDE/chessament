@@ -162,7 +162,7 @@ public:
      *
      * This property holds the database ID of the player.
      */
-    int id() const;
+    [[nodiscard]] int id() const;
 
     /*!
      * \property Player::startingRank
@@ -170,7 +170,7 @@ public:
      *
      * This property holds the starting rank of the player.
      */
-    int startingRank() const;
+    [[nodiscard]] int startingRank() const;
 
     /*!
      * \property Player::title
@@ -178,7 +178,7 @@ public:
      *
      * This property holds the title of the player.
      */
-    Title title() const;
+    [[nodiscard]] Title title() const;
 
     /*!
      * \property Player::name
@@ -186,7 +186,7 @@ public:
      *
      * This property holds the name of the player.
      */
-    QString name() const;
+    [[nodiscard]] QString name() const;
 
     /*!
      * \property Player::surname
@@ -194,7 +194,7 @@ public:
      *
      * This property holds the surname of the player.
      */
-    QString surname() const;
+    [[nodiscard]] QString surname() const;
 
     /*!
      * \property Player::rating
@@ -202,7 +202,7 @@ public:
      *
      * This property holds the rating of the player.
      */
-    int rating() const;
+    [[nodiscard]] int rating() const;
 
     /*!
      * \property Player::nationalRating
@@ -210,7 +210,7 @@ public:
      *
      * This property holds the national rating of the player.
      */
-    int nationalRating() const;
+    [[nodiscard]] int nationalRating() const;
 
     /*!
      * \property Player::playerId
@@ -218,7 +218,7 @@ public:
      *
      * This property holds the player ID of the player.
      */
-    QString playerId() const;
+    [[nodiscard]] QString playerId() const;
 
     /*!
      * \property Player::birthDate
@@ -226,7 +226,7 @@ public:
      *
      * This property holds the birth date of the player.
      */
-    QString birthDate() const;
+    [[nodiscard]] QString birthDate() const;
 
     /*!
      * \property Player::federation
@@ -234,7 +234,7 @@ public:
      *
      * This property holds the federation of the player.
      */
-    QString federation() const;
+    [[nodiscard]] QString federation() const;
 
     /*!
      * \property Player::origin
@@ -242,7 +242,7 @@ public:
      *
      * This property holds the origin the player.
      */
-    QString origin() const;
+    [[nodiscard]] QString origin() const;
 
     /*!
      * \property Player::sex
@@ -250,9 +250,9 @@ public:
      *
      * This property holds the sex of the player.
      */
-    QString sex() const;
+    [[nodiscard]] QString sex() const;
 
-    Q_INVOKABLE QString titleString() const
+    Q_INVOKABLE [[nodiscard]] QString titleString() const
     {
         return Player::titleString(m_title);
     };
@@ -260,14 +260,14 @@ public:
     /*!
      * Returns the full name of the player.
      */
-    QString fullName() const;
+    [[nodiscard]] QString fullName() const;
 
     /*!
      * Returns a JSON representation of the player.
      *
      * \sa fromJson()
      */
-    QJsonObject toJson() const;
+    [[nodiscard]] QJsonObject toJson() const;
 
     /*!
      * Creates a player from its JSON representation.

@@ -59,7 +59,7 @@ public:
      *
      * This property holds the database ID of the tournament.
      */
-    QString id() const;
+    [[nodiscard]] QString id() const;
 
     /*!
      * \property Tournament::name
@@ -67,7 +67,7 @@ public:
      *
      * This property holds the name of the tournament.
      */
-    QString name() const;
+    [[nodiscard]] QString name() const;
 
     /*!
      * \property Tournament::city
@@ -75,7 +75,7 @@ public:
      *
      * This property holds the location of the tournament.
      */
-    QString city() const;
+    [[nodiscard]] QString city() const;
 
     /*!
      * \property Tournament::federation
@@ -83,7 +83,7 @@ public:
      *
      * This property holds the federation of the tournament.
      */
-    QString federation() const;
+    [[nodiscard]] QString federation() const;
 
     /*!
      * \property Tournament::chiefArbiter
@@ -91,7 +91,7 @@ public:
      *
      * This property holds the Chief Arbiter of the tournament.
      */
-    QString chiefArbiter() const;
+    [[nodiscard]] QString chiefArbiter() const;
 
     /*!
      * \property Tournament::deputyChiefArbiter
@@ -99,7 +99,7 @@ public:
      *
      * This property holds the Deputy Chief Arbiter of the tournament.
      */
-    QString deputyChiefArbiter() const;
+    [[nodiscard]] QString deputyChiefArbiter() const;
 
     /*!
      * \property Tournament::timeControl
@@ -107,7 +107,7 @@ public:
      *
      * This property holds the time control of the tournament.
      */
-    QString timeControl() const;
+    [[nodiscard]] QString timeControl() const;
 
     /*!
      * \property Tournament::tiebreaks
@@ -115,7 +115,7 @@ public:
      *
      * This property holds the list of tiebreaks of the tournament.
      */
-    QList<Tiebreak *> tiebreaks() const;
+    [[nodiscard]] QList<Tiebreak *> tiebreaks() const;
 
     /*!
      * \property Tournament::numberOfRounds
@@ -123,7 +123,7 @@ public:
      *
      * This property holds the number of rounds of the tournament.
      */
-    int numberOfRounds() const;
+    [[nodiscard]] int numberOfRounds() const;
 
     /*!
      * \property Tournament::currentRound
@@ -131,9 +131,9 @@ public:
      *
      * The current round is the number of the last paired round, or 0 if the tournament has not started yet.
      */
-    int currentRound() const;
+    [[nodiscard]] int currentRound() const;
 
-    Event *getEvent() const;
+    [[nodiscard]] Event *getEvent() const;
 
     /*!
      * Returns the players of the tournament.
@@ -196,7 +196,7 @@ public:
     /*!
      * Returns the rounds of the tournament.
      */
-    std::vector<std::unique_ptr<Round>> rounds() const;
+    [[nodiscard]] std::vector<std::unique_ptr<Round>> rounds() const;
 
     /*!
      * Adds the \a pairing to the round \a round.
@@ -425,7 +425,7 @@ public:
      *
      * \sa read()
      */
-    QJsonObject toJson() const;
+    [[nodiscard]] QJsonObject toJson() const;
 
     /*!
      * Loads the tournament from its JSON represetation.

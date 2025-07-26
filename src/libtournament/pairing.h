@@ -71,7 +71,7 @@ public:
         return Color::Unknown;
     }
 
-    inline double getPointsOfPlayer(Player *p)
+    double getPointsOfPlayer(Player *p)
     {
         if (p == m_whitePlayer) {
             return Pairing::pointsForResult(m_whiteResult);
@@ -347,7 +347,7 @@ public:
      *
      * This property holds the database ID of the pairing.
      */
-    int id() const;
+    [[nodiscard]] int id() const;
 
     /*!
      * \property Pairing::board
@@ -355,7 +355,7 @@ public:
      *
      * This property holds the board of the pairing.
      */
-    int board() const;
+    [[nodiscard]] int board() const;
 
     /*!
      * \property Pairing::whitePlayer

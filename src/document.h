@@ -16,7 +16,7 @@ public:
     void addTitle(uint level, const QString &text);
     void addTable(const QAbstractItemModel &model);
 
-    QString toHTML() const;
+    [[nodiscard]] QString toHTML() const;
     void saveAs(const QString &fileName);
     void print();
 

@@ -21,7 +21,7 @@ public:
     explicit Account();
 
     bool isLogged();
-    QString username() const;
+    [[nodiscard]] QString username() const;
 
     void login();
     Q_INVOKABLE void logout();
