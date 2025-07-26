@@ -10,7 +10,7 @@ class State
 public:
     explicit State(Tournament *tournament, int maxRound = -1);
 
-    QList<Pairing *> getPairings(Player *player);
+    QList<Pairing *> getPairings(Player *player) const;
     double getPoints(Player *player);
     double getPointsForTiebreaks(Player *player);
 

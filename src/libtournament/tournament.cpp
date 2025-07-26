@@ -369,17 +369,6 @@ QList<PlayerTiebreaks> Tournament::getStandings(State state)
         sortStandings();
     }
 
-    // Print standings for debugging
-    for (const auto &s : standings) {
-        QStringList l;
-        for (const auto x : s.second) {
-            l << QString::number(x);
-        }
-        QString t = u"{\"id\": "_s + QString::number(s.first->startingRank()) + u", \"tiebreaks\": ["_s + l.join(u", "_s) + u"]}"_s;
-        // qDebug() << i + 1 << s.first->name() << t;
-        // std::cout << t.toStdString() << std::endl;
-    }
-
     return standings;
 }
 

@@ -10,7 +10,7 @@ State::State(Tournament *tournament, int maxRound)
     m_pairingsByPlayer = m_tournament->getPairingsByPlayer(m_maxRound);
 }
 
-QList<Pairing *> State::getPairings(Player *player)
+QList<Pairing *> State::getPairings(Player *player) const
 {
     return m_pairingsByPlayer.value(player);
 }
@@ -18,7 +18,8 @@ QList<Pairing *> State::getPairings(Player *player)
 double State::getPoints(Player *player)
 {
     double points = 0.;
-    for (const auto &pairing : m_pairingsByPlayer.value(player)) {
+    const auto pairings = m_pairingsByPlayer.value(player);
+    for (const auto &pairing : pairings) {
         points += pairing->getPointsOfPlayer(player);
     }
     return points;
