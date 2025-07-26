@@ -47,7 +47,7 @@ QVariant PairingModel::data(const QModelIndex &index, int role) const
         case WhiteStartingRank:
             return pairing->whitePlayer()->startingRank();
         case WhiteName:
-            return pairing->whitePlayer()->fullName();
+            return pairing->whitePlayer()->name();
         case Result:
             if (pairing->whiteResult() == Pairing::PartialResult::Unknown) {
                 return QString{};
@@ -57,7 +57,7 @@ QVariant PairingModel::data(const QModelIndex &index, int role) const
             if (pairing->blackPlayer() == nullptr) {
                 return QLatin1String("");
             }
-            return pairing->blackPlayer()->fullName();
+            return pairing->blackPlayer()->name();
         case BlackStartingRank:
             if (pairing->blackPlayer() == nullptr) {
                 return QLatin1String("");
@@ -94,7 +94,7 @@ QVariant PairingModel::headerData(int section, Qt::Orientation orientation, int 
     case WhiteStartingRank:
         return i18nc("@title:column", "No");
     case WhiteName:
-        return i18nc("@title:column", "White player");
+        return i18nc("@title:column", "White Player");
     case Result:
         return i18nc("@title:column", "Result");
     case BlackName:

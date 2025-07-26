@@ -192,7 +192,6 @@ std::expected<void, QString> Tournament::addPlayer(std::unique_ptr<Player> playe
     query.bindValue(u":startingRank"_s, player->startingRank());
     query.bindValue(u":title"_s, Player::titleString(player->title()));
     query.bindValue(u":name"_s, player->name());
-    query.bindValue(u":surname"_s, player->surname());
     query.bindValue(u":rating"_s, player->rating());
     query.bindValue(u":nationalRating"_s, player->nationalRating());
     query.bindValue(u":playerId"_s, player->playerId());
@@ -226,7 +225,6 @@ void Tournament::savePlayer(Player *player)
     query.bindValue(u":startingRank"_s, player->startingRank());
     query.bindValue(u":title"_s, Player::titleString(player->title()));
     query.bindValue(u":name"_s, player->name());
-    query.bindValue(u":surname"_s, player->surname());
     query.bindValue(u":rating"_s, player->rating());
     query.bindValue(u":nationalRating"_s, player->nationalRating());
     query.bindValue(u":playerId"_s, player->playerId());
@@ -249,7 +247,7 @@ void Tournament::sortPlayers()
     std::sort(m_players.begin(), m_players.end(), [](const std::unique_ptr<Player> &p1, const std::unique_ptr<Player> &p2) {
         if (p1->rating() == p2->rating()) {
             if (Player::titleStrengthLevel(p1->title()) == Player::titleStrengthLevel(p2->title())) {
-                auto cmp = p1->fullName().toLower().localeAwareCompare(p2->fullName().toLower());
+                auto cmp = p1->name().toLower().localeAwareCompare(p2->name().toLower());
                 return cmp < 0;
             }
             return Player::titleStrengthLevel(p1->title()) < Player::titleStrengthLevel(p2->title());
@@ -982,7 +980,6 @@ std::expected<void, QString> Tournament::loadPlayers()
     int stRankNo = query.record().indexOf("startingRank");
     int titleNo = query.record().indexOf("title");
     int nameNo = query.record().indexOf("name");
-    int surnameNo = query.record().indexOf("surname");
     int ratingNo = query.record().indexOf("rating");
     int nationalRatingNo = query.record().indexOf("nationalRating");
     int playerIdNo = query.record().indexOf("playerId");
@@ -995,7 +992,6 @@ std::expected<void, QString> Tournament::loadPlayers()
         auto player = std::make_unique<Player>(query.value(stRankNo).toInt(),
                                                Player::titleForString(query.value(titleNo).toString()),
                                                query.value(nameNo).toString(),
-                                               query.value(surnameNo).toString(),
                                                query.value(ratingNo).toInt(),
                                                query.value(nationalRatingNo).toInt(),
                                                query.value(playerIdNo).toString(),

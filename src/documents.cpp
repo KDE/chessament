@@ -17,7 +17,7 @@ std::unique_ptr<Document> Controller::playersDocument()
 
     PlayersModel model;
     model.setPlayers(m_tournament->players());
-    model.setColumns({StartingRank, Title, FullName, Rating, NationalRating, PlayerId, Federation, Origin});
+    model.setColumns({StartingRank, Title, Name, Rating, NationalRating, PlayerId, Federation, Origin});
     doc->addTable(model);
 
     return doc;

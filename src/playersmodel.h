@@ -18,7 +18,6 @@ public:
         StartingRank,
         Title,
         Name,
-        Surname,
         Rating,
         NationalRating,
         PlayerId,
@@ -26,7 +25,6 @@ public:
         Federation,
         Origin,
         Gender,
-        FullName,
     };
     Q_ENUM(Columns)
 
@@ -52,5 +50,5 @@ Q_SIGNALS:
 private:
     QList<Player *> m_players;
 
-    QList<int> m_columns = {StartingRank, Title, Name, Surname, Rating, NationalRating, PlayerId, BirthDate, Federation, Origin, Gender};
+    QList<int> m_columns = {StartingRank, Title, Name, Rating, NationalRating, PlayerId, BirthDate, Federation, Origin, Gender};
 };

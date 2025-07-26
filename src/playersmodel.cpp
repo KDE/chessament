@@ -43,8 +43,6 @@ QVariant PlayersModel::data(const QModelIndex &index, int role) const
             return Player::titleString(player->title());
         case PlayersModel::Columns::Name:
             return player->name();
-        case PlayersModel::Columns::Surname:
-            return player->surname();
         case PlayersModel::Columns::Rating:
             return player->rating();
         case PlayersModel::Columns::NationalRating:
@@ -59,8 +57,6 @@ QVariant PlayersModel::data(const QModelIndex &index, int role) const
             return player->origin();
         case PlayersModel::Columns::Gender:
             return player->sex();
-        case PlayersModel::Columns::FullName:
-            return player->fullName();
         }
     } else if (role == Qt::TextAlignmentRole) {
         switch (column) {
@@ -96,9 +92,6 @@ bool PlayersModel::setData(const QModelIndex &index, const QVariant &value, int 
         break;
     case PlayersModel::Columns::Name:
         player->setName(value.toString());
-        break;
-    case PlayersModel::Columns::Surname:
-        player->setSurname(value.toString());
         break;
     case PlayersModel::Columns::Rating:
         player->setRating(value.toInt());
@@ -151,8 +144,6 @@ QVariant PlayersModel::headerData(int section, Qt::Orientation orientation, int 
         return i18nc("@title:column", "Title");
     case PlayersModel::Columns::Name:
         return i18nc("@title:column", "Name");
-    case PlayersModel::Columns::Surname:
-        return i18nc("@title:column", "Surname");
     case PlayersModel::Columns::Rating:
         return i18nc("@title:column", "Rating");
     case PlayersModel::Columns::NationalRating:
@@ -167,8 +158,6 @@ QVariant PlayersModel::headerData(int section, Qt::Orientation orientation, int 
         return i18nc("@title:column", "Origin");
     case PlayersModel::Columns::Gender:
         return i18nc("@title:column", "Sex");
-    case PlayersModel::Columns::FullName:
-        return i18nc("@title:column", "Full Name");
     }
     return {};
 }

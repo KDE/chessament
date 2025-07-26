@@ -142,22 +142,13 @@ std::expected<void, QString> TRFReader::readPlayer(QStringView line)
     const auto startingRank = line.sliced(4, 4).toInt();
     const auto sex = line.sliced(9, 1).trimmed().toString();
     const auto title = Player::titleForString(line.sliced(10, 3).trimmed().toString());
-    auto name = line.sliced(14, 33).trimmed().toString();
+    const auto name = line.sliced(14, 33).trimmed().toString();
     const auto rating = line.sliced(48, 4).toInt();
     const auto federation = line.sliced(53, 5).trimmed().toString();
     const auto playerId = line.sliced(57, 11).trimmed().toString();
     const auto birthDate = line.sliced(69, 10).trimmed().toString();
 
-    QString surname;
-    if (name.contains(','_L1)) {
-        const auto parts = name.split(','_L1);
-        if (parts.length() == 2) {
-            surname = parts[0];
-            name = parts[1];
-        }
-    }
-
-    const auto player = new Player(startingRank, title, name, surname, rating, 0, playerId, birthDate, federation, {}, sex);
+    const auto player = new Player(startingRank, title, name, rating, 0, playerId, birthDate, federation, {}, sex);
     m_players[startingRank] = player;
 
     // Read round

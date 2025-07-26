@@ -25,7 +25,6 @@ class Player : public QObject
     Q_PROPERTY(int startingRank READ startingRank NOTIFY startingRankChanged)
     Q_PROPERTY(Title title READ title WRITE setTitle NOTIFY titleChanged)
     Q_PROPERTY(QString name READ name WRITE setName NOTIFY nameChanged)
-    Q_PROPERTY(QString surname READ surname WRITE setSurname NOTIFY surnameChanged)
     Q_PROPERTY(int rating READ rating WRITE setRating NOTIFY ratingChanged)
     Q_PROPERTY(int nationalRating READ nationalRating WRITE setNationalRating NOTIFY nationalRatingChanged)
     Q_PROPERTY(QString playerId READ playerId WRITE setPlayerId NOTIFY playerIdChanged)
@@ -147,7 +146,6 @@ public:
     explicit Player(int startingRank,
                     Player::Title title,
                     const QString &name,
-                    const QString &surname,
                     int rating,
                     int nationalRating,
                     const QString &playerId,
@@ -187,14 +185,6 @@ public:
      * This property holds the name of the player.
      */
     [[nodiscard]] QString name() const;
-
-    /*!
-     * \property Player::surname
-     * \brief the surname of the player
-     *
-     * This property holds the surname of the player.
-     */
-    [[nodiscard]] QString surname() const;
 
     /*!
      * \property Player::rating
@@ -258,11 +248,6 @@ public:
     };
 
     /*!
-     * Returns the full name of the player.
-     */
-    [[nodiscard]] QString fullName() const;
-
-    /*!
      * Returns a JSON representation of the player.
      *
      * \sa fromJson()
@@ -297,7 +282,6 @@ public Q_SLOTS:
     void setTitle(Player::Title title);
     void setTitle(const QString &titleString);
     void setName(const QString &name);
-    void setSurname(const QString &surname);
     void setRating(int rating);
     void setNationalRating(int nationalRating);
     void setPlayerId(const QString &playerId);
@@ -311,7 +295,6 @@ Q_SIGNALS:
     void startingRankChanged();
     void titleChanged();
     void nameChanged();
-    void surnameChanged();
     void ratingChanged();
     void nationalRatingChanged();
     void playerIdChanged();
@@ -325,7 +308,6 @@ private:
     int m_startingRank = 1;
     Player::Title m_title;
     QString m_name;
-    QString m_surname;
     int m_rating = 0;
     int m_nationalRating = 0;
     QString m_playerId;

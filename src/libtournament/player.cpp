@@ -18,7 +18,6 @@ Player::Player(int startingRank, const QString &name, int rating)
 Player::Player(int startingRank,
                Title title,
                const QString &name,
-               const QString &surname,
                int rating,
                int nationalRating,
                const QString &playerId,
@@ -30,7 +29,6 @@ Player::Player(int startingRank,
     setStartingRank(startingRank);
     setTitle(title);
     setName(name);
-    setSurname(surname);
     setRating(rating);
     setNationalRating(nationalRating);
     setPlayerId(playerId);
@@ -100,20 +98,6 @@ void Player::setName(const QString &name)
     }
     m_name = name;
     Q_EMIT nameChanged();
-}
-
-QString Player::surname() const
-{
-    return m_surname;
-}
-
-void Player::setSurname(const QString &surname)
-{
-    if (m_surname == surname) {
-        return;
-    }
-    m_surname = surname;
-    Q_EMIT surnameChanged();
 }
 
 int Player::rating() const
@@ -214,14 +198,6 @@ void Player::setSex(const QString &sex)
     Q_EMIT sexChanged();
 }
 
-QString Player::fullName() const
-{
-    if (!m_surname.isEmpty()) {
-        return m_surname + u", "_s + m_name;
-    }
-    return m_name;
-}
-
 QJsonObject Player::toJson() const
 {
     QJsonObject json;
@@ -229,7 +205,6 @@ QJsonObject Player::toJson() const
     json[u"starting_rank"_s] = m_startingRank;
     json[u"title"_s] = Player::titleString(m_title);
     json[u"name"_s] = m_name;
-    json[u"surname"_s] = m_surname;
     json[u"rating"_s] = m_rating;
     json[u"national_rating"_s] = m_nationalRating;
     json[u"player_id"_s] = m_playerId;
@@ -250,9 +225,6 @@ std::unique_ptr<Player> Player::fromJson(const QJsonObject &json)
     }
     if (const auto v = json[u"title"_s]; v.isString()) {
         player->m_title = Player::titleForString(v.toString());
-    }
-    if (const auto v = json[u"surname"_s]; v.isString()) {
-        player->m_surname = v.toString();
     }
     if (const auto v = json[u"name"_s]; v.isString()) {
         player->m_name = v.toString();
@@ -285,7 +257,7 @@ std::unique_ptr<Player> Player::fromJson(const QJsonObject &json)
 std::string Player::toTrf(double points, int rank, bool normalize)
 {
     const auto title = Player::titleString(m_title);
-    auto name = fullName();
+    auto name = m_name;
     auto federation = m_federation;
     auto birth = m_birthDate;
     auto playerid = m_playerId;
@@ -314,6 +286,6 @@ std::string Player::toTrf(double points, int rank, bool normalize)
 
 QDebug operator<<(QDebug dbg, const Player &player)
 {
-    dbg.nospace() << "Player(" << player.fullName() << ")";
+    dbg.nospace() << "Player(" << player.name() << ")";
     return dbg;
 }
