@@ -28,8 +28,6 @@ int PlayersModel::columnCount(const QModelIndex &parent) const
 
 QVariant PlayersModel::data(const QModelIndex &index, int role) const
 {
-    Q_UNUSED(role)
-
     if (!index.isValid()) {
         return {};
     }
@@ -38,6 +36,29 @@ QVariant PlayersModel::data(const QModelIndex &index, int role) const
     int column = m_columns.at(index.column());
 
     if (role == Qt::DisplayRole) {
+        switch (column) {
+        case PlayersModel::Columns::StartingRank:
+            return player->startingRank();
+        case PlayersModel::Columns::Title:
+            return Player::titleString(player->title());
+        case PlayersModel::Columns::Name:
+            return player->name();
+        case PlayersModel::Columns::Rating:
+            return QLocale::system().toString(player->rating());
+        case PlayersModel::Columns::NationalRating:
+            return QLocale::system().toString(player->nationalRating());
+        case PlayersModel::Columns::PlayerId:
+            return player->playerId();
+        case PlayersModel::Columns::BirthDate:
+            return player->birthDate();
+        case PlayersModel::Columns::Federation:
+            return player->federation();
+        case PlayersModel::Columns::Origin:
+            return player->origin();
+        case PlayersModel::Columns::Gender:
+            return player->sex();
+        }
+    } else if (role == Qt::EditRole) {
         switch (column) {
         case PlayersModel::Columns::StartingRank:
             return player->startingRank();
@@ -77,7 +98,7 @@ QVariant PlayersModel::data(const QModelIndex &index, int role) const
 
 bool PlayersModel::setData(const QModelIndex &index, const QVariant &value, int role)
 {
-    Q_UNUSED(role);
+    Q_ASSERT(role == Qt::EditRole);
 
     if (!index.isValid()) {
         return false;
@@ -132,7 +153,7 @@ bool PlayersModel::setData(const QModelIndex &index, const QVariant &value, int 
 
 QHash<int, QByteArray> PlayersModel::roleNames() const
 {
-    return {{Qt::DisplayRole, "displayName"}};
+    return {{Qt::DisplayRole, "display"}, {Qt::EditRole, "edit"}, {Qt::TextAlignmentRole, "textAlignment"}};
 }
 
 Qt::ItemFlags PlayersModel::flags(const QModelIndex &index) const
@@ -147,23 +168,23 @@ QVariant PlayersModel::headerData(int section, Qt::Orientation orientation, int 
     Q_UNUSED(role)
     switch (m_columns.at(section)) {
     case PlayersModel::Columns::StartingRank:
-        return i18nc("@title:column", "No");
+        return i18nc("@title:column Player Starting Rank Number", "№");
     case PlayersModel::Columns::Title:
-        return i18nc("@title:column", "Title");
+        return i18nc("@title:column Player Title", "Title");
     case PlayersModel::Columns::Name:
-        return i18nc("@title:column", "Name");
+        return i18nc("@title:column Player Name", "Name");
     case PlayersModel::Columns::Rating:
-        return i18nc("@title:column", "Rating");
+        return i18nc("@title:column Player Rating", "Rating");
     case PlayersModel::Columns::NationalRating:
-        return i18nc("@title:column", "National rating");
+        return i18nc("@title:column Player National Rating", "National Rating");
     case PlayersModel::Columns::PlayerId:
         return i18nc("@title:column", "Player ID");
     case PlayersModel::Columns::BirthDate:
         return i18nc("@title:column", "Birth date");
     case PlayersModel::Columns::Federation:
-        return i18nc("@title:column", "Federation");
+        return i18nc("@title:column Player Federation", "Federation");
     case PlayersModel::Columns::Origin:
-        return i18nc("@title:column", "Origin");
+        return i18nc("@title:column Player Origin", "Origin");
     case PlayersModel::Columns::Gender:
         return i18nc("@title:column", "Sex");
     }

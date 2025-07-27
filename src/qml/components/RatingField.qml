@@ -9,7 +9,7 @@ Controls.TextField {
     required property var model
 
     anchors.fill: parent
-    text: model.displayName
+    text: model.edit
     horizontalAlignment: TextInput.AlignHCenter
     verticalAlignment: TextInput.AlignVCenter
     validator: IntValidator {
@@ -20,6 +20,6 @@ Controls.TextField {
     Component.onCompleted: selectAll()
 
     TableView.onCommit: {
-        model.displayName = text;
+        model.edit = text;
     }
 }

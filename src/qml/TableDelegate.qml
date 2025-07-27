@@ -20,6 +20,7 @@ T.ItemDelegate {
     property Components.ConvergentContextMenu contextMenu: null
     readonly property bool rowHovered: root.tableView.hoveredRow === row || hovered
     required property TableView tableView
+    required property var model
 
     implicitWidth: Math.max(implicitBackgroundWidth + leftInset + rightInset, implicitContentWidth + leftPadding + rightPadding, implicitIndicatorWidth + leftPadding + rightPadding)
     implicitHeight: Math.max(implicitBackgroundHeight + topInset + bottomInset, implicitContentHeight + topPadding + bottomPadding, implicitIndicatorHeight + topPadding + bottomPadding, Kirigami.Units.gridUnit * 2)
@@ -86,6 +87,7 @@ T.ItemDelegate {
 
     contentItem: Delegates.DefaultContentItem {
         itemDelegate: root
+        labelItem.horizontalAlignment: root.model.textAlignment ?? Qt.AlignLeading
     }
 
     Accessible.role: Accessible.Cell

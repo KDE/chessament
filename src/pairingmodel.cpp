@@ -81,7 +81,7 @@ QVariant PairingModel::data(const QModelIndex &index, int role) const
 
 QHash<int, QByteArray> PairingModel::roleNames() const
 {
-    return {{Qt::DisplayRole, "displayName"}};
+    return {{Qt::DisplayRole, "display"}, {Qt::TextAlignmentRole, "textAlignment"}};
 }
 
 QVariant PairingModel::headerData(int section, Qt::Orientation orientation, int role) const
@@ -90,17 +90,17 @@ QVariant PairingModel::headerData(int section, Qt::Orientation orientation, int 
     Q_UNUSED(role)
     switch (m_columns.at(section)) {
     case Board:
-        return i18nc("@title:column", "Board");
+        return i18nc("@title:column Board Number", "Board");
     case WhiteStartingRank:
-        return i18nc("@title:column", "No");
+        return i18nc("@title:column White Player Starting Rank Number", "№");
     case WhiteName:
-        return i18nc("@title:column", "White Player");
+        return i18nc("@title:column Name of the White Player", "White Player");
     case Result:
-        return i18nc("@title:column", "Result");
+        return i18nc("@title:column Game Result", "Result");
     case BlackName:
-        return i18nc("@title:column", "Black Player");
+        return i18nc("@title:column Name of the Black Player", "Black Player");
     case BlackStartingRank:
-        return i18nc("@title:column", "No");
+        return i18nc("@title:column Black Player Starting Rank Number", "№");
     }
 
     return {};

@@ -19,6 +19,8 @@ TablePage {
 
     Kirigami.ColumnView.fillWidth: true
 
+    columnWidths: [55, 55, 250, 60, 90, 90, 100, 80, 150, 50]
+
     AddPlayerDialog {
         id: addPlayerDialog
     }
@@ -75,12 +77,12 @@ TablePage {
         id: delegate
 
         required property int index
-        required property string displayName
         required property bool editing
+        required model
         required selected
         required current
 
-        text: displayName
+        text: model.display
 
         onDoubleClicked: {
             root.tableView.edit(proxyModel.index(delegate.row, delegate.column));
@@ -117,14 +119,11 @@ TablePage {
                     popup.onClosed: root.tableView.closeEditor()
 
                     onActivated: {
-                        let i = root.model.index(delegate.row, delegate.column);
-                        root.model.setData(i, comboBox.currentText);
-                        root.tableView.closeEditor();
+                        delegate.model.edit = comboBox.currentText;
                     }
 
                     Component.onCompleted: {
-                        let data = root.tableView.model.data(root.tableView.model.index(delegate.row, delegate.column));
-                        comboBox.currentIndex = comboBox.indexOfValue(data);
+                        comboBox.currentIndex = comboBox.indexOfValue(delegate.model.edit);
                         comboBox.popup.open();
                     }
                 }
@@ -135,14 +134,14 @@ TablePage {
                     required property var model
 
                     anchors.fill: parent
-                    text: model.displayName
+                    text: model.edit
                     horizontalAlignment: TextInput.AlignHCenter
                     verticalAlignment: TextInput.AlignVCenter
 
                     Component.onCompleted: selectAll()
 
                     TableView.onCommit: {
-                        model.displayName = text;
+                        model.edit = text;
                     }
                 }
             }

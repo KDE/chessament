@@ -2,6 +2,8 @@
 // SPDX-FileCopyrightText: 2025 Manuel Alcaraz Zambrano <manuelalcarazzam@gmail.com>
 // SPDX-License-Identifier: GPL-3.0-or-later
 
+pragma ComponentBehavior: Bound
+
 import QtQuick
 import QtQml.Models
 import QtQuick.Controls as Controls
@@ -16,8 +18,17 @@ Kirigami.Page {
     required property var model
     required property Component delegate
     readonly property alias tableView: tableView
+    readonly property alias heading: heading
 
     property var selectionBehavior: TableView.SelectCells
+
+    property list<int> columnWidths: []
+
+    function defaultColumnWidth(column: int): int {
+        const columnWidth = root.tableView.implicitColumnWidth(column);
+        const headingWidth = heading.implicitColumnWidth(column);
+        return Math.max(headingWidth, columnWidth);
+    }
 
     leftPadding: 0
     rightPadding: 0
@@ -37,10 +48,8 @@ Kirigami.Page {
 
             visible: tableView.rows !== 0
             width: scrollView.width
-
             syncView: tableView
             clip: true
-            textRole: "displayName"
         }
 
         Controls.ScrollView {
@@ -70,14 +79,15 @@ Kirigami.Page {
                 delegate: root.delegate
 
                 columnWidthProvider: function (column) {
-                    const w = explicitColumnWidth(column);
+                    const w = root.tableView.explicitColumnWidth(column);
                     if (w >= 0) {
-                        return Math.min(w, width / 2);
+                        return w;
                     }
-                    const implicit = implicitColumnWidth(column);
-                    const headingImplicit = heading.implicitColumnWidth(column);
-                    const max = Math.max(implicit, headingImplicit);
-                    return Math.min(width / 2, max);
+                    if (root.columnWidths[column]) {
+                        const headingWidth = heading.implicitColumnWidth(column);
+                        return Math.max(headingWidth, root.columnWidths[column]);
+                    }
+                    return root.defaultColumnWidth(column);
                 }
             }
         }

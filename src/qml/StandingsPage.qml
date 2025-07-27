@@ -18,6 +18,14 @@ TablePage {
 
     selectionBehavior: TableView.SelectRows
 
+    function defaultColumnWidth(column: int): int {
+        if (column >= 4) {
+            return 70;
+        }
+        const widths = [55, 55, 55, 250];
+        return widths[column];
+    }
+
     Connections {
         target: Controller
 
@@ -32,12 +40,12 @@ TablePage {
         id: delegate
 
         required property int index
-        required property string displayName
         required property bool editing
+        required model
         required selected
         required current
 
-        text: displayName
+        text: model.display
     }
 
     Kirigami.PlaceholderMessage {

@@ -19,6 +19,7 @@ TablePage {
     model: Controller.pairingModel
 
     selectionBehavior: TableView.SelectRows
+    columnWidths: [55, 55, 250, 90, 250, 55]
 
     Dialogs.FileDialog {
         id: saveDialog
@@ -102,12 +103,12 @@ TablePage {
         id: delegate
 
         required property int index
-        required property string displayName
         required property bool editing
+        required model
         required selected
         required current
 
-        text: displayName
+        text: model.display
     }
 
     Kirigami.PlaceholderMessage {
