@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-26 00:40+0000\n"
+"POT-Creation-Date: 2025-07-27 00:39+0000\n"
 "PO-Revision-Date: 2025-07-24 17:43+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -80,24 +80,24 @@ msgctxt "bbpPairings is the name of a program, should not be translated"
 msgid "bbpPairings terminated with a non zero exit code: %1"
 msgstr "bbpPairings zero ez den irteera-kode batekin bukatu da: %1"
 
-#: libtournament/pairingengine.cpp:71 libtournament/trf.cpp:185
+#: libtournament/pairingengine.cpp:71 libtournament/trf.cpp:176
 #, kde-format
 msgid "Invalid pairing \"%1\"."
 msgstr "Parekatze baliogabea \"%1\"."
 
 #: libtournament/pairingengine.cpp:77 libtournament/pairingengine.cpp:81
 #: libtournament/pairingengine.cpp:85 libtournament/pairingengine.cpp:89
-#: libtournament/trf.cpp:198
+#: libtournament/trf.cpp:189
 #, kde-format
 msgid "Invalid player \"%1\" on pairing \"%2\"."
 msgstr "\"%1\" jokalari baliogabea \"%2\" parekatzean."
 
-#: libtournament/tournament.cpp:643
+#: libtournament/tournament.cpp:636
 #, kde-format
 msgid "An error ocurred while pairing the round: %1"
 msgstr "Errore bat gertatu da itzuliko bikoteak erabakitzean: %1"
 
-#: libtournament/tournament.cpp:895
+#: libtournament/tournament.cpp:888
 #, kde-format
 msgid "Couldn't open file"
 msgstr "Ezin izan du fitxategia ireki"
@@ -112,12 +112,12 @@ msgstr "\"%1\" jokalaria ez da aurkitu."
 msgid "Unknown result on pairing \"%1\" with \"%2\"."
 msgstr "Emaitza ezezaguna \"%1\" \"%2\"(e)rekin parekatzean."
 
-#: libtournament/trf.cpp:205
+#: libtournament/trf.cpp:196
 #, kde-format
 msgid "Unknown result \"%1\" on pairing \"%2\"."
 msgstr "\"%1\" emaitza ezezaguna \"%2\" parekatzean."
 
-#: libtournament/trf.cpp:208
+#: libtournament/trf.cpp:199
 #, kde-format
 msgid "Pairing \"%1\" has no opponent."
 msgstr "\"%1\" parekatzeak ez du aurkaririk."
@@ -162,102 +162,92 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "xalba@ni.eus"
 
-#: pairingmodel.cpp:96
+#: pairingmodel.cpp:93
 #, kde-format
 msgctxt "@title:column"
 msgid "Board"
 msgstr "Taula"
 
-#: pairingmodel.cpp:98 pairingmodel.cpp:106 playersmodel.cpp:145
+#: pairingmodel.cpp:95 pairingmodel.cpp:103 playersmodel.cpp:142
 #: standingsmodel.cpp:69
 #, kde-format
 msgctxt "@title:column"
 msgid "No"
 msgstr "Ez"
 
-#: pairingmodel.cpp:100
-#, kde-format
+#: pairingmodel.cpp:97
+#, fuzzy, kde-format
+#| msgctxt "@title:column"
+#| msgid "White player"
 msgctxt "@title:column"
-msgid "White player"
+msgid "White Player"
 msgstr "Jokalari Zuria"
 
-#: pairingmodel.cpp:102
+#: pairingmodel.cpp:99
 #, kde-format
 msgctxt "@title:column"
 msgid "Result"
 msgstr "Emaitza"
 
-#: pairingmodel.cpp:104
+#: pairingmodel.cpp:101
 #, kde-format
 msgctxt "@title:column"
 msgid "Black Player"
 msgstr "Jokalari Beltza"
 
-#: playersmodel.cpp:147 standingsmodel.cpp:71
+#: playersmodel.cpp:144 standingsmodel.cpp:71
 #, kde-format
 msgctxt "@title:column"
 msgid "Title"
 msgstr "Titulua"
 
-#: playersmodel.cpp:149 standingsmodel.cpp:73
+#: playersmodel.cpp:146 standingsmodel.cpp:73
 #, kde-format
 msgctxt "@title:column"
 msgid "Name"
 msgstr "Izena"
 
-#: playersmodel.cpp:151
-#, kde-format
-msgctxt "@title:column"
-msgid "Surname"
-msgstr "Abizena"
-
-#: playersmodel.cpp:153
+#: playersmodel.cpp:148
 #, kde-format
 msgctxt "@title:column"
 msgid "Rating"
 msgstr "Puntuazioa"
 
-#: playersmodel.cpp:155
+#: playersmodel.cpp:150
 #, kde-format
 msgctxt "@title:column"
 msgid "National rating"
 msgstr "Puntuazio nazionala"
 
-#: playersmodel.cpp:157
+#: playersmodel.cpp:152
 #, kde-format
 msgctxt "@title:column"
 msgid "Player ID"
 msgstr "Jokalariaren ID"
 
-#: playersmodel.cpp:159
+#: playersmodel.cpp:154
 #, kde-format
 msgctxt "@title:column"
 msgid "Birth date"
 msgstr "Jaioteguna"
 
-#: playersmodel.cpp:161
+#: playersmodel.cpp:156
 #, kde-format
 msgctxt "@title:column"
 msgid "Federation"
 msgstr "Federazioa"
 
-#: playersmodel.cpp:163
+#: playersmodel.cpp:158
 #, kde-format
 msgctxt "@title:column"
 msgid "Origin"
 msgstr "Jatorria"
 
-#: playersmodel.cpp:165
+#: playersmodel.cpp:160
 #, kde-format
 msgctxt "@title:column"
 msgid "Sex"
 msgstr "Generoa"
-
-#: playersmodel.cpp:167
-#, kde-format
-msgctxt "@title:column"
-msgid "Full Name"
-msgstr "Izen osoa"
 
 #: qml/AddPlayerDialog.qml:16
 #, kde-format
@@ -873,3 +863,11 @@ msgstr "Saioa itxi"
 msgctxt "@title:colunm"
 msgid "Rank"
 msgstr "Postua"
+
+#~ msgctxt "@title:column"
+#~ msgid "Surname"
+#~ msgstr "Abizena"
+
+#~ msgctxt "@title:column"
+#~ msgid "Full Name"
+#~ msgstr "Izen osoa"

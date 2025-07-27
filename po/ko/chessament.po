@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-26 00:40+0000\n"
+"POT-Creation-Date: 2025-07-27 00:39+0000\n"
 "PO-Revision-Date: 2025-07-21 00:46+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -75,24 +75,24 @@ msgctxt "bbpPairings is the name of a program, should not be translated"
 msgid "bbpPairings terminated with a non zero exit code: %1"
 msgstr ""
 
-#: libtournament/pairingengine.cpp:71 libtournament/trf.cpp:185
+#: libtournament/pairingengine.cpp:71 libtournament/trf.cpp:176
 #, kde-format
 msgid "Invalid pairing \"%1\"."
 msgstr ""
 
 #: libtournament/pairingengine.cpp:77 libtournament/pairingengine.cpp:81
 #: libtournament/pairingengine.cpp:85 libtournament/pairingengine.cpp:89
-#: libtournament/trf.cpp:198
+#: libtournament/trf.cpp:189
 #, kde-format
 msgid "Invalid player \"%1\" on pairing \"%2\"."
 msgstr ""
 
-#: libtournament/tournament.cpp:643
+#: libtournament/tournament.cpp:636
 #, kde-format
 msgid "An error ocurred while pairing the round: %1"
 msgstr ""
 
-#: libtournament/tournament.cpp:895
+#: libtournament/tournament.cpp:888
 #, kde-format
 msgid "Couldn't open file"
 msgstr ""
@@ -107,12 +107,12 @@ msgstr ""
 msgid "Unknown result on pairing \"%1\" with \"%2\"."
 msgstr ""
 
-#: libtournament/trf.cpp:205
+#: libtournament/trf.cpp:196
 #, kde-format
 msgid "Unknown result \"%1\" on pairing \"%2\"."
 msgstr ""
 
-#: libtournament/trf.cpp:208
+#: libtournament/trf.cpp:199
 #, kde-format
 msgid "Pairing \"%1\" has no opponent."
 msgstr ""
@@ -157,102 +157,91 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr ""
 
-#: pairingmodel.cpp:96
+#: pairingmodel.cpp:93
 #, kde-format
 msgctxt "@title:column"
 msgid "Board"
 msgstr "보드"
 
-#: pairingmodel.cpp:98 pairingmodel.cpp:106 playersmodel.cpp:145
+#: pairingmodel.cpp:95 pairingmodel.cpp:103 playersmodel.cpp:142
 #: standingsmodel.cpp:69
 #, kde-format
 msgctxt "@title:column"
 msgid "No"
 msgstr ""
 
-#: pairingmodel.cpp:100
-#, kde-format
+#: pairingmodel.cpp:97
+#, fuzzy, kde-format
+#| msgid "Players"
 msgctxt "@title:column"
-msgid "White player"
-msgstr ""
+msgid "White Player"
+msgstr "플레이어"
 
-#: pairingmodel.cpp:102
+#: pairingmodel.cpp:99
 #, kde-format
 msgctxt "@title:column"
 msgid "Result"
 msgstr "결과"
 
-#: pairingmodel.cpp:104
+#: pairingmodel.cpp:101
 #, kde-format
 msgctxt "@title:column"
 msgid "Black Player"
 msgstr "흑돌 플레이어"
 
-#: playersmodel.cpp:147 standingsmodel.cpp:71
+#: playersmodel.cpp:144 standingsmodel.cpp:71
 #, kde-format
 msgctxt "@title:column"
 msgid "Title"
 msgstr ""
 
-#: playersmodel.cpp:149 standingsmodel.cpp:73
+#: playersmodel.cpp:146 standingsmodel.cpp:73
 #, kde-format
 msgctxt "@title:column"
 msgid "Name"
 msgstr ""
 
-#: playersmodel.cpp:151
-#, kde-format
-msgctxt "@title:column"
-msgid "Surname"
-msgstr ""
-
-#: playersmodel.cpp:153
+#: playersmodel.cpp:148
 #, kde-format
 msgctxt "@title:column"
 msgid "Rating"
 msgstr ""
 
-#: playersmodel.cpp:155
+#: playersmodel.cpp:150
 #, kde-format
 msgctxt "@title:column"
 msgid "National rating"
 msgstr ""
 
-#: playersmodel.cpp:157
+#: playersmodel.cpp:152
 #, kde-format
 msgctxt "@title:column"
 msgid "Player ID"
 msgstr "플레이어 ID"
 
-#: playersmodel.cpp:159
+#: playersmodel.cpp:154
 #, kde-format
 msgctxt "@title:column"
 msgid "Birth date"
 msgstr ""
 
-#: playersmodel.cpp:161
+#: playersmodel.cpp:156
 #, kde-format
 msgctxt "@title:column"
 msgid "Federation"
 msgstr "연합"
 
-#: playersmodel.cpp:163
+#: playersmodel.cpp:158
 #, kde-format
 msgctxt "@title:column"
 msgid "Origin"
 msgstr ""
 
-#: playersmodel.cpp:165
+#: playersmodel.cpp:160
 #, kde-format
 msgctxt "@title:column"
 msgid "Sex"
 msgstr "성별"
-
-#: playersmodel.cpp:167
-#, kde-format
-msgctxt "@title:column"
-msgid "Full Name"
-msgstr "전체 이름"
 
 #: qml/AddPlayerDialog.qml:16
 #, kde-format
@@ -864,3 +853,7 @@ msgstr "로그아웃"
 msgctxt "@title:colunm"
 msgid "Rank"
 msgstr ""
+
+#~ msgctxt "@title:column"
+#~ msgid "Full Name"
+#~ msgstr "전체 이름"
