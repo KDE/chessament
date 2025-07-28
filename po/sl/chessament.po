@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-27 00:39+0000\n"
-"PO-Revision-Date: 2025-07-22 06:57+0200\n"
+"POT-Creation-Date: 2025-07-28 00:39+0000\n"
+"PO-Revision-Date: 2025-07-27 08:06+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -39,7 +39,7 @@ msgctxt "@action:inmenu"
 msgid "Connect account"
 msgstr "Poveži račun"
 
-#: controller.cpp:148
+#: controller.cpp:153
 #, kde-format
 msgid "Couldn't export tournament."
 msgstr "Turnirja ni bilo mogoče izvoziti."
@@ -86,12 +86,12 @@ msgstr "Neveljaven par \"%1\"."
 msgid "Invalid player \"%1\" on pairing \"%2\"."
 msgstr "Neveljaven igralec \"%1\" v paru \"%2\"."
 
-#: libtournament/tournament.cpp:636
+#: libtournament/tournament.cpp:657
 #, kde-format
 msgid "An error ocurred while pairing the round: %1"
 msgstr "Pri uparjanju kroga je prišlo do napake: %1"
 
-#: libtournament/tournament.cpp:888
+#: libtournament/tournament.cpp:909
 #, kde-format
 msgid "Couldn't open file"
 msgstr "Datoteke ni bilo mogoče odpreti"
@@ -162,7 +162,7 @@ msgctxt "@title:column"
 msgid "Board"
 msgstr "Deska"
 
-#: pairingmodel.cpp:95 pairingmodel.cpp:103 playersmodel.cpp:142
+#: pairingmodel.cpp:95 pairingmodel.cpp:103 playersmodel.cpp:150
 #: standingsmodel.cpp:69
 #, kde-format
 msgctxt "@title:column"
@@ -170,9 +170,7 @@ msgid "No"
 msgstr "Št."
 
 #: pairingmodel.cpp:97
-#, fuzzy, kde-format
-#| msgctxt "@title:column"
-#| msgid "White player"
+#, kde-format
 msgctxt "@title:column"
 msgid "White Player"
 msgstr "Beli igralec"
@@ -189,55 +187,55 @@ msgctxt "@title:column"
 msgid "Black Player"
 msgstr "Črni igralec"
 
-#: playersmodel.cpp:144 standingsmodel.cpp:71
+#: playersmodel.cpp:152 standingsmodel.cpp:71
 #, kde-format
 msgctxt "@title:column"
 msgid "Title"
 msgstr "Naziv"
 
-#: playersmodel.cpp:146 standingsmodel.cpp:73
+#: playersmodel.cpp:154 standingsmodel.cpp:73
 #, kde-format
 msgctxt "@title:column"
 msgid "Name"
 msgstr "Ime"
 
-#: playersmodel.cpp:148
+#: playersmodel.cpp:156
 #, kde-format
 msgctxt "@title:column"
 msgid "Rating"
 msgstr "Rating"
 
-#: playersmodel.cpp:150
+#: playersmodel.cpp:158
 #, kde-format
 msgctxt "@title:column"
 msgid "National rating"
 msgstr "Nacionalni rating"
 
-#: playersmodel.cpp:152
+#: playersmodel.cpp:160
 #, kde-format
 msgctxt "@title:column"
 msgid "Player ID"
 msgstr "ID igralca"
 
-#: playersmodel.cpp:154
+#: playersmodel.cpp:162
 #, kde-format
 msgctxt "@title:column"
 msgid "Birth date"
 msgstr "Datum rojstva"
 
-#: playersmodel.cpp:156
+#: playersmodel.cpp:164
 #, kde-format
 msgctxt "@title:column"
 msgid "Federation"
 msgstr "Zveza"
 
-#: playersmodel.cpp:158
+#: playersmodel.cpp:166
 #, kde-format
 msgctxt "@title:column"
 msgid "Origin"
 msgstr "Izvor"
 
-#: playersmodel.cpp:160
+#: playersmodel.cpp:168
 #, kde-format
 msgctxt "@title:column"
 msgid "Sex"
@@ -522,19 +520,19 @@ msgctxt "@action:button"
 msgid "Add Player…"
 msgstr "Dodaj igralca…"
 
-#: qml/PlayersPage.qml:150
+#: qml/PlayersPage.qml:156
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No players yet"
 msgstr "Še ni igralcev"
 
-#: qml/PlayersPage.qml:154
+#: qml/PlayersPage.qml:160
 #, kde-format
 msgctxt "@action:button"
 msgid "Add player"
 msgstr "Dodaj igralca"
 
-#: qml/PlayersPage.qml:172
+#: qml/PlayersPage.qml:178
 #, kde-format
 msgctxt "@info:status Number of players"
 msgid "1 player"
@@ -544,7 +542,7 @@ msgstr[1] "%1igralec"
 msgstr[2] "%1 igralca"
 msgstr[3] "%1 igralci"
 
-#: qml/PlayersPage.qml:173
+#: qml/PlayersPage.qml:179
 #, kde-format
 msgctxt "@info:status Number of rated players"
 msgid "1 rated"
@@ -554,7 +552,7 @@ msgstr[1] "%1 ocenjen"
 msgstr[2] "%1 ocenjena"
 msgstr[3] "%1 ocenjeni"
 
-#: qml/PlayersPage.qml:175
+#: qml/PlayersPage.qml:181
 #, kde-format
 msgctxt "@info:status players, rated"
 msgid "%1, %2"

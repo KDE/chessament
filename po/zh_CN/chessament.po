@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-27 00:39+0000\n"
+"POT-Creation-Date: 2025-07-28 00:39+0000\n"
 "PO-Revision-Date: 2025-05-12 14:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -41,7 +41,7 @@ msgctxt "@action:inmenu"
 msgid "Connect account"
 msgstr "关联账户"
 
-#: controller.cpp:148
+#: controller.cpp:153
 #, kde-format
 msgid "Couldn't export tournament."
 msgstr "无法导出比赛。"
@@ -87,12 +87,12 @@ msgstr "无效对阵“%1”。"
 msgid "Invalid player \"%1\" on pairing \"%2\"."
 msgstr "对阵“%2”中的无效选手“%1”。"
 
-#: libtournament/tournament.cpp:636
+#: libtournament/tournament.cpp:657
 #, kde-format
 msgid "An error ocurred while pairing the round: %1"
 msgstr "在生成本轮对阵时发生错误：%1"
 
-#: libtournament/tournament.cpp:888
+#: libtournament/tournament.cpp:909
 #, kde-format
 msgid "Couldn't open file"
 msgstr "无法打开文件"
@@ -163,7 +163,7 @@ msgctxt "@title:column"
 msgid "Board"
 msgstr "棋盘"
 
-#: pairingmodel.cpp:95 pairingmodel.cpp:103 playersmodel.cpp:142
+#: pairingmodel.cpp:95 pairingmodel.cpp:103 playersmodel.cpp:150
 #: standingsmodel.cpp:69
 #, kde-format
 msgctxt "@title:column"
@@ -190,55 +190,55 @@ msgctxt "@title:column"
 msgid "Black Player"
 msgstr "执黑"
 
-#: playersmodel.cpp:144 standingsmodel.cpp:71
+#: playersmodel.cpp:152 standingsmodel.cpp:71
 #, kde-format
 msgctxt "@title:column"
 msgid "Title"
 msgstr "标题"
 
-#: playersmodel.cpp:146 standingsmodel.cpp:73
+#: playersmodel.cpp:154 standingsmodel.cpp:73
 #, kde-format
 msgctxt "@title:column"
 msgid "Name"
 msgstr "姓名"
 
-#: playersmodel.cpp:148
+#: playersmodel.cpp:156
 #, kde-format
 msgctxt "@title:column"
 msgid "Rating"
 msgstr "评分"
 
-#: playersmodel.cpp:150
+#: playersmodel.cpp:158
 #, kde-format
 msgctxt "@title:column"
 msgid "National rating"
 msgstr "国家级评级"
 
-#: playersmodel.cpp:152
+#: playersmodel.cpp:160
 #, kde-format
 msgctxt "@title:column"
 msgid "Player ID"
 msgstr "玩家 ID"
 
-#: playersmodel.cpp:154
+#: playersmodel.cpp:162
 #, kde-format
 msgctxt "@title:column"
 msgid "Birth date"
 msgstr "出生日期"
 
-#: playersmodel.cpp:156
+#: playersmodel.cpp:164
 #, kde-format
 msgctxt "@title:column"
 msgid "Federation"
 msgstr "已知实例"
 
-#: playersmodel.cpp:158
+#: playersmodel.cpp:166
 #, kde-format
 msgctxt "@title:column"
 msgid "Origin"
 msgstr "来源"
 
-#: playersmodel.cpp:160
+#: playersmodel.cpp:168
 #, kde-format
 msgctxt "@title:column"
 msgid "Sex"
@@ -523,33 +523,33 @@ msgctxt "@action:button"
 msgid "Add Player…"
 msgstr "添加玩家..."
 
-#: qml/PlayersPage.qml:150
+#: qml/PlayersPage.qml:156
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No players yet"
 msgstr "暂无玩家"
 
-#: qml/PlayersPage.qml:154
+#: qml/PlayersPage.qml:160
 #, kde-format
 msgctxt "@action:button"
 msgid "Add player"
 msgstr "添加玩家"
 
-#: qml/PlayersPage.qml:172
+#: qml/PlayersPage.qml:178
 #, kde-format
 msgctxt "@info:status Number of players"
 msgid "1 player"
 msgid_plural "%1 players"
 msgstr[0] "%1 名玩家"
 
-#: qml/PlayersPage.qml:173
+#: qml/PlayersPage.qml:179
 #, kde-format
 msgctxt "@info:status Number of rated players"
 msgid "1 rated"
 msgid_plural "%1 rated"
 msgstr[0] "%1 级"
 
-#: qml/PlayersPage.qml:175
+#: qml/PlayersPage.qml:181
 #, kde-format
 msgctxt "@info:status players, rated"
 msgid "%1, %2"

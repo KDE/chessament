@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-27 00:39+0000\n"
-"PO-Revision-Date: 2025-07-22 08:26+0300\n"
+"POT-Creation-Date: 2025-07-28 00:39+0000\n"
+"PO-Revision-Date: 2025-07-27 16:41+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -42,7 +42,7 @@ msgctxt "@action:inmenu"
 msgid "Connect account"
 msgstr "З'єднати обліковий запис"
 
-#: controller.cpp:148
+#: controller.cpp:153
 #, kde-format
 msgid "Couldn't export tournament."
 msgstr "Не вдалося експортувати дані турніру."
@@ -89,12 +89,12 @@ msgstr "Некоректний розподіл на пари «%1»."
 msgid "Invalid player \"%1\" on pairing \"%2\"."
 msgstr "Некоректний гравець «%1» у поділі на пари «%2»."
 
-#: libtournament/tournament.cpp:636
+#: libtournament/tournament.cpp:657
 #, kde-format
 msgid "An error ocurred while pairing the round: %1"
 msgstr "Під час поділу на пари для раунду сталася помилка: %1"
 
-#: libtournament/tournament.cpp:888
+#: libtournament/tournament.cpp:909
 #, kde-format
 msgid "Couldn't open file"
 msgstr "Не вдалося відкрити файл"
@@ -165,7 +165,7 @@ msgctxt "@title:column"
 msgid "Board"
 msgstr "Дошка"
 
-#: pairingmodel.cpp:95 pairingmodel.cpp:103 playersmodel.cpp:142
+#: pairingmodel.cpp:95 pairingmodel.cpp:103 playersmodel.cpp:150
 #: standingsmodel.cpp:69
 #, kde-format
 msgctxt "@title:column"
@@ -173,9 +173,7 @@ msgid "No"
 msgstr "№"
 
 #: pairingmodel.cpp:97
-#, fuzzy, kde-format
-#| msgctxt "@title:column"
-#| msgid "White player"
+#, kde-format
 msgctxt "@title:column"
 msgid "White Player"
 msgstr "Гравець білими"
@@ -192,55 +190,55 @@ msgctxt "@title:column"
 msgid "Black Player"
 msgstr "Гравець чорними"
 
-#: playersmodel.cpp:144 standingsmodel.cpp:71
+#: playersmodel.cpp:152 standingsmodel.cpp:71
 #, kde-format
 msgctxt "@title:column"
 msgid "Title"
 msgstr "Звертання"
 
-#: playersmodel.cpp:146 standingsmodel.cpp:73
+#: playersmodel.cpp:154 standingsmodel.cpp:73
 #, kde-format
 msgctxt "@title:column"
 msgid "Name"
 msgstr "Ім'я"
 
-#: playersmodel.cpp:148
+#: playersmodel.cpp:156
 #, kde-format
 msgctxt "@title:column"
 msgid "Rating"
 msgstr "Рейтинг"
 
-#: playersmodel.cpp:150
+#: playersmodel.cpp:158
 #, kde-format
 msgctxt "@title:column"
 msgid "National rating"
 msgstr "Національний рейтинг"
 
-#: playersmodel.cpp:152
+#: playersmodel.cpp:160
 #, kde-format
 msgctxt "@title:column"
 msgid "Player ID"
 msgstr "ІД гравця"
 
-#: playersmodel.cpp:154
+#: playersmodel.cpp:162
 #, kde-format
 msgctxt "@title:column"
 msgid "Birth date"
 msgstr "Дата народження"
 
-#: playersmodel.cpp:156
+#: playersmodel.cpp:164
 #, kde-format
 msgctxt "@title:column"
 msgid "Federation"
 msgstr "Федерація"
 
-#: playersmodel.cpp:158
+#: playersmodel.cpp:166
 #, kde-format
 msgctxt "@title:column"
 msgid "Origin"
 msgstr "Походження"
 
-#: playersmodel.cpp:160
+#: playersmodel.cpp:168
 #, kde-format
 msgctxt "@title:column"
 msgid "Sex"
@@ -525,19 +523,19 @@ msgctxt "@action:button"
 msgid "Add Player…"
 msgstr "Додати гравця…"
 
-#: qml/PlayersPage.qml:150
+#: qml/PlayersPage.qml:156
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No players yet"
 msgstr "Ще немає жодного гравця"
 
-#: qml/PlayersPage.qml:154
+#: qml/PlayersPage.qml:160
 #, kde-format
 msgctxt "@action:button"
 msgid "Add player"
 msgstr "Додати гравця"
 
-#: qml/PlayersPage.qml:172
+#: qml/PlayersPage.qml:178
 #, kde-format
 msgctxt "@info:status Number of players"
 msgid "1 player"
@@ -547,7 +545,7 @@ msgstr[1] "%1 гравці"
 msgstr[2] "%1 гравців"
 msgstr[3] "%1 гравець"
 
-#: qml/PlayersPage.qml:173
+#: qml/PlayersPage.qml:179
 #, kde-format
 msgctxt "@info:status Number of rated players"
 msgid "1 rated"
@@ -557,7 +555,7 @@ msgstr[1] "%1 з рейтингом"
 msgstr[2] "%1 з рейтингом"
 msgstr[3] "%1 з рейтингом"
 
-#: qml/PlayersPage.qml:175
+#: qml/PlayersPage.qml:181
 #, kde-format
 msgctxt "@info:status players, rated"
 msgid "%1, %2"
