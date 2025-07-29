@@ -14,6 +14,7 @@
 #include "event.h"
 #include "state.h"
 #include "tiebreaks/buchholz.h"
+#include "tiebreaks/numberwins.h"
 #include "tiebreaks/points.h"
 #include "trf.h"
 
@@ -344,7 +345,7 @@ QList<PlayerTiebreaks> Tournament::getStandings(State state)
     };
 
     for (const auto &player : std::as_const(m_players)) {
-        standings << std::make_pair(player.get(), Tiebreaks{});
+        standings << std::make_pair(player.get(), TiebreakValues{});
     }
 
     // Calculate tiebreaks
@@ -389,6 +390,38 @@ QList<PlayerTiebreaks> Tournament::getStandings(State state)
     }
 
     return standings;
+}
+
+QList<QVariantMap> Tournament::availableTiebreaks()
+{
+    return {
+        {
+            {"id"_L1, "pts"_L1},
+            {"name"_L1, i18nc("Game points", "Points")},
+        },
+        {
+            {"id"_L1, "bh"_L1},
+            {"name"_L1, i18nc("Buchholz tiebreak", "Buchholz")},
+        },
+        {
+            {"id"_L1, "win"_L1},
+            {"name"_L1, i18nc("Number of Wins tiebreak", "Number of Wins")},
+        },
+    };
+}
+
+Tiebreak *Tournament::tiebreak(const QString &id)
+{
+    if (id == "pts"_L1) {
+        return new Points();
+    }
+    if (id == "bh"_L1) {
+        return new Buchholz();
+    }
+    if (id == "win"_L1) {
+        return new NumberOfWins();
+    }
+    return nullptr;
 }
 
 void Tournament::setInitialColor(Tournament::InitialColor color)
@@ -1101,13 +1134,8 @@ std::expected<void, QString> Tournament::loadTiebreaks()
             const auto obj = value.toObject();
             const auto id = obj["id"_L1].toString();
 
-            Tiebreak *tiebreak;
-
-            if (id == "pts"_L1) {
-                tiebreak = new Points();
-            } else if (id == "bh"_L1) {
-                tiebreak = new Buchholz();
-            } else {
+            auto tiebreak = Tournament::tiebreak(id);
+            if (tiebreak == nullptr) {
                 continue;
             }
 

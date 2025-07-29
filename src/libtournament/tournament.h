@@ -186,19 +186,9 @@ public:
      */
     QList<PlayerTiebreaks> getStandings(State state);
 
-    Q_INVOKABLE QList<QVariantMap> availableTiebreaks()
-    {
-        return {
-            {
-                {"id"_L1, "pts"_L1},
-                {"name"_L1, i18nc("Game points", "Points")},
-            },
-            {
-                {"id"_L1, "bh"_L1},
-                {"name"_L1, i18nc("Buchholz tiebreak", "Buchholz")},
-            },
-        };
-    }
+    Q_INVOKABLE QList<QVariantMap> availableTiebreaks();
+
+    static Tiebreak *tiebreak(const QString &id);
 
     /*!
      * Returns the rounds of the tournament.

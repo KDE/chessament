@@ -3,8 +3,6 @@
 
 #include "tiebreakmodel.h"
 
-#include "libtournament/tiebreaks/buchholz.h"
-#include "libtournament/tiebreaks/points.h"
 #include "libtournament/tournament.h"
 
 TiebreakModel::TiebreakModel(QObject *parent)
@@ -83,13 +81,7 @@ void TiebreakModel::addTiebreak(const QString &tiebreak)
     beginInsertRows({}, rowCount(), rowCount());
 
     auto tiebreaks = m_tournament->tiebreaks();
-
-    if (tiebreak == "pts"_L1) {
-        tiebreaks << new Points();
-    } else if (tiebreak == "bh"_L1) {
-        tiebreaks << new Buchholz();
-    }
-
+    tiebreaks << Tournament::tiebreak(tiebreak);
     m_tournament->setTiebreaks(tiebreaks);
 
     endInsertRows();

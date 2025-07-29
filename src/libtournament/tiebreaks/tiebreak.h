@@ -43,5 +43,5 @@ private:
     QVariantMap m_options;
 };
 
-using Tiebreaks = QList<double>;
-using PlayerTiebreaks = std::pair<Player *, Tiebreaks>;
+using TiebreakValues = QList<double>;
+using PlayerTiebreaks = std::pair<Player *, TiebreakValues>;

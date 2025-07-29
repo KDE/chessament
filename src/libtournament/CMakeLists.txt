@@ -13,11 +13,9 @@ target_sources(libtournament PRIVATE
     tournament.cpp
     trf.cpp
     utils.cpp
-
-    tiebreaks/tiebreak.cpp
-    tiebreaks/buchholz.cpp
-    tiebreaks/points.cpp
 )
+
+add_subdirectory(tiebreaks)
 
 ecm_add_qml_module(libtournament
     URI org.kde.chessament.libtournament
