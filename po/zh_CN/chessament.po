@@ -171,12 +171,10 @@ msgid "No"
 msgstr "序数"
 
 #: pairingmodel.cpp:97
-#, fuzzy, kde-format
-#| msgctxt "@title:column"
-#| msgid "White player"
+#, kde-format
 msgctxt "@title:column"
 msgid "White Player"
-msgstr "执白"
+msgstr ""
 
 #: pairingmodel.cpp:99
 #, kde-format
@@ -854,11 +852,3 @@ msgstr "退出登录"
 msgctxt "@title:colunm"
 msgid "Rank"
 msgstr "排名"
-
-#~ msgctxt "@title:column"
-#~ msgid "Surname"
-#~ msgstr "姓氏"
-
-#~ msgctxt "@title:column"
-#~ msgid "Full Name"
-#~ msgstr "全名"
