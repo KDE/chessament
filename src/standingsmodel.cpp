@@ -3,6 +3,8 @@
 
 #include "standingsmodel.h"
 
+#include "standing.h"
+
 #include <QLocale>
 
 StandingsModel::StandingsModel(QObject *parent)
@@ -25,7 +27,7 @@ int StandingsModel::columnCount(const QModelIndex &parent) const
         return 4;
     }
 
-    return 4 + static_cast<int>(m_standings.at(0).second.length());
+    return 4 + static_cast<int>(m_standings.at(0).values().size());
 }
 
 QVariant StandingsModel::data(const QModelIndex &index, int role) const
@@ -41,13 +43,13 @@ QVariant StandingsModel::data(const QModelIndex &index, int role) const
         case RankRole:
             return index.row() + 1;
         case StartingRankRole:
-            return standing.first->startingRank();
+            return standing.player()->startingRank();
         case TitleRole:
-            return Player::titleString(standing.first->title());
+            return Player::titleString(standing.player()->title());
         case NameRole:
-            return standing.first->name();
+            return standing.player()->name();
         default: {
-            const auto value = standing.second.at(index.column() - 4);
+            const auto value = standing.values().at(index.column() - 4);
             return QLocale::system().toString(value);
         }
         }
@@ -95,12 +97,12 @@ QVariant StandingsModel::headerData(int section, Qt::Orientation orientation, in
     }
 }
 
-void StandingsModel::setStandings(QList<PlayerTiebreaks> standings)
+void StandingsModel::setStandings(QList<Standing> standings)
 {
     auto rowDiff = standings.size() - m_standings.size();
 
-    auto newColumns = 4 + (standings.isEmpty() ? 0 : standings[0].second.size());
-    auto prevColumns = 4 + (m_standings.isEmpty() ? 0 : m_standings[0].second.size());
+    auto newColumns = 4 + (standings.isEmpty() ? 0 : standings[0].values().size());
+    auto prevColumns = 4 + (m_standings.isEmpty() ? 0 : m_standings[0].values().size());
     auto columnDiff = newColumns - prevColumns;
 
     if (rowDiff > 0) {

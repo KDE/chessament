@@ -19,6 +19,7 @@
 #include "pairingengine.h"
 #include "player.h"
 #include "round.h"
+#include "standing.h"
 #include "tiebreaks/tiebreak.h"
 
 class Document;
@@ -184,7 +185,7 @@ public:
      *
      * \a state Helper object to compute the standings.
      */
-    QList<PlayerTiebreaks> getStandings(State state);
+    QList<Standing> getStandings(State state);
 
     Q_INVOKABLE QList<QVariantMap> availableTiebreaks();
 

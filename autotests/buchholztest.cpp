@@ -7,6 +7,7 @@
 #include <QTest>
 
 #include "event.h"
+#include "standing.h"
 #include "state.h"
 #include "tiebreaks/buchholz.h"
 #include "tiebreaks/points.h"
@@ -83,14 +84,13 @@ void BuchholzTest::testBuchholz()
 
     for (qsizetype i = 0; i < standings.size(); ++i) {
         const auto &standing = standings.at(i);
-        const auto player = standing.first;
         const auto &expected = expectedStandings[i];
 
         const auto result = QStringList{
-            QString::number(player->startingRank()),
+            QString::number(standing.player()->startingRank()),
             QString::number(i + 1),
-            QString::number(standing.second[0], 'f', 1),
-            QString::number(standing.second[1], 'f', 1),
+            QString::number(standing.values()[0], 'f', 1),
+            QString::number(standing.values()[1], 'f', 1),
         };
 
         QCOMPARE(result.join(','_L1), expected.join(','_L1));

@@ -327,25 +327,25 @@ QHash<Player *, QList<Pairing *>> Tournament::getPairingsByPlayer(int maxRound)
     return pairings;
 }
 
-QList<PlayerTiebreaks> Tournament::getStandings(State state)
+QList<Standing> Tournament::getStandings(State state)
 {
-    QList<PlayerTiebreaks> standings;
+    QList<Standing> standings;
 
     // Sort by tiebreaks
     auto sortStandings = [&standings]() {
-        std::sort(standings.begin(), standings.end(), [](const PlayerTiebreaks &p1, const PlayerTiebreaks &p2) {
-            for (int i = 0; i < p1.second.size(); i++) {
-                if (p1.second.at(i) == p2.second.at(i)) {
+        std::ranges::sort(standings, [](const Standing &p1, const Standing &p2) {
+            for (size_t i = 0; i < p1.values().size(); i++) {
+                if (p1.values().at(i) == p2.values().at(i)) {
                     continue;
                 }
-                return p1.second.at(i) > p2.second.at(i);
+                return p1.values().at(i) > p2.values().at(i);
             }
-            return p1.first->startingRank() < p2.first->startingRank();
+            return p1.player()->startingRank() < p2.player()->startingRank();
         });
     };
 
     for (const auto &player : std::as_const(m_players)) {
-        standings << std::make_pair(player.get(), TiebreakValues{});
+        standings << Standing(player.get(), {});
     }
 
     // Calculate tiebreaks
@@ -355,12 +355,12 @@ QList<PlayerTiebreaks> Tournament::getStandings(State state)
         players.clear();
         while (i < m_players.size()) {
             if (players.isEmpty()) {
-                players << standings.at(i).first;
+                players << standings.at(i).player();
                 i++;
                 continue;
             }
-            if (standings.at(i - 1).second == standings.at(i).second) {
-                players << standings.at(i).first;
+            if (standings.at(i - 1).values() == standings.at(i).values()) {
+                players << standings.at(i).player();
                 i++;
             } else {
                 for (int j = 0; j < players.size(); j++) {
@@ -370,10 +370,10 @@ QList<PlayerTiebreaks> Tournament::getStandings(State state)
                     qDebug() << "Player" << j << "is" << players.at(j)->name();
                     qDebug() << "SPlayer" << j << "is" << standings.at(i - players.size() + j).first->name();
                     qDebug() << "--";*/
-                    standings[i - players.size() + j].second << tiebreak->calculate(this, state, players, players.at(j));
+                    standings[i - players.size() + j].addValue(tiebreak->calculate(this, state, players, players.at(j)));
                 }
                 players.clear();
-                players << standings.at(i).first;
+                players << standings.at(i).player();
                 i++;
             }
         }
@@ -384,7 +384,7 @@ QList<PlayerTiebreaks> Tournament::getStandings(State state)
             qDebug() << "Player" << j << "is" << players.at(j)->name();
             qDebug() << "SPlayer" << j << "is" << standings.at(i - players.size() + j).first->name();
             qDebug() << "--";*/
-            standings[i - players.size() + j].second << tiebreak->calculate(this, state, players, players.at(j));
+            standings[i - players.size() + j].addValue(tiebreak->calculate(this, state, players, players.at(j)));
         }
         sortStandings();
     }
@@ -911,8 +911,8 @@ QString Tournament::toTrf(TrfOptions options, int maxRound)
     const auto r = maxRound < 0 ? m_numberOfRounds : maxRound;
 
     for (const auto &player : std::as_const(m_players)) {
-        const auto standing = std::find_if(standings.constBegin(), standings.constEnd(), [&player](PlayerTiebreaks s) {
-            return s.first == player.get();
+        const auto standing = std::find_if(standings.constBegin(), standings.constEnd(), [&player](const Standing &s) -> bool {
+            return s.player() == player.get();
         });
         const auto rank = std::distance(standings.constBegin(), standing) + 1;
         const auto result = player->toTrf(state.getPoints(player.get()), rank);

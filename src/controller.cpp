@@ -4,6 +4,7 @@
 #include "controller.h"
 #include "libtournament/pairing.h"
 #include "libtournament/state.h"
+#include "standing.h"
 
 #include <QCoroFuture>
 #include <QRandomGenerator>
@@ -202,7 +203,7 @@ QCoro::QmlTask Controller::reloadStandings()
 
 QCoro::Task<> Controller::updateStandings()
 {
-    const auto standings = co_await QtConcurrent::run([this]() -> QList<PlayerTiebreaks> {
+    const auto standings = co_await QtConcurrent::run([this]() -> QList<Standing> {
         return m_tournament->getStandings(m_tournament->getState());
     });
 

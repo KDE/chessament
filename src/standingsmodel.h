@@ -8,6 +8,8 @@
 
 #include "libtournament/tournament.h"
 
+class Standing;
+
 class StandingsModel : public QAbstractTableModel
 {
     Q_OBJECT
@@ -32,10 +34,10 @@ public:
     [[nodiscard]] QHash<int, QByteArray> roleNames() const override;
     [[nodiscard]] Qt::ItemFlags flags(const QModelIndex &index) const override;
 
-    void setStandings(QList<PlayerTiebreaks> standings);
+    void setStandings(QList<Standing> standings);
     void setTournament(Tournament *tournament);
 
 private:
     Tournament *m_tournament;
-    QList<PlayerTiebreaks> m_standings;
+    QList<Standing> m_standings;
 };
