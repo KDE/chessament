@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-28 00:39+0000\n"
+"POT-Creation-Date: 2025-07-30 00:40+0000\n"
 "PO-Revision-Date: 2025-07-23 01:07+0100\n"
 "Last-Translator: Manuel Alcaraz Zambrano <manuelalcarazzam@gmail.com>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -92,12 +92,32 @@ msgstr "Emparejamiento «%1» no válido."
 msgid "Invalid player \"%1\" on pairing \"%2\"."
 msgstr "Jugador «%1» no válido para el emparejamiento «%2»."
 
-#: libtournament/tournament.cpp:657
+#: libtournament/tournament.cpp:400
+#, kde-format
+msgctxt "Game points"
+msgid "Points"
+msgstr ""
+
+#: libtournament/tournament.cpp:404
+#, kde-format
+msgctxt "Buchholz tiebreak"
+msgid "Buchholz"
+msgstr ""
+
+#: libtournament/tournament.cpp:408
+#, fuzzy, kde-format
+#| msgctxt "@label"
+#| msgid "Number of rounds"
+msgctxt "Number of Wins tiebreak"
+msgid "Number of Wins"
+msgstr "Número de rondas"
+
+#: libtournament/tournament.cpp:690
 #, kde-format
 msgid "An error ocurred while pairing the round: %1"
 msgstr "Ocurrió un error mientras se emparejaba la ronda: %1"
 
-#: libtournament/tournament.cpp:909
+#: libtournament/tournament.cpp:942
 #, kde-format
 msgid "Couldn't open file"
 msgstr "No se ha podido abrir el archivo"
@@ -163,87 +183,116 @@ msgid "Your emails"
 msgstr "manuelalcarazzam@gmail.com,spriego@darksylvania.net"
 
 #: pairingmodel.cpp:93
-#, kde-format
-msgctxt "@title:column"
+#, fuzzy, kde-format
+#| msgctxt "@title:column"
+#| msgid "Board"
+msgctxt "@title:column Board Number"
 msgid "Board"
 msgstr "Tablero"
 
-#: pairingmodel.cpp:95 pairingmodel.cpp:103 playersmodel.cpp:150
-#: standingsmodel.cpp:69
+#: pairingmodel.cpp:95
 #, kde-format
-msgctxt "@title:column"
-msgid "No"
-msgstr "N.º"
+msgctxt "@title:column White Player Starting Rank Number"
+msgid "№"
+msgstr ""
 
 #: pairingmodel.cpp:97
 #, fuzzy, kde-format
 #| msgctxt "@title:column"
 #| msgid "White player"
-msgctxt "@title:column"
+msgctxt "@title:column Name of the White Player"
 msgid "White Player"
 msgstr "Jugador de blancas"
 
 #: pairingmodel.cpp:99
-#, kde-format
-msgctxt "@title:column"
+#, fuzzy, kde-format
+#| msgctxt "@title:column"
+#| msgid "Result"
+msgctxt "@title:column Game Result"
 msgid "Result"
 msgstr "Resultado"
 
 #: pairingmodel.cpp:101
-#, kde-format
-msgctxt "@title:column"
+#, fuzzy, kde-format
+#| msgctxt "@title:column"
+#| msgid "Black Player"
+msgctxt "@title:column Name of the Black Player"
 msgid "Black Player"
 msgstr "Jugador de negras"
 
-#: playersmodel.cpp:152 standingsmodel.cpp:71
+#: pairingmodel.cpp:103
 #, kde-format
-msgctxt "@title:column"
+msgctxt "@title:column Black Player Starting Rank Number"
+msgid "№"
+msgstr ""
+
+#: playersmodel.cpp:171 standingsmodel.cpp:88
+#, kde-format
+msgctxt "@title:column Player Starting Rank Number"
+msgid "№"
+msgstr ""
+
+#: playersmodel.cpp:173 standingsmodel.cpp:90
+#, fuzzy, kde-format
+#| msgctxt "@title:column"
+#| msgid "Title"
+msgctxt "@title:column Player Title"
 msgid "Title"
 msgstr "Título"
 
-#: playersmodel.cpp:154 standingsmodel.cpp:73
-#, kde-format
-msgctxt "@title:column"
+#: playersmodel.cpp:175 standingsmodel.cpp:92
+#, fuzzy, kde-format
+#| msgctxt "@title:column"
+#| msgid "Name"
+msgctxt "@title:column Player Name"
 msgid "Name"
 msgstr "Nombre"
 
-#: playersmodel.cpp:156
-#, kde-format
-msgctxt "@title:column"
+#: playersmodel.cpp:177
+#, fuzzy, kde-format
+#| msgctxt "@title:column"
+#| msgid "Rating"
+msgctxt "@title:column Player Rating"
 msgid "Rating"
 msgstr "Valoración"
 
-#: playersmodel.cpp:158
-#, kde-format
-msgctxt "@title:column"
-msgid "National rating"
+#: playersmodel.cpp:179
+#, fuzzy, kde-format
+#| msgctxt "@title:column"
+#| msgid "National rating"
+msgctxt "@title:column Player National Rating"
+msgid "National Rating"
 msgstr "Valoración nacional"
 
-#: playersmodel.cpp:160
+#: playersmodel.cpp:181
 #, kde-format
 msgctxt "@title:column"
 msgid "Player ID"
 msgstr "ID del jugador"
 
-#: playersmodel.cpp:162
+#: playersmodel.cpp:183
 #, kde-format
 msgctxt "@title:column"
 msgid "Birth date"
 msgstr "Fecha de nacimiento"
 
-#: playersmodel.cpp:164
-#, kde-format
-msgctxt "@title:column"
+#: playersmodel.cpp:185
+#, fuzzy, kde-format
+#| msgctxt "@title:column"
+#| msgid "Federation"
+msgctxt "@title:column Player Federation"
 msgid "Federation"
 msgstr "Federación"
 
-#: playersmodel.cpp:166
-#, kde-format
-msgctxt "@title:column"
+#: playersmodel.cpp:187
+#, fuzzy, kde-format
+#| msgctxt "@title:column"
+#| msgid "Origin"
+msgctxt "@title:column Player Origin"
 msgid "Origin"
 msgstr "Origen"
 
-#: playersmodel.cpp:168
+#: playersmodel.cpp:189
 #, kde-format
 msgctxt "@title:column"
 msgid "Sex"
@@ -446,35 +495,35 @@ msgctxt "@label"
 msgid "Number of rounds"
 msgstr "Número de rondas"
 
-#: qml/PairingsPage.qml:37
+#: qml/PairingsPage.qml:38
 #, kde-format
 msgid "Pair Round %1"
 msgstr "Emparejar ronda %1"
 
-#: qml/PairingsPage.qml:46 qml/PlayersPage.qml:58
+#: qml/PairingsPage.qml:47 qml/PlayersPage.qml:60
 #, kde-format
 msgctxt "@action:button"
 msgid "Print…"
 msgstr "Imprimir…"
 
-#: qml/PairingsPage.qml:51 qml/PlayersPage.qml:63
+#: qml/PairingsPage.qml:52 qml/PlayersPage.qml:65
 #, kde-format
 msgctxt "@action:button"
 msgid "Export as PDF…"
 msgstr "Exportar como PDF…"
 
-#: qml/PairingsPage.qml:59
+#: qml/PairingsPage.qml:60
 #, kde-format
 msgid "Round %1"
 msgstr "Ronda %1"
 
-#: qml/PairingsPage.qml:77
+#: qml/PairingsPage.qml:78
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove pairings of this and following rounds…"
 msgstr "Eliminar emparejamientos de esta ronda y sucesivas…"
 
-#: qml/PairingsPage.qml:117
+#: qml/PairingsPage.qml:118
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No pairings for round %1 yet"
@@ -516,31 +565,31 @@ msgctxt "@item:inlistbox As in 'Black pieces'"
 msgid "Black"
 msgstr "Negras"
 
-#: qml/PlayersPage.qml:49
+#: qml/PlayersPage.qml:51
 #, kde-format
 msgctxt "@action:button"
 msgid "Sort Players…"
 msgstr "Ordenar jugadores…"
 
-#: qml/PlayersPage.qml:69
+#: qml/PlayersPage.qml:71
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Player…"
 msgstr "Añadir jugador…"
 
-#: qml/PlayersPage.qml:156
+#: qml/PlayersPage.qml:155
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No players yet"
 msgstr "Todavía no hay jugadores"
 
-#: qml/PlayersPage.qml:160
+#: qml/PlayersPage.qml:159
 #, kde-format
 msgctxt "@action:button"
 msgid "Add player"
 msgstr "Añadir jugador"
 
-#: qml/PlayersPage.qml:178
+#: qml/PlayersPage.qml:177
 #, kde-format
 msgctxt "@info:status Number of players"
 msgid "1 player"
@@ -548,7 +597,7 @@ msgid_plural "%1 players"
 msgstr[0] "1 jugador"
 msgstr[1] "%1 jugadores"
 
-#: qml/PlayersPage.qml:179
+#: qml/PlayersPage.qml:178
 #, kde-format
 msgctxt "@info:status Number of rated players"
 msgid "1 rated"
@@ -556,7 +605,7 @@ msgid_plural "%1 rated"
 msgstr[0] "1 valorado"
 msgstr[1] "%1 valorados"
 
-#: qml/PlayersPage.qml:181
+#: qml/PlayersPage.qml:180
 #, kde-format
 msgctxt "@info:status players, rated"
 msgid "%1, %2"
@@ -674,7 +723,7 @@ msgstr ""
 "No está permitido cambiar el ranking inicial una vez emparejada la cuarta "
 "ronda en los torneos oficiales."
 
-#: qml/StandingsPage.qml:47
+#: qml/StandingsPage.qml:55
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No standings yet"
@@ -858,11 +907,17 @@ msgstr "Sesión iniciada como %1"
 msgid "Logout"
 msgstr "Cerrar sesión"
 
-#: standingsmodel.cpp:67
-#, kde-format
-msgctxt "@title:colunm"
+#: standingsmodel.cpp:86
+#, fuzzy, kde-format
+#| msgctxt "@title:colunm"
+#| msgid "Rank"
+msgctxt "@title:column Player Ranking"
 msgid "Rank"
 msgstr "Posición"
+
+#~ msgctxt "@title:column"
+#~ msgid "No"
+#~ msgstr "N.º"
 
 #~ msgctxt "@title:column"
 #~ msgid "Surname"

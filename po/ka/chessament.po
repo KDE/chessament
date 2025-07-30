@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-28 00:39+0000\n"
+"POT-Creation-Date: 2025-07-30 00:40+0000\n"
 "PO-Revision-Date: 2025-07-27 20:06+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -88,12 +88,32 @@ msgstr "არასწორი დაწყვილება \"%1\"."
 msgid "Invalid player \"%1\" on pairing \"%2\"."
 msgstr "არასწორი მოთამაშე \"%1\" დაწყვილებისთვის \"%2\"."
 
-#: libtournament/tournament.cpp:657
+#: libtournament/tournament.cpp:400
+#, kde-format
+msgctxt "Game points"
+msgid "Points"
+msgstr ""
+
+#: libtournament/tournament.cpp:404
+#, kde-format
+msgctxt "Buchholz tiebreak"
+msgid "Buchholz"
+msgstr ""
+
+#: libtournament/tournament.cpp:408
+#, fuzzy, kde-format
+#| msgctxt "@label"
+#| msgid "Number of rounds"
+msgctxt "Number of Wins tiebreak"
+msgid "Number of Wins"
+msgstr "რაუნდების რაოდენობა"
+
+#: libtournament/tournament.cpp:690
 #, kde-format
 msgid "An error ocurred while pairing the round: %1"
 msgstr "შეცდომა რაუნდის წყვილების შერჩევისას: %1"
 
-#: libtournament/tournament.cpp:909
+#: libtournament/tournament.cpp:942
 #, kde-format
 msgid "Couldn't open file"
 msgstr "ფაილი ვერ გავხსენი"
@@ -159,85 +179,116 @@ msgid "Your emails"
 msgstr "temuri.doghonadze@gmail.com"
 
 #: pairingmodel.cpp:93
-#, kde-format
-msgctxt "@title:column"
+#, fuzzy, kde-format
+#| msgctxt "@title:column"
+#| msgid "Board"
+msgctxt "@title:column Board Number"
 msgid "Board"
 msgstr "დაფა"
 
-#: pairingmodel.cpp:95 pairingmodel.cpp:103 playersmodel.cpp:150
-#: standingsmodel.cpp:69
+#: pairingmodel.cpp:95
 #, kde-format
-msgctxt "@title:column"
-msgid "No"
-msgstr "არა"
+msgctxt "@title:column White Player Starting Rank Number"
+msgid "№"
+msgstr ""
 
 #: pairingmodel.cpp:97
-#, kde-format
-msgctxt "@title:column"
+#, fuzzy, kde-format
+#| msgctxt "@title:column"
+#| msgid "White Player"
+msgctxt "@title:column Name of the White Player"
 msgid "White Player"
 msgstr "თეთრი მოთამაშე"
 
 #: pairingmodel.cpp:99
-#, kde-format
-msgctxt "@title:column"
+#, fuzzy, kde-format
+#| msgctxt "@title:column"
+#| msgid "Result"
+msgctxt "@title:column Game Result"
 msgid "Result"
 msgstr "შედეგი"
 
 #: pairingmodel.cpp:101
-#, kde-format
-msgctxt "@title:column"
+#, fuzzy, kde-format
+#| msgctxt "@title:column"
+#| msgid "Black Player"
+msgctxt "@title:column Name of the Black Player"
 msgid "Black Player"
 msgstr "შავი მოთამაშე"
 
-#: playersmodel.cpp:152 standingsmodel.cpp:71
+#: pairingmodel.cpp:103
 #, kde-format
-msgctxt "@title:column"
+msgctxt "@title:column Black Player Starting Rank Number"
+msgid "№"
+msgstr ""
+
+#: playersmodel.cpp:171 standingsmodel.cpp:88
+#, kde-format
+msgctxt "@title:column Player Starting Rank Number"
+msgid "№"
+msgstr ""
+
+#: playersmodel.cpp:173 standingsmodel.cpp:90
+#, fuzzy, kde-format
+#| msgctxt "@title:column"
+#| msgid "Title"
+msgctxt "@title:column Player Title"
 msgid "Title"
 msgstr "სათაური"
 
-#: playersmodel.cpp:154 standingsmodel.cpp:73
-#, kde-format
-msgctxt "@title:column"
+#: playersmodel.cpp:175 standingsmodel.cpp:92
+#, fuzzy, kde-format
+#| msgctxt "@title:column"
+#| msgid "Name"
+msgctxt "@title:column Player Name"
 msgid "Name"
 msgstr "სახელი"
 
-#: playersmodel.cpp:156
-#, kde-format
-msgctxt "@title:column"
+#: playersmodel.cpp:177
+#, fuzzy, kde-format
+#| msgctxt "@title:column"
+#| msgid "Rating"
+msgctxt "@title:column Player Rating"
 msgid "Rating"
 msgstr "რეიტინგი"
 
-#: playersmodel.cpp:158
-#, kde-format
-msgctxt "@title:column"
-msgid "National rating"
+#: playersmodel.cpp:179
+#, fuzzy, kde-format
+#| msgctxt "@title:column"
+#| msgid "National rating"
+msgctxt "@title:column Player National Rating"
+msgid "National Rating"
 msgstr "ეროვნული რეიტინგი"
 
-#: playersmodel.cpp:160
+#: playersmodel.cpp:181
 #, kde-format
 msgctxt "@title:column"
 msgid "Player ID"
 msgstr "მოთამაშის ID"
 
-#: playersmodel.cpp:162
+#: playersmodel.cpp:183
 #, kde-format
 msgctxt "@title:column"
 msgid "Birth date"
 msgstr "დაბადების თარიღი"
 
-#: playersmodel.cpp:164
-#, kde-format
-msgctxt "@title:column"
+#: playersmodel.cpp:185
+#, fuzzy, kde-format
+#| msgctxt "@title:column"
+#| msgid "Federation"
+msgctxt "@title:column Player Federation"
 msgid "Federation"
 msgstr "ფედერაცია"
 
-#: playersmodel.cpp:166
-#, kde-format
-msgctxt "@title:column"
+#: playersmodel.cpp:187
+#, fuzzy, kde-format
+#| msgctxt "@title:column"
+#| msgid "Origin"
+msgctxt "@title:column Player Origin"
 msgid "Origin"
 msgstr "საწყისი"
 
-#: playersmodel.cpp:168
+#: playersmodel.cpp:189
 #, kde-format
 msgctxt "@title:column"
 msgid "Sex"
@@ -440,35 +491,35 @@ msgctxt "@label"
 msgid "Number of rounds"
 msgstr "რაუნდების რაოდენობა"
 
-#: qml/PairingsPage.qml:37
+#: qml/PairingsPage.qml:38
 #, kde-format
 msgid "Pair Round %1"
 msgstr "წყვილის რაუნდი %1"
 
-#: qml/PairingsPage.qml:46 qml/PlayersPage.qml:58
+#: qml/PairingsPage.qml:47 qml/PlayersPage.qml:60
 #, kde-format
 msgctxt "@action:button"
 msgid "Print…"
 msgstr "ბეჭდვა…"
 
-#: qml/PairingsPage.qml:51 qml/PlayersPage.qml:63
+#: qml/PairingsPage.qml:52 qml/PlayersPage.qml:65
 #, kde-format
 msgctxt "@action:button"
 msgid "Export as PDF…"
 msgstr "PDF-ად გატანა…"
 
-#: qml/PairingsPage.qml:59
+#: qml/PairingsPage.qml:60
 #, kde-format
 msgid "Round %1"
 msgstr "რაუნდი %1"
 
-#: qml/PairingsPage.qml:77
+#: qml/PairingsPage.qml:78
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove pairings of this and following rounds…"
 msgstr "დაწყვილებების წაშლა ამ და შემდეგი რაუნდებისთვის…"
 
-#: qml/PairingsPage.qml:117
+#: qml/PairingsPage.qml:118
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No pairings for round %1 yet"
@@ -510,31 +561,31 @@ msgctxt "@item:inlistbox As in 'Black pieces'"
 msgid "Black"
 msgstr "შავი"
 
-#: qml/PlayersPage.qml:49
+#: qml/PlayersPage.qml:51
 #, kde-format
 msgctxt "@action:button"
 msgid "Sort Players…"
 msgstr "მოთამაშეების დალაგება…"
 
-#: qml/PlayersPage.qml:69
+#: qml/PlayersPage.qml:71
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Player…"
 msgstr "მოთამაშის დამატება…"
 
-#: qml/PlayersPage.qml:156
+#: qml/PlayersPage.qml:155
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No players yet"
 msgstr "ჯერ მოთამაშეები არაა"
 
-#: qml/PlayersPage.qml:160
+#: qml/PlayersPage.qml:159
 #, kde-format
 msgctxt "@action:button"
 msgid "Add player"
 msgstr "მოთამაშის დამატება"
 
-#: qml/PlayersPage.qml:178
+#: qml/PlayersPage.qml:177
 #, kde-format
 msgctxt "@info:status Number of players"
 msgid "1 player"
@@ -542,7 +593,7 @@ msgid_plural "%1 players"
 msgstr[0] "1 მოთამაშე"
 msgstr[1] "%1 მოთამაშე"
 
-#: qml/PlayersPage.qml:179
+#: qml/PlayersPage.qml:178
 #, kde-format
 msgctxt "@info:status Number of rated players"
 msgid "1 rated"
@@ -550,7 +601,7 @@ msgid_plural "%1 rated"
 msgstr[0] "1 რეიტინგული"
 msgstr[1] "%1 რეიტინგული"
 
-#: qml/PlayersPage.qml:181
+#: qml/PlayersPage.qml:180
 #, kde-format
 msgctxt "@info:status players, rated"
 msgid "%1, %2"
@@ -668,7 +719,7 @@ msgstr ""
 "საწყისი რანგის შეცვლა წყვილის მეოთხე რაუნდის შემდეგ ოფიციალურ ტურნირებში "
 "დაშვებული არაა."
 
-#: qml/StandingsPage.qml:47
+#: qml/StandingsPage.qml:55
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No standings yet"
@@ -852,11 +903,17 @@ msgstr "შეხვედით, როგორც %1"
 msgid "Logout"
 msgstr "გასვლა"
 
-#: standingsmodel.cpp:67
-#, kde-format
-msgctxt "@title:colunm"
+#: standingsmodel.cpp:86
+#, fuzzy, kde-format
+#| msgctxt "@title:colunm"
+#| msgid "Rank"
+msgctxt "@title:column Player Ranking"
 msgid "Rank"
 msgstr "რანგი"
+
+#~ msgctxt "@title:column"
+#~ msgid "No"
+#~ msgstr "არა"
 
 #~ msgctxt "@title:column"
 #~ msgid "Surname"
