@@ -76,7 +76,7 @@ int main(int argc, char *argv[])
 
     QCommandLineParser parser;
 
-    QCommandLineOption trfFile("import-trf"_L1, i18n("Import Tournament Report File."), u"file"_s);
+    QCommandLineOption trfFile("import-trf"_L1, i18nc("Command line option description", "Import Tournament Report File."), "file"_L1);
     parser.addOption(trfFile);
 
     aboutData.setupCommandLine(&parser);
