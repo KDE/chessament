@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-30 00:40+0000\n"
-"PO-Revision-Date: 2025-07-27 08:06+0200\n"
+"POT-Creation-Date: 2025-07-31 00:39+0000\n"
+"PO-Revision-Date: 2025-07-30 06:24+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -39,7 +39,7 @@ msgctxt "@action:inmenu"
 msgid "Connect account"
 msgstr "Poveži račun"
 
-#: controller.cpp:153
+#: controller.cpp:154
 #, kde-format
 msgid "Couldn't export tournament."
 msgstr "Turnirja ni bilo mogoče izvoziti."
@@ -90,21 +90,19 @@ msgstr "Neveljaven igralec \"%1\" v paru \"%2\"."
 #, kde-format
 msgctxt "Game points"
 msgid "Points"
-msgstr ""
+msgstr "Točke"
 
 #: libtournament/tournament.cpp:404
 #, kde-format
 msgctxt "Buchholz tiebreak"
 msgid "Buchholz"
-msgstr ""
+msgstr "Buchholz"
 
 #: libtournament/tournament.cpp:408
-#, fuzzy, kde-format
-#| msgctxt "@label"
-#| msgid "Number of rounds"
+#, kde-format
 msgctxt "Number of Wins tiebreak"
 msgid "Number of Wins"
-msgstr "Število krogov"
+msgstr "Število zmag"
 
 #: libtournament/tournament.cpp:690
 #, kde-format
@@ -136,50 +134,56 @@ msgstr "Neznan rezultat \"%1\" pri uparjanju \"%2\"."
 msgid "Pairing \"%1\" has no opponent."
 msgstr "Uparjanje \"%1\" nima nasprotnika."
 
-#: main.cpp:58 qml/WelcomePage.qml:15
+#: main.cpp:60 qml/WelcomePage.qml:15
 #, kde-format
 msgctxt "@title"
 msgid "Chessament"
 msgstr "Chessament"
 
-#: main.cpp:62
+#: main.cpp:64
 #, kde-format
 msgid "Chess Tournament Manager"
 msgstr "Upravljalnik šahovskega turnirja"
 
-#: main.cpp:66
+#: main.cpp:68
 #, kde-format
 msgid "© 2024 Manuel Alcaraz Zambrano"
 msgstr "© 2024 Manuel Alcaraz Zambrano"
 
-#: main.cpp:67
+#: main.cpp:69
 #, kde-format
 msgctxt "@info:credit"
 msgid "Manuel Alcaraz Zambrano"
 msgstr "Manuel Alcaraz Zambrano"
 
-#: main.cpp:68
+#: main.cpp:70
 #, kde-format
 msgctxt "@info:credit"
 msgid "Author & Maintainer"
 msgstr "Avtor in vzdrževalec"
 
-#: main.cpp:71
+#: main.cpp:73
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "Matjaž Jeran"
 
-#: main.cpp:71
+#: main.cpp:73
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "matjaz.jeran@amis.net"
 
-#: pairingmodel.cpp:93
+#: main.cpp:79
 #, fuzzy, kde-format
-#| msgctxt "@title:column"
-#| msgid "Board"
+#| msgctxt "@action:inmenu"
+#| msgid "Import tournament report…"
+msgctxt "Command line option description"
+msgid "Import Tournament Report File."
+msgstr "Uvozi poročilo o turnirju…"
+
+#: pairingmodel.cpp:93
+#, kde-format
 msgctxt "@title:column Board Number"
 msgid "Board"
 msgstr "Deska"
@@ -188,28 +192,22 @@ msgstr "Deska"
 #, kde-format
 msgctxt "@title:column White Player Starting Rank Number"
 msgid "№"
-msgstr ""
+msgstr "Št."
 
 #: pairingmodel.cpp:97
-#, fuzzy, kde-format
-#| msgctxt "@title:column"
-#| msgid "White Player"
+#, kde-format
 msgctxt "@title:column Name of the White Player"
 msgid "White Player"
 msgstr "Beli igralec"
 
 #: pairingmodel.cpp:99
-#, fuzzy, kde-format
-#| msgctxt "@title:column"
-#| msgid "Result"
+#, kde-format
 msgctxt "@title:column Game Result"
 msgid "Result"
 msgstr "Rezultat"
 
 #: pairingmodel.cpp:101
-#, fuzzy, kde-format
-#| msgctxt "@title:column"
-#| msgid "Black Player"
+#, kde-format
 msgctxt "@title:column Name of the Black Player"
 msgid "Black Player"
 msgstr "Črni igralec"
@@ -218,42 +216,34 @@ msgstr "Črni igralec"
 #, kde-format
 msgctxt "@title:column Black Player Starting Rank Number"
 msgid "№"
-msgstr ""
+msgstr "Št."
 
-#: playersmodel.cpp:171 standingsmodel.cpp:88
+#: playersmodel.cpp:171 standingsmodel.cpp:90
 #, kde-format
 msgctxt "@title:column Player Starting Rank Number"
 msgid "№"
-msgstr ""
+msgstr "Št."
 
-#: playersmodel.cpp:173 standingsmodel.cpp:90
-#, fuzzy, kde-format
-#| msgctxt "@title:column"
-#| msgid "Title"
+#: playersmodel.cpp:173 standingsmodel.cpp:92
+#, kde-format
 msgctxt "@title:column Player Title"
 msgid "Title"
 msgstr "Naziv"
 
-#: playersmodel.cpp:175 standingsmodel.cpp:92
-#, fuzzy, kde-format
-#| msgctxt "@title:column"
-#| msgid "Name"
+#: playersmodel.cpp:175 standingsmodel.cpp:94
+#, kde-format
 msgctxt "@title:column Player Name"
 msgid "Name"
 msgstr "Ime"
 
 #: playersmodel.cpp:177
-#, fuzzy, kde-format
-#| msgctxt "@title:column"
-#| msgid "Rating"
+#, kde-format
 msgctxt "@title:column Player Rating"
 msgid "Rating"
 msgstr "Rating"
 
 #: playersmodel.cpp:179
-#, fuzzy, kde-format
-#| msgctxt "@title:column"
-#| msgid "National rating"
+#, kde-format
 msgctxt "@title:column Player National Rating"
 msgid "National Rating"
 msgstr "Nacionalni rating"
@@ -271,17 +261,13 @@ msgid "Birth date"
 msgstr "Datum rojstva"
 
 #: playersmodel.cpp:185
-#, fuzzy, kde-format
-#| msgctxt "@title:column"
-#| msgid "Federation"
+#, kde-format
 msgctxt "@title:column Player Federation"
 msgid "Federation"
 msgstr "Zveza"
 
 #: playersmodel.cpp:187
-#, fuzzy, kde-format
-#| msgctxt "@title:column"
-#| msgid "Origin"
+#, kde-format
 msgctxt "@title:column Player Origin"
 msgid "Origin"
 msgstr "Izvor"
@@ -905,10 +891,8 @@ msgstr "Prijavljen kot %1"
 msgid "Logout"
 msgstr "Odjava"
 
-#: standingsmodel.cpp:86
-#, fuzzy, kde-format
-#| msgctxt "@title:colunm"
-#| msgid "Rank"
+#: standingsmodel.cpp:88
+#, kde-format
 msgctxt "@title:column Player Ranking"
 msgid "Rank"
 msgstr "Rang"

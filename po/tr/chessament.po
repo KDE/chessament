@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-30 00:40+0000\n"
+"POT-Creation-Date: 2025-07-31 00:39+0000\n"
 "PO-Revision-Date: 2025-07-28 00:16+0300\n"
 "Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -41,7 +41,7 @@ msgctxt "@action:inmenu"
 msgid "Connect account"
 msgstr "Hesap Bağla"
 
-#: controller.cpp:153
+#: controller.cpp:154
 #, kde-format
 msgid "Couldn't export tournament."
 msgstr "Turnuva dışa aktarılamadı."
@@ -137,45 +137,53 @@ msgstr "“%2” eşleşmesinde bilinmeyen sonuç “%1”."
 msgid "Pairing \"%1\" has no opponent."
 msgstr "“%1” eşleşmesinin bir rakibi yok."
 
-#: main.cpp:58 qml/WelcomePage.qml:15
+#: main.cpp:60 qml/WelcomePage.qml:15
 #, kde-format
 msgctxt "@title"
 msgid "Chessament"
 msgstr "Chessament"
 
-#: main.cpp:62
+#: main.cpp:64
 #, kde-format
 msgid "Chess Tournament Manager"
 msgstr "Satranç Turnuvası Yöneticisi"
 
-#: main.cpp:66
+#: main.cpp:68
 #, kde-format
 msgid "© 2024 Manuel Alcaraz Zambrano"
 msgstr "© 2024 Manuel Alcaraz Zambrano"
 
-#: main.cpp:67
+#: main.cpp:69
 #, kde-format
 msgctxt "@info:credit"
 msgid "Manuel Alcaraz Zambrano"
 msgstr "Manuel Alcaraz Zambrano"
 
-#: main.cpp:68
+#: main.cpp:70
 #, kde-format
 msgctxt "@info:credit"
 msgid "Author & Maintainer"
 msgstr "Yazar ve bakımcı"
 
-#: main.cpp:71
+#: main.cpp:73
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "Emir SARI"
 
-#: main.cpp:71
+#: main.cpp:73
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "emir_sari@icloud.com"
+
+#: main.cpp:79
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu"
+#| msgid "Import tournament report…"
+msgctxt "Command line option description"
+msgid "Import Tournament Report File."
+msgstr "Turnuva Raporu İçe Aktar…"
 
 #: pairingmodel.cpp:93
 #, fuzzy, kde-format
@@ -221,13 +229,13 @@ msgctxt "@title:column Black Player Starting Rank Number"
 msgid "№"
 msgstr ""
 
-#: playersmodel.cpp:171 standingsmodel.cpp:88
+#: playersmodel.cpp:171 standingsmodel.cpp:90
 #, kde-format
 msgctxt "@title:column Player Starting Rank Number"
 msgid "№"
 msgstr ""
 
-#: playersmodel.cpp:173 standingsmodel.cpp:90
+#: playersmodel.cpp:173 standingsmodel.cpp:92
 #, fuzzy, kde-format
 #| msgctxt "@title:column"
 #| msgid "Title"
@@ -235,7 +243,7 @@ msgctxt "@title:column Player Title"
 msgid "Title"
 msgstr "Başlık"
 
-#: playersmodel.cpp:175 standingsmodel.cpp:92
+#: playersmodel.cpp:175 standingsmodel.cpp:94
 #, fuzzy, kde-format
 #| msgctxt "@title:column"
 #| msgid "Name"
@@ -902,7 +910,7 @@ msgstr "%1 olarak oturum açıldı"
 msgid "Logout"
 msgstr "Oturumu Kapat"
 
-#: standingsmodel.cpp:86
+#: standingsmodel.cpp:88
 #, fuzzy, kde-format
 #| msgctxt "@title:colunm"
 #| msgid "Rank"

@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-30 00:40+0000\n"
-"PO-Revision-Date: 2025-07-27 07:15+0300\n"
+"POT-Creation-Date: 2025-07-31 00:39+0000\n"
+"PO-Revision-Date: 2025-07-30 09:04+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -42,7 +42,7 @@ msgctxt "@action:inmenu"
 msgid "Connect account"
 msgstr "חיבור חשבון"
 
-#: controller.cpp:153
+#: controller.cpp:154
 #, kde-format
 msgid "Couldn't export tournament."
 msgstr "לא ניתן לייצא תחרות."
@@ -92,21 +92,19 @@ msgstr "שחקן שגוי „%1” לשיבוץ „%2”."
 #, kde-format
 msgctxt "Game points"
 msgid "Points"
-msgstr ""
+msgstr "נקודות"
 
 #: libtournament/tournament.cpp:404
 #, kde-format
 msgctxt "Buchholz tiebreak"
 msgid "Buchholz"
-msgstr ""
+msgstr "בוכהולץ"
 
 #: libtournament/tournament.cpp:408
-#, fuzzy, kde-format
-#| msgctxt "@label"
-#| msgid "Number of rounds"
+#, kde-format
 msgctxt "Number of Wins tiebreak"
 msgid "Number of Wins"
-msgstr "מספר הסיבובים"
+msgstr "מספר הנצחונות"
 
 #: libtournament/tournament.cpp:690
 #, kde-format
@@ -138,50 +136,56 @@ msgstr "תוצאה לא ידועה „%1” לשיבוץ „%2”."
 msgid "Pairing \"%1\" has no opponent."
 msgstr "לשיבוץ „%1” אין יריב."
 
-#: main.cpp:58 qml/WelcomePage.qml:15
+#: main.cpp:60 qml/WelcomePage.qml:15
 #, kde-format
 msgctxt "@title"
 msgid "Chessament"
 msgstr "Chessament"
 
-#: main.cpp:62
+#: main.cpp:64
 #, kde-format
 msgid "Chess Tournament Manager"
 msgstr "מנהל תחרויות שחמט"
 
-#: main.cpp:66
+#: main.cpp:68
 #, kde-format
 msgid "© 2024 Manuel Alcaraz Zambrano"
 msgstr "© 2024 מנואל אלקרז סמברנו"
 
-#: main.cpp:67
+#: main.cpp:69
 #, kde-format
 msgctxt "@info:credit"
 msgid "Manuel Alcaraz Zambrano"
 msgstr "מנואל אלקרז סמברנו"
 
-#: main.cpp:68
+#: main.cpp:70
 #, kde-format
 msgctxt "@info:credit"
 msgid "Author & Maintainer"
 msgstr "יוצר ומתחזק"
 
-#: main.cpp:71
+#: main.cpp:73
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "צוות התרגום של KDE ישראל"
 
-#: main.cpp:71
+#: main.cpp:73
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "kde-l10n-he@kde.org"
 
-#: pairingmodel.cpp:93
+#: main.cpp:79
 #, fuzzy, kde-format
-#| msgctxt "@title:column"
-#| msgid "Board"
+#| msgctxt "@action:inmenu"
+#| msgid "Import tournament report…"
+msgctxt "Command line option description"
+msgid "Import Tournament Report File."
+msgstr "ייבוא דוח תחרות…"
+
+#: pairingmodel.cpp:93
+#, kde-format
 msgctxt "@title:column Board Number"
 msgid "Board"
 msgstr "לוח"
@@ -190,28 +194,22 @@ msgstr "לוח"
 #, kde-format
 msgctxt "@title:column White Player Starting Rank Number"
 msgid "№"
-msgstr ""
+msgstr "מס׳"
 
 #: pairingmodel.cpp:97
-#, fuzzy, kde-format
-#| msgctxt "@title:column"
-#| msgid "White Player"
+#, kde-format
 msgctxt "@title:column Name of the White Player"
 msgid "White Player"
 msgstr "שחקן לבן"
 
 #: pairingmodel.cpp:99
-#, fuzzy, kde-format
-#| msgctxt "@title:column"
-#| msgid "Result"
+#, kde-format
 msgctxt "@title:column Game Result"
 msgid "Result"
 msgstr "תוצאה"
 
 #: pairingmodel.cpp:101
-#, fuzzy, kde-format
-#| msgctxt "@title:column"
-#| msgid "Black Player"
+#, kde-format
 msgctxt "@title:column Name of the Black Player"
 msgid "Black Player"
 msgstr "שחקן שחור"
@@ -220,42 +218,34 @@ msgstr "שחקן שחור"
 #, kde-format
 msgctxt "@title:column Black Player Starting Rank Number"
 msgid "№"
-msgstr ""
+msgstr "מס׳"
 
-#: playersmodel.cpp:171 standingsmodel.cpp:88
+#: playersmodel.cpp:171 standingsmodel.cpp:90
 #, kde-format
 msgctxt "@title:column Player Starting Rank Number"
 msgid "№"
-msgstr ""
+msgstr "מס׳"
 
-#: playersmodel.cpp:173 standingsmodel.cpp:90
-#, fuzzy, kde-format
-#| msgctxt "@title:column"
-#| msgid "Title"
+#: playersmodel.cpp:173 standingsmodel.cpp:92
+#, kde-format
 msgctxt "@title:column Player Title"
 msgid "Title"
 msgstr "כותרת"
 
-#: playersmodel.cpp:175 standingsmodel.cpp:92
-#, fuzzy, kde-format
-#| msgctxt "@title:column"
-#| msgid "Name"
+#: playersmodel.cpp:175 standingsmodel.cpp:94
+#, kde-format
 msgctxt "@title:column Player Name"
 msgid "Name"
 msgstr "שם"
 
 #: playersmodel.cpp:177
-#, fuzzy, kde-format
-#| msgctxt "@title:column"
-#| msgid "Rating"
+#, kde-format
 msgctxt "@title:column Player Rating"
 msgid "Rating"
 msgstr "דירוג"
 
 #: playersmodel.cpp:179
-#, fuzzy, kde-format
-#| msgctxt "@title:column"
-#| msgid "National rating"
+#, kde-format
 msgctxt "@title:column Player National Rating"
 msgid "National Rating"
 msgstr "דירוג לאומי"
@@ -273,17 +263,13 @@ msgid "Birth date"
 msgstr "תאריך לידה"
 
 #: playersmodel.cpp:185
-#, fuzzy, kde-format
-#| msgctxt "@title:column"
-#| msgid "Federation"
+#, kde-format
 msgctxt "@title:column Player Federation"
 msgid "Federation"
 msgstr "התאחדות"
 
 #: playersmodel.cpp:187
-#, fuzzy, kde-format
-#| msgctxt "@title:column"
-#| msgid "Origin"
+#, kde-format
 msgctxt "@title:column Player Origin"
 msgid "Origin"
 msgstr "מקור"
@@ -906,10 +892,8 @@ msgstr "נכנסת למערכת בתור %1"
 msgid "Logout"
 msgstr "יציאה"
 
-#: standingsmodel.cpp:86
-#, fuzzy, kde-format
-#| msgctxt "@title:colunm"
-#| msgid "Rank"
+#: standingsmodel.cpp:88
+#, kde-format
 msgctxt "@title:column Player Ranking"
 msgid "Rank"
 msgstr "דירוג"
