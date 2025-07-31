@@ -64,6 +64,8 @@ bool TiebreakModel::setData(const QModelIndex &index, const QVariant &value, int
 
     m_tournament->saveTiebreaks();
 
+    Q_EMIT dataChanged(this->index(index.row()), this->index(index.row()));
+
     return true;
 }
 

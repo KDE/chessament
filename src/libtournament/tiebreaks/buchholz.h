@@ -19,7 +19,11 @@ public:
 
     [[nodiscard]] QString name() override
     {
-        return i18nc("Buchholz tiebreak", "Buchholz");
+        auto cutLowest = option("cut_lowest"_L1, 0).toUInt();
+        if (cutLowest == 0) {
+            return i18nc("Buchholz tiebreak", "Buchholz");
+        }
+        return i18nc("Buchholz Cut−N tiebreak; read as 'Buchholz Cut Minus N'", "Buchholz Cut−%1", cutLowest);
     };
 
     [[nodiscard]] QString code() override
@@ -29,7 +33,7 @@ public:
 
     [[nodiscard]] bool isConfigurable() override
     {
-        return false; // TODO: implement modifiers
+        return true;
     }
 
     [[nodiscard]] QList<QVariantMap> options() override;
