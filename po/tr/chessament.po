@@ -7,15 +7,15 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-31 00:39+0000\n"
-"PO-Revision-Date: 2025-07-28 00:16+0300\n"
-"Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
+"PO-Revision-Date: 2025-07-31 20:34+0300\n"
+"Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.04.2\n"
+"X-Generator: Lokalize 25.11.70\n"
 
 #: chessamentapplication.cpp:23
 #, kde-format
@@ -91,21 +91,19 @@ msgstr "“%2” eşleşmesinde geçersiz oyuncu “%1”."
 #, kde-format
 msgctxt "Game points"
 msgid "Points"
-msgstr ""
+msgstr "Puanlar"
 
 #: libtournament/tournament.cpp:404
 #, kde-format
 msgctxt "Buchholz tiebreak"
 msgid "Buchholz"
-msgstr ""
+msgstr "Buchholz"
 
 #: libtournament/tournament.cpp:408
-#, fuzzy, kde-format
-#| msgctxt "@label"
-#| msgid "Number of rounds"
+#, kde-format
 msgctxt "Number of Wins tiebreak"
 msgid "Number of Wins"
-msgstr "Raunt sayısı"
+msgstr "Kazanma Sayısı"
 
 #: libtournament/tournament.cpp:690
 #, kde-format
@@ -178,17 +176,13 @@ msgid "Your emails"
 msgstr "emir_sari@icloud.com"
 
 #: main.cpp:79
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Import tournament report…"
+#, kde-format
 msgctxt "Command line option description"
 msgid "Import Tournament Report File."
-msgstr "Turnuva Raporu İçe Aktar…"
+msgstr "Turnuva raporu dosyası içe aktarın."
 
 #: pairingmodel.cpp:93
-#, fuzzy, kde-format
-#| msgctxt "@title:column"
-#| msgid "Board"
+#, kde-format
 msgctxt "@title:column Board Number"
 msgid "Board"
 msgstr "Tahta"
@@ -197,28 +191,22 @@ msgstr "Tahta"
 #, kde-format
 msgctxt "@title:column White Player Starting Rank Number"
 msgid "№"
-msgstr ""
+msgstr "№"
 
 #: pairingmodel.cpp:97
-#, fuzzy, kde-format
-#| msgctxt "@title:column"
-#| msgid "White Player"
+#, kde-format
 msgctxt "@title:column Name of the White Player"
 msgid "White Player"
 msgstr "Beyaz Oyuncu"
 
 #: pairingmodel.cpp:99
-#, fuzzy, kde-format
-#| msgctxt "@title:column"
-#| msgid "Result"
+#, kde-format
 msgctxt "@title:column Game Result"
 msgid "Result"
 msgstr "Sonuç"
 
 #: pairingmodel.cpp:101
-#, fuzzy, kde-format
-#| msgctxt "@title:column"
-#| msgid "Black Player"
+#, kde-format
 msgctxt "@title:column Name of the Black Player"
 msgid "Black Player"
 msgstr "Siyah Oyuncu"
@@ -227,42 +215,34 @@ msgstr "Siyah Oyuncu"
 #, kde-format
 msgctxt "@title:column Black Player Starting Rank Number"
 msgid "№"
-msgstr ""
+msgstr "№"
 
 #: playersmodel.cpp:171 standingsmodel.cpp:90
 #, kde-format
 msgctxt "@title:column Player Starting Rank Number"
 msgid "№"
-msgstr ""
+msgstr "№"
 
 #: playersmodel.cpp:173 standingsmodel.cpp:92
-#, fuzzy, kde-format
-#| msgctxt "@title:column"
-#| msgid "Title"
+#, kde-format
 msgctxt "@title:column Player Title"
 msgid "Title"
 msgstr "Başlık"
 
 #: playersmodel.cpp:175 standingsmodel.cpp:94
-#, fuzzy, kde-format
-#| msgctxt "@title:column"
-#| msgid "Name"
+#, kde-format
 msgctxt "@title:column Player Name"
 msgid "Name"
-msgstr "Adı"
+msgstr "Ad"
 
 #: playersmodel.cpp:177
-#, fuzzy, kde-format
-#| msgctxt "@title:column"
-#| msgid "Rating"
+#, kde-format
 msgctxt "@title:column Player Rating"
 msgid "Rating"
 msgstr "Derecelendirme"
 
 #: playersmodel.cpp:179
-#, fuzzy, kde-format
-#| msgctxt "@title:column"
-#| msgid "National rating"
+#, kde-format
 msgctxt "@title:column Player National Rating"
 msgid "National Rating"
 msgstr "Ulusal Derecelendirme"
@@ -280,17 +260,13 @@ msgid "Birth date"
 msgstr "Doğum Tarihi"
 
 #: playersmodel.cpp:185
-#, fuzzy, kde-format
-#| msgctxt "@title:column"
-#| msgid "Federation"
+#, kde-format
 msgctxt "@title:column Player Federation"
 msgid "Federation"
 msgstr "Federasyon"
 
 #: playersmodel.cpp:187
-#, fuzzy, kde-format
-#| msgctxt "@title:column"
-#| msgid "Origin"
+#, kde-format
 msgctxt "@title:column Player Origin"
 msgid "Origin"
 msgstr "Köken"
@@ -911,9 +887,7 @@ msgid "Logout"
 msgstr "Oturumu Kapat"
 
 #: standingsmodel.cpp:88
-#, fuzzy, kde-format
-#| msgctxt "@title:colunm"
-#| msgid "Rank"
+#, kde-format
 msgctxt "@title:column Player Ranking"
 msgid "Rank"
 msgstr "Derece"

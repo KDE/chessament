@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-31 00:39+0000\n"
-"PO-Revision-Date: 2025-07-30 09:04+0300\n"
+"PO-Revision-Date: 2025-07-31 11:57+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -177,12 +177,10 @@ msgid "Your emails"
 msgstr "kde-l10n-he@kde.org"
 
 #: main.cpp:79
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Import tournament report…"
+#, kde-format
 msgctxt "Command line option description"
 msgid "Import Tournament Report File."
-msgstr "ייבוא דוח תחרות…"
+msgstr "ייבוא קובץ דוח תחרות."
 
 #: pairingmodel.cpp:93
 #, kde-format

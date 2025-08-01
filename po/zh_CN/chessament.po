@@ -176,12 +176,10 @@ msgid "Your emails"
 msgstr "kde-china@kde.org, zhaojiale20060708@outlook.com"
 
 #: main.cpp:79
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Import tournament report…"
+#, kde-format
 msgctxt "Command line option description"
 msgid "Import Tournament Report File."
-msgstr "导入比赛报告..."
+msgstr ""
 
 #: pairingmodel.cpp:93
 #, kde-format

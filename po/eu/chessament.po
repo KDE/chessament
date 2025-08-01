@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-31 00:39+0000\n"
-"PO-Revision-Date: 2025-07-28 13:57+0200\n"
+"PO-Revision-Date: 2025-07-31 12:42+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -96,21 +96,19 @@ msgstr "\"%1\" jokalari baliogabea \"%2\" parekatzean."
 #, kde-format
 msgctxt "Game points"
 msgid "Points"
-msgstr ""
+msgstr "Puntuak"
 
 #: libtournament/tournament.cpp:404
 #, kde-format
 msgctxt "Buchholz tiebreak"
 msgid "Buchholz"
-msgstr ""
+msgstr "Buchholz"
 
 #: libtournament/tournament.cpp:408
-#, fuzzy, kde-format
-#| msgctxt "@label"
-#| msgid "Number of rounds"
+#, kde-format
 msgctxt "Number of Wins tiebreak"
 msgid "Number of Wins"
-msgstr "Itzuli kopurua"
+msgstr "Garaipen kopurua"
 
 #: libtournament/tournament.cpp:690
 #, kde-format
@@ -183,17 +181,13 @@ msgid "Your emails"
 msgstr "xalba@ni.eus"
 
 #: main.cpp:79
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Import tournament report…"
+#, kde-format
 msgctxt "Command line option description"
 msgid "Import Tournament Report File."
-msgstr "Inportatu txapelketaren txostena…"
+msgstr "Inportatu txapelketaren txosten-fitxategia."
 
 #: pairingmodel.cpp:93
-#, fuzzy, kde-format
-#| msgctxt "@title:column"
-#| msgid "Board"
+#, kde-format
 msgctxt "@title:column Board Number"
 msgid "Board"
 msgstr "Taula"
@@ -202,28 +196,22 @@ msgstr "Taula"
 #, kde-format
 msgctxt "@title:column White Player Starting Rank Number"
 msgid "№"
-msgstr ""
+msgstr "Zk"
 
 #: pairingmodel.cpp:97
-#, fuzzy, kde-format
-#| msgctxt "@title:column"
-#| msgid "White Player"
+#, kde-format
 msgctxt "@title:column Name of the White Player"
 msgid "White Player"
 msgstr "Jokalari Zuria"
 
 #: pairingmodel.cpp:99
-#, fuzzy, kde-format
-#| msgctxt "@title:column"
-#| msgid "Result"
+#, kde-format
 msgctxt "@title:column Game Result"
 msgid "Result"
 msgstr "Emaitza"
 
 #: pairingmodel.cpp:101
-#, fuzzy, kde-format
-#| msgctxt "@title:column"
-#| msgid "Black Player"
+#, kde-format
 msgctxt "@title:column Name of the Black Player"
 msgid "Black Player"
 msgstr "Jokalari Beltza"
@@ -232,42 +220,34 @@ msgstr "Jokalari Beltza"
 #, kde-format
 msgctxt "@title:column Black Player Starting Rank Number"
 msgid "№"
-msgstr ""
+msgstr "Zk"
 
 #: playersmodel.cpp:171 standingsmodel.cpp:90
 #, kde-format
 msgctxt "@title:column Player Starting Rank Number"
 msgid "№"
-msgstr ""
+msgstr "Zk"
 
 #: playersmodel.cpp:173 standingsmodel.cpp:92
-#, fuzzy, kde-format
-#| msgctxt "@title:column"
-#| msgid "Title"
+#, kde-format
 msgctxt "@title:column Player Title"
 msgid "Title"
 msgstr "Titulua"
 
 #: playersmodel.cpp:175 standingsmodel.cpp:94
-#, fuzzy, kde-format
-#| msgctxt "@title:column"
-#| msgid "Name"
+#, kde-format
 msgctxt "@title:column Player Name"
 msgid "Name"
 msgstr "Izena"
 
 #: playersmodel.cpp:177
-#, fuzzy, kde-format
-#| msgctxt "@title:column"
-#| msgid "Rating"
+#, kde-format
 msgctxt "@title:column Player Rating"
 msgid "Rating"
 msgstr "Puntuazioa"
 
 #: playersmodel.cpp:179
-#, fuzzy, kde-format
-#| msgctxt "@title:column"
-#| msgid "National rating"
+#, kde-format
 msgctxt "@title:column Player National Rating"
 msgid "National Rating"
 msgstr "Puntuazio nazionala"
@@ -285,17 +265,13 @@ msgid "Birth date"
 msgstr "Jaioteguna"
 
 #: playersmodel.cpp:185
-#, fuzzy, kde-format
-#| msgctxt "@title:column"
-#| msgid "Federation"
+#, kde-format
 msgctxt "@title:column Player Federation"
 msgid "Federation"
 msgstr "Federazioa"
 
 #: playersmodel.cpp:187
-#, fuzzy, kde-format
-#| msgctxt "@title:column"
-#| msgid "Origin"
+#, kde-format
 msgctxt "@title:column Player Origin"
 msgid "Origin"
 msgstr "Jatorria"
@@ -916,9 +892,7 @@ msgid "Logout"
 msgstr "Saioa itxi"
 
 #: standingsmodel.cpp:88
-#, fuzzy, kde-format
-#| msgctxt "@title:colunm"
-#| msgid "Rank"
+#, kde-format
 msgctxt "@title:column Player Ranking"
 msgid "Rank"
 msgstr "Postua"
