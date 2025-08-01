@@ -69,6 +69,7 @@ TablePage {
             id: addAction
             icon.name: "list-add-symbolic"
             text: i18nc("@action:button", "Add Player…")
+            displayHint: Kirigami.DisplayHint.KeepVisible
             onTriggered: addPlayerDialog.open()
         }
     ]

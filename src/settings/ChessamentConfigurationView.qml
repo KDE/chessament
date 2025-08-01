@@ -11,7 +11,7 @@ import org.kde.chessament
 KirigamiSettings.ConfigurationView {
     id: root
 
-    required property ChessamentApplication application
+    required property AbstractKirigamiApplication application
 
     modules: [
         KirigamiSettings.ConfigurationModule {

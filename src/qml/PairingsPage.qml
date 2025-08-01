@@ -53,6 +53,7 @@ TablePage {
             onTriggered: saveDialog.open()
         },
         Kirigami.Action {
+            displayHint: Kirigami.DisplayHint.KeepVisible
             displayComponent: QQC2.ComboBox {
                 id: roundSelector
                 model: Controller.tournament.numberOfRounds

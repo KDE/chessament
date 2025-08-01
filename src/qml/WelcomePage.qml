@@ -10,7 +10,7 @@ import org.kde.chessament
 Kirigami.Page {
     id: root
 
-    required property ChessamentApplication application
+    required property AbstractKirigamiApplication application
 
     title: i18nc("@title", "Chessament")
 
@@ -22,8 +22,6 @@ Kirigami.Page {
         helpfulAction: Kirigami.Action {
             fromQAction: root.application.action("file_new")
         }
-        anchors {
-            centerIn: parent
-        }
+        anchors.centerIn: parent
     }
 }
