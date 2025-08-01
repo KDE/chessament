@@ -34,6 +34,10 @@ include(ECMDeprecationSettings)
 include(KDEGitCommitHooks)
 include(KDEClangFormat)
 
+if (ANDROID)
+    include(ECMAddAndroidApk)
+endif ()
+
 ecm_setup_version(${PROJECT_VERSION}
     VARIABLE_PREFIX CHESSAMENT
     VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/src/version-chessament.h"
@@ -61,6 +65,10 @@ set_package_properties(Qt6Keychain PROPERTIES
     TYPE REQUIRED
     PURPOSE "Store authentication credentials"
 )
+
+if (ANDROID)
+    find_package(OpenSSL REQUIRED)
+endif()
 
 qt_policy(SET QTP0001 NEW)
 

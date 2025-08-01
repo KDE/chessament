@@ -156,7 +156,7 @@ TablePage {
         text: i18nc("@info:placeholder", "No players yet")
         visible: root.tableView.rows === 0
         helpfulAction: Kirigami.Action {
-            icon.name: "list-add"
+            icon.name: "list-add-symbolic"
             text: i18nc("@action:button", "Add player")
             onTriggered: addPlayerDialog.open()
         }

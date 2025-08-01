@@ -27,16 +27,23 @@
 
 using namespace Qt::Literals::StringLiterals;
 
+#ifdef Q_OS_ANDROID
+Q_DECL_EXPORT
+#endif
 int main(int argc, char *argv[])
 {
     KIconTheme::initTheme();
     QIcon::setFallbackThemeName("breeze"_L1);
     QApplication app(argc, argv);
 
+#ifdef Q_OS_ANDROID
+    QQuickStyle::setStyle(u"org.kde.breeze"_s);
+#else
     // Default to org.kde.desktop style unless the user forces another style
     if (qEnvironmentVariableIsEmpty("QT_QUICK_CONTROLS_STYLE")) {
         QQuickStyle::setStyle(u"org.kde.desktop"_s);
     }
+#endif
 
 #ifdef Q_OS_WINDOWS
     if (AttachConsole(ATTACH_PARENT_PROCESS)) {

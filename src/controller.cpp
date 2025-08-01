@@ -136,7 +136,8 @@ void Controller::importTrf(const QUrl &fileUrl)
         return;
     }
 
-    auto tournament = event->importTournament(fileUrl.toLocalFile());
+    const auto fileName = fileUrl.isLocalFile() ? fileUrl.toLocalFile() : fileUrl.toString();
+    auto tournament = event->importTournament(fileName);
 
     if (!tournament) {
         setError(tournament.error());
@@ -150,7 +151,8 @@ void Controller::importTrf(const QUrl &fileUrl)
 
 void Controller::exportTrf(const QUrl &fileUrl)
 {
-    if (!m_tournament->exportTrf(fileUrl.toLocalFile())) {
+    const auto fileName = fileUrl.isLocalFile() ? fileUrl.toLocalFile() : fileUrl.toString();
+    if (!m_tournament->exportTrf(fileName)) {
         setError(i18n("Couldn't export tournament."));
     }
 }

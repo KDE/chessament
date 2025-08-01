@@ -14,6 +14,14 @@ Kirigami.Page {
 
     title: i18nc("@title", "Chessament")
 
+    readonly property list<Kirigami.Action> mobileActions: [
+        Kirigami.Action {
+            fromQAction: root.application.action("import_trf")
+        }
+    ]
+
+    actions: Kirigami.Settings.isMobile ? root.mobileActions : []
+
     Kirigami.PlaceholderMessage {
         spacing: Kirigami.Units.gridUnit
         width: parent.width - (Kirigami.Units.largeSpacing * 4)

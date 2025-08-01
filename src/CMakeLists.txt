@@ -106,6 +106,44 @@ ecm_add_app_icon(CHESSAMENT_ICON ICONS ${CMAKE_SOURCE_DIR}/128-logo.png)
 
 target_sources(chessament PRIVATE ${CHESSAMENT_ICON})
 
+if (ANDROID)
+    ecm_add_android_apk(chessament ANDROID_DIR ${CMAKE_SOURCE_DIR}/android)
+
+    target_link_libraries(chessament PRIVATE
+        KF6::Kirigami
+        Qt6::Svg
+        OpenSSL::SSL
+    )
+
+    kirigami_package_breeze_icons(ICONS
+        "application-menu"
+        "arrow-down"
+        "arrow-up"
+        "document-export-symbolic"
+        "document-import-symbolic"
+        "document-new-symbolic"
+        "document-print-symbolic"
+        "document-save"
+        "documentinfo-symbolic"
+        "edit-delete"
+        "games-highscores-symbolic"
+        "go-down-symbolic"
+        "go-up-symbolic"
+        "internet-services-symbolic"
+        "list-add"
+        "list-add-symbolic"
+        "list-remove-symbolic"
+        "preeferences-system-symbolic"
+        "settings-configure"
+        "settings-configure-symbolic"
+        "system-users-symbolic"
+        "user-symbolic"
+        "view-calendar-symbolic"
+        "view-sort-symbolic"
+        ${KIRIGAMI_ADDONS_ICONS}
+    )
+endif()
+
 install(TARGETS chessament ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 
 if(BUILD_DOCS)
