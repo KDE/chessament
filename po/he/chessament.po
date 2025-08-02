@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-31 00:39+0000\n"
+"POT-Creation-Date: 2025-08-02 00:40+0000\n"
 "PO-Revision-Date: 2025-07-31 11:57+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -87,6 +87,12 @@ msgstr "השיבוץ „%1” שגוי."
 #, kde-format
 msgid "Invalid player \"%1\" on pairing \"%2\"."
 msgstr "שחקן שגוי „%1” לשיבוץ „%2”."
+
+#: libtournament/tiebreaks/buchholz.cpp:14
+#, kde-format
+msgctxt "@label:spinbox"
+msgid "Exclude the lowest scores:"
+msgstr ""
 
 #: libtournament/tournament.cpp:400
 #, kde-format

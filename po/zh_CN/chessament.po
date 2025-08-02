@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-31 00:39+0000\n"
+"POT-Creation-Date: 2025-08-02 00:40+0000\n"
 "PO-Revision-Date: 2025-05-12 14:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -87,23 +87,29 @@ msgstr "无效对阵“%1”。"
 msgid "Invalid player \"%1\" on pairing \"%2\"."
 msgstr "对阵“%2”中的无效选手“%1”。"
 
+#: libtournament/tiebreaks/buchholz.cpp:14
+#, kde-format
+msgctxt "@label:spinbox"
+msgid "Exclude the lowest scores:"
+msgstr ""
+
 #: libtournament/tournament.cpp:400
 #, kde-format
 msgctxt "Game points"
 msgid "Points"
-msgstr ""
+msgstr "点数"
 
 #: libtournament/tournament.cpp:404
 #, kde-format
 msgctxt "Buchholz tiebreak"
 msgid "Buchholz"
-msgstr ""
+msgstr "Buchholz"
 
 #: libtournament/tournament.cpp:408
 #, kde-format
 msgctxt "Number of Wins tiebreak"
 msgid "Number of Wins"
-msgstr ""
+msgstr "获胜次数"
 
 #: libtournament/tournament.cpp:690
 #, kde-format
@@ -179,31 +185,31 @@ msgstr "kde-china@kde.org, zhaojiale20060708@outlook.com"
 #, kde-format
 msgctxt "Command line option description"
 msgid "Import Tournament Report File."
-msgstr ""
+msgstr "导入比赛报告文件。"
 
 #: pairingmodel.cpp:93
 #, kde-format
 msgctxt "@title:column Board Number"
 msgid "Board"
-msgstr ""
+msgstr "棋盘"
 
 #: pairingmodel.cpp:95
 #, kde-format
 msgctxt "@title:column White Player Starting Rank Number"
 msgid "№"
-msgstr ""
+msgstr "№"
 
 #: pairingmodel.cpp:97
 #, kde-format
 msgctxt "@title:column Name of the White Player"
 msgid "White Player"
-msgstr ""
+msgstr "执白"
 
 #: pairingmodel.cpp:99
 #, kde-format
 msgctxt "@title:column Game Result"
 msgid "Result"
-msgstr ""
+msgstr "结果"
 
 #: pairingmodel.cpp:101
 #, kde-format

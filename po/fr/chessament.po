@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-31 00:39+0000\n"
+"POT-Creation-Date: 2025-08-02 00:40+0000\n"
 "PO-Revision-Date: 2025-06-08 13:43+0200\n"
 "Last-Translator: Thomas Vergnaud <thomas.vergnaud@mailo.fr>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
@@ -85,6 +85,12 @@ msgstr "Couplage « %1 » non valable."
 #, kde-format
 msgid "Invalid player \"%1\" on pairing \"%2\"."
 msgstr "Joueur « %1 » non valable pour le couplage « %2 »."
+
+#: libtournament/tiebreaks/buchholz.cpp:14
+#, kde-format
+msgctxt "@label:spinbox"
+msgid "Exclude the lowest scores:"
+msgstr ""
 
 #: libtournament/tournament.cpp:400
 #, kde-format

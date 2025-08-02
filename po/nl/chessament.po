@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-31 00:39+0000\n"
-"PO-Revision-Date: 2025-07-30 14:46+0200\n"
+"POT-Creation-Date: 2025-08-02 00:40+0000\n"
+"PO-Revision-Date: 2025-07-31 13:53+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -87,6 +87,12 @@ msgstr "Ongeldige paring \"%1\"."
 #, kde-format
 msgid "Invalid player \"%1\" on pairing \"%2\"."
 msgstr "Ongeldige speler \"%1\" voor paring \"%2\"."
+
+#: libtournament/tiebreaks/buchholz.cpp:14
+#, kde-format
+msgctxt "@label:spinbox"
+msgid "Exclude the lowest scores:"
+msgstr ""
 
 #: libtournament/tournament.cpp:400
 #, kde-format
@@ -177,12 +183,10 @@ msgid "Your emails"
 msgstr "freekdekruijf@kde.nl"
 
 #: main.cpp:79
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Import tournament report…"
+#, kde-format
 msgctxt "Command line option description"
 msgid "Import Tournament Report File."
-msgstr "Toernooirapport importeren…"
+msgstr "Toernooirapportbestand importeren."
 
 #: pairingmodel.cpp:93
 #, kde-format

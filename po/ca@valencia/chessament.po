@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-31 00:39+0000\n"
-"PO-Revision-Date: 2025-07-30 11:40+0200\n"
+"POT-Creation-Date: 2025-08-02 00:40+0000\n"
+"PO-Revision-Date: 2025-07-31 16:43+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -29,13 +29,13 @@ msgstr "Torneig nou…"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Import tournament report…"
-msgstr "Informe d'importació de torneig…"
+msgstr "Importa l'informe del torneig…"
 
 #: chessamentapplication.cpp:53
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Export tournament report…"
-msgstr "Informe d'exportació de torneig…"
+msgstr "Exporta l'informe del torneig…"
 
 #: chessamentapplication.cpp:61
 #, kde-format
@@ -89,6 +89,12 @@ msgstr "Emparellament no vàlid «%1»."
 #, kde-format
 msgid "Invalid player \"%1\" on pairing \"%2\"."
 msgstr "Jugador «%1» no vàlid a l'emparellament «%2»."
+
+#: libtournament/tiebreaks/buchholz.cpp:14
+#, kde-format
+msgctxt "@label:spinbox"
+msgid "Exclude the lowest scores:"
+msgstr ""
 
 #: libtournament/tournament.cpp:400
 #, kde-format
@@ -179,12 +185,10 @@ msgid "Your emails"
 msgstr "txemaq@gmail.com"
 
 #: main.cpp:79
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Import tournament report…"
+#, kde-format
 msgctxt "Command line option description"
 msgid "Import Tournament Report File."
-msgstr "Informe d'importació de torneig…"
+msgstr "Importa un fitxer d'informe del torneig."
 
 #: pairingmodel.cpp:93
 #, kde-format
