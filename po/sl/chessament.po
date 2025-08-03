@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-02 00:40+0000\n"
-"PO-Revision-Date: 2025-07-31 07:54+0200\n"
+"POT-Creation-Date: 2025-08-03 00:39+0000\n"
+"PO-Revision-Date: 2025-08-02 10:33+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -90,7 +90,7 @@ msgstr "Neveljaven igralec \"%1\" v paru \"%2\"."
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Exclude the lowest scores:"
-msgstr ""
+msgstr "Izključi najnižje ocene:"
 
 #: libtournament/tournament.cpp:400
 #, kde-format
@@ -355,6 +355,27 @@ msgctxt "@title:window"
 msgid "Add Tiebreak"
 msgstr "Dodaj tiebreak"
 
+#: qml/BottomNavigation.qml:21 qml/Sidebar.qml:101
+#, kde-format
+msgid "Players"
+msgstr "Igralci"
+
+#: qml/BottomNavigation.qml:27 qml/Sidebar.qml:108
+#, kde-format
+msgid "Pairings"
+msgstr "Pari"
+
+#: qml/BottomNavigation.qml:33 qml/Sidebar.qml:115
+#, kde-format
+msgid "Standings"
+msgstr "Lestvice"
+
+#: qml/BottomNavigation.qml:39 qml/Sidebar.qml:139
+#, kde-format
+msgctxt "@action:button"
+msgid "Settings"
+msgstr "Nastavitve"
+
 #: qml/components/TiebreakDelegate.qml:30
 #: qml/components/TiebreakDelegate.qml:35
 #, kde-format
@@ -416,38 +437,17 @@ msgctxt "@action:button Remove pairings"
 msgid "Remove"
 msgstr "Odstrani"
 
-#: qml/Main.qml:21
+#: qml/Main.qml:20
 #, kde-format
 msgctxt "@title:window"
 msgid "Chessament"
 msgstr "Chessament"
 
-#: qml/Main.qml:101
+#: qml/Main.qml:102
 #, kde-format
 msgctxt "@title"
 msgid "Error"
 msgstr "Napaka"
-
-#: qml/Main.qml:193
-#, kde-format
-msgid "Players"
-msgstr "Igralci"
-
-#: qml/Main.qml:200
-#, kde-format
-msgid "Pairings"
-msgstr "Pari"
-
-#: qml/Main.qml:207
-#, kde-format
-msgid "Standings"
-msgstr "Lestvice"
-
-#: qml/Main.qml:232
-#, kde-format
-msgctxt "@action:button"
-msgid "Settings"
-msgstr "Nastavitve"
 
 #: qml/NewTournamentDialog.qml:16
 #, kde-format
@@ -496,18 +496,18 @@ msgctxt "@action:button"
 msgid "Export as PDF…"
 msgstr "Izvozi kot PDF…"
 
-#: qml/PairingsPage.qml:60
+#: qml/PairingsPage.qml:61
 #, kde-format
 msgid "Round %1"
 msgstr "Krog %1"
 
-#: qml/PairingsPage.qml:78
+#: qml/PairingsPage.qml:79
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove pairings of this and following rounds…"
 msgstr "Odstrani pare tega in naslednjih krogov…"
 
-#: qml/PairingsPage.qml:118
+#: qml/PairingsPage.qml:119
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No pairings for round %1 yet"
@@ -561,19 +561,19 @@ msgctxt "@action:button"
 msgid "Add Player…"
 msgstr "Dodaj igralca…"
 
-#: qml/PlayersPage.qml:155
+#: qml/PlayersPage.qml:156
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No players yet"
 msgstr "Še ni igralcev"
 
-#: qml/PlayersPage.qml:159
+#: qml/PlayersPage.qml:160
 #, kde-format
 msgctxt "@action:button"
 msgid "Add player"
 msgstr "Dodaj igralca"
 
-#: qml/PlayersPage.qml:177
+#: qml/PlayersPage.qml:178
 #, kde-format
 msgctxt "@info:status Number of players"
 msgid "1 player"
@@ -583,7 +583,7 @@ msgstr[1] "%1igralec"
 msgstr[2] "%1 igralca"
 msgstr[3] "%1 igralci"
 
-#: qml/PlayersPage.qml:178
+#: qml/PlayersPage.qml:179
 #, kde-format
 msgctxt "@info:status Number of rated players"
 msgid "1 rated"
@@ -593,7 +593,7 @@ msgstr[1] "%1 ocenjen"
 msgstr[2] "%1 ocenjena"
 msgstr[3] "%1 ocenjeni"
 
-#: qml/PlayersPage.qml:180
+#: qml/PlayersPage.qml:181
 #, kde-format
 msgctxt "@info:status players, rated"
 msgid "%1, %2"

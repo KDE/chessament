@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-02 00:40+0000\n"
+"POT-Creation-Date: 2025-08-03 00:39+0000\n"
 "PO-Revision-Date: 2025-07-23 01:07+0100\n"
 "Last-Translator: Manuel Alcaraz Zambrano <manuelalcarazzam@gmail.com>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -385,6 +385,27 @@ msgctxt "@title:window"
 msgid "Add Tiebreak"
 msgstr "Añadir desempate"
 
+#: qml/BottomNavigation.qml:21 qml/Sidebar.qml:101
+#, kde-format
+msgid "Players"
+msgstr "Jugadores"
+
+#: qml/BottomNavigation.qml:27 qml/Sidebar.qml:108
+#, kde-format
+msgid "Pairings"
+msgstr "Emparejamientos"
+
+#: qml/BottomNavigation.qml:33 qml/Sidebar.qml:115
+#, kde-format
+msgid "Standings"
+msgstr "Clasificación"
+
+#: qml/BottomNavigation.qml:39 qml/Sidebar.qml:139
+#, kde-format
+msgctxt "@action:button"
+msgid "Settings"
+msgstr "Preferencias"
+
 #: qml/components/TiebreakDelegate.qml:30
 #: qml/components/TiebreakDelegate.qml:35
 #, kde-format
@@ -446,38 +467,17 @@ msgctxt "@action:button Remove pairings"
 msgid "Remove"
 msgstr "Eliminar"
 
-#: qml/Main.qml:21
+#: qml/Main.qml:20
 #, kde-format
 msgctxt "@title:window"
 msgid "Chessament"
 msgstr "Chessament"
 
-#: qml/Main.qml:101
+#: qml/Main.qml:102
 #, kde-format
 msgctxt "@title"
 msgid "Error"
 msgstr "Error"
-
-#: qml/Main.qml:193
-#, kde-format
-msgid "Players"
-msgstr "Jugadores"
-
-#: qml/Main.qml:200
-#, kde-format
-msgid "Pairings"
-msgstr "Emparejamientos"
-
-#: qml/Main.qml:207
-#, kde-format
-msgid "Standings"
-msgstr "Clasificación"
-
-#: qml/Main.qml:232
-#, kde-format
-msgctxt "@action:button"
-msgid "Settings"
-msgstr "Preferencias"
 
 #: qml/NewTournamentDialog.qml:16
 #, kde-format
@@ -526,18 +526,18 @@ msgctxt "@action:button"
 msgid "Export as PDF…"
 msgstr "Exportar como PDF…"
 
-#: qml/PairingsPage.qml:60
+#: qml/PairingsPage.qml:61
 #, kde-format
 msgid "Round %1"
 msgstr "Ronda %1"
 
-#: qml/PairingsPage.qml:78
+#: qml/PairingsPage.qml:79
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove pairings of this and following rounds…"
 msgstr "Eliminar emparejamientos de esta ronda y sucesivas…"
 
-#: qml/PairingsPage.qml:118
+#: qml/PairingsPage.qml:119
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No pairings for round %1 yet"
@@ -591,19 +591,19 @@ msgctxt "@action:button"
 msgid "Add Player…"
 msgstr "Añadir jugador…"
 
-#: qml/PlayersPage.qml:155
+#: qml/PlayersPage.qml:156
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No players yet"
 msgstr "Todavía no hay jugadores"
 
-#: qml/PlayersPage.qml:159
+#: qml/PlayersPage.qml:160
 #, kde-format
 msgctxt "@action:button"
 msgid "Add player"
 msgstr "Añadir jugador"
 
-#: qml/PlayersPage.qml:177
+#: qml/PlayersPage.qml:178
 #, kde-format
 msgctxt "@info:status Number of players"
 msgid "1 player"
@@ -611,7 +611,7 @@ msgid_plural "%1 players"
 msgstr[0] "1 jugador"
 msgstr[1] "%1 jugadores"
 
-#: qml/PlayersPage.qml:178
+#: qml/PlayersPage.qml:179
 #, kde-format
 msgctxt "@info:status Number of rated players"
 msgid "1 rated"
@@ -619,7 +619,7 @@ msgid_plural "%1 rated"
 msgstr[0] "1 valorado"
 msgstr[1] "%1 valorados"
 
-#: qml/PlayersPage.qml:180
+#: qml/PlayersPage.qml:181
 #, kde-format
 msgctxt "@info:status players, rated"
 msgid "%1, %2"

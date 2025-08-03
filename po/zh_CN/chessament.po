@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-02 00:40+0000\n"
+"POT-Creation-Date: 2025-08-03 00:39+0000\n"
 "PO-Revision-Date: 2025-05-12 14:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -356,6 +356,27 @@ msgctxt "@title:window"
 msgid "Add Tiebreak"
 msgstr "添加决胜局"
 
+#: qml/BottomNavigation.qml:21 qml/Sidebar.qml:101
+#, kde-format
+msgid "Players"
+msgstr "玩家"
+
+#: qml/BottomNavigation.qml:27 qml/Sidebar.qml:108
+#, kde-format
+msgid "Pairings"
+msgstr "配对"
+
+#: qml/BottomNavigation.qml:33 qml/Sidebar.qml:115
+#, kde-format
+msgid "Standings"
+msgstr "排名"
+
+#: qml/BottomNavigation.qml:39 qml/Sidebar.qml:139
+#, kde-format
+msgctxt "@action:button"
+msgid "Settings"
+msgstr "设置"
+
 #: qml/components/TiebreakDelegate.qml:30
 #: qml/components/TiebreakDelegate.qml:35
 #, kde-format
@@ -417,38 +438,17 @@ msgctxt "@action:button Remove pairings"
 msgid "Remove"
 msgstr "移除"
 
-#: qml/Main.qml:21
+#: qml/Main.qml:20
 #, kde-format
 msgctxt "@title:window"
 msgid "Chessament"
 msgstr "Chessament"
 
-#: qml/Main.qml:101
+#: qml/Main.qml:102
 #, kde-format
 msgctxt "@title"
 msgid "Error"
 msgstr "错误"
-
-#: qml/Main.qml:193
-#, kde-format
-msgid "Players"
-msgstr "玩家"
-
-#: qml/Main.qml:200
-#, kde-format
-msgid "Pairings"
-msgstr "配对"
-
-#: qml/Main.qml:207
-#, kde-format
-msgid "Standings"
-msgstr "排名"
-
-#: qml/Main.qml:232
-#, kde-format
-msgctxt "@action:button"
-msgid "Settings"
-msgstr "设置"
 
 #: qml/NewTournamentDialog.qml:16
 #, kde-format
@@ -497,18 +497,18 @@ msgctxt "@action:button"
 msgid "Export as PDF…"
 msgstr "导出为 PDF..."
 
-#: qml/PairingsPage.qml:60
+#: qml/PairingsPage.qml:61
 #, kde-format
 msgid "Round %1"
 msgstr "第 %1 轮"
 
-#: qml/PairingsPage.qml:78
+#: qml/PairingsPage.qml:79
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove pairings of this and following rounds…"
 msgstr "删除当前及后续轮次的配对..."
 
-#: qml/PairingsPage.qml:118
+#: qml/PairingsPage.qml:119
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No pairings for round %1 yet"
@@ -562,33 +562,33 @@ msgctxt "@action:button"
 msgid "Add Player…"
 msgstr "添加玩家..."
 
-#: qml/PlayersPage.qml:155
+#: qml/PlayersPage.qml:156
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No players yet"
 msgstr "暂无玩家"
 
-#: qml/PlayersPage.qml:159
+#: qml/PlayersPage.qml:160
 #, kde-format
 msgctxt "@action:button"
 msgid "Add player"
 msgstr "添加玩家"
 
-#: qml/PlayersPage.qml:177
+#: qml/PlayersPage.qml:178
 #, kde-format
 msgctxt "@info:status Number of players"
 msgid "1 player"
 msgid_plural "%1 players"
 msgstr[0] "%1 名玩家"
 
-#: qml/PlayersPage.qml:178
+#: qml/PlayersPage.qml:179
 #, kde-format
 msgctxt "@info:status Number of rated players"
 msgid "1 rated"
 msgid_plural "%1 rated"
 msgstr[0] "%1 级"
 
-#: qml/PlayersPage.qml:180
+#: qml/PlayersPage.qml:181
 #, kde-format
 msgctxt "@info:status players, rated"
 msgid "%1, %2"

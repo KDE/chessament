@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-02 00:40+0000\n"
-"PO-Revision-Date: 2025-07-31 16:43+0200\n"
+"POT-Creation-Date: 2025-08-03 00:39+0000\n"
+"PO-Revision-Date: 2025-08-02 10:56+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -94,7 +94,7 @@ msgstr "Jugador «%1» no vàlid a l'emparellament «%2»."
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Exclude the lowest scores:"
-msgstr ""
+msgstr "Exclou les puntuacions més baixes:"
 
 #: libtournament/tournament.cpp:400
 #, kde-format
@@ -248,13 +248,13 @@ msgstr "Nom"
 #, kde-format
 msgctxt "@title:column Player Rating"
 msgid "Rating"
-msgstr "Puntuació"
+msgstr "Classificació"
 
 #: playersmodel.cpp:179
 #, kde-format
 msgctxt "@title:column Player National Rating"
 msgid "National Rating"
-msgstr "Puntuació nacional"
+msgstr "Classificació nacional"
 
 #: playersmodel.cpp:181
 #, kde-format
@@ -308,13 +308,13 @@ msgstr "Nom"
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Rating"
-msgstr "Puntuació"
+msgstr "Classificació"
 
 #: qml/AddPlayerDialog.qml:71
 #, kde-format
 msgctxt "@label:textbox"
 msgid "National rating"
-msgstr "Puntuació nacional"
+msgstr "Classificació nacional"
 
 #: qml/AddPlayerDialog.qml:78
 #, kde-format
@@ -358,6 +358,27 @@ msgstr "Sexe"
 msgctxt "@title:window"
 msgid "Add Tiebreak"
 msgstr "Addició de desempat"
+
+#: qml/BottomNavigation.qml:21 qml/Sidebar.qml:101
+#, kde-format
+msgid "Players"
+msgstr "Jugadors"
+
+#: qml/BottomNavigation.qml:27 qml/Sidebar.qml:108
+#, kde-format
+msgid "Pairings"
+msgstr "Emparellaments"
+
+#: qml/BottomNavigation.qml:33 qml/Sidebar.qml:115
+#, kde-format
+msgid "Standings"
+msgstr "Resultats"
+
+#: qml/BottomNavigation.qml:39 qml/Sidebar.qml:139
+#, kde-format
+msgctxt "@action:button"
+msgid "Settings"
+msgstr "Configuració"
 
 #: qml/components/TiebreakDelegate.qml:30
 #: qml/components/TiebreakDelegate.qml:35
@@ -420,38 +441,17 @@ msgctxt "@action:button Remove pairings"
 msgid "Remove"
 msgstr "Elimina"
 
-#: qml/Main.qml:21
+#: qml/Main.qml:20
 #, kde-format
 msgctxt "@title:window"
 msgid "Chessament"
 msgstr "Chessament"
 
-#: qml/Main.qml:101
+#: qml/Main.qml:102
 #, kde-format
 msgctxt "@title"
 msgid "Error"
 msgstr "S'ha produït un error"
-
-#: qml/Main.qml:193
-#, kde-format
-msgid "Players"
-msgstr "Jugadors"
-
-#: qml/Main.qml:200
-#, kde-format
-msgid "Pairings"
-msgstr "Emparellaments"
-
-#: qml/Main.qml:207
-#, kde-format
-msgid "Standings"
-msgstr "Resultats"
-
-#: qml/Main.qml:232
-#, kde-format
-msgctxt "@action:button"
-msgid "Settings"
-msgstr "Configuració"
 
 #: qml/NewTournamentDialog.qml:16
 #, kde-format
@@ -500,18 +500,18 @@ msgctxt "@action:button"
 msgid "Export as PDF…"
 msgstr "Exporta com a PDF…"
 
-#: qml/PairingsPage.qml:60
+#: qml/PairingsPage.qml:61
 #, kde-format
 msgid "Round %1"
 msgstr "Ronda %1"
 
-#: qml/PairingsPage.qml:78
+#: qml/PairingsPage.qml:79
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove pairings of this and following rounds…"
 msgstr "Elimina els emparellaments d'esta ronda i les següents…"
 
-#: qml/PairingsPage.qml:118
+#: qml/PairingsPage.qml:119
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No pairings for round %1 yet"
@@ -565,19 +565,19 @@ msgctxt "@action:button"
 msgid "Add Player…"
 msgstr "Afig un jugador…"
 
-#: qml/PlayersPage.qml:155
+#: qml/PlayersPage.qml:156
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No players yet"
 msgstr "Encara no hi ha cap jugador"
 
-#: qml/PlayersPage.qml:159
+#: qml/PlayersPage.qml:160
 #, kde-format
 msgctxt "@action:button"
 msgid "Add player"
 msgstr "Afig un jugador"
 
-#: qml/PlayersPage.qml:177
+#: qml/PlayersPage.qml:178
 #, kde-format
 msgctxt "@info:status Number of players"
 msgid "1 player"
@@ -585,7 +585,7 @@ msgid_plural "%1 players"
 msgstr[0] "1 jugador"
 msgstr[1] "%1 jugadors"
 
-#: qml/PlayersPage.qml:178
+#: qml/PlayersPage.qml:179
 #, kde-format
 msgctxt "@info:status Number of rated players"
 msgid "1 rated"
@@ -593,7 +593,7 @@ msgid_plural "%1 rated"
 msgstr[0] "1 avaluat"
 msgstr[1] "%1 avaluats"
 
-#: qml/PlayersPage.qml:180
+#: qml/PlayersPage.qml:181
 #, kde-format
 msgctxt "@info:status players, rated"
 msgid "%1, %2"
