@@ -21,6 +21,7 @@ private Q_SLOTS:
     void testTrf();
     void testImportTrf();
     void testLoadTournament();
+    void testSortPlayers();
     void testRemovePairings_data();
     void testRemovePairings();
 };
@@ -141,6 +142,28 @@ void TournamentTest::testLoadTournament()
     for (int i = 2; i <= 9; ++i) {
         QCOMPARE(t->getPairings(i).size(), 46);
     }
+}
+
+void TournamentTest::testSortPlayers()
+{
+    auto event = std::make_unique<Event>();
+    QVERIFY(event->open());
+
+    auto tournament = event->importTournament(QLatin1String(DATA_DIR) + u"/tournament_2.trf"_s);
+    QVERIFY(tournament.has_value());
+
+    (*tournament)->sortPlayers();
+
+    const auto players = (*tournament)->players();
+
+    QCOMPARE(players[0]->name(), "Player 3"_L1);
+    QCOMPARE(players[1]->name(), "Player 2"_L1);
+    QCOMPARE(players[2]->name(), "Player 1"_L1);
+    QCOMPARE(players[3]->name(), "Player 4"_L1);
+    QCOMPARE(players[4]->name(), "Player 5"_L1);
+    QCOMPARE(players[5]->name(), "Player 6"_L1);
+    QCOMPARE(players[6]->name(), "Player A"_L1);
+    QCOMPARE(players[7]->name(), "Player B"_L1);
 }
 
 void TournamentTest::testRemovePairings_data()
