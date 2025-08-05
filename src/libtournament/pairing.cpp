@@ -108,6 +108,11 @@ void Pairing::setResult(PartialResult whiteResult, PartialResult blackResult)
     setBlackResult(blackResult);
 }
 
+bool Pairing::hasFinished()
+{
+    return m_whiteResult != Pairing::PartialResult::Unknown;
+}
+
 QString Pairing::resultString()
 {
     if (!Pairing::isBye(m_whiteResult)) {

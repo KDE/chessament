@@ -64,6 +64,8 @@ QVariant PairingModel::data(const QModelIndex &index, int role) const
             }
             return pairing->blackPlayer()->startingRank();
         }
+    } else if (role == PairingModel::PairingRole::HasFinishedRole) {
+        return pairing->hasFinished();
     } else if (role == Qt::TextAlignmentRole) {
         switch (column) {
         case Result:
@@ -81,7 +83,7 @@ QVariant PairingModel::data(const QModelIndex &index, int role) const
 
 QHash<int, QByteArray> PairingModel::roleNames() const
 {
-    return {{Qt::DisplayRole, "display"}, {Qt::TextAlignmentRole, "textAlignment"}};
+    return {{Qt::DisplayRole, "display"}, {PairingModel::PairingRole::HasFinishedRole, "hasFinished"}, {Qt::TextAlignmentRole, "textAlignment"}};
 }
 
 QVariant PairingModel::headerData(int section, Qt::Orientation orientation, int role) const

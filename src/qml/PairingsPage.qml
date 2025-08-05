@@ -4,9 +4,10 @@ pragma ComponentBehavior: Bound
 
 import QtCore
 import QtQuick
-import QtQuick.Controls as QQC2
+import QtQuick.Controls as Controls
 import QtQuick.Dialogs as Dialogs
 
+import org.kde.kitemmodels as KItemModels
 import org.kde.kirigami as Kirigami
 
 import org.kde.chessament
@@ -16,7 +17,17 @@ TablePage {
 
     Kirigami.ColumnView.fillWidth: true
 
-    model: Controller.pairingModel
+    model: KItemModels.KSortFilterProxyModel {
+        id: proxyModel
+        sourceModel: Controller.pairingModel
+        filterRowCallback: function (source_row, source_parent) {
+            if (hideFinishedAction.checked) {
+                const hasFinished = sourceModel.data(sourceModel.index(source_row, 0, source_parent), PairingModel.HasFinishedRole);
+                return !hasFinished;
+            }
+            return true;
+        }
+    }
 
     selectionBehavior: TableView.SelectRows
     columnWidths: [55, 55, 250, 90, 250, 55]
@@ -38,29 +49,42 @@ TablePage {
             text: i18n("Pair Round %1", Controller.tournament.currentRound + 1)
             visible: Controller.tournament.numberOfPlayers > 0 && (Controller.tournament.currentRound + 1 <= Controller.tournament.numberOfRounds) && Controller.hasCurrentRoundFinished
             onTriggered: {
-                Qt.createComponent("org.kde.chessament", "PairRoundDialog").createObject(root.QQC2.ApplicationWindow.window, {}).open();
+                const dialog = Qt.createComponent("org.kde.chessament", "PairRoundDialog").createObject(root.Controls.ApplicationWindow.window, {}) as PairRoundDialog;
+                dialog.open();
+            }
+        },
+        Kirigami.Action {
+            id: hideFinishedAction
+            text: i18nc("@option:check", "Hide finished games")
+            checkable: true
+            checked: false
+            displayComponent: Controls.Switch {
+                action: hideFinishedAction
+            }
+            onToggled: {
+                proxyModel.invalidateFilter();
             }
         },
         Kirigami.Action {
             id: printAction
             icon.name: "document-print-symbolic"
-            text: i18nc("@action:button", "Print…")
+            text: i18nc("@action:intoolbar", "Print…")
             onTriggered: Controller.printPairingsDocument()
         },
         Kirigami.Action {
             icon.name: "document-export-symbolic"
-            text: i18nc("@action:button", "Export as PDF…")
+            text: i18nc("@action:intoolbar", "Export as PDF…")
             onTriggered: saveDialog.open()
         },
         Kirigami.Action {
             displayHint: Kirigami.DisplayHint.KeepVisible
-            displayComponent: QQC2.ComboBox {
+            displayComponent: Controls.ComboBox {
                 id: roundSelector
                 model: Controller.tournament.numberOfRounds
                 currentIndex: Controller.currentRound - 1
                 displayText: i18n("Round %1", currentIndex + 1)
                 flat: true
-                delegate: QQC2.ItemDelegate {
+                delegate: Controls.ItemDelegate {
                     required property int index
 
                     text: index + 1
@@ -76,13 +100,14 @@ TablePage {
             }
         },
         Kirigami.Action {
-            text: i18nc("@action:inmenu", "Remove pairings of this and following rounds…")
+            text: i18nc("@action:intoolbar", "Remove pairings of this and following rounds…")
             icon.name: "edit-delete"
             displayHint: Kirigami.DisplayHint.AlwaysHide
             onTriggered: {
-                Qt.createComponent("org.kde.chessament", "DeletePairingsDialog").createObject(root.QQC2.ApplicationWindow.window, {
+                const dialog = Qt.createComponent("org.kde.chessament", "DeletePairingsDialog").createObject(root.Controls.ApplicationWindow.window, {
                     round: Controller.currentRound
-                }).open();
+                }) as DeletePairingsDialog;
+                dialog.open();
             }
         }
     ]
@@ -91,11 +116,14 @@ TablePage {
         id: footer
         visible: root.tableView.rows !== 0
 
-        pairing: root.model.getPairing(root.tableView.selectionModel.currentIndex.row)
+        pairing: {
+            const index = proxyModel.mapToSource(root.tableView.selectionModel.currentIndex);
+            return root.model.sourceModel.getPairing(index.row);
+        }
 
         onSaveResult: (pairing, whiteResult, blackResult) => {
             if (Controller.setResult(pairing.board, whiteResult, blackResult)) {
-                root.selectBoard(pairing.board + 1);
+                root.selectNextBoard();
             }
         }
     }
@@ -116,31 +144,35 @@ TablePage {
         parent: root.tableView
         anchors.centerIn: parent
         width: parent.width - Kirigami.Units.gridUnit * 4
-        text: i18nc("@info:placeholder", "No pairings for round %1 yet", Controller.currentRound)
-        visible: root.tableView.rows === 0
+        text: {
+            if (proxyModel.sourceModel.rowCount() === 0) {
+                return i18nc("@info:placeholder", "No pairings for round %1 yet", Controller.currentRound);
+            }
+            return i18nc("@info:placeholder", "All games of round %1 have finished", Controller.currentRound);
+        }
+        visible: proxyModel.count === 0
     }
 
     Keys.onPressed: event => {
-        let selection = tableView.selectionModel.currentIndex;
+        const selection = tableView.selectionModel.currentIndex;
         if (selection) {
-            let board = selection.row + 1;
+            const index = proxyModel.mapToSource(selection);
+            const board = index.row + 1;
             if (board && Controller.setResult(board, event.key)) {
                 event.accepted = true;
-                root.selectBoard(board + 1);
+                root.selectNextBoard();
             }
         }
     }
 
-    function selectBoard(board: int) {
-        const row = (board - 1) % root.model.rowCount();
-        const index = root.tableView.model.index(row, 0);
-
-        tableView.selectionModel.clear();
-        tableView.selectionModel.setCurrentIndex(index, ItemSelectionModel.SelectCurrent | ItemSelectionModel.Rows);
-        tableView.itemAtIndex(index)?.forceActiveFocus();
-        if (board != 1) {
-            // FIXME: column size streches to fit when moving to the first row
-            tableView.positionViewAtRow(board - 1, TableView.Contain);
+    function selectNextBoard(): void {
+        const currentRow = tableView.selectionModel.currentIndex.row;
+        if (currentRow > 0 && hideFinishedAction.checked || currentRow >= 0 && !hideFinishedAction.checked) {
+            const index = root.tableView.model.index(currentRow + 1, 0);
+            tableView.selectionModel.clear();
+            tableView.selectionModel.setCurrentIndex(index, ItemSelectionModel.SelectCurrent | ItemSelectionModel.Rows);
+            tableView.itemAtIndex(index)?.forceActiveFocus();
+            tableView.positionViewAtRow(index.row, TableView.Contain);
         }
     }
 }

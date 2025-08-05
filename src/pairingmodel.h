@@ -24,6 +24,11 @@ public:
     };
     Q_ENUM(Columns)
 
+    enum PairingRole {
+        HasFinishedRole = Qt::UserRole,
+    };
+    Q_ENUM(PairingRole)
+
     explicit PairingModel(QObject *parent = nullptr);
 
     [[nodiscard]] int rowCount(const QModelIndex &parent = QModelIndex()) const override;

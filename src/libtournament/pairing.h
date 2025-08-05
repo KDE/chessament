@@ -400,6 +400,13 @@ public:
         Q_UNREACHABLE();
     }
 
+    /*!
+     * Returns whether the game has finished.
+     *
+     * A game has finished if the result of the white player is known. Byes are always finished games.
+     */
+    bool hasFinished();
+
     QString resultString();
     QString toTrf(Player *player);
 
