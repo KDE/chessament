@@ -9,7 +9,7 @@ import QtQuick.Controls as Controls
 import QtQuick.Dialogs as Dialogs
 import QtQuick.Layouts as Layouts
 
-import org.kde.kitemmodels
+import org.kde.kitemmodels as KItemModels
 import org.kde.kirigami as Kirigami
 
 import org.kde.chessament
@@ -37,7 +37,7 @@ TablePage {
         }
     }
 
-    model: KSortFilterProxyModel {
+    model: KItemModels.KSortFilterProxyModel {
         id: proxyModel
 
         sourceModel: Controller.playersModel
@@ -48,7 +48,7 @@ TablePage {
     actions: [
         Kirigami.Action {
             icon.name: "view-sort-symbolic"
-            text: i18nc("@action:button", "Sort Players…")
+            text: i18nc("@action:intoolbar", "Sort Players…")
             enabled: Controller.tournament.numberOfPlayers > 1
             onTriggered: {
                 Qt.createComponent("org.kde.chessament", "SortPlayersDialog").createObject(root.Controls.ApplicationWindow.window, {}).open();
@@ -57,18 +57,18 @@ TablePage {
         Kirigami.Action {
             id: printAction
             icon.name: "document-print-symbolic"
-            text: i18nc("@action:button", "Print…")
+            text: i18nc("@action:intoolbar", "Print…")
             onTriggered: Controller.printPlayersDocument()
         },
         Kirigami.Action {
             icon.name: "document-export-symbolic"
-            text: i18nc("@action:button", "Export as PDF…")
+            text: i18nc("@action:intoolbar", "Export as PDF…")
             onTriggered: saveDialog.open()
         },
         Kirigami.Action {
             id: addAction
             icon.name: "list-add-symbolic"
-            text: i18nc("@action:button", "Add Player…")
+            text: i18nc("@action:intoolbar", "Add Player…")
             displayHint: Kirigami.DisplayHint.KeepVisible
             onTriggered: addPlayerDialog.open()
         }
@@ -157,7 +157,7 @@ TablePage {
         visible: root.tableView.rows === 0
         helpfulAction: Kirigami.Action {
             icon.name: "list-add"
-            text: i18nc("@action:button", "Add player")
+            text: i18nc("@action:button", "Add Player…")
             onTriggered: addPlayerDialog.open()
         }
     }
