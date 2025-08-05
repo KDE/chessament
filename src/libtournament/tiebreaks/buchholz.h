@@ -6,6 +6,7 @@
 #include "tiebreak.h"
 
 #include <KLocalizedString>
+#include <QLocale>
 
 using namespace Qt::Literals::StringLiterals;
 
@@ -17,13 +18,19 @@ public:
         return "bh"_L1;
     }
 
+    [[nodiscard]] QString shortName() override
+    {
+        return name();
+    };
+
     [[nodiscard]] QString name() override
     {
-        auto cutLowest = option("cut_lowest"_L1, 0).toUInt();
+        const auto cutLowest = option("cut_lowest"_L1, 0).toInt();
         if (cutLowest == 0) {
             return i18nc("Buchholz tiebreak", "Buchholz");
         }
-        return i18nc("Buchholz Cut−N tiebreak; read as 'Buchholz Cut Minus N'", "Buchholz Cut−%1", cutLowest);
+        const auto cutText = QLocale::system().toString(-cutLowest);
+        return i18nc("Buchholz N tiebreak, N is a number < 0", "Buchholz %1", cutText);
     };
 
     [[nodiscard]] QString code() override

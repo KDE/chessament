@@ -21,6 +21,8 @@ public:
 
     [[nodiscard]] virtual QString id() = 0;
 
+    [[nodiscard]] virtual QString shortName() = 0;
+
     [[nodiscard]] virtual QString name() = 0;
 
     [[nodiscard]] virtual QString code() = 0;

@@ -93,7 +93,7 @@ QVariant StandingsModel::headerData(int section, Qt::Orientation orientation, in
     case NameRole:
         return i18nc("@title:column Player Name", "Name");
     default:
-        return m_tournament->tiebreaks().at(section - 4)->name();
+        return m_tournament->tiebreaks().at(section - 4)->shortName();
     }
 }
 

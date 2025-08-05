@@ -17,9 +17,14 @@ public:
         return "win"_L1;
     }
 
-    [[nodiscard]] QString name() override
+    [[nodiscard]] QString shortName() override
     {
         return i18nc("Number of Wins tiebreak", "Wins");
+    };
+
+    [[nodiscard]] QString name() override
+    {
+        return i18nc("Number of Wins tiebreak", "Number of Wins");
     };
 
     [[nodiscard]] QString code() override
