@@ -64,8 +64,11 @@ set_package_properties(Qt6Keychain PROPERTIES
 
 qt_policy(SET QTP0001 NEW)
 
+ecm_find_qmlmodule(org.kde.kirigamiaddons.components)
+ecm_find_qmlmodule(org.kde.kirigamiaddons.delegates)
 ecm_find_qmlmodule(org.kde.kirigamiaddons.formcard)
 ecm_find_qmlmodule(org.kde.kirigamiaddons.statefulapp)
+ecm_find_qmlmodule(org.kde.kitemmodels)
 
 add_subdirectory(src)
 
