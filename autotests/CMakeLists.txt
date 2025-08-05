@@ -17,3 +17,9 @@ ecm_add_test(
     TEST_NAME buchholztest
 )
 
+ecm_add_test(
+    utilstest.cpp
+    LINK_LIBRARIES libtournament Qt::Test
+    TEST_NAME utilstest
+)
+

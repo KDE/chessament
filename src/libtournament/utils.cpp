@@ -12,7 +12,7 @@ namespace Utils
 
 QString normalize(const QString &text)
 {
-    return text.normalized(QString::NormalizationForm_KD).remove(QRegularExpression{u"[^a-zA-Z0-9\\s]"_s});
+    return text.normalized(QString::NormalizationForm_KD).remove(QRegularExpression{u"[^a-zA-Z0-9\\s\\.,-_\\(\\)]"_s});
 }
 
 }
