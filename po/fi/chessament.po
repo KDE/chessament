@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-03 00:39+0000\n"
+"POT-Creation-Date: 2025-08-06 00:40+0000\n"
 "PO-Revision-Date: 2025-07-14 10:56+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -192,7 +192,7 @@ msgctxt "Command line option description"
 msgid "Import Tournament Report File."
 msgstr "Tuo turnausraportti…"
 
-#: pairingmodel.cpp:93
+#: pairingmodel.cpp:95
 #, fuzzy, kde-format
 #| msgctxt "@title:column"
 #| msgid "Board"
@@ -200,13 +200,13 @@ msgctxt "@title:column Board Number"
 msgid "Board"
 msgstr "Lauta"
 
-#: pairingmodel.cpp:95
+#: pairingmodel.cpp:97
 #, kde-format
 msgctxt "@title:column White Player Starting Rank Number"
 msgid "№"
 msgstr ""
 
-#: pairingmodel.cpp:97
+#: pairingmodel.cpp:99
 #, fuzzy, kde-format
 #| msgctxt "@title:column"
 #| msgid "White player"
@@ -214,7 +214,7 @@ msgctxt "@title:column Name of the White Player"
 msgid "White Player"
 msgstr "Valkoinen pelaaja"
 
-#: pairingmodel.cpp:99
+#: pairingmodel.cpp:101
 #, fuzzy, kde-format
 #| msgctxt "@title:column"
 #| msgid "Result"
@@ -222,7 +222,7 @@ msgctxt "@title:column Game Result"
 msgid "Result"
 msgstr "Tulos"
 
-#: pairingmodel.cpp:101
+#: pairingmodel.cpp:103
 #, fuzzy, kde-format
 #| msgctxt "@title:column"
 #| msgid "Black Player"
@@ -230,7 +230,7 @@ msgctxt "@title:column Name of the Black Player"
 msgid "Black Player"
 msgstr "Musta pelaaja"
 
-#: pairingmodel.cpp:103
+#: pairingmodel.cpp:105
 #, kde-format
 msgctxt "@title:column Black Player Starting Rank Number"
 msgid "№"
@@ -499,39 +499,57 @@ msgctxt "@label"
 msgid "Number of rounds"
 msgstr "Kierrosten määrä"
 
-#: qml/PairingsPage.qml:38
+#: qml/PairingsPage.qml:49
 #, kde-format
 msgid "Pair Round %1"
 msgstr "%1. parikierros"
 
-#: qml/PairingsPage.qml:47 qml/PlayersPage.qml:60
+#: qml/PairingsPage.qml:58
 #, kde-format
-msgctxt "@action:button"
+msgctxt "@option:check"
+msgid "Hide finished games"
+msgstr ""
+
+#: qml/PairingsPage.qml:71 qml/PlayersPage.qml:60
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Print…"
+msgctxt "@action:intoolbar"
 msgid "Print…"
 msgstr "Tulosta…"
 
-#: qml/PairingsPage.qml:52 qml/PlayersPage.qml:65
-#, kde-format
-msgctxt "@action:button"
+#: qml/PairingsPage.qml:76 qml/PlayersPage.qml:65
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Export as PDF…"
+msgctxt "@action:intoolbar"
 msgid "Export as PDF…"
 msgstr "Vie PDF:ksi…"
 
-#: qml/PairingsPage.qml:61
+#: qml/PairingsPage.qml:85
 #, kde-format
 msgid "Round %1"
 msgstr "%1. kierros"
 
-#: qml/PairingsPage.qml:79
-#, kde-format
-msgctxt "@action:inmenu"
+#: qml/PairingsPage.qml:103
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu"
+#| msgid "Remove pairings of this and following rounds…"
+msgctxt "@action:intoolbar"
 msgid "Remove pairings of this and following rounds…"
 msgstr "Poista tämän ja seuraavien kierrosten paritukset…"
 
-#: qml/PairingsPage.qml:119
+#: qml/PairingsPage.qml:149
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No pairings for round %1 yet"
 msgstr "Kierrokselle %1 ei vielä parituksia"
+
+#: qml/PairingsPage.qml:151
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "All games of round %1 have finished"
+msgstr ""
 
 #: qml/PairRoundDialog.qml:17
 #, kde-format
@@ -570,14 +588,18 @@ msgid "Black"
 msgstr "Musta"
 
 #: qml/PlayersPage.qml:51
-#, kde-format
-msgctxt "@action:button"
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Sort Players…"
+msgctxt "@action:intoolbar"
 msgid "Sort Players…"
 msgstr "Lajittele pelaajat…"
 
 #: qml/PlayersPage.qml:71
-#, kde-format
-msgctxt "@action:button"
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Add Player…"
+msgctxt "@action:intoolbar"
 msgid "Add Player…"
 msgstr "Lisää pelaaja…"
 
@@ -590,8 +612,8 @@ msgstr "Ei vielä pelaajia"
 #: qml/PlayersPage.qml:160
 #, kde-format
 msgctxt "@action:button"
-msgid "Add player"
-msgstr "Lisää pelaaja"
+msgid "Add Player…"
+msgstr "Lisää pelaaja…"
 
 #: qml/PlayersPage.qml:178
 #, kde-format
@@ -916,6 +938,10 @@ msgstr "Kirjaudu ulos"
 msgctxt "@title:column Player Ranking"
 msgid "Rank"
 msgstr "Sijoitus"
+
+#~ msgctxt "@action:button"
+#~ msgid "Add player"
+#~ msgstr "Lisää pelaaja"
 
 #~ msgctxt "@title:column"
 #~ msgid "No"

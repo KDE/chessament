@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-03 00:39+0000\n"
+"POT-Creation-Date: 2025-08-06 00:40+0000\n"
 "PO-Revision-Date: 2025-05-12 14:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -187,37 +187,37 @@ msgctxt "Command line option description"
 msgid "Import Tournament Report File."
 msgstr "导入比赛报告文件。"
 
-#: pairingmodel.cpp:93
+#: pairingmodel.cpp:95
 #, kde-format
 msgctxt "@title:column Board Number"
 msgid "Board"
 msgstr "棋盘"
 
-#: pairingmodel.cpp:95
+#: pairingmodel.cpp:97
 #, kde-format
 msgctxt "@title:column White Player Starting Rank Number"
 msgid "№"
 msgstr "№"
 
-#: pairingmodel.cpp:97
+#: pairingmodel.cpp:99
 #, kde-format
 msgctxt "@title:column Name of the White Player"
 msgid "White Player"
 msgstr "执白"
 
-#: pairingmodel.cpp:99
+#: pairingmodel.cpp:101
 #, kde-format
 msgctxt "@title:column Game Result"
 msgid "Result"
 msgstr "结果"
 
-#: pairingmodel.cpp:101
+#: pairingmodel.cpp:103
 #, kde-format
 msgctxt "@title:column Name of the Black Player"
 msgid "Black Player"
 msgstr ""
 
-#: pairingmodel.cpp:103
+#: pairingmodel.cpp:105
 #, kde-format
 msgctxt "@title:column Black Player Starting Rank Number"
 msgid "№"
@@ -480,39 +480,57 @@ msgctxt "@label"
 msgid "Number of rounds"
 msgstr "回合数"
 
-#: qml/PairingsPage.qml:38
+#: qml/PairingsPage.qml:49
 #, kde-format
 msgid "Pair Round %1"
 msgstr "配对轮次 %1"
 
-#: qml/PairingsPage.qml:47 qml/PlayersPage.qml:60
+#: qml/PairingsPage.qml:58
 #, kde-format
-msgctxt "@action:button"
+msgctxt "@option:check"
+msgid "Hide finished games"
+msgstr ""
+
+#: qml/PairingsPage.qml:71 qml/PlayersPage.qml:60
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Print…"
+msgctxt "@action:intoolbar"
 msgid "Print…"
 msgstr "打印..."
 
-#: qml/PairingsPage.qml:52 qml/PlayersPage.qml:65
-#, kde-format
-msgctxt "@action:button"
+#: qml/PairingsPage.qml:76 qml/PlayersPage.qml:65
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Export as PDF…"
+msgctxt "@action:intoolbar"
 msgid "Export as PDF…"
 msgstr "导出为 PDF..."
 
-#: qml/PairingsPage.qml:61
+#: qml/PairingsPage.qml:85
 #, kde-format
 msgid "Round %1"
 msgstr "第 %1 轮"
 
-#: qml/PairingsPage.qml:79
-#, kde-format
-msgctxt "@action:inmenu"
+#: qml/PairingsPage.qml:103
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu"
+#| msgid "Remove pairings of this and following rounds…"
+msgctxt "@action:intoolbar"
 msgid "Remove pairings of this and following rounds…"
 msgstr "删除当前及后续轮次的配对..."
 
-#: qml/PairingsPage.qml:119
+#: qml/PairingsPage.qml:149
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No pairings for round %1 yet"
 msgstr "第 %1 轮暂无对手"
+
+#: qml/PairingsPage.qml:151
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "All games of round %1 have finished"
+msgstr ""
 
 #: qml/PairRoundDialog.qml:17
 #, kde-format
@@ -551,14 +569,18 @@ msgid "Black"
 msgstr "黑色"
 
 #: qml/PlayersPage.qml:51
-#, kde-format
-msgctxt "@action:button"
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Sort Players…"
+msgctxt "@action:intoolbar"
 msgid "Sort Players…"
 msgstr "对玩家排序..."
 
 #: qml/PlayersPage.qml:71
-#, kde-format
-msgctxt "@action:button"
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Add Player…"
+msgctxt "@action:intoolbar"
 msgid "Add Player…"
 msgstr "添加玩家..."
 
@@ -571,8 +593,8 @@ msgstr "暂无玩家"
 #: qml/PlayersPage.qml:160
 #, kde-format
 msgctxt "@action:button"
-msgid "Add player"
-msgstr "添加玩家"
+msgid "Add Player…"
+msgstr "添加玩家..."
 
 #: qml/PlayersPage.qml:178
 #, kde-format
@@ -893,3 +915,7 @@ msgstr "退出登录"
 msgctxt "@title:column Player Ranking"
 msgid "Rank"
 msgstr ""
+
+#~ msgctxt "@action:button"
+#~ msgid "Add player"
+#~ msgstr "添加玩家"

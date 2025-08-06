@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-03 00:39+0000\n"
+"POT-Creation-Date: 2025-08-06 00:40+0000\n"
 "PO-Revision-Date: 2025-08-02 17:54+0300\n"
 "Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -187,37 +187,37 @@ msgctxt "Command line option description"
 msgid "Import Tournament Report File."
 msgstr "Turnuva raporu dosyası içe aktarın."
 
-#: pairingmodel.cpp:93
+#: pairingmodel.cpp:95
 #, kde-format
 msgctxt "@title:column Board Number"
 msgid "Board"
 msgstr "Tahta"
 
-#: pairingmodel.cpp:95
+#: pairingmodel.cpp:97
 #, kde-format
 msgctxt "@title:column White Player Starting Rank Number"
 msgid "№"
 msgstr "№"
 
-#: pairingmodel.cpp:97
+#: pairingmodel.cpp:99
 #, kde-format
 msgctxt "@title:column Name of the White Player"
 msgid "White Player"
 msgstr "Beyaz Oyuncu"
 
-#: pairingmodel.cpp:99
+#: pairingmodel.cpp:101
 #, kde-format
 msgctxt "@title:column Game Result"
 msgid "Result"
 msgstr "Sonuç"
 
-#: pairingmodel.cpp:101
+#: pairingmodel.cpp:103
 #, kde-format
 msgctxt "@title:column Name of the Black Player"
 msgid "Black Player"
 msgstr "Siyah Oyuncu"
 
-#: pairingmodel.cpp:103
+#: pairingmodel.cpp:105
 #, kde-format
 msgctxt "@title:column Black Player Starting Rank Number"
 msgid "№"
@@ -480,39 +480,57 @@ msgctxt "@label"
 msgid "Number of rounds"
 msgstr "Raunt sayısı"
 
-#: qml/PairingsPage.qml:38
+#: qml/PairingsPage.qml:49
 #, kde-format
 msgid "Pair Round %1"
 msgstr "Eşleştir: %1. Raunt"
 
-#: qml/PairingsPage.qml:47 qml/PlayersPage.qml:60
+#: qml/PairingsPage.qml:58
 #, kde-format
-msgctxt "@action:button"
+msgctxt "@option:check"
+msgid "Hide finished games"
+msgstr ""
+
+#: qml/PairingsPage.qml:71 qml/PlayersPage.qml:60
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Print…"
+msgctxt "@action:intoolbar"
 msgid "Print…"
 msgstr "Yazdır…"
 
-#: qml/PairingsPage.qml:52 qml/PlayersPage.qml:65
-#, kde-format
-msgctxt "@action:button"
+#: qml/PairingsPage.qml:76 qml/PlayersPage.qml:65
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Export as PDF…"
+msgctxt "@action:intoolbar"
 msgid "Export as PDF…"
 msgstr "PDF Olarak Dışa Aktar…"
 
-#: qml/PairingsPage.qml:61
+#: qml/PairingsPage.qml:85
 #, kde-format
 msgid "Round %1"
 msgstr "Raunt %1"
 
-#: qml/PairingsPage.qml:79
-#, kde-format
-msgctxt "@action:inmenu"
+#: qml/PairingsPage.qml:103
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu"
+#| msgid "Remove pairings of this and following rounds…"
+msgctxt "@action:intoolbar"
 msgid "Remove pairings of this and following rounds…"
 msgstr "Bu ve Sonraki Rauntların Eşleşmelerini Kaldır"
 
-#: qml/PairingsPage.qml:119
+#: qml/PairingsPage.qml:149
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No pairings for round %1 yet"
 msgstr "Raunt %1 için henüz bir eşleşme yok"
+
+#: qml/PairingsPage.qml:151
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "All games of round %1 have finished"
+msgstr ""
 
 #: qml/PairRoundDialog.qml:17
 #, kde-format
@@ -551,14 +569,18 @@ msgid "Black"
 msgstr "Siyah"
 
 #: qml/PlayersPage.qml:51
-#, kde-format
-msgctxt "@action:button"
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Sort Players…"
+msgctxt "@action:intoolbar"
 msgid "Sort Players…"
 msgstr "Oyuncuları Sırala…"
 
 #: qml/PlayersPage.qml:71
-#, kde-format
-msgctxt "@action:button"
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Add Player…"
+msgctxt "@action:intoolbar"
 msgid "Add Player…"
 msgstr "Oyuncu Ekle…"
 
@@ -571,8 +593,8 @@ msgstr "Henüz oyuncu yok"
 #: qml/PlayersPage.qml:160
 #, kde-format
 msgctxt "@action:button"
-msgid "Add player"
-msgstr "Oyuncu Ekle"
+msgid "Add Player…"
+msgstr "Oyuncu Ekle…"
 
 #: qml/PlayersPage.qml:178
 #, kde-format
@@ -897,6 +919,10 @@ msgstr "Oturumu Kapat"
 msgctxt "@title:column Player Ranking"
 msgid "Rank"
 msgstr "Derece"
+
+#~ msgctxt "@action:button"
+#~ msgid "Add player"
+#~ msgstr "Oyuncu Ekle"
 
 #~ msgctxt "@title:column"
 #~ msgid "No"
