@@ -14,17 +14,27 @@ FormCard.FormCardPage {
     title: i18nc("@title", "Calendar")
 
     Repeater {
-        model: Controller.tournament.numberOfRounds
+        model: RoundModel {
+            id: roundModel
+            tournament: Controller.tournament
+        }
 
         ColumnLayout {
-            id: column
+            id: delegate
+
             required property int index
+            required property var model
 
             FormCard.FormHeader {
-                title: i18nc("round number", "Round %1", column.index + 1)
+                title: i18nc("round number", "Round %1", delegate.index + 1)
             }
             FormCard.FormCard {
-                FormCard.FormDateTimeDelegate {}
+                FormCard.FormDateTimeDelegate {
+                    value: delegate.model.dateTime
+                    onValueChanged: {
+                        delegate.model.dateTime = value;
+                    }
+                }
             }
         }
     }

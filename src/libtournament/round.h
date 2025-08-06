@@ -18,12 +18,14 @@ class Round : public QObject
 
     Q_PROPERTY(int id READ id WRITE setId NOTIFY idChanged)
     Q_PROPERTY(int number READ number WRITE setNumber NOTIFY numberChanged)
+    Q_PROPERTY(QDateTime dateTime READ dateTime WRITE setDateTime NOTIFY dateTimeChanged)
 
 public:
     explicit Round() = default;
 
-    int id() const;
-    int number() const;
+    [[nodiscard]] int id() const;
+    [[nodiscard]] int number() const;
+    [[nodiscard]] QDateTime dateTime() const;
 
     [[nodiscard]] QList<Pairing *> pairings() const;
     Pairing *getPairing(int board);
@@ -33,14 +35,17 @@ public:
 public Q_SLOTS:
     void setId(int id);
     void setNumber(int number);
+    void setDateTime(const QDateTime &dateTime);
 
 Q_SIGNALS:
     void idChanged();
     void numberChanged();
+    void dateTimeChanged();
 
 private:
     int m_id;
     int m_number;
+    QDateTime m_dateTime;
 
     std::vector<std::unique_ptr<Pairing>> m_pairings;
 

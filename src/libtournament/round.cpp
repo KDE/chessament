@@ -33,6 +33,20 @@ void Round::setNumber(int number)
     Q_EMIT numberChanged();
 }
 
+QDateTime Round::dateTime() const
+{
+    return m_dateTime;
+}
+
+void Round::setDateTime(const QDateTime &dateTime)
+{
+    if (m_dateTime == dateTime) {
+        return;
+    }
+    m_dateTime = dateTime;
+    Q_EMIT dateTimeChanged();
+}
+
 QList<Pairing *> Round::pairings() const
 {
     QList<Pairing *> result;

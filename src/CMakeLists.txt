@@ -48,6 +48,7 @@ ecm_add_qml_module(chessament_static
         documents.cpp
         playersmodel.cpp
         pairingmodel.cpp
+        roundmodel.cpp
         standingsmodel.cpp
         tiebreakmodel.cpp
     IMPORTS

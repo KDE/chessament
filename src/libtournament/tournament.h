@@ -191,15 +191,16 @@ public:
 
     static Tiebreak *tiebreak(const QString &id);
 
-    /*!
-     * Returns the rounds of the tournament.
-     */
-    [[nodiscard]] std::vector<std::unique_ptr<Round>> rounds() const;
+    [[nodiscard]] Round *round(int number) const;
+
+    std::expected<void, QString> ensureRoundExists(int round);
+
+    std::expected<void, QString> saveRound(Round *round);
 
     /*!
-     * Adds the \a pairing to the round \a round.
+     * Adds the \a pairing to the round with number \a roundNumber.
      */
-    std::expected<void, QString> addPairing(int round, std::unique_ptr<Pairing> pairing);
+    std::expected<void, QString> addPairing(int roundNumber, std::unique_ptr<Pairing> pairing);
 
     /*!
      * Saves \a pairing to the database.

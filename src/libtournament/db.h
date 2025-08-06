@@ -62,6 +62,7 @@ const QString ROUNDS_TABLE_SCHEMA =
     u"id INTEGER PRIMARY KEY,"_s
     u"number INTEGER NOT NULL,"_s
     u"tournament TEXT NOT NULL,"_s
+    u"datetime TEXT,"_s
     u"FOREIGN KEY (tournament) REFERENCES tournaments(id),"_s
     u"UNIQUE (tournament, number)"_s
     u");"_s;
@@ -71,6 +72,11 @@ const QString ADD_ROUND_QUERY =
     u"VALUES (:number, :tournament);"_s;
 
 const QString GET_ROUNDS_QUERY = u"SELECT * FROM rounds WHERE tournament = :tournament;"_s;
+
+const QString UPDATE_ROUND_QUERY =
+    u"UPDATE rounds SET (datetime) = "_s
+    u"(:datetime) "_s
+    u"WHERE id = :id;"_s;
 
 const QString PAIRINGS_TABLE_SCHEMA =
     u"CREATE TABLE IF NOT EXISTS pairings("_s
