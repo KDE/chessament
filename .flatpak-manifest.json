@@ -1,11 +1,14 @@
 {
+    "$schema": "https://raw.githubusercontent.com/flatpak/flatpak-builder/main/data/flatpak-manifest.schema.json",
     "id": "org.kde.chessament",
     "branch": "master",
     "runtime": "org.kde.Platform",
     "runtime-version": "6.9",
     "sdk": "org.kde.Sdk",
     "command": "chessament",
-    "tags": ["nightly"],
+    "tags": [
+        "nightly"
+    ],
     "desktop-file-name-suffix": " (Nightly)",
     "finish-args": [
         "--share=ipc",
@@ -93,7 +96,9 @@
                 {
                     "type": "dir",
                     "path": ".",
-                    "skip": [".git"]
+                    "skip": [
+                        ".git"
+                    ]
                 }
             ],
             "config-opts": [
@@ -102,4 +107,3 @@
         }
     ]
 }
-
