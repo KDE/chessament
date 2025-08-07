@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-06 00:40+0000\n"
-"PO-Revision-Date: 2025-08-02 18:06+0300\n"
+"PO-Revision-Date: 2025-08-06 20:35+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -491,20 +491,16 @@ msgstr "Поділ на пари раунду %1"
 #, kde-format
 msgctxt "@option:check"
 msgid "Hide finished games"
-msgstr ""
+msgstr "Приховати завершені ігри"
 
 #: qml/PairingsPage.qml:71 qml/PlayersPage.qml:60
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Print…"
+#, kde-format
 msgctxt "@action:intoolbar"
 msgid "Print…"
 msgstr "Надрукувати…"
 
 #: qml/PairingsPage.qml:76 qml/PlayersPage.qml:65
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Export as PDF…"
+#, kde-format
 msgctxt "@action:intoolbar"
 msgid "Export as PDF…"
 msgstr "Експортувати до PDF…"
@@ -515,9 +511,7 @@ msgid "Round %1"
 msgstr "Раунд %1"
 
 #: qml/PairingsPage.qml:103
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Remove pairings of this and following rounds…"
+#, kde-format
 msgctxt "@action:intoolbar"
 msgid "Remove pairings of this and following rounds…"
 msgstr "Вилучити поділ на пари для цього і наступного раундів…"
@@ -532,7 +526,7 @@ msgstr "Поділу на пари для раунду %1 ще немає"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "All games of round %1 have finished"
-msgstr ""
+msgstr "Усі ігри раунду %1 завершено"
 
 #: qml/PairRoundDialog.qml:17
 #, kde-format
@@ -571,17 +565,13 @@ msgid "Black"
 msgstr "Чорний"
 
 #: qml/PlayersPage.qml:51
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Sort Players…"
+#, kde-format
 msgctxt "@action:intoolbar"
 msgid "Sort Players…"
 msgstr "Упорядкувати гравців…"
 
 #: qml/PlayersPage.qml:71
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Add Player…"
+#, kde-format
 msgctxt "@action:intoolbar"
 msgid "Add Player…"
 msgstr "Додати гравця…"

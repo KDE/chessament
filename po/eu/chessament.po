@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-06 00:40+0000\n"
-"PO-Revision-Date: 2025-08-03 00:09+0200\n"
+"PO-Revision-Date: 2025-08-06 09:38+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -494,20 +494,16 @@ msgstr "Parekatzeko %1. itzulia"
 #, kde-format
 msgctxt "@option:check"
 msgid "Hide finished games"
-msgstr ""
+msgstr "Ezkutatu bukatutako jokoak"
 
 #: qml/PairingsPage.qml:71 qml/PlayersPage.qml:60
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Print…"
+#, kde-format
 msgctxt "@action:intoolbar"
 msgid "Print…"
 msgstr "Inprimatu..."
 
 #: qml/PairingsPage.qml:76 qml/PlayersPage.qml:65
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Export as PDF…"
+#, kde-format
 msgctxt "@action:intoolbar"
 msgid "Export as PDF…"
 msgstr "Esportatu PDF gisa…"
@@ -518,9 +514,7 @@ msgid "Round %1"
 msgstr "%1. itzulia"
 
 #: qml/PairingsPage.qml:103
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Remove pairings of this and following rounds…"
+#, kde-format
 msgctxt "@action:intoolbar"
 msgid "Remove pairings of this and following rounds…"
 msgstr "Kendu itzuli honetako eta ondorengoen bikoteak..."
@@ -535,7 +529,7 @@ msgstr "Oraindik %1 itzulirako bikoterik ez"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "All games of round %1 have finished"
-msgstr ""
+msgstr "%1 itzuliko joko guztiak bukatu dira"
 
 #: qml/PairRoundDialog.qml:17
 #, kde-format
@@ -574,17 +568,13 @@ msgid "Black"
 msgstr "Beltza"
 
 #: qml/PlayersPage.qml:51
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Sort Players…"
+#, kde-format
 msgctxt "@action:intoolbar"
 msgid "Sort Players…"
 msgstr "Sailkatu jokalariak…"
 
 #: qml/PlayersPage.qml:71
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Add Player…"
+#, kde-format
 msgctxt "@action:intoolbar"
 msgid "Add Player…"
 msgstr "Gehitu jokalaria…"

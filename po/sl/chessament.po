@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-06 00:40+0000\n"
-"PO-Revision-Date: 2025-08-02 10:33+0200\n"
+"PO-Revision-Date: 2025-08-06 07:25+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -488,20 +488,16 @@ msgstr "Krog para %1"
 #, kde-format
 msgctxt "@option:check"
 msgid "Hide finished games"
-msgstr ""
+msgstr "Skrij končane igre"
 
 #: qml/PairingsPage.qml:71 qml/PlayersPage.qml:60
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Print…"
+#, kde-format
 msgctxt "@action:intoolbar"
 msgid "Print…"
 msgstr "Natisni…"
 
 #: qml/PairingsPage.qml:76 qml/PlayersPage.qml:65
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Export as PDF…"
+#, kde-format
 msgctxt "@action:intoolbar"
 msgid "Export as PDF…"
 msgstr "Izvozi kot PDF…"
@@ -512,9 +508,7 @@ msgid "Round %1"
 msgstr "Krog %1"
 
 #: qml/PairingsPage.qml:103
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Remove pairings of this and following rounds…"
+#, kde-format
 msgctxt "@action:intoolbar"
 msgid "Remove pairings of this and following rounds…"
 msgstr "Odstrani pare tega in naslednjih krogov…"
@@ -529,7 +523,7 @@ msgstr "Še ni parov za krog %1"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "All games of round %1 have finished"
-msgstr ""
+msgstr "Vse igre kroga %1 so končane"
 
 #: qml/PairRoundDialog.qml:17
 #, kde-format
@@ -568,20 +562,16 @@ msgid "Black"
 msgstr "Črni"
 
 #: qml/PlayersPage.qml:51
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Sort Players…"
+#, kde-format
 msgctxt "@action:intoolbar"
 msgid "Sort Players…"
 msgstr "Razvrsti igralce…"
 
 #: qml/PlayersPage.qml:71
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Add Player…"
+#, kde-format
 msgctxt "@action:intoolbar"
 msgid "Add Player…"
-msgstr "Dodaj igralca…"
+msgstr "Dodaj igralca"
 
 #: qml/PlayersPage.qml:156
 #, kde-format

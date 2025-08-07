@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-06 00:40+0000\n"
-"PO-Revision-Date: 2025-08-02 19:28+0300\n"
+"PO-Revision-Date: 2025-08-06 08:19+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -490,20 +490,16 @@ msgstr "סיבוב שיבוץ %1"
 #, kde-format
 msgctxt "@option:check"
 msgid "Hide finished games"
-msgstr ""
+msgstr "הסתרת משחקים שהושלמו"
 
 #: qml/PairingsPage.qml:71 qml/PlayersPage.qml:60
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Print…"
+#, kde-format
 msgctxt "@action:intoolbar"
 msgid "Print…"
 msgstr "הדפסה…"
 
 #: qml/PairingsPage.qml:76 qml/PlayersPage.qml:65
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Export as PDF…"
+#, kde-format
 msgctxt "@action:intoolbar"
 msgid "Export as PDF…"
 msgstr "ייצוא כ־PDF…"
@@ -514,9 +510,7 @@ msgid "Round %1"
 msgstr "סיבוב %1"
 
 #: qml/PairingsPage.qml:103
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Remove pairings of this and following rounds…"
+#, kde-format
 msgctxt "@action:intoolbar"
 msgid "Remove pairings of this and following rounds…"
 msgstr "הסרת שיבוצים בסיבוב הזה ובבאים אחריו…"
@@ -531,7 +525,7 @@ msgstr "אין עדיין שיבוצים לסיבוב %1"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "All games of round %1 have finished"
-msgstr ""
+msgstr "כל המשחקים בסיבוב %1 הושלמו"
 
 #: qml/PairRoundDialog.qml:17
 #, kde-format
@@ -570,17 +564,13 @@ msgid "Black"
 msgstr "שחור"
 
 #: qml/PlayersPage.qml:51
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Sort Players…"
+#, kde-format
 msgctxt "@action:intoolbar"
 msgid "Sort Players…"
 msgstr "סידור שחקנים…"
 
 #: qml/PlayersPage.qml:71
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Add Player…"
+#, kde-format
 msgctxt "@action:intoolbar"
 msgid "Add Player…"
 msgstr "הוספת שחקן/נית…"
