@@ -950,7 +950,7 @@ QString Tournament::toTrf(TrfOptions options, int maxRound)
     for (size_t i = 0; i < state.lastRound(); ++i) {
         QString date;
         if (i < m_rounds.size() && m_rounds[i]->dateTime().isValid()) {
-            date = m_rounds[i]->dateTime().toString("yy/MM/dd"_L1);
+            date = m_rounds[i]->dateTime().toString(trfDateFormat);
         } else {
             date = "        "_L1;
         }

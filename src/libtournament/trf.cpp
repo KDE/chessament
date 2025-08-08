@@ -124,6 +124,12 @@ std::expected<void, QString> TRFReader::readField(QStringView line)
     case Tournament::ReportField::TimeControl:
         m_tournament->setTimeControl(value.trimmed().toString());
         break;
+    case Tournament::ReportField::Calendar: {
+        if (const auto ok = readDates(value); !ok) {
+            return ok;
+        }
+        break;
+    }
     case Tournament::ReportField::Player: {
         if (const auto player = readPlayer(line); !player) {
             return std::unexpected(player.error());
@@ -132,6 +138,43 @@ std::expected<void, QString> TRFReader::readField(QStringView line)
     }
     default:
         break;
+    }
+
+    return {};
+}
+
+std::expected<void, QString> TRFReader::readDates(QStringView line)
+{
+    if (line.length() < 88) {
+        return {};
+    }
+
+    QStringView dateString;
+    for (qsizetype i = 0;; ++i) {
+        dateString = line.mid(87 + (10 * i), 8);
+
+        if (dateString.isEmpty()) {
+            break;
+        }
+        if (dateString.trimmed().isEmpty()) {
+            continue;
+        }
+
+        const auto date = QDateTime::fromString(dateString.trimmed(), trfDateFormat);
+        if (!date.isValid()) {
+            return std::unexpected(i18nc("@info", "Date \"%1\" is invalid.", dateString.toString()));
+        }
+
+        if (const auto ok = m_tournament->ensureRoundExists(i + 1); !ok) {
+            return ok;
+        }
+
+        const auto round = m_tournament->round(i + 1);
+        round->setDateTime(date);
+
+        if (const auto ok = m_tournament->saveRound(round); !ok) {
+            return ok;
+        }
     }
 
     return {};
