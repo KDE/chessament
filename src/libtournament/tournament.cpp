@@ -936,17 +936,27 @@ QString Tournament::toTrf(TrfOptions options, int maxRound)
     stream << reportFieldString(ReportField::ChiefArbiter) << space << m_chiefArbiter << newLine;
     stream << reportFieldString(ReportField::TimeControl) << space << m_timeControl << newLine;
 
-    if (options & TrfOption::NumberOfRounds) {
+    if (options.testFlag(TrfOption::NumberOfRounds)) {
         stream << u"XXR "_s + QString::number(m_numberOfRounds) << newLine;
     }
 
-    if (options & TrfOption::InitialColorWhite) {
+    if (options.testFlag(TrfOption::InitialColorWhite)) {
         stream << u"XXC white1\n"_s;
-    } else if (options & TrfOption::InitialColorBlack) {
+    } else if (options.testFlag(TrfOption::InitialColorBlack)) {
         stream << u"XXC black1\n"_s;
     }
 
-    const auto r = maxRound < 0 ? m_numberOfRounds : maxRound;
+    stream << reportFieldString(ReportField::Calendar) << space.repeated(86);
+    for (size_t i = 0; i < state.lastRound(); ++i) {
+        QString date;
+        if (i < m_rounds.size() && m_rounds[i]->dateTime().isValid()) {
+            date = m_rounds[i]->dateTime().toString("yy/MM/dd"_L1);
+        } else {
+            date = "        "_L1;
+        }
+        stream << "  "_L1 << date;
+    }
+    stream << newLine;
 
     for (const auto &player : std::as_const(m_players)) {
         const auto standing = std::find_if(standings.constBegin(), standings.constEnd(), [&player](const Standing &s) -> bool {
@@ -958,7 +968,7 @@ QString Tournament::toTrf(TrfOptions options, int maxRound)
         stream << result.c_str();
 
         auto pairings = state.getPairings(player.get());
-        for (int i = 0; i < r; i++) {
+        for (int i = 0; i < state.lastRound(); i++) {
             if (i < pairings.size()) {
                 stream << pairings.value(i)->toTrf(player.get());
             } else {

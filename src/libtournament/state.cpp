@@ -4,10 +4,20 @@
 #include "state.h"
 
 State::State(Tournament *tournament, int maxRound)
+    : m_tournament(tournament)
 {
-    m_tournament = tournament;
-    m_maxRound = maxRound;
+    if (maxRound < 0) {
+        m_maxRound = m_tournament->numberOfRounds();
+    } else {
+        m_maxRound = maxRound;
+    }
+
     m_pairingsByPlayer = m_tournament->getPairingsByPlayer(m_maxRound);
+}
+
+size_t State::lastRound() const
+{
+    return m_maxRound;
 }
 
 QList<Pairing *> State::getPairings(Player *player) const
