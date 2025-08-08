@@ -3,6 +3,8 @@
 
 #include "tournament.h"
 
+constexpr static QStringView trfDateFormat = u"yy/MM/dd";
+
 class TRFReader
 {
 public:
@@ -18,6 +20,7 @@ private:
     std::expected<void, QString> read(QTextStream *trf);
 
     std::expected<void, QString> readField(QStringView line);
+    std::expected<void, QString> readDates(QStringView line);
     std::expected<void, QString> readPlayer(QStringView line);
     std::expected<void, QString> readPairing(int startingRank, int round, QStringView text);
 
