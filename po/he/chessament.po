@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-06 00:40+0000\n"
+"POT-Creation-Date: 2025-08-10 00:40+0000\n"
 "PO-Revision-Date: 2025-08-06 08:19+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -112,12 +112,12 @@ msgctxt "Number of Wins tiebreak"
 msgid "Number of Wins"
 msgstr "מספר הנצחונות"
 
-#: libtournament/tournament.cpp:690
+#: libtournament/tournament.cpp:728
 #, kde-format
 msgid "An error ocurred while pairing the round: %1"
 msgstr "אירעה שגיאה בעת השיבוץ לסיבוב: %1"
 
-#: libtournament/tournament.cpp:942
+#: libtournament/tournament.cpp:990
 #, kde-format
 msgid "Couldn't open file"
 msgstr "לא ניתן לפתוח את הקובץ"
@@ -760,7 +760,7 @@ msgctxt "@title"
 msgid "Calendar"
 msgstr "לוח שנה"
 
-#: qml/TournamentSettingsCalendar.qml:24
+#: qml/TournamentSettingsCalendar.qml:29
 #, kde-format
 msgctxt "round number"
 msgid "Round %1"
