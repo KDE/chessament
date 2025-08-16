@@ -91,7 +91,7 @@ msgstr "对阵“%2”中的无效选手“%1”。"
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Exclude the lowest scores:"
-msgstr ""
+msgstr "排除最低得分："
 
 #: libtournament/tournament.cpp:400
 #, kde-format
@@ -215,43 +215,43 @@ msgstr "结果"
 #, kde-format
 msgctxt "@title:column Name of the Black Player"
 msgid "Black Player"
-msgstr ""
+msgstr "执黑"
 
 #: pairingmodel.cpp:105
 #, kde-format
 msgctxt "@title:column Black Player Starting Rank Number"
 msgid "№"
-msgstr ""
+msgstr "№"
 
 #: playersmodel.cpp:171 standingsmodel.cpp:90
 #, kde-format
 msgctxt "@title:column Player Starting Rank Number"
 msgid "№"
-msgstr ""
+msgstr "№"
 
 #: playersmodel.cpp:173 standingsmodel.cpp:92
 #, kde-format
 msgctxt "@title:column Player Title"
 msgid "Title"
-msgstr ""
+msgstr "头衔"
 
 #: playersmodel.cpp:175 standingsmodel.cpp:94
 #, kde-format
 msgctxt "@title:column Player Name"
 msgid "Name"
-msgstr ""
+msgstr "姓名"
 
 #: playersmodel.cpp:177
 #, kde-format
 msgctxt "@title:column Player Rating"
 msgid "Rating"
-msgstr ""
+msgstr "等级"
 
 #: playersmodel.cpp:179
 #, kde-format
 msgctxt "@title:column Player National Rating"
 msgid "National Rating"
-msgstr ""
+msgstr "国家级评级"
 
 #: playersmodel.cpp:181
 #, kde-format
@@ -269,13 +269,13 @@ msgstr "出生日期"
 #, kde-format
 msgctxt "@title:column Player Federation"
 msgid "Federation"
-msgstr ""
+msgstr "联合"
 
 #: playersmodel.cpp:187
 #, kde-format
 msgctxt "@title:column Player Origin"
 msgid "Origin"
-msgstr ""
+msgstr "源"
 
 #: playersmodel.cpp:189
 #, kde-format
@@ -489,19 +489,19 @@ msgstr "配对轮次 %1"
 #, kde-format
 msgctxt "@option:check"
 msgid "Hide finished games"
-msgstr ""
+msgstr "隐藏已完成的游戏"
 
 #: qml/PairingsPage.qml:71 qml/PlayersPage.qml:60
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Print…"
-msgstr ""
+msgstr "打印..."
 
 #: qml/PairingsPage.qml:76 qml/PlayersPage.qml:65
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Export as PDF…"
-msgstr ""
+msgstr "导出为 PDF..."
 
 #: qml/PairingsPage.qml:85
 #, kde-format
@@ -512,7 +512,7 @@ msgstr "第 %1 轮"
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Remove pairings of this and following rounds…"
-msgstr ""
+msgstr "删除当前及后续轮次的配对..."
 
 #: qml/PairingsPage.qml:149
 #, kde-format
@@ -524,7 +524,7 @@ msgstr "第 %1 轮暂无对手"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "All games of round %1 have finished"
-msgstr ""
+msgstr "第 %1 轮的所有比赛已经结束"
 
 #: qml/PairRoundDialog.qml:17
 #, kde-format
@@ -566,13 +566,13 @@ msgstr "黑色"
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Sort Players…"
-msgstr ""
+msgstr "对玩家排序..."
 
 #: qml/PlayersPage.qml:71
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Add Player…"
-msgstr ""
+msgstr "添加玩家..."
 
 #: qml/PlayersPage.qml:156
 #, kde-format
@@ -904,4 +904,4 @@ msgstr "退出登录"
 #, kde-format
 msgctxt "@title:column Player Ranking"
 msgid "Rank"
-msgstr ""
+msgstr "排名"
