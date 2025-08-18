@@ -4,8 +4,9 @@
 #pragma once
 
 #include <QAbstractTableModel>
+#include <qqmlregistration.h>
 
-#include "libtournament/player.h"
+class Player;
 
 class Tournament;
 

@@ -8,7 +8,9 @@
 #include <QQmlEngine>
 #include <QString>
 
-#include "player.h"
+class Player;
+
+using namespace Qt::StringLiterals;
 
 /*!
  * \class Pairing

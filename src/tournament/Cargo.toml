@@ -1,0 +1,20 @@
+[package]
+name = "tournament"
+version = "26.4.70"
+authors = [
+    "Manuel Alcaraz Zambrano <manuelalcarazzam@gmail.com>"
+]
+edition = "2024"
+license = "GPL-3.0-or-later"
+
+[lib]
+crate-type = ["staticlib"]
+
+[dependencies]
+cxx = "1.0.168"
+cxx-qt = "0.7.2"
+cxx-qt-lib = { version = "0.7.2", features = ["qt_qml"] }
+
+[build-dependencies]
+cxx-qt-build = { version = "0.7.2", features = ["link_qt_object_files"] }
+

@@ -3,6 +3,8 @@
 
 #include "pairing.h"
 
+#include "tournament/src/player.cxxqt.h"
+
 Pairing::Pairing(int board, Player *whitePlayer, Player *blackPlayer, PartialResult whiteResult, PartialResult blackResult)
 {
     m_board = board;

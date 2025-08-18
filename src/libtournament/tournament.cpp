@@ -16,6 +16,7 @@
 #include "tiebreaks/buchholz.h"
 #include "tiebreaks/numberwins.h"
 #include "tiebreaks/points.h"
+#include "tournament/src/player.cxxqt.h"
 #include "trf.h"
 
 Tournament::Tournament(Event *event)
@@ -189,21 +190,21 @@ std::expected<void, QString> Tournament::addPlayer(std::unique_ptr<Player> playe
 {
     QSqlQuery query(m_event->getDB());
     query.prepare(ADD_PLAYER_QUERY);
-    query.bindValue(u":startingRank"_s, player->startingRank());
-    query.bindValue(u":title"_s, Player::titleString(player->title()));
-    query.bindValue(u":name"_s, player->name());
-    query.bindValue(u":rating"_s, player->rating());
-    query.bindValue(u":nationalRating"_s, player->nationalRating());
-    query.bindValue(u":playerId"_s, player->playerId());
-    query.bindValue(u":birthDate"_s, player->birthDate());
-    query.bindValue(u":federation"_s, player->federation());
-    query.bindValue(u":origin"_s, player->origin());
-    query.bindValue(u":sex"_s, player->sex());
+    query.bindValue(u":startingRank"_s, player->getStartingRank());
+    query.bindValue(u":title"_s, Player::titleString(player->getTitle()));
+    query.bindValue(u":name"_s, player->getName());
+    query.bindValue(u":rating"_s, player->getRating());
+    query.bindValue(u":nationalRating"_s, player->getNationalRating());
+    query.bindValue(u":playerId"_s, player->getPlayerId());
+    query.bindValue(u":birthDate"_s, player->getBirthDate());
+    query.bindValue(u":federation"_s, player->getFederation());
+    query.bindValue(u":origin"_s, player->getOrigin());
+    query.bindValue(u":sex"_s, player->getSex());
     query.bindValue(u":tournament"_s, m_id);
     query.exec();
 
     if (query.lastError().isValid()) {
-        qDebug() << "add player" << *player << query.lastError();
+        qDebug() << "add player" << player->getName() << query.lastError();
         return std::unexpected(query.lastError().text());
     }
 
@@ -221,22 +222,22 @@ void Tournament::savePlayer(Player *player)
 {
     QSqlQuery query(m_event->getDB());
     query.prepare(UPDATE_PLAYER_QUERY);
-    query.bindValue(u":id"_s, player->id());
-    query.bindValue(u":startingRank"_s, player->startingRank());
-    query.bindValue(u":title"_s, Player::titleString(player->title()));
-    query.bindValue(u":name"_s, player->name());
-    query.bindValue(u":rating"_s, player->rating());
-    query.bindValue(u":nationalRating"_s, player->nationalRating());
-    query.bindValue(u":playerId"_s, player->playerId());
-    query.bindValue(u":birthDate"_s, player->birthDate());
-    query.bindValue(u":federation"_s, player->federation());
-    query.bindValue(u":origin"_s, player->origin());
-    query.bindValue(u":sex"_s, player->sex());
+    query.bindValue(u":id"_s, player->getId());
+    query.bindValue(u":startingRank"_s, player->getStartingRank());
+    query.bindValue(u":title"_s, Player::titleString(player->getTitle()));
+    query.bindValue(u":name"_s, player->getName());
+    query.bindValue(u":rating"_s, player->getRating());
+    query.bindValue(u":nationalRating"_s, player->getNationalRating());
+    query.bindValue(u":playerId"_s, player->getPlayerId());
+    query.bindValue(u":birthDate"_s, player->getBirthDate());
+    query.bindValue(u":federation"_s, player->getFederation());
+    query.bindValue(u":origin"_s, player->getOrigin());
+    query.bindValue(u":sex"_s, player->getSex());
     query.bindValue(u":tournament"_s, m_id);
     query.exec();
 
     if (query.lastError().isValid()) {
-        qDebug() << "save player" << *player << query.lastError();
+        qDebug() << "save player" << player->getName() << query.lastError();
     }
 
     Q_EMIT numberOfRatedPlayersChanged();
@@ -245,14 +246,14 @@ void Tournament::savePlayer(Player *player)
 void Tournament::sortPlayers()
 {
     std::ranges::sort(m_players, [](const std::unique_ptr<Player> &p1, const std::unique_ptr<Player> &p2) {
-        if (p1->rating() == p2->rating()) {
-            if (Player::titleStrengthLevel(p1->title()) == Player::titleStrengthLevel(p2->title())) {
-                auto cmp = p1->name().toLower().localeAwareCompare(p2->name().toLower());
+        if (p1->getRating() == p2->getRating()) {
+            if (Player::titleStrengthLevel(p1->getTitle()) == Player::titleStrengthLevel(p2->getTitle())) {
+                auto cmp = p1->getName().toLower().localeAwareCompare(p2->getName().toLower());
                 return cmp < 0;
             }
-            return Player::titleStrengthLevel(p1->title()) < Player::titleStrengthLevel(p2->title());
+            return Player::titleStrengthLevel(p1->getTitle()) < Player::titleStrengthLevel(p2->getTitle());
         }
-        return p1->rating() > p2->rating();
+        return p1->getRating() > p2->getRating();
     });
 
     for (std::size_t i = 0; i < m_players.size(); i++) {
@@ -270,11 +271,11 @@ void Tournament::changePlayerStartingRank(Player *player, int startingRank)
 
     const auto &players = m_players;
     for (const auto &p : players) {
-        if (p->startingRank() >= rank && p->startingRank() < player->startingRank()) {
-            p->setStartingRank(p->startingRank() + 1);
+        if (p->getStartingRank() >= rank && p->getStartingRank() < player->getStartingRank()) {
+            p->setStartingRank(p->getStartingRank() + 1);
             savePlayer(p.get());
-        } else if (p->startingRank() > player->startingRank() && p->startingRank() <= rank) {
-            p->setStartingRank(p->startingRank() - 1);
+        } else if (p->getStartingRank() > player->getStartingRank() && p->getStartingRank() <= rank) {
+            p->setStartingRank(p->getStartingRank() - 1);
             savePlayer(p.get());
         }
     }
@@ -288,7 +289,7 @@ QMap<uint, Player *> Tournament::getPlayersByStartingRank()
     QMap<uint, Player *> players;
 
     for (const auto &player : std::as_const(m_players)) {
-        players[player->startingRank()] = player.get();
+        players[player->getStartingRank()] = player.get();
     }
 
     return players;
@@ -299,7 +300,7 @@ QMap<uint, Player *> Tournament::getPlayersById()
     QMap<uint, Player *> players;
 
     for (const auto &player : std::as_const(m_players)) {
-        players[player->id()] = player.get();
+        players[player->getId()] = player.get();
     }
 
     return players;
@@ -339,7 +340,7 @@ QList<Standing> Tournament::getStandings(State state)
                 }
                 return p1.values().at(i) > p2.values().at(i);
             }
-            return p1.player()->startingRank() < p2.player()->startingRank();
+            return p1.player()->getStartingRank() < p2.player()->getStartingRank();
         });
     };
 
@@ -498,9 +499,9 @@ std::expected<void, QString> Tournament::addPairing(int roundNumber, std::unique
     QSqlQuery query(m_event->getDB());
     query.prepare(ADD_PAIRING_QUERY);
     query.bindValue(u":board"_s, pairing->board());
-    query.bindValue(u":whitePlayer"_s, pairing->whitePlayer()->id());
+    query.bindValue(u":whitePlayer"_s, pairing->whitePlayer()->getId());
     if (pairing->blackPlayer() != nullptr) {
-        query.bindValue(u":blackPlayer"_s, pairing->blackPlayer()->id());
+        query.bindValue(u":blackPlayer"_s, pairing->blackPlayer()->getId());
     } else {
         query.bindValue(u":blackPlayer"_s, QVariant(QMetaType::fromType<int>()));
     }
@@ -527,9 +528,9 @@ std::expected<void, QString> Tournament::savePairing(Pairing *pairing)
     query.prepare(UPDATE_PAIRING_QUERY);
     query.bindValue(u":id"_s, pairing->id());
     query.bindValue(u":board"_s, pairing->board());
-    query.bindValue(u":whitePlayer"_s, pairing->whitePlayer()->id());
+    query.bindValue(u":whitePlayer"_s, pairing->whitePlayer()->getId());
     if (pairing->blackPlayer() != nullptr) {
-        query.bindValue(u":blackPlayer"_s, pairing->blackPlayer()->id());
+        query.bindValue(u":blackPlayer"_s, pairing->blackPlayer()->getId());
     } else {
         query.bindValue(u":blackPlayer"_s, QVariant(QMetaType::fromType<int>()));
     }
@@ -582,7 +583,7 @@ int Tournament::numberOfPlayers()
 int Tournament::numberOfRatedPlayers()
 {
     return std::count_if(m_players.cbegin(), m_players.cend(), [](auto const &p) {
-        return p->rating() > 0;
+        return p->getRating() > 0;
     });
 }
 
@@ -598,19 +599,19 @@ std::expected<void, QString> Tournament::sortPairings()
             if (a->blackPlayer() == nullptr) {
                 aRank = 0;
             } else {
-                aRank = std::min(a->whitePlayer()->startingRank(), a->blackPlayer()->startingRank());
+                aRank = std::min(a->whitePlayer()->getStartingRank(), a->blackPlayer()->getStartingRank());
             }
 
             int bRank;
             if (b->blackPlayer() == nullptr) {
                 bRank = 0;
             } else {
-                bRank = std::min(b->whitePlayer()->startingRank(), b->blackPlayer()->startingRank());
+                bRank = std::min(b->whitePlayer()->getStartingRank(), b->blackPlayer()->getStartingRank());
             }
 
             if (aRank == 0 && bRank == 0) {
                 if (std::to_underlying(a->whiteResult()) == std::to_underlying(b->whiteResult())) {
-                    return a->whitePlayer()->startingRank() < b->whitePlayer()->startingRank();
+                    return a->whitePlayer()->getStartingRank() < b->whitePlayer()->getStartingRank();
                 }
                 return std::to_underlying(a->whiteResult()) > std::to_underlying(b->whiteResult());
             }
@@ -623,7 +624,7 @@ std::expected<void, QString> Tournament::sortPairings()
 
             double aScore;
             double aTotal;
-            if (a->whitePlayer()->startingRank() < a->blackPlayer()->startingRank()) {
+            if (a->whitePlayer()->getStartingRank() < a->blackPlayer()->getStartingRank()) {
                 aScore = state.getPoints(a->whitePlayer());
                 aTotal = aScore + state.getPoints(a->blackPlayer());
             } else {
@@ -632,7 +633,7 @@ std::expected<void, QString> Tournament::sortPairings()
             }
             double bScore;
             double bTotal;
-            if (b->whitePlayer()->startingRank() < b->blackPlayer()->startingRank()) {
+            if (b->whitePlayer()->getStartingRank() < b->blackPlayer()->getStartingRank()) {
                 bScore = state.getPoints(b->whitePlayer());
                 bTotal = bScore + state.getPoints(b->blackPlayer());
             } else {
@@ -862,7 +863,7 @@ QJsonObject Tournament::toJson() const
 
     QJsonArray players;
     for (const auto &player : std::as_const(m_players)) {
-        players << player->toJson();
+        // players << player->toJson(); TODO:
     }
 
     json[QStringLiteral("tournament")] = tournament;
@@ -907,7 +908,7 @@ void Tournament::read(const QJsonObject &json)
         m_players.clear();
         m_players.reserve(players.size());
         for (const auto &player : std::as_const(players)) {
-            m_players.push_back(Player::fromJson(player.toObject()));
+            // m_players.push_back(Player::fromJson(player.toObject())); TODO:
         }
     }
 }

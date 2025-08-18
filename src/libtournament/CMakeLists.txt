@@ -7,7 +7,7 @@ target_sources(libtournament PRIVATE
     event.cpp
     pairing.cpp
     pairingengine.cpp
-    player.cpp
+    # player.cpp
     round.cpp
     standing.cpp
     state.cpp

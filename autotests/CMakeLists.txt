@@ -23,3 +23,9 @@ ecm_add_test(
     TEST_NAME utilstest
 )
 
+# ecm_add_test(
+# rusttest.cpp
+# LINK_LIBRARIES tournament Qt::Test
+# TEST_NAME rusttest
+# )
+

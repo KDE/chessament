@@ -6,6 +6,7 @@
 #include <KLocalizedString>
 
 #include "libtournament/tournament.h"
+#include "tournament/src/player.cxxqt.h"
 
 PlayersModel::PlayersModel(QObject *parent)
     : QAbstractTableModel(parent)
@@ -38,48 +39,48 @@ QVariant PlayersModel::data(const QModelIndex &index, int role) const
     if (role == Qt::DisplayRole) {
         switch (column) {
         case PlayersModel::Columns::StartingRank:
-            return player->startingRank();
+            return player->getStartingRank();
         case PlayersModel::Columns::Title:
-            return Player::titleString(player->title());
+            return Player::titleString(player->getTitle());
         case PlayersModel::Columns::Name:
-            return player->name();
+            return player->getName();
         case PlayersModel::Columns::Rating:
-            return QLocale::system().toString(player->rating());
+            return QLocale::system().toString(player->getRating());
         case PlayersModel::Columns::NationalRating:
-            return QLocale::system().toString(player->nationalRating());
+            return QLocale::system().toString(player->getNationalRating());
         case PlayersModel::Columns::PlayerId:
-            return player->playerId();
+            return player->getPlayerId();
         case PlayersModel::Columns::BirthDate:
-            return player->birthDate();
+            return player->getBirthDate();
         case PlayersModel::Columns::Federation:
-            return player->federation();
+            return player->getFederation();
         case PlayersModel::Columns::Origin:
-            return player->origin();
+            return player->getOrigin();
         case PlayersModel::Columns::Gender:
-            return player->sex();
+            return player->getSex();
         }
     } else if (role == Qt::EditRole) {
         switch (column) {
         case PlayersModel::Columns::StartingRank:
-            return player->startingRank();
+            return player->getStartingRank();
         case PlayersModel::Columns::Title:
-            return Player::titleString(player->title());
+            return Player::titleString(player->getTitle());
         case PlayersModel::Columns::Name:
-            return player->name();
+            return player->getName();
         case PlayersModel::Columns::Rating:
-            return player->rating();
+            return player->getRating();
         case PlayersModel::Columns::NationalRating:
-            return player->nationalRating();
+            return player->getNationalRating();
         case PlayersModel::Columns::PlayerId:
-            return player->playerId();
+            return player->getPlayerId();
         case PlayersModel::Columns::BirthDate:
-            return player->birthDate();
+            return player->getBirthDate();
         case PlayersModel::Columns::Federation:
-            return player->federation();
+            return player->getFederation();
         case PlayersModel::Columns::Origin:
-            return player->origin();
+            return player->getOrigin();
         case PlayersModel::Columns::Gender:
-            return player->sex();
+            return player->getSex();
         }
     } else if (role == Qt::TextAlignmentRole) {
         switch (column) {
@@ -110,7 +111,7 @@ bool PlayersModel::setData(const QModelIndex &index, const QVariant &value, int 
     switch (field) {
     case PlayersModel::Columns::StartingRank: {
         auto rank = value.toInt();
-        if (rank == player->startingRank() || rank <= 0) {
+        if (rank == player->getStartingRank() || rank <= 0) {
             return false;
         }
         m_tournament->changePlayerStartingRank(player, rank);
@@ -219,7 +220,7 @@ void PlayersModel::updatePlayer(Player *player)
 {
     Q_UNUSED(player);
 
-    Q_EMIT dataChanged(index(player->startingRank() - 1, 0), index(player->startingRank() - 1, columnCount() - 1), {});
+    Q_EMIT dataChanged(index(player->getStartingRank() - 1, 0), index(player->getStartingRank() - 1, columnCount() - 1), {});
 }
 
 void PlayersModel::reloadPlayers()

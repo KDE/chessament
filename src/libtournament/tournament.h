@@ -17,13 +17,13 @@
 #include <expected>
 
 #include "pairingengine.h"
-#include "player.h"
 #include "round.h"
 #include "standing.h"
 #include "tiebreaks/tiebreak.h"
 
 class Document;
 class Event;
+class Player;
 
 using namespace Qt::StringLiterals;
 
