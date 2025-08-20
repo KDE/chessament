@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-10 00:40+0000\n"
+"POT-Creation-Date: 2025-08-20 00:40+0000\n"
 "PO-Revision-Date: 2025-08-06 07:25+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -74,14 +74,14 @@ msgctxt "bbpPairings is the name of a program, should not be translated"
 msgid "bbpPairings terminated with a non zero exit code: %1"
 msgstr "bbpPairings se je končal z neničelno kodo izhoda: %1"
 
-#: libtournament/pairingengine.cpp:71 libtournament/trf.cpp:176
+#: libtournament/pairingengine.cpp:71 libtournament/trf.cpp:219
 #, kde-format
 msgid "Invalid pairing \"%1\"."
 msgstr "Neveljaven par \"%1\"."
 
 #: libtournament/pairingengine.cpp:77 libtournament/pairingengine.cpp:81
 #: libtournament/pairingengine.cpp:85 libtournament/pairingengine.cpp:89
-#: libtournament/trf.cpp:189
+#: libtournament/trf.cpp:232
 #, kde-format
 msgid "Invalid player \"%1\" on pairing \"%2\"."
 msgstr "Neveljaven igralec \"%1\" v paru \"%2\"."
@@ -130,12 +130,18 @@ msgstr "Igralca \"%1\" ni mogoče najti."
 msgid "Unknown result on pairing \"%1\" with \"%2\"."
 msgstr "Neznan rezultat pri paru %1 z %2."
 
-#: libtournament/trf.cpp:196
+#: libtournament/trf.cpp:165
+#, kde-format
+msgctxt "@info"
+msgid "Date \"%1\" is invalid."
+msgstr ""
+
+#: libtournament/trf.cpp:239
 #, kde-format
 msgid "Unknown result \"%1\" on pairing \"%2\"."
 msgstr "Neznan rezultat \"%1\" pri uparjanju \"%2\"."
 
-#: libtournament/trf.cpp:199
+#: libtournament/trf.cpp:242
 #, kde-format
 msgid "Pairing \"%1\" has no opponent."
 msgstr "Uparjanje \"%1\" nima nasprotnika."

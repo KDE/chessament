@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-10 00:40+0000\n"
+"POT-Creation-Date: 2025-08-20 00:40+0000\n"
 "PO-Revision-Date: 2025-07-23 01:07+0100\n"
 "Last-Translator: Manuel Alcaraz Zambrano <manuelalcarazzam@gmail.com>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -80,14 +80,14 @@ msgctxt "bbpPairings is the name of a program, should not be translated"
 msgid "bbpPairings terminated with a non zero exit code: %1"
 msgstr "bbpPairings finalizó con un código de salida distinto de cero: %1"
 
-#: libtournament/pairingengine.cpp:71 libtournament/trf.cpp:176
+#: libtournament/pairingengine.cpp:71 libtournament/trf.cpp:219
 #, kde-format
 msgid "Invalid pairing \"%1\"."
 msgstr "Emparejamiento «%1» no válido."
 
 #: libtournament/pairingengine.cpp:77 libtournament/pairingengine.cpp:81
 #: libtournament/pairingengine.cpp:85 libtournament/pairingengine.cpp:89
-#: libtournament/trf.cpp:189
+#: libtournament/trf.cpp:232
 #, kde-format
 msgid "Invalid player \"%1\" on pairing \"%2\"."
 msgstr "Jugador «%1» no válido para el emparejamiento «%2»."
@@ -138,12 +138,18 @@ msgstr "No se encuentra el jugador %1."
 msgid "Unknown result on pairing \"%1\" with \"%2\"."
 msgstr "Resultado desconocido en el emparejamiento de «%1» con «%2»."
 
-#: libtournament/trf.cpp:196
+#: libtournament/trf.cpp:165
+#, kde-format
+msgctxt "@info"
+msgid "Date \"%1\" is invalid."
+msgstr ""
+
+#: libtournament/trf.cpp:239
 #, kde-format
 msgid "Unknown result \"%1\" on pairing \"%2\"."
 msgstr "Resultado «%1» desconocido en el emparejamiento «%2»."
 
-#: libtournament/trf.cpp:199
+#: libtournament/trf.cpp:242
 #, kde-format
 msgid "Pairing \"%1\" has no opponent."
 msgstr "El emparejamiento «%1» no tiene oponente."

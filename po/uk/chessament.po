@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-10 00:40+0000\n"
+"POT-Creation-Date: 2025-08-20 00:40+0000\n"
 "PO-Revision-Date: 2025-08-06 20:35+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -77,14 +77,14 @@ msgctxt "bbpPairings is the name of a program, should not be translated"
 msgid "bbpPairings terminated with a non zero exit code: %1"
 msgstr "Роботу bbpPairings перервано з ненульовим кодом виходу: %1"
 
-#: libtournament/pairingengine.cpp:71 libtournament/trf.cpp:176
+#: libtournament/pairingengine.cpp:71 libtournament/trf.cpp:219
 #, kde-format
 msgid "Invalid pairing \"%1\"."
 msgstr "Некоректний розподіл на пари «%1»."
 
 #: libtournament/pairingengine.cpp:77 libtournament/pairingengine.cpp:81
 #: libtournament/pairingengine.cpp:85 libtournament/pairingengine.cpp:89
-#: libtournament/trf.cpp:189
+#: libtournament/trf.cpp:232
 #, kde-format
 msgid "Invalid player \"%1\" on pairing \"%2\"."
 msgstr "Некоректний гравець «%1» у поділі на пари «%2»."
@@ -133,12 +133,18 @@ msgstr "Гравця «%1» не знайдено."
 msgid "Unknown result on pairing \"%1\" with \"%2\"."
 msgstr "Невідомий результат для поділу на пари «%1» з «%2»."
 
-#: libtournament/trf.cpp:196
+#: libtournament/trf.cpp:165
+#, kde-format
+msgctxt "@info"
+msgid "Date \"%1\" is invalid."
+msgstr ""
+
+#: libtournament/trf.cpp:239
 #, kde-format
 msgid "Unknown result \"%1\" on pairing \"%2\"."
 msgstr "Невідомий результат «%1» у поділі на пари «%2»."
 
-#: libtournament/trf.cpp:199
+#: libtournament/trf.cpp:242
 #, kde-format
 msgid "Pairing \"%1\" has no opponent."
 msgstr "У парах «%1» немає суперника."
