@@ -37,7 +37,7 @@ QVariant TiebreakModel::data(const QModelIndex &index, int role) const
         return {};
     }
 
-    const auto tiebreak = m_tournament->tiebreaks()[index.row()];
+    const auto &tiebreak = m_tournament->tiebreaks()[index.row()];
 
     switch (role) {
     case Qt::DisplayRole:
@@ -59,7 +59,7 @@ bool TiebreakModel::setData(const QModelIndex &index, const QVariant &value, int
         return false;
     }
 
-    const auto tiebreak = m_tournament->tiebreaks()[index.row()];
+    const auto &tiebreak = m_tournament->tiebreaks()[index.row()];
     tiebreak->setOptions(value.value<QList<QVariantMap>>());
 
     m_tournament->saveTiebreaks();
@@ -82,9 +82,9 @@ void TiebreakModel::addTiebreak(const QString &tiebreak)
 {
     beginInsertRows({}, rowCount(), rowCount());
 
-    auto tiebreaks = m_tournament->tiebreaks();
-    tiebreaks << Tournament::tiebreak(tiebreak);
-    m_tournament->setTiebreaks(tiebreaks);
+    auto &tiebreaks = m_tournament->tiebreaks();
+    tiebreaks.push_back(Tournament::tiebreak(tiebreak));
+    m_tournament->saveTiebreaks();
 
     endInsertRows();
 }
@@ -93,9 +93,9 @@ void TiebreakModel::remove(int row)
 {
     beginRemoveRows({}, row, row);
 
-    auto tiebreaks = m_tournament->tiebreaks();
-    tiebreaks.removeAt(row);
-    m_tournament->setTiebreaks(tiebreaks);
+    auto &tiebreaks = m_tournament->tiebreaks();
+    tiebreaks.erase(tiebreaks.begin() + row);
+    m_tournament->saveTiebreaks();
 
     endRemoveRows();
 }
@@ -104,9 +104,9 @@ void TiebreakModel::moveUp(int row)
 {
     Q_ASSERT(row > 0);
 
-    auto tiebreaks = m_tournament->tiebreaks();
+    auto &tiebreaks = m_tournament->tiebreaks();
     std::swap(tiebreaks[row], tiebreaks[row - 1]);
-    m_tournament->setTiebreaks(tiebreaks);
+    m_tournament->saveTiebreaks();
 
     Q_EMIT dataChanged(index(row - 1), index(row));
 }
@@ -115,9 +115,9 @@ void TiebreakModel::moveDown(int row)
 {
     Q_ASSERT(row + 1 < rowCount());
 
-    auto tiebreaks = m_tournament->tiebreaks();
+    auto &tiebreaks = m_tournament->tiebreaks();
     std::swap(tiebreaks[row], tiebreaks[row + 1]);
-    m_tournament->setTiebreaks(tiebreaks);
+    m_tournament->saveTiebreaks();
 
     Q_EMIT dataChanged(index(row), index(row + 1));
 }

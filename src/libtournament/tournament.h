@@ -45,13 +45,11 @@ class Tournament : public QObject
     Q_PROPERTY(QString chiefArbiter READ chiefArbiter WRITE setChiefArbiter NOTIFY chiefArbiterChanged)
     Q_PROPERTY(QString deputyChiefArbiter READ deputyChiefArbiter WRITE setDeputyChiefArbiter NOTIFY deputyChiefArbiterChanged)
     Q_PROPERTY(QString timeControl READ timeControl WRITE setTimeControl NOTIFY timeControlChanged)
-    Q_PROPERTY(QList<Tiebreak *> tiebreaks READ tiebreaks WRITE setTiebreaks NOTIFY tiebreaksChanged)
 
     Q_PROPERTY(int numberOfPlayers READ numberOfPlayers NOTIFY numberOfPlayersChanged)
     Q_PROPERTY(int numberOfRatedPlayers READ numberOfRatedPlayers NOTIFY numberOfRatedPlayersChanged)
     Q_PROPERTY(int numberOfRounds READ numberOfRounds WRITE setNumberOfRounds NOTIFY numberOfRoundsChanged)
     Q_PROPERTY(int currentRound READ currentRound WRITE setCurrentRound NOTIFY currentRoundChanged)
-    Q_PROPERTY(QList<Tiebreak *> tiebreaks READ tiebreaks WRITE setTiebreaks NOTIFY tiebreaksChanged)
 
 public:
     /*!
@@ -116,7 +114,7 @@ public:
      *
      * This property holds the list of tiebreaks of the tournament.
      */
-    [[nodiscard]] QList<Tiebreak *> tiebreaks() const;
+    [[nodiscard]] std::vector<std::unique_ptr<Tiebreak>> &tiebreaks();
 
     /*!
      * \property Tournament::numberOfRounds
@@ -189,7 +187,9 @@ public:
 
     Q_INVOKABLE QList<QVariantMap> availableTiebreaks();
 
-    static Tiebreak *tiebreak(const QString &id);
+    static std::unique_ptr<Tiebreak> tiebreak(const QString &id);
+
+    void setTiebreaks(std::vector<std::unique_ptr<Tiebreak>> tiebreaks);
 
     [[nodiscard]] Round *round(int number) const;
 
@@ -485,7 +485,6 @@ public Q_SLOTS:
     void setTimeControl(const QString &timeControl);
     void setNumberOfRounds(int numberOfRounds);
     void setCurrentRound(int currentRound);
-    void setTiebreaks(const QList<Tiebreak *> &tiebreaks);
 
     void setInitialColor(Tournament::InitialColor color);
 
@@ -526,7 +525,7 @@ private:
     QString m_timeControl;
     int m_numberOfRounds = 1;
     int m_currentRound = 0;
-    QList<Tiebreak *> m_tiebreaks;
+    std::vector<std::unique_ptr<Tiebreak>> m_tiebreaks;
 
     std::vector<std::unique_ptr<Player>> m_players;
     std::vector<std::unique_ptr<Round>> m_rounds;
