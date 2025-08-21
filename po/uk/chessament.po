@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-20 00:40+0000\n"
-"PO-Revision-Date: 2025-08-06 20:35+0300\n"
+"PO-Revision-Date: 2025-08-20 09:29+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -137,7 +137,7 @@ msgstr "Невідомий результат для поділу на пари 
 #, kde-format
 msgctxt "@info"
 msgid "Date \"%1\" is invalid."
-msgstr ""
+msgstr "Дата «%1» є некоректною."
 
 #: libtournament/trf.cpp:239
 #, kde-format
