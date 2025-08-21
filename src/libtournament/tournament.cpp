@@ -21,7 +21,7 @@
 Tournament::Tournament(Event *event)
     : m_event(event)
 {
-    m_tiebreaks = {new Points()};
+    m_tiebreaks.push_back(std::make_unique<Points>());
 }
 
 QString Tournament::id() const
@@ -128,19 +128,18 @@ void Tournament::setTimeControl(const QString &timeControl)
     Q_EMIT timeControlChanged();
 }
 
-QList<Tiebreak *> Tournament::tiebreaks() const
+std::vector<std::unique_ptr<Tiebreak>> &Tournament::tiebreaks()
 {
     return m_tiebreaks;
 }
 
-void Tournament::setTiebreaks(const QList<Tiebreak *> &tiebreaks)
+void Tournament::setTiebreaks(std::vector<std::unique_ptr<Tiebreak>> tiebreaks)
 {
     if (m_tiebreaks == tiebreaks) {
         return;
     }
-    m_tiebreaks = tiebreaks;
+    m_tiebreaks = std::move(tiebreaks);
     saveTiebreaks();
-    Q_EMIT tiebreaksChanged();
 }
 
 int Tournament::numberOfRounds() const
@@ -410,16 +409,16 @@ QList<QVariantMap> Tournament::availableTiebreaks()
     };
 }
 
-Tiebreak *Tournament::tiebreak(const QString &id)
+std::unique_ptr<Tiebreak> Tournament::tiebreak(const QString &id)
 {
     if (id == "pts"_L1) {
-        return new Points();
+        return std::make_unique<Points>();
     }
     if (id == "bh"_L1) {
-        return new Buchholz();
+        return std::make_unique<Buchholz>();
     }
     if (id == "win"_L1) {
-        return new NumberOfWins();
+        return std::make_unique<NumberOfWins>();
     }
     return nullptr;
 }
@@ -810,6 +809,8 @@ void Tournament::saveTiebreaks()
     const auto text = doc.toJson(QJsonDocument::Compact);
 
     setOption("tiebreaks"_L1, text);
+
+    Q_EMIT tiebreaksChanged();
 }
 
 QVariant Tournament::getOption(const QString &name)
@@ -1193,7 +1194,7 @@ std::expected<void, QString> Tournament::loadTiebreaks()
                 tiebreak->setOptions(options.toObject().toVariantMap());
             }
 
-            m_tiebreaks << tiebreak;
+            m_tiebreaks.push_back(std::move(tiebreak));
         }
     }
 

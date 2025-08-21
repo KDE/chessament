@@ -77,7 +77,10 @@ void BuchholzTest::testBuchholz()
     auto tournament = event->importTournament(fileName);
     QVERIFY(tournament.has_value());
 
-    (*tournament)->setTiebreaks({new Points(), new Buchholz()});
+    std::vector<std::unique_ptr<Tiebreak>> tiebreaks;
+    tiebreaks.push_back(std::make_unique<Points>());
+    tiebreaks.push_back(std::make_unique<Buchholz>());
+    (*tournament)->setTiebreaks(std::move(tiebreaks));
 
     const auto state = (*tournament)->getState();
     const auto standings = (*tournament)->getStandings(state);
