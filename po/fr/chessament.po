@@ -5,15 +5,15 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-20 00:40+0000\n"
-"PO-Revision-Date: 2025-06-08 13:43+0200\n"
-"Last-Translator: Thomas Vergnaud <thomas.vergnaud@mailo.fr>\n"
-"Language-Team: French <kde-francophone@kde.org>\n"
+"PO-Revision-Date: 2025-07-23 09:22+0200\n"
+"Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
+"Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.12.3\n"
+"X-Generator: Lokalize 25.07.80\n"
 
 #: chessamentapplication.cpp:23
 #, kde-format
@@ -643,8 +643,8 @@ msgstr[1] "Ajouter un joueur"
 msgctxt "@info:status Number of rated players"
 msgid "1 rated"
 msgid_plural "%1 rated"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Noté 1"
+msgstr[1] "Noté %1"
 
 #: qml/PlayersPage.qml:181
 #, kde-format
