@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-20 00:40+0000\n"
-"PO-Revision-Date: 2025-07-14 10:56+0300\n"
+"PO-Revision-Date: 2025-08-23 09:44+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #: chessamentapplication.cpp:23
 #, kde-format
@@ -98,21 +98,19 @@ msgstr ""
 #, kde-format
 msgctxt "Game points"
 msgid "Points"
-msgstr ""
+msgstr "Pisteet"
 
 #: libtournament/tournament.cpp:404
 #, kde-format
 msgctxt "Buchholz tiebreak"
 msgid "Buchholz"
-msgstr ""
+msgstr "Buchholz"
 
 #: libtournament/tournament.cpp:408
-#, fuzzy, kde-format
-#| msgctxt "@label"
-#| msgid "Number of rounds"
+#, kde-format
 msgctxt "Number of Wins tiebreak"
 msgid "Number of Wins"
-msgstr "Kierrosten määrä"
+msgstr "Voittojen määrä"
 
 #: libtournament/tournament.cpp:728
 #, kde-format
@@ -199,9 +197,7 @@ msgid "Import Tournament Report File."
 msgstr "Tuo turnausraportti…"
 
 #: pairingmodel.cpp:95
-#, fuzzy, kde-format
-#| msgctxt "@title:column"
-#| msgid "Board"
+#, kde-format
 msgctxt "@title:column Board Number"
 msgid "Board"
 msgstr "Lauta"
@@ -210,28 +206,22 @@ msgstr "Lauta"
 #, kde-format
 msgctxt "@title:column White Player Starting Rank Number"
 msgid "№"
-msgstr ""
+msgstr "№"
 
 #: pairingmodel.cpp:99
-#, fuzzy, kde-format
-#| msgctxt "@title:column"
-#| msgid "White player"
+#, kde-format
 msgctxt "@title:column Name of the White Player"
 msgid "White Player"
 msgstr "Valkoinen pelaaja"
 
 #: pairingmodel.cpp:101
-#, fuzzy, kde-format
-#| msgctxt "@title:column"
-#| msgid "Result"
+#, kde-format
 msgctxt "@title:column Game Result"
 msgid "Result"
 msgstr "Tulos"
 
 #: pairingmodel.cpp:103
-#, fuzzy, kde-format
-#| msgctxt "@title:column"
-#| msgid "Black Player"
+#, kde-format
 msgctxt "@title:column Name of the Black Player"
 msgid "Black Player"
 msgstr "Musta pelaaja"
@@ -240,26 +230,22 @@ msgstr "Musta pelaaja"
 #, kde-format
 msgctxt "@title:column Black Player Starting Rank Number"
 msgid "№"
-msgstr ""
+msgstr "№"
 
 #: playersmodel.cpp:171 standingsmodel.cpp:90
 #, kde-format
 msgctxt "@title:column Player Starting Rank Number"
 msgid "№"
-msgstr ""
+msgstr "№"
 
 #: playersmodel.cpp:173 standingsmodel.cpp:92
-#, fuzzy, kde-format
-#| msgctxt "@title:column"
-#| msgid "Title"
+#, kde-format
 msgctxt "@title:column Player Title"
 msgid "Title"
 msgstr "Otsikko"
 
 #: playersmodel.cpp:175 standingsmodel.cpp:94
-#, fuzzy, kde-format
-#| msgctxt "@title:column"
-#| msgid "Name"
+#, kde-format
 msgctxt "@title:column Player Name"
 msgid "Name"
 msgstr "Nimi"
@@ -268,13 +254,13 @@ msgstr "Nimi"
 #, kde-format
 msgctxt "@title:column Player Rating"
 msgid "Rating"
-msgstr ""
+msgstr "Vahvuusluku"
 
 #: playersmodel.cpp:179
 #, kde-format
 msgctxt "@title:column Player National Rating"
 msgid "National Rating"
-msgstr ""
+msgstr "Kansallinen vahvuusluku"
 
 #: playersmodel.cpp:181
 #, kde-format
@@ -288,16 +274,15 @@ msgctxt "@title:column"
 msgid "Birth date"
 msgstr "Syntymäaika"
 
+# Tämä on puhdas arvaus! En tiedä, mitä sanaa šakkipiireissä käytetään. Kansallinen yhteisö on kuitenkin ”Suomen shakkiliitto”.
 #: playersmodel.cpp:185
 #, kde-format
 msgctxt "@title:column Player Federation"
 msgid "Federation"
-msgstr ""
+msgstr "Liitto"
 
 #: playersmodel.cpp:187
-#, fuzzy, kde-format
-#| msgctxt "@title:column"
-#| msgid "Origin"
+#, kde-format
 msgctxt "@title:column Player Origin"
 msgid "Origin"
 msgstr "Alkuperä"
@@ -413,25 +398,25 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button Move tiebreak up"
 msgid "Move Up"
-msgstr ""
+msgstr "Siirrä ylemmäs"
 
 #: qml/components/TiebreakDelegate.qml:56
 #, kde-format
 msgctxt "@action:button Move tiebreak up"
 msgid "Move up"
-msgstr ""
+msgstr "Siirrä ylemmäs"
 
 #: qml/components/TiebreakDelegate.qml:63
 #, kde-format
 msgctxt "@action:button Move tiebreak down"
 msgid "Move Down"
-msgstr ""
+msgstr "Siirrä alemmas"
 
 #: qml/components/TiebreakDelegate.qml:68
 #, kde-format
 msgctxt "@action:button Move tiebreak down"
 msgid "Move down"
-msgstr ""
+msgstr "Siirrä alemmas"
 
 #: qml/components/TiebreakDelegate.qml:75
 #, kde-format
@@ -938,9 +923,7 @@ msgid "Logout"
 msgstr "Kirjaudu ulos"
 
 #: standingsmodel.cpp:88
-#, fuzzy, kde-format
-#| msgctxt "@title:colunm"
-#| msgid "Rank"
+#, kde-format
 msgctxt "@title:column Player Ranking"
 msgid "Rank"
 msgstr "Sijoitus"
