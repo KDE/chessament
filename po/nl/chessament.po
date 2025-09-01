@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-20 00:40+0000\n"
+"POT-Creation-Date: 2025-09-01 00:39+0000\n"
 "PO-Revision-Date: 2025-08-20 11:49+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -94,30 +94,30 @@ msgctxt "@label:spinbox"
 msgid "Exclude the lowest scores:"
 msgstr "Sluit de laagste scores uit:"
 
-#: libtournament/tournament.cpp:400
+#: libtournament/tournament.cpp:399
 #, kde-format
 msgctxt "Game points"
 msgid "Points"
 msgstr "Punten"
 
-#: libtournament/tournament.cpp:404
+#: libtournament/tournament.cpp:403
 #, kde-format
 msgctxt "Buchholz tiebreak"
 msgid "Buchholz"
 msgstr "Buchholz"
 
-#: libtournament/tournament.cpp:408
+#: libtournament/tournament.cpp:407
 #, kde-format
 msgctxt "Number of Wins tiebreak"
 msgid "Number of Wins"
 msgstr "Aantal winsten"
 
-#: libtournament/tournament.cpp:728
+#: libtournament/tournament.cpp:727
 #, kde-format
 msgid "An error ocurred while pairing the round: %1"
 msgstr "Er deed zich een fout voor tijdens paring van ronde: %1"
 
-#: libtournament/tournament.cpp:990
+#: libtournament/tournament.cpp:991
 #, kde-format
 msgid "Couldn't open file"
 msgstr "Kon bestand niet openen"

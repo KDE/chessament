@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-20 00:40+0000\n"
+"POT-Creation-Date: 2025-09-01 00:39+0000\n"
 "PO-Revision-Date: 2025-05-12 14:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -93,30 +93,30 @@ msgctxt "@label:spinbox"
 msgid "Exclude the lowest scores:"
 msgstr "排除最低得分："
 
-#: libtournament/tournament.cpp:400
+#: libtournament/tournament.cpp:399
 #, kde-format
 msgctxt "Game points"
 msgid "Points"
 msgstr "点数"
 
-#: libtournament/tournament.cpp:404
+#: libtournament/tournament.cpp:403
 #, kde-format
 msgctxt "Buchholz tiebreak"
 msgid "Buchholz"
 msgstr "Buchholz"
 
-#: libtournament/tournament.cpp:408
+#: libtournament/tournament.cpp:407
 #, kde-format
 msgctxt "Number of Wins tiebreak"
 msgid "Number of Wins"
 msgstr "获胜次数"
 
-#: libtournament/tournament.cpp:728
+#: libtournament/tournament.cpp:727
 #, kde-format
 msgid "An error ocurred while pairing the round: %1"
 msgstr "在生成本轮对阵时发生错误：%1"
 
-#: libtournament/tournament.cpp:990
+#: libtournament/tournament.cpp:991
 #, kde-format
 msgid "Couldn't open file"
 msgstr "无法打开文件"
