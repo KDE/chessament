@@ -28,7 +28,6 @@
   <name xml:lang="sl">Chessament</name>
   <name xml:lang="tr">Chessament</name>
   <name xml:lang="uk">Chessament</name>
-  <name xml:lang="x-test">xxChessamentxx</name>
   <name xml:lang="zh-CN">Chessament</name>
   <summary>Chess tournament manager</summary>
   <summary xml:lang="ar">مدير بطولة شطرنج</summary>
@@ -50,7 +49,6 @@
   <summary xml:lang="sl">Upravljalnik šahovskih turnirjev</summary>
   <summary xml:lang="tr">Satranç turnuvası yöneticisi</summary>
   <summary xml:lang="uk">Керування шаховим турніром</summary>
-  <summary xml:lang="x-test">xxChess tournament managerxx</summary>
   <summary xml:lang="zh-CN">国际象棋赛事管理系统</summary>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-3.0-or-later</project_license>
@@ -78,7 +76,6 @@
     <p xml:lang="sl">Chessament je upravitelj šahovskih turnirjev. Trenutno podpira posamezne turnirje po švicarskem sistemu.</p>
     <p xml:lang="tr">Chessament, bir satranç turnuvası yöneticisidir. Şu anda yalnızca İsviçre tarzı turnuvaları destekler.</p>
     <p xml:lang="uk">Chessament — програма для керування шаховими турнірами. У поточній версії передбачено турніри за індивідуальною швейцарською системою.</p>
-    <p xml:lang="x-test">xxChessament is a chess tournament manager. It currently supports individual Swiss-system tournaments.xx</p>
     <p xml:lang="zh-CN">Chessament 是一个国际象棋赛事管理系统。目前支持举办个人瑞士制比赛。</p>
   </description>
   <url type="homepage">https://apps.kde.org/chessament/</url>
