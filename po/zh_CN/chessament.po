@@ -135,7 +135,7 @@ msgstr "配对“%1”和“%2”时出现未知结果。"
 #, kde-format
 msgctxt "@info"
 msgid "Date \"%1\" is invalid."
-msgstr ""
+msgstr "日期“%1”无效。"
 
 #: libtournament/trf.cpp:239
 #, kde-format
