@@ -5,6 +5,7 @@
 #include "libtournament/pairing.h"
 #include "libtournament/state.h"
 #include "standing.h"
+#include "tournament/src/ratinglist.cxxqt.h"
 
 #include <QCoroFuture>
 #include <QRandomGenerator>

@@ -59,6 +59,21 @@ ecm_add_qml_module(chessament_static
         org.kde.chessament.settings
 )
 
+cxx_qt_import_crate(
+    MANIFEST_PATH tournament/Cargo.toml
+    CRATES tournament
+    CRATE_TYPE staticlib
+    QT_MODULES Qt6::Core Qt6::Qml
+)
+
+cxx_qt_import_qml_module(
+    tournament_qml_module
+    URI "org.kde.chessament.tournament"
+    SOURCE_CRATE tournament
+)
+
+target_link_libraries(libtournament PUBLIC tournament_qml_module)
+
 kde_source_files_enable_exceptions(controller.cpp)
 
 target_sources(chessament_static PUBLIC
