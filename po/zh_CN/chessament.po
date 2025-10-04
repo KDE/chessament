@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-01 00:39+0000\n"
+"POT-Creation-Date: 2025-10-04 14:12+0000\n"
 "PO-Revision-Date: 2025-05-12 14:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -57,95 +57,6 @@ msgstr "初始排名"
 msgctxt "@title"
 msgid "Round %1 Pairings"
 msgstr "第 %1 轮对阵"
-
-#: libtournament/pairingengine.cpp:20
-#, kde-format
-msgctxt "bbpPairings is the name of a program, should not be translated"
-msgid "The pairing engine bbpPairings could not be found. Is it installed?"
-msgstr "未找到对阵引擎 bbpPairings。是否已安装？"
-
-#: libtournament/pairingengine.cpp:28
-#, kde-format
-msgid "Could not create temporary file."
-msgstr "无法创建临时文件。"
-
-#: libtournament/pairingengine.cpp:53
-#, kde-format
-msgctxt "bbpPairings is the name of a program, should not be translated"
-msgid "bbpPairings terminated with a non zero exit code: %1"
-msgstr "对阵引擎 bbpPairings 已终止，非零退出代码：%1"
-
-#: libtournament/pairingengine.cpp:71 libtournament/trf.cpp:219
-#, kde-format
-msgid "Invalid pairing \"%1\"."
-msgstr "无效对阵“%1”。"
-
-#: libtournament/pairingengine.cpp:77 libtournament/pairingengine.cpp:81
-#: libtournament/pairingengine.cpp:85 libtournament/pairingengine.cpp:89
-#: libtournament/trf.cpp:232
-#, kde-format
-msgid "Invalid player \"%1\" on pairing \"%2\"."
-msgstr "对阵“%2”中的无效选手“%1”。"
-
-#: libtournament/tiebreaks/buchholz.cpp:14
-#, kde-format
-msgctxt "@label:spinbox"
-msgid "Exclude the lowest scores:"
-msgstr "排除最低得分："
-
-#: libtournament/tournament.cpp:399
-#, kde-format
-msgctxt "Game points"
-msgid "Points"
-msgstr "点数"
-
-#: libtournament/tournament.cpp:403
-#, kde-format
-msgctxt "Buchholz tiebreak"
-msgid "Buchholz"
-msgstr "Buchholz"
-
-#: libtournament/tournament.cpp:407
-#, kde-format
-msgctxt "Number of Wins tiebreak"
-msgid "Number of Wins"
-msgstr "获胜次数"
-
-#: libtournament/tournament.cpp:727
-#, kde-format
-msgid "An error ocurred while pairing the round: %1"
-msgstr "在生成本轮对阵时发生错误：%1"
-
-#: libtournament/tournament.cpp:991
-#, kde-format
-msgid "Couldn't open file"
-msgstr "无法打开文件"
-
-#: libtournament/trf.cpp:50 libtournament/trf.cpp:57
-#, kde-format
-msgid "Player \"%1\" not found."
-msgstr "无法找到玩家“%1”。"
-
-#: libtournament/trf.cpp:63
-#, kde-format
-msgid "Unknown result on pairing \"%1\" with \"%2\"."
-msgstr "配对“%1”和“%2”时出现未知结果。"
-
-#: libtournament/trf.cpp:165
-#, kde-format
-msgctxt "@info"
-msgid "Date \"%1\" is invalid."
-msgstr "日期“%1”无效。"
-
-#: libtournament/trf.cpp:239
-#, kde-format
-msgid "Unknown result \"%1\" on pairing \"%2\"."
-msgstr "对阵“%2”时出现未知结果“%1”。"
-
-#: libtournament/trf.cpp:242
-#, kde-format
-msgid "Pairing \"%1\" has no opponent."
-msgstr "对阵“%1”无对手。"
 
 #: main.cpp:60 qml/WelcomePage.qml:15
 #, kde-format
@@ -911,3 +822,92 @@ msgstr "退出登录"
 msgctxt "@title:column Player Ranking"
 msgid "Rank"
 msgstr "排名"
+
+#: tournament/pairingengine.cpp:20
+#, kde-format
+msgctxt "bbpPairings is the name of a program, should not be translated"
+msgid "The pairing engine bbpPairings could not be found. Is it installed?"
+msgstr "未找到对阵引擎 bbpPairings。是否已安装？"
+
+#: tournament/pairingengine.cpp:28
+#, kde-format
+msgid "Could not create temporary file."
+msgstr "无法创建临时文件。"
+
+#: tournament/pairingengine.cpp:53
+#, kde-format
+msgctxt "bbpPairings is the name of a program, should not be translated"
+msgid "bbpPairings terminated with a non zero exit code: %1"
+msgstr "对阵引擎 bbpPairings 已终止，非零退出代码：%1"
+
+#: tournament/pairingengine.cpp:71 tournament/trf.cpp:219
+#, kde-format
+msgid "Invalid pairing \"%1\"."
+msgstr "无效对阵“%1”。"
+
+#: tournament/pairingengine.cpp:77 tournament/pairingengine.cpp:81
+#: tournament/pairingengine.cpp:85 tournament/pairingengine.cpp:89
+#: tournament/trf.cpp:232
+#, kde-format
+msgid "Invalid player \"%1\" on pairing \"%2\"."
+msgstr "对阵“%2”中的无效选手“%1”。"
+
+#: tournament/tiebreaks/buchholz.cpp:14
+#, kde-format
+msgctxt "@label:spinbox"
+msgid "Exclude the lowest scores:"
+msgstr "排除最低得分："
+
+#: tournament/tournament.cpp:399
+#, kde-format
+msgctxt "Game points"
+msgid "Points"
+msgstr "点数"
+
+#: tournament/tournament.cpp:403
+#, kde-format
+msgctxt "Buchholz tiebreak"
+msgid "Buchholz"
+msgstr "Buchholz"
+
+#: tournament/tournament.cpp:407
+#, kde-format
+msgctxt "Number of Wins tiebreak"
+msgid "Number of Wins"
+msgstr "获胜次数"
+
+#: tournament/tournament.cpp:727
+#, kde-format
+msgid "An error ocurred while pairing the round: %1"
+msgstr "在生成本轮对阵时发生错误：%1"
+
+#: tournament/tournament.cpp:991
+#, kde-format
+msgid "Couldn't open file"
+msgstr "无法打开文件"
+
+#: tournament/trf.cpp:50 tournament/trf.cpp:57
+#, kde-format
+msgid "Player \"%1\" not found."
+msgstr "无法找到玩家“%1”。"
+
+#: tournament/trf.cpp:63
+#, kde-format
+msgid "Unknown result on pairing \"%1\" with \"%2\"."
+msgstr "配对“%1”和“%2”时出现未知结果。"
+
+#: tournament/trf.cpp:165
+#, kde-format
+msgctxt "@info"
+msgid "Date \"%1\" is invalid."
+msgstr "日期“%1”无效。"
+
+#: tournament/trf.cpp:239
+#, kde-format
+msgid "Unknown result \"%1\" on pairing \"%2\"."
+msgstr "对阵“%2”时出现未知结果“%1”。"
+
+#: tournament/trf.cpp:242
+#, kde-format
+msgid "Pairing \"%1\" has no opponent."
+msgstr "对阵“%1”无对手。"

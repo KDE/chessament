@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-01 00:39+0000\n"
+"POT-Creation-Date: 2025-10-04 14:12+0000\n"
 "PO-Revision-Date: 2025-08-20 10:31+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -59,96 +59,6 @@ msgstr "Posició d'eixida"
 msgctxt "@title"
 msgid "Round %1 Pairings"
 msgstr "Emparellaments de la ronda %1"
-
-#: libtournament/pairingengine.cpp:20
-#, kde-format
-msgctxt "bbpPairings is the name of a program, should not be translated"
-msgid "The pairing engine bbpPairings could not be found. Is it installed?"
-msgstr ""
-"No s'ha pogut trobar el motor d'emparellament bbpPairings. Està instal·lat?"
-
-#: libtournament/pairingengine.cpp:28
-#, kde-format
-msgid "Could not create temporary file."
-msgstr "No s'ha pogut crear un fitxer temporal."
-
-#: libtournament/pairingengine.cpp:53
-#, kde-format
-msgctxt "bbpPairings is the name of a program, should not be translated"
-msgid "bbpPairings terminated with a non zero exit code: %1"
-msgstr "bbpPairings ha finalitzat amb un codi d'eixida no zero: %1"
-
-#: libtournament/pairingengine.cpp:71 libtournament/trf.cpp:219
-#, kde-format
-msgid "Invalid pairing \"%1\"."
-msgstr "Emparellament no vàlid «%1»."
-
-#: libtournament/pairingengine.cpp:77 libtournament/pairingengine.cpp:81
-#: libtournament/pairingengine.cpp:85 libtournament/pairingengine.cpp:89
-#: libtournament/trf.cpp:232
-#, kde-format
-msgid "Invalid player \"%1\" on pairing \"%2\"."
-msgstr "Jugador «%1» no vàlid a l'emparellament «%2»."
-
-#: libtournament/tiebreaks/buchholz.cpp:14
-#, kde-format
-msgctxt "@label:spinbox"
-msgid "Exclude the lowest scores:"
-msgstr "Exclou les puntuacions més baixes:"
-
-#: libtournament/tournament.cpp:399
-#, kde-format
-msgctxt "Game points"
-msgid "Points"
-msgstr "Punts"
-
-#: libtournament/tournament.cpp:403
-#, kde-format
-msgctxt "Buchholz tiebreak"
-msgid "Buchholz"
-msgstr "Buchholz"
-
-#: libtournament/tournament.cpp:407
-#, kde-format
-msgctxt "Number of Wins tiebreak"
-msgid "Number of Wins"
-msgstr "Nombre de partides guanyades"
-
-#: libtournament/tournament.cpp:727
-#, kde-format
-msgid "An error ocurred while pairing the round: %1"
-msgstr "S'ha produït un error en emparellar la ronda: %1"
-
-#: libtournament/tournament.cpp:991
-#, kde-format
-msgid "Couldn't open file"
-msgstr "No s'ha pogut obrir el fitxer"
-
-#: libtournament/trf.cpp:50 libtournament/trf.cpp:57
-#, kde-format
-msgid "Player \"%1\" not found."
-msgstr "No s'ha trobat el jugador «%1»."
-
-#: libtournament/trf.cpp:63
-#, kde-format
-msgid "Unknown result on pairing \"%1\" with \"%2\"."
-msgstr "Resultat desconegut en l'emparellament de «%1» amb «%2»."
-
-#: libtournament/trf.cpp:165
-#, kde-format
-msgctxt "@info"
-msgid "Date \"%1\" is invalid."
-msgstr "La data «%1» no és vàlida."
-
-#: libtournament/trf.cpp:239
-#, kde-format
-msgid "Unknown result \"%1\" on pairing \"%2\"."
-msgstr "Resultat «%1» desconegut a l'emparellament «%2»."
-
-#: libtournament/trf.cpp:242
-#, kde-format
-msgid "Pairing \"%1\" has no opponent."
-msgstr "L'emparellament «%1» no té oponent."
 
 #: main.cpp:60 qml/WelcomePage.qml:15
 #, kde-format
@@ -918,3 +828,93 @@ msgstr "Eixida"
 msgctxt "@title:column Player Ranking"
 msgid "Rank"
 msgstr "Posició"
+
+#: tournament/pairingengine.cpp:20
+#, kde-format
+msgctxt "bbpPairings is the name of a program, should not be translated"
+msgid "The pairing engine bbpPairings could not be found. Is it installed?"
+msgstr ""
+"No s'ha pogut trobar el motor d'emparellament bbpPairings. Està instal·lat?"
+
+#: tournament/pairingengine.cpp:28
+#, kde-format
+msgid "Could not create temporary file."
+msgstr "No s'ha pogut crear un fitxer temporal."
+
+#: tournament/pairingengine.cpp:53
+#, kde-format
+msgctxt "bbpPairings is the name of a program, should not be translated"
+msgid "bbpPairings terminated with a non zero exit code: %1"
+msgstr "bbpPairings ha finalitzat amb un codi d'eixida no zero: %1"
+
+#: tournament/pairingengine.cpp:71 tournament/trf.cpp:219
+#, kde-format
+msgid "Invalid pairing \"%1\"."
+msgstr "Emparellament no vàlid «%1»."
+
+#: tournament/pairingengine.cpp:77 tournament/pairingengine.cpp:81
+#: tournament/pairingengine.cpp:85 tournament/pairingengine.cpp:89
+#: tournament/trf.cpp:232
+#, kde-format
+msgid "Invalid player \"%1\" on pairing \"%2\"."
+msgstr "Jugador «%1» no vàlid a l'emparellament «%2»."
+
+#: tournament/tiebreaks/buchholz.cpp:14
+#, kde-format
+msgctxt "@label:spinbox"
+msgid "Exclude the lowest scores:"
+msgstr "Exclou les puntuacions més baixes:"
+
+#: tournament/tournament.cpp:399
+#, kde-format
+msgctxt "Game points"
+msgid "Points"
+msgstr "Punts"
+
+#: tournament/tournament.cpp:403
+#, kde-format
+msgctxt "Buchholz tiebreak"
+msgid "Buchholz"
+msgstr "Buchholz"
+
+#: tournament/tournament.cpp:407
+#, kde-format
+msgctxt "Number of Wins tiebreak"
+msgid "Number of Wins"
+msgstr "Nombre de partides guanyades"
+
+#: tournament/tournament.cpp:727
+#, kde-format
+msgid "An error ocurred while pairing the round: %1"
+msgstr "S'ha produït un error en emparellar la ronda: %1"
+
+#: tournament/tournament.cpp:991
+#, kde-format
+msgid "Couldn't open file"
+msgstr "No s'ha pogut obrir el fitxer"
+
+#: tournament/trf.cpp:50 tournament/trf.cpp:57
+#, kde-format
+msgid "Player \"%1\" not found."
+msgstr "No s'ha trobat el jugador «%1»."
+
+#: tournament/trf.cpp:63
+#, kde-format
+msgid "Unknown result on pairing \"%1\" with \"%2\"."
+msgstr "Resultat desconegut en l'emparellament de «%1» amb «%2»."
+
+#: tournament/trf.cpp:165
+#, kde-format
+msgctxt "@info"
+msgid "Date \"%1\" is invalid."
+msgstr "La data «%1» no és vàlida."
+
+#: tournament/trf.cpp:239
+#, kde-format
+msgid "Unknown result \"%1\" on pairing \"%2\"."
+msgstr "Resultat «%1» desconegut a l'emparellament «%2»."
+
+#: tournament/trf.cpp:242
+#, kde-format
+msgid "Pairing \"%1\" has no opponent."
+msgstr "L'emparellament «%1» no té oponent."

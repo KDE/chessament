@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-01 00:39+0000\n"
+"POT-Creation-Date: 2025-10-04 14:12+0000\n"
 "PO-Revision-Date: 2025-08-20 09:29+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -58,96 +58,6 @@ msgstr "Початковий ранг"
 msgctxt "@title"
 msgid "Round %1 Pairings"
 msgstr "Поділ на пари раунду %1"
-
-#: libtournament/pairingengine.cpp:20
-#, kde-format
-msgctxt "bbpPairings is the name of a program, should not be translated"
-msgid "The pairing engine bbpPairings could not be found. Is it installed?"
-msgstr ""
-"Не вдалося знайти рушій поділу на пари bbpPairings. Чи встановлено цей рушій?"
-
-#: libtournament/pairingengine.cpp:28
-#, kde-format
-msgid "Could not create temporary file."
-msgstr "Не вдалося створити тимчасовий файл."
-
-#: libtournament/pairingengine.cpp:53
-#, kde-format
-msgctxt "bbpPairings is the name of a program, should not be translated"
-msgid "bbpPairings terminated with a non zero exit code: %1"
-msgstr "Роботу bbpPairings перервано з ненульовим кодом виходу: %1"
-
-#: libtournament/pairingengine.cpp:71 libtournament/trf.cpp:219
-#, kde-format
-msgid "Invalid pairing \"%1\"."
-msgstr "Некоректний розподіл на пари «%1»."
-
-#: libtournament/pairingengine.cpp:77 libtournament/pairingengine.cpp:81
-#: libtournament/pairingengine.cpp:85 libtournament/pairingengine.cpp:89
-#: libtournament/trf.cpp:232
-#, kde-format
-msgid "Invalid player \"%1\" on pairing \"%2\"."
-msgstr "Некоректний гравець «%1» у поділі на пари «%2»."
-
-#: libtournament/tiebreaks/buchholz.cpp:14
-#, kde-format
-msgctxt "@label:spinbox"
-msgid "Exclude the lowest scores:"
-msgstr "Виключити найнижчі рейтинги:"
-
-#: libtournament/tournament.cpp:399
-#, kde-format
-msgctxt "Game points"
-msgid "Points"
-msgstr "Очки"
-
-#: libtournament/tournament.cpp:403
-#, kde-format
-msgctxt "Buchholz tiebreak"
-msgid "Buchholz"
-msgstr "Бухгольц"
-
-#: libtournament/tournament.cpp:407
-#, kde-format
-msgctxt "Number of Wins tiebreak"
-msgid "Number of Wins"
-msgstr "Кількість перемог"
-
-#: libtournament/tournament.cpp:727
-#, kde-format
-msgid "An error ocurred while pairing the round: %1"
-msgstr "Під час поділу на пари для раунду сталася помилка: %1"
-
-#: libtournament/tournament.cpp:991
-#, kde-format
-msgid "Couldn't open file"
-msgstr "Не вдалося відкрити файл"
-
-#: libtournament/trf.cpp:50 libtournament/trf.cpp:57
-#, kde-format
-msgid "Player \"%1\" not found."
-msgstr "Гравця «%1» не знайдено."
-
-#: libtournament/trf.cpp:63
-#, kde-format
-msgid "Unknown result on pairing \"%1\" with \"%2\"."
-msgstr "Невідомий результат для поділу на пари «%1» з «%2»."
-
-#: libtournament/trf.cpp:165
-#, kde-format
-msgctxt "@info"
-msgid "Date \"%1\" is invalid."
-msgstr "Дата «%1» є некоректною."
-
-#: libtournament/trf.cpp:239
-#, kde-format
-msgid "Unknown result \"%1\" on pairing \"%2\"."
-msgstr "Невідомий результат «%1» у поділі на пари «%2»."
-
-#: libtournament/trf.cpp:242
-#, kde-format
-msgid "Pairing \"%1\" has no opponent."
-msgstr "У парах «%1» немає суперника."
 
 #: main.cpp:60 qml/WelcomePage.qml:15
 #, kde-format
@@ -921,6 +831,96 @@ msgstr "Вийти"
 msgctxt "@title:column Player Ranking"
 msgid "Rank"
 msgstr "Ранг"
+
+#: tournament/pairingengine.cpp:20
+#, kde-format
+msgctxt "bbpPairings is the name of a program, should not be translated"
+msgid "The pairing engine bbpPairings could not be found. Is it installed?"
+msgstr ""
+"Не вдалося знайти рушій поділу на пари bbpPairings. Чи встановлено цей рушій?"
+
+#: tournament/pairingengine.cpp:28
+#, kde-format
+msgid "Could not create temporary file."
+msgstr "Не вдалося створити тимчасовий файл."
+
+#: tournament/pairingengine.cpp:53
+#, kde-format
+msgctxt "bbpPairings is the name of a program, should not be translated"
+msgid "bbpPairings terminated with a non zero exit code: %1"
+msgstr "Роботу bbpPairings перервано з ненульовим кодом виходу: %1"
+
+#: tournament/pairingengine.cpp:71 tournament/trf.cpp:219
+#, kde-format
+msgid "Invalid pairing \"%1\"."
+msgstr "Некоректний розподіл на пари «%1»."
+
+#: tournament/pairingengine.cpp:77 tournament/pairingengine.cpp:81
+#: tournament/pairingengine.cpp:85 tournament/pairingengine.cpp:89
+#: tournament/trf.cpp:232
+#, kde-format
+msgid "Invalid player \"%1\" on pairing \"%2\"."
+msgstr "Некоректний гравець «%1» у поділі на пари «%2»."
+
+#: tournament/tiebreaks/buchholz.cpp:14
+#, kde-format
+msgctxt "@label:spinbox"
+msgid "Exclude the lowest scores:"
+msgstr "Виключити найнижчі рейтинги:"
+
+#: tournament/tournament.cpp:399
+#, kde-format
+msgctxt "Game points"
+msgid "Points"
+msgstr "Очки"
+
+#: tournament/tournament.cpp:403
+#, kde-format
+msgctxt "Buchholz tiebreak"
+msgid "Buchholz"
+msgstr "Бухгольц"
+
+#: tournament/tournament.cpp:407
+#, kde-format
+msgctxt "Number of Wins tiebreak"
+msgid "Number of Wins"
+msgstr "Кількість перемог"
+
+#: tournament/tournament.cpp:727
+#, kde-format
+msgid "An error ocurred while pairing the round: %1"
+msgstr "Під час поділу на пари для раунду сталася помилка: %1"
+
+#: tournament/tournament.cpp:991
+#, kde-format
+msgid "Couldn't open file"
+msgstr "Не вдалося відкрити файл"
+
+#: tournament/trf.cpp:50 tournament/trf.cpp:57
+#, kde-format
+msgid "Player \"%1\" not found."
+msgstr "Гравця «%1» не знайдено."
+
+#: tournament/trf.cpp:63
+#, kde-format
+msgid "Unknown result on pairing \"%1\" with \"%2\"."
+msgstr "Невідомий результат для поділу на пари «%1» з «%2»."
+
+#: tournament/trf.cpp:165
+#, kde-format
+msgctxt "@info"
+msgid "Date \"%1\" is invalid."
+msgstr "Дата «%1» є некоректною."
+
+#: tournament/trf.cpp:239
+#, kde-format
+msgid "Unknown result \"%1\" on pairing \"%2\"."
+msgstr "Невідомий результат «%1» у поділі на пари «%2»."
+
+#: tournament/trf.cpp:242
+#, kde-format
+msgid "Pairing \"%1\" has no opponent."
+msgstr "У парах «%1» немає суперника."
 
 #~ msgctxt "@action:button"
 #~ msgid "Add player"
