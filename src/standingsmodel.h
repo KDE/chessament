@@ -6,7 +6,7 @@
 #include <KLocalizedString>
 #include <QAbstractTableModel>
 
-#include "libtournament/tournament.h"
+#include "tournament/tournament.h"
 
 class Standing;
 

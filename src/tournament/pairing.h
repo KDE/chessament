@@ -12,8 +12,8 @@
 
 /*!
  * \class Pairing
- * \inmodule libtournament
- * \inheaderfile libtournament/pairing.h
+ * \inmodule tournament
+ * \inheaderfile tournament/pairing.h
  */
 class Pairing : public QObject
 {

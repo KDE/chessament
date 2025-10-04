@@ -5,7 +5,7 @@
 
 #include <QAbstractTableModel>
 
-#include "libtournament/pairing.h"
+#include "tournament/pairing.h"
 
 class PairingModel : public QAbstractTableModel
 {

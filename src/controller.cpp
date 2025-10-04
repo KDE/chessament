@@ -2,9 +2,9 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 
 #include "controller.h"
-#include "libtournament/pairing.h"
-#include "libtournament/state.h"
 #include "standing.h"
+#include "tournament/pairing.h"
+#include "tournament/state.h"
 
 #include <QCoroFuture>
 #include <QRandomGenerator>

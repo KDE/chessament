@@ -9,7 +9,7 @@ import QtQuick.Controls as Controls
 import org.kde.kirigamiaddons.formcard as FormCard
 
 import org.kde.chessament
-import org.kde.chessament.libtournament
+import org.kde.chessament.tournament
 
 FormCard.FormCardDialog {
     id: root

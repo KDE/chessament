@@ -12,8 +12,8 @@ using namespace Qt::StringLiterals;
 
 /*!
  * \class Player
- * \inmodule libtournament
- * \inheaderfile libtournament/player.h
+ * \inmodule tournament
+ * \inheaderfile tournament/player.h
  */
 class Player : public QObject
 {

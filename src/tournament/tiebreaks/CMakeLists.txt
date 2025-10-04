@@ -1,7 +1,7 @@
 # SPDX-FileCopyrightText: 2025 Manuel Alcaraz Zambrano <manuelalcarazzam@gmail.com>
 # SPDX-License-Identifier: BSD-2-Clause
 
-target_sources(libtournament PRIVATE
+target_sources(tournament PRIVATE
     tiebreak.cpp
 
     buchholz.cpp

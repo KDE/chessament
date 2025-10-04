@@ -10,11 +10,11 @@
 #include <QTemporaryFile>
 
 #include "account.h"
-#include "libtournament/event.h"
-#include "libtournament/tournament.h"
 #include "pairingmodel.h"
 #include "playersmodel.h"
 #include "standingsmodel.h"
+#include "tournament/event.h"
+#include "tournament/tournament.h"
 
 class Controller : public QObject
 {

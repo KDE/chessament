@@ -12,8 +12,8 @@
 
 /*!
  * \class Event
- * \inmodule libtournament
- * \inheaderfile libtournament/event.h
+ * \inmodule tournament
+ * \inheaderfile tournament/event.h
  */
 class Event : public QObject
 {

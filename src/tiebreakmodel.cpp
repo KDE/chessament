@@ -3,7 +3,7 @@
 
 #include "tiebreakmodel.h"
 
-#include "libtournament/tournament.h"
+#include "tournament/tournament.h"
 
 TiebreakModel::TiebreakModel(QObject *parent)
     : QAbstractListModel(parent)

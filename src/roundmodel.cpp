@@ -3,7 +3,7 @@
 
 #include "roundmodel.h"
 
-#include "libtournament/tournament.h"
+#include "tournament/tournament.h"
 
 RoundModel::RoundModel(QObject *parent)
     : QAbstractListModel(parent)

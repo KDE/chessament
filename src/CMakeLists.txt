@@ -3,7 +3,7 @@
 
 add_subdirectory(settings)
 
-add_subdirectory(libtournament)
+add_subdirectory(tournament)
 
 qt_add_library(chessament_static STATIC)
 ecm_add_qml_module(chessament_static
@@ -55,7 +55,7 @@ ecm_add_qml_module(chessament_static
         org.kde.kirigamiaddons.formcard
         org.kde.kirigamiaddons.statefulapp
         org.kde.kirigami
-        org.kde.chessament.libtournament
+        org.kde.chessament.tournament
         org.kde.chessament.settings
 )
 
@@ -67,7 +67,7 @@ target_sources(chessament_static PUBLIC
 )
 
 target_link_libraries(chessament_static PUBLIC
-    libtournament
+    tournament
     Qt6::Concurrent
     Qt6::Core
     Qt6::Gui

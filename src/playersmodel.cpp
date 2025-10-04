@@ -5,7 +5,7 @@
 
 #include <KLocalizedString>
 
-#include "libtournament/tournament.h"
+#include "tournament/tournament.h"
 
 PlayersModel::PlayersModel(QObject *parent)
     : QAbstractTableModel(parent)

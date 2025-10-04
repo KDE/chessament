@@ -29,8 +29,8 @@ using namespace Qt::StringLiterals;
 
 /*!
  * \class Tournament
- * \inmodule libtournament
- * \inheaderfile libtournament/tournament.h
+ * \inmodule tournament
+ * \inheaderfile tournament/tournament.h
  */
 class Tournament : public QObject
 {
