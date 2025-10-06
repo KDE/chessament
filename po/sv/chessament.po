@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-10-04 14:12+0000\n"
-"PO-Revision-Date: 2025-05-31 19:26+0200\n"
+"PO-Revision-Date: 2025-10-05 09:07+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.04.1\n"
+"X-Generator: Lokalize 25.08.1\n"
 
 #: chessamentapplication.cpp:23
 #, kde-format
@@ -50,14 +50,13 @@ msgstr "Kunde inte exportera turnering."
 #, kde-format
 msgctxt "@title"
 msgid "Starting Rank"
-msgstr ""
+msgstr "Startrankning"
 
 #: documents.cpp:44
-#, fuzzy, kde-format
-#| msgid "Pairings"
+#, kde-format
 msgctxt "@title"
 msgid "Round %1 Pairings"
-msgstr "Parningar"
+msgstr "Parningar i omgång %1"
 
 #: main.cpp:60 qml/WelcomePage.qml:15
 #, kde-format
@@ -100,17 +99,13 @@ msgid "Your emails"
 msgstr "stefan.asserhall@gmail.com"
 
 #: main.cpp:79
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Import tournament report…"
+#, kde-format
 msgctxt "Command line option description"
 msgid "Import Tournament Report File."
-msgstr "Importera turneringsrapport…"
+msgstr "Importera turneringsrapportfil."
 
 #: pairingmodel.cpp:95
-#, fuzzy, kde-format
-#| msgctxt "@title:column"
-#| msgid "Board"
+#, kde-format
 msgctxt "@title:column Board Number"
 msgid "Board"
 msgstr "Bräde"
@@ -119,28 +114,22 @@ msgstr "Bräde"
 #, kde-format
 msgctxt "@title:column White Player Starting Rank Number"
 msgid "№"
-msgstr ""
+msgstr "№"
 
 #: pairingmodel.cpp:99
-#, fuzzy, kde-format
-#| msgctxt "@title:column"
-#| msgid "White player"
+#, kde-format
 msgctxt "@title:column Name of the White Player"
 msgid "White Player"
 msgstr "Vit spelare"
 
 #: pairingmodel.cpp:101
-#, fuzzy, kde-format
-#| msgctxt "@title:column"
-#| msgid "Result"
+#, kde-format
 msgctxt "@title:column Game Result"
 msgid "Result"
 msgstr "Resultat"
 
 #: pairingmodel.cpp:103
-#, fuzzy, kde-format
-#| msgctxt "@title:column"
-#| msgid "Black Player"
+#, kde-format
 msgctxt "@title:column Name of the Black Player"
 msgid "Black Player"
 msgstr "Svart spelare"
@@ -149,42 +138,34 @@ msgstr "Svart spelare"
 #, kde-format
 msgctxt "@title:column Black Player Starting Rank Number"
 msgid "№"
-msgstr ""
+msgstr "№"
 
 #: playersmodel.cpp:171 standingsmodel.cpp:90
 #, kde-format
 msgctxt "@title:column Player Starting Rank Number"
 msgid "№"
-msgstr ""
+msgstr "№"
 
 #: playersmodel.cpp:173 standingsmodel.cpp:92
-#, fuzzy, kde-format
-#| msgctxt "@title:column"
-#| msgid "Title"
+#, kde-format
 msgctxt "@title:column Player Title"
 msgid "Title"
 msgstr "Titel"
 
 #: playersmodel.cpp:175 standingsmodel.cpp:94
-#, fuzzy, kde-format
-#| msgctxt "@title:column"
-#| msgid "Name"
+#, kde-format
 msgctxt "@title:column Player Name"
 msgid "Name"
 msgstr "Namn"
 
 #: playersmodel.cpp:177
-#, fuzzy, kde-format
-#| msgctxt "@title:column"
-#| msgid "Rating"
+#, kde-format
 msgctxt "@title:column Player Rating"
 msgid "Rating"
 msgstr "Rankning"
 
 #: playersmodel.cpp:179
-#, fuzzy, kde-format
-#| msgctxt "@title:column"
-#| msgid "National rating"
+#, kde-format
 msgctxt "@title:column Player National Rating"
 msgid "National Rating"
 msgstr "Nationell rankning"
@@ -202,17 +183,13 @@ msgid "Birth date"
 msgstr "Födelsedatum"
 
 #: playersmodel.cpp:185
-#, fuzzy, kde-format
-#| msgctxt "@title:column"
-#| msgid "Federation"
+#, kde-format
 msgctxt "@title:column Player Federation"
 msgid "Federation"
 msgstr "Förbund"
 
 #: playersmodel.cpp:187
-#, fuzzy, kde-format
-#| msgctxt "@title:column"
-#| msgid "Origin"
+#, kde-format
 msgctxt "@title:column Player Origin"
 msgid "Origin"
 msgstr "Ursprung"
@@ -294,7 +271,7 @@ msgstr "Kön"
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Tiebreak"
-msgstr ""
+msgstr "Lägg till tiebreak"
 
 #: qml/BottomNavigation.qml:21 qml/Sidebar.qml:101
 #, kde-format
@@ -322,43 +299,43 @@ msgstr "Inställningar"
 #, kde-format
 msgctxt "@action:button"
 msgid "Configure tiebreak"
-msgstr ""
+msgstr "Anpassa tiebreak"
 
 #: qml/components/TiebreakDelegate.qml:51
 #, kde-format
 msgctxt "@action:button Move tiebreak up"
 msgid "Move Up"
-msgstr ""
+msgstr "Flytta upp"
 
 #: qml/components/TiebreakDelegate.qml:56
 #, kde-format
 msgctxt "@action:button Move tiebreak up"
 msgid "Move up"
-msgstr ""
+msgstr "Flytta upp"
 
 #: qml/components/TiebreakDelegate.qml:63
 #, kde-format
 msgctxt "@action:button Move tiebreak down"
 msgid "Move Down"
-msgstr ""
+msgstr "Flytta ner"
 
 #: qml/components/TiebreakDelegate.qml:68
 #, kde-format
 msgctxt "@action:button Move tiebreak down"
 msgid "Move down"
-msgstr ""
+msgstr "Flytta ner"
 
 #: qml/components/TiebreakDelegate.qml:75
 #, kde-format
 msgctxt "@action:button"
 msgid "Delete Tiebreak"
-msgstr ""
+msgstr "Ta bort tiebreak"
 
 #: qml/components/TiebreakDelegate.qml:80
 #, kde-format
 msgctxt "@action:button"
 msgid "Delete tiebreak"
-msgstr ""
+msgstr "Ta bort tiebreak"
 
 #: qml/DeletePairingsDialog.qml:16
 #, kde-format
@@ -421,8 +398,7 @@ msgid "Number of rounds"
 msgstr "Antal omgångar"
 
 #: qml/PairingsPage.qml:49
-#, fuzzy, kde-format
-#| msgid "Pair round %1"
+#, kde-format
 msgid "Pair Round %1"
 msgstr "Parningsomgång %1"
 
@@ -430,21 +406,19 @@ msgstr "Parningsomgång %1"
 #, kde-format
 msgctxt "@option:check"
 msgid "Hide finished games"
-msgstr ""
+msgstr "Dölj färdiga matcher"
 
 #: qml/PairingsPage.qml:71 qml/PlayersPage.qml:60
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Print"
+#, kde-format
 msgctxt "@action:intoolbar"
 msgid "Print…"
-msgstr "Skriv ut"
+msgstr "Skriv ut…"
 
 #: qml/PairingsPage.qml:76 qml/PlayersPage.qml:65
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Export as PDF…"
-msgstr ""
+msgstr "Exportera som PDF…"
 
 #: qml/PairingsPage.qml:85
 #, kde-format
@@ -452,9 +426,7 @@ msgid "Round %1"
 msgstr "Omgång %1"
 
 #: qml/PairingsPage.qml:103
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Remove pairings of this and following rounds…"
+#, kde-format
 msgctxt "@action:intoolbar"
 msgid "Remove pairings of this and following rounds…"
 msgstr "Ta bort parningar för den här och följande omgångar…"
@@ -469,61 +441,55 @@ msgstr "Ingen parning för omgång %1 ännu"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "All games of round %1 have finished"
-msgstr ""
+msgstr "Alla spel i omgång %1 är klara"
 
 #: qml/PairRoundDialog.qml:17
-#, fuzzy, kde-format
-#| msgid "Pair round %1"
+#, kde-format
 msgctxt "@title %1 is a number >= 1"
 msgid "Pair Round %1"
 msgstr "Parningsomgång %1"
 
 #: qml/PairRoundDialog.qml:26
-#, fuzzy, kde-format
-#| msgctxt "@info:placeholder"
-#| msgid "No players yet"
+#, kde-format
 msgctxt "@option:check"
 msgid "Sort players"
-msgstr "Inga spelare ännu"
+msgstr "Sortera spelare"
 
 #: qml/PairRoundDialog.qml:33
 #, kde-format
 msgctxt "@label:listbox"
 msgid "First player color:"
-msgstr ""
+msgstr "Första spelarens färg:"
 
 #: qml/PairRoundDialog.qml:41
 #, kde-format
 msgctxt "@item:inlistbox As in 'Random color'"
 msgid "Random"
-msgstr ""
+msgstr "Slumpmässig"
 
 #: qml/PairRoundDialog.qml:45
 #, kde-format
 msgctxt "@item:inlistbox As in 'White pieces'"
 msgid "White"
-msgstr ""
+msgstr "Vit"
 
 #: qml/PairRoundDialog.qml:49
 #, kde-format
 msgctxt "@item:inlistbox As in 'Black pieces'"
 msgid "Black"
-msgstr ""
+msgstr "Svart"
 
 #: qml/PlayersPage.qml:51
-#, fuzzy, kde-format
-#| msgid "Players"
+#, kde-format
 msgctxt "@action:intoolbar"
 msgid "Sort Players…"
-msgstr "Spelare"
+msgstr "Sortera spelare…"
 
 #: qml/PlayersPage.qml:71
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Add player"
+#, kde-format
 msgctxt "@action:intoolbar"
 msgid "Add Player…"
-msgstr "Lägg till spelare"
+msgstr "Lägg till spelare…"
 
 #: qml/PlayersPage.qml:156
 #, kde-format
@@ -532,36 +498,32 @@ msgid "No players yet"
 msgstr "Inga spelare ännu"
 
 #: qml/PlayersPage.qml:160
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Add player"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add Player…"
-msgstr "Lägg till spelare"
+msgstr "Lägg till spelare…"
 
 #: qml/PlayersPage.qml:178
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Add player"
+#, kde-format
 msgctxt "@info:status Number of players"
 msgid "1 player"
 msgid_plural "%1 players"
-msgstr[0] "Lägg till spelare"
-msgstr[1] "Lägg till spelare"
+msgstr[0] "1 spelare"
+msgstr[1] "%1 spelare"
 
 #: qml/PlayersPage.qml:179
 #, kde-format
 msgctxt "@info:status Number of rated players"
 msgid "1 rated"
 msgid_plural "%1 rated"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "1 rankad"
+msgstr[1] "%1 rankade"
 
 #: qml/PlayersPage.qml:181
 #, kde-format
 msgctxt "@info:status players, rated"
 msgid "%1, %2"
-msgstr ""
+msgstr "%1, %2"
 
 #: qml/ResultsFooter.qml:41
 #, kde-format
@@ -660,11 +622,10 @@ msgid "0-½"
 msgstr "0-½"
 
 #: qml/SortPlayersDialog.qml:17
-#, fuzzy, kde-format
-#| msgid "Players"
+#, kde-format
 msgctxt "@title"
 msgid "Sort Players"
-msgstr "Spelare"
+msgstr "Sortera spelare"
 
 #: qml/SortPlayersDialog.qml:26
 #, kde-format
@@ -673,6 +634,8 @@ msgid ""
 "Changing the initial ranking after the fourth round has been paired is not "
 "allowed in official tournaments."
 msgstr ""
+"Det är inte tillåtet att ändra den ursprungliga rankingen efter att den "
+"fjärde rundans parning i officiella turneringar."
 
 #: qml/StandingsPage.qml:55
 #, kde-format
@@ -684,7 +647,7 @@ msgstr "Ingen ställning ännu"
 #, kde-format
 msgctxt "@title:window"
 msgid "Edit Tiebreak"
-msgstr ""
+msgstr "Redigera tiebreak"
 
 #: qml/TournamentSettings.qml:14
 #, kde-format
@@ -768,13 +731,13 @@ msgstr "Värdet på parningens tilldelade stå över"
 #, kde-format
 msgctxt "@title:group"
 msgid "Tiebreaks"
-msgstr ""
+msgstr "Tiebreak"
 
 #: qml/TournamentSettingsFormat.qml:82
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Tiebreak"
-msgstr ""
+msgstr "Lägg till tiebreak"
 
 #: qml/TournamentSettingsInformation.qml:11
 #, kde-format
@@ -859,12 +822,10 @@ msgid "Logout"
 msgstr "Logga ut"
 
 #: standingsmodel.cpp:88
-#, fuzzy, kde-format
-#| msgctxt "@title:colunm"
-#| msgid "Rank"
+#, kde-format
 msgctxt "@title:column Player Ranking"
 msgid "Rank"
-msgstr "Rang"
+msgstr "Rankning"
 
 #: tournament/pairingengine.cpp:20
 #, kde-format
@@ -900,27 +861,25 @@ msgstr "Ogiltig spelare \"%1\" för parning \"%2\"."
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Exclude the lowest scores:"
-msgstr ""
+msgstr "Undanta lägsta resultaten:"
 
 #: tournament/tournament.cpp:399
 #, kde-format
 msgctxt "Game points"
 msgid "Points"
-msgstr ""
+msgstr "Poäng"
 
 #: tournament/tournament.cpp:403
 #, kde-format
 msgctxt "Buchholz tiebreak"
 msgid "Buchholz"
-msgstr ""
+msgstr "Buchholz"
 
 #: tournament/tournament.cpp:407
-#, fuzzy, kde-format
-#| msgctxt "@label"
-#| msgid "Number of rounds"
+#, kde-format
 msgctxt "Number of Wins tiebreak"
 msgid "Number of Wins"
-msgstr "Antal omgångar"
+msgstr "Antal vinster"
 
 #: tournament/tournament.cpp:727
 #, kde-format
@@ -946,7 +905,7 @@ msgstr "Okänt resultat för parning \"%1\" med \"%2\"."
 #, kde-format
 msgctxt "@info"
 msgid "Date \"%1\" is invalid."
-msgstr ""
+msgstr "Datum \"%1\" är ogiltigt."
 
 #: tournament/trf.cpp:239
 #, kde-format
