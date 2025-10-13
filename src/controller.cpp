@@ -4,6 +4,7 @@
 #include "controller.h"
 #include "standing.h"
 #include "tournament/pairing.h"
+#include "tournament/ratinglist.h"
 #include "tournament/state.h"
 
 #include <QCoroFuture>
@@ -346,6 +347,11 @@ Account *Controller::account() const
 void Controller::connectAccount()
 {
     m_account->login();
+}
+
+void Controller::downloadRatingList()
+{
+    const auto list = RatingList::importList(QUrl{"http://localhost:1234/players_list.zip"_L1});
 }
 
 QString Controller::currentView() const
