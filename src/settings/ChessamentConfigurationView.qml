@@ -24,6 +24,17 @@ KirigamiSettings.ConfigurationView {
                     application: root.application
                 };
             }
+        },
+        KirigamiSettings.ConfigurationModule {
+            moduleId: "ratinglists"
+            text: i18nc("@action:button", "Rating Lists")
+            icon.name: "view-list-details-symbolic"
+            page: () => Qt.createComponent("org.kde.chessament.settings", "RatingListsPage")
+            initialProperties: () => {
+                return {
+                    application: root.application
+                };
+            }
         }
     ]
 }

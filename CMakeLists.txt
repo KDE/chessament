@@ -53,7 +53,7 @@ set_package_properties(Qt6 PROPERTIES
     TYPE REQUIRED
     PURPOSE "Required application components"
 )
-find_package(KF6 ${KF6_MIN_VERSION} COMPONENTS Kirigami CoreAddons Config IconThemes I18n ItemModels)
+find_package(KF6 ${KF6_MIN_VERSION} COMPONENTS Archive Kirigami CoreAddons Config IconThemes I18n ItemModels)
 set_package_properties(KF6 PROPERTIES
     TYPE REQUIRED
     PURPOSE "Required application components"
@@ -64,7 +64,7 @@ if (Qt6Qml_VERSION VERSION_GREATER_EQUAL "6.10.0")
     find_package(Qt6QmlPrivate ${REQUIRED_QT_VERSION} REQUIRED NO_MODULE)
 endif()
 
-find_package(QCoro6 0.11 COMPONENTS Core Qml)
+find_package(QCoro6 0.11 COMPONENTS Core Network Qml)
 set_package_properties(QCoro6 PROPERTIES
     TYPE REQUIRED
     PURPOSE "Required application components"

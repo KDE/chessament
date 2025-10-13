@@ -48,6 +48,7 @@ ecm_add_qml_module(chessament_static
         documents.cpp
         playersmodel.cpp
         pairingmodel.cpp
+        ratinglistmodel.cpp
         roundmodel.cpp
         standingsmodel.cpp
         tiebreakmodel.cpp
@@ -59,7 +60,10 @@ ecm_add_qml_module(chessament_static
         org.kde.chessament.settings
 )
 
-kde_source_files_enable_exceptions(controller.cpp)
+kde_source_files_enable_exceptions(
+    controller.cpp
+    ratinglistmodel.cpp
+)
 
 target_sources(chessament_static PUBLIC
     chessamentapplication.cpp

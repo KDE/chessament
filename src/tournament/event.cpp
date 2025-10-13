@@ -142,7 +142,7 @@ void Event::closeDatabase()
 
 std::expected<void, QString> Event::createTables()
 {
-    QSqlQuery query(u"PRAGMA foreign_keys = ON;"_s, getDB());
+    QSqlQuery query(ENABLE_FOREIGN_KEYS_QUERY, getDB());
 
     if (query.lastError().isValid()) {
         return std::unexpected(query.lastError().text());

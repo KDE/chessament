@@ -8,6 +8,7 @@ target_sources(tournament PRIVATE
     pairing.cpp
     pairingengine.cpp
     player.cpp
+    ratinglist.cpp
     round.cpp
     standing.cpp
     state.cpp
@@ -25,10 +26,14 @@ ecm_add_qml_module(tournament
 )
 
 target_link_libraries(tournament PUBLIC
+    Qt6::Concurrent
     Qt6::Core
+    Qt6::Network
     Qt6::Qml
     Qt6::Sql
+    KF6::Archive
     KF6::I18n
     QCoro6::Core
+    QCoro6::Network
 )
 
