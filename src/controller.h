@@ -85,6 +85,7 @@ public:
     [[nodiscard]] Account *account() const;
 
     Q_INVOKABLE void connectAccount();
+    Q_INVOKABLE void downloadRatingList();
 
     [[nodiscard]] QString currentView() const;
     [[nodiscard]] QString error() const;
