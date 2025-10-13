@@ -36,6 +36,7 @@ class Controller : public QObject
 
     Q_PROPERTY(QString currentView READ currentView WRITE setCurrentView NOTIFY currentViewChanged)
     Q_PROPERTY(QString error READ error WRITE setError NOTIFY errorChanged)
+    Q_PROPERTY(QString status READ status NOTIFY statusChanged)
 
 public:
     explicit Controller(QObject *parent = nullptr);
@@ -83,9 +84,11 @@ public:
     [[nodiscard]] Account *account() const;
 
     Q_INVOKABLE void connectAccount();
+    Q_INVOKABLE QCoro::QmlTask importRatingList(const QString &name, const QString &url);
 
     [[nodiscard]] QString currentView() const;
     [[nodiscard]] QString error() const;
+    [[nodiscard]] QString status() const;
 
 public Q_SLOTS:
     void setTournament(Tournament *tournament);
@@ -95,6 +98,7 @@ public Q_SLOTS:
     void setAreStandingsValid(bool valid);
     void setCurrentView(const QString &currentView);
     void setError(const QString &error);
+    void setStatus(const QString &status);
 
 Q_SIGNALS:
     void eventChanged();
@@ -106,9 +110,11 @@ Q_SIGNALS:
     void areStandingsValidChanged();
     void currentViewChanged();
     void errorChanged();
+    void statusChanged();
 
 private:
     QCoro::Task<> updateStandings();
+    QCoro::Task<> importRatingListImpl(const QString &name, const QString &url);
 
     std::unique_ptr<Event> m_event;
     Tournament *m_tournament;
@@ -126,6 +132,7 @@ private:
 
     QString m_currentView;
     QString m_error;
+    QString m_status;
 
     std::unique_ptr<QTemporaryFile> m_tempfile;
 };

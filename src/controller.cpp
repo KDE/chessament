@@ -4,6 +4,7 @@
 #include "controller.h"
 #include "standing.h"
 #include "tournament/pairing.h"
+#include "tournament/ratinglist.h"
 #include "tournament/state.h"
 
 #include <QCoroFuture>
@@ -348,6 +349,26 @@ void Controller::connectAccount()
     m_account->login();
 }
 
+QCoro::QmlTask Controller::importRatingList(const QString &name, const QString &url)
+{
+    return importRatingListImpl(name, url);
+}
+
+QCoro::Task<> Controller::importRatingListImpl(const QString &name, const QString &url)
+{
+    const auto list = std::make_unique<RatingList>();
+
+    connect(list.get(), &RatingList::statusChanged, this, [this](const QString &status) {
+        setStatus(status);
+    });
+
+    const auto result = co_await list->importList(name, QUrl{url});
+
+    if (!result) {
+        setError(result.error());
+    }
+}
+
 QString Controller::currentView() const
 {
     return m_currentView;
@@ -376,6 +397,17 @@ void Controller::setError(const QString &error)
 {
     m_error = error;
     Q_EMIT errorChanged();
+}
+
+QString Controller::status() const
+{
+    return m_status;
+}
+
+void Controller::setStatus(const QString &status)
+{
+    m_status = status;
+    Q_EMIT statusChanged();
 }
 
 #include "moc_controller.cpp"
