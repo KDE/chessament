@@ -47,6 +47,11 @@ ecm_set_disabled_deprecation_versions(
 find_package(Qt6 ${QT6_MIN_VERSION} REQUIRED COMPONENTS Concurrent Core Gui Qml QuickControls2 Sql Svg Network NetworkAuth PrintSupport)
 find_package(KF6 ${KF6_MIN_VERSION} REQUIRED COMPONENTS Kirigami CoreAddons Config IconThemes I18n ItemModels)
 
+if (Qt6Qml_VERSION VERSION_GREATER_EQUAL "6.10.0")
+    # QCoro Qml requires QmlPrivate
+    find_package(Qt6QmlPrivate ${REQUIRED_QT_VERSION} REQUIRED NO_MODULE)
+endif()
+
 find_package(QCoro6 0.11 REQUIRED COMPONENTS Core Qml)
 qcoro_enable_coroutines()
 
