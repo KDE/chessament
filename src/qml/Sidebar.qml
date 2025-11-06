@@ -15,7 +15,7 @@ Kirigami.OverlayDrawer {
     readonly property AbstractKirigamiApplication application: (root.Controls.ApplicationWindow.window as StatefulWindow).application
 
     modal: false
-    edge: Qt.application.layoutDirection === Qt.RightToLeft ? Qt.RightEdge : Qt.LeftEdge
+    edge: Application.layoutDirection === Qt.RightToLeft ? Qt.RightEdge : Qt.LeftEdge
     handleVisible: false
     drawerOpen: true
     width: 120
@@ -33,52 +33,6 @@ Kirigami.OverlayDrawer {
 
             leftPadding: 0
             rightPadding: 0
-
-            contentItem: Item {
-                Controls.ToolButton {
-                    id: menuButton
-                    icon.name: "application-menu"
-                    onClicked: optionPopup.popup()
-
-                    x: 60 - width / 2
-
-                    Controls.Menu {
-                        id: optionPopup
-
-                        Kirigami.Action {
-                            fromQAction: root.application.action("file_new")
-                        }
-                        Kirigami.Action {
-                            fromQAction: root.application.action("file_open")
-                        }
-                        Kirigami.Action {
-                            fromQAction: root.application.action("file_save_as")
-                            enabled: Controller.hasOpenTournament
-                        }
-                        Kirigami.Action {
-                            fromQAction: root.application.action("import_trf")
-                        }
-                        Kirigami.Action {
-                            fromQAction: root.application.action("export_trf")
-                            enabled: Controller.hasOpenTournament
-                        }
-                        Controls.MenuSeparator {}
-                        Kirigami.Action {
-                            fromQAction: root.application.action("options_configure")
-                        }
-                        Kirigami.Action {
-                            fromQAction: root.application.action("options_configure_keybinding")
-                        }
-                        Controls.MenuSeparator {}
-                        Kirigami.Action {
-                            fromQAction: root.application.action("open_about_page")
-                        }
-                        Kirigami.Action {
-                            fromQAction: root.application.action("open_about_kde_page")
-                        }
-                    }
-                }
-            }
         }
     }
 

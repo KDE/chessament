@@ -11,6 +11,7 @@ ecm_add_qml_module(chessament_static
     OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/src/org/kde/chessament
     GENERATE_PLUGIN_SOURCE
     QML_FILES
+        qml/components/MenuBar.qml
         qml/components/RatingField.qml
         qml/components/StartingRankField.qml
         qml/components/TiebreakDelegate.qml

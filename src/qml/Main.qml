@@ -30,6 +30,10 @@ StatefulApp.StatefulWindow {
         }
     }
 
+    menuBar: MenuBar {
+        application: root.application as ChessamentApplication
+    }
+
     Connections {
         target: root.application
 
