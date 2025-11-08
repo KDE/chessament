@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-04 14:12+0000\n"
+"POT-Creation-Date: 2025-11-08 00:39+0000\n"
 "PO-Revision-Date: 2025-08-27 13:39-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -273,26 +273,46 @@ msgctxt "@title:window"
 msgid "Add Tiebreak"
 msgstr "Adicionar desempate"
 
-#: qml/BottomNavigation.qml:21 qml/Sidebar.qml:101
+#: qml/BottomNavigation.qml:21 qml/Sidebar.qml:55
 #, kde-format
 msgid "Players"
 msgstr "Jogadores"
 
-#: qml/BottomNavigation.qml:27 qml/Sidebar.qml:108
+#: qml/BottomNavigation.qml:27 qml/Sidebar.qml:62
 #, kde-format
 msgid "Pairings"
 msgstr "Pares"
 
-#: qml/BottomNavigation.qml:33 qml/Sidebar.qml:115
+#: qml/BottomNavigation.qml:33 qml/Sidebar.qml:69
 #, kde-format
 msgid "Standings"
 msgstr "Classificações"
 
-#: qml/BottomNavigation.qml:39 qml/Sidebar.qml:139
+#: qml/BottomNavigation.qml:39 qml/Sidebar.qml:93
 #, kde-format
 msgctxt "@action:button"
 msgid "Settings"
 msgstr "Configurações"
+
+#: qml/components/MenuBar.qml:16
+#, kde-format
+msgctxt "@action:menu"
+msgid "File"
+msgstr ""
+
+#: qml/components/MenuBar.qml:38
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Settings"
+msgctxt "@action:menu"
+msgid "Settings"
+msgstr "Configurações"
+
+#: qml/components/MenuBar.qml:49
+#, kde-format
+msgctxt "@action:menu"
+msgid "Help"
+msgstr ""
 
 #: qml/components/TiebreakDelegate.qml:30
 #: qml/components/TiebreakDelegate.qml:35
@@ -361,7 +381,7 @@ msgctxt "@title:window"
 msgid "Chessament"
 msgstr "Chessament"
 
-#: qml/Main.qml:102
+#: qml/Main.qml:106
 #, kde-format
 msgctxt "@title"
 msgid "Error"
