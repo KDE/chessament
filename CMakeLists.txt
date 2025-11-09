@@ -12,6 +12,10 @@ set(KF6_MIN_VERSION 6.9.0)
 set(KIRIGAMI_ADDONS_MIN_VERSION 1.6.0)
 
 find_package(ECM ${KF6_MIN_VERSION} REQUIRED NO_MODULE)
+set_package_properties(ECM PROPERTIES
+    TYPE REQUIRED
+    URL "https://api.kde.org/ecm/"
+    DESCRIPTION "extra cmake modules")
 
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${ECM_MODULE_PATH})
 
@@ -44,18 +48,29 @@ ecm_set_disabled_deprecation_versions(
     KF ${KF6_MIN_VERSION}
 )
 
-find_package(Qt6 ${QT6_MIN_VERSION} REQUIRED COMPONENTS Concurrent Core Gui Qml QuickControls2 Sql Svg Network NetworkAuth PrintSupport)
-find_package(KF6 ${KF6_MIN_VERSION} REQUIRED COMPONENTS Kirigami CoreAddons Config IconThemes I18n ItemModels)
+find_package(Qt6 ${QT6_MIN_VERSION} COMPONENTS Concurrent Core Gui Qml QuickControls2 Sql Svg Network NetworkAuth PrintSupport)
+set_package_properties(Qt6 PROPERTIES
+    TYPE REQUIRED
+    PURPOSE "Required application components"
+)
+find_package(KF6 ${KF6_MIN_VERSION} COMPONENTS Kirigami CoreAddons Config IconThemes I18n ItemModels)
+set_package_properties(KF6 PROPERTIES
+    TYPE REQUIRED
+    PURPOSE "Required application components"
+)
 
 if (Qt6Qml_VERSION VERSION_GREATER_EQUAL "6.10.0")
     # QCoro Qml requires QmlPrivate
     find_package(Qt6QmlPrivate ${REQUIRED_QT_VERSION} REQUIRED NO_MODULE)
 endif()
 
-find_package(QCoro6 0.11 REQUIRED COMPONENTS Core Qml)
-qcoro_enable_coroutines()
+find_package(QCoro6 0.11 COMPONENTS Core Qml)
+set_package_properties(QCoro6 PROPERTIES
+    TYPE REQUIRED
+    PURPOSE "Required application components"
+)
 
-find_package(KF6KirigamiAddons ${KIRIGAMI_ADDONS_MIN_VERSION} REQUIRED)
+find_package(KF6KirigamiAddons ${KIRIGAMI_ADDONS_MIN_VERSION})
 set_package_properties(KF6KirigamiAddons PROPERTIES
     TYPE REQUIRED
     PURPOSE "Required application components and runtime dependency"
@@ -67,6 +82,9 @@ set_package_properties(Qt6Keychain PROPERTIES
     PURPOSE "Store authentication credentials"
 )
 
+feature_summary(WHAT ALL INCLUDE_QUIET_PACKAGES FATAL_ON_MISSING_REQUIRED_PACKAGES)
+
+qcoro_enable_coroutines()
 qt_policy(SET QTP0001 NEW)
 
 ecm_find_qmlmodule(org.kde.kirigamiaddons.components)
@@ -86,8 +104,6 @@ install(FILES org.kde.chessament.desktop DESTINATION ${KDE_INSTALL_APPDIR})
 install(FILES org.kde.chessament.appdata.xml DESTINATION ${KDE_INSTALL_METAINFODIR})
 install(FILES org.kde.chessament.svg DESTINATION ${KDE_INSTALL_FULL_ICONDIR}/hicolor/scalable/apps)
 ki18n_install(po)
-
-feature_summary(WHAT ALL INCLUDE_QUIET_PACKAGES FATAL_ON_MISSING_REQUIRED_PACKAGES)
 
 file(GLOB_RECURSE ALL_CLANG_FORMAT_SOURCE_FILES src/*.cpp src/*.h)
 kde_clang_format(${ALL_CLANG_FORMAT_SOURCE_FILES})
