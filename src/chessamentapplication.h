@@ -4,8 +4,6 @@
 #pragma once
 
 #include <AbstractKirigamiApplication>
-#include <QFileDialog>
-#include <QQmlEngine>
 
 using namespace Qt::StringLiterals;
 

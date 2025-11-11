@@ -5,17 +5,15 @@
 #include <QCommandLineParser>
 #include <QIcon>
 #include <QQmlApplicationEngine>
-#include <QQmlContext>
 #include <QQuickStyle>
 #include <QUrl>
-#include <QtGlobal>
-#include <QtQml/QQmlExtensionPlugin>
 
 #include "version-chessament.h"
 #include <KAboutData>
 #include <KIconTheme>
 #include <KLocalizedQmlContext>
 #include <KLocalizedString>
+
 #include <QCoroQml>
 
 #include "controller.h"

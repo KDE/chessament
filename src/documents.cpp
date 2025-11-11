@@ -6,6 +6,8 @@
 
 #include <KLocalizedString>
 
+#include <QTextDocument>
+
 std::unique_ptr<Document> Controller::playersDocument()
 {
     using enum PlayersModel::Columns;

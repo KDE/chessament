@@ -5,8 +5,6 @@
 
 #include <QCoroQmlTask>
 #include <QObject>
-#include <QQmlEngine>
-#include <QQuickTextDocument>
 #include <QTemporaryFile>
 
 #include "account.h"

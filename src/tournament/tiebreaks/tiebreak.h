@@ -4,7 +4,6 @@
 #pragma once
 
 #include <QList>
-#include <QMap>
 #include <QVariant>
 
 class Tournament;

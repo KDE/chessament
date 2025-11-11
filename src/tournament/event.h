@@ -4,7 +4,6 @@
 #pragma once
 
 #include <QObject>
-#include <QQmlEngine>
 #include <QSqlDatabase>
 #include <QString>
 

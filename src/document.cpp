@@ -4,7 +4,6 @@
 #include "document.h"
 
 #include <QAbstractItemModel>
-#include <QFile>
 #include <QPrintDialog>
 #include <QPrinter>
 #include <QTextDocument>

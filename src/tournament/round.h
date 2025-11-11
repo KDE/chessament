@@ -3,10 +3,7 @@
 
 #pragma once
 
-#include <QJsonObject>
 #include <QObject>
-#include <QQmlEngine>
-#include <QString>
 
 #include "pairing.h"
 
