@@ -244,3 +244,5 @@ std::expected<void, QString> Event::loadTournaments()
 
     return {};
 }
+
+#include "moc_event.cpp"

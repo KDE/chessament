@@ -226,3 +226,5 @@ void PlayersModel::reloadPlayers()
 {
     Q_EMIT dataChanged(index(0, 0), index(rowCount() - 1, columnCount() - 1), {});
 }
+
+#include "moc_playersmodel.cpp"

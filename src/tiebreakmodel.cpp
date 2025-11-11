@@ -121,3 +121,5 @@ void TiebreakModel::moveDown(int row)
 
     Q_EMIT dataChanged(index(row), index(row + 1));
 }
+
+#include "moc_tiebreakmodel.cpp"

@@ -377,3 +377,5 @@ void Controller::setError(const QString &error)
     m_error = error;
     Q_EMIT errorChanged();
 }
+
+#include "moc_controller.cpp"

@@ -81,3 +81,5 @@ void Round::removePairings(std::function<bool(Pairing *)> predicate)
         return predicate(pairing.get());
     });
 }
+
+#include "moc_round.cpp"

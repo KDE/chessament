@@ -94,3 +94,5 @@ QCoro::Task<std::expected<QList<std::pair<uint, uint>>, QString>> PairingEngine:
 
     co_return pairings;
 }
+
+#include "moc_pairingengine.cpp"

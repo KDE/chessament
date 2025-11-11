@@ -1200,3 +1200,5 @@ std::expected<void, QString> Tournament::loadTiebreaks()
 
     return {};
 }
+
+#include "moc_tournament.cpp"

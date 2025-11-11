@@ -149,3 +149,5 @@ Pairing *PairingModel::getPairing(int board)
     QQmlEngine::setObjectOwnership(pairing, QJSEngine::CppOwnership);
     return pairing;
 }
+
+#include "moc_pairingmodel.cpp"

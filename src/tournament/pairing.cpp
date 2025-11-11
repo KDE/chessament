@@ -151,3 +151,5 @@ QDebug operator<<(QDebug dbg, Pairing &pairing)
     dbg.nospace() << "Pairing(" << pairing.board() << "," << *pairing.whitePlayer() << "," << pairing.blackPlayer() << ")";
     return dbg;
 }
+
+#include "moc_pairing.cpp"

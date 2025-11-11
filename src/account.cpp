@@ -140,3 +140,5 @@ void Account::logout()
     setUsername({});
     Config::setUsername({});
 }
+
+#include "moc_account.cpp"

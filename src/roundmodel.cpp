@@ -100,3 +100,5 @@ QHash<int, QByteArray> RoundModel::roleNames() const
         {RoundRole::DateTimeRole, "dateTime"},
     };
 }
+
+#include "moc_roundmodel.cpp"

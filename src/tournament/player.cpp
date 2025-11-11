@@ -289,3 +289,5 @@ QDebug operator<<(QDebug dbg, const Player &player)
     dbg.nospace() << "Player(" << player.name() << ")";
     return dbg;
 }
+
+#include "moc_player.cpp"

@@ -141,3 +141,5 @@ void StandingsModel::setTournament(Tournament *tournament)
     // and we don't want to access data that has been deleted.
     setStandings({});
 }
+
+#include "moc_standingsmodel.cpp"
