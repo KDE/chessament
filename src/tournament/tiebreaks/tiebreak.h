@@ -9,7 +9,6 @@
 
 class Tournament;
 class Player;
-class Pairing;
 class State;
 
 class Tiebreak
