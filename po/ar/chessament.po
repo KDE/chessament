@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-08 00:39+0000\n"
+"POT-Creation-Date: 2025-11-12 00:41+0000\n"
 "PO-Revision-Date: 2025-10-06 13:13+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -47,59 +47,59 @@ msgstr "اتصل بحساب"
 msgid "Couldn't export tournament."
 msgstr "تعذر تصدير البطولة."
 
-#: documents.cpp:16
+#: documents.cpp:18
 #, kde-format
 msgctxt "@title"
 msgid "Starting Rank"
 msgstr "الرتبة المبدئية"
 
-#: documents.cpp:44
+#: documents.cpp:46
 #, kde-format
 msgctxt "@title"
 msgid "Round %1 Pairings"
 msgstr "إقرانات الجولة %1"
 
-#: main.cpp:60 qml/WelcomePage.qml:15
+#: main.cpp:58 qml/WelcomePage.qml:15
 #, kde-format
 msgctxt "@title"
 msgid "Chessament"
 msgstr "شطرنج"
 
-#: main.cpp:64
+#: main.cpp:62
 #, kde-format
 msgid "Chess Tournament Manager"
 msgstr "مدير بطولة شطرنج"
 
-#: main.cpp:68
+#: main.cpp:66
 #, kde-format
 msgid "© 2024 Manuel Alcaraz Zambrano"
 msgstr "© 2024 مانويل ألكاراز زامبرانو 2024"
 
-#: main.cpp:69
+#: main.cpp:67
 #, kde-format
 msgctxt "@info:credit"
 msgid "Manuel Alcaraz Zambrano"
 msgstr "مانويل ألكاراز زامبرانو"
 
-#: main.cpp:70
+#: main.cpp:68
 #, kde-format
 msgctxt "@info:credit"
 msgid "Author & Maintainer"
 msgstr "المؤلّف والصائن"
 
-#: main.cpp:73
+#: main.cpp:71
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "زايد السعيدي"
 
-#: main.cpp:73
+#: main.cpp:71
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "zayed.alsaidi@gmail.com"
 
-#: main.cpp:79
+#: main.cpp:77
 #, kde-format
 msgctxt "Command line option description"
 msgid "Import Tournament Report File."

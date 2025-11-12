@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-08 00:39+0000\n"
+"POT-Creation-Date: 2025-11-12 00:41+0000\n"
 "PO-Revision-Date: 2025-07-21 00:46+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -46,59 +46,59 @@ msgstr "계정 연결"
 msgid "Couldn't export tournament."
 msgstr ""
 
-#: documents.cpp:16
+#: documents.cpp:18
 #, kde-format
 msgctxt "@title"
 msgid "Starting Rank"
 msgstr ""
 
-#: documents.cpp:44
+#: documents.cpp:46
 #, kde-format
 msgctxt "@title"
 msgid "Round %1 Pairings"
 msgstr ""
 
-#: main.cpp:60 qml/WelcomePage.qml:15
+#: main.cpp:58 qml/WelcomePage.qml:15
 #, kde-format
 msgctxt "@title"
 msgid "Chessament"
 msgstr "Chessament"
 
-#: main.cpp:64
+#: main.cpp:62
 #, kde-format
 msgid "Chess Tournament Manager"
 msgstr "체스 토너먼트 관리자"
 
-#: main.cpp:68
+#: main.cpp:66
 #, kde-format
 msgid "© 2024 Manuel Alcaraz Zambrano"
 msgstr ""
 
-#: main.cpp:69
+#: main.cpp:67
 #, kde-format
 msgctxt "@info:credit"
 msgid "Manuel Alcaraz Zambrano"
 msgstr ""
 
-#: main.cpp:70
+#: main.cpp:68
 #, kde-format
 msgctxt "@info:credit"
 msgid "Author & Maintainer"
 msgstr ""
 
-#: main.cpp:73
+#: main.cpp:71
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr ""
 
-#: main.cpp:73
+#: main.cpp:71
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr ""
 
-#: main.cpp:79
+#: main.cpp:77
 #, fuzzy, kde-format
 #| msgctxt "@action:inmenu"
 #| msgid "Import tournament report…"
