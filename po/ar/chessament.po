@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-12 00:41+0000\n"
-"PO-Revision-Date: 2025-10-06 13:13+0400\n"
+"PO-Revision-Date: 2025-11-12 20:06+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -299,21 +299,19 @@ msgstr "الإعدادات"
 #, kde-format
 msgctxt "@action:menu"
 msgid "File"
-msgstr ""
+msgstr "ملف"
 
 #: qml/components/MenuBar.qml:38
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Settings"
+#, kde-format
 msgctxt "@action:menu"
 msgid "Settings"
-msgstr "الإعدادات"
+msgstr "إعدادات"
 
 #: qml/components/MenuBar.qml:49
 #, kde-format
 msgctxt "@action:menu"
 msgid "Help"
-msgstr ""
+msgstr "مساعدة"
 
 #: qml/components/TiebreakDelegate.qml:30
 #: qml/components/TiebreakDelegate.qml:35
