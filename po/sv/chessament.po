@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:49+0000\n"
-"PO-Revision-Date: 2025-10-05 09:07+0200\n"
+"PO-Revision-Date: 2025-11-21 01:35+0100\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.08.1\n"
+"X-Generator: Lokalize 25.08.3\n"
 
 #: chessamentapplication.cpp:23
 #, kde-format
@@ -298,12 +298,10 @@ msgstr "Inställningar"
 #, kde-format
 msgctxt "@action:menu"
 msgid "File"
-msgstr ""
+msgstr "Arkiv"
 
 #: qml/components/MenuBar.qml:38
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Settings"
+#, kde-format
 msgctxt "@action:menu"
 msgid "Settings"
 msgstr "Inställningar"
@@ -312,7 +310,7 @@ msgstr "Inställningar"
 #, kde-format
 msgctxt "@action:menu"
 msgid "Help"
-msgstr ""
+msgstr "Hjälp"
 
 #: qml/components/TiebreakDelegate.qml:30
 #: qml/components/TiebreakDelegate.qml:35
