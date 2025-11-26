@@ -21,7 +21,6 @@ ecm_add_qml_module(chessament_static
         qml/TableDelegate.qml
         qml/AddPlayerDialog.qml
         qml/AddTiebreakDialog.qml
-        qml/BottomNavigation.qml
         qml/DeletePairingsDialog.qml
         qml/NewTournamentDialog.qml
         qml/ResultsFooter.qml

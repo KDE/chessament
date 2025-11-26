@@ -18,10 +18,10 @@ StatefulApp.StatefulWindow {
     property var pageCache: Object.create(null)
 
     title: i18nc("@title:window", "Chessament")
+    minimumWidth: Kirigami.Units.gridUnit * 30
+    minimumHeight: Kirigami.Units.gridUnit * 20
 
     windowName: "Main"
-
-    readonly property bool isWidescreen: root.width >= 500
 
     application: ChessamentApplication {
         configurationView: Settings.ChessamentConfigurationView {
@@ -108,27 +108,13 @@ StatefulApp.StatefulWindow {
         standardButtons: Kirigami.Dialog.Ok
     }
 
-    globalDrawer: sidebarLoader.item as OverlayDrawer
-
-    Loader {
-        id: sidebarLoader
-        source: "Sidebar.qml"
-        active: root.isWidescreen
-    }
+    globalDrawer: Sidebar {}
 
     pageStack {
         defaultColumnWidth: root.width
         initialPage: WelcomePage {
             application: root.application
         }
-    }
-
-    footer: tabBar.item as BottomNavigation
-
-    Loader {
-        id: tabBar
-        source: "BottomNavigation.qml"
-        active: !root.isWidescreen
     }
 
     function pageForView(view: string): var {
