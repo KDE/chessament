@@ -238,6 +238,10 @@ std::expected<void, QString> TRFReader::readPairing(int startingRank, int round,
     if (result == Pairing::PartialResult::Unknown) {
         return std::unexpected(i18n("Unknown result \"%1\" on pairing \"%2\".", text.at(7), text.toString()));
     }
+    if (!hasOpponent && result == Pairing::PartialResult::LostForfeit) {
+        // Lichess exports zero point byes as forfeit loss with no opponent.
+        result = Pairing::PartialResult::ZeroBye;
+    }
     if (!hasOpponent && !Pairing::isBye(result)) {
         return std::unexpected(i18n("Pairing \"%1\" has no opponent.", text.toString()));
     }
