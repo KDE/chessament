@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:49+0000\n"
+"POT-Creation-Date: 2025-11-27 00:40+0000\n"
 "PO-Revision-Date: 2025-11-21 01:35+0100\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -272,27 +272,6 @@ msgstr "Kön"
 msgctxt "@title:window"
 msgid "Add Tiebreak"
 msgstr "Lägg till tiebreak"
-
-#: qml/BottomNavigation.qml:21 qml/Sidebar.qml:55
-#, kde-format
-msgid "Players"
-msgstr "Spelare"
-
-#: qml/BottomNavigation.qml:27 qml/Sidebar.qml:62
-#, kde-format
-msgid "Pairings"
-msgstr "Parningar"
-
-#: qml/BottomNavigation.qml:33 qml/Sidebar.qml:69
-#, kde-format
-msgid "Standings"
-msgstr "Ställning"
-
-#: qml/BottomNavigation.qml:39 qml/Sidebar.qml:93
-#, kde-format
-msgctxt "@action:button"
-msgid "Settings"
-msgstr "Inställningar"
 
 #: qml/components/MenuBar.qml:16
 #, kde-format
@@ -638,6 +617,27 @@ msgstr "0-0"
 msgctxt "@action:intoolbar"
 msgid "0-½"
 msgstr "0-½"
+
+#: qml/Sidebar.qml:55
+#, kde-format
+msgid "Players"
+msgstr "Spelare"
+
+#: qml/Sidebar.qml:62
+#, kde-format
+msgid "Pairings"
+msgstr "Parningar"
+
+#: qml/Sidebar.qml:69
+#, kde-format
+msgid "Standings"
+msgstr "Ställning"
+
+#: qml/Sidebar.qml:93
+#, kde-format
+msgctxt "@action:button"
+msgid "Settings"
+msgstr "Inställningar"
 
 #: qml/SortPlayersDialog.qml:17
 #, kde-format

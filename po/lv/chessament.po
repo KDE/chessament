@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:49+0000\n"
+"POT-Creation-Date: 2025-11-27 00:40+0000\n"
 "PO-Revision-Date: 2025-11-09 11:05+0200\n"
 "Last-Translator: Toms Trasūns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -273,27 +273,6 @@ msgstr "Dzimums"
 msgctxt "@title:window"
 msgid "Add Tiebreak"
 msgstr "Pievienot neizšķirta izšķiršanu"
-
-#: qml/BottomNavigation.qml:21 qml/Sidebar.qml:55
-#, kde-format
-msgid "Players"
-msgstr "Spēlētāji"
-
-#: qml/BottomNavigation.qml:27 qml/Sidebar.qml:62
-#, kde-format
-msgid "Pairings"
-msgstr "Pāri"
-
-#: qml/BottomNavigation.qml:33 qml/Sidebar.qml:69
-#, kde-format
-msgid "Standings"
-msgstr "Rezultāti"
-
-#: qml/BottomNavigation.qml:39 qml/Sidebar.qml:93
-#, kde-format
-msgctxt "@action:button"
-msgid "Settings"
-msgstr "Iestatījumi"
 
 #: qml/components/MenuBar.qml:16
 #, kde-format
@@ -641,6 +620,27 @@ msgstr "0-0"
 msgctxt "@action:intoolbar"
 msgid "0-½"
 msgstr "0-½"
+
+#: qml/Sidebar.qml:55
+#, kde-format
+msgid "Players"
+msgstr "Spēlētāji"
+
+#: qml/Sidebar.qml:62
+#, kde-format
+msgid "Pairings"
+msgstr "Pāri"
+
+#: qml/Sidebar.qml:69
+#, kde-format
+msgid "Standings"
+msgstr "Rezultāti"
+
+#: qml/Sidebar.qml:93
+#, kde-format
+msgctxt "@action:button"
+msgid "Settings"
+msgstr "Iestatījumi"
 
 #: qml/SortPlayersDialog.qml:17
 #, kde-format

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:49+0000\n"
+"POT-Creation-Date: 2025-11-27 00:40+0000\n"
 "PO-Revision-Date: 2025-11-08 14:54+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -274,27 +274,6 @@ msgstr "Sexe"
 msgctxt "@title:window"
 msgid "Add Tiebreak"
 msgstr "Addició de desempat"
-
-#: qml/BottomNavigation.qml:21 qml/Sidebar.qml:55
-#, kde-format
-msgid "Players"
-msgstr "Jugadors"
-
-#: qml/BottomNavigation.qml:27 qml/Sidebar.qml:62
-#, kde-format
-msgid "Pairings"
-msgstr "Emparellaments"
-
-#: qml/BottomNavigation.qml:33 qml/Sidebar.qml:69
-#, kde-format
-msgid "Standings"
-msgstr "Resultats"
-
-#: qml/BottomNavigation.qml:39 qml/Sidebar.qml:93
-#, kde-format
-msgctxt "@action:button"
-msgid "Settings"
-msgstr "Configuració"
 
 #: qml/components/MenuBar.qml:16
 #, kde-format
@@ -640,6 +619,27 @@ msgstr "0-0"
 msgctxt "@action:intoolbar"
 msgid "0-½"
 msgstr "0-½"
+
+#: qml/Sidebar.qml:55
+#, kde-format
+msgid "Players"
+msgstr "Jugadors"
+
+#: qml/Sidebar.qml:62
+#, kde-format
+msgid "Pairings"
+msgstr "Emparellaments"
+
+#: qml/Sidebar.qml:69
+#, kde-format
+msgid "Standings"
+msgstr "Resultats"
+
+#: qml/Sidebar.qml:93
+#, kde-format
+msgctxt "@action:button"
+msgid "Settings"
+msgstr "Configuració"
 
 #: qml/SortPlayersDialog.qml:17
 #, kde-format
