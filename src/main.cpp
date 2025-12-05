@@ -1,4 +1,4 @@
-// SPDX-FileCopyrightText: 2024 Manuel Alcaraz Zambrano <manuelalcarazzam@gmail.com>
+// SPDX-FileCopyrightText: 2024 Manuel Alcaraz Zambrano <manuel@alcarazzam.dev>
 // SPDX-License-Identifier: GPL-3.0-or-later
 
 #include <QApplication>
@@ -66,7 +66,7 @@ int main(int argc, char *argv[])
         i18n("© 2024 Manuel Alcaraz Zambrano"));
     aboutData.addAuthor(i18nc("@info:credit", "Manuel Alcaraz Zambrano"),
                         i18nc("@info:credit", "Author & Maintainer"),
-                        u"manuelalcarazzam@gmail.com"_s,
+                        u"manuel@alcarazzam.dev"_s,
                         u"https://alcarazzam.dev"_s);
     aboutData.setTranslator(i18nc("NAME OF TRANSLATORS", "Your names"), i18nc("EMAIL OF TRANSLATORS", "Your emails"));
     KAboutData::setApplicationData(aboutData);

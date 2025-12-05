@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: 2025 Manuel Alcaraz Zambrano <manuelalcarazzam@gmail.com>
+# SPDX-FileCopyrightText: 2025 Manuel Alcaraz Zambrano <manuel@alcarazzam.dev>
 # SPDX-License-Identifier: BSD-3-Clause
 
 add_library(tournament STATIC)

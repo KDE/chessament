@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: 2024 Manuel Alcaraz Zambrano <manuelalcarazzam@gmail.com>
+# SPDX-FileCopyrightText: 2024 Manuel Alcaraz Zambrano <manuel@alcarazzam.dev>
 # SPDX-License-Identifier: BSD-2-Clause
 
 qt_add_library(chessament_settings STATIC)
