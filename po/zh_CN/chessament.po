@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-27 00:40+0000\n"
+"POT-Creation-Date: 2025-12-22 00:39+0000\n"
 "PO-Revision-Date: 2025-05-12 14:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -41,7 +41,7 @@ msgctxt "@action:inmenu"
 msgid "Connect account"
 msgstr "关联账户"
 
-#: controller.cpp:154
+#: controller.cpp:155
 #, kde-format
 msgid "Couldn't export tournament."
 msgstr "无法导出比赛。"
@@ -807,6 +807,14 @@ msgctxt "@action:button"
 msgid "General"
 msgstr "常规"
 
+#: settings/ChessamentConfigurationView.qml:30
+#, fuzzy, kde-format
+#| msgctxt "@title:column Player Rating"
+#| msgid "Rating"
+msgctxt "@action:button"
+msgid "Rating Lists"
+msgstr "等级"
+
 #: settings/GeneralPage.qml:16
 #, kde-format
 msgctxt "@title"
@@ -834,6 +842,84 @@ msgstr "以 %1 身份登录"
 #, kde-format
 msgid "Logout"
 msgstr "退出登录"
+
+#: settings/RatingListsPage.qml:21 settings/RatingListsPage.qml:127
+#, fuzzy, kde-format
+#| msgctxt "@title:column Player Rating"
+#| msgid "Rating"
+msgctxt "@title"
+msgid "Rating Lists"
+msgstr "等级"
+
+#: settings/RatingListsPage.qml:26
+#, kde-format
+msgctxt "@title:window"
+msgid "Add Rating List"
+msgstr ""
+
+#: settings/RatingListsPage.qml:31
+#, kde-format
+msgctxt "@action:button"
+msgid "Import"
+msgstr ""
+
+#: settings/RatingListsPage.qml:46
+#, fuzzy, kde-format
+#| msgctxt "@title:column Player Name"
+#| msgid "Name"
+msgctxt "@info:label"
+msgid "Name"
+msgstr "姓名"
+
+#: settings/RatingListsPage.qml:51
+#, kde-format
+msgctxt "@info:label"
+msgid "Rating list URL"
+msgstr ""
+
+#: settings/RatingListsPage.qml:71
+#, kde-format
+msgctxt "@title:window"
+msgid "Importing Rating List"
+msgstr ""
+
+#: settings/RatingListsPage.qml:111
+#, kde-format
+msgctxt "@title"
+msgid "Delete Rating List"
+msgstr ""
+
+#: settings/RatingListsPage.qml:119
+#, kde-format
+msgctxt "@action:button Delete Rating List"
+msgid "Delete"
+msgstr ""
+
+#: settings/RatingListsPage.qml:132
+#, fuzzy, kde-format
+#| msgctxt "@info:placeholder"
+#| msgid "No standings yet"
+msgctxt "@info:status"
+msgid "No rating lists yet."
+msgstr "暂无排名"
+
+#: settings/RatingListsPage.qml:152
+#, kde-format
+msgctxt "@action:button"
+msgid "Delete Rating List"
+msgstr ""
+
+#: settings/RatingListsPage.qml:160
+#, kde-format
+msgctxt "@action:button"
+msgid "Delete rating list"
+msgstr ""
+
+#: settings/RatingListsPage.qml:170
+#, kde-format
+msgctxt "@action:button"
+msgid "Add rating list"
+msgstr ""
 
 #: standingsmodel.cpp:88
 #, kde-format
@@ -869,6 +955,56 @@ msgstr "无效对阵“%1”。"
 #, kde-format
 msgid "Invalid player \"%1\" on pairing \"%2\"."
 msgstr "对阵“%2”中的无效选手“%1”。"
+
+#: tournament/ratinglist.cpp:133
+#, kde-format
+msgctxt "@info:progress"
+msgid "Downloading file"
+msgstr ""
+
+#: tournament/ratinglist.cpp:143
+#, kde-format
+msgctxt "@info:progress"
+msgid "Downloading file (%1 %)"
+msgstr ""
+
+#: tournament/ratinglist.cpp:149
+#, kde-format
+msgctxt "@info"
+msgid "Couldn't download rating list: %1"
+msgstr ""
+
+#: tournament/ratinglist.cpp:161
+#, fuzzy, kde-format
+#| msgid "Couldn't open file"
+msgctxt "@info"
+msgid "Couldn't extract file."
+msgstr "无法打开文件"
+
+#: tournament/ratinglist.cpp:166
+#, kde-format
+msgctxt "@info"
+msgid "File format not supported."
+msgstr ""
+
+#: tournament/ratinglist.cpp:186
+#, fuzzy, kde-format
+#| msgctxt "@option:check"
+#| msgid "Sort players"
+msgctxt "@info:progress"
+msgid "Imported one player."
+msgid_plural "Imported %1 players."
+msgstr[0] "对玩家排序"
+
+#: tournament/ratinglist.cpp:360
+#, fuzzy, kde-format
+#| msgctxt "@info:status Number of players"
+#| msgid "1 player"
+#| msgid_plural "%1 players"
+msgctxt "@info:progress"
+msgid "Saved 1 player."
+msgid_plural "Saved %1 players."
+msgstr[0] "%1 名玩家"
 
 #: tournament/tiebreaks/buchholz.cpp:14
 #, kde-format

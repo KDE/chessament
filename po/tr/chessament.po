@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-27 00:40+0000\n"
+"POT-Creation-Date: 2025-12-22 00:39+0000\n"
 "PO-Revision-Date: 2025-11-08 21:11+0300\n"
 "Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -41,7 +41,7 @@ msgctxt "@action:inmenu"
 msgid "Connect account"
 msgstr "Hesap Bağla"
 
-#: controller.cpp:154
+#: controller.cpp:155
 #, kde-format
 msgid "Couldn't export tournament."
 msgstr "Turnuva dışa aktarılamadı."
@@ -811,6 +811,14 @@ msgctxt "@action:button"
 msgid "General"
 msgstr "Genel"
 
+#: settings/ChessamentConfigurationView.qml:30
+#, fuzzy, kde-format
+#| msgctxt "@title:column Player Rating"
+#| msgid "Rating"
+msgctxt "@action:button"
+msgid "Rating Lists"
+msgstr "Derecelendirme"
+
 #: settings/GeneralPage.qml:16
 #, kde-format
 msgctxt "@title"
@@ -838,6 +846,84 @@ msgstr "%1 olarak oturum açıldı"
 #, kde-format
 msgid "Logout"
 msgstr "Oturumu Kapat"
+
+#: settings/RatingListsPage.qml:21 settings/RatingListsPage.qml:127
+#, fuzzy, kde-format
+#| msgctxt "@title:column Player Rating"
+#| msgid "Rating"
+msgctxt "@title"
+msgid "Rating Lists"
+msgstr "Derecelendirme"
+
+#: settings/RatingListsPage.qml:26
+#, kde-format
+msgctxt "@title:window"
+msgid "Add Rating List"
+msgstr ""
+
+#: settings/RatingListsPage.qml:31
+#, kde-format
+msgctxt "@action:button"
+msgid "Import"
+msgstr ""
+
+#: settings/RatingListsPage.qml:46
+#, fuzzy, kde-format
+#| msgctxt "@title:column Player Name"
+#| msgid "Name"
+msgctxt "@info:label"
+msgid "Name"
+msgstr "Ad"
+
+#: settings/RatingListsPage.qml:51
+#, kde-format
+msgctxt "@info:label"
+msgid "Rating list URL"
+msgstr ""
+
+#: settings/RatingListsPage.qml:71
+#, kde-format
+msgctxt "@title:window"
+msgid "Importing Rating List"
+msgstr ""
+
+#: settings/RatingListsPage.qml:111
+#, kde-format
+msgctxt "@title"
+msgid "Delete Rating List"
+msgstr ""
+
+#: settings/RatingListsPage.qml:119
+#, kde-format
+msgctxt "@action:button Delete Rating List"
+msgid "Delete"
+msgstr ""
+
+#: settings/RatingListsPage.qml:132
+#, fuzzy, kde-format
+#| msgctxt "@info:placeholder"
+#| msgid "No standings yet"
+msgctxt "@info:status"
+msgid "No rating lists yet."
+msgstr "Henüz puan yok"
+
+#: settings/RatingListsPage.qml:152
+#, kde-format
+msgctxt "@action:button"
+msgid "Delete Rating List"
+msgstr ""
+
+#: settings/RatingListsPage.qml:160
+#, kde-format
+msgctxt "@action:button"
+msgid "Delete rating list"
+msgstr ""
+
+#: settings/RatingListsPage.qml:170
+#, kde-format
+msgctxt "@action:button"
+msgid "Add rating list"
+msgstr ""
 
 #: standingsmodel.cpp:88
 #, kde-format
@@ -873,6 +959,58 @@ msgstr "Geçersiz eşleşme “%1”."
 #, kde-format
 msgid "Invalid player \"%1\" on pairing \"%2\"."
 msgstr "“%2” eşleşmesinde geçersiz oyuncu “%1”."
+
+#: tournament/ratinglist.cpp:133
+#, kde-format
+msgctxt "@info:progress"
+msgid "Downloading file"
+msgstr ""
+
+#: tournament/ratinglist.cpp:143
+#, kde-format
+msgctxt "@info:progress"
+msgid "Downloading file (%1 %)"
+msgstr ""
+
+#: tournament/ratinglist.cpp:149
+#, kde-format
+msgctxt "@info"
+msgid "Couldn't download rating list: %1"
+msgstr ""
+
+#: tournament/ratinglist.cpp:161
+#, fuzzy, kde-format
+#| msgid "Couldn't open file"
+msgctxt "@info"
+msgid "Couldn't extract file."
+msgstr "Dosya açılamadı"
+
+#: tournament/ratinglist.cpp:166
+#, kde-format
+msgctxt "@info"
+msgid "File format not supported."
+msgstr ""
+
+#: tournament/ratinglist.cpp:186
+#, fuzzy, kde-format
+#| msgctxt "@option:check"
+#| msgid "Sort players"
+msgctxt "@info:progress"
+msgid "Imported one player."
+msgid_plural "Imported %1 players."
+msgstr[0] "Oyuncuları sırala"
+msgstr[1] "Oyuncuları sırala"
+
+#: tournament/ratinglist.cpp:360
+#, fuzzy, kde-format
+#| msgctxt "@info:status Number of players"
+#| msgid "1 player"
+#| msgid_plural "%1 players"
+msgctxt "@info:progress"
+msgid "Saved 1 player."
+msgid_plural "Saved %1 players."
+msgstr[0] "1 oyuncu"
+msgstr[1] "%1 oyuncu"
 
 #: tournament/tiebreaks/buchholz.cpp:14
 #, kde-format
