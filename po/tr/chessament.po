@@ -7,15 +7,15 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-12-22 00:39+0000\n"
-"PO-Revision-Date: 2025-11-08 21:11+0300\n"
-"Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
+"PO-Revision-Date: 2025-12-22 12:34+0300\n"
+"Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.08.2\n"
+"X-Generator: Lokalize 25.12.0\n"
 
 #: chessamentapplication.cpp:23
 #, kde-format
@@ -812,12 +812,10 @@ msgid "General"
 msgstr "Genel"
 
 #: settings/ChessamentConfigurationView.qml:30
-#, fuzzy, kde-format
-#| msgctxt "@title:column Player Rating"
-#| msgid "Rating"
+#, kde-format
 msgctxt "@action:button"
 msgid "Rating Lists"
-msgstr "Derecelendirme"
+msgstr "Derecelendirme Listeleri"
 
 #: settings/GeneralPage.qml:16
 #, kde-format
@@ -848,29 +846,25 @@ msgid "Logout"
 msgstr "Oturumu Kapat"
 
 #: settings/RatingListsPage.qml:21 settings/RatingListsPage.qml:127
-#, fuzzy, kde-format
-#| msgctxt "@title:column Player Rating"
-#| msgid "Rating"
+#, kde-format
 msgctxt "@title"
 msgid "Rating Lists"
-msgstr "Derecelendirme"
+msgstr "Derecelendirme Listeleri"
 
 #: settings/RatingListsPage.qml:26
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Rating List"
-msgstr ""
+msgstr "Derecelendirme Listesi Ekle"
 
 #: settings/RatingListsPage.qml:31
 #, kde-format
 msgctxt "@action:button"
 msgid "Import"
-msgstr ""
+msgstr "İçe Aktar"
 
 #: settings/RatingListsPage.qml:46
-#, fuzzy, kde-format
-#| msgctxt "@title:column Player Name"
-#| msgid "Name"
+#, kde-format
 msgctxt "@info:label"
 msgid "Name"
 msgstr "Ad"
@@ -879,51 +873,49 @@ msgstr "Ad"
 #, kde-format
 msgctxt "@info:label"
 msgid "Rating list URL"
-msgstr ""
+msgstr "Derecelendirme Listesi URL’si"
 
 #: settings/RatingListsPage.qml:71
 #, kde-format
 msgctxt "@title:window"
 msgid "Importing Rating List"
-msgstr ""
+msgstr "Derecelendirme Listesi İçe Aktar"
 
 #: settings/RatingListsPage.qml:111
 #, kde-format
 msgctxt "@title"
 msgid "Delete Rating List"
-msgstr ""
+msgstr "Derecelendirme Listesini Sil"
 
 #: settings/RatingListsPage.qml:119
 #, kde-format
 msgctxt "@action:button Delete Rating List"
 msgid "Delete"
-msgstr ""
+msgstr "Sil"
 
 #: settings/RatingListsPage.qml:132
-#, fuzzy, kde-format
-#| msgctxt "@info:placeholder"
-#| msgid "No standings yet"
+#, kde-format
 msgctxt "@info:status"
 msgid "No rating lists yet."
-msgstr "Henüz puan yok"
+msgstr "Henüz derecelendirme listesi yok"
 
 #: settings/RatingListsPage.qml:152
 #, kde-format
 msgctxt "@action:button"
 msgid "Delete Rating List"
-msgstr ""
+msgstr "Derecelendirme Listesini Sil"
 
 #: settings/RatingListsPage.qml:160
 #, kde-format
 msgctxt "@action:button"
 msgid "Delete rating list"
-msgstr ""
+msgstr "Derecelendirme listesini sil"
 
 #: settings/RatingListsPage.qml:170
 #, kde-format
 msgctxt "@action:button"
 msgid "Add rating list"
-msgstr ""
+msgstr "Derecelendirme Listesi Ekle"
 
 #: standingsmodel.cpp:88
 #, kde-format
@@ -964,53 +956,47 @@ msgstr "“%2” eşleşmesinde geçersiz oyuncu “%1”."
 #, kde-format
 msgctxt "@info:progress"
 msgid "Downloading file"
-msgstr ""
+msgstr "Dosya indiriliyor"
 
 #: tournament/ratinglist.cpp:143
 #, kde-format
 msgctxt "@info:progress"
 msgid "Downloading file (%1 %)"
-msgstr ""
+msgstr "Dosya indiriliyor (%​%1)"
 
 #: tournament/ratinglist.cpp:149
 #, kde-format
 msgctxt "@info"
 msgid "Couldn't download rating list: %1"
-msgstr ""
+msgstr "Derecelendirme listesi indirilemedi: %1"
 
 #: tournament/ratinglist.cpp:161
-#, fuzzy, kde-format
-#| msgid "Couldn't open file"
+#, kde-format
 msgctxt "@info"
 msgid "Couldn't extract file."
-msgstr "Dosya açılamadı"
+msgstr "Dosya çıkarılamadı."
 
 #: tournament/ratinglist.cpp:166
 #, kde-format
 msgctxt "@info"
 msgid "File format not supported."
-msgstr ""
+msgstr "Dosya biçimi desteklenmiyor."
 
 #: tournament/ratinglist.cpp:186
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Sort players"
+#, kde-format
 msgctxt "@info:progress"
 msgid "Imported one player."
 msgid_plural "Imported %1 players."
-msgstr[0] "Oyuncuları sırala"
-msgstr[1] "Oyuncuları sırala"
+msgstr[0] "1 oyuncu içe aktarıldı."
+msgstr[1] "%1 oyuncu içe aktarıldı."
 
 #: tournament/ratinglist.cpp:360
-#, fuzzy, kde-format
-#| msgctxt "@info:status Number of players"
-#| msgid "1 player"
-#| msgid_plural "%1 players"
+#, kde-format
 msgctxt "@info:progress"
 msgid "Saved 1 player."
 msgid_plural "Saved %1 players."
-msgstr[0] "1 oyuncu"
-msgstr[1] "%1 oyuncu"
+msgstr[0] "1 oyuncu kaydedildi."
+msgstr[1] "%1 oyuncu kaydedildi."
 
 #: tournament/tiebreaks/buchholz.cpp:14
 #, kde-format

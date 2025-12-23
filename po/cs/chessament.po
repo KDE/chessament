@@ -277,7 +277,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action:menu"
 msgid "File"
-msgstr ""
+msgstr "Soubor"
 
 #: qml/components/MenuBar.qml:38
 #, kde-format
@@ -289,7 +289,7 @@ msgstr "Nastavení"
 #, kde-format
 msgctxt "@action:menu"
 msgid "Help"
-msgstr ""
+msgstr "Nápověda"
 
 #: qml/components/TiebreakDelegate.qml:30
 #: qml/components/TiebreakDelegate.qml:35
@@ -864,7 +864,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button"
 msgid "Import"
-msgstr ""
+msgstr "Importovat"
 
 #: settings/RatingListsPage.qml:46
 #, fuzzy, kde-format

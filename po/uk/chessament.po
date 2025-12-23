@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-12-22 00:39+0000\n"
-"PO-Revision-Date: 2025-11-08 17:44+0200\n"
+"PO-Revision-Date: 2025-12-22 14:02+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -817,12 +817,10 @@ msgid "General"
 msgstr "Загальне"
 
 #: settings/ChessamentConfigurationView.qml:30
-#, fuzzy, kde-format
-#| msgctxt "@title:column Player Rating"
-#| msgid "Rating"
+#, kde-format
 msgctxt "@action:button"
 msgid "Rating Lists"
-msgstr "Рейтинг"
+msgstr "Рейтингові списки"
 
 #: settings/GeneralPage.qml:16
 #, kde-format
@@ -853,29 +851,25 @@ msgid "Logout"
 msgstr "Вийти"
 
 #: settings/RatingListsPage.qml:21 settings/RatingListsPage.qml:127
-#, fuzzy, kde-format
-#| msgctxt "@title:column Player Rating"
-#| msgid "Rating"
+#, kde-format
 msgctxt "@title"
 msgid "Rating Lists"
-msgstr "Рейтинг"
+msgstr "Рейтингові списки"
 
 #: settings/RatingListsPage.qml:26
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Rating List"
-msgstr ""
+msgstr "Додати список рейтингів"
 
 #: settings/RatingListsPage.qml:31
 #, kde-format
 msgctxt "@action:button"
 msgid "Import"
-msgstr ""
+msgstr "Імпортувати"
 
 #: settings/RatingListsPage.qml:46
-#, fuzzy, kde-format
-#| msgctxt "@title:column Player Name"
-#| msgid "Name"
+#, kde-format
 msgctxt "@info:label"
 msgid "Name"
 msgstr "Ім'я"
@@ -884,51 +878,49 @@ msgstr "Ім'я"
 #, kde-format
 msgctxt "@info:label"
 msgid "Rating list URL"
-msgstr ""
+msgstr "Адреса рейтингового списку"
 
 #: settings/RatingListsPage.qml:71
 #, kde-format
 msgctxt "@title:window"
 msgid "Importing Rating List"
-msgstr ""
+msgstr "Імпортування рейтингового списку"
 
 #: settings/RatingListsPage.qml:111
 #, kde-format
 msgctxt "@title"
 msgid "Delete Rating List"
-msgstr ""
+msgstr "Вилучення рейтингового списку"
 
 #: settings/RatingListsPage.qml:119
 #, kde-format
 msgctxt "@action:button Delete Rating List"
 msgid "Delete"
-msgstr ""
+msgstr "Вилучити"
 
 #: settings/RatingListsPage.qml:132
-#, fuzzy, kde-format
-#| msgctxt "@info:placeholder"
-#| msgid "No standings yet"
+#, kde-format
 msgctxt "@info:status"
 msgid "No rating lists yet."
-msgstr "Місця ще не розподілено"
+msgstr "Рейтингових списків ще немає."
 
 #: settings/RatingListsPage.qml:152
 #, kde-format
 msgctxt "@action:button"
 msgid "Delete Rating List"
-msgstr ""
+msgstr "Вилучити рейтинговий список"
 
 #: settings/RatingListsPage.qml:160
 #, kde-format
 msgctxt "@action:button"
 msgid "Delete rating list"
-msgstr ""
+msgstr "Вилучити рейтинговий список"
 
 #: settings/RatingListsPage.qml:170
 #, kde-format
 msgctxt "@action:button"
 msgid "Add rating list"
-msgstr ""
+msgstr "Додати рейтинговий список"
 
 #: standingsmodel.cpp:88
 #, kde-format
@@ -970,57 +962,51 @@ msgstr "Некоректний гравець «%1» у поділі на пар
 #, kde-format
 msgctxt "@info:progress"
 msgid "Downloading file"
-msgstr ""
+msgstr "Отримання файла"
 
 #: tournament/ratinglist.cpp:143
 #, kde-format
 msgctxt "@info:progress"
 msgid "Downloading file (%1 %)"
-msgstr ""
+msgstr "Отримання файла (%1 %)"
 
 #: tournament/ratinglist.cpp:149
 #, kde-format
 msgctxt "@info"
 msgid "Couldn't download rating list: %1"
-msgstr ""
+msgstr "Не вдалося отримати рейтинговий список: %1"
 
 #: tournament/ratinglist.cpp:161
-#, fuzzy, kde-format
-#| msgid "Couldn't open file"
+#, kde-format
 msgctxt "@info"
 msgid "Couldn't extract file."
-msgstr "Не вдалося відкрити файл"
+msgstr "Не вдалося видобути файл."
 
 #: tournament/ratinglist.cpp:166
 #, kde-format
 msgctxt "@info"
 msgid "File format not supported."
-msgstr ""
+msgstr "Підтримки формату файлів не передбачено."
 
 #: tournament/ratinglist.cpp:186
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Sort players"
+#, kde-format
 msgctxt "@info:progress"
 msgid "Imported one player."
 msgid_plural "Imported %1 players."
-msgstr[0] "Упорядкування гравців"
-msgstr[1] "Упорядкування гравців"
-msgstr[2] "Упорядкування гравців"
-msgstr[3] "Упорядкування гравців"
+msgstr[0] "Імпортовано дані %1 гравця."
+msgstr[1] "Імпортовано дані %1 гравців."
+msgstr[2] "Імпортовано дані %1 гравців."
+msgstr[3] "Імпортовано дані гравця."
 
 #: tournament/ratinglist.cpp:360
-#, fuzzy, kde-format
-#| msgctxt "@info:status Number of players"
-#| msgid "1 player"
-#| msgid_plural "%1 players"
+#, kde-format
 msgctxt "@info:progress"
 msgid "Saved 1 player."
 msgid_plural "Saved %1 players."
-msgstr[0] "%1 гравець"
-msgstr[1] "%1 гравці"
-msgstr[2] "%1 гравців"
-msgstr[3] "%1 гравець"
+msgstr[0] "Збережено дані %1 гравця."
+msgstr[1] "Збережено дані %1 гравців."
+msgstr[2] "Збережено дані %1 гравців."
+msgstr[3] "Збережено дані гравця."
 
 #: tournament/tiebreaks/buchholz.cpp:14
 #, kde-format
