@@ -808,12 +808,10 @@ msgid "General"
 msgstr "常规"
 
 #: settings/ChessamentConfigurationView.qml:30
-#, fuzzy, kde-format
-#| msgctxt "@title:column Player Rating"
-#| msgid "Rating"
+#, kde-format
 msgctxt "@action:button"
 msgid "Rating Lists"
-msgstr "等级"
+msgstr ""
 
 #: settings/GeneralPage.qml:16
 #, kde-format
@@ -844,12 +842,10 @@ msgid "Logout"
 msgstr "退出登录"
 
 #: settings/RatingListsPage.qml:21 settings/RatingListsPage.qml:127
-#, fuzzy, kde-format
-#| msgctxt "@title:column Player Rating"
-#| msgid "Rating"
+#, kde-format
 msgctxt "@title"
 msgid "Rating Lists"
-msgstr "等级"
+msgstr ""
 
 #: settings/RatingListsPage.qml:26
 #, kde-format
@@ -864,12 +860,10 @@ msgid "Import"
 msgstr ""
 
 #: settings/RatingListsPage.qml:46
-#, fuzzy, kde-format
-#| msgctxt "@title:column Player Name"
-#| msgid "Name"
+#, kde-format
 msgctxt "@info:label"
 msgid "Name"
-msgstr "姓名"
+msgstr ""
 
 #: settings/RatingListsPage.qml:51
 #, kde-format
@@ -896,12 +890,10 @@ msgid "Delete"
 msgstr ""
 
 #: settings/RatingListsPage.qml:132
-#, fuzzy, kde-format
-#| msgctxt "@info:placeholder"
-#| msgid "No standings yet"
+#, kde-format
 msgctxt "@info:status"
 msgid "No rating lists yet."
-msgstr "暂无排名"
+msgstr ""
 
 #: settings/RatingListsPage.qml:152
 #, kde-format
@@ -975,11 +967,10 @@ msgid "Couldn't download rating list: %1"
 msgstr ""
 
 #: tournament/ratinglist.cpp:161
-#, fuzzy, kde-format
-#| msgid "Couldn't open file"
+#, kde-format
 msgctxt "@info"
 msgid "Couldn't extract file."
-msgstr "无法打开文件"
+msgstr ""
 
 #: tournament/ratinglist.cpp:166
 #, kde-format
@@ -988,23 +979,18 @@ msgid "File format not supported."
 msgstr ""
 
 #: tournament/ratinglist.cpp:186
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Sort players"
+#, kde-format
 msgctxt "@info:progress"
 msgid "Imported one player."
 msgid_plural "Imported %1 players."
-msgstr[0] "对玩家排序"
+msgstr[0] ""
 
 #: tournament/ratinglist.cpp:360
-#, fuzzy, kde-format
-#| msgctxt "@info:status Number of players"
-#| msgid "1 player"
-#| msgid_plural "%1 players"
+#, kde-format
 msgctxt "@info:progress"
 msgid "Saved 1 player."
 msgid_plural "Saved %1 players."
-msgstr[0] "%1 名玩家"
+msgstr[0] ""
 
 #: tournament/tiebreaks/buchholz.cpp:14
 #, kde-format
