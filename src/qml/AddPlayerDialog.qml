@@ -9,6 +9,8 @@ import org.kde.ki18n
 import org.kde.kirigami as Kirigami
 import org.kde.kirigamiaddons.formcard as FormCard
 
+import org.kde.chessament
+
 QQC2.Dialog {
     id: root
 
@@ -27,7 +29,7 @@ QQC2.Dialog {
     bottomPadding: 0
 
     onAccepted: {
-        root.addPlayer(titleField.currentText, nameField.text, ratingField.value, nationalRatingField.value, playerIdField.text, birthDateField.text, federationField.text, originField.text, sexField.text);
+        root.addPlayer(titleField.currentText, nameField.value, ratingField.value, nationalRatingField.value, playerIdField.text, birthDateField.text, federationField.text, originField.text, sexField.text);
     }
 
     header: Kirigami.DialogHeader {
@@ -55,9 +57,27 @@ QQC2.Dialog {
                 model: ["", "GM", "IM", "FM", "WGM", "CM", "WIM", "WFM", "WCM"]
             }
 
-            FormCard.FormTextFieldDelegate {
+            FormCardSearchFieldDelegate {
                 id: nameField
                 label: KI18n.i18nc("@label:textbox", "Name")
+                suggestionModel: SearchPlayersModel {
+                    id: searchModel
+                }
+                textRole: "name"
+                subtitleRole: "rating"
+                field.onSearchTriggered: searchModel.search(nameField.value)
+                field.onActivated: function (index: int) {
+                    const player = searchModel.data(searchModel.index(index, 0), SearchPlayersModel.PlayerRole);
+
+                    titleField.currentValue = player.title;
+                    ratingField.value = player.standardRating;
+                    nationalRatingField.value = player.nationalRating;
+                    playerIdField.text = player.id;
+                    birthDateField.text = player.birthDate;
+                    federationField.text = player.federation;
+                    originField.text = player.origin;
+                    sexField.text = player.gender;
+                }
             }
 
             FormCard.FormSpinBoxDelegate {

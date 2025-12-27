@@ -11,6 +11,7 @@ ecm_add_qml_module(chessament_static
     OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/src/org/kde/chessament
     GENERATE_PLUGIN_SOURCE
     QML_FILES
+        qml/components/FormCardSearchFieldDelegate.qml
         qml/components/MenuBar.qml
         qml/components/RatingField.qml
         qml/components/StartingRankField.qml
@@ -55,12 +56,14 @@ ecm_add_qml_module(chessament_static
         pairingmodel.cpp
         ratinglistmodel.cpp
         roundmodel.cpp
+        searchplayersmodel.cpp
         standingsmodel.cpp
         tiebreakmodel.cpp
     IMPORTS
+        org.kde.kirigami
+        org.kde.ki18n
         org.kde.kirigamiaddons.formcard
         org.kde.kirigamiaddons.statefulapp
-        org.kde.kirigami
         org.kde.chessament.tournament
         org.kde.chessament.settings
 )

@@ -14,7 +14,7 @@ public:
 
     std::expected<uint, QString> readPlayers(QTextStream *stream) override;
 
-    std::expected<RatingList::Player, QString> readPlayer();
+    std::expected<RatingListPlayer, QString> readPlayer();
 
 private:
     QXmlStreamReader m_xml;

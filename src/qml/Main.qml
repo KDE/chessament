@@ -116,7 +116,15 @@ StatefulApp.StatefulWindow {
     function pageForView(view: string): var {
         if (!pageCache[view]) {
             console.log("Creating page", view);
-            pageCache[view] = Qt.createComponent("org.kde.chessament", view).createObject(root);
+
+            const component = Qt.createComponent("org.kde.chessament", view);
+            if (component.status === Component.Error) {
+                console.error(component.errorString());
+                return;
+            }
+
+            const obj = component.createObject(root);
+            pageCache[view] = obj;
         }
         return pageCache[view];
     }
