@@ -18,11 +18,6 @@ public:
         return "bh"_L1;
     }
 
-    [[nodiscard]] QString shortName() override
-    {
-        return name();
-    };
-
     [[nodiscard]] QString name() override
     {
         const auto cutLowest = option("cut_lowest"_L1, 0).toInt();

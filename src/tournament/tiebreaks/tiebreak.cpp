@@ -7,6 +7,11 @@
 
 using namespace Qt::Literals::StringLiterals;
 
+QString Tiebreak::shortName()
+{
+    return name();
+}
+
 QVariant Tiebreak::option(const QString &key, const QVariant &defaultValue)
 {
     return m_options.value(key, defaultValue);

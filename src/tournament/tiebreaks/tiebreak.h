@@ -19,7 +19,7 @@ public:
 
     [[nodiscard]] virtual QString id() = 0;
 
-    [[nodiscard]] virtual QString shortName() = 0;
+    virtual QString shortName();
 
     [[nodiscard]] virtual QString name() = 0;
 

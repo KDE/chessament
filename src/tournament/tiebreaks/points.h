@@ -17,11 +17,6 @@ public:
         return "pts"_L1;
     }
 
-    [[nodiscard]] QString shortName() override
-    {
-        return name();
-    };
-
     [[nodiscard]] QString name() override
     {
         return i18nc("Game points", "Points");
@@ -29,7 +24,7 @@ public:
 
     [[nodiscard]] QString code() override
     {
-        return "__pts"_L1;
+        return "PTS"_L1;
     }
 
     double calculate(Tournament *tournament, State state, QList<Player *> players, Player *player) override;
