@@ -141,7 +141,7 @@ TablePage {
     }
 
     Kirigami.PlaceholderMessage {
-        parent: root.tableView
+        parent: root
         anchors.centerIn: parent
         width: parent.width - Kirigami.Units.gridUnit * 4
         text: {

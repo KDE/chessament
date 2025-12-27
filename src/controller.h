@@ -67,7 +67,7 @@ public:
     Q_INVOKABLE void exportTrf(const QUrl &fileUrl);
     Q_INVOKABLE QCoro::Task<void> pairRound(bool sort, uint color);
     Q_INVOKABLE void removePairings(bool keepByes);
-    Q_INVOKABLE QCoro::QmlTask reloadStandings();
+    Q_INVOKABLE QCoro::QmlTask reloadStandings(int maxRound);
 
     std::unique_ptr<Document> playersDocument();
     Q_INVOKABLE void savePlayersDocument(const QString &fileName);
@@ -108,7 +108,7 @@ Q_SIGNALS:
     void errorChanged();
 
 private:
-    QCoro::Task<> updateStandings();
+    QCoro::Task<> updateStandings(int maxRound);
 
     std::unique_ptr<Event> m_event;
     Tournament *m_tournament;

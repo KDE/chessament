@@ -17,6 +17,7 @@ Kirigami.Page {
 
     required property var model
     required property Component delegate
+    readonly property alias content: content
     readonly property alias tableView: tableView
     readonly property alias heading: heading
 
@@ -39,6 +40,8 @@ Kirigami.Page {
     Kirigami.Theme.inherit: false
 
     contentItem: Rectangle {
+        id: content
+
         // The background color will show through the cell
         // spacing, and therefore become the grid line color.
         color: Kirigami.Theme.backgroundColor

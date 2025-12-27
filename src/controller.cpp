@@ -196,16 +196,16 @@ void Controller::removePairings(bool keepByes)
     setAreStandingsValid(false);
 }
 
-QCoro::QmlTask Controller::reloadStandings()
+QCoro::QmlTask Controller::reloadStandings(int maxRound)
 {
     qDebug() << "reloading standings";
-    return updateStandings();
+    return updateStandings(maxRound);
 }
 
-QCoro::Task<> Controller::updateStandings()
+QCoro::Task<> Controller::updateStandings(int maxRound)
 {
-    const auto standings = co_await QtConcurrent::run([this]() -> QList<Standing> {
-        return m_tournament->getStandings(m_tournament->getState());
+    const auto standings = co_await QtConcurrent::run([this, maxRound]() -> QList<Standing> {
+        return m_tournament->getStandings(m_tournament->getState(maxRound));
     });
 
     m_standingsModel->setStandings(standings);
@@ -360,11 +360,6 @@ void Controller::setCurrentView(const QString &currentView)
         return;
     }
     m_currentView = currentView;
-
-    if (m_currentView == u"StandingsPage"_s && !m_areStandingsValid) {
-        reloadStandings();
-    }
-
     Q_EMIT currentViewChanged();
 }
 

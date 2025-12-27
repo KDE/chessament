@@ -1,9 +1,11 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
-// SPDX-FileCopyrightText: 2024 Manuel Alcaraz Zambrano <manuel@alcarazzam.dev>
+// SPDX-FileCopyrightText: 2024-2025 Manuel Alcaraz Zambrano <manuel@alcarazzam.dev>
+
 pragma ComponentBehavior: Bound
 
 import QtQml
 import QtQuick
+import QtQuick.Controls as Controls
 
 import org.kde.kirigami as Kirigami
 
@@ -12,9 +14,12 @@ import org.kde.chessament
 TablePage {
     id: root
 
+    property int round: Math.max(1, Controller.tournament.currentRound)
+
     Kirigami.ColumnView.fillWidth: true
 
     model: Controller.standingsModel
+    content.visible: Controller.tournament.currentRound > 0
 
     selectionBehavior: TableView.SelectRows
 
@@ -26,15 +31,61 @@ TablePage {
         return widths[column];
     }
 
+    actions: [
+        Kirigami.Action {
+            displayHint: Kirigami.DisplayHint.KeepVisible
+            visible: root.content.visible
+            displayComponent: Controls.ComboBox {
+                id: roundSelector
+                model: Math.max(1, Controller.tournament.currentRound)
+                currentIndex: root.round - 1
+                displayText: {
+                    if (currentIndex === roundSelector.count - 1) {
+                        return i18nc("@item:inlistbox", "Final Standings");
+                    }
+                    return i18nc("@item:inlistbox Standings After Round %1", "After Round %1", currentIndex + 1);
+                }
+                flat: true
+                delegate: Controls.ItemDelegate {
+                    required property int index
+
+                    text: {
+                        if (index === roundSelector.count - 1) {
+                            return i18nc("@item:inlistbox", "Final Standings");
+                        }
+                        return i18nc("@item:inlistbox Standings After Round %1", "After Round %1", index + 1);
+                    }
+                    width: roundSelector.width
+                    highlighted: roundSelector.highlightedIndex === index
+                }
+                onActivated: index => {
+                    if (root.round !== index + 1) {
+                        root.tableView.selectionModel.clear();
+                        root.round = index + 1;
+                        Controller.reloadStandings(root.round);
+                    }
+                }
+            }
+        }
+    ]
+
     Connections {
         target: Controller
 
         function onAreStandingsValidChanged() {
             if (!Controller.areStandingsValid && Controller.currentView === "StandingsPage") {
-                Controller.reloadStandings();
+                Controller.reloadStandings(root.round);
+            }
+        }
+
+        function onCurrentViewChanged() {
+            if (!Controller.areStandingsValid && Controller.currentView === "StandingsPage") {
+                Controller.reloadStandings(root.round);
             }
         }
     }
+
+    Component.onCompleted: Controller.reloadStandings(root.round)
 
     delegate: TableDelegate {
         id: delegate
@@ -49,10 +100,10 @@ TablePage {
     }
 
     Kirigami.PlaceholderMessage {
-        parent: root.tableView
+        parent: root
         anchors.centerIn: parent
         width: parent.width - Kirigami.Units.gridUnit * 4
         text: i18nc("@info:placeholder", "No standings yet")
-        visible: root.tableView.rows === 0
+        visible: Controller.tournament.currentRound < 1
     }
 }
