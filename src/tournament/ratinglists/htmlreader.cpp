@@ -13,7 +13,7 @@ std::expected<uint, QString> HtmlRatingListReader::readPlayers(QTextStream *stre
 {
     QString line;
     uint count{0};
-    QList<RatingList::Player> players{};
+    QList<RatingListPlayer> players{};
 
     stream->setEncoding(QStringConverter::Latin1);
 
@@ -75,11 +75,11 @@ std::expected<uint, QString> HtmlRatingListReader::readPlayers(QTextStream *stre
     return count;
 }
 
-std::expected<RatingList::Player, QString> HtmlRatingListReader::readPlayer()
+std::expected<RatingListPlayer, QString> HtmlRatingListReader::readPlayer()
 {
     Q_ASSERT(m_xml.isStartElement() && m_xml.name() == "tr"_L1);
 
-    RatingList::Player player{};
+    RatingListPlayer player{};
     int index{0};
 
     while (m_xml.readNextStartElement()) {

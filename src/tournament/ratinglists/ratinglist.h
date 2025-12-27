@@ -55,28 +55,54 @@ constexpr auto ADD_RATING_LIST_PLAYER_QUERY =
     "INSERT INTO players(list, name, playerid, federation, gender, title, birthday, standard, rapid, blitz, nationalid, nationalrating, extra) "
     "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, jsonb(?));"_L1;
 
+static const auto SEARCH_PLAYERS_QUERY =
+    u"SELECT playerid, name, federation, gender, title, birthday, standard, rapid, blitz, nationalid, nationalrating, json(extra) as extra FROM players WHERE name LIKE :search LIMIT 20;"_s;
+
 static constexpr auto RATING_LISTS_DB_CONNECTION_NAME = "rating-lists"_L1;
+
+struct RatingListPlayer {
+    Q_GADGET
+
+    Q_PROPERTY(QString id MEMBER id CONSTANT)
+    Q_PROPERTY(QString name MEMBER name CONSTANT)
+    Q_PROPERTY(QString federation MEMBER federation CONSTANT)
+    Q_PROPERTY(QString gender MEMBER gender CONSTANT)
+    Q_PROPERTY(QString title MEMBER title CONSTANT)
+    Q_PROPERTY(QString birthDate MEMBER birthDate CONSTANT)
+    Q_PROPERTY(uint standardRating MEMBER standardRating CONSTANT)
+    Q_PROPERTY(uint rapidRating MEMBER rapidRating CONSTANT)
+    Q_PROPERTY(uint blitzRating MEMBER blitzRating CONSTANT)
+    Q_PROPERTY(QString nationalId MEMBER nationalId CONSTANT)
+    Q_PROPERTY(uint nationalRating MEMBER nationalRating CONSTANT)
+    Q_PROPERTY(QJsonObject extra MEMBER extra CONSTANT)
+
+    Q_PROPERTY(QString origin READ origin CONSTANT)
+
+public:
+    [[nodiscard]] QString origin() const
+    {
+        return extra.value("origin"_L1).toString();
+    }
+
+    QString id;
+    QString name;
+    QString federation;
+    QString gender;
+    QString title;
+    QString birthDate;
+    uint standardRating;
+    uint rapidRating;
+    uint blitzRating;
+    QString nationalId;
+    uint nationalRating;
+    QJsonObject extra;
+};
 
 class RatingList : public QObject
 {
     Q_OBJECT
 
 public:
-    struct Player {
-        QString id;
-        QString name;
-        QString federation;
-        QString gender;
-        QString title;
-        QString birthDate;
-        uint standardRating;
-        uint rapidRating;
-        uint blitzRating;
-        QString nationalId;
-        uint nationalRating;
-        QJsonObject extra;
-    };
-
     static std::vector<std::unique_ptr<RatingList>> lists();
 
     [[nodiscard]] int id() const;
@@ -86,10 +112,12 @@ public:
 
     static void remove(int id);
 
+    static std::expected<QList<RatingListPlayer>, QString> searchPlayers(const QString &text);
+
     /*!
      * \internal
      */
-    std::expected<void, QString> savePlayers(const QList<RatingList::Player> &players);
+    std::expected<void, QString> savePlayers(const QList<RatingListPlayer> &players);
 
 Q_SIGNALS:
     void statusChanged(const QString &status);

@@ -12,7 +12,7 @@ std::expected<uint, QString> FideRatingListReader::readPlayers(QTextStream *stre
 {
     QString line;
     uint count{0};
-    QList<RatingList::Player> players{};
+    QList<RatingListPlayer> players{};
 
     stream->readLine(); // Skip header
 
@@ -88,7 +88,7 @@ std::expected<uint, QString> FideRatingListReader::readPlayers(QTextStream *stre
             continue;
         }
 
-        players << RatingList::Player{
+        players << RatingListPlayer{
             .id = QString::number(playerId),
             .name = name,
             .federation = federation,

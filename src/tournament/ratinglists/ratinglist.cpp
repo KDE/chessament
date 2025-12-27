@@ -282,7 +282,75 @@ void RatingList::remove(int id)
     QSqlDatabase::removeDatabase(RATING_LISTS_DB_CONNECTION_NAME);
 }
 
-std::expected<void, QString> RatingList::savePlayers(const QList<RatingList::Player> &players)
+std::expected<QList<RatingListPlayer>, QString> RatingList::searchPlayers(const QString &text)
+{
+    auto db = getDB();
+    if (!db) {
+        return std::unexpected(db.error());
+    }
+
+    QList<RatingListPlayer> players{};
+
+    QSqlQuery query(*db);
+    query.prepare(SEARCH_PLAYERS_QUERY);
+    query.bindValue(u":search"_s, u"%%1%"_s.arg(text));
+    query.exec();
+
+    if (query.lastError().isValid()) {
+        return std::unexpected(query.lastError().text());
+    }
+
+    int idNo = query.record().indexOf("playerid");
+    int nameNo = query.record().indexOf("name");
+    int federationNo = query.record().indexOf("federation");
+    int genderNo = query.record().indexOf("gender");
+    int titleNo = query.record().indexOf("title");
+    int birthDayNo = query.record().indexOf("birthday");
+    int standardNo = query.record().indexOf("standard");
+    int rapidNo = query.record().indexOf("rapid");
+    int blitzNo = query.record().indexOf("blitz");
+    int nationalIdNo = query.record().indexOf("nationalid");
+    int nationalRatingNo = query.record().indexOf("nationalrating");
+    int extraNo = query.record().indexOf("extra");
+
+    while (query.next()) {
+        const auto id = query.value(idNo).toString();
+        const auto name = query.value(nameNo).toString();
+        const auto federation = query.value(federationNo).toString();
+        const auto gender = query.value(genderNo).toString();
+        const auto title = query.value(titleNo).toString();
+        const auto birthDate = query.value(birthDayNo).toString();
+        const auto standard = query.value(standardNo).toUInt();
+        const auto rapid = query.value(rapidNo).toUInt();
+        const auto blitz = query.value(blitzNo).toUInt();
+        const auto nationalId = query.value(nationalIdNo).toString();
+        const auto nationalRating = query.value(nationalRatingNo).toUInt();
+
+        const auto extra = query.value(extraNo).toByteArray();
+        const auto extraJson = QJsonDocument::fromJson(extra);
+
+        const auto player = RatingListPlayer{
+            .id = id,
+            .name = name,
+            .federation = federation,
+            .gender = gender,
+            .title = title,
+            .birthDate = birthDate,
+            .standardRating = standard,
+            .rapidRating = rapid,
+            .blitzRating = blitz,
+            .nationalId = nationalId,
+            .nationalRating = nationalRating,
+            .extra = extraJson.object(),
+        };
+
+        players << player;
+    }
+
+    return players;
+}
+
+std::expected<void, QString> RatingList::savePlayers(const QList<RatingListPlayer> &players)
 {
     QVariantList lists;
     QVariantList names;
