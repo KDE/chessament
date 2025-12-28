@@ -62,7 +62,7 @@ public:
     };
     Q_ENUM(Title)
 
-    static constexpr uint titleStrengthLevel(const QString &title)
+    static uint titleStrengthLevel(const QString &title)
     {
         const auto t = title.toLower();
         if (t == QStringLiteral("gm")) {

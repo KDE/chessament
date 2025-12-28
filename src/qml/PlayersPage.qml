@@ -131,7 +131,6 @@ TablePage {
                     }
 
                     Component.onCompleted: {
-                        console.log("completed", editText, comboBox.currentIndex, comboBox.currentText, comboBox.currentValue, comboBox.highlightedIndex);
                         comboBox.editText = delegate.model.edit;
                         // FIXME: This breaks the Enter key
                         // comboBox.popup.open();
