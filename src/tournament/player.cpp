@@ -16,7 +16,7 @@ Player::Player(int startingRank, const QString &name, int rating)
 }
 
 Player::Player(int startingRank,
-               Title title,
+               const QString &title,
                const QString &name,
                int rating,
                int nationalRating,
@@ -66,24 +66,18 @@ void Player::setStartingRank(int startingRank)
     Q_EMIT startingRankChanged();
 }
 
-Player::Title Player::title() const
+QString Player::title() const
 {
     return m_title;
 }
 
-void Player::setTitle(Title title)
+void Player::setTitle(const QString &title)
 {
     if (m_title == title) {
         return;
     }
     m_title = title;
     Q_EMIT titleChanged();
-}
-
-void Player::setTitle(const QString &titleString)
-{
-    auto title = titleForString(titleString);
-    setTitle(title);
 }
 
 QString Player::name() const
@@ -203,7 +197,7 @@ QJsonObject Player::toJson() const
     QJsonObject json;
 
     json[u"starting_rank"_s] = m_startingRank;
-    json[u"title"_s] = Player::titleString(m_title);
+    json[u"title"_s] = m_title;
     json[u"name"_s] = m_name;
     json[u"rating"_s] = m_rating;
     json[u"national_rating"_s] = m_nationalRating;
@@ -224,7 +218,7 @@ std::unique_ptr<Player> Player::fromJson(const QJsonObject &json)
         player->m_startingRank = v.toInt();
     }
     if (const auto v = json[u"title"_s]; v.isString()) {
-        player->m_title = Player::titleForString(v.toString());
+        player->m_title = v.toString();
     }
     if (const auto v = json[u"name"_s]; v.isString()) {
         player->m_name = v.toString();
@@ -256,7 +250,7 @@ std::unique_ptr<Player> Player::fromJson(const QJsonObject &json)
 
 std::string Player::toTrf(double points, int rank, bool normalize)
 {
-    const auto title = Player::titleString(m_title);
+    auto title = m_title;
     auto name = m_name;
     auto federation = m_federation;
     auto birth = m_birthDate;
@@ -264,14 +258,15 @@ std::string Player::toTrf(double points, int rank, bool normalize)
     auto sex = m_sex;
 
     if (normalize) {
-        sex = Utils::normalize(sex);
+        title = Utils::normalize(title);
         name = Utils::normalize(name);
         federation = Utils::normalize(federation);
-        playerid = Utils::normalize(playerid);
         birth = Utils::normalize(birth);
+        playerid = Utils::normalize(playerid);
+        sex = Utils::normalize(sex);
     }
 
-    return std::format("001 {:4} {:1.1}{:3} {:33.33} {:4} {:3.3} {:>11} {:10.10} {:4.1f} {:4}",
+    return std::format("001 {:4} {:1.1}{:3.3} {:33.33} {:4} {:3.3} {:>11} {:10.10} {:4.1f} {:4}",
                        m_startingRank,
                        sex.toStdString(),
                        title.toStdString(),

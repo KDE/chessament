@@ -115,17 +115,26 @@ TablePage {
                     id: comboBox
 
                     anchors.fill: parent
-                    model: [" ", "GM", "IM", "FM", "WGM", "CM", "WIM", "WFM", "WCM"]
+                    model: [" ", "GM", "IM", "FM", "CM", "WGM", "WIM", "WFM", "WCM"]
+                    editable: true
 
-                    popup.onClosed: root.tableView.closeEditor()
-
-                    onActivated: {
+                    onActivated: index => {
                         delegate.model.edit = comboBox.currentText;
                     }
 
+                    TableView.onCommit: {
+                        if (!comboBox.editText.length && !comboBox.currentText.length && comboBox.highlightedIndex >= 0) {
+                            delegate.model.edit = comboBox.textAt(comboBox.highlightedIndex);
+                        } else {
+                            delegate.model.edit = comboBox.editText;
+                        }
+                    }
+
                     Component.onCompleted: {
-                        comboBox.currentIndex = comboBox.indexOfValue(delegate.model.edit);
-                        comboBox.popup.open();
+                        console.log("completed", editText, comboBox.currentIndex, comboBox.currentText, comboBox.currentValue, comboBox.highlightedIndex);
+                        comboBox.editText = delegate.model.edit;
+                        // FIXME: This breaks the Enter key
+                        // comboBox.popup.open();
                     }
                 }
             }

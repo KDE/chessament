@@ -190,7 +190,7 @@ std::expected<void, QString> Tournament::addPlayer(std::unique_ptr<Player> playe
     QSqlQuery query(m_event->getDB());
     query.prepare(ADD_PLAYER_QUERY);
     query.bindValue(u":startingRank"_s, player->startingRank());
-    query.bindValue(u":title"_s, Player::titleString(player->title()));
+    query.bindValue(u":title"_s, player->title());
     query.bindValue(u":name"_s, player->name());
     query.bindValue(u":rating"_s, player->rating());
     query.bindValue(u":nationalRating"_s, player->nationalRating());
@@ -223,7 +223,7 @@ void Tournament::savePlayer(Player *player)
     query.prepare(UPDATE_PLAYER_QUERY);
     query.bindValue(u":id"_s, player->id());
     query.bindValue(u":startingRank"_s, player->startingRank());
-    query.bindValue(u":title"_s, Player::titleString(player->title()));
+    query.bindValue(u":title"_s, player->title());
     query.bindValue(u":name"_s, player->name());
     query.bindValue(u":rating"_s, player->rating());
     query.bindValue(u":nationalRating"_s, player->nationalRating());
@@ -1093,7 +1093,7 @@ std::expected<void, QString> Tournament::loadPlayers()
 
     while (query.next()) {
         auto player = std::make_unique<Player>(query.value(stRankNo).toInt(),
-                                               Player::titleForString(query.value(titleNo).toString()),
+                                               query.value(titleNo).toString(),
                                                query.value(nameNo).toString(),
                                                query.value(ratingNo).toInt(),
                                                query.value(nationalRatingNo).toInt(),

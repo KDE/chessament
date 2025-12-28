@@ -184,7 +184,7 @@ std::expected<void, QString> TRFReader::readPlayer(QStringView line)
 {
     const auto startingRank = line.sliced(4, 4).toInt();
     const auto sex = line.sliced(9, 1).trimmed().toString();
-    const auto title = Player::titleForString(line.sliced(10, 3).trimmed().toString());
+    const auto title = line.sliced(10, 3).trimmed().toString();
     const auto name = line.sliced(14, 33).trimmed().toString();
     const auto rating = line.sliced(48, 4).toInt();
     const auto federation = line.sliced(53, 5).trimmed().toString();

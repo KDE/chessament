@@ -23,7 +23,7 @@ class Player : public QObject
 
     Q_PROPERTY(int id READ id NOTIFY idChanged)
     Q_PROPERTY(int startingRank READ startingRank NOTIFY startingRankChanged)
-    Q_PROPERTY(Title title READ title WRITE setTitle NOTIFY titleChanged)
+    Q_PROPERTY(QString title READ title WRITE setTitle NOTIFY titleChanged)
     Q_PROPERTY(QString name READ name WRITE setName NOTIFY nameChanged)
     Q_PROPERTY(int rating READ rating WRITE setRating NOTIFY ratingChanged)
     Q_PROPERTY(int nationalRating READ nationalRating WRITE setNationalRating NOTIFY nationalRatingChanged)
@@ -62,29 +62,34 @@ public:
     };
     Q_ENUM(Title)
 
-    static constexpr uint titleStrengthLevel(Player::Title title)
+    static constexpr uint titleStrengthLevel(const QString &title)
     {
-        switch (title) {
-        case Title::GM:
+        const auto t = title.toLower();
+        if (t == QStringLiteral("gm")) {
             return 0;
-        case Title::IM:
-            return 1;
-        case Title::WGM:
-            return 2;
-        case Title::FM:
-            return 3;
-        case Title::WIM:
-            return 4;
-        case Title::CM:
-            return 5;
-        case Title::WFM:
-            return 6;
-        case Title::WCM:
-            return 7;
-        case Title::None:
-            return 8;
         }
-        Q_UNREACHABLE();
+        if (t == QStringLiteral("im")) {
+            return 1;
+        }
+        if (t == QStringLiteral("wgm")) {
+            return 2;
+        }
+        if (t == QStringLiteral("fm")) {
+            return 3;
+        }
+        if (t == QStringLiteral("wim")) {
+            return 4;
+        }
+        if (t == QStringLiteral("cm")) {
+            return 5;
+        }
+        if (t == QStringLiteral("wfm")) {
+            return 6;
+        }
+        if (t == QStringLiteral("wcm")) {
+            return 7;
+        }
+        return 8;
     }
 
     static QString titleString(Player::Title title)
@@ -113,7 +118,7 @@ public:
 
     static Title titleForString(const QString &title)
     {
-        auto t = title.toLower();
+        const auto t = title.toLower();
         if (t == QStringLiteral("gm")) {
             return Title::GM;
         }
@@ -144,7 +149,7 @@ public:
     explicit Player() = default;
     explicit Player(int startingRank, const QString &name, int rating);
     explicit Player(int startingRank,
-                    Player::Title title,
+                    const QString &title,
                     const QString &name,
                     int rating,
                     int nationalRating,
@@ -176,7 +181,7 @@ public:
      *
      * This property holds the title of the player.
      */
-    [[nodiscard]] Title title() const;
+    [[nodiscard]] QString title() const;
 
     /*!
      * \property Player::name
@@ -242,11 +247,6 @@ public:
      */
     [[nodiscard]] QString sex() const;
 
-    Q_INVOKABLE [[nodiscard]] QString titleString() const
-    {
-        return Player::titleString(m_title);
-    };
-
     /*!
      * Returns a JSON representation of the player.
      *
@@ -279,7 +279,6 @@ public:
 public Q_SLOTS:
     void setId(int id);
     void setStartingRank(int startingRank);
-    void setTitle(Player::Title title);
     void setTitle(const QString &titleString);
     void setName(const QString &name);
     void setRating(int rating);
@@ -306,7 +305,7 @@ Q_SIGNALS:
 private:
     int m_id = 0;
     int m_startingRank = 1;
-    Player::Title m_title;
+    QString m_title;
     QString m_name;
     int m_rating = 0;
     int m_nationalRating = 0;

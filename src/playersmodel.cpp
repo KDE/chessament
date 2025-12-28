@@ -40,7 +40,7 @@ QVariant PlayersModel::data(const QModelIndex &index, int role) const
         case PlayersModel::Columns::StartingRank:
             return player->startingRank();
         case PlayersModel::Columns::Title:
-            return Player::titleString(player->title());
+            return player->title();
         case PlayersModel::Columns::Name:
             return player->name();
         case PlayersModel::Columns::Rating:
@@ -63,7 +63,7 @@ QVariant PlayersModel::data(const QModelIndex &index, int role) const
         case PlayersModel::Columns::StartingRank:
             return player->startingRank();
         case PlayersModel::Columns::Title:
-            return Player::titleString(player->title());
+            return player->title();
         case PlayersModel::Columns::Name:
             return player->name();
         case PlayersModel::Columns::Rating:
@@ -117,7 +117,7 @@ bool PlayersModel::setData(const QModelIndex &index, const QVariant &value, int 
         break;
     }
     case PlayersModel::Columns::Title:
-        player->setTitle(Player::titleForString(value.toString()));
+        player->setTitle(value.toString().trimmed());
         break;
     case PlayersModel::Columns::Name:
         player->setName(value.toString());

@@ -223,8 +223,7 @@ void Controller::addPlayer(const QString &title,
                            const QString &sex)
 {
     auto startingRank = m_tournament->numberOfPlayers() + 1;
-    auto player =
-        std::make_unique<Player>(startingRank, Player::titleForString(title), name, rating, nationalRating, playerId, birthDate, QString(), origin, sex);
+    auto player = std::make_unique<Player>(startingRank, title, name, rating, nationalRating, playerId, birthDate, QString(), origin, sex);
 
     if (auto ok = m_tournament->addPlayer(std::move(player)); !ok) {
         setError(ok.error());
