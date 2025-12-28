@@ -67,7 +67,7 @@ void Controller::setTournament(Tournament *tournament)
     Q_EMIT tournamentChanged();
 }
 
-bool Controller::hasOpenTournament()
+bool Controller::hasOpenTournament() const
 {
     return m_hasOpenTournament;
 }
@@ -95,7 +95,7 @@ void Controller::setCurrentPlayer(Player *currentPlayer)
     Q_EMIT currentPlayerChanged();
 }
 
-int Controller::currentRound()
+int Controller::currentRound() const
 {
     return m_currentRound;
 }
@@ -114,7 +114,7 @@ void Controller::setCurrentRound(int currentRound)
     Q_EMIT currentRoundChanged();
 }
 
-bool Controller::areStandingsValid()
+bool Controller::areStandingsValid() const
 {
     return m_areStandingsValid;
 }

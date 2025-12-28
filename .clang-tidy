@@ -6,6 +6,7 @@ Checks: >
   clang-diagnostic-*,
   clang-analyzer-*,
   bugprone-*,
+  -bugprone-suspicious-include,
   -bugprone-switch-missing-default-case,
   misc-*,
   modernize-*,
@@ -19,4 +20,3 @@ Checks: >
   -readability-magic-numbers,
   -readability-qualified-auto,
   -readability-redundant-access-specifiers
-

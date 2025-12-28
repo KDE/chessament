@@ -42,11 +42,11 @@ public:
 
     [[nodiscard]] Event *getEvent() const;
     [[nodiscard]] Tournament *tournament() const;
-    bool hasOpenTournament();
+    [[nodiscard]] bool hasOpenTournament() const;
     [[nodiscard]] Player *currentPlayer() const;
-    int currentRound();
+    [[nodiscard]] int currentRound() const;
     bool hasCurrentRoundFinished();
-    bool areStandingsValid();
+    [[nodiscard]] bool areStandingsValid() const;
 
     void setEvent(std::unique_ptr<Event> event);
     Q_INVOKABLE void addPlayer(const QString &title,

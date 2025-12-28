@@ -183,7 +183,7 @@ public:
      *
      * \a state Helper object to compute the standings.
      */
-    QList<Standing> getStandings(State state);
+    QList<Standing> getStandings(const State &state);
 
     Q_INVOKABLE QList<QVariantMap> availableTiebreaks();
 

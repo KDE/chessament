@@ -326,7 +326,7 @@ QHash<Player *, QList<Pairing *>> Tournament::getPairingsByPlayer(int maxRound)
     return pairings;
 }
 
-QList<Standing> Tournament::getStandings(State state)
+QList<Standing> Tournament::getStandings(const State &state)
 {
     QList<Standing> standings;
 
@@ -581,7 +581,7 @@ int Tournament::numberOfPlayers()
 
 int Tournament::numberOfRatedPlayers()
 {
-    return std::count_if(m_players.cbegin(), m_players.cend(), [](auto const &p) {
+    return std::count_if(m_players.cbegin(), m_players.cend(), [](const auto &p) {
         return p->rating() > 0;
     });
 }
