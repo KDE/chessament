@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-22 00:39+0000\n"
+"POT-Creation-Date: 2025-12-28 00:39+0000\n"
 "PO-Revision-Date: 2025-12-22 12:34+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -655,7 +655,21 @@ msgstr ""
 "Dördüncü raunttan sonra ilk puan sıralamasını değiştirmeye resmî "
 "turnuvalarda izin verilmez."
 
-#: qml/StandingsPage.qml:55
+#: qml/StandingsPage.qml:44 qml/StandingsPage.qml:54
+#, fuzzy, kde-format
+#| msgid "Standings"
+msgctxt "@item:inlistbox"
+msgid "Final Standings"
+msgstr "Puan Durumu"
+
+#: qml/StandingsPage.qml:46 qml/StandingsPage.qml:56
+#, fuzzy, kde-format
+#| msgid "Pair Round %1"
+msgctxt "@item:inlistbox Standings After Round %1"
+msgid "After Round %1"
+msgstr "Eşleştir: %1. Raunt"
+
+#: qml/StandingsPage.qml:106
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No standings yet"

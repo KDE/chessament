@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-22 00:39+0000\n"
+"POT-Creation-Date: 2025-12-28 00:39+0000\n"
 "PO-Revision-Date: 2025-12-22 10:40-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -655,7 +655,21 @@ msgstr ""
 "Alterar a classificação inicial após o pareamento da quarta rodada não é "
 "permitido em torneios oficiais."
 
-#: qml/StandingsPage.qml:55
+#: qml/StandingsPage.qml:44 qml/StandingsPage.qml:54
+#, fuzzy, kde-format
+#| msgid "Standings"
+msgctxt "@item:inlistbox"
+msgid "Final Standings"
+msgstr "Classificações"
+
+#: qml/StandingsPage.qml:46 qml/StandingsPage.qml:56
+#, fuzzy, kde-format
+#| msgid "Pair Round %1"
+msgctxt "@item:inlistbox Standings After Round %1"
+msgid "After Round %1"
+msgstr "Pares da rodada %1"
+
+#: qml/StandingsPage.qml:106
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No standings yet"

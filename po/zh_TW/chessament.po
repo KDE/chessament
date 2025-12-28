@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-22 00:39+0000\n"
+"POT-Creation-Date: 2025-12-28 00:39+0000\n"
 "PO-Revision-Date: 2025-09-29 01:32+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -653,7 +653,19 @@ msgid ""
 "allowed in official tournaments."
 msgstr ""
 
-#: qml/StandingsPage.qml:55
+#: qml/StandingsPage.qml:44 qml/StandingsPage.qml:54
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "Final Standings"
+msgstr ""
+
+#: qml/StandingsPage.qml:46 qml/StandingsPage.qml:56
+#, kde-format
+msgctxt "@item:inlistbox Standings After Round %1"
+msgid "After Round %1"
+msgstr ""
+
+#: qml/StandingsPage.qml:106
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No standings yet"
