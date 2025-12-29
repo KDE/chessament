@@ -1,22 +1,24 @@
 // SPDX-FileCopyrightText: 2024-2025 Manuel Alcaraz Zambrano <manuel@alcarazzam.dev>
 // SPDX-License-Identifier: GPL-3.0-or-later
 
-#include "trf.h"
+#include "trf/reader.h"
+
 #include "tournament.h"
+#include "trf.h"
 
 #include <KLocalizedString>
 
-bool operator==(const TRFReader::pairing &a, const TRFReader::pairing &b) noexcept
+bool operator==(const TrfReader::pairing &a, const TrfReader::pairing &b) noexcept
 {
     return a.round == b.round && a.white == b.white && a.black == b.black;
 }
 
-TRFReader::TRFReader(Tournament *tournament)
+TrfReader::TrfReader(Tournament *tournament)
     : m_tournament(tournament)
 {
 }
 
-std::expected<void, QString> TRFReader::read(QTextStream *trf)
+std::expected<void, QString> TrfReader::read(QTextStream *trf)
 {
     QString line;
     while (!trf->atEnd()) {
@@ -99,38 +101,38 @@ std::expected<void, QString> TRFReader::read(QTextStream *trf)
     return {};
 }
 
-std::expected<void, QString> TRFReader::readField(QStringView line)
+std::expected<void, QString> TrfReader::readField(QStringView line)
 {
     const auto fieldType = line.mid(0, 3);
-    const auto field = Tournament::reportFieldForString(fieldType);
+    const auto field = Trf::reportFieldForString(fieldType);
     const auto value = line.mid(4);
 
     switch (field) {
-    case Tournament::ReportField::TournamentName:
+    case Trf::Field::TournamentName:
         m_tournament->setName(value.trimmed().toString());
         break;
-    case Tournament::ReportField::City:
+    case Trf::Field::City:
         m_tournament->setCity(value.trimmed().toString());
         break;
-    case Tournament::ReportField::Federation:
+    case Trf::Field::Federation:
         m_tournament->setFederation(value.trimmed().toString());
         break;
-    case Tournament::ReportField::ChiefArbiter:
+    case Trf::Field::ChiefArbiter:
         m_tournament->setChiefArbiter(value.trimmed().toString());
         break;
-    case Tournament::ReportField::DeputyChiefArbiter:
+    case Trf::Field::DeputyChiefArbiter:
         m_tournament->setDeputyChiefArbiter(value.trimmed().toString());
         break;
-    case Tournament::ReportField::TimeControl:
+    case Trf::Field::TimeControl:
         m_tournament->setTimeControl(value.trimmed().toString());
         break;
-    case Tournament::ReportField::Calendar: {
+    case Trf::Field::Calendar: {
         if (const auto ok = readDates(value); !ok) {
             return ok;
         }
         break;
     }
-    case Tournament::ReportField::Player: {
+    case Trf::Field::Player: {
         if (const auto player = readPlayer(line); !player) {
             return std::unexpected(player.error());
         }
@@ -143,7 +145,7 @@ std::expected<void, QString> TRFReader::readField(QStringView line)
     return {};
 }
 
-std::expected<void, QString> TRFReader::readDates(QStringView line)
+std::expected<void, QString> TrfReader::readDates(QStringView line)
 {
     if (line.length() < 88) {
         return {};
@@ -160,7 +162,7 @@ std::expected<void, QString> TRFReader::readDates(QStringView line)
             continue;
         }
 
-        const auto date = QDateTime::fromString(dateString.trimmed(), trfDateFormat);
+        const auto date = QDateTime::fromString(dateString.trimmed(), Trf::DateFormat);
         if (!date.isValid()) {
             return std::unexpected(i18nc("@info", "Date \"%1\" is invalid.", dateString.toString()));
         }
@@ -180,7 +182,7 @@ std::expected<void, QString> TRFReader::readDates(QStringView line)
     return {};
 }
 
-std::expected<void, QString> TRFReader::readPlayer(QStringView line)
+std::expected<void, QString> TrfReader::readPlayer(QStringView line)
 {
     const auto startingRank = line.sliced(4, 4).toInt();
     const auto sex = line.sliced(9, 1).trimmed().toString();
@@ -213,13 +215,13 @@ std::expected<void, QString> TRFReader::readPlayer(QStringView line)
     return {};
 }
 
-std::expected<void, QString> TRFReader::readPairing(int startingRank, int round, QStringView text)
+std::expected<void, QString> TrfReader::readPairing(int startingRank, int round, QStringView text)
 {
     if (text.size() != 8) {
         return std::unexpected(i18n("Invalid pairing \"%1\".", text.toString()));
     }
 
-    TRFReader::pairing pairing;
+    TrfReader::pairing pairing;
 
     const auto opponent = text.first(4);
     const bool hasOpponent = !(opponent == "    "_L1 || opponent == "0000"_L1);

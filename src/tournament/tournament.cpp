@@ -16,7 +16,7 @@
 #include "tiebreaks/buchholz.h"
 #include "tiebreaks/numberwins.h"
 #include "tiebreaks/points.h"
-#include "trf.h"
+#include "trf/reader.h"
 
 Tournament::Tournament(Event *event)
     : m_event(event)
@@ -914,71 +914,17 @@ void Tournament::read(const QJsonObject &json)
 
 std::expected<void, QString> Tournament::readTrf(QTextStream trf)
 {
-    TRFReader reader{this};
+    TrfReader reader{this};
     return reader.read(&trf);
 }
 
-QString Tournament::toTrf(TrfOptions options, int maxRound)
+QString Tournament::toTrf(TrfWriter::Options options, int maxRound)
 {
     QString result;
     QTextStream stream(&result);
 
-    auto state = getState(maxRound);
-    auto standings = getStandings(state);
-
-    const auto space = u" "_s;
-    const auto newLine = QLatin1Char('\n');
-
-    stream << reportFieldString(ReportField::TournamentName) << space << m_name << newLine;
-    stream << reportFieldString(ReportField::City) << space << m_city << newLine;
-    stream << reportFieldString(ReportField::Federation) << space << m_federation << newLine;
-    stream << reportFieldString(ReportField::NumberOfPlayers) << space << numberOfPlayers() << newLine;
-    stream << reportFieldString(ReportField::NumberOfRatedPlayers) << space << numberOfRatedPlayers() << newLine;
-    stream << reportFieldString(ReportField::ChiefArbiter) << space << m_chiefArbiter << newLine;
-    stream << reportFieldString(ReportField::TimeControl) << space << m_timeControl << newLine;
-
-    if (options.testFlag(TrfOption::NumberOfRounds)) {
-        stream << u"XXR "_s + QString::number(m_numberOfRounds) << newLine;
-    }
-
-    if (options.testFlag(TrfOption::InitialColorWhite)) {
-        stream << u"XXC white1\n"_s;
-    } else if (options.testFlag(TrfOption::InitialColorBlack)) {
-        stream << u"XXC black1\n"_s;
-    }
-
-    stream << reportFieldString(ReportField::Calendar) << space.repeated(86);
-    for (size_t i = 0; i < state.lastRound(); ++i) {
-        QString date;
-        if (i < m_rounds.size() && m_rounds[i]->dateTime().isValid()) {
-            date = m_rounds[i]->dateTime().toString(trfDateFormat);
-        } else {
-            date = "        "_L1;
-        }
-        stream << "  "_L1 << date;
-    }
-    stream << newLine;
-
-    for (const auto &player : std::as_const(m_players)) {
-        const auto standing = std::find_if(standings.constBegin(), standings.constEnd(), [&player](const Standing &s) -> bool {
-            return s.player() == player.get();
-        });
-        const auto rank = std::distance(standings.constBegin(), standing) + 1;
-        const auto result = player->toTrf(state.getPoints(player.get()), rank);
-
-        stream << result.c_str();
-
-        auto pairings = state.getPairings(player.get());
-        for (int i = 0; i < state.lastRound(); i++) {
-            if (i < pairings.size()) {
-                stream << pairings.value(i)->toTrf(player.get());
-            } else {
-                stream << u"          "_s;
-            }
-        }
-
-        stream << newLine;
-    }
+    TrfWriter writer(this, options);
+    writer.write(&stream, maxRound);
 
     return result;
 }

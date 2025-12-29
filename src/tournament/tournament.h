@@ -21,6 +21,7 @@
 #include "round.h"
 #include "standing.h"
 #include "tiebreaks/tiebreak.h"
+#include "trf/writer.h"
 
 class Document;
 class Event;
@@ -296,113 +297,6 @@ public:
      */
     int numberOfRatedPlayers();
 
-    enum class ReportField {
-        Player = 1,
-        TournamentName,
-        City,
-        Federation,
-        StartDate,
-        EndDate,
-        NumberOfPlayers,
-        NumberOfRatedPlayers,
-        NumberOfTeams,
-        TournamentType,
-        ChiefArbiter,
-        DeputyChiefArbiter,
-        TimeControl,
-        Calendar,
-        Unknown,
-    };
-    Q_ENUM(ReportField)
-
-    static QString reportFieldString(ReportField field)
-    {
-        switch (field) {
-        case ReportField::Player:
-            return QStringLiteral("001");
-        case ReportField::TournamentName:
-            return QStringLiteral("012");
-        case ReportField::City:
-            return QStringLiteral("022");
-        case ReportField::Federation:
-            return QStringLiteral("032");
-        case ReportField::StartDate:
-            return QStringLiteral("042");
-        case ReportField::EndDate:
-            return QStringLiteral("052");
-        case ReportField::NumberOfPlayers:
-            return QStringLiteral("062");
-        case ReportField::NumberOfRatedPlayers:
-            return QStringLiteral("072");
-        case ReportField::NumberOfTeams:
-            return QStringLiteral("082");
-        case ReportField::TournamentType:
-            return QStringLiteral("092");
-        case ReportField::ChiefArbiter:
-            return QStringLiteral("102");
-        case ReportField::DeputyChiefArbiter:
-            return QStringLiteral("112");
-        case ReportField::TimeControl:
-            return QStringLiteral("122");
-        case ReportField::Calendar:
-            return QStringLiteral("132");
-        default:
-            return {};
-        }
-    };
-
-    static ReportField reportFieldForString(QStringView number)
-    {
-        if (number == QStringLiteral("001")) {
-            return ReportField::Player;
-        } else if (number == QStringLiteral("012")) {
-            return ReportField::TournamentName;
-        } else if (number == QStringLiteral("022")) {
-            return ReportField::City;
-        } else if (number == QStringLiteral("032")) {
-            return ReportField::Federation;
-        } else if (number == QStringLiteral("042")) {
-            return ReportField::StartDate;
-        } else if (number == QStringLiteral("052")) {
-            return ReportField::EndDate;
-        } else if (number == QStringLiteral("062")) {
-            return ReportField::NumberOfPlayers;
-        } else if (number == QStringLiteral("072")) {
-            return ReportField::NumberOfRatedPlayers;
-        } else if (number == QStringLiteral("082")) {
-            return ReportField::NumberOfTeams;
-        } else if (number == QStringLiteral("092")) {
-            return ReportField::TournamentType;
-        } else if (number == QStringLiteral("102")) {
-            return ReportField::ChiefArbiter;
-        } else if (number == QStringLiteral("112")) {
-            return ReportField::DeputyChiefArbiter;
-        } else if (number == QStringLiteral("122")) {
-            return ReportField::TimeControl;
-        } else if (number == QStringLiteral("132")) {
-            return ReportField::Calendar;
-        }
-        return ReportField::Unknown;
-    }
-
-    /*!
-     * \enum Tournament::TrfOption
-     *
-     * This enum type specifies the options for the Tournament Report File export.
-     *
-     * \value NumberOfRounds Adds the number of rounds of the tournament for pairing engines.
-     * \value InitialColorWhite Adds an indication for pairing engines that the first player had the white pieces in the first round.
-     * \value InitialColorBlack Adds an indication for pairing engines that the first player had the black pieces in the first round.
-     *
-     * \sa toTrf(), exportTrf()
-     */
-    enum class TrfOption {
-        NumberOfRounds = 0x1,
-        InitialColorWhite = 0x2,
-        InitialColorBlack = 0x4,
-    };
-    Q_DECLARE_FLAGS(TrfOptions, TrfOption)
-
     void saveTiebreaks();
 
     /*!
@@ -444,7 +338,7 @@ public:
      *
      * \sa exportTrf()
      */
-    QString toTrf(TrfOptions options = {}, int maxRound = -1);
+    QString toTrf(TrfWriter::Options options = {}, int maxRound = -1);
 
     /*!
      * Imports the tournament from a Tournament Report File (TRF).
@@ -533,7 +427,6 @@ private:
     Tournament::InitialColor m_initialColor;
 
     friend class Event;
-    friend class TRFReader;
+    friend class TrfReader;
+    friend class TrfWriter;
 };
-
-Q_DECLARE_OPERATORS_FOR_FLAGS(Tournament::TrfOptions)

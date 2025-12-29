@@ -13,11 +13,13 @@ target_sources(tournament PRIVATE
     standing.cpp
     state.cpp
     tournament.cpp
-    trf.cpp
+    trf/reader.cpp
+    trf/writer.cpp
     utils.cpp
 )
 
 add_subdirectory(tiebreaks)
+add_subdirectory(trf)
 
 ecm_add_qml_module(tournament
     URI org.kde.chessament.tournament

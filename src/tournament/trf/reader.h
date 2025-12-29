@@ -1,11 +1,19 @@
 // SPDX-FileCopyrightText: 2025 Manuel Alcaraz Zambrano <manuel@alcarazzam.dev>
 // SPDX-License-Identifier: GPL-3.0-or-later
 
-#include "tournament.h"
+#pragma once
 
-constexpr static QStringView trfDateFormat = u"yy/MM/dd";
+#include <QString>
+#include <QTextStream>
 
-class TRFReader
+#include <expected>
+
+#include "pairing.h"
+#include "player.h"
+
+class Tournament;
+
+class TrfReader
 {
 public:
     struct pairing {
@@ -15,7 +23,7 @@ public:
     };
 
 private:
-    explicit TRFReader(Tournament *tournament);
+    explicit TrfReader(Tournament *tournament);
 
     std::expected<void, QString> read(QTextStream *trf);
 
@@ -32,13 +40,13 @@ private:
     friend class Tournament;
 };
 
-bool operator==(const TRFReader::pairing &a, const TRFReader::pairing &b) noexcept;
+bool operator==(const TrfReader::pairing &a, const TrfReader::pairing &b) noexcept;
 
 namespace std
 {
 template<>
-struct hash<TRFReader::pairing> {
-    size_t operator()(const TRFReader::pairing &key, size_t seed = 0) const
+struct hash<TrfReader::pairing> {
+    size_t operator()(const TrfReader::pairing &key, size_t seed = 0) const
     {
         return qHashMulti(seed, key.round, key.white, key.black);
     }

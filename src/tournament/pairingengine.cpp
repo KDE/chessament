@@ -10,6 +10,8 @@
 #include <chrono>
 #include <iostream>
 
+#include "trf/writer.h"
+
 using namespace std::literals::chrono_literals;
 
 QCoro::Task<std::expected<QList<std::pair<uint, uint>>, QString>> PairingEngine::pair(int round, Tournament *tournament)
@@ -28,14 +30,14 @@ QCoro::Task<std::expected<QList<std::pair<uint, uint>>, QString>> PairingEngine:
         co_return std::unexpected(i18n("Could not create temporary file."));
     }
 
-    Tournament::TrfOptions options = Tournament::TrfOption::NumberOfRounds;
+    TrfWriter::Options options = TrfWriter::Option::NumberOfRounds;
     qDebug() << tournament->initialColor();
     switch (tournament->initialColor()) {
     case Tournament::InitialColor::White:
-        options |= Tournament::TrfOption::InitialColorWhite;
+        options |= TrfWriter::Option::InitialColorWhite;
         break;
     case Tournament::InitialColor::Black:
-        options |= Tournament::TrfOption::InitialColorBlack;
+        options |= TrfWriter::Option::InitialColorBlack;
         break;
     }
 
