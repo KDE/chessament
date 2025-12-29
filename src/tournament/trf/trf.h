@@ -3,9 +3,7 @@
 
 #pragma once
 
-#include <QStringLiteral>
-
-using namespace Qt::StringLiterals;
+#include <QString>
 
 namespace Trf
 {
