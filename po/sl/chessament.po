@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-28 00:39+0000\n"
-"PO-Revision-Date: 2025-12-22 06:47+0100\n"
+"POT-Creation-Date: 2025-12-29 00:40+0000\n"
+"PO-Revision-Date: 2025-12-28 07:13+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -486,19 +486,19 @@ msgctxt "@action:intoolbar"
 msgid "Add Player…"
 msgstr "Dodaj igralca…"
 
-#: qml/PlayersPage.qml:156
+#: qml/PlayersPage.qml:164
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No players yet"
 msgstr "Še ni igralcev"
 
-#: qml/PlayersPage.qml:160
+#: qml/PlayersPage.qml:168
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Player…"
 msgstr "Dodaj igralca…"
 
-#: qml/PlayersPage.qml:178
+#: qml/PlayersPage.qml:186
 #, kde-format
 msgctxt "@info:status Number of players"
 msgid "1 player"
@@ -508,7 +508,7 @@ msgstr[1] "%1igralec"
 msgstr[2] "%1 igralca"
 msgstr[3] "%1 igralci"
 
-#: qml/PlayersPage.qml:179
+#: qml/PlayersPage.qml:187
 #, kde-format
 msgctxt "@info:status Number of rated players"
 msgid "1 rated"
@@ -518,7 +518,7 @@ msgstr[1] "%1 ocenjen"
 msgstr[2] "%1 ocenjena"
 msgstr[3] "%1 ocenjeni"
 
-#: qml/PlayersPage.qml:181
+#: qml/PlayersPage.qml:189
 #, kde-format
 msgctxt "@info:status players, rated"
 msgid "%1, %2"
@@ -658,18 +658,16 @@ msgstr ""
 "določen, na uradnih turnirjih ni dovoljeno."
 
 #: qml/StandingsPage.qml:44 qml/StandingsPage.qml:54
-#, fuzzy, kde-format
-#| msgid "Standings"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Final Standings"
-msgstr "Lestvice"
+msgstr "Končni vrstni red"
 
 #: qml/StandingsPage.qml:46 qml/StandingsPage.qml:56
-#, fuzzy, kde-format
-#| msgid "Pair Round %1"
+#, kde-format
 msgctxt "@item:inlistbox Standings After Round %1"
 msgid "After Round %1"
-msgstr "Krog para %1"
+msgstr "Po krogu %1"
 
 #: qml/StandingsPage.qml:106
 #, kde-format

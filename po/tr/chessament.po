@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-28 00:39+0000\n"
-"PO-Revision-Date: 2025-12-22 12:34+0300\n"
+"POT-Creation-Date: 2025-12-29 00:40+0000\n"
+"PO-Revision-Date: 2025-12-28 12:43+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -488,19 +488,19 @@ msgctxt "@action:intoolbar"
 msgid "Add Player…"
 msgstr "Oyuncu Ekle…"
 
-#: qml/PlayersPage.qml:156
+#: qml/PlayersPage.qml:164
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No players yet"
 msgstr "Henüz oyuncu yok"
 
-#: qml/PlayersPage.qml:160
+#: qml/PlayersPage.qml:168
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Player…"
 msgstr "Oyuncu Ekle…"
 
-#: qml/PlayersPage.qml:178
+#: qml/PlayersPage.qml:186
 #, kde-format
 msgctxt "@info:status Number of players"
 msgid "1 player"
@@ -508,7 +508,7 @@ msgid_plural "%1 players"
 msgstr[0] "1 oyuncu"
 msgstr[1] "%1 oyuncu"
 
-#: qml/PlayersPage.qml:179
+#: qml/PlayersPage.qml:187
 #, kde-format
 msgctxt "@info:status Number of rated players"
 msgid "1 rated"
@@ -516,7 +516,7 @@ msgid_plural "%1 rated"
 msgstr[0] "1 dereceli"
 msgstr[1] "%1 dereceli"
 
-#: qml/PlayersPage.qml:181
+#: qml/PlayersPage.qml:189
 #, kde-format
 msgctxt "@info:status players, rated"
 msgid "%1, %2"
@@ -532,91 +532,91 @@ msgstr "*"
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "1-0"
-msgstr "1-0"
+msgstr "1‒0"
 
 #: qml/ResultsFooter.qml:58
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "½-½"
-msgstr "½-½"
+msgstr "½‒½"
 
 #: qml/ResultsFooter.qml:65
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "0-1"
-msgstr "0-1"
+msgstr "0‒1"
 
 #: qml/ResultsFooter.qml:75
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "1F-0F"
-msgstr "1F-0F"
+msgstr "1F‒0F"
 
 #: qml/ResultsFooter.qml:82
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "0F-1F"
-msgstr "0F-1F"
+msgstr "0F‒1F"
 
 #: qml/ResultsFooter.qml:89
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "0F-0F"
-msgstr "0F-0F"
+msgstr "0F‒0F"
 
 #: qml/ResultsFooter.qml:99
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "1U-0U"
-msgstr "1U-0U"
+msgstr "1U‒0U"
 
 #: qml/ResultsFooter.qml:106
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "½U-½U"
-msgstr "½U-½U"
+msgstr "½U‒½U"
 
 #: qml/ResultsFooter.qml:113
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "0U-1U"
-msgstr "0U-1U"
+msgstr "0U‒1U"
 
 #: qml/ResultsFooter.qml:120
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "½U-0U"
-msgstr "½U-0U"
+msgstr "½U‒0U"
 
 #: qml/ResultsFooter.qml:127
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "0U-½U"
-msgstr "0U-½U"
+msgstr "0U‒½U"
 
 #: qml/ResultsFooter.qml:134
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "0U-0U"
-msgstr "0U-0U"
+msgstr "0U‒0U"
 
 #: qml/ResultsFooter.qml:144
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "½-0"
-msgstr "½-0"
+msgstr "½‒0"
 
 #: qml/ResultsFooter.qml:151
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "0-0"
-msgstr "0-0"
+msgstr "0‒0"
 
 #: qml/ResultsFooter.qml:158
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "0-½"
-msgstr "0-½"
+msgstr "0‒½"
 
 #: qml/Sidebar.qml:55
 #, kde-format
@@ -656,18 +656,16 @@ msgstr ""
 "turnuvalarda izin verilmez."
 
 #: qml/StandingsPage.qml:44 qml/StandingsPage.qml:54
-#, fuzzy, kde-format
-#| msgid "Standings"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Final Standings"
-msgstr "Puan Durumu"
+msgstr "Son Puan Durumu"
 
 #: qml/StandingsPage.qml:46 qml/StandingsPage.qml:56
-#, fuzzy, kde-format
-#| msgid "Pair Round %1"
+#, kde-format
 msgctxt "@item:inlistbox Standings After Round %1"
 msgid "After Round %1"
-msgstr "Eşleştir: %1. Raunt"
+msgstr "%1. Raunttan Sonra"
 
 #: qml/StandingsPage.qml:106
 #, kde-format

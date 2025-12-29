@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-28 00:39+0000\n"
+"POT-Creation-Date: 2025-12-29 00:40+0000\n"
 "PO-Revision-Date: 2025-05-12 14:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -488,33 +488,33 @@ msgctxt "@action:intoolbar"
 msgid "Add Player…"
 msgstr "添加玩家..."
 
-#: qml/PlayersPage.qml:156
+#: qml/PlayersPage.qml:164
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No players yet"
 msgstr "暂无玩家"
 
-#: qml/PlayersPage.qml:160
+#: qml/PlayersPage.qml:168
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Player…"
 msgstr "添加玩家..."
 
-#: qml/PlayersPage.qml:178
+#: qml/PlayersPage.qml:186
 #, kde-format
 msgctxt "@info:status Number of players"
 msgid "1 player"
 msgid_plural "%1 players"
 msgstr[0] "%1 名玩家"
 
-#: qml/PlayersPage.qml:179
+#: qml/PlayersPage.qml:187
 #, kde-format
 msgctxt "@info:status Number of rated players"
 msgid "1 rated"
 msgid_plural "%1 rated"
 msgstr[0] "%1 级"
 
-#: qml/PlayersPage.qml:181
+#: qml/PlayersPage.qml:189
 #, kde-format
 msgctxt "@info:status players, rated"
 msgid "%1, %2"
