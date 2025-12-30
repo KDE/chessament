@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-29 00:40+0000\n"
-"PO-Revision-Date: 2025-12-22 10:01+0100\n"
+"POT-Creation-Date: 2025-12-30 00:38+0000\n"
+"PO-Revision-Date: 2025-12-28 08:54+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.04.0\n"
+"X-Generator: Lokalize 25.12.0\n"
 
 #: chessamentapplication.cpp:23
 #, kde-format
@@ -658,18 +658,16 @@ msgstr ""
 "quarta ronda en tornejos oficials."
 
 #: qml/StandingsPage.qml:44 qml/StandingsPage.qml:54
-#, fuzzy, kde-format
-#| msgid "Standings"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Final Standings"
-msgstr "Resultats"
+msgstr "Resultats finals"
 
 #: qml/StandingsPage.qml:46 qml/StandingsPage.qml:56
-#, fuzzy, kde-format
-#| msgid "Pair Round %1"
+#, kde-format
 msgctxt "@item:inlistbox Standings After Round %1"
 msgid "After Round %1"
-msgstr "Ronda d'emparellament %1"
+msgstr "Després de la ronda %1"
 
 #: qml/StandingsPage.qml:106
 #, kde-format
@@ -939,32 +937,32 @@ msgctxt "@title:column Player Ranking"
 msgid "Rank"
 msgstr "Posició"
 
-#: tournament/pairingengine.cpp:20
+#: tournament/pairingengine.cpp:22
 #, kde-format
 msgctxt "bbpPairings is the name of a program, should not be translated"
 msgid "The pairing engine bbpPairings could not be found. Is it installed?"
 msgstr ""
 "No s'ha pogut trobar el motor d'emparellament bbpPairings. Està instal·lat?"
 
-#: tournament/pairingengine.cpp:28
+#: tournament/pairingengine.cpp:30
 #, kde-format
 msgid "Could not create temporary file."
 msgstr "No s'ha pogut crear un fitxer temporal."
 
-#: tournament/pairingengine.cpp:53
+#: tournament/pairingengine.cpp:55
 #, kde-format
 msgctxt "bbpPairings is the name of a program, should not be translated"
 msgid "bbpPairings terminated with a non zero exit code: %1"
 msgstr "bbpPairings ha finalitzat amb un codi d'eixida no zero: %1"
 
-#: tournament/pairingengine.cpp:71 tournament/trf.cpp:219
+#: tournament/pairingengine.cpp:73 tournament/trf/reader.cpp:221
 #, kde-format
 msgid "Invalid pairing \"%1\"."
 msgstr "Emparellament no vàlid «%1»."
 
-#: tournament/pairingengine.cpp:77 tournament/pairingengine.cpp:81
-#: tournament/pairingengine.cpp:85 tournament/pairingengine.cpp:89
-#: tournament/trf.cpp:232
+#: tournament/pairingengine.cpp:79 tournament/pairingengine.cpp:83
+#: tournament/pairingengine.cpp:87 tournament/pairingengine.cpp:91
+#: tournament/trf/reader.cpp:234
 #, kde-format
 msgid "Invalid player \"%1\" on pairing \"%2\"."
 msgstr "Jugador «%1» no vàlid a l'emparellament «%2»."
@@ -1045,33 +1043,33 @@ msgstr "Nombre de partides guanyades"
 msgid "An error ocurred while pairing the round: %1"
 msgstr "S'ha produït un error en emparellar la ronda: %1"
 
-#: tournament/tournament.cpp:991
+#: tournament/tournament.cpp:937
 #, kde-format
 msgid "Couldn't open file"
 msgstr "No s'ha pogut obrir el fitxer"
 
-#: tournament/trf.cpp:50 tournament/trf.cpp:57
+#: tournament/trf/reader.cpp:52 tournament/trf/reader.cpp:59
 #, kde-format
 msgid "Player \"%1\" not found."
 msgstr "No s'ha trobat el jugador «%1»."
 
-#: tournament/trf.cpp:63
+#: tournament/trf/reader.cpp:65
 #, kde-format
 msgid "Unknown result on pairing \"%1\" with \"%2\"."
 msgstr "Resultat desconegut en l'emparellament de «%1» amb «%2»."
 
-#: tournament/trf.cpp:165
+#: tournament/trf/reader.cpp:167
 #, kde-format
 msgctxt "@info"
 msgid "Date \"%1\" is invalid."
 msgstr "La data «%1» no és vàlida."
 
-#: tournament/trf.cpp:239
+#: tournament/trf/reader.cpp:241
 #, kde-format
 msgid "Unknown result \"%1\" on pairing \"%2\"."
 msgstr "Resultat «%1» desconegut a l'emparellament «%2»."
 
-#: tournament/trf.cpp:242
+#: tournament/trf/reader.cpp:244
 #, kde-format
 msgid "Pairing \"%1\" has no opponent."
 msgstr "L'emparellament «%1» no té oponent."

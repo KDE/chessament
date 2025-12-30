@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-29 00:40+0000\n"
+"POT-Creation-Date: 2025-12-30 00:38+0000\n"
 "PO-Revision-Date: 2025-12-28 07:13+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -937,32 +937,32 @@ msgctxt "@title:column Player Ranking"
 msgid "Rank"
 msgstr "Rang"
 
-#: tournament/pairingengine.cpp:20
+#: tournament/pairingengine.cpp:22
 #, kde-format
 msgctxt "bbpPairings is the name of a program, should not be translated"
 msgid "The pairing engine bbpPairings could not be found. Is it installed?"
 msgstr ""
 "Programa za uparjanje bbpPairings ni bilo mogoče najti. Ali je nameščen?"
 
-#: tournament/pairingengine.cpp:28
+#: tournament/pairingengine.cpp:30
 #, kde-format
 msgid "Could not create temporary file."
 msgstr "Začasne datoteke ni bilo mogoče ustvariti."
 
-#: tournament/pairingengine.cpp:53
+#: tournament/pairingengine.cpp:55
 #, kde-format
 msgctxt "bbpPairings is the name of a program, should not be translated"
 msgid "bbpPairings terminated with a non zero exit code: %1"
 msgstr "bbpPairings se je končal z neničelno kodo izhoda: %1"
 
-#: tournament/pairingengine.cpp:71 tournament/trf.cpp:219
+#: tournament/pairingengine.cpp:73 tournament/trf/reader.cpp:221
 #, kde-format
 msgid "Invalid pairing \"%1\"."
 msgstr "Neveljaven par \"%1\"."
 
-#: tournament/pairingengine.cpp:77 tournament/pairingengine.cpp:81
-#: tournament/pairingengine.cpp:85 tournament/pairingengine.cpp:89
-#: tournament/trf.cpp:232
+#: tournament/pairingengine.cpp:79 tournament/pairingengine.cpp:83
+#: tournament/pairingengine.cpp:87 tournament/pairingengine.cpp:91
+#: tournament/trf/reader.cpp:234
 #, kde-format
 msgid "Invalid player \"%1\" on pairing \"%2\"."
 msgstr "Neveljaven igralec \"%1\" v paru \"%2\"."
@@ -1046,33 +1046,33 @@ msgstr "Število zmag"
 msgid "An error ocurred while pairing the round: %1"
 msgstr "Pri uparjanju kroga je prišlo do napake: %1"
 
-#: tournament/tournament.cpp:991
+#: tournament/tournament.cpp:937
 #, kde-format
 msgid "Couldn't open file"
 msgstr "Datoteke ni bilo mogoče odpreti"
 
-#: tournament/trf.cpp:50 tournament/trf.cpp:57
+#: tournament/trf/reader.cpp:52 tournament/trf/reader.cpp:59
 #, kde-format
 msgid "Player \"%1\" not found."
 msgstr "Igralca \"%1\" ni mogoče najti."
 
-#: tournament/trf.cpp:63
+#: tournament/trf/reader.cpp:65
 #, kde-format
 msgid "Unknown result on pairing \"%1\" with \"%2\"."
 msgstr "Neznan rezultat pri paru %1 z %2."
 
-#: tournament/trf.cpp:165
+#: tournament/trf/reader.cpp:167
 #, kde-format
 msgctxt "@info"
 msgid "Date \"%1\" is invalid."
 msgstr "Datum \"%1\" je neveljaven."
 
-#: tournament/trf.cpp:239
+#: tournament/trf/reader.cpp:241
 #, kde-format
 msgid "Unknown result \"%1\" on pairing \"%2\"."
 msgstr "Neznan rezultat \"%1\" pri uparjanju \"%2\"."
 
-#: tournament/trf.cpp:242
+#: tournament/trf/reader.cpp:244
 #, kde-format
 msgid "Pairing \"%1\" has no opponent."
 msgstr "Uparjanje \"%1\" nima nasprotnika."
