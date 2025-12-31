@@ -30,14 +30,14 @@ QCoro::Task<std::expected<QList<std::pair<uint, uint>>, QString>> PairingEngine:
         co_return std::unexpected(i18n("Could not create temporary file."));
     }
 
-    TrfWriter::Options options = TrfWriter::Option::NumberOfRounds;
+    Trf::Options options = Trf::Option::NumberOfRounds;
     qDebug() << tournament->initialColor();
     switch (tournament->initialColor()) {
     case Tournament::InitialColor::White:
-        options |= TrfWriter::Option::InitialColorWhite;
+        options |= Trf::Option::InitialColorWhite;
         break;
     case Tournament::InitialColor::Black:
-        options |= TrfWriter::Option::InitialColorBlack;
+        options |= Trf::Option::InitialColorBlack;
         break;
     }
 

@@ -8,20 +8,25 @@
 #include "tournament.h"
 #include "trf.h"
 
-TrfWriter::TrfWriter(Tournament *tournament, Options options)
+constexpr auto space = " "_L1;
+constexpr auto newLine = '\n'_L1;
+
+TrfWriter::TrfWriter(Tournament *tournament, Trf::Options options, int maxRound)
     : m_tournament(tournament)
     , m_options(options)
+    , m_state(m_tournament->getState(maxRound))
 {
 }
 
-void TrfWriter::write(QTextStream *stream, int maxRound)
+void TrfWriter::write(QTextStream *stream)
 {
-    auto state = m_tournament->getState(maxRound);
-    auto standings = m_tournament->getStandings(state);
+    writeTournamentInformation(stream);
+    writePairingEngineInformation(stream);
+    writePlayers(stream);
+}
 
-    const auto space = u" "_s;
-    const auto newLine = QLatin1Char('\n');
-
+void TrfWriter::writeTournamentInformation(QTextStream *stream)
+{
     *stream << reportFieldString(Trf::Field::TournamentName) << space << m_tournament->name() << newLine;
     *stream << reportFieldString(Trf::Field::City) << space << m_tournament->city() << newLine;
     *stream << reportFieldString(Trf::Field::Federation) << space << m_tournament->federation() << newLine;
@@ -30,43 +35,51 @@ void TrfWriter::write(QTextStream *stream, int maxRound)
     *stream << reportFieldString(Trf::Field::ChiefArbiter) << space << m_tournament->chiefArbiter() << newLine;
     *stream << reportFieldString(Trf::Field::TimeControl) << space << m_tournament->timeControl() << newLine;
 
-    if (m_options.testFlag(Option::NumberOfRounds)) {
-        *stream << u"XXR "_s + QString::number(m_tournament->numberOfRounds()) << newLine;
-    }
-
-    if (m_options.testFlag(Option::InitialColorWhite)) {
-        *stream << u"XXC white1\n"_s;
-    } else if (m_options.testFlag(Option::InitialColorBlack)) {
-        *stream << u"XXC black1\n"_s;
-    }
-
-    *stream << reportFieldString(Trf::Field::Calendar) << space.repeated(86);
-    for (size_t i = 0; i < state.lastRound(); ++i) {
+    *stream << reportFieldString(Trf::Field::Calendar) << QString(space).repeated(86);
+    for (size_t i = 0; i < m_state.lastRound(); ++i) {
         QString date;
         if (i < m_tournament->m_rounds.size() && m_tournament->m_rounds[i]->dateTime().isValid()) {
-            date = m_tournament->m_rounds[i]->dateTime().toString(Trf::DateFormat);
+            date = m_tournament->m_rounds[i]->dateTime().toString(Trf::RoundDateFormat);
         } else {
             date = "        "_L1;
         }
         *stream << "  "_L1 << date;
     }
     *stream << newLine;
+}
+
+void TrfWriter::writePairingEngineInformation(QTextStream *stream)
+{
+    if (m_options.testFlag(Trf::Option::NumberOfRounds)) {
+        *stream << "XXR "_L1 + QString::number(m_tournament->numberOfRounds()) << newLine;
+    }
+
+    if (m_options.testFlag(Trf::Option::InitialColorWhite)) {
+        *stream << "XXC white1\n"_L1;
+    } else if (m_options.testFlag(Trf::Option::InitialColorBlack)) {
+        *stream << "XXC black1\n"_L1;
+    }
+}
+
+void TrfWriter::writePlayers(QTextStream *stream)
+{
+    auto standings = m_tournament->getStandings(m_state);
 
     for (const auto &player : std::as_const(m_tournament->m_players)) {
         const auto standing = std::find_if(standings.constBegin(), standings.constEnd(), [&player](const Standing &s) -> bool {
             return s.player() == player.get();
         });
         const auto rank = std::distance(standings.constBegin(), standing) + 1;
-        const auto result = player->toTrf(state.getPoints(player.get()), rank);
+        const auto result = player->toTrf(m_state.getPoints(player.get()), rank);
 
         *stream << result.c_str();
 
-        auto pairings = state.getPairings(player.get());
-        for (int i = 0; i < state.lastRound(); i++) {
+        auto pairings = m_state.getPairings(player.get());
+        for (int i = 0; i < m_state.lastRound(); i++) {
             if (i < pairings.size()) {
                 *stream << pairings.value(i)->toTrf(player.get());
             } else {
-                *stream << u"          "_s;
+                *stream << "          "_L1;
             }
         }
 

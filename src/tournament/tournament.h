@@ -21,7 +21,7 @@
 #include "round.h"
 #include "standing.h"
 #include "tiebreaks/tiebreak.h"
-#include "trf/writer.h"
+#include "trf/trf.h"
 
 class Document;
 class Event;
@@ -338,7 +338,7 @@ public:
      *
      * \sa exportTrf()
      */
-    QString toTrf(TrfWriter::Options options = {}, int maxRound = -1);
+    QString toTrf(Trf::Options options = {}, int maxRound = -1);
 
     /*!
      * Imports the tournament from a Tournament Report File (TRF).

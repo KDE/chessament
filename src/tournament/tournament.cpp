@@ -17,6 +17,7 @@
 #include "tiebreaks/numberwins.h"
 #include "tiebreaks/points.h"
 #include "trf/reader.h"
+#include "trf/writer.h"
 
 Tournament::Tournament(Event *event)
     : m_event(event)
@@ -918,13 +919,13 @@ std::expected<void, QString> Tournament::readTrf(QTextStream trf)
     return reader.read(&trf);
 }
 
-QString Tournament::toTrf(TrfWriter::Options options, int maxRound)
+QString Tournament::toTrf(Trf::Options options, int maxRound)
 {
     QString result;
     QTextStream stream(&result);
 
-    TrfWriter writer(this, options);
-    writer.write(&stream, maxRound);
+    TrfWriter writer(this, options, maxRound);
+    writer.write(&stream);
 
     return result;
 }

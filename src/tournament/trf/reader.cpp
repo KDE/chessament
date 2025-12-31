@@ -162,7 +162,7 @@ std::expected<void, QString> TrfReader::readDates(QStringView line)
             continue;
         }
 
-        const auto date = QDateTime::fromString(dateString.trimmed(), Trf::DateFormat);
+        const auto date = QDateTime::fromString(dateString.trimmed(), Trf::RoundDateFormat);
         if (!date.isValid()) {
             return std::unexpected(i18nc("@info", "Date \"%1\" is invalid.", dateString.toString()));
         }
