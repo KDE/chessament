@@ -3,6 +3,8 @@
 
 #include "writer.h"
 
+#include <QCoreApplication>
+
 #include "reader.h"
 #include "state.h"
 #include "tournament.h"
@@ -34,6 +36,7 @@ void TrfWriter::writeTournamentInformation(QTextStream *stream)
     *stream << reportFieldString(Trf::Field::NumberOfRatedPlayers) << space << m_tournament->numberOfRatedPlayers() << newLine;
     *stream << reportFieldString(Trf::Field::ChiefArbiter) << space << m_tournament->chiefArbiter() << newLine;
     *stream << reportFieldString(Trf::Field::TimeControl) << space << m_tournament->timeControl() << newLine;
+    *stream << Trf::reportFieldString(Trf::Field::ProgramName) << space << "Chessament %1"_L1.arg(QCoreApplication::applicationVersion()) << newLine;
 
     *stream << reportFieldString(Trf::Field::Calendar) << QString(space).repeated(86);
     for (size_t i = 0; i < m_state.lastRound(); ++i) {

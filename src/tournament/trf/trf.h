@@ -26,6 +26,7 @@ enum class Field {
     DeputyChiefArbiter,
     TimeControl,
     Calendar,
+    ProgramName,
     Unknown,
 };
 Q_ENUM_NS(Field)

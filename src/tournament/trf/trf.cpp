@@ -3,6 +3,8 @@
 
 #include "trf.h"
 
+using namespace Qt::StringLiterals;
+
 namespace Trf
 {
 
@@ -37,9 +39,12 @@ QString reportFieldString(Trf::Field field)
         return QStringLiteral("122");
     case Trf::Field::Calendar:
         return QStringLiteral("132");
-    default:
+    case Trf::Field::ProgramName:
+        return "182"_L1;
+    case Trf::Field::Unknown:
         return {};
     }
+    Q_UNREACHABLE();
 };
 
 Trf::Field reportFieldForString(QStringView number)
