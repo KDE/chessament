@@ -108,6 +108,28 @@ void Pairing::setResult(PartialResult whiteResult, PartialResult blackResult)
     setBlackResult(blackResult);
 }
 
+Player *Pairing::opponent(const Player *player)
+{
+    if (player == m_whitePlayer) {
+        return m_blackPlayer;
+    }
+    if (player == m_blackPlayer) {
+        return m_whitePlayer;
+    }
+    Q_UNREACHABLE();
+}
+
+Pairing::Color Pairing::colorOfPlayer(const Player *player)
+{
+    if (player == m_whitePlayer) {
+        return Pairing::Color::White;
+    }
+    if (player == m_blackPlayer) {
+        return Pairing::Color::Black;
+    }
+    Q_UNREACHABLE();
+}
+
 bool Pairing::hasFinished()
 {
     return m_whiteResult != Pairing::PartialResult::Unknown;

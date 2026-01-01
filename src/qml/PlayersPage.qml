@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
-// SPDX-FileCopyrightText: 2024-2025 Manuel Alcaraz Zambrano <manuel@alcarazzam.dev>
+// SPDX-FileCopyrightText: 2024-2026 Manuel Alcaraz Zambrano <manuel@alcarazzam.dev>
 
 pragma ComponentBehavior: Bound
 
@@ -45,7 +45,29 @@ TablePage {
         sortOrder: Qt.AscendingOrder
     }
 
+    Connections {
+        target: Controller
+
+        function onEventChanged(): void {
+            root.tableView.selectionModel.clear();
+        }
+    }
+
     actions: [
+        Kirigami.Action {
+            icon.name: "documentinfo-symbolic"
+            text: i18nc("@action:intoolbar Open player details", "Details…")
+            enabled: root.tableView.selectionModel.hasSelection
+            onTriggered: function (): void {
+                const index = proxyModel.mapToSource(root.tableView.selectionModel.currentIndex);
+                const player = root.model.sourceModel.data(index, PlayersModel.PlayerRole);
+                const dialog = Qt.createComponent("org.kde.chessament", "PlayerDetails").createObject(root.Controls.ApplicationWindow.window, {
+                    "tournament": Controller.tournament,
+                    "player": player
+                }) as PlayerDetails;
+                dialog.open();
+            }
+        },
         Kirigami.Action {
             icon.name: "view-sort-symbolic"
             text: i18nc("@action:intoolbar", "Sort Players…")

@@ -109,6 +109,8 @@ const QString UPDATE_PAIRING_QUERY =
     u"(:board, :whitePlayer, :blackPlayer, :whiteResult, :blackResult) "
     u"WHERE id = :id;"_s;
 
+const QString DELETE_PAIRING_QUERY = u"DELETE FROM pairings WHERE id = :id;"_s;
+
 const QString DELETE_PAIRINGS_QUERY = u"DELETE FROM pairings WHERE round = :round;"_s;
 
 const QString DELETE_PAIRINGS_NO_BYES_QUERY = u"DELETE FROM pairings WHERE round = :round AND whiteResult NOT IN (9, 10, 11);"_s;

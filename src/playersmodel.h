@@ -30,6 +30,11 @@ public:
     };
     Q_ENUM(Columns)
 
+    enum Roles {
+        PlayerRole = Qt::UserRole,
+    };
+    Q_ENUM(Roles)
+
     explicit PlayersModel(QObject *parent = nullptr);
 
     [[nodiscard]] int rowCount(const QModelIndex &parent = QModelIndex()) const override;

@@ -6,6 +6,8 @@
 #include <QObject>
 #include <QString>
 
+#include <KLocalizedString>
+
 #include "player.h"
 
 /*!
@@ -67,6 +69,19 @@ public:
             return Color::Black;
         }
         return Color::Unknown;
+    }
+
+    static QString humanColorString(Color color)
+    {
+        switch (color) {
+        case Color::White:
+            return i18nc("@item:inlistbox As in 'White pieces'", "White");
+        case Color::Black:
+            return i18nc("@item:inlistbox As in 'Black pieces'", "Black");
+        case Color::Unknown:
+            return {};
+        }
+        Q_UNREACHABLE();
     }
 
     double getPointsOfPlayer(Player *p)
@@ -397,6 +412,10 @@ public:
         }
         Q_UNREACHABLE();
     }
+
+    Player *opponent(const Player *player);
+
+    Color colorOfPlayer(const Player *player);
 
     /*!
      * Returns whether the game has finished.

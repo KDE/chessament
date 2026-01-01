@@ -91,6 +91,8 @@ QVariant PlayersModel::data(const QModelIndex &index, int role) const
         default:
             return Qt::AlignLeading;
         }
+    } else if (role == Roles::PlayerRole) {
+        return QVariant::fromValue(player);
     }
 
     return {};
@@ -153,7 +155,12 @@ bool PlayersModel::setData(const QModelIndex &index, const QVariant &value, int 
 
 QHash<int, QByteArray> PlayersModel::roleNames() const
 {
-    return {{Qt::DisplayRole, "display"}, {Qt::EditRole, "edit"}, {Qt::TextAlignmentRole, "textAlignment"}};
+    return {
+        {Qt::DisplayRole, "display"},
+        {Qt::EditRole, "edit"},
+        {Qt::TextAlignmentRole, "textAlignment"},
+        {Roles::PlayerRole, "player"},
+    };
 }
 
 Qt::ItemFlags PlayersModel::flags(const QModelIndex &index) const

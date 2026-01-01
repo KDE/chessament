@@ -179,6 +179,8 @@ public:
      */
     QHash<Player *, QList<Pairing *>> getPairingsByPlayer(int maxRound = -1);
 
+    QList<Pairing *> pairingsOfPlayer(Player *player);
+
     /*
      * Returns the standings of the tournament.
      *
@@ -215,10 +217,14 @@ public:
      */
     std::expected<void, QString> setResult(Pairing *pairing, std::pair<Pairing::PartialResult, Pairing::PartialResult> result);
 
+    std::expected<void, QString> setBye(Player *player, int round, Pairing::PartialResult result);
+
     /*!
      * Returns the pairing corresponding to the \a round and \a board.
      */
     Pairing *getPairing(int round, int board);
+
+    Pairing *getPairing(int round, Player *player) const;
 
     /*!
      * Returns the pairing of the \a round.
@@ -250,6 +256,8 @@ public:
      * The caller must ensure that the current round has finished and the next one is ready to be paired.
      */
     QCoro::Task<std::expected<bool, QString>> pairNextRound();
+
+    std::expected<void, QString> removePairing(int round, Pairing *pairing);
 
     /*!
      * Removes the pairing from \a round and subsequent rounds.

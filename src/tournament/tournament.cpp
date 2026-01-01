@@ -350,6 +350,29 @@ QHash<Player *, QList<Pairing *>> Tournament::getPairingsByPlayer(int maxRound)
     return pairings;
 }
 
+QList<Pairing *> Tournament::pairingsOfPlayer(Player *player)
+{
+    QList<Pairing *> result;
+
+    for (size_t i = 0; i < m_numberOfRounds; ++i) {
+        if (i >= m_rounds.size()) {
+            result << nullptr;
+            continue;
+        }
+
+        Pairing *p = nullptr;
+        const auto &round = m_rounds.at(i);
+        for (const auto &pairing : round->pairings()) {
+            if (pairing->whitePlayer() == player || pairing->blackPlayer() == player) {
+                p = pairing;
+            }
+        }
+        result << p;
+    }
+
+    return result;
+}
+
 QList<Standing> Tournament::getStandings(const State &state)
 {
     QList<Standing> standings;
@@ -573,6 +596,32 @@ std::expected<void, QString> Tournament::setResult(Pairing *pairing, Pairing::Re
     return {};
 }
 
+std::expected<void, QString> Tournament::setBye(Player *player, int round, Pairing::PartialResult result)
+{
+    Q_ASSERT(round > m_currentRound);
+
+    const auto pairing = getPairing(round, player);
+
+    if (pairing == nullptr && result == Pairing::PartialResult::Unknown) {
+        return {};
+    }
+
+    if (pairing == nullptr) {
+        const qsizetype board = getPairings(round).size() + 1;
+        auto p = std::make_unique<Pairing>(board, player, nullptr, result, Pairing::PartialResult::Unknown);
+
+        return addPairing(round, std::move(p));
+    }
+
+    if (result == Pairing::PartialResult::Unknown) {
+        return removePairing(round, pairing);
+    }
+
+    pairing->setWhiteResult(result);
+
+    return savePairing(pairing);
+}
+
 Pairing *Tournament::getPairing(int round, int board)
 {
     Q_ASSERT(round >= 1);
@@ -589,6 +638,19 @@ QList<Pairing *> Tournament::getPairings(int round) const
     }
 
     return {};
+}
+
+Pairing *Tournament::getPairing(int round, Player *player) const
+{
+    const auto pairings = getPairings(round);
+
+    for (const auto &p : pairings) {
+        if (p->whitePlayer() == player || p->blackPlayer() == player) {
+            return p;
+        }
+    }
+
+    return nullptr;
 }
 
 int Tournament::numberOfPlayers()
@@ -772,6 +834,27 @@ QCoro::Task<std::expected<bool, QString>> Tournament::pairNextRound()
     setCurrentRound(m_currentRound + 1);
 
     co_return true;
+}
+
+std::expected<void, QString> Tournament::removePairing(int round, Pairing *pairing)
+{
+    Q_ASSERT(round >= 1);
+    Q_ASSERT(pairing != nullptr);
+    Q_ASSERT(!pairing->id().isEmpty());
+
+    QSqlQuery query(m_event->getDB());
+    query.prepare(DELETE_PAIRING_QUERY);
+    query.bindValue(":id"_L1, pairing->id());
+
+    if (!query.exec()) {
+        return std::unexpected(query.lastError().text());
+    }
+
+    m_rounds.at(round - 1)->removePairings([&pairing](Pairing *p) {
+        return p->id() == pairing->id();
+    });
+
+    return {};
 }
 
 std::expected<void, QString> Tournament::removePairings(int round, bool keepByes)

@@ -32,6 +32,10 @@ ecm_add_qml_module(chessament_static
         qml/PlayersPage.qml
         qml/WelcomePage.qml
 
+        # Player details
+        qml/player/PlayerDetails.qml
+        qml/player/PlayerPairingsPage.qml
+
         # Tournament settings
         qml/TournamentSettings.qml
         qml/TournamentSettingsCalendar.qml
@@ -44,6 +48,7 @@ ecm_add_qml_module(chessament_static
     SOURCES
         account.cpp
         controller.cpp
+        byesmodel.cpp
         document.cpp
         documents.cpp
         playersmodel.cpp
