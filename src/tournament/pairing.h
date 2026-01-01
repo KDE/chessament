@@ -20,7 +20,7 @@ class Pairing : public QObject
     QML_ELEMENT
     QML_UNCREATABLE("")
 
-    Q_PROPERTY(int id READ id NOTIFY idChanged)
+    Q_PROPERTY(QString id READ id NOTIFY idChanged)
     Q_PROPERTY(int board READ board NOTIFY boardChanged)
     Q_PROPERTY(Player *whitePlayer READ whitePlayer NOTIFY whitePlayerChanged)
     Q_PROPERTY(PartialResult whiteResult READ whiteResult NOTIFY whiteResultChanged)
@@ -345,7 +345,7 @@ public:
      *
      * This property holds the database ID of the pairing.
      */
-    [[nodiscard]] int id() const;
+    [[nodiscard]] QString id() const;
 
     /*!
      * \property Pairing::board
@@ -411,7 +411,7 @@ public:
     friend QDebug operator<<(QDebug dbg, Pairing &pairing);
 
 public Q_SLOTS:
-    void setId(int id);
+    void setId(const QString &id);
     void setBoard(int board);
     void setWhitePlayer(Player *whitePlayer);
     void setWhiteResult(Pairing::PartialResult whiteResult);
@@ -429,7 +429,7 @@ Q_SIGNALS:
     void blackResultChanged();
 
 private:
-    int m_id = 0;
+    QString m_id;
     int m_board;
     Player *m_whitePlayer;
     Pairing::PartialResult m_whiteResult = PartialResult::Unknown;

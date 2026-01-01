@@ -12,12 +12,12 @@ Pairing::Pairing(int board, Player *whitePlayer, Player *blackPlayer, PartialRes
     m_blackResult = blackResult;
 }
 
-int Pairing::id() const
+QString Pairing::id() const
 {
     return m_id;
 }
 
-void Pairing::setId(int id)
+void Pairing::setId(const QString &id)
 {
     if (m_id == id) {
         return;

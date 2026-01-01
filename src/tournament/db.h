@@ -82,7 +82,7 @@ const QString UPDATE_ROUND_QUERY =
 
 const QString PAIRINGS_TABLE_SCHEMA =
     u"CREATE TABLE IF NOT EXISTS pairings("_s
-    u"id INTEGER PRIMARY KEY,"_s
+    u"id TEXT PRIMARY KEY,"_s
     u"board INTEGER,"_s
     u"whitePlayer INTEGER NOT NULL,"_s
     u"blackPlayer INTEGER,"_s
@@ -95,8 +95,8 @@ const QString PAIRINGS_TABLE_SCHEMA =
     u");"_s;
 
 const QString ADD_PAIRING_QUERY =
-    u"INSERT INTO pairings(board, whitePlayer, blackPlayer, whiteResult, blackResult, round) "_s
-    u"VALUES (:board, :whitePlayer, :blackPlayer, :whiteResult, :blackResult, :round);"_s;
+    u"INSERT INTO pairings(id, board, whitePlayer, blackPlayer, whiteResult, blackResult, round) "_s
+    u"VALUES (:id, :board, :whitePlayer, :blackPlayer, :whiteResult, :blackResult, :round);"_s;
 
 const QString GET_PAIRINGS_QUERY =
     u"SELECT * FROM pairings "_s

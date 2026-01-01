@@ -206,7 +206,7 @@ public:
     /*!
      * Saves \a pairing to the database.
      */
-    std::expected<void, QString> savePairing(Pairing *pairing);
+    std::expected<void, QString> savePairing(Pairing *pairing, int roundNumber = 0);
 
     /*!
      * Sets the \a result to the the \a pairing and saves it to the database.
