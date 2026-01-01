@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-30 00:38+0000\n"
+"POT-Creation-Date: 2026-01-01 00:39+0000\n"
 "PO-Revision-Date: 2025-09-29 01:32+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -1016,30 +1016,30 @@ msgctxt "@label:spinbox"
 msgid "Exclude the lowest scores:"
 msgstr ""
 
-#: tournament/tournament.cpp:399
+#: tournament/tournament.cpp:400
 #, kde-format
 msgctxt "Game points"
 msgid "Points"
 msgstr "點數"
 
-#: tournament/tournament.cpp:403
+#: tournament/tournament.cpp:404
 #, kde-format
 msgctxt "Buchholz tiebreak"
 msgid "Buchholz"
 msgstr ""
 
-#: tournament/tournament.cpp:407
+#: tournament/tournament.cpp:408
 #, kde-format
 msgctxt "Number of Wins tiebreak"
 msgid "Number of Wins"
 msgstr ""
 
-#: tournament/tournament.cpp:727
+#: tournament/tournament.cpp:728
 #, kde-format
 msgid "An error ocurred while pairing the round: %1"
 msgstr ""
 
-#: tournament/tournament.cpp:937
+#: tournament/tournament.cpp:938
 #, kde-format
 msgid "Couldn't open file"
 msgstr ""

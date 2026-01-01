@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-30 00:38+0000\n"
+"POT-Creation-Date: 2026-01-01 00:39+0000\n"
 "PO-Revision-Date: 2025-05-12 14:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -652,18 +652,16 @@ msgid ""
 msgstr "在官方比赛中，第四轮配对完成后不得更改初始排名。"
 
 #: qml/StandingsPage.qml:44 qml/StandingsPage.qml:54
-#, fuzzy, kde-format
-#| msgid "Standings"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Final Standings"
-msgstr "排名"
+msgstr ""
 
 #: qml/StandingsPage.qml:46 qml/StandingsPage.qml:56
-#, fuzzy, kde-format
-#| msgid "Pair Round %1"
+#, kde-format
 msgctxt "@item:inlistbox Standings After Round %1"
 msgid "After Round %1"
-msgstr "配对轮次 %1"
+msgstr ""
 
 #: qml/StandingsPage.qml:106
 #, kde-format
@@ -1012,30 +1010,30 @@ msgctxt "@label:spinbox"
 msgid "Exclude the lowest scores:"
 msgstr "排除最低得分："
 
-#: tournament/tournament.cpp:399
+#: tournament/tournament.cpp:400
 #, kde-format
 msgctxt "Game points"
 msgid "Points"
 msgstr "点数"
 
-#: tournament/tournament.cpp:403
+#: tournament/tournament.cpp:404
 #, kde-format
 msgctxt "Buchholz tiebreak"
 msgid "Buchholz"
 msgstr "Buchholz"
 
-#: tournament/tournament.cpp:407
+#: tournament/tournament.cpp:408
 #, kde-format
 msgctxt "Number of Wins tiebreak"
 msgid "Number of Wins"
 msgstr "获胜次数"
 
-#: tournament/tournament.cpp:727
+#: tournament/tournament.cpp:728
 #, kde-format
 msgid "An error ocurred while pairing the round: %1"
 msgstr "在生成本轮对阵时发生错误：%1"
 
-#: tournament/tournament.cpp:937
+#: tournament/tournament.cpp:938
 #, kde-format
 msgid "Couldn't open file"
 msgstr "无法打开文件"
