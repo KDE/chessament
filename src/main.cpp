@@ -63,7 +63,7 @@ int main(int argc, char *argv[])
         // The license this code is released under.
         KAboutLicense::GPL_V3,
         // Copyright Statement.
-        i18n("© 2024 Manuel Alcaraz Zambrano"));
+        i18n("© 2024–2026 Manuel Alcaraz Zambrano"));
     aboutData.addAuthor(i18nc("@info:credit", "Manuel Alcaraz Zambrano"),
                         i18nc("@info:credit", "Author & Maintainer"),
                         u"manuel@alcarazzam.dev"_s,
