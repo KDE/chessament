@@ -157,6 +157,12 @@ TablePage {
         const selection = tableView.selectionModel.currentIndex;
         if (selection) {
             const index = proxyModel.mapToSource(selection);
+            const pairing = root.model.sourceModel.getPairing(index.row);
+
+            if (pairing.blackPlayer === null) {
+                return;
+            }
+
             const board = index.row + 1;
             if (board && Controller.setResult(board, event.key)) {
                 event.accepted = true;

@@ -40,7 +40,7 @@ QQC2.ToolBar {
         QQC2.ToolButton {
             text: i18nc("@action:intoolbar", "*")
             checkable: true
-            enabled: root.pairing != null
+            enabled: root.pairing !== null && root.pairing.blackPlayer !== null
             checked: root.pairing?.whiteResult === Pairing.PartialResult.Unknown && root.pairing?.blackResult === Pairing.PartialResult.Unknown
             onClicked: root.setResult(Pairing.PartialResult.Unknown, Pairing.PartialResult.Unknown)
         }
@@ -50,21 +50,21 @@ QQC2.ToolBar {
         QQC2.ToolButton {
             text: i18nc("@action:intoolbar", "1-0")
             checkable: true
-            enabled: root.pairing != null
+            enabled: root.pairing !== null && root.pairing.blackPlayer !== null
             checked: root.pairing?.whiteResult === Pairing.PartialResult.Win && root.pairing?.blackResult === Pairing.PartialResult.Lost
             onClicked: root.setResult(Pairing.PartialResult.Win, Pairing.PartialResult.Lost)
         }
         QQC2.ToolButton {
             text: i18nc("@action:intoolbar", "½-½")
             checkable: true
-            enabled: root.pairing != null
+            enabled: root.pairing !== null && root.pairing.blackPlayer !== null
             checked: root.pairing?.whiteResult === Pairing.PartialResult.Draw && root.pairing?.blackResult === Pairing.PartialResult.Draw
             onClicked: root.setResult(Pairing.PartialResult.Draw, Pairing.PartialResult.Draw)
         }
         QQC2.ToolButton {
             text: i18nc("@action:intoolbar", "0-1")
             checkable: true
-            enabled: root.pairing != null
+            enabled: root.pairing !== null && root.pairing.blackPlayer !== null
             checked: root.pairing?.whiteResult === Pairing.PartialResult.Lost && root.pairing?.blackResult === Pairing.PartialResult.Win
             onClicked: root.setResult(Pairing.PartialResult.Lost, Pairing.PartialResult.Win)
         }
@@ -74,21 +74,21 @@ QQC2.ToolBar {
         QQC2.ToolButton {
             text: i18nc("@action:intoolbar", "1F-0F")
             checkable: true
-            enabled: root.pairing != null
+            enabled: root.pairing !== null && root.pairing.blackPlayer !== null
             checked: root.pairing?.whiteResult === Pairing.PartialResult.WinForfeit && root.pairing?.blackResult === Pairing.PartialResult.LostForfeit
             onClicked: root.setResult(Pairing.PartialResult.WinForfeit, Pairing.PartialResult.LostForfeit)
         }
         QQC2.ToolButton {
             text: i18nc("@action:intoolbar", "0F-1F")
             checkable: true
-            enabled: root.pairing != null
+            enabled: root.pairing !== null && root.pairing.blackPlayer !== null
             checked: root.pairing?.whiteResult === Pairing.PartialResult.LostForfeit && root.pairing?.blackResult === Pairing.PartialResult.WinForfeit
             onClicked: root.setResult(Pairing.PartialResult.LostForfeit, Pairing.PartialResult.WinForfeit)
         }
         QQC2.ToolButton {
             text: i18nc("@action:intoolbar", "0F-0F")
             checkable: true
-            enabled: root.pairing != null
+            enabled: root.pairing !== null && root.pairing.blackPlayer !== null
             checked: root.pairing?.whiteResult === Pairing.PartialResult.LostForfeit && root.pairing?.blackResult === Pairing.PartialResult.LostForfeit
             onClicked: root.setResult(Pairing.PartialResult.LostForfeit, Pairing.PartialResult.LostForfeit)
         }
@@ -98,42 +98,42 @@ QQC2.ToolBar {
         QQC2.ToolButton {
             text: i18nc("@action:intoolbar", "1U-0U")
             checkable: true
-            enabled: root.pairing != null
+            enabled: root.pairing !== null && root.pairing.blackPlayer !== null
             checked: root.pairing?.whiteResult === Pairing.PartialResult.WinUnrated && root.pairing?.blackResult === Pairing.PartialResult.LostUnrated
             onClicked: root.setResult(Pairing.PartialResult.WinUnrated, Pairing.PartialResult.LostUnrated)
         }
         QQC2.ToolButton {
             text: i18nc("@action:intoolbar", "½U-½U")
             checkable: true
-            enabled: root.pairing != null
+            enabled: root.pairing !== null && root.pairing.blackPlayer !== null
             checked: root.pairing?.whiteResult === Pairing.PartialResult.DrawUnrated && root.pairing?.blackResult === Pairing.PartialResult.DrawUnrated
             onClicked: root.setResult(Pairing.PartialResult.DrawUnrated, Pairing.PartialResult.DrawUnrated)
         }
         QQC2.ToolButton {
             text: i18nc("@action:intoolbar", "0U-1U")
             checkable: true
-            enabled: root.pairing != null
+            enabled: root.pairing !== null && root.pairing.blackPlayer !== null
             checked: root.pairing?.whiteResult === Pairing.PartialResult.LostUnrated && root.pairing?.blackResult === Pairing.PartialResult.WinUnrated
             onClicked: root.setResult(Pairing.PartialResult.LostUnrated, Pairing.PartialResult.WinUnrated)
         }
         QQC2.ToolButton {
             text: i18nc("@action:intoolbar", "½U-0U")
             checkable: true
-            enabled: root.pairing != null
+            enabled: root.pairing !== null && root.pairing.blackPlayer !== null
             checked: root.pairing?.whiteResult === Pairing.PartialResult.DrawUnrated && root.pairing?.blackResult === Pairing.PartialResult.LostUnrated
             onClicked: root.setResult(Pairing.PartialResult.DrawUnrated, Pairing.PartialResult.LostUnrated)
         }
         QQC2.ToolButton {
             text: i18nc("@action:intoolbar", "0U-½U")
             checkable: true
-            enabled: root.pairing != null
+            enabled: root.pairing !== null && root.pairing.blackPlayer !== null
             checked: root.pairing?.whiteResult === Pairing.PartialResult.LostUnrated && root.pairing?.blackResult === Pairing.PartialResult.DrawUnrated
             onClicked: root.setResult(Pairing.PartialResult.LostUnrated, Pairing.PartialResult.DrawUnrated)
         }
         QQC2.ToolButton {
             text: i18nc("@action:intoolbar", "0U-0U")
             checkable: true
-            enabled: root.pairing != null
+            enabled: root.pairing !== null && root.pairing.blackPlayer !== null
             checked: root.pairing?.whiteResult === Pairing.PartialResult.LostUnrated && root.pairing?.blackResult === Pairing.PartialResult.LostUnrated
             onClicked: root.setResult(Pairing.PartialResult.LostUnrated, Pairing.PartialResult.LostUnrated)
         }
@@ -143,21 +143,21 @@ QQC2.ToolBar {
         QQC2.ToolButton {
             text: i18nc("@action:intoolbar", "½-0")
             checkable: true
-            enabled: root.pairing != null
+            enabled: root.pairing !== null && root.pairing.blackPlayer !== null
             checked: root.pairing?.whiteResult === Pairing.PartialResult.Draw && root.pairing?.blackResult === Pairing.PartialResult.Lost
             onClicked: root.setResult(Pairing.PartialResult.Draw, Pairing.PartialResult.Lost)
         }
         QQC2.ToolButton {
             text: i18nc("@action:intoolbar", "0-0")
             checkable: true
-            enabled: root.pairing != null
+            enabled: root.pairing !== null && root.pairing.blackPlayer !== null
             checked: root.pairing?.whiteResult === Pairing.PartialResult.Lost && root.pairing?.blackResult === Pairing.PartialResult.Lost
             onClicked: root.setResult(Pairing.PartialResult.Lost, Pairing.PartialResult.Lost)
         }
         QQC2.ToolButton {
             text: i18nc("@action:intoolbar", "0-½")
             checkable: true
-            enabled: root.pairing != null
+            enabled: root.pairing !== null && root.pairing.blackPlayer !== null
             checked: root.pairing?.whiteResult === Pairing.PartialResult.Lost && root.pairing?.blackResult === Pairing.PartialResult.Draw
             onClicked: root.setResult(Pairing.PartialResult.Lost, Pairing.PartialResult.Draw)
         }
