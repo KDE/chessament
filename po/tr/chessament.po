@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-01 00:39+0000\n"
+"POT-Creation-Date: 2026-01-02 00:41+0000\n"
 "PO-Revision-Date: 2025-12-28 12:43+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -70,8 +70,9 @@ msgid "Chess Tournament Manager"
 msgstr "Satranç Turnuvası Yöneticisi"
 
 #: main.cpp:66
-#, kde-format
-msgid "© 2024 Manuel Alcaraz Zambrano"
+#, fuzzy, kde-format
+#| msgid "© 2024 Manuel Alcaraz Zambrano"
+msgid "© 2024–2026 Manuel Alcaraz Zambrano"
 msgstr "© 2024 Manuel Alcaraz Zambrano"
 
 #: main.cpp:67
@@ -1016,30 +1017,30 @@ msgctxt "@label:spinbox"
 msgid "Exclude the lowest scores:"
 msgstr "Şu kadar düşük puanları dışla:"
 
-#: tournament/tournament.cpp:400
+#: tournament/tournament.cpp:423
 #, kde-format
 msgctxt "Game points"
 msgid "Points"
 msgstr "Puanlar"
 
-#: tournament/tournament.cpp:404
+#: tournament/tournament.cpp:427
 #, kde-format
 msgctxt "Buchholz tiebreak"
 msgid "Buchholz"
 msgstr "Buchholz"
 
-#: tournament/tournament.cpp:408
+#: tournament/tournament.cpp:431
 #, kde-format
 msgctxt "Number of Wins tiebreak"
 msgid "Number of Wins"
 msgstr "Kazanma Sayısı"
 
-#: tournament/tournament.cpp:728
+#: tournament/tournament.cpp:744
 #, kde-format
 msgid "An error ocurred while pairing the round: %1"
 msgstr "Raunt eşleştirilirken bir hata oluştu: %1"
 
-#: tournament/tournament.cpp:938
+#: tournament/tournament.cpp:954
 #, kde-format
 msgid "Couldn't open file"
 msgstr "Dosya açılamadı"
