@@ -665,9 +665,14 @@ int Tournament::numberOfRatedPlayers()
     });
 }
 
-std::expected<void, QString> Tournament::sortPairings()
+std::expected<void, QString> Tournament::sortPairings(int round)
 {
-    for (size_t i = 0; i < m_rounds.size(); i++) {
+    Q_ASSERT(round != 0);
+
+    const auto firstRound = round < 0 ? 0 : round - 1;
+    const auto lastRound = round < 0 ? m_rounds.size() : round;
+
+    for (size_t i = firstRound; i < lastRound; i++) {
         auto &pairings = m_rounds[i]->m_pairings;
 
         auto state = getState(static_cast<int>(i));
@@ -800,7 +805,8 @@ QCoro::Task<std::expected<QList<std::pair<uint, uint>>, QString>> Tournament::ca
 
 QCoro::Task<std::expected<bool, QString>> Tournament::pairNextRound()
 {
-    const auto pairings = co_await calculatePairings(m_currentRound + 1);
+    const auto roundToPair = m_currentRound + 1;
+    const auto pairings = co_await calculatePairings(roundToPair);
 
     if (!pairings.has_value()) {
         co_return std::unexpected(i18n("An error ocurred while pairing the round: %1", pairings.error()));
@@ -820,18 +826,18 @@ QCoro::Task<std::expected<bool, QString>> Tournament::pairNextRound()
         }
 
         auto p = std::make_unique<Pairing>(board, whitePlayer, blackPlayer, whiteResult, Pairing::PartialResult::Unknown);
-        if (auto ok = addPairing(m_currentRound + 1, std::move(p)); !ok) {
+        if (auto ok = addPairing(roundToPair, std::move(p)); !ok) {
             co_return std::unexpected(ok.error());
         }
 
         board++;
     }
 
-    if (auto ok = sortPairings(); !ok) {
+    if (auto ok = sortPairings(roundToPair); !ok) {
         co_return std::unexpected(ok.error());
     }
 
-    setCurrentRound(m_currentRound + 1);
+    setCurrentRound(roundToPair);
 
     co_return true;
 }

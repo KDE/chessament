@@ -232,9 +232,11 @@ public:
     [[nodiscard]] QList<Pairing *> getPairings(int round) const;
 
     /*!
-     * Sorts the pairings of all rounds.
+     * Sorts the pairings of round \a round.
+     *
+     * If \a round is negative, it sorts the pairings of all rounds.
      */
-    std::expected<void, QString> sortPairings();
+    std::expected<void, QString> sortPairings(int round = -1);
 
     /*!
      * Returns whether \a round has finished.
