@@ -38,6 +38,6 @@ public:
     void setTournament(Tournament *tournament);
 
 private:
-    Tournament *m_tournament;
+    Tournament *m_tournament = nullptr;
     QList<Standing> m_standings;
 };

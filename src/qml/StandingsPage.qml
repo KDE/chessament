@@ -3,9 +3,11 @@
 
 pragma ComponentBehavior: Bound
 
+import QtCore
 import QtQml
 import QtQuick
 import QtQuick.Controls as Controls
+import QtQuick.Dialogs as Dialogs
 
 import org.kde.kirigami as Kirigami
 
@@ -31,7 +33,30 @@ TablePage {
         return widths[column];
     }
 
+    Dialogs.FileDialog {
+        id: saveDialog
+        fileMode: Dialogs.FileDialog.SaveFile
+        defaultSuffix: "pdf"
+        nameFilters: ["PDF Files (*.pdf)"]
+        currentFolder: StandardPaths.standardLocations(StandardPaths.HomeLocation)[0]
+        onAccepted: {
+            const fileName = new URL(selectedFile).pathname;
+            Controller.saveStandingsDocument(fileName, round);
+        }
+    }
+
     actions: [
+        Kirigami.Action {
+            id: printAction
+            icon.name: "document-print-symbolic"
+            text: i18nc("@action:intoolbar", "Print…")
+            onTriggered: Controller.printStandingsDocument(root.round)
+        },
+        Kirigami.Action {
+            icon.name: "document-export-symbolic"
+            text: i18nc("@action:intoolbar", "Export as PDF…")
+            onTriggered: saveDialog.open()
+        },
         Kirigami.Action {
             displayHint: Kirigami.DisplayHint.KeepVisible
             visible: root.content.visible

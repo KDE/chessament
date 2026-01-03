@@ -83,6 +83,8 @@ QVariant StandingsModel::headerData(int section, Qt::Orientation orientation, in
     Q_UNUSED(orientation)
     Q_UNUSED(role)
 
+    Q_ASSERT(m_tournament != nullptr);
+
     switch (section) {
     case RankRole:
         return i18nc("@title:column Player Ranking", "Rank");

@@ -76,6 +76,9 @@ public:
     std::unique_ptr<Document> pairingsDocument();
     Q_INVOKABLE void savePairingsDocument(const QString &fileName);
     Q_INVOKABLE void printPairingsDocument();
+    std::unique_ptr<Document> standingsDocument(int round);
+    Q_INVOKABLE void saveStandingsDocument(const QString &fileName, int round);
+    Q_INVOKABLE void printStandingsDocument(int round);
 
     [[nodiscard]] PlayersModel *playersModel() const;
     [[nodiscard]] PairingModel *pairingModel() const;
