@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-02 00:41+0000\n"
-"PO-Revision-Date: 2025-12-28 09:32+0200\n"
+"PO-Revision-Date: 2026-01-02 08:44+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -71,10 +71,9 @@ msgid "Chess Tournament Manager"
 msgstr "מנהל תחרויות שחמט"
 
 #: main.cpp:66
-#, fuzzy, kde-format
-#| msgid "© 2024 Manuel Alcaraz Zambrano"
+#, kde-format
 msgid "© 2024–2026 Manuel Alcaraz Zambrano"
-msgstr "© 2024 מנואל אלקרז סמברנו"
+msgstr "© 2024‏-2026 מנואל אלקרז סמברנו"
 
 #: main.cpp:67
 #, kde-format

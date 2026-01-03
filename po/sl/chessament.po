@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-02 00:41+0000\n"
-"PO-Revision-Date: 2025-12-28 07:13+0100\n"
+"PO-Revision-Date: 2026-01-02 06:59+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -68,10 +68,9 @@ msgid "Chess Tournament Manager"
 msgstr "Upravljalnik šahovskega turnirja"
 
 #: main.cpp:66
-#, fuzzy, kde-format
-#| msgid "© 2024 Manuel Alcaraz Zambrano"
+#, kde-format
 msgid "© 2024–2026 Manuel Alcaraz Zambrano"
-msgstr "© 2024 Manuel Alcaraz Zambrano"
+msgstr "© 2024-2026 Manuel Alcaraz Zambrano"
 
 #: main.cpp:67
 #, kde-format
@@ -1003,10 +1002,10 @@ msgstr "Format datoteke ni podprt."
 msgctxt "@info:progress"
 msgid "Imported one player."
 msgid_plural "Imported %1 players."
-msgstr[0] "Uvoženo %1 igralcev"
+msgstr[0] "Uvoženo %1 igralcev."
 msgstr[1] "Uvožen %1 igralec"
-msgstr[2] "Uvožena %1 igralca"
-msgstr[3] "Uvoženi %1 igralci"
+msgstr[2] "Uvožena %1 igralca."
+msgstr[3] "Uvoženi %1 igralci."
 
 #: tournament/ratinglist.cpp:360
 #, kde-format
