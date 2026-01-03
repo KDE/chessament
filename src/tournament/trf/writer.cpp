@@ -67,20 +67,25 @@ void TrfWriter::writePairingEngineInformation(QTextStream *stream)
 void TrfWriter::writePlayers(QTextStream *stream)
 {
     auto standings = m_tournament->getStandings(m_state);
+    auto players = m_tournament->players();
 
-    for (const auto &player : std::as_const(m_tournament->m_players)) {
+    std::ranges::sort(players, [](const Player *a, const Player *b) {
+        return a->startingRank() < b->startingRank();
+    });
+
+    for (const auto &player : std::as_const(players)) {
         const auto standing = std::find_if(standings.constBegin(), standings.constEnd(), [&player](const Standing &s) -> bool {
-            return s.player() == player.get();
+            return s.player() == player;
         });
         const auto rank = std::distance(standings.constBegin(), standing) + 1;
-        const auto result = player->toTrf(m_state.getPoints(player.get()), rank);
+        const auto result = player->toTrf(m_state.getPoints(player), rank);
 
         *stream << result.c_str();
 
-        auto pairings = m_state.getPairings(player.get());
+        auto pairings = m_state.getPairings(player);
         for (int i = 0; i < m_state.lastRound(); i++) {
             if (i < pairings.size()) {
-                *stream << pairings.value(i)->toTrf(player.get());
+                *stream << pairings.value(i)->toTrf(player);
             } else {
                 *stream << "          "_L1;
             }
