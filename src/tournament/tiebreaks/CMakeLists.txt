@@ -4,6 +4,7 @@
 target_sources(tournament PRIVATE
     tiebreak.cpp
 
+    aob.cpp
     buchholz.cpp
     numberwins.cpp
     points.cpp

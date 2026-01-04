@@ -35,13 +35,8 @@ double Buchholz::calculate(Tournament *tournament, State state, QList<Player *> 
 
     for (const auto &pairing : state.getPairings(player)) {
         double p;
-        Player *opponent;
 
-        if (pairing->whitePlayer() == player) {
-            opponent = pairing->blackPlayer();
-        } else {
-            opponent = pairing->whitePlayer();
-        }
+        const auto opponent = pairing->opponent(player);
 
         // Handle unplayed rounds of player
         if (Pairing::isUnplayed(pairing->whiteResult())) {
