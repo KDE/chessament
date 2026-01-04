@@ -20,6 +20,7 @@ TablePage {
     Kirigami.ColumnView.fillWidth: true
 
     columnWidths: [55, 55, 250, 60, 90, 90, 100, 80, 150, 50]
+    selectionBehavior: TableView.SelectRows
 
     AddPlayerDialog {
         id: addPlayerDialog
@@ -57,7 +58,7 @@ TablePage {
         Kirigami.Action {
             icon.name: "documentinfo-symbolic"
             text: i18nc("@action:intoolbar Open player details", "Details…")
-            enabled: root.tableView.selectionModel.hasSelection
+            enabled: root.tableView.currentRow >= 0
             onTriggered: function (): void {
                 const index = proxyModel.mapToSource(root.tableView.selectionModel.currentIndex);
                 const player = root.model.sourceModel.data(index, PlayersModel.PlayerRole);

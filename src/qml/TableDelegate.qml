@@ -22,6 +22,8 @@ T.ItemDelegate {
     required property TableView tableView
     required property var model
 
+    highlighted: selected
+
     implicitWidth: Math.max(implicitBackgroundWidth + leftInset + rightInset, implicitContentWidth + leftPadding + rightPadding, implicitIndicatorWidth + leftPadding + rightPadding)
     implicitHeight: Math.max(implicitBackgroundHeight + topInset + bottomInset, implicitContentHeight + topPadding + bottomPadding, implicitIndicatorHeight + topPadding + bottomPadding, Kirigami.Units.gridUnit * 2)
 
@@ -58,7 +60,7 @@ T.ItemDelegate {
     }
 
     background: Rectangle {
-        color: if (root.highlighted || root.selected || root.current || (root.down && !root.checked) || root.visualFocus || (root.row == root.tableView.currentRow && root.tableView.selectionBehavior == TableView.SelectRows)) {
+        color: if (root.highlighted || root.selected || root.current || (root.down && !root.checked) || (root.row == root.tableView.currentRow && root.tableView.selectionBehavior == TableView.SelectRows)) {
             const highlight = Kirigami.ColorUtils.tintWithAlpha(Kirigami.Theme.backgroundColor, Kirigami.Theme.highlightColor, 0.3);
             if (root.rowHovered) {
                 return Kirigami.ColorUtils.tintWithAlpha(highlight, Kirigami.Theme.textColor, 0.10);
@@ -75,7 +77,7 @@ T.ItemDelegate {
 
         border {
             color: Kirigami.Theme.highlightColor
-            width: 0 // root.visualFocus || root.activeFocus ? 1 : 0
+            width: root.visualFocus || root.activeFocus ? 1 : 0
         }
     }
 
@@ -97,7 +99,7 @@ T.ItemDelegate {
         onTapped: {
             const selectionModel = root.tableView.selectionModel;
             selectionModel.clear();
-            selectionModel.setCurrentIndex(root.tableView.model.index(root.row, 0), ItemSelectionModel.SelectCurrent | ItemSelectionModel.Rows);
+            selectionModel.setCurrentIndex(root.tableView.model.index(root.row, root.column), ItemSelectionModel.SelectCurrent | ItemSelectionModel.Rows);
             if (root.contextMenu) {
                 root.contextMenu.popup();
             }

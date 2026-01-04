@@ -77,6 +77,10 @@ Kirigami.Page {
 
                 selectionModel: ItemSelectionModel {
                     id: selectionModel
+
+                    onCurrentChanged: function (current, previous): void {
+                        tableView.itemAtIndex(current)?.forceActiveFocus();
+                    }
                 }
 
                 delegate: root.delegate
