@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-02 00:41+0000\n"
+"POT-Creation-Date: 2026-01-04 00:41+0000\n"
 "PO-Revision-Date: 2026-01-02 08:51+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -18,6 +18,12 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 25.12.0\n"
+
+#: byesmodel.cpp:68
+#, kde-format
+msgctxt "Pieces Color · Player Name"
+msgid "%1 · %2"
+msgstr ""
 
 #: chessamentapplication.cpp:23
 #, kde-format
@@ -142,61 +148,61 @@ msgctxt "@title:column Black Player Starting Rank Number"
 msgid "№"
 msgstr "№"
 
-#: playersmodel.cpp:171 standingsmodel.cpp:90
+#: playersmodel.cpp:178 standingsmodel.cpp:90
 #, kde-format
 msgctxt "@title:column Player Starting Rank Number"
 msgid "№"
 msgstr "№"
 
-#: playersmodel.cpp:173 standingsmodel.cpp:92
+#: playersmodel.cpp:180 standingsmodel.cpp:92
 #, kde-format
 msgctxt "@title:column Player Title"
 msgid "Title"
 msgstr "Títol"
 
-#: playersmodel.cpp:175 standingsmodel.cpp:94
+#: playersmodel.cpp:182 standingsmodel.cpp:94
 #, kde-format
 msgctxt "@title:column Player Name"
 msgid "Name"
 msgstr "Nom"
 
-#: playersmodel.cpp:177
+#: playersmodel.cpp:184
 #, kde-format
 msgctxt "@title:column Player Rating"
 msgid "Rating"
 msgstr "Classificació"
 
-#: playersmodel.cpp:179
+#: playersmodel.cpp:186
 #, kde-format
 msgctxt "@title:column Player National Rating"
 msgid "National Rating"
 msgstr "Classificació nacional"
 
-#: playersmodel.cpp:181
+#: playersmodel.cpp:188
 #, kde-format
 msgctxt "@title:column"
 msgid "Player ID"
 msgstr "ID de jugador"
 
-#: playersmodel.cpp:183
+#: playersmodel.cpp:190
 #, kde-format
 msgctxt "@title:column"
 msgid "Birth date"
 msgstr "Data de naixement"
 
-#: playersmodel.cpp:185
+#: playersmodel.cpp:192
 #, kde-format
 msgctxt "@title:column Player Federation"
 msgid "Federation"
 msgstr "Federació"
 
-#: playersmodel.cpp:187
+#: playersmodel.cpp:194
 #, kde-format
 msgctxt "@title:column Player Origin"
 msgid "Origin"
 msgstr "Origen"
 
-#: playersmodel.cpp:189
+#: playersmodel.cpp:196
 #, kde-format
 msgctxt "@title:column"
 msgid "Sex"
@@ -407,13 +413,13 @@ msgctxt "@option:check"
 msgid "Hide finished games"
 msgstr "Oculta les partides finalitzades"
 
-#: qml/PairingsPage.qml:71 qml/PlayersPage.qml:60
+#: qml/PairingsPage.qml:71 qml/PlayersPage.qml:82
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Print…"
 msgstr "Imprimeix…"
 
-#: qml/PairingsPage.qml:76 qml/PlayersPage.qml:65
+#: qml/PairingsPage.qml:76 qml/PlayersPage.qml:87
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Export as PDF…"
@@ -478,31 +484,76 @@ msgctxt "@item:inlistbox As in 'Black pieces'"
 msgid "Black"
 msgstr "Negres"
 
-#: qml/PlayersPage.qml:51
+#: qml/player/PlayerDetails.qml:16
+#, kde-format
+msgctxt "@title:window"
+msgid "Details of player \"%1\""
+msgstr ""
+
+#: qml/player/PlayerDetails.qml:21
+#, fuzzy, kde-format
+#| msgid "Pairings"
+msgctxt "@action:button"
+msgid "Pairings"
+msgstr "Emparellaments"
+
+#: qml/player/PlayerPairingsPage.qml:19
+#, fuzzy, kde-format
+#| msgid "Pairings"
+msgctxt "@title"
+msgid "Pairings"
+msgstr "Emparellaments"
+
+#: qml/player/PlayerPairingsPage.qml:32
+#, kde-format
+msgctxt "@item:inlistbox Available to play"
+msgid "Available"
+msgstr ""
+
+#: qml/player/PlayerPairingsPage.qml:79 qml/TournamentSettingsFormat.qml:41
+#, kde-format
+msgctxt "@title:group"
+msgid "Pairings"
+msgstr "Emparellaments"
+
+#: qml/player/PlayerPairingsPage.qml:98
+#, fuzzy, kde-format
+#| msgid "Round %1"
+msgctxt "@info:label"
+msgid "Round %1"
+msgstr "Ronda %1"
+
+#: qml/PlayersPage.qml:59
+#, kde-format
+msgctxt "@action:intoolbar Open player details"
+msgid "Details…"
+msgstr ""
+
+#: qml/PlayersPage.qml:73
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Sort Players…"
 msgstr "Ordena els jugadors…"
 
-#: qml/PlayersPage.qml:71
+#: qml/PlayersPage.qml:93
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Add Player…"
 msgstr "Afegeix un jugador…"
 
-#: qml/PlayersPage.qml:164
+#: qml/PlayersPage.qml:186
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No players yet"
 msgstr "Encara no hi ha cap jugador"
 
-#: qml/PlayersPage.qml:168
+#: qml/PlayersPage.qml:190
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Player…"
 msgstr "Afegeix un jugador…"
 
-#: qml/PlayersPage.qml:186
+#: qml/PlayersPage.qml:208
 #, kde-format
 msgctxt "@info:status Number of players"
 msgid "1 player"
@@ -510,7 +561,7 @@ msgid_plural "%1 players"
 msgstr[0] "1 jugador"
 msgstr[1] "%1 jugadors"
 
-#: qml/PlayersPage.qml:187
+#: qml/PlayersPage.qml:209
 #, kde-format
 msgctxt "@info:status Number of rated players"
 msgid "1 rated"
@@ -518,7 +569,7 @@ msgid_plural "%1 rated"
 msgstr[0] "1 avaluat"
 msgstr[1] "%1 avaluats"
 
-#: qml/PlayersPage.qml:189
+#: qml/PlayersPage.qml:211
 #, kde-format
 msgctxt "@info:status players, rated"
 msgid "%1, %2"
@@ -732,12 +783,6 @@ msgstr "Sistema suís"
 #, kde-format
 msgid "Rounds"
 msgstr "Rondes"
-
-#: qml/TournamentSettingsFormat.qml:41
-#, kde-format
-msgctxt "@title:group"
-msgid "Pairings"
-msgstr "Emparellaments"
 
 #: qml/TournamentSettingsFormat.qml:45
 #, kde-format
@@ -1020,30 +1065,30 @@ msgctxt "@label:spinbox"
 msgid "Exclude the lowest scores:"
 msgstr "Exclou les puntuacions més baixes:"
 
-#: tournament/tournament.cpp:423
+#: tournament/tournament.cpp:446
 #, kde-format
 msgctxt "Game points"
 msgid "Points"
 msgstr "Punts"
 
-#: tournament/tournament.cpp:427
+#: tournament/tournament.cpp:450
 #, kde-format
 msgctxt "Buchholz tiebreak"
 msgid "Buchholz"
 msgstr "Buchholz"
 
-#: tournament/tournament.cpp:431
+#: tournament/tournament.cpp:454
 #, kde-format
 msgctxt "Number of Wins tiebreak"
 msgid "Number of Wins"
 msgstr "Nombre de partides guanyades"
 
-#: tournament/tournament.cpp:744
+#: tournament/tournament.cpp:812
 #, kde-format
 msgid "An error ocurred while pairing the round: %1"
 msgstr "S'ha produït un error en emparellar la ronda: %1"
 
-#: tournament/tournament.cpp:954
+#: tournament/tournament.cpp:1043
 #, kde-format
 msgid "Couldn't open file"
 msgstr "No s'ha pogut obrir el fitxer"

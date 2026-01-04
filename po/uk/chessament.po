@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-02 00:41+0000\n"
+"POT-Creation-Date: 2026-01-04 00:41+0000\n"
 "PO-Revision-Date: 2026-01-02 09:21+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -17,6 +17,12 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Lokalize 23.04.3\n"
+
+#: byesmodel.cpp:68
+#, kde-format
+msgctxt "Pieces Color · Player Name"
+msgid "%1 · %2"
+msgstr ""
 
 #: chessamentapplication.cpp:23
 #, kde-format
@@ -141,61 +147,61 @@ msgctxt "@title:column Black Player Starting Rank Number"
 msgid "№"
 msgstr "№"
 
-#: playersmodel.cpp:171 standingsmodel.cpp:90
+#: playersmodel.cpp:178 standingsmodel.cpp:90
 #, kde-format
 msgctxt "@title:column Player Starting Rank Number"
 msgid "№"
 msgstr "№"
 
-#: playersmodel.cpp:173 standingsmodel.cpp:92
+#: playersmodel.cpp:180 standingsmodel.cpp:92
 #, kde-format
 msgctxt "@title:column Player Title"
 msgid "Title"
 msgstr "Титул"
 
-#: playersmodel.cpp:175 standingsmodel.cpp:94
+#: playersmodel.cpp:182 standingsmodel.cpp:94
 #, kde-format
 msgctxt "@title:column Player Name"
 msgid "Name"
 msgstr "Ім'я"
 
-#: playersmodel.cpp:177
+#: playersmodel.cpp:184
 #, kde-format
 msgctxt "@title:column Player Rating"
 msgid "Rating"
 msgstr "Рейтинг"
 
-#: playersmodel.cpp:179
+#: playersmodel.cpp:186
 #, kde-format
 msgctxt "@title:column Player National Rating"
 msgid "National Rating"
 msgstr "Національний рейтинг"
 
-#: playersmodel.cpp:181
+#: playersmodel.cpp:188
 #, kde-format
 msgctxt "@title:column"
 msgid "Player ID"
 msgstr "ІД гравця"
 
-#: playersmodel.cpp:183
+#: playersmodel.cpp:190
 #, kde-format
 msgctxt "@title:column"
 msgid "Birth date"
 msgstr "Дата народження"
 
-#: playersmodel.cpp:185
+#: playersmodel.cpp:192
 #, kde-format
 msgctxt "@title:column Player Federation"
 msgid "Federation"
 msgstr "Федерація"
 
-#: playersmodel.cpp:187
+#: playersmodel.cpp:194
 #, kde-format
 msgctxt "@title:column Player Origin"
 msgid "Origin"
 msgstr "Походження"
 
-#: playersmodel.cpp:189
+#: playersmodel.cpp:196
 #, kde-format
 msgctxt "@title:column"
 msgid "Sex"
@@ -406,13 +412,13 @@ msgctxt "@option:check"
 msgid "Hide finished games"
 msgstr "Приховати завершені ігри"
 
-#: qml/PairingsPage.qml:71 qml/PlayersPage.qml:60
+#: qml/PairingsPage.qml:71 qml/PlayersPage.qml:82
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Print…"
 msgstr "Надрукувати…"
 
-#: qml/PairingsPage.qml:76 qml/PlayersPage.qml:65
+#: qml/PairingsPage.qml:76 qml/PlayersPage.qml:87
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Export as PDF…"
@@ -477,31 +483,76 @@ msgctxt "@item:inlistbox As in 'Black pieces'"
 msgid "Black"
 msgstr "Чорний"
 
-#: qml/PlayersPage.qml:51
+#: qml/player/PlayerDetails.qml:16
+#, kde-format
+msgctxt "@title:window"
+msgid "Details of player \"%1\""
+msgstr ""
+
+#: qml/player/PlayerDetails.qml:21
+#, fuzzy, kde-format
+#| msgid "Pairings"
+msgctxt "@action:button"
+msgid "Pairings"
+msgstr "Поділ на пари"
+
+#: qml/player/PlayerPairingsPage.qml:19
+#, fuzzy, kde-format
+#| msgid "Pairings"
+msgctxt "@title"
+msgid "Pairings"
+msgstr "Поділ на пари"
+
+#: qml/player/PlayerPairingsPage.qml:32
+#, kde-format
+msgctxt "@item:inlistbox Available to play"
+msgid "Available"
+msgstr ""
+
+#: qml/player/PlayerPairingsPage.qml:79 qml/TournamentSettingsFormat.qml:41
+#, kde-format
+msgctxt "@title:group"
+msgid "Pairings"
+msgstr "Поділ на пари"
+
+#: qml/player/PlayerPairingsPage.qml:98
+#, fuzzy, kde-format
+#| msgid "Round %1"
+msgctxt "@info:label"
+msgid "Round %1"
+msgstr "Раунд %1"
+
+#: qml/PlayersPage.qml:59
+#, kde-format
+msgctxt "@action:intoolbar Open player details"
+msgid "Details…"
+msgstr ""
+
+#: qml/PlayersPage.qml:73
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Sort Players…"
 msgstr "Упорядкувати гравців…"
 
-#: qml/PlayersPage.qml:71
+#: qml/PlayersPage.qml:93
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Add Player…"
 msgstr "Додати гравця…"
 
-#: qml/PlayersPage.qml:164
+#: qml/PlayersPage.qml:186
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No players yet"
 msgstr "Ще немає жодного гравця"
 
-#: qml/PlayersPage.qml:168
+#: qml/PlayersPage.qml:190
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Player…"
 msgstr "Додати гравця…"
 
-#: qml/PlayersPage.qml:186
+#: qml/PlayersPage.qml:208
 #, kde-format
 msgctxt "@info:status Number of players"
 msgid "1 player"
@@ -511,7 +562,7 @@ msgstr[1] "%1 гравці"
 msgstr[2] "%1 гравців"
 msgstr[3] "%1 гравець"
 
-#: qml/PlayersPage.qml:187
+#: qml/PlayersPage.qml:209
 #, kde-format
 msgctxt "@info:status Number of rated players"
 msgid "1 rated"
@@ -521,7 +572,7 @@ msgstr[1] "%1 з рейтингом"
 msgstr[2] "%1 з рейтингом"
 msgstr[3] "%1 з рейтингом"
 
-#: qml/PlayersPage.qml:189
+#: qml/PlayersPage.qml:211
 #, kde-format
 msgctxt "@info:status players, rated"
 msgid "%1, %2"
@@ -735,12 +786,6 @@ msgstr "Швейцарська система"
 #, kde-format
 msgid "Rounds"
 msgstr "Раунди"
-
-#: qml/TournamentSettingsFormat.qml:41
-#, kde-format
-msgctxt "@title:group"
-msgid "Pairings"
-msgstr "Поділ на пари"
 
 #: qml/TournamentSettingsFormat.qml:45
 #, kde-format
@@ -1026,30 +1071,30 @@ msgctxt "@label:spinbox"
 msgid "Exclude the lowest scores:"
 msgstr "Виключити найнижчі рейтинги:"
 
-#: tournament/tournament.cpp:423
+#: tournament/tournament.cpp:446
 #, kde-format
 msgctxt "Game points"
 msgid "Points"
 msgstr "Очки"
 
-#: tournament/tournament.cpp:427
+#: tournament/tournament.cpp:450
 #, kde-format
 msgctxt "Buchholz tiebreak"
 msgid "Buchholz"
 msgstr "Бухгольц"
 
-#: tournament/tournament.cpp:431
+#: tournament/tournament.cpp:454
 #, kde-format
 msgctxt "Number of Wins tiebreak"
 msgid "Number of Wins"
 msgstr "Кількість перемог"
 
-#: tournament/tournament.cpp:744
+#: tournament/tournament.cpp:812
 #, kde-format
 msgid "An error ocurred while pairing the round: %1"
 msgstr "Під час поділу на пари для раунду сталася помилка: %1"
 
-#: tournament/tournament.cpp:954
+#: tournament/tournament.cpp:1043
 #, kde-format
 msgid "Couldn't open file"
 msgstr "Не вдалося відкрити файл"

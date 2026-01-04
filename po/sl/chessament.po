@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-02 00:41+0000\n"
+"POT-Creation-Date: 2026-01-04 00:41+0000\n"
 "PO-Revision-Date: 2026-01-02 06:59+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -14,6 +14,12 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 "X-Generator: Poedit 3.8\n"
+
+#: byesmodel.cpp:68
+#, kde-format
+msgctxt "Pieces Color · Player Name"
+msgid "%1 · %2"
+msgstr ""
 
 #: chessamentapplication.cpp:23
 #, kde-format
@@ -138,61 +144,61 @@ msgctxt "@title:column Black Player Starting Rank Number"
 msgid "№"
 msgstr "Št."
 
-#: playersmodel.cpp:171 standingsmodel.cpp:90
+#: playersmodel.cpp:178 standingsmodel.cpp:90
 #, kde-format
 msgctxt "@title:column Player Starting Rank Number"
 msgid "№"
 msgstr "Št."
 
-#: playersmodel.cpp:173 standingsmodel.cpp:92
+#: playersmodel.cpp:180 standingsmodel.cpp:92
 #, kde-format
 msgctxt "@title:column Player Title"
 msgid "Title"
 msgstr "Naziv"
 
-#: playersmodel.cpp:175 standingsmodel.cpp:94
+#: playersmodel.cpp:182 standingsmodel.cpp:94
 #, kde-format
 msgctxt "@title:column Player Name"
 msgid "Name"
 msgstr "Ime"
 
-#: playersmodel.cpp:177
+#: playersmodel.cpp:184
 #, kde-format
 msgctxt "@title:column Player Rating"
 msgid "Rating"
 msgstr "Rating"
 
-#: playersmodel.cpp:179
+#: playersmodel.cpp:186
 #, kde-format
 msgctxt "@title:column Player National Rating"
 msgid "National Rating"
 msgstr "Nacionalni rating"
 
-#: playersmodel.cpp:181
+#: playersmodel.cpp:188
 #, kde-format
 msgctxt "@title:column"
 msgid "Player ID"
 msgstr "ID igralca"
 
-#: playersmodel.cpp:183
+#: playersmodel.cpp:190
 #, kde-format
 msgctxt "@title:column"
 msgid "Birth date"
 msgstr "Datum rojstva"
 
-#: playersmodel.cpp:185
+#: playersmodel.cpp:192
 #, kde-format
 msgctxt "@title:column Player Federation"
 msgid "Federation"
 msgstr "Zveza"
 
-#: playersmodel.cpp:187
+#: playersmodel.cpp:194
 #, kde-format
 msgctxt "@title:column Player Origin"
 msgid "Origin"
 msgstr "Izvor"
 
-#: playersmodel.cpp:189
+#: playersmodel.cpp:196
 #, kde-format
 msgctxt "@title:column"
 msgid "Sex"
@@ -403,13 +409,13 @@ msgctxt "@option:check"
 msgid "Hide finished games"
 msgstr "Skrij končane igre"
 
-#: qml/PairingsPage.qml:71 qml/PlayersPage.qml:60
+#: qml/PairingsPage.qml:71 qml/PlayersPage.qml:82
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Print…"
 msgstr "Natisni…"
 
-#: qml/PairingsPage.qml:76 qml/PlayersPage.qml:65
+#: qml/PairingsPage.qml:76 qml/PlayersPage.qml:87
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Export as PDF…"
@@ -474,31 +480,76 @@ msgctxt "@item:inlistbox As in 'Black pieces'"
 msgid "Black"
 msgstr "Črni"
 
-#: qml/PlayersPage.qml:51
+#: qml/player/PlayerDetails.qml:16
+#, kde-format
+msgctxt "@title:window"
+msgid "Details of player \"%1\""
+msgstr ""
+
+#: qml/player/PlayerDetails.qml:21
+#, fuzzy, kde-format
+#| msgid "Pairings"
+msgctxt "@action:button"
+msgid "Pairings"
+msgstr "Pari"
+
+#: qml/player/PlayerPairingsPage.qml:19
+#, fuzzy, kde-format
+#| msgid "Pairings"
+msgctxt "@title"
+msgid "Pairings"
+msgstr "Pari"
+
+#: qml/player/PlayerPairingsPage.qml:32
+#, kde-format
+msgctxt "@item:inlistbox Available to play"
+msgid "Available"
+msgstr ""
+
+#: qml/player/PlayerPairingsPage.qml:79 qml/TournamentSettingsFormat.qml:41
+#, kde-format
+msgctxt "@title:group"
+msgid "Pairings"
+msgstr "Pari"
+
+#: qml/player/PlayerPairingsPage.qml:98
+#, fuzzy, kde-format
+#| msgid "Round %1"
+msgctxt "@info:label"
+msgid "Round %1"
+msgstr "Krog %1"
+
+#: qml/PlayersPage.qml:59
+#, kde-format
+msgctxt "@action:intoolbar Open player details"
+msgid "Details…"
+msgstr ""
+
+#: qml/PlayersPage.qml:73
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Sort Players…"
 msgstr "Razvrsti igralce…"
 
-#: qml/PlayersPage.qml:71
+#: qml/PlayersPage.qml:93
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Add Player…"
 msgstr "Dodaj igralca…"
 
-#: qml/PlayersPage.qml:164
+#: qml/PlayersPage.qml:186
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No players yet"
 msgstr "Še ni igralcev"
 
-#: qml/PlayersPage.qml:168
+#: qml/PlayersPage.qml:190
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Player…"
 msgstr "Dodaj igralca…"
 
-#: qml/PlayersPage.qml:186
+#: qml/PlayersPage.qml:208
 #, kde-format
 msgctxt "@info:status Number of players"
 msgid "1 player"
@@ -508,7 +559,7 @@ msgstr[1] "%1igralec"
 msgstr[2] "%1 igralca"
 msgstr[3] "%1 igralci"
 
-#: qml/PlayersPage.qml:187
+#: qml/PlayersPage.qml:209
 #, kde-format
 msgctxt "@info:status Number of rated players"
 msgid "1 rated"
@@ -518,7 +569,7 @@ msgstr[1] "%1 ocenjen"
 msgstr[2] "%1 ocenjena"
 msgstr[3] "%1 ocenjeni"
 
-#: qml/PlayersPage.qml:189
+#: qml/PlayersPage.qml:211
 #, kde-format
 msgctxt "@info:status players, rated"
 msgid "%1, %2"
@@ -732,12 +783,6 @@ msgstr "Švicarski sistem"
 #, kde-format
 msgid "Rounds"
 msgstr "Krogi"
-
-#: qml/TournamentSettingsFormat.qml:41
-#, kde-format
-msgctxt "@title:group"
-msgid "Pairings"
-msgstr "Pari"
 
 #: qml/TournamentSettingsFormat.qml:45
 #, kde-format
@@ -1023,30 +1068,30 @@ msgctxt "@label:spinbox"
 msgid "Exclude the lowest scores:"
 msgstr "Izključi najnižje ocene:"
 
-#: tournament/tournament.cpp:423
+#: tournament/tournament.cpp:446
 #, kde-format
 msgctxt "Game points"
 msgid "Points"
 msgstr "Točke"
 
-#: tournament/tournament.cpp:427
+#: tournament/tournament.cpp:450
 #, kde-format
 msgctxt "Buchholz tiebreak"
 msgid "Buchholz"
 msgstr "Buchholz"
 
-#: tournament/tournament.cpp:431
+#: tournament/tournament.cpp:454
 #, kde-format
 msgctxt "Number of Wins tiebreak"
 msgid "Number of Wins"
 msgstr "Število zmag"
 
-#: tournament/tournament.cpp:744
+#: tournament/tournament.cpp:812
 #, kde-format
 msgid "An error ocurred while pairing the round: %1"
 msgstr "Pri uparjanju kroga je prišlo do napake: %1"
 
-#: tournament/tournament.cpp:954
+#: tournament/tournament.cpp:1043
 #, kde-format
 msgid "Couldn't open file"
 msgstr "Datoteke ni bilo mogoče odpreti"
