@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-04 00:41+0000\n"
-"PO-Revision-Date: 2026-01-02 08:51+0100\n"
+"POT-Creation-Date: 2026-01-05 00:40+0000\n"
+"PO-Revision-Date: 2026-01-04 08:41+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -23,7 +23,7 @@ msgstr ""
 #, kde-format
 msgctxt "Pieces Color · Player Name"
 msgid "%1 · %2"
-msgstr ""
+msgstr "%1 · %2"
 
 #: chessamentapplication.cpp:23
 #, kde-format
@@ -54,17 +54,47 @@ msgstr "Connecta amb el compte"
 msgid "Couldn't export tournament."
 msgstr "No s'ha pogut exportar el torneig."
 
-#: documents.cpp:18
+#: documents.cpp:19
 #, kde-format
 msgctxt "@title"
 msgid "Starting Rank"
 msgstr "Posició d'eixida"
 
-#: documents.cpp:46
+#: documents.cpp:47
 #, kde-format
 msgctxt "@title"
 msgid "Round %1 Pairings"
 msgstr "Emparellaments de la ronda %1"
+
+#: documents.cpp:81
+#, fuzzy, kde-format
+#| msgctxt "@item:inlistbox Standings After Round %1"
+#| msgid "After Round %1"
+msgctxt "@title"
+msgid "Standings After Round %1"
+msgstr "Després de la ronda %1"
+
+#: documents.cpp:83
+#, kde-format
+msgctxt "@title"
+msgid "Provisional Standings After Round %1"
+msgstr ""
+
+#: documents.cpp:87
+#, fuzzy, kde-format
+#| msgctxt "@item:inlistbox"
+#| msgid "Final Standings"
+msgctxt "@title"
+msgid "Final Standings"
+msgstr "Resultats finals"
+
+#: documents.cpp:89
+#, fuzzy, kde-format
+#| msgctxt "@item:inlistbox"
+#| msgid "Final Standings"
+msgctxt "@title"
+msgid "Provisional Final Standings"
+msgstr "Resultats finals"
 
 #: main.cpp:58 qml/WelcomePage.qml:15
 #, kde-format
@@ -148,19 +178,19 @@ msgctxt "@title:column Black Player Starting Rank Number"
 msgid "№"
 msgstr "№"
 
-#: playersmodel.cpp:178 standingsmodel.cpp:90
+#: playersmodel.cpp:178 standingsmodel.cpp:92
 #, kde-format
 msgctxt "@title:column Player Starting Rank Number"
 msgid "№"
 msgstr "№"
 
-#: playersmodel.cpp:180 standingsmodel.cpp:92
+#: playersmodel.cpp:180 standingsmodel.cpp:94
 #, kde-format
 msgctxt "@title:column Player Title"
 msgid "Title"
 msgstr "Títol"
 
-#: playersmodel.cpp:182 standingsmodel.cpp:94
+#: playersmodel.cpp:182 standingsmodel.cpp:96
 #, kde-format
 msgctxt "@title:column Player Name"
 msgid "Name"
@@ -413,13 +443,13 @@ msgctxt "@option:check"
 msgid "Hide finished games"
 msgstr "Oculta les partides finalitzades"
 
-#: qml/PairingsPage.qml:71 qml/PlayersPage.qml:82
+#: qml/PairingsPage.qml:71 qml/PlayersPage.qml:83 qml/StandingsPage.qml:52
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Print…"
 msgstr "Imprimix…"
 
-#: qml/PairingsPage.qml:76 qml/PlayersPage.qml:87
+#: qml/PairingsPage.qml:76 qml/PlayersPage.qml:88 qml/StandingsPage.qml:57
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Export as PDF…"
@@ -488,18 +518,16 @@ msgstr "Negres"
 #, kde-format
 msgctxt "@title:window"
 msgid "Details of player \"%1\""
-msgstr ""
+msgstr "Detalls del jugador «%1»"
 
 #: qml/player/PlayerDetails.qml:21
-#, fuzzy, kde-format
-#| msgid "Pairings"
+#, kde-format
 msgctxt "@action:button"
 msgid "Pairings"
-msgstr "Emparellaments"
+msgstr "Emparella"
 
 #: qml/player/PlayerPairingsPage.qml:19
-#, fuzzy, kde-format
-#| msgid "Pairings"
+#, kde-format
 msgctxt "@title"
 msgid "Pairings"
 msgstr "Emparellaments"
@@ -508,7 +536,7 @@ msgstr "Emparellaments"
 #, kde-format
 msgctxt "@item:inlistbox Available to play"
 msgid "Available"
-msgstr ""
+msgstr "Disponible"
 
 #: qml/player/PlayerPairingsPage.qml:79 qml/TournamentSettingsFormat.qml:41
 #, kde-format
@@ -517,43 +545,42 @@ msgid "Pairings"
 msgstr "Emparellaments"
 
 #: qml/player/PlayerPairingsPage.qml:98
-#, fuzzy, kde-format
-#| msgid "Round %1"
+#, kde-format
 msgctxt "@info:label"
 msgid "Round %1"
 msgstr "Ronda %1"
 
-#: qml/PlayersPage.qml:59
+#: qml/PlayersPage.qml:60
 #, kde-format
 msgctxt "@action:intoolbar Open player details"
 msgid "Details…"
-msgstr ""
+msgstr "Detalls…"
 
-#: qml/PlayersPage.qml:73
+#: qml/PlayersPage.qml:74
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Sort Players…"
 msgstr "Ordena els jugadors…"
 
-#: qml/PlayersPage.qml:93
+#: qml/PlayersPage.qml:94
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Add Player…"
 msgstr "Afig un jugador…"
 
-#: qml/PlayersPage.qml:186
+#: qml/PlayersPage.qml:187
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No players yet"
 msgstr "Encara no hi ha cap jugador"
 
-#: qml/PlayersPage.qml:190
+#: qml/PlayersPage.qml:191
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Player…"
 msgstr "Afig un jugador…"
 
-#: qml/PlayersPage.qml:208
+#: qml/PlayersPage.qml:209
 #, kde-format
 msgctxt "@info:status Number of players"
 msgid "1 player"
@@ -561,7 +588,7 @@ msgid_plural "%1 players"
 msgstr[0] "1 jugador"
 msgstr[1] "%1 jugadors"
 
-#: qml/PlayersPage.qml:209
+#: qml/PlayersPage.qml:210
 #, kde-format
 msgctxt "@info:status Number of rated players"
 msgid "1 rated"
@@ -569,7 +596,7 @@ msgid_plural "%1 rated"
 msgstr[0] "1 avaluat"
 msgstr[1] "%1 avaluats"
 
-#: qml/PlayersPage.qml:211
+#: qml/PlayersPage.qml:212
 #, kde-format
 msgctxt "@info:status players, rated"
 msgid "%1, %2"
@@ -708,19 +735,19 @@ msgstr ""
 "No està permés canviar el rànquing inicial després que s'haja emparellat la "
 "quarta ronda en tornejos oficials."
 
-#: qml/StandingsPage.qml:44 qml/StandingsPage.qml:54
+#: qml/StandingsPage.qml:69 qml/StandingsPage.qml:79
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Final Standings"
 msgstr "Resultats finals"
 
-#: qml/StandingsPage.qml:46 qml/StandingsPage.qml:56
+#: qml/StandingsPage.qml:71 qml/StandingsPage.qml:81
 #, kde-format
 msgctxt "@item:inlistbox Standings After Round %1"
 msgid "After Round %1"
 msgstr "Després de la ronda %1"
 
-#: qml/StandingsPage.qml:106
+#: qml/StandingsPage.qml:131
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No standings yet"
@@ -976,7 +1003,7 @@ msgctxt "@action:button"
 msgid "Add rating list"
 msgstr "Afig una llista de classificació"
 
-#: standingsmodel.cpp:88
+#: standingsmodel.cpp:90
 #, kde-format
 msgctxt "@title:column Player Ranking"
 msgid "Rank"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-04 00:41+0000\n"
+"POT-Creation-Date: 2026-01-05 00:40+0000\n"
 "PO-Revision-Date: 2025-12-06 12:17+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -55,17 +55,44 @@ msgstr "Konektatu kontua"
 msgid "Couldn't export tournament."
 msgstr "Ezin izan du txapelketa esportatu."
 
-#: documents.cpp:18
+#: documents.cpp:19
 #, kde-format
 msgctxt "@title"
 msgid "Starting Rank"
 msgstr "Hasierako postua"
 
-#: documents.cpp:46
+#: documents.cpp:47
 #, kde-format
 msgctxt "@title"
 msgid "Round %1 Pairings"
 msgstr "%1 itzulirako bikoteak"
+
+#: documents.cpp:81
+#, fuzzy, kde-format
+#| msgid "Pair Round %1"
+msgctxt "@title"
+msgid "Standings After Round %1"
+msgstr "Parekatzeko %1. itzulia"
+
+#: documents.cpp:83
+#, kde-format
+msgctxt "@title"
+msgid "Provisional Standings After Round %1"
+msgstr ""
+
+#: documents.cpp:87
+#, fuzzy, kde-format
+#| msgid "Standings"
+msgctxt "@title"
+msgid "Final Standings"
+msgstr "Sailkapena"
+
+#: documents.cpp:89
+#, fuzzy, kde-format
+#| msgid "Standings"
+msgctxt "@title"
+msgid "Provisional Final Standings"
+msgstr "Sailkapena"
 
 #: main.cpp:58 qml/WelcomePage.qml:15
 #, kde-format
@@ -150,19 +177,19 @@ msgctxt "@title:column Black Player Starting Rank Number"
 msgid "№"
 msgstr "Zk"
 
-#: playersmodel.cpp:178 standingsmodel.cpp:90
+#: playersmodel.cpp:178 standingsmodel.cpp:92
 #, kde-format
 msgctxt "@title:column Player Starting Rank Number"
 msgid "№"
 msgstr "Zk"
 
-#: playersmodel.cpp:180 standingsmodel.cpp:92
+#: playersmodel.cpp:180 standingsmodel.cpp:94
 #, kde-format
 msgctxt "@title:column Player Title"
 msgid "Title"
 msgstr "Titulua"
 
-#: playersmodel.cpp:182 standingsmodel.cpp:94
+#: playersmodel.cpp:182 standingsmodel.cpp:96
 #, kde-format
 msgctxt "@title:column Player Name"
 msgid "Name"
@@ -415,13 +442,13 @@ msgctxt "@option:check"
 msgid "Hide finished games"
 msgstr "Ezkutatu bukatutako jokoak"
 
-#: qml/PairingsPage.qml:71 qml/PlayersPage.qml:82
+#: qml/PairingsPage.qml:71 qml/PlayersPage.qml:83 qml/StandingsPage.qml:52
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Print…"
 msgstr "Inprimatu..."
 
-#: qml/PairingsPage.qml:76 qml/PlayersPage.qml:87
+#: qml/PairingsPage.qml:76 qml/PlayersPage.qml:88 qml/StandingsPage.qml:57
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Export as PDF…"
@@ -525,37 +552,37 @@ msgctxt "@info:label"
 msgid "Round %1"
 msgstr "%1. itzulia"
 
-#: qml/PlayersPage.qml:59
+#: qml/PlayersPage.qml:60
 #, kde-format
 msgctxt "@action:intoolbar Open player details"
 msgid "Details…"
 msgstr ""
 
-#: qml/PlayersPage.qml:73
+#: qml/PlayersPage.qml:74
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Sort Players…"
 msgstr "Sailkatu jokalariak…"
 
-#: qml/PlayersPage.qml:93
+#: qml/PlayersPage.qml:94
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Add Player…"
 msgstr "Gehitu jokalaria…"
 
-#: qml/PlayersPage.qml:186
+#: qml/PlayersPage.qml:187
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No players yet"
 msgstr "Oraindik jokalaririk ez"
 
-#: qml/PlayersPage.qml:190
+#: qml/PlayersPage.qml:191
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Player…"
 msgstr "Gehitu jokalaria…"
 
-#: qml/PlayersPage.qml:208
+#: qml/PlayersPage.qml:209
 #, kde-format
 msgctxt "@info:status Number of players"
 msgid "1 player"
@@ -563,7 +590,7 @@ msgid_plural "%1 players"
 msgstr[0] "Jokalari 1"
 msgstr[1] "%1 Jokalari"
 
-#: qml/PlayersPage.qml:209
+#: qml/PlayersPage.qml:210
 #, kde-format
 msgctxt "@info:status Number of rated players"
 msgid "1 rated"
@@ -571,7 +598,7 @@ msgid_plural "%1 rated"
 msgstr[0] "1 puntuatuta"
 msgstr[1] "%1 puntuatuta"
 
-#: qml/PlayersPage.qml:211
+#: qml/PlayersPage.qml:212
 #, kde-format
 msgctxt "@info:status players, rated"
 msgid "%1, %2"
@@ -710,21 +737,21 @@ msgstr ""
 "Txapelketa ofizialetan, laugarren itzulirako bikoteak erabaki ondoren "
 "hasierako sailkapena aldatzea ez da onartzen."
 
-#: qml/StandingsPage.qml:44 qml/StandingsPage.qml:54
+#: qml/StandingsPage.qml:69 qml/StandingsPage.qml:79
 #, fuzzy, kde-format
 #| msgid "Standings"
 msgctxt "@item:inlistbox"
 msgid "Final Standings"
 msgstr "Sailkapena"
 
-#: qml/StandingsPage.qml:46 qml/StandingsPage.qml:56
+#: qml/StandingsPage.qml:71 qml/StandingsPage.qml:81
 #, fuzzy, kde-format
 #| msgid "Pair Round %1"
 msgctxt "@item:inlistbox Standings After Round %1"
 msgid "After Round %1"
 msgstr "Parekatzeko %1. itzulia"
 
-#: qml/StandingsPage.qml:106
+#: qml/StandingsPage.qml:131
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No standings yet"
@@ -988,7 +1015,7 @@ msgctxt "@action:button"
 msgid "Add rating list"
 msgstr ""
 
-#: standingsmodel.cpp:88
+#: standingsmodel.cpp:90
 #, kde-format
 msgctxt "@title:column Player Ranking"
 msgid "Rank"
