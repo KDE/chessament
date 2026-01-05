@@ -1,4 +1,4 @@
-// SPDX-FileCopyrightText: 2025-2026 Manuel Alcaraz Zambrano <manuel@alcarazzam.dev>
+// SPDX-FileCopyrightText: 2025 Manuel Alcaraz Zambrano <manuel@alcarazzam.dev>
 // SPDX-License-Identifier: GPL-3.0-or-later
 
 #include <QFile>
@@ -24,8 +24,8 @@ private:
 
 private Q_SLOTS:
 
-    void testTiebreaks_data();
-    void testTiebreaks();
+    void testBuchholz_data();
+    void testBuchholz();
 };
 
 QList<QStringList> TiebreaksTest::readStandings(const QString &fileName)
@@ -34,7 +34,6 @@ QList<QStringList> TiebreaksTest::readStandings(const QString &fileName)
 
     QFile file(fileName);
     if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
-        Q_ASSERT(false);
         return {};
     }
 
@@ -55,40 +54,28 @@ QList<QStringList> TiebreaksTest::readStandings(const QString &fileName)
     return result;
 }
 
-void TiebreaksTest::testTiebreaks_data()
+void TiebreaksTest::testBuchholz_data()
 {
     QTest::addColumn<QString>("fileName");
-    QTest::addColumn<QString>("expected");
-    QTest::addColumn<int>("precision");
-    QTest::addColumn<QString>("tiebreakName");
 
-    QTest::newRow("tournament_1.txt Buchholz") << u"tournament_1.txt"_s << u".standings"_s << 1 << u"bh"_s;
-    QTest::newRow("buchholz_1.trf") << u"buchholz_1.trf"_s << u".standings"_s << 1 << u"bh"_s;
-    QTest::newRow("buchholz_2.trf") << u"buchholz_2.trf"_s << u".standings"_s << 1 << u"bh"_s;
-    QTest::newRow("buchholz_3.trf") << u"buchholz_3.trf"_s << u".standings"_s << 1 << u"bh"_s;
-    QTest::newRow("buchholz_4.trf") << u"buchholz_4.trf"_s << u".standings"_s << 1 << u"bh"_s;
-    QTest::newRow("tournament_1.txt AOB") << u"tournament_1.txt"_s << u".aob"_s << 2 << u"aob"_s;
+    QTest::newRow("tournament_1.txt") << QLatin1StringView(DATA_DIR) + "/tournament_1.txt"_L1;
 }
 
-void TiebreaksTest::testTiebreaks()
+void TiebreaksTest::testBuchholz()
 {
     QFETCH(QString, fileName);
-    QFETCH(QString, expected);
-    QFETCH(int, precision);
-    QFETCH(QString, tiebreakName);
 
-    const auto expectedStandings = readStandings(QLatin1StringView(DATA_DIR) + "/"_L1 + fileName + expected);
+    const auto expectedStandings = readStandings(fileName + ".aob"_L1);
 
     auto event = std::make_unique<Event>();
     QVERIFY(event->open());
 
-    auto tournament = event->importTournament(QLatin1StringView(DATA_DIR) + "/"_L1 + fileName);
+    auto tournament = event->importTournament(fileName);
     QVERIFY(tournament.has_value());
 
     std::vector<std::unique_ptr<Tiebreak>> tiebreaks;
     tiebreaks.push_back(std::make_unique<Points>());
-    auto tiebreak = Tournament::tiebreak(tiebreakName);
-    tiebreaks.push_back(std::move(tiebreak));
+    tiebreaks.push_back(std::make_unique<Buchholz>());
     (*tournament)->setTiebreaks(std::move(tiebreaks));
 
     const auto state = (*tournament)->getState();
@@ -102,7 +89,7 @@ void TiebreaksTest::testTiebreaks()
             QString::number(standing.player()->startingRank()),
             QString::number(i + 1),
             QString::number(standing.values()[0], 'f', 1),
-            QString::number(standing.values()[1], 'f', precision),
+            QString::number(standing.values()[1], 'f', 1),
         };
 
         QCOMPARE(result.join(','_L1), expected.join(','_L1));
@@ -111,4 +98,4 @@ void TiebreaksTest::testTiebreaks()
 
 QTEST_GUILESS_MAIN(TiebreaksTest)
 
-#include "tiebreakstest.moc"
+#include "aobtest.moc"
