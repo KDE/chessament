@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: 2024 Manuel Alcaraz Zambrano <manuel@alcarazzam.dev>
+# SPDX-FileCopyrightText: 2024-2026 Manuel Alcaraz Zambrano <manuel@alcarazzam.dev>
 # SPDX-License-Identifier: BSD-3-Clause
 
 enable_testing()
@@ -12,9 +12,9 @@ ecm_add_test(
 )
 
 ecm_add_test(
-    buchholztest.cpp
+    tiebreakstest.cpp
     LINK_LIBRARIES tournament Qt::Test
-    TEST_NAME buchholztest
+    TEST_NAME tiebreakstest
 )
 
 ecm_add_test(

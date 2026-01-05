@@ -1,4 +1,4 @@
-// SPDX-FileCopyrightText: 2025 Manuel Alcaraz Zambrano <manuel@alcarazzam.dev>
+// SPDX-FileCopyrightText: 2025-2026 Manuel Alcaraz Zambrano <manuel@alcarazzam.dev>
 // SPDX-License-Identifier: GPL-3.0-or-later
 
 #include <QFile>
@@ -15,7 +15,7 @@
 
 using namespace Qt::Literals::StringLiterals;
 
-class BuchholzTest : public QObject
+class TiebreaksTest : public QObject
 {
     Q_OBJECT
 
@@ -24,16 +24,17 @@ private:
 
 private Q_SLOTS:
 
-    void testBuchholz_data();
-    void testBuchholz();
+    void testTiebreaks_data();
+    void testTiebreaks();
 };
 
-QList<QStringList> BuchholzTest::readStandings(const QString &fileName)
+QList<QStringList> TiebreaksTest::readStandings(const QString &fileName)
 {
     QList<QStringList> result;
 
     QFile file(fileName);
     if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
+        Q_ASSERT(false);
         return {};
     }
 
@@ -54,32 +55,37 @@ QList<QStringList> BuchholzTest::readStandings(const QString &fileName)
     return result;
 }
 
-void BuchholzTest::testBuchholz_data()
+void TiebreaksTest::testTiebreaks_data()
 {
     QTest::addColumn<QString>("fileName");
+    QTest::addColumn<QString>("expected");
+    QTest::addColumn<QString>("tiebreakName");
 
-    QTest::newRow("tournament_1.txt") << QLatin1StringView(DATA_DIR) + "/tournament_1.txt"_L1;
-    QTest::newRow("buchholz_1.trf") << QLatin1StringView(DATA_DIR) + "/buchholz_1.trf"_L1;
-    QTest::newRow("buchholz_2.trf") << QLatin1StringView(DATA_DIR) + "/buchholz_2.trf"_L1;
-    QTest::newRow("buchholz_3.trf") << QLatin1StringView(DATA_DIR) + "/buchholz_3.trf"_L1;
-    QTest::newRow("buchholz_4.trf") << QLatin1StringView(DATA_DIR) + "/buchholz_4.trf"_L1;
+    QTest::newRow("tournament_1.txt") << u"tournament_1.txt"_s << u".standings"_s << u"bh"_s;
+    QTest::newRow("buchholz_1.trf") << u"buchholz_1.trf"_s << u".standings"_s << u"bh"_s;
+    QTest::newRow("buchholz_2.trf") << u"buchholz_2.trf"_s << u".standings"_s << u"bh"_s;
+    QTest::newRow("buchholz_3.trf") << u"buchholz_3.trf"_s << u".standings"_s << u"bh"_s;
+    QTest::newRow("buchholz_4.trf") << u"buchholz_4.trf"_s << u".standings"_s << u"bh"_s;
 }
 
-void BuchholzTest::testBuchholz()
+void TiebreaksTest::testTiebreaks()
 {
     QFETCH(QString, fileName);
+    QFETCH(QString, expected);
+    QFETCH(QString, tiebreakName);
 
-    const auto expectedStandings = readStandings(fileName + ".standings"_L1);
+    const auto expectedStandings = readStandings(QLatin1StringView(DATA_DIR) + "/"_L1 + fileName + expected);
 
     auto event = std::make_unique<Event>();
     QVERIFY(event->open());
 
-    auto tournament = event->importTournament(fileName);
+    auto tournament = event->importTournament(QLatin1StringView(DATA_DIR) + "/"_L1 + fileName);
     QVERIFY(tournament.has_value());
 
     std::vector<std::unique_ptr<Tiebreak>> tiebreaks;
     tiebreaks.push_back(std::make_unique<Points>());
-    tiebreaks.push_back(std::make_unique<Buchholz>());
+    auto tiebreak = Tournament::tiebreak(tiebreakName);
+    tiebreaks.push_back(std::move(tiebreak));
     (*tournament)->setTiebreaks(std::move(tiebreaks));
 
     const auto state = (*tournament)->getState();
@@ -100,5 +106,6 @@ void BuchholzTest::testBuchholz()
     }
 }
 
-QTEST_GUILESS_MAIN(BuchholzTest)
-#include "buchholztest.moc"
+QTEST_GUILESS_MAIN(TiebreaksTest)
+
+#include "tiebreakstest.moc"
