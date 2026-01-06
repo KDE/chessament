@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-05 00:40+0000\n"
+"POT-Creation-Date: 2026-01-06 00:40+0000\n"
 "PO-Revision-Date: 2025-05-12 14:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -65,11 +65,10 @@ msgid "Round %1 Pairings"
 msgstr "第 %1 轮对阵"
 
 #: documents.cpp:81
-#, fuzzy, kde-format
-#| msgid "Pair Round %1"
+#, kde-format
 msgctxt "@title"
 msgid "Standings After Round %1"
-msgstr "配对轮次 %1"
+msgstr ""
 
 #: documents.cpp:83
 #, kde-format
@@ -78,11 +77,10 @@ msgid "Provisional Standings After Round %1"
 msgstr ""
 
 #: documents.cpp:87
-#, fuzzy, kde-format
-#| msgid "Standings"
+#, kde-format
 msgctxt "@title"
 msgid "Final Standings"
-msgstr "排名"
+msgstr ""
 
 #: documents.cpp:89
 #, kde-format
@@ -102,10 +100,9 @@ msgid "Chess Tournament Manager"
 msgstr "国际象棋赛事管理系统"
 
 #: main.cpp:66
-#, fuzzy, kde-format
-#| msgid "© 2024 Manuel Alcaraz Zambrano"
+#, kde-format
 msgid "© 2024–2026 Manuel Alcaraz Zambrano"
-msgstr "© 2024 Manuel Alcaraz Zambrano"
+msgstr ""
 
 #: main.cpp:67
 #, kde-format
@@ -516,18 +513,16 @@ msgid "Details of player \"%1\""
 msgstr ""
 
 #: qml/player/PlayerDetails.qml:21
-#, fuzzy, kde-format
-#| msgid "Pairings"
+#, kde-format
 msgctxt "@action:button"
 msgid "Pairings"
-msgstr "配对"
+msgstr ""
 
 #: qml/player/PlayerPairingsPage.qml:19
-#, fuzzy, kde-format
-#| msgid "Pairings"
+#, kde-format
 msgctxt "@title"
 msgid "Pairings"
-msgstr "配对"
+msgstr ""
 
 #: qml/player/PlayerPairingsPage.qml:32
 #, kde-format
@@ -542,11 +537,10 @@ msgid "Pairings"
 msgstr "配对"
 
 #: qml/player/PlayerPairingsPage.qml:98
-#, fuzzy, kde-format
-#| msgid "Round %1"
+#, kde-format
 msgctxt "@info:label"
 msgid "Round %1"
-msgstr "第 %1 轮"
+msgstr ""
 
 #: qml/PlayersPage.qml:60
 #, kde-format
@@ -1082,30 +1076,36 @@ msgctxt "@label:spinbox"
 msgid "Exclude the lowest scores:"
 msgstr "排除最低得分："
 
-#: tournament/tournament.cpp:446
+#: tournament/tournament.cpp:447
 #, kde-format
 msgctxt "Game points"
 msgid "Points"
 msgstr "点数"
 
-#: tournament/tournament.cpp:450
+#: tournament/tournament.cpp:451
 #, kde-format
 msgctxt "Buchholz tiebreak"
 msgid "Buchholz"
 msgstr "Buchholz"
 
-#: tournament/tournament.cpp:454
+#: tournament/tournament.cpp:455
 #, kde-format
 msgctxt "Number of Wins tiebreak"
 msgid "Number of Wins"
 msgstr "获胜次数"
 
-#: tournament/tournament.cpp:812
+#: tournament/tournament.cpp:459
+#, kde-format
+msgctxt "Tiebreak"
+msgid "Average Buchholz of Opponents"
+msgstr ""
+
+#: tournament/tournament.cpp:820
 #, kde-format
 msgid "An error ocurred while pairing the round: %1"
 msgstr "在生成本轮对阵时发生错误：%1"
 
-#: tournament/tournament.cpp:1043
+#: tournament/tournament.cpp:1051
 #, kde-format
 msgid "Couldn't open file"
 msgstr "无法打开文件"

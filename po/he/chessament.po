@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-05 00:40+0000\n"
-"PO-Revision-Date: 2026-01-02 08:44+0200\n"
+"POT-Creation-Date: 2026-01-06 00:40+0000\n"
+"PO-Revision-Date: 2026-01-05 12:40+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -22,7 +22,7 @@ msgstr ""
 #, kde-format
 msgctxt "Pieces Color · Player Name"
 msgid "%1 · %2"
-msgstr ""
+msgstr "%1 · %2"
 
 #: chessamentapplication.cpp:23
 #, kde-format
@@ -66,34 +66,28 @@ msgid "Round %1 Pairings"
 msgstr "שיבוצים לסיבוב %1"
 
 #: documents.cpp:81
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox Standings After Round %1"
-#| msgid "After Round %1"
+#, kde-format
 msgctxt "@title"
 msgid "Standings After Round %1"
-msgstr "אחרי שיבוץ %1"
+msgstr "דירוג אחרי סיבוב %1"
 
 #: documents.cpp:83
 #, kde-format
 msgctxt "@title"
 msgid "Provisional Standings After Round %1"
-msgstr ""
+msgstr "דירוג זמני אחרי סיבוב %1"
 
 #: documents.cpp:87
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox"
-#| msgid "Final Standings"
+#, kde-format
 msgctxt "@title"
 msgid "Final Standings"
-msgstr "עמדות סופיות"
+msgstr "דירוג סופי"
 
 #: documents.cpp:89
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox"
-#| msgid "Final Standings"
+#, kde-format
 msgctxt "@title"
 msgid "Provisional Final Standings"
-msgstr "עמדות סופיות"
+msgstr "דירוג סופי זמני"
 
 #: main.cpp:58 qml/WelcomePage.qml:15
 #, kde-format
@@ -517,18 +511,16 @@ msgstr "שחור"
 #, kde-format
 msgctxt "@title:window"
 msgid "Details of player \"%1\""
-msgstr ""
+msgstr "פרטי השחקן/ית „%1”"
 
 #: qml/player/PlayerDetails.qml:21
-#, fuzzy, kde-format
-#| msgid "Pairings"
+#, kde-format
 msgctxt "@action:button"
 msgid "Pairings"
 msgstr "שיבוצים"
 
 #: qml/player/PlayerPairingsPage.qml:19
-#, fuzzy, kde-format
-#| msgid "Pairings"
+#, kde-format
 msgctxt "@title"
 msgid "Pairings"
 msgstr "שיבוצים"
@@ -537,7 +529,7 @@ msgstr "שיבוצים"
 #, kde-format
 msgctxt "@item:inlistbox Available to play"
 msgid "Available"
-msgstr ""
+msgstr "זמין"
 
 #: qml/player/PlayerPairingsPage.qml:79 qml/TournamentSettingsFormat.qml:41
 #, kde-format
@@ -546,8 +538,7 @@ msgid "Pairings"
 msgstr "שיבוצים"
 
 #: qml/player/PlayerPairingsPage.qml:98
-#, fuzzy, kde-format
-#| msgid "Round %1"
+#, kde-format
 msgctxt "@info:label"
 msgid "Round %1"
 msgstr "סיבוב %1"
@@ -556,7 +547,7 @@ msgstr "סיבוב %1"
 #, kde-format
 msgctxt "@action:intoolbar Open player details"
 msgid "Details…"
-msgstr ""
+msgstr "פרטים…"
 
 #: qml/PlayersPage.qml:74
 #, kde-format
@@ -1099,30 +1090,36 @@ msgctxt "@label:spinbox"
 msgid "Exclude the lowest scores:"
 msgstr "להחריג את הציונים הנמוכים ביותר:"
 
-#: tournament/tournament.cpp:446
+#: tournament/tournament.cpp:447
 #, kde-format
 msgctxt "Game points"
 msgid "Points"
 msgstr "נקודות"
 
-#: tournament/tournament.cpp:450
+#: tournament/tournament.cpp:451
 #, kde-format
 msgctxt "Buchholz tiebreak"
 msgid "Buchholz"
 msgstr "בוכהולץ"
 
-#: tournament/tournament.cpp:454
+#: tournament/tournament.cpp:455
 #, kde-format
 msgctxt "Number of Wins tiebreak"
 msgid "Number of Wins"
 msgstr "מספר הנצחונות"
 
-#: tournament/tournament.cpp:812
+#: tournament/tournament.cpp:459
+#, kde-format
+msgctxt "Tiebreak"
+msgid "Average Buchholz of Opponents"
+msgstr ""
+
+#: tournament/tournament.cpp:820
 #, kde-format
 msgid "An error ocurred while pairing the round: %1"
 msgstr "אירעה שגיאה בעת השיבוץ לסיבוב: %1"
 
-#: tournament/tournament.cpp:1043
+#: tournament/tournament.cpp:1051
 #, kde-format
 msgid "Couldn't open file"
 msgstr "לא ניתן לפתוח את הקובץ"

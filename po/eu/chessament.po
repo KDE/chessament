@@ -1,16 +1,16 @@
 # Translation for chessament.po to Euskara/Basque (eu).
-# Copyright (C) 2025 This file is copyright:
+# Copyright (C) 2025-2026 This file is copyright:
 # This file is distributed under the same license as the chessament package.
-# SPDX-FileCopyrightText: 2025 KDE euskaratzeko proiektuaren arduraduna <xalba@ni.eus>
+# SPDX-FileCopyrightText: 2025, 2026 KDE euskaratzeko proiektuaren arduraduna <xalba@ni.eus>
 #
 # Translators:
-# SPDX-FileCopyrightText: 2025 Iñigo Salvador Azurmendi <xalba@ni.eus>
+# SPDX-FileCopyrightText: Iñigo Salvador Azurmendi <xalba@ni.eus>, 2025, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-05 00:40+0000\n"
-"PO-Revision-Date: 2025-12-06 12:17+0100\n"
+"POT-Creation-Date: 2026-01-06 00:40+0000\n"
+"PO-Revision-Date: 2026-01-05 20:59+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,13 +18,13 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.08.3\n"
+"X-Generator: Lokalize 25.12.0\n"
 
 #: byesmodel.cpp:68
 #, kde-format
 msgctxt "Pieces Color · Player Name"
 msgid "%1 · %2"
-msgstr ""
+msgstr "%1 · %2"
 
 #: chessamentapplication.cpp:23
 #, kde-format
@@ -65,34 +65,31 @@ msgstr "Hasierako postua"
 #, kde-format
 msgctxt "@title"
 msgid "Round %1 Pairings"
-msgstr "%1 itzulirako bikoteak"
+msgstr "%1 jardunaldirako parekatzea"
 
 #: documents.cpp:81
-#, fuzzy, kde-format
-#| msgid "Pair Round %1"
+#, kde-format
 msgctxt "@title"
 msgid "Standings After Round %1"
-msgstr "Parekatzeko %1. itzulia"
+msgstr "Sailkapena %1. jardunaldiaren ondoren"
 
 #: documents.cpp:83
 #, kde-format
 msgctxt "@title"
 msgid "Provisional Standings After Round %1"
-msgstr ""
+msgstr "Behin-behineko sailkapena %1. jardunaldiaren ondoren"
 
 #: documents.cpp:87
-#, fuzzy, kde-format
-#| msgid "Standings"
+#, kde-format
 msgctxt "@title"
 msgid "Final Standings"
-msgstr "Sailkapena"
+msgstr "Azken sailkapena"
 
 #: documents.cpp:89
-#, fuzzy, kde-format
-#| msgid "Standings"
+#, kde-format
 msgctxt "@title"
 msgid "Provisional Final Standings"
-msgstr "Sailkapena"
+msgstr "Behin-behineko azken sailkapena"
 
 #: main.cpp:58 qml/WelcomePage.qml:15
 #, kde-format
@@ -106,10 +103,9 @@ msgid "Chess Tournament Manager"
 msgstr "Xake txapelketa kudeatzailea"
 
 #: main.cpp:66
-#, fuzzy, kde-format
-#| msgid "© 2024 Manuel Alcaraz Zambrano"
+#, kde-format
 msgid "© 2024–2026 Manuel Alcaraz Zambrano"
-msgstr "© 2024 Manuel Alcaraz Zambrano"
+msgstr "© 2024–2026 Manuel Alcaraz Zambrano"
 
 #: main.cpp:67
 #, kde-format
@@ -199,13 +195,13 @@ msgstr "Izena"
 #, kde-format
 msgctxt "@title:column Player Rating"
 msgid "Rating"
-msgstr "Puntuazioa"
+msgstr "Balorazioa"
 
 #: playersmodel.cpp:186
 #, kde-format
 msgctxt "@title:column Player National Rating"
 msgid "National Rating"
-msgstr "Puntuazio nazionala"
+msgstr "Balorazio nazionala"
 
 #: playersmodel.cpp:188
 #, kde-format
@@ -259,13 +255,13 @@ msgstr "Izena"
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Rating"
-msgstr "Puntuazioa"
+msgstr "Balorazioa"
 
 #: qml/AddPlayerDialog.qml:71
 #, kde-format
 msgctxt "@label:textbox"
 msgid "National rating"
-msgstr "Puntuazio nazionala"
+msgstr "Balorazio nazionala"
 
 #: qml/AddPlayerDialog.qml:78
 #, kde-format
@@ -375,7 +371,7 @@ msgstr "Ezabatu berdinketa-haustea"
 #, kde-format
 msgctxt "@title"
 msgid "Remove pairings"
-msgstr "Kendu parekatzeak..."
+msgstr "Kendu parekatzea"
 
 #: qml/DeletePairingsDialog.qml:24
 #, kde-format
@@ -429,12 +425,12 @@ msgstr "Sistema suitzarra"
 #, kde-format
 msgctxt "@label"
 msgid "Number of rounds"
-msgstr "Itzuli kopurua"
+msgstr "Jardunaldi kopurua"
 
 #: qml/PairingsPage.qml:49
 #, kde-format
 msgid "Pair Round %1"
-msgstr "Parekatzeko %1. itzulia"
+msgstr "%1. jardunaldiaren parekatzea"
 
 #: qml/PairingsPage.qml:58
 #, kde-format
@@ -457,37 +453,37 @@ msgstr "Esportatu PDF gisa…"
 #: qml/PairingsPage.qml:85
 #, kde-format
 msgid "Round %1"
-msgstr "%1. itzulia"
+msgstr "%1. jardunaldia"
 
 #: qml/PairingsPage.qml:103
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Remove pairings of this and following rounds…"
-msgstr "Kendu itzuli honetako eta ondorengoen bikoteak..."
+msgstr "Kendu jardunaldi honetako eta ondorengoetarako parekatzea…"
 
 #: qml/PairingsPage.qml:149
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No pairings for round %1 yet"
-msgstr "Oraindik %1 itzulirako bikoterik ez"
+msgstr "Oraindik ez da %1. jardunaldirako parekatzea egin"
 
 #: qml/PairingsPage.qml:151
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "All games of round %1 have finished"
-msgstr "%1 itzuliko joko guztiak bukatu dira"
+msgstr "%1 jardunaldiko joko guztiak bukatu dira"
 
 #: qml/PairRoundDialog.qml:17
 #, kde-format
 msgctxt "@title %1 is a number >= 1"
 msgid "Pair Round %1"
-msgstr "Parekatzeko %1. itzulia"
+msgstr "%1. jardunaldiaren parekatzea"
 
 #: qml/PairRoundDialog.qml:26
 #, kde-format
 msgctxt "@option:check"
 msgid "Sort players"
-msgstr "Sailkatu jokalariak"
+msgstr "Ordenatu jokalariak"
 
 #: qml/PairRoundDialog.qml:33
 #, kde-format
@@ -517,52 +513,49 @@ msgstr "Beltza"
 #, kde-format
 msgctxt "@title:window"
 msgid "Details of player \"%1\""
-msgstr ""
+msgstr "\"%1\" jokalariaren xehetasunak"
 
 #: qml/player/PlayerDetails.qml:21
-#, fuzzy, kde-format
-#| msgid "Pairings"
+#, kde-format
 msgctxt "@action:button"
 msgid "Pairings"
-msgstr "Bikoteak"
+msgstr "Parekatzea"
 
 #: qml/player/PlayerPairingsPage.qml:19
-#, fuzzy, kde-format
-#| msgid "Pairings"
+#, kde-format
 msgctxt "@title"
 msgid "Pairings"
-msgstr "Bikoteak"
+msgstr "Parekatzea"
 
 #: qml/player/PlayerPairingsPage.qml:32
 #, kde-format
 msgctxt "@item:inlistbox Available to play"
 msgid "Available"
-msgstr ""
+msgstr "Erabilgarri"
 
 #: qml/player/PlayerPairingsPage.qml:79 qml/TournamentSettingsFormat.qml:41
 #, kde-format
 msgctxt "@title:group"
 msgid "Pairings"
-msgstr "Bikoteak"
+msgstr "Parekatzea"
 
 #: qml/player/PlayerPairingsPage.qml:98
-#, fuzzy, kde-format
-#| msgid "Round %1"
+#, kde-format
 msgctxt "@info:label"
 msgid "Round %1"
-msgstr "%1. itzulia"
+msgstr "%1. jardunaldia"
 
 #: qml/PlayersPage.qml:60
 #, kde-format
 msgctxt "@action:intoolbar Open player details"
 msgid "Details…"
-msgstr ""
+msgstr "Xehetasunak..."
 
 #: qml/PlayersPage.qml:74
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Sort Players…"
-msgstr "Sailkatu jokalariak…"
+msgstr "Ordenatu jokalariak…"
 
 #: qml/PlayersPage.qml:94
 #, kde-format
@@ -708,7 +701,7 @@ msgstr "Jokalariak"
 #: qml/Sidebar.qml:62
 #, kde-format
 msgid "Pairings"
-msgstr "Bikoteak"
+msgstr "Parekatzea"
 
 #: qml/Sidebar.qml:69
 #, kde-format
@@ -725,7 +718,7 @@ msgstr "Ezarpenak"
 #, kde-format
 msgctxt "@title"
 msgid "Sort Players"
-msgstr "Sailkatu jokalariak"
+msgstr "Ordenatu jokalariak"
 
 #: qml/SortPlayersDialog.qml:26
 #, kde-format
@@ -734,22 +727,20 @@ msgid ""
 "Changing the initial ranking after the fourth round has been paired is not "
 "allowed in official tournaments."
 msgstr ""
-"Txapelketa ofizialetan, laugarren itzulirako bikoteak erabaki ondoren "
+"Txapelketa ofizialetan, laugarren jardunaldirako parekatzea egin ondoren "
 "hasierako sailkapena aldatzea ez da onartzen."
 
 #: qml/StandingsPage.qml:69 qml/StandingsPage.qml:79
-#, fuzzy, kde-format
-#| msgid "Standings"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Final Standings"
-msgstr "Sailkapena"
+msgstr "Azken sailkapena"
 
 #: qml/StandingsPage.qml:71 qml/StandingsPage.qml:81
-#, fuzzy, kde-format
-#| msgid "Pair Round %1"
+#, kde-format
 msgctxt "@item:inlistbox Standings After Round %1"
 msgid "After Round %1"
-msgstr "Parekatzeko %1. itzulia"
+msgstr "%1. jardunaldiaren ondoren"
 
 #: qml/StandingsPage.qml:131
 #, kde-format
@@ -791,7 +782,7 @@ msgstr "Egutegia"
 #, kde-format
 msgctxt "round number"
 msgid "Round %1"
-msgstr "%1. itzulia"
+msgstr "%1. jardunaldia"
 
 #: qml/TournamentSettingsFormat.qml:16
 #, kde-format
@@ -813,12 +804,12 @@ msgstr "Sistema suitzarra"
 #: qml/TournamentSettingsFormat.qml:27
 #, kde-format
 msgid "Rounds"
-msgstr "Itzuliak"
+msgstr "Jardunaldiak"
 
 #: qml/TournamentSettingsFormat.qml:45
 #, kde-format
 msgid "Pairing engine"
-msgstr "Bikoteak erabakitzeko motorra"
+msgstr "Parekatzeko motorra"
 
 #: qml/TournamentSettingsFormat.qml:46
 #, kde-format
@@ -833,7 +824,7 @@ msgstr "Parekatzeak esleitutako atsedena (\"bye\")"
 #: qml/TournamentSettingsFormat.qml:52
 #, kde-format
 msgid "The value of the pairing allocated bye"
-msgstr "Parekatzeak esleitutako atsedenaren (\"bye\") puntuazioa"
+msgstr "Parekatzeak esleitutako atsedenaren (\"bye\") balioa"
 
 #: qml/TournamentSettingsFormat.qml:58
 #, kde-format
@@ -902,12 +893,10 @@ msgid "General"
 msgstr "Orokorra"
 
 #: settings/ChessamentConfigurationView.qml:30
-#, fuzzy, kde-format
-#| msgctxt "@title:column Player Rating"
-#| msgid "Rating"
+#, kde-format
 msgctxt "@action:button"
 msgid "Rating Lists"
-msgstr "Puntuazioa"
+msgstr "Balorazio-zerrendak"
 
 #: settings/GeneralPage.qml:16
 #, kde-format
@@ -938,29 +927,25 @@ msgid "Logout"
 msgstr "Saioa itxi"
 
 #: settings/RatingListsPage.qml:21 settings/RatingListsPage.qml:127
-#, fuzzy, kde-format
-#| msgctxt "@title:column Player Rating"
-#| msgid "Rating"
+#, kde-format
 msgctxt "@title"
 msgid "Rating Lists"
-msgstr "Puntuazioa"
+msgstr "Balorazio-zerrendak"
 
 #: settings/RatingListsPage.qml:26
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Rating List"
-msgstr ""
+msgstr "Gehitu balorazio-zerrenda"
 
 #: settings/RatingListsPage.qml:31
 #, kde-format
 msgctxt "@action:button"
 msgid "Import"
-msgstr ""
+msgstr "Inportatu"
 
 #: settings/RatingListsPage.qml:46
-#, fuzzy, kde-format
-#| msgctxt "@title:column Player Name"
-#| msgid "Name"
+#, kde-format
 msgctxt "@info:label"
 msgid "Name"
 msgstr "Izena"
@@ -969,51 +954,49 @@ msgstr "Izena"
 #, kde-format
 msgctxt "@info:label"
 msgid "Rating list URL"
-msgstr ""
+msgstr "Balorazio-zerrendaren URLa"
 
 #: settings/RatingListsPage.qml:71
 #, kde-format
 msgctxt "@title:window"
 msgid "Importing Rating List"
-msgstr ""
+msgstr "Balorazio-zerrenda inportatzea"
 
 #: settings/RatingListsPage.qml:111
 #, kde-format
 msgctxt "@title"
 msgid "Delete Rating List"
-msgstr ""
+msgstr "Ezabatu balorazio-zerrenda"
 
 #: settings/RatingListsPage.qml:119
 #, kde-format
 msgctxt "@action:button Delete Rating List"
 msgid "Delete"
-msgstr ""
+msgstr "Ezabatu"
 
 #: settings/RatingListsPage.qml:132
-#, fuzzy, kde-format
-#| msgctxt "@info:placeholder"
-#| msgid "No standings yet"
+#, kde-format
 msgctxt "@info:status"
 msgid "No rating lists yet."
-msgstr "Oraindik sailkapenik ez"
+msgstr "Oraindik ez dago balorazio-zerrendarik."
 
 #: settings/RatingListsPage.qml:152
 #, kde-format
 msgctxt "@action:button"
 msgid "Delete Rating List"
-msgstr ""
+msgstr "Ezabatu balorazio-zerrenda"
 
 #: settings/RatingListsPage.qml:160
 #, kde-format
 msgctxt "@action:button"
 msgid "Delete rating list"
-msgstr ""
+msgstr "Ezabatu balorazio-zerrenda"
 
 #: settings/RatingListsPage.qml:170
 #, kde-format
 msgctxt "@action:button"
 msgid "Add rating list"
-msgstr ""
+msgstr "Gehitu balorazio-zerrenda"
 
 #: standingsmodel.cpp:90
 #, kde-format
@@ -1026,8 +1009,7 @@ msgstr "Postua"
 msgctxt "bbpPairings is the name of a program, should not be translated"
 msgid "The pairing engine bbpPairings could not be found. Is it installed?"
 msgstr ""
-"Bikoteak erabakitzeko bbpPairings motorra ezin izan da aurkitu. Instalatuta "
-"dago?"
+"Parekatzeko bbpPairings motorra ezin izan da aurkitu. Instalatuta dago?"
 
 #: tournament/pairingengine.cpp:30
 #, kde-format
@@ -1056,53 +1038,47 @@ msgstr "\"%1\" jokalari baliogabea \"%2\" parekatzean."
 #, kde-format
 msgctxt "@info:progress"
 msgid "Downloading file"
-msgstr ""
+msgstr "Fitxategia zama-jaisten"
 
 #: tournament/ratinglist.cpp:143
 #, kde-format
 msgctxt "@info:progress"
 msgid "Downloading file (%1 %)"
-msgstr ""
+msgstr "Fitxategia zama-jaisten (%%1)"
 
 #: tournament/ratinglist.cpp:149
 #, kde-format
 msgctxt "@info"
 msgid "Couldn't download rating list: %1"
-msgstr ""
+msgstr "Ezin izan du balorazio-zerrena zama-jaitsi: %1"
 
 #: tournament/ratinglist.cpp:161
-#, fuzzy, kde-format
-#| msgid "Couldn't open file"
+#, kde-format
 msgctxt "@info"
 msgid "Couldn't extract file."
-msgstr "Ezin izan du fitxategia ireki"
+msgstr "Ezin izan du fitxategia atera."
 
 #: tournament/ratinglist.cpp:166
 #, kde-format
 msgctxt "@info"
 msgid "File format not supported."
-msgstr ""
+msgstr "Fitxategi-formatua ez da onartzen."
 
 #: tournament/ratinglist.cpp:186
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Sort players"
+#, kde-format
 msgctxt "@info:progress"
 msgid "Imported one player."
 msgid_plural "Imported %1 players."
-msgstr[0] "Sailkatu jokalariak"
-msgstr[1] "Sailkatu jokalariak"
+msgstr[0] "Jokalari bat inportatu da."
+msgstr[1] "%1 jokalari inportatu dira."
 
 #: tournament/ratinglist.cpp:360
-#, fuzzy, kde-format
-#| msgctxt "@info:status Number of players"
-#| msgid "1 player"
-#| msgid_plural "%1 players"
+#, kde-format
 msgctxt "@info:progress"
 msgid "Saved 1 player."
 msgid_plural "Saved %1 players."
-msgstr[0] "Jokalari 1"
-msgstr[1] "%1 Jokalari"
+msgstr[0] "Jokalari 1 gorde da."
+msgstr[1] "%1 jokalari gorde dira."
 
 #: tournament/tiebreaks/buchholz.cpp:14
 #, kde-format
@@ -1110,30 +1086,36 @@ msgctxt "@label:spinbox"
 msgid "Exclude the lowest scores:"
 msgstr "Baztertu puntu-kopuru baxuenak:"
 
-#: tournament/tournament.cpp:446
+#: tournament/tournament.cpp:447
 #, kde-format
 msgctxt "Game points"
 msgid "Points"
 msgstr "Puntuak"
 
-#: tournament/tournament.cpp:450
+#: tournament/tournament.cpp:451
 #, kde-format
 msgctxt "Buchholz tiebreak"
 msgid "Buchholz"
 msgstr "Buchholz"
 
-#: tournament/tournament.cpp:454
+#: tournament/tournament.cpp:455
 #, kde-format
 msgctxt "Number of Wins tiebreak"
 msgid "Number of Wins"
 msgstr "Garaipen kopurua"
 
-#: tournament/tournament.cpp:812
+#: tournament/tournament.cpp:459
+#, kde-format
+msgctxt "Tiebreak"
+msgid "Average Buchholz of Opponents"
+msgstr ""
+
+#: tournament/tournament.cpp:820
 #, kde-format
 msgid "An error ocurred while pairing the round: %1"
-msgstr "Errore bat gertatu da itzuliko bikoteak erabakitzean: %1"
+msgstr "Errore bat gertatu da jardunaldiko parekatzea egitean: %1"
 
-#: tournament/tournament.cpp:1043
+#: tournament/tournament.cpp:1051
 #, kde-format
 msgid "Couldn't open file"
 msgstr "Ezin izan du fitxategia ireki"

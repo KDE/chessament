@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-05 00:40+0000\n"
-"PO-Revision-Date: 2026-01-04 08:41+0100\n"
+"POT-Creation-Date: 2026-01-06 00:40+0000\n"
+"PO-Revision-Date: 2026-01-05 08:41+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -67,34 +67,28 @@ msgid "Round %1 Pairings"
 msgstr "Emparellaments de la ronda %1"
 
 #: documents.cpp:81
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox Standings After Round %1"
-#| msgid "After Round %1"
+#, kde-format
 msgctxt "@title"
 msgid "Standings After Round %1"
-msgstr "Després de la ronda %1"
+msgstr "Resultats després de la ronda %1"
 
 #: documents.cpp:83
 #, kde-format
 msgctxt "@title"
 msgid "Provisional Standings After Round %1"
-msgstr ""
+msgstr "Resultats provisionals després de la ronda %1"
 
 #: documents.cpp:87
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox"
-#| msgid "Final Standings"
+#, kde-format
 msgctxt "@title"
 msgid "Final Standings"
 msgstr "Resultats finals"
 
 #: documents.cpp:89
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox"
-#| msgid "Final Standings"
+#, kde-format
 msgctxt "@title"
 msgid "Provisional Final Standings"
-msgstr "Resultats finals"
+msgstr "Resultats finals provisionals"
 
 #: main.cpp:58 qml/WelcomePage.qml:15
 #, kde-format
@@ -1092,30 +1086,36 @@ msgctxt "@label:spinbox"
 msgid "Exclude the lowest scores:"
 msgstr "Exclou les puntuacions més baixes:"
 
-#: tournament/tournament.cpp:446
+#: tournament/tournament.cpp:447
 #, kde-format
 msgctxt "Game points"
 msgid "Points"
 msgstr "Punts"
 
-#: tournament/tournament.cpp:450
+#: tournament/tournament.cpp:451
 #, kde-format
 msgctxt "Buchholz tiebreak"
 msgid "Buchholz"
 msgstr "Buchholz"
 
-#: tournament/tournament.cpp:454
+#: tournament/tournament.cpp:455
 #, kde-format
 msgctxt "Number of Wins tiebreak"
 msgid "Number of Wins"
 msgstr "Nombre de partides guanyades"
 
-#: tournament/tournament.cpp:812
+#: tournament/tournament.cpp:459
+#, kde-format
+msgctxt "Tiebreak"
+msgid "Average Buchholz of Opponents"
+msgstr ""
+
+#: tournament/tournament.cpp:820
 #, kde-format
 msgid "An error ocurred while pairing the round: %1"
 msgstr "S'ha produït un error en emparellar la ronda: %1"
 
-#: tournament/tournament.cpp:1043
+#: tournament/tournament.cpp:1051
 #, kde-format
 msgid "Couldn't open file"
 msgstr "No s'ha pogut obrir el fitxer"
