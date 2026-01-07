@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
-// SPDX-FileCopyrightText: 2024 Manuel Alcaraz Zambrano <manuel@alcarazzam.dev>
+// SPDX-FileCopyrightText: 2024-2026 Manuel Alcaraz Zambrano <manuel@alcarazzam.dev>
+
 pragma ComponentBehavior: Bound
 
 import QtQuick
@@ -48,6 +49,7 @@ QQC2.ToolBar {
             Layouts.Layout.fillHeight: true
         }
         QQC2.ToolButton {
+            id: whiteWins
             text: i18nc("@action:intoolbar", "1-0")
             checkable: true
             enabled: root.pairing !== null && root.pairing.blackPlayer !== null
@@ -55,6 +57,7 @@ QQC2.ToolBar {
             onClicked: root.setResult(Pairing.PartialResult.Win, Pairing.PartialResult.Lost)
         }
         QQC2.ToolButton {
+            id: draw
             text: i18nc("@action:intoolbar", "½-½")
             checkable: true
             enabled: root.pairing !== null && root.pairing.blackPlayer !== null
@@ -62,6 +65,7 @@ QQC2.ToolBar {
             onClicked: root.setResult(Pairing.PartialResult.Draw, Pairing.PartialResult.Draw)
         }
         QQC2.ToolButton {
+            id: blackWins
             text: i18nc("@action:intoolbar", "0-1")
             checkable: true
             enabled: root.pairing !== null && root.pairing.blackPlayer !== null
@@ -72,6 +76,7 @@ QQC2.ToolBar {
             Layouts.Layout.fillHeight: true
         }
         QQC2.ToolButton {
+            id: whiteWinsForfeit
             text: i18nc("@action:intoolbar", "1F-0F")
             checkable: true
             enabled: root.pairing !== null && root.pairing.blackPlayer !== null
@@ -79,6 +84,7 @@ QQC2.ToolBar {
             onClicked: root.setResult(Pairing.PartialResult.WinForfeit, Pairing.PartialResult.LostForfeit)
         }
         QQC2.ToolButton {
+            id: blackWinsForfeit
             text: i18nc("@action:intoolbar", "0F-1F")
             checkable: true
             enabled: root.pairing !== null && root.pairing.blackPlayer !== null
@@ -86,6 +92,7 @@ QQC2.ToolBar {
             onClicked: root.setResult(Pairing.PartialResult.LostForfeit, Pairing.PartialResult.WinForfeit)
         }
         QQC2.ToolButton {
+            id: bothForfeit
             text: i18nc("@action:intoolbar", "0F-0F")
             checkable: true
             enabled: root.pairing !== null && root.pairing.blackPlayer !== null
@@ -96,70 +103,83 @@ QQC2.ToolBar {
             Layouts.Layout.fillHeight: true
         }
         QQC2.ToolButton {
-            text: i18nc("@action:intoolbar", "1U-0U")
-            checkable: true
+            text: i18nc("@action:intoolbar Other game results", "Other")
             enabled: root.pairing !== null && root.pairing.blackPlayer !== null
-            checked: root.pairing?.whiteResult === Pairing.PartialResult.WinUnrated && root.pairing?.blackResult === Pairing.PartialResult.LostUnrated
-            onClicked: root.setResult(Pairing.PartialResult.WinUnrated, Pairing.PartialResult.LostUnrated)
-        }
-        QQC2.ToolButton {
-            text: i18nc("@action:intoolbar", "½U-½U")
             checkable: true
-            enabled: root.pairing !== null && root.pairing.blackPlayer !== null
-            checked: root.pairing?.whiteResult === Pairing.PartialResult.DrawUnrated && root.pairing?.blackResult === Pairing.PartialResult.DrawUnrated
-            onClicked: root.setResult(Pairing.PartialResult.DrawUnrated, Pairing.PartialResult.DrawUnrated)
-        }
-        QQC2.ToolButton {
-            text: i18nc("@action:intoolbar", "0U-1U")
-            checkable: true
-            enabled: root.pairing !== null && root.pairing.blackPlayer !== null
-            checked: root.pairing?.whiteResult === Pairing.PartialResult.LostUnrated && root.pairing?.blackResult === Pairing.PartialResult.WinUnrated
-            onClicked: root.setResult(Pairing.PartialResult.LostUnrated, Pairing.PartialResult.WinUnrated)
-        }
-        QQC2.ToolButton {
-            text: i18nc("@action:intoolbar", "½U-0U")
-            checkable: true
-            enabled: root.pairing !== null && root.pairing.blackPlayer !== null
-            checked: root.pairing?.whiteResult === Pairing.PartialResult.DrawUnrated && root.pairing?.blackResult === Pairing.PartialResult.LostUnrated
-            onClicked: root.setResult(Pairing.PartialResult.DrawUnrated, Pairing.PartialResult.LostUnrated)
-        }
-        QQC2.ToolButton {
-            text: i18nc("@action:intoolbar", "0U-½U")
-            checkable: true
-            enabled: root.pairing !== null && root.pairing.blackPlayer !== null
-            checked: root.pairing?.whiteResult === Pairing.PartialResult.LostUnrated && root.pairing?.blackResult === Pairing.PartialResult.DrawUnrated
-            onClicked: root.setResult(Pairing.PartialResult.LostUnrated, Pairing.PartialResult.DrawUnrated)
-        }
-        QQC2.ToolButton {
-            text: i18nc("@action:intoolbar", "0U-0U")
-            checkable: true
-            enabled: root.pairing !== null && root.pairing.blackPlayer !== null
-            checked: root.pairing?.whiteResult === Pairing.PartialResult.LostUnrated && root.pairing?.blackResult === Pairing.PartialResult.LostUnrated
-            onClicked: root.setResult(Pairing.PartialResult.LostUnrated, Pairing.PartialResult.LostUnrated)
-        }
-        Kirigami.Separator {
-            Layouts.Layout.fillHeight: true
-        }
-        QQC2.ToolButton {
-            text: i18nc("@action:intoolbar", "½-0")
-            checkable: true
-            enabled: root.pairing !== null && root.pairing.blackPlayer !== null
-            checked: root.pairing?.whiteResult === Pairing.PartialResult.Draw && root.pairing?.blackResult === Pairing.PartialResult.Lost
-            onClicked: root.setResult(Pairing.PartialResult.Draw, Pairing.PartialResult.Lost)
-        }
-        QQC2.ToolButton {
-            text: i18nc("@action:intoolbar", "0-0")
-            checkable: true
-            enabled: root.pairing !== null && root.pairing.blackPlayer !== null
-            checked: root.pairing?.whiteResult === Pairing.PartialResult.Lost && root.pairing?.blackResult === Pairing.PartialResult.Lost
-            onClicked: root.setResult(Pairing.PartialResult.Lost, Pairing.PartialResult.Lost)
-        }
-        QQC2.ToolButton {
-            text: i18nc("@action:intoolbar", "0-½")
-            checkable: true
-            enabled: root.pairing !== null && root.pairing.blackPlayer !== null
-            checked: root.pairing?.whiteResult === Pairing.PartialResult.Lost && root.pairing?.blackResult === Pairing.PartialResult.Draw
-            onClicked: root.setResult(Pairing.PartialResult.Lost, Pairing.PartialResult.Draw)
+            checked: root.pairing && !whiteWins.checked && !draw.checked && !blackWins.checked && !whiteWinsForfeit.checked && !blackWinsForfeit.checked && !bothForfeit.checked
+            down: pressed || otherMenu.opened
+            onClicked: otherMenu.open()
+
+            QQC2.Menu {
+                id: otherMenu
+                y: -otherMenu.height
+
+                QQC2.MenuItem {
+                    text: i18nc("@action:intoolbar", "1U-0U")
+                    checkable: true
+                    autoExclusive: true
+                    checked: root.pairing?.whiteResult === Pairing.PartialResult.WinUnrated && root.pairing?.blackResult === Pairing.PartialResult.LostUnrated
+                    onClicked: root.setResult(Pairing.PartialResult.WinUnrated, Pairing.PartialResult.LostUnrated)
+                }
+                QQC2.MenuItem {
+                    text: i18nc("@action:intoolbar", "½U-½U")
+                    checkable: true
+                    autoExclusive: true
+                    checked: root.pairing?.whiteResult === Pairing.PartialResult.DrawUnrated && root.pairing?.blackResult === Pairing.PartialResult.DrawUnrated
+                    onClicked: root.setResult(Pairing.PartialResult.DrawUnrated, Pairing.PartialResult.DrawUnrated)
+                }
+                QQC2.MenuItem {
+                    text: i18nc("@action:intoolbar", "0U-1U")
+                    checkable: true
+                    autoExclusive: true
+                    checked: root.pairing?.whiteResult === Pairing.PartialResult.LostUnrated && root.pairing?.blackResult === Pairing.PartialResult.WinUnrated
+                    onClicked: root.setResult(Pairing.PartialResult.LostUnrated, Pairing.PartialResult.WinUnrated)
+                }
+                QQC2.MenuSeparator {}
+                QQC2.MenuItem {
+                    text: i18nc("@action:intoolbar", "½U-0U")
+                    checkable: true
+                    autoExclusive: true
+                    checked: root.pairing?.whiteResult === Pairing.PartialResult.DrawUnrated && root.pairing?.blackResult === Pairing.PartialResult.LostUnrated
+                    onClicked: root.setResult(Pairing.PartialResult.DrawUnrated, Pairing.PartialResult.LostUnrated)
+                }
+                QQC2.MenuItem {
+                    text: i18nc("@action:intoolbar", "0U-½U")
+                    checkable: true
+                    autoExclusive: true
+                    checked: root.pairing?.whiteResult === Pairing.PartialResult.LostUnrated && root.pairing?.blackResult === Pairing.PartialResult.DrawUnrated
+                    onClicked: root.setResult(Pairing.PartialResult.LostUnrated, Pairing.PartialResult.DrawUnrated)
+                }
+                QQC2.MenuItem {
+                    text: i18nc("@action:intoolbar", "0U-0U")
+                    checkable: true
+                    autoExclusive: true
+                    checked: root.pairing?.whiteResult === Pairing.PartialResult.LostUnrated && root.pairing?.blackResult === Pairing.PartialResult.LostUnrated
+                    onClicked: root.setResult(Pairing.PartialResult.LostUnrated, Pairing.PartialResult.LostUnrated)
+                }
+                QQC2.MenuSeparator {}
+                QQC2.MenuItem {
+                    text: i18nc("@action:intoolbar", "½-0")
+                    checkable: true
+                    autoExclusive: true
+                    checked: root.pairing?.whiteResult === Pairing.PartialResult.Draw && root.pairing?.blackResult === Pairing.PartialResult.Lost
+                    onClicked: root.setResult(Pairing.PartialResult.Draw, Pairing.PartialResult.Lost)
+                }
+                QQC2.MenuItem {
+                    text: i18nc("@action:intoolbar", "0-0")
+                    checkable: true
+                    autoExclusive: true
+                    checked: root.pairing?.whiteResult === Pairing.PartialResult.Lost && root.pairing?.blackResult === Pairing.PartialResult.Lost
+                    onClicked: root.setResult(Pairing.PartialResult.Lost, Pairing.PartialResult.Lost)
+                }
+                QQC2.MenuItem {
+                    text: i18nc("@action:intoolbar", "0-½")
+                    checkable: true
+                    autoExclusive: true
+                    checked: root.pairing?.whiteResult === Pairing.PartialResult.Lost && root.pairing?.blackResult === Pairing.PartialResult.Draw
+                    onClicked: root.setResult(Pairing.PartialResult.Lost, Pairing.PartialResult.Draw)
+                }
+            }
         }
     }
 
