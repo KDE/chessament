@@ -1,14 +1,14 @@
 # Copyright (C) 2025 This file is copyright:
 # This file is distributed under the same license as the chessament package.
 #
-# SPDX-FileCopyrightText: 2025 Emir SARI <emir_sari@îcloud.com>
+# SPDX-FileCopyrightText: 2025, 2026 Emir SARI <emir_sari@îcloud.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-06 00:40+0000\n"
-"PO-Revision-Date: 2025-12-28 12:43+0300\n"
-"Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
+"POT-Creation-Date: 2026-01-08 00:39+0000\n"
+"PO-Revision-Date: 2026-01-07 18:43+0300\n"
+"Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
@@ -21,7 +21,7 @@ msgstr ""
 #, kde-format
 msgctxt "Pieces Color · Player Name"
 msgid "%1 · %2"
-msgstr ""
+msgstr "%1 · %2"
 
 #: chessamentapplication.cpp:23
 #, kde-format
@@ -65,34 +65,28 @@ msgid "Round %1 Pairings"
 msgstr "Raunt %1 Eşleşmeleri"
 
 #: documents.cpp:81
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox Standings After Round %1"
-#| msgid "After Round %1"
+#, kde-format
 msgctxt "@title"
 msgid "Standings After Round %1"
-msgstr "%1. Raunttan Sonra"
+msgstr "%1 Raunt Sonrası Puan Durumu"
 
 #: documents.cpp:83
 #, kde-format
 msgctxt "@title"
 msgid "Provisional Standings After Round %1"
-msgstr ""
+msgstr "%1 Raunt Sonrası Nihaî Olmayan Puan Durumu"
 
 #: documents.cpp:87
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox"
-#| msgid "Final Standings"
+#, kde-format
 msgctxt "@title"
 msgid "Final Standings"
-msgstr "Son Puan Durumu"
+msgstr "Nihaî Puan Durumu"
 
 #: documents.cpp:89
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox"
-#| msgid "Final Standings"
+#, kde-format
 msgctxt "@title"
 msgid "Provisional Final Standings"
-msgstr "Son Puan Durumu"
+msgstr "Nihaî Olmayan Puan Durumu"
 
 #: main.cpp:58 qml/WelcomePage.qml:15
 #, kde-format
@@ -106,10 +100,9 @@ msgid "Chess Tournament Manager"
 msgstr "Satranç Turnuvası Yöneticisi"
 
 #: main.cpp:66
-#, fuzzy, kde-format
-#| msgid "© 2024 Manuel Alcaraz Zambrano"
+#, kde-format
 msgid "© 2024–2026 Manuel Alcaraz Zambrano"
-msgstr "© 2024 Manuel Alcaraz Zambrano"
+msgstr "© 2024–2026 Manuel Alcaraz Zambrano"
 
 #: main.cpp:67
 #, kde-format
@@ -517,18 +510,16 @@ msgstr "Siyah"
 #, kde-format
 msgctxt "@title:window"
 msgid "Details of player \"%1\""
-msgstr ""
+msgstr "“%1” Ayrıntıları"
 
 #: qml/player/PlayerDetails.qml:21
-#, fuzzy, kde-format
-#| msgid "Pairings"
+#, kde-format
 msgctxt "@action:button"
 msgid "Pairings"
 msgstr "Eşleşmeler"
 
 #: qml/player/PlayerPairingsPage.qml:19
-#, fuzzy, kde-format
-#| msgid "Pairings"
+#, kde-format
 msgctxt "@title"
 msgid "Pairings"
 msgstr "Eşleşmeler"
@@ -537,7 +528,7 @@ msgstr "Eşleşmeler"
 #, kde-format
 msgctxt "@item:inlistbox Available to play"
 msgid "Available"
-msgstr ""
+msgstr "Uygun"
 
 #: qml/player/PlayerPairingsPage.qml:79 qml/TournamentSettingsFormat.qml:41
 #, kde-format
@@ -546,8 +537,7 @@ msgid "Pairings"
 msgstr "Eşleşmeler"
 
 #: qml/player/PlayerPairingsPage.qml:98
-#, fuzzy, kde-format
-#| msgid "Round %1"
+#, kde-format
 msgctxt "@info:label"
 msgid "Round %1"
 msgstr "Raunt %1"
@@ -556,7 +546,7 @@ msgstr "Raunt %1"
 #, kde-format
 msgctxt "@action:intoolbar Open player details"
 msgid "Details…"
-msgstr ""
+msgstr "Ayrıntılar…"
 
 #: qml/PlayersPage.qml:74
 #, kde-format
@@ -604,97 +594,103 @@ msgctxt "@info:status players, rated"
 msgid "%1, %2"
 msgstr "%1, %2"
 
-#: qml/ResultsFooter.qml:41
+#: qml/ResultsFooter.qml:42
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "*"
 msgstr "*"
 
-#: qml/ResultsFooter.qml:51
+#: qml/ResultsFooter.qml:53
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "1-0"
 msgstr "1‒0"
 
-#: qml/ResultsFooter.qml:58
+#: qml/ResultsFooter.qml:61
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "½-½"
 msgstr "½‒½"
 
-#: qml/ResultsFooter.qml:65
+#: qml/ResultsFooter.qml:69
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "0-1"
 msgstr "0‒1"
 
-#: qml/ResultsFooter.qml:75
+#: qml/ResultsFooter.qml:80
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "1F-0F"
 msgstr "1F‒0F"
 
-#: qml/ResultsFooter.qml:82
+#: qml/ResultsFooter.qml:88
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "0F-1F"
 msgstr "0F‒1F"
 
-#: qml/ResultsFooter.qml:89
+#: qml/ResultsFooter.qml:96
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "0F-0F"
 msgstr "0F‒0F"
 
-#: qml/ResultsFooter.qml:99
+#: qml/ResultsFooter.qml:106
+#, kde-format
+msgctxt "@action:intoolbar Other game results"
+msgid "Other"
+msgstr ""
+
+#: qml/ResultsFooter.qml:118
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "1U-0U"
 msgstr "1U‒0U"
 
-#: qml/ResultsFooter.qml:106
+#: qml/ResultsFooter.qml:125
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "½U-½U"
 msgstr "½U‒½U"
 
-#: qml/ResultsFooter.qml:113
+#: qml/ResultsFooter.qml:132
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "0U-1U"
 msgstr "0U‒1U"
 
-#: qml/ResultsFooter.qml:120
+#: qml/ResultsFooter.qml:140
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "½U-0U"
 msgstr "½U‒0U"
 
-#: qml/ResultsFooter.qml:127
+#: qml/ResultsFooter.qml:147
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "0U-½U"
 msgstr "0U‒½U"
 
-#: qml/ResultsFooter.qml:134
+#: qml/ResultsFooter.qml:154
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "0U-0U"
 msgstr "0U‒0U"
 
-#: qml/ResultsFooter.qml:144
+#: qml/ResultsFooter.qml:162
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "½-0"
 msgstr "½‒0"
 
-#: qml/ResultsFooter.qml:151
+#: qml/ResultsFooter.qml:169
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "0-0"
 msgstr "0‒0"
 
-#: qml/ResultsFooter.qml:158
+#: qml/ResultsFooter.qml:176
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "0-½"
@@ -1114,7 +1110,7 @@ msgstr "Kazanma Sayısı"
 #, kde-format
 msgctxt "Tiebreak"
 msgid "Average Buchholz of Opponents"
-msgstr ""
+msgstr "Rakiplerin Ortalama Buchholz’u"
 
 #: tournament/tournament.cpp:820
 #, kde-format

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-06 00:40+0000\n"
+"POT-Creation-Date: 2026-01-08 00:39+0000\n"
 "PO-Revision-Date: 2026-01-06 08:32+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -599,97 +599,103 @@ msgctxt "@info:status players, rated"
 msgid "%1, %2"
 msgstr "%1, %2"
 
-#: qml/ResultsFooter.qml:41
+#: qml/ResultsFooter.qml:42
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "*"
 msgstr "*"
 
-#: qml/ResultsFooter.qml:51
+#: qml/ResultsFooter.qml:53
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "1-0"
 msgstr "1-0"
 
-#: qml/ResultsFooter.qml:58
+#: qml/ResultsFooter.qml:61
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "½-½"
 msgstr "½-½"
 
-#: qml/ResultsFooter.qml:65
+#: qml/ResultsFooter.qml:69
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "0-1"
 msgstr "0-1"
 
-#: qml/ResultsFooter.qml:75
+#: qml/ResultsFooter.qml:80
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "1F-0F"
 msgstr "1F-0F"
 
-#: qml/ResultsFooter.qml:82
+#: qml/ResultsFooter.qml:88
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "0F-1F"
 msgstr "0F-1F"
 
-#: qml/ResultsFooter.qml:89
+#: qml/ResultsFooter.qml:96
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "0F-0F"
 msgstr "0F-0F"
 
-#: qml/ResultsFooter.qml:99
+#: qml/ResultsFooter.qml:106
+#, kde-format
+msgctxt "@action:intoolbar Other game results"
+msgid "Other"
+msgstr ""
+
+#: qml/ResultsFooter.qml:118
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "1U-0U"
 msgstr "1U-0U"
 
-#: qml/ResultsFooter.qml:106
+#: qml/ResultsFooter.qml:125
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "½U-½U"
 msgstr "½U-½U"
 
-#: qml/ResultsFooter.qml:113
+#: qml/ResultsFooter.qml:132
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "0U-1U"
 msgstr "0U-1U"
 
-#: qml/ResultsFooter.qml:120
+#: qml/ResultsFooter.qml:140
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "½U-0U"
 msgstr "½U-0U"
 
-#: qml/ResultsFooter.qml:127
+#: qml/ResultsFooter.qml:147
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "0U-½U"
 msgstr "0U-½U"
 
-#: qml/ResultsFooter.qml:134
+#: qml/ResultsFooter.qml:154
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "0U-0U"
 msgstr "0U-0U"
 
-#: qml/ResultsFooter.qml:144
+#: qml/ResultsFooter.qml:162
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "½-0"
 msgstr "½-0"
 
-#: qml/ResultsFooter.qml:151
+#: qml/ResultsFooter.qml:169
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "0-0"
 msgstr "0-0"
 
-#: qml/ResultsFooter.qml:158
+#: qml/ResultsFooter.qml:176
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "0-½"
