@@ -1,13 +1,13 @@
 # Copyright (C) 2025 This file is copyright:
 # This file is distributed under the same license as the chessament package.
-# SPDX-FileCopyrightText: 2025 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
+# SPDX-FileCopyrightText: 2025, 2026 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-08 00:39+0000\n"
-"PO-Revision-Date: 2025-12-25 10:28+0400\n"
+"PO-Revision-Date: 2026-01-08 14:31+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -22,7 +22,7 @@ msgstr ""
 #, kde-format
 msgctxt "Pieces Color · Player Name"
 msgid "%1 · %2"
-msgstr ""
+msgstr "%1 · %2"
 
 #: chessamentapplication.cpp:23
 #, kde-format
@@ -66,31 +66,28 @@ msgid "Round %1 Pairings"
 msgstr "إقرانات الجولة %1"
 
 #: documents.cpp:81
-#, fuzzy, kde-format
-#| msgid "Pair Round %1"
+#, kde-format
 msgctxt "@title"
 msgid "Standings After Round %1"
-msgstr "أقرِن الجولة %1"
+msgstr "المواقف النهاية بعد الجولة %1"
 
 #: documents.cpp:83
 #, kde-format
 msgctxt "@title"
 msgid "Provisional Standings After Round %1"
-msgstr ""
+msgstr "الترتيب المؤقت بعد الجولة الأولى %1"
 
 #: documents.cpp:87
-#, fuzzy, kde-format
-#| msgid "Standings"
+#, kde-format
 msgctxt "@title"
 msgid "Final Standings"
-msgstr "المواقف"
+msgstr "المواقف النهائية"
 
 #: documents.cpp:89
-#, fuzzy, kde-format
-#| msgid "Standings"
+#, kde-format
 msgctxt "@title"
 msgid "Provisional Final Standings"
-msgstr "المواقف"
+msgstr "الترتيب النهائي المؤقت"
 
 #: main.cpp:58 qml/WelcomePage.qml:15
 #, kde-format
@@ -104,10 +101,9 @@ msgid "Chess Tournament Manager"
 msgstr "مدير بطولة شطرنج"
 
 #: main.cpp:66
-#, fuzzy, kde-format
-#| msgid "© 2024 Manuel Alcaraz Zambrano"
+#, kde-format
 msgid "© 2024–2026 Manuel Alcaraz Zambrano"
-msgstr "© 2024 مانويل ألكاراز زامبرانو 2024"
+msgstr "© 2024–2026 مانويل ألكاراز زامبرانو"
 
 #: main.cpp:67
 #, kde-format
@@ -515,18 +511,16 @@ msgstr "أسود"
 #, kde-format
 msgctxt "@title:window"
 msgid "Details of player \"%1\""
-msgstr ""
+msgstr "تفاصيل اللاعب ”%1“"
 
 #: qml/player/PlayerDetails.qml:21
-#, fuzzy, kde-format
-#| msgid "Pairings"
+#, kde-format
 msgctxt "@action:button"
 msgid "Pairings"
 msgstr "الإقرانات"
 
 #: qml/player/PlayerPairingsPage.qml:19
-#, fuzzy, kde-format
-#| msgid "Pairings"
+#, kde-format
 msgctxt "@title"
 msgid "Pairings"
 msgstr "الإقرانات"
@@ -535,7 +529,7 @@ msgstr "الإقرانات"
 #, kde-format
 msgctxt "@item:inlistbox Available to play"
 msgid "Available"
-msgstr ""
+msgstr "متوفّرة"
 
 #: qml/player/PlayerPairingsPage.qml:79 qml/TournamentSettingsFormat.qml:41
 #, kde-format
@@ -544,8 +538,7 @@ msgid "Pairings"
 msgstr "الإقرانات"
 
 #: qml/player/PlayerPairingsPage.qml:98
-#, fuzzy, kde-format
-#| msgid "Round %1"
+#, kde-format
 msgctxt "@info:label"
 msgid "Round %1"
 msgstr "الجولة %1"
@@ -554,7 +547,7 @@ msgstr "الجولة %1"
 #, kde-format
 msgctxt "@action:intoolbar Open player details"
 msgid "Details…"
-msgstr ""
+msgstr "التفاصيل…"
 
 #: qml/PlayersPage.qml:74
 #, kde-format
@@ -656,7 +649,7 @@ msgstr "0F-0F"
 #, kde-format
 msgctxt "@action:intoolbar Other game results"
 msgid "Other"
-msgstr ""
+msgstr "أخرى"
 
 #: qml/ResultsFooter.qml:118
 #, kde-format
@@ -749,18 +742,16 @@ msgstr ""
 "لا يُسمح بتغيير الترتيب المبدئي بعد إقران الجولة الرابعة في البطولات الرسمية."
 
 #: qml/StandingsPage.qml:69 qml/StandingsPage.qml:79
-#, fuzzy, kde-format
-#| msgid "Standings"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Final Standings"
-msgstr "المواقف"
+msgstr "المواقف النهائية"
 
 #: qml/StandingsPage.qml:71 qml/StandingsPage.qml:81
-#, fuzzy, kde-format
-#| msgid "Pair Round %1"
+#, kde-format
 msgctxt "@item:inlistbox Standings After Round %1"
 msgid "After Round %1"
-msgstr "أقرِن الجولة %1"
+msgstr "بعد الجولة %1"
 
 #: qml/StandingsPage.qml:131
 #, kde-format
@@ -1135,7 +1126,7 @@ msgstr "عدد الكسب"
 #, kde-format
 msgctxt "Tiebreak"
 msgid "Average Buchholz of Opponents"
-msgstr ""
+msgstr "متوسط بوخولز للخصوم"
 
 #: tournament/tournament.cpp:820
 #, kde-format
