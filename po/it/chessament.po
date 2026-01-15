@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-08 00:39+0000\n"
-"PO-Revision-Date: 2026-01-04 16:42+0100\n"
+"PO-Revision-Date: 2026-01-11 19:04+0100\n"
 "Last-Translator: Valter Mura <valtermura@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -66,34 +66,28 @@ msgid "Round %1 Pairings"
 msgstr "Abbinamenti turno %1"
 
 #: documents.cpp:81
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox Standings After Round %1"
-#| msgid "After Round %1"
+#, kde-format
 msgctxt "@title"
 msgid "Standings After Round %1"
-msgstr "Dopo il turno %1"
+msgstr "Posizioni dopo il turno %1"
 
 #: documents.cpp:83
 #, kde-format
 msgctxt "@title"
 msgid "Provisional Standings After Round %1"
-msgstr ""
+msgstr "Posizioni provvisorie dopo il turno %1"
 
 #: documents.cpp:87
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox"
-#| msgid "Final Standings"
+#, kde-format
 msgctxt "@title"
 msgid "Final Standings"
 msgstr "Posizioni finali"
 
 #: documents.cpp:89
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox"
-#| msgid "Final Standings"
+#, kde-format
 msgctxt "@title"
 msgid "Provisional Final Standings"
-msgstr "Posizioni finali"
+msgstr "Posizioni finali provvisorie"
 
 #: main.cpp:58 qml/WelcomePage.qml:15
 #, kde-format
@@ -647,7 +641,7 @@ msgstr "0F-0F"
 #, kde-format
 msgctxt "@action:intoolbar Other game results"
 msgid "Other"
-msgstr ""
+msgstr "Altro"
 
 #: qml/ResultsFooter.qml:118
 #, kde-format
@@ -1118,7 +1112,7 @@ msgstr "Numero di vittorie"
 #, kde-format
 msgctxt "Tiebreak"
 msgid "Average Buchholz of Opponents"
-msgstr ""
+msgstr "Buchholz medio degli avversari"
 
 #: tournament/tournament.cpp:820
 #, kde-format
