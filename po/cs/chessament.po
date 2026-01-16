@@ -65,11 +65,10 @@ msgid "Round %1 Pairings"
 msgstr ""
 
 #: documents.cpp:81
-#, fuzzy, kde-format
-#| msgid "Round %1"
+#, kde-format
 msgctxt "@title"
 msgid "Standings After Round %1"
-msgstr "Kolo %1"
+msgstr ""
 
 #: documents.cpp:83
 #, kde-format
@@ -85,11 +84,10 @@ msgid "Final Standings"
 msgstr "Stav"
 
 #: documents.cpp:89
-#, fuzzy, kde-format
-#| msgid "Standings"
+#, kde-format
 msgctxt "@title"
 msgid "Provisional Final Standings"
-msgstr "Stav"
+msgstr ""
 
 #: main.cpp:58 qml/WelcomePage.qml:15
 #, kde-format
