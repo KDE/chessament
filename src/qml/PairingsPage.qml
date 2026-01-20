@@ -46,14 +46,6 @@ TablePage {
 
     actions: [
         Kirigami.Action {
-            text: i18n("Pair Round %1", Controller.tournament.currentRound + 1)
-            visible: Controller.tournament.numberOfPlayers > 0 && (Controller.tournament.currentRound + 1 <= Controller.tournament.numberOfRounds) && Controller.hasCurrentRoundFinished
-            onTriggered: {
-                const dialog = Qt.createComponent("org.kde.chessament", "PairRoundDialog").createObject(root.Controls.ApplicationWindow.window, {}) as PairRoundDialog;
-                dialog.open();
-            }
-        },
-        Kirigami.Action {
             id: hideFinishedAction
             text: i18nc("@option:check", "Hide finished games")
             checkable: true
@@ -111,6 +103,21 @@ TablePage {
             }
         }
     ]
+
+    header: Kirigami.InlineMessage {
+        position: Kirigami.InlineMessage.Position.Header
+        text: Controller.tournament.currentRound === 0 ? i18nc("@info", "The tournament hasn't started yet.") : i18nc("@info", "Round %1 has finished.", Controller.tournament.currentRound)
+        visible: Controller.tournament.numberOfPlayers > 0 && (Controller.tournament.currentRound + 1 <= Controller.tournament.numberOfRounds) && Controller.hasCurrentRoundFinished
+        actions: [
+            Kirigami.Action {
+                text: i18n("Pair Round %1", Controller.tournament.currentRound + 1)
+                onTriggered: {
+                    const dialog = Qt.createComponent("org.kde.chessament", "PairRoundDialog").createObject(root.Controls.ApplicationWindow.window, {}) as PairRoundDialog;
+                    dialog.open();
+                }
+            }
+        ]
+    }
 
     footer: ResultsFooter {
         id: footer
