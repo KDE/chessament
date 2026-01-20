@@ -1,13 +1,13 @@
 # Copyright (C) 2025 This file is copyright:
 # This file is distributed under the same license as the chessament package.
-# SPDX-FileCopyrightText: 2025 Tommi Nieminen <translator@legisign.org>
+# SPDX-FileCopyrightText: 2025, 2026 Tommi Nieminen <translator@legisign.org>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-08 00:39+0000\n"
-"PO-Revision-Date: 2025-10-12 20:43+0300\n"
+"PO-Revision-Date: 2026-01-16 17:53+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -312,12 +312,10 @@ msgstr "Lisää katkaisupeli"
 #, kde-format
 msgctxt "@action:menu"
 msgid "File"
-msgstr ""
+msgstr "Tiedosto"
 
 #: qml/components/MenuBar.qml:38
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Settings"
+#, kde-format
 msgctxt "@action:menu"
 msgid "Settings"
 msgstr "Asetukset"
@@ -326,7 +324,7 @@ msgstr "Asetukset"
 #, kde-format
 msgctxt "@action:menu"
 msgid "Help"
-msgstr ""
+msgstr "Ohje"
 
 #: qml/components/TiebreakDelegate.qml:30
 #: qml/components/TiebreakDelegate.qml:35
@@ -845,7 +843,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:group"
 msgid "Tiebreaks"
-msgstr ""
+msgstr "Katkaisupelit"
 
 #: qml/TournamentSettingsFormat.qml:82
 #, kde-format
@@ -877,17 +875,19 @@ msgctxt "@label:textbox"
 msgid "City"
 msgstr "Kaupunki"
 
+# Lähde arbiter-käännökseen:
+# https://www.shakkiliitto.fi/wp-content/uploads/2020/07/Määräykset-shakin-tuomarikoulutuksesta_2020.pdf
 #: qml/TournamentSettingsInformation.qml:46
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Chief arbiter"
-msgstr ""
+msgstr "Päätuomari"
 
 #: qml/TournamentSettingsInformation.qml:55
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Deputy chief arbiter"
-msgstr ""
+msgstr "Varatuomari"
 
 #: qml/WelcomePage.qml:20
 #, kde-format
@@ -908,12 +908,10 @@ msgid "General"
 msgstr "Perusasetukset"
 
 #: settings/ChessamentConfigurationView.qml:30
-#, fuzzy, kde-format
-#| msgctxt "@title:column Player Rating"
-#| msgid "Rating"
+#, kde-format
 msgctxt "@action:button"
 msgid "Rating Lists"
-msgstr "Vahvuusluku"
+msgstr "Vahvuuslukuluettelot"
 
 #: settings/GeneralPage.qml:16
 #, kde-format
@@ -944,29 +942,25 @@ msgid "Logout"
 msgstr "Kirjaudu ulos"
 
 #: settings/RatingListsPage.qml:21 settings/RatingListsPage.qml:127
-#, fuzzy, kde-format
-#| msgctxt "@title:column Player Rating"
-#| msgid "Rating"
+#, kde-format
 msgctxt "@title"
 msgid "Rating Lists"
-msgstr "Vahvuusluku"
+msgstr "Vahvuuslukuluettelot"
 
 #: settings/RatingListsPage.qml:26
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Rating List"
-msgstr ""
+msgstr "Lisää vahvuuslukuluettelo"
 
 #: settings/RatingListsPage.qml:31
 #, kde-format
 msgctxt "@action:button"
 msgid "Import"
-msgstr ""
+msgstr "Tuo"
 
 #: settings/RatingListsPage.qml:46
-#, fuzzy, kde-format
-#| msgctxt "@title:column Player Name"
-#| msgid "Name"
+#, kde-format
 msgctxt "@info:label"
 msgid "Name"
 msgstr "Nimi"
@@ -975,51 +969,49 @@ msgstr "Nimi"
 #, kde-format
 msgctxt "@info:label"
 msgid "Rating list URL"
-msgstr ""
+msgstr "vahvuuslukuluettelon verkko-osoite"
 
 #: settings/RatingListsPage.qml:71
 #, kde-format
 msgctxt "@title:window"
 msgid "Importing Rating List"
-msgstr ""
+msgstr "Tuo vahvuuslukuluettelo"
 
 #: settings/RatingListsPage.qml:111
 #, kde-format
 msgctxt "@title"
 msgid "Delete Rating List"
-msgstr ""
+msgstr "Poista vahvuuslukuluettelo"
 
 #: settings/RatingListsPage.qml:119
 #, kde-format
 msgctxt "@action:button Delete Rating List"
 msgid "Delete"
-msgstr ""
+msgstr "Poista"
 
 #: settings/RatingListsPage.qml:132
-#, fuzzy, kde-format
-#| msgctxt "@info:placeholder"
-#| msgid "No standings yet"
+#, kde-format
 msgctxt "@info:status"
 msgid "No rating lists yet."
-msgstr "Ei vielä sijoituksia"
+msgstr "Ei vielä vahvuuslukuluetteloja."
 
 #: settings/RatingListsPage.qml:152
 #, kde-format
 msgctxt "@action:button"
 msgid "Delete Rating List"
-msgstr ""
+msgstr "Poista vahvuuslukuluettelo"
 
 #: settings/RatingListsPage.qml:160
 #, kde-format
 msgctxt "@action:button"
 msgid "Delete rating list"
-msgstr ""
+msgstr "Poista vahvuuslukuluettelo"
 
 #: settings/RatingListsPage.qml:170
 #, kde-format
 msgctxt "@action:button"
 msgid "Add rating list"
-msgstr ""
+msgstr "Lisää vahvuuslukuluettelo"
 
 #: standingsmodel.cpp:90
 #, kde-format
@@ -1061,53 +1053,47 @@ msgstr "Virheellinen pelaaja ”%1” parissa ”%2”."
 #, kde-format
 msgctxt "@info:progress"
 msgid "Downloading file"
-msgstr ""
+msgstr "Ladataan tiedostoa"
 
 #: tournament/ratinglist.cpp:143
 #, kde-format
 msgctxt "@info:progress"
 msgid "Downloading file (%1 %)"
-msgstr ""
+msgstr "Ladataan tiedostoa (%1 %)"
 
 #: tournament/ratinglist.cpp:149
 #, kde-format
 msgctxt "@info"
 msgid "Couldn't download rating list: %1"
-msgstr ""
+msgstr "Vahvuuslukuluetteloa ei voitu ladata: %1"
 
 #: tournament/ratinglist.cpp:161
-#, fuzzy, kde-format
-#| msgid "Couldn't open file"
+#, kde-format
 msgctxt "@info"
 msgid "Couldn't extract file."
-msgstr "Tiedostoa ei voitu avata"
+msgstr "Tiedostoa ei voitu purkaa."
 
 #: tournament/ratinglist.cpp:166
 #, kde-format
 msgctxt "@info"
 msgid "File format not supported."
-msgstr ""
+msgstr "Tiedostomuotoa ei tueta."
 
 #: tournament/ratinglist.cpp:186
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Sort players"
+#, kde-format
 msgctxt "@info:progress"
 msgid "Imported one player."
 msgid_plural "Imported %1 players."
-msgstr[0] "Lajittele pelaajat"
-msgstr[1] "Lajittele pelaajat"
+msgstr[0] "Tuotiin yksi pelaaja."
+msgstr[1] "Tuotiin %1 pelaajaa."
 
 #: tournament/ratinglist.cpp:360
-#, fuzzy, kde-format
-#| msgctxt "@info:status Number of players"
-#| msgid "1 player"
-#| msgid_plural "%1 players"
+#, kde-format
 msgctxt "@info:progress"
 msgid "Saved 1 player."
 msgid_plural "Saved %1 players."
-msgstr[0] "1 pelaaja"
-msgstr[1] "%1 pelaajaa"
+msgstr[0] "Tallennettiin yksi pelaaja."
+msgstr[1] "Tallennettiin %1 pelaajaa."
 
 #: tournament/tiebreaks/buchholz.cpp:14
 #, kde-format
