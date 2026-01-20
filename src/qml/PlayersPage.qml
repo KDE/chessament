@@ -19,7 +19,7 @@ TablePage {
 
     Kirigami.ColumnView.fillWidth: true
 
-    columnWidths: [55, 55, 250, 60, 90, 90, 100, 80, 150, 50]
+    columnWidths: [55, 55, 250, 60, 90, 90, 100, 100, 150, 50]
     selectionBehavior: TableView.SelectRows
 
     AddPlayerDialog {
@@ -102,11 +102,14 @@ TablePage {
 
         required property int index
         required property bool editing
+        required property string iconSource
         required model
         required selected
         required current
+        required column
 
         text: model.display
+        icon.source: iconSource
 
         onDoubleClicked: {
             root.tableView.edit(proxyModel.index(delegate.row, delegate.column));

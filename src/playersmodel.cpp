@@ -3,8 +3,10 @@
 
 #include "playersmodel.h"
 
+#include <KCountry>
 #include <KLocalizedString>
 
+#include "tournament/federations.h"
 #include "tournament/tournament.h"
 
 PlayersModel::PlayersModel(QObject *parent)
@@ -51,8 +53,18 @@ QVariant PlayersModel::data(const QModelIndex &index, int role) const
             return player->playerId();
         case PlayersModel::Columns::BirthDate:
             return player->birthDate();
-        case PlayersModel::Columns::Federation:
+        case PlayersModel::Columns::Federation: {
+            const auto federationCode = player->federation().trimmed().toUpper();
+            if (FEDERATIONS.contains(federationCode)) {
+                const auto federation = FEDERATIONS.value(federationCode);
+                if (std::holds_alternative<QLocale::Territory>(federation)) {
+                    const auto country = KCountry::fromQLocale(std::get<QLocale::Territory>(federation));
+                    return country.name();
+                }
+                return std::get<KLazyLocalizedString>(federation).toString();
+            }
             return player->federation();
+        }
         case PlayersModel::Columns::Origin:
             return player->origin();
         case PlayersModel::Columns::Gender:
@@ -93,6 +105,11 @@ QVariant PlayersModel::data(const QModelIndex &index, int role) const
         }
     } else if (role == Roles::PlayerRole) {
         return QVariant::fromValue(player);
+    } else if (role == Roles::IconRole) {
+        switch (column) {
+        case PlayersModel::Columns::Federation:
+            return u"qrc:/flags/%1.svg"_s.arg(player->federation().trimmed().toUpper());
+        }
     }
 
     return {};
@@ -160,6 +177,7 @@ QHash<int, QByteArray> PlayersModel::roleNames() const
         {Qt::EditRole, "edit"},
         {Qt::TextAlignmentRole, "textAlignment"},
         {Roles::PlayerRole, "player"},
+        {Roles::IconRole, "iconSource"},
     };
 }
 

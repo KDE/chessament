@@ -89,6 +89,7 @@ target_link_libraries(chessament_static PUBLIC
     Qt6::NetworkAuth
     Qt6::PrintSupport
     KF6::I18n
+    KF6::I18nLocaleData
     KF6::I18nQml
     KF6::CoreAddons
     KF6::ConfigCore
@@ -103,6 +104,8 @@ target_link_libraries(chessament_static PUBLIC
 target_include_directories(chessament_static PUBLIC ${CMAKE_BINARY_DIR})
 
 kconfig_target_kcfg_file(chessament_static FILE config.kcfg CLASS_NAME Config MUTATORS GENERATE_PROPERTIES GENERATE_MOC DEFAULT_VALUE_GETTERS PARENT_IN_CONSTRUCTOR SINGLETON QML_REGISTRATION)
+
+add_subdirectory(flags)
 
 add_executable(chessament main.cpp)
 target_link_libraries(chessament PRIVATE

@@ -10,10 +10,24 @@ SPDX-FileCopyrightText = "2025 Manuel Alcaraz Zambrano <manuel@alcarazzam.dev>"
 SPDX-License-Identifier = "LGPL-3.0-only"
 
 [[annotations]]
-path = ["autotests/data/*", ".flatpak-manifest.json", ".contextProperties.ini"]
+path = ["autotests/data/*", ".flatpak-manifest.json", ".contextProperties.ini", ".gitattributes"]
 precedence = "aggregate"
 SPDX-FileCopyrightText = "None"
 SPDX-License-Identifier = "CC0-1.0"
+
+[[annotations]]
+path = ["src/flags/*.svg"]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "Wikimedia Commons Contributors"
+SPDX-License-Identifier = "CC0-1.0"
+SPDX-FileComment = "Source: https://commons.wikimedia.org/wiki/Flag and https://commons.wikimedia.org/wiki/Dependent_territory_flags"
+
+[[annotations]]
+path = ["src/flags/GCI.svg"]
+precedence = "override"
+SPDX-FileCopyrightText = "2005 Nightstallion"
+SPDX-License-Identifier = "CC0-1.0"
+SPDX-FileComment = "Source: https://commons.wikimedia.org/wiki/File:Flag_of_Guernsey.svg. Flag of Guernsey from the Open Clip Art website (http://openclipart.org)."
 
 [[annotations]]
 path = "bbppairings-remove-werror.patch"
