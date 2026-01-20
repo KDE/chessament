@@ -110,7 +110,7 @@ TablePage {
         visible: Controller.tournament.numberOfPlayers > 0 && (Controller.tournament.currentRound + 1 <= Controller.tournament.numberOfRounds) && Controller.hasCurrentRoundFinished
         actions: [
             Kirigami.Action {
-                text: i18n("Pair Round %1", Controller.tournament.currentRound + 1)
+                text: i18nc("@action:button", "Pair Round %1", Controller.tournament.currentRound + 1)
                 onTriggered: {
                     const dialog = Qt.createComponent("org.kde.chessament", "PairRoundDialog").createObject(root.Controls.ApplicationWindow.window, {}) as PairRoundDialog;
                     dialog.open();
