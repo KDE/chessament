@@ -35,6 +35,14 @@ Controls.MenuBar {
     }
 
     Controls.Menu {
+        title: i18nc("@action:menu", "View")
+
+        Kirigami.Action {
+            fromQAction: root.application.action("open_kcommand_bar")
+        }
+    }
+
+    Controls.Menu {
         title: i18nc("@action:menu", "Settings")
 
         Kirigami.Action {
