@@ -279,6 +279,10 @@ std::string Player::toTrf(double points, int rank, bool normalize)
                        rank);
 }
 
+std::function<bool(const Player *a, const Player *b)> Player::SortByStartingRank = [](const Player *a, const Player *b) {
+    return a->startingRank() < b->startingRank();
+};
+
 QDebug operator<<(QDebug dbg, const Player &player)
 {
     dbg.nospace() << "Player(" << player.name() << ")";

@@ -69,9 +69,7 @@ void TrfWriter::writePlayers(QTextStream *stream)
     auto standings = m_tournament->getStandings(m_state);
     auto players = m_tournament->players();
 
-    std::ranges::sort(players, [](const Player *a, const Player *b) {
-        return a->startingRank() < b->startingRank();
-    });
+    std::ranges::sort(players, Player::SortByStartingRank);
 
     for (const auto &player : std::as_const(players)) {
         const auto standing = std::find_if(standings.constBegin(), standings.constEnd(), [&player](const Standing &s) -> bool {

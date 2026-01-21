@@ -274,6 +274,8 @@ public:
      */
     std::string toTrf(double points, int rank, bool normalize = true);
 
+    static std::function<bool(const Player *a, const Player *b)> SortByStartingRank;
+
     friend QDebug operator<<(QDebug dbg, const Player &player);
 
 public Q_SLOTS:

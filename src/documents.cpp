@@ -18,8 +18,11 @@ std::unique_ptr<Document> Controller::playersDocument()
     doc->addTitle(1, m_tournament->name());
     doc->addTitle(2, i18nc("@title", "Starting Rank"));
 
+    auto players = m_tournament->players();
+    std::ranges::sort(players, Player::SortByStartingRank);
+
     PlayersModel model;
-    model.setPlayers(m_tournament->players());
+    model.setPlayers(players);
     model.setColumns({StartingRank, Title, Name, Rating, NationalRating, PlayerId, Federation, Origin});
     doc->addTable(model);
 
