@@ -109,6 +109,8 @@ QVariant PlayersModel::data(const QModelIndex &index, int role) const
         switch (column) {
         case PlayersModel::Columns::Federation:
             return u"qrc:/flags/%1.svg"_s.arg(player->federation().trimmed().toUpper());
+        default:
+            return QString();
         }
     }
 
