@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-08 00:39+0000\n"
+"POT-Creation-Date: 2026-01-21 00:41+0000\n"
 "PO-Revision-Date: 2025-11-09 11:05+0200\n"
 "Last-Translator: Toms Trasūns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -175,61 +175,61 @@ msgctxt "@title:column Black Player Starting Rank Number"
 msgid "№"
 msgstr "Nr."
 
-#: playersmodel.cpp:178 standingsmodel.cpp:92
+#: playersmodel.cpp:196 standingsmodel.cpp:92
 #, kde-format
 msgctxt "@title:column Player Starting Rank Number"
 msgid "№"
 msgstr "Nr."
 
-#: playersmodel.cpp:180 standingsmodel.cpp:94
+#: playersmodel.cpp:198 standingsmodel.cpp:94
 #, kde-format
 msgctxt "@title:column Player Title"
 msgid "Title"
 msgstr "Tituls"
 
-#: playersmodel.cpp:182 standingsmodel.cpp:96
+#: playersmodel.cpp:200 standingsmodel.cpp:96
 #, kde-format
 msgctxt "@title:column Player Name"
 msgid "Name"
 msgstr "Vārds"
 
-#: playersmodel.cpp:184
+#: playersmodel.cpp:202
 #, kde-format
 msgctxt "@title:column Player Rating"
 msgid "Rating"
 msgstr "Reitings"
 
-#: playersmodel.cpp:186
+#: playersmodel.cpp:204
 #, kde-format
 msgctxt "@title:column Player National Rating"
 msgid "National Rating"
 msgstr "Nacionālais reitings"
 
-#: playersmodel.cpp:188
+#: playersmodel.cpp:206
 #, kde-format
 msgctxt "@title:column"
 msgid "Player ID"
 msgstr "Spēlētāja ID"
 
-#: playersmodel.cpp:190
+#: playersmodel.cpp:208
 #, kde-format
 msgctxt "@title:column"
 msgid "Birth date"
 msgstr "Dzimšanas datums"
 
-#: playersmodel.cpp:192
+#: playersmodel.cpp:210
 #, kde-format
 msgctxt "@title:column Player Federation"
 msgid "Federation"
 msgstr "Federācija"
 
-#: playersmodel.cpp:194
+#: playersmodel.cpp:212
 #, kde-format
 msgctxt "@title:column Player Origin"
 msgid "Origin"
 msgstr "Izcelsme"
 
-#: playersmodel.cpp:196
+#: playersmodel.cpp:214
 #, kde-format
 msgctxt "@title:column"
 msgid "Sex"
@@ -317,10 +317,16 @@ msgstr "Datne"
 #: qml/components/MenuBar.qml:38
 #, kde-format
 msgctxt "@action:menu"
+msgid "View"
+msgstr ""
+
+#: qml/components/MenuBar.qml:46
+#, kde-format
+msgctxt "@action:menu"
 msgid "Settings"
 msgstr "Iestatījumi"
 
-#: qml/components/MenuBar.qml:49
+#: qml/components/MenuBar.qml:57
 #, kde-format
 msgctxt "@action:menu"
 msgid "Help"
@@ -429,47 +435,63 @@ msgctxt "@label"
 msgid "Number of rounds"
 msgstr "Kārtu skaits"
 
-#: qml/PairingsPage.qml:49
-#, kde-format
-msgid "Pair Round %1"
-msgstr "Veidot pārus %1. kārtai"
-
-#: qml/PairingsPage.qml:58
+#: qml/PairingsPage.qml:50
 #, kde-format
 msgctxt "@option:check"
 msgid "Hide finished games"
 msgstr "Slēpt pabeigtās partijas"
 
-#: qml/PairingsPage.qml:71 qml/PlayersPage.qml:83 qml/StandingsPage.qml:52
+#: qml/PairingsPage.qml:63 qml/PlayersPage.qml:83 qml/StandingsPage.qml:52
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Print…"
 msgstr "Drukāt…"
 
-#: qml/PairingsPage.qml:76 qml/PlayersPage.qml:88 qml/StandingsPage.qml:57
+#: qml/PairingsPage.qml:68 qml/PlayersPage.qml:88 qml/StandingsPage.qml:57
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Export as PDF…"
 msgstr "Eksportēt kā PDF…"
 
-#: qml/PairingsPage.qml:85
+#: qml/PairingsPage.qml:77
 #, kde-format
 msgid "Round %1"
 msgstr "%1. kārta"
 
-#: qml/PairingsPage.qml:103
+#: qml/PairingsPage.qml:95
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Remove pairings of this and following rounds…"
 msgstr "Noņemt pārus no šīs un turpmākajām kārtām…"
 
-#: qml/PairingsPage.qml:149
+#: qml/PairingsPage.qml:109
+#, kde-format
+msgctxt "@info"
+msgid "The tournament hasn't started yet."
+msgstr ""
+
+#: qml/PairingsPage.qml:109
+#, fuzzy, kde-format
+#| msgctxt "@info:placeholder"
+#| msgid "All games of round %1 have finished"
+msgctxt "@info"
+msgid "Round %1 has finished."
+msgstr "Visas %1. kārtas spēles ir pabeigtas"
+
+#: qml/PairingsPage.qml:113
+#, fuzzy, kde-format
+#| msgid "Pair Round %1"
+msgctxt "@action:button"
+msgid "Pair Round %1"
+msgstr "Veidot pārus %1. kārtai"
+
+#: qml/PairingsPage.qml:156
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No pairings for round %1 yet"
 msgstr "%1. kārtai vēl nav pāru"
 
-#: qml/PairingsPage.qml:151
+#: qml/PairingsPage.qml:158
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "All games of round %1 have finished"
@@ -568,19 +590,19 @@ msgctxt "@action:intoolbar"
 msgid "Add Player…"
 msgstr "Pievienot spēlētāju…"
 
-#: qml/PlayersPage.qml:187
+#: qml/PlayersPage.qml:190
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No players yet"
 msgstr "Spēlētāju vēl nav"
 
-#: qml/PlayersPage.qml:191
+#: qml/PlayersPage.qml:194
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Player…"
 msgstr "Pievienot spēlētāju…"
 
-#: qml/PlayersPage.qml:209
+#: qml/PlayersPage.qml:212
 #, kde-format
 msgctxt "@info:status Number of players"
 msgid "1 player"
@@ -589,7 +611,7 @@ msgstr[0] "%1 spēlētājs"
 msgstr[1] "%1 spēlētāji"
 msgstr[2] "%1 spēlētāju"
 
-#: qml/PlayersPage.qml:210
+#: qml/PlayersPage.qml:213
 #, kde-format
 msgctxt "@info:status Number of rated players"
 msgid "1 rated"
@@ -598,7 +620,7 @@ msgstr[0] "%1 ar reitingu"
 msgstr[1] "%1 ar reitingu"
 msgstr[2] "%1 ar reitingu"
 
-#: qml/PlayersPage.qml:212
+#: qml/PlayersPage.qml:215
 #, kde-format
 msgctxt "@info:status players, rated"
 msgid "%1, %2"

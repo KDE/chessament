@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-08 00:39+0000\n"
+"POT-Creation-Date: 2026-01-21 00:41+0000\n"
 "PO-Revision-Date: 2025-06-22 16:06+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.gal>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -185,13 +185,13 @@ msgctxt "@title:column Black Player Starting Rank Number"
 msgid "№"
 msgstr ""
 
-#: playersmodel.cpp:178 standingsmodel.cpp:92
+#: playersmodel.cpp:196 standingsmodel.cpp:92
 #, kde-format
 msgctxt "@title:column Player Starting Rank Number"
 msgid "№"
 msgstr ""
 
-#: playersmodel.cpp:180 standingsmodel.cpp:94
+#: playersmodel.cpp:198 standingsmodel.cpp:94
 #, fuzzy, kde-format
 #| msgctxt "@title:column"
 #| msgid "Title"
@@ -199,7 +199,7 @@ msgctxt "@title:column Player Title"
 msgid "Title"
 msgstr "Título"
 
-#: playersmodel.cpp:182 standingsmodel.cpp:96
+#: playersmodel.cpp:200 standingsmodel.cpp:96
 #, fuzzy, kde-format
 #| msgctxt "@title:column"
 #| msgid "Name"
@@ -207,7 +207,7 @@ msgctxt "@title:column Player Name"
 msgid "Name"
 msgstr "Nome"
 
-#: playersmodel.cpp:184
+#: playersmodel.cpp:202
 #, fuzzy, kde-format
 #| msgctxt "@title:column"
 #| msgid "Rating"
@@ -215,7 +215,7 @@ msgctxt "@title:column Player Rating"
 msgid "Rating"
 msgstr "Puntuación"
 
-#: playersmodel.cpp:186
+#: playersmodel.cpp:204
 #, fuzzy, kde-format
 #| msgctxt "@title:column"
 #| msgid "National rating"
@@ -223,19 +223,19 @@ msgctxt "@title:column Player National Rating"
 msgid "National Rating"
 msgstr "Puntuación nacional"
 
-#: playersmodel.cpp:188
+#: playersmodel.cpp:206
 #, kde-format
 msgctxt "@title:column"
 msgid "Player ID"
 msgstr "Identificador de participante"
 
-#: playersmodel.cpp:190
+#: playersmodel.cpp:208
 #, kde-format
 msgctxt "@title:column"
 msgid "Birth date"
 msgstr "Data de nacemento"
 
-#: playersmodel.cpp:192
+#: playersmodel.cpp:210
 #, fuzzy, kde-format
 #| msgctxt "@title:column"
 #| msgid "Federation"
@@ -243,7 +243,7 @@ msgctxt "@title:column Player Federation"
 msgid "Federation"
 msgstr "Federación"
 
-#: playersmodel.cpp:194
+#: playersmodel.cpp:212
 #, fuzzy, kde-format
 #| msgctxt "@title:column"
 #| msgid "Origin"
@@ -251,7 +251,7 @@ msgctxt "@title:column Player Origin"
 msgid "Origin"
 msgstr "Orixe"
 
-#: playersmodel.cpp:196
+#: playersmodel.cpp:214
 #, kde-format
 msgctxt "@title:column"
 msgid "Sex"
@@ -337,6 +337,12 @@ msgid "File"
 msgstr ""
 
 #: qml/components/MenuBar.qml:38
+#, kde-format
+msgctxt "@action:menu"
+msgid "View"
+msgstr ""
+
+#: qml/components/MenuBar.qml:46
 #, fuzzy, kde-format
 #| msgctxt "@action:button"
 #| msgid "Settings"
@@ -344,7 +350,7 @@ msgctxt "@action:menu"
 msgid "Settings"
 msgstr "Configuración"
 
-#: qml/components/MenuBar.qml:49
+#: qml/components/MenuBar.qml:57
 #, kde-format
 msgctxt "@action:menu"
 msgid "Help"
@@ -453,19 +459,13 @@ msgctxt "@label"
 msgid "Number of rounds"
 msgstr "Número de roldas"
 
-#: qml/PairingsPage.qml:49
-#, fuzzy, kde-format
-#| msgid "Pair round %1"
-msgid "Pair Round %1"
-msgstr "Rolda de parellas %1"
-
-#: qml/PairingsPage.qml:58
+#: qml/PairingsPage.qml:50
 #, kde-format
 msgctxt "@option:check"
 msgid "Hide finished games"
 msgstr ""
 
-#: qml/PairingsPage.qml:71 qml/PlayersPage.qml:83 qml/StandingsPage.qml:52
+#: qml/PairingsPage.qml:63 qml/PlayersPage.qml:83 qml/StandingsPage.qml:52
 #, fuzzy, kde-format
 #| msgctxt "@action:button"
 #| msgid "Print"
@@ -473,18 +473,18 @@ msgctxt "@action:intoolbar"
 msgid "Print…"
 msgstr "Imprimir"
 
-#: qml/PairingsPage.qml:76 qml/PlayersPage.qml:88 qml/StandingsPage.qml:57
+#: qml/PairingsPage.qml:68 qml/PlayersPage.qml:88 qml/StandingsPage.qml:57
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Export as PDF…"
 msgstr ""
 
-#: qml/PairingsPage.qml:85
+#: qml/PairingsPage.qml:77
 #, kde-format
 msgid "Round %1"
 msgstr "Rolda %1"
 
-#: qml/PairingsPage.qml:103
+#: qml/PairingsPage.qml:95
 #, fuzzy, kde-format
 #| msgctxt "@action:inmenu"
 #| msgid "Remove pairings of this and following rounds…"
@@ -492,13 +492,33 @@ msgctxt "@action:intoolbar"
 msgid "Remove pairings of this and following rounds…"
 msgstr "Retirar os emparellamentos desta e de futuras roldas…"
 
-#: qml/PairingsPage.qml:149
+#: qml/PairingsPage.qml:109
+#, kde-format
+msgctxt "@info"
+msgid "The tournament hasn't started yet."
+msgstr ""
+
+#: qml/PairingsPage.qml:109
+#, fuzzy, kde-format
+#| msgid "Pairings"
+msgctxt "@info"
+msgid "Round %1 has finished."
+msgstr "Emparellamentos"
+
+#: qml/PairingsPage.qml:113
+#, fuzzy, kde-format
+#| msgid "Pair round %1"
+msgctxt "@action:button"
+msgid "Pair Round %1"
+msgstr "Rolda de parellas %1"
+
+#: qml/PairingsPage.qml:156
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No pairings for round %1 yet"
 msgstr "Aínda non hai emparellamentos para a rolda %1"
 
-#: qml/PairingsPage.qml:151
+#: qml/PairingsPage.qml:158
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "All games of round %1 have finished"
@@ -603,13 +623,13 @@ msgctxt "@action:intoolbar"
 msgid "Add Player…"
 msgstr "Engadir unha participante"
 
-#: qml/PlayersPage.qml:187
+#: qml/PlayersPage.qml:190
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No players yet"
 msgstr "Aínda non hai participantes"
 
-#: qml/PlayersPage.qml:191
+#: qml/PlayersPage.qml:194
 #, fuzzy, kde-format
 #| msgctxt "@action:button"
 #| msgid "Add player"
@@ -617,7 +637,7 @@ msgctxt "@action:button"
 msgid "Add Player…"
 msgstr "Engadir unha participante"
 
-#: qml/PlayersPage.qml:209
+#: qml/PlayersPage.qml:212
 #, fuzzy, kde-format
 #| msgctxt "@title:window"
 #| msgid "Add player"
@@ -627,7 +647,7 @@ msgid_plural "%1 players"
 msgstr[0] "Engadir unha participante"
 msgstr[1] "Engadir unha participante"
 
-#: qml/PlayersPage.qml:210
+#: qml/PlayersPage.qml:213
 #, kde-format
 msgctxt "@info:status Number of rated players"
 msgid "1 rated"
@@ -635,7 +655,7 @@ msgid_plural "%1 rated"
 msgstr[0] ""
 msgstr[1] ""
 
-#: qml/PlayersPage.qml:212
+#: qml/PlayersPage.qml:215
 #, kde-format
 msgctxt "@info:status players, rated"
 msgid "%1, %2"

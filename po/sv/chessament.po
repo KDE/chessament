@@ -1,13 +1,13 @@
 # Copyright (C) 2025 This file is copyright:
 # This file is distributed under the same license as the chessament package.
 #
-# SPDX-FileCopyrightText: 2025 Stefan Asserhäll <stefan.asserhall@gmail.com>
+# SPDX-FileCopyrightText: 2025, 2026 Stefan Asserhäll <stefan.asserhall@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-08 00:39+0000\n"
-"PO-Revision-Date: 2025-11-21 01:35+0100\n"
+"POT-Creation-Date: 2026-01-21 00:41+0000\n"
+"PO-Revision-Date: 2026-01-20 20:31+0100\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -15,13 +15,13 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.08.3\n"
+"X-Generator: Lokalize 25.12.1\n"
 
 #: byesmodel.cpp:68
 #, kde-format
 msgctxt "Pieces Color · Player Name"
 msgid "%1 · %2"
-msgstr ""
+msgstr "%1 · %2"
 
 #: chessamentapplication.cpp:23
 #, kde-format
@@ -65,31 +65,28 @@ msgid "Round %1 Pairings"
 msgstr "Parningar i omgång %1"
 
 #: documents.cpp:81
-#, fuzzy, kde-format
-#| msgid "Pair Round %1"
+#, kde-format
 msgctxt "@title"
 msgid "Standings After Round %1"
-msgstr "Parningsomgång %1"
+msgstr "Ställning efter omgång %1"
 
 #: documents.cpp:83
 #, kde-format
 msgctxt "@title"
 msgid "Provisional Standings After Round %1"
-msgstr ""
+msgstr "Preliminär slutställning efter omgång %1"
 
 #: documents.cpp:87
-#, fuzzy, kde-format
-#| msgid "Standings"
+#, kde-format
 msgctxt "@title"
 msgid "Final Standings"
-msgstr "Ställning"
+msgstr "Slutställning"
 
 #: documents.cpp:89
-#, fuzzy, kde-format
-#| msgid "Standings"
+#, kde-format
 msgctxt "@title"
 msgid "Provisional Final Standings"
-msgstr "Ställning"
+msgstr "Preliminär slutställning"
 
 #: main.cpp:58 qml/WelcomePage.qml:15
 #, kde-format
@@ -103,10 +100,9 @@ msgid "Chess Tournament Manager"
 msgstr "Schackturneringshanterare"
 
 #: main.cpp:66
-#, fuzzy, kde-format
-#| msgid "© 2024 Manuel Alcaraz Zambrano"
+#, kde-format
 msgid "© 2024–2026 Manuel Alcaraz Zambrano"
-msgstr "© 2024 Manuel Alcaraz Zambrano"
+msgstr "© 2024-2026 Manuel Alcaraz Zambrano"
 
 #: main.cpp:67
 #, kde-format
@@ -174,61 +170,61 @@ msgctxt "@title:column Black Player Starting Rank Number"
 msgid "№"
 msgstr "№"
 
-#: playersmodel.cpp:178 standingsmodel.cpp:92
+#: playersmodel.cpp:196 standingsmodel.cpp:92
 #, kde-format
 msgctxt "@title:column Player Starting Rank Number"
 msgid "№"
 msgstr "№"
 
-#: playersmodel.cpp:180 standingsmodel.cpp:94
+#: playersmodel.cpp:198 standingsmodel.cpp:94
 #, kde-format
 msgctxt "@title:column Player Title"
 msgid "Title"
 msgstr "Titel"
 
-#: playersmodel.cpp:182 standingsmodel.cpp:96
+#: playersmodel.cpp:200 standingsmodel.cpp:96
 #, kde-format
 msgctxt "@title:column Player Name"
 msgid "Name"
 msgstr "Namn"
 
-#: playersmodel.cpp:184
+#: playersmodel.cpp:202
 #, kde-format
 msgctxt "@title:column Player Rating"
 msgid "Rating"
 msgstr "Rankning"
 
-#: playersmodel.cpp:186
+#: playersmodel.cpp:204
 #, kde-format
 msgctxt "@title:column Player National Rating"
 msgid "National Rating"
 msgstr "Nationell rankning"
 
-#: playersmodel.cpp:188
+#: playersmodel.cpp:206
 #, kde-format
 msgctxt "@title:column"
 msgid "Player ID"
 msgstr "Spelaridentifierare"
 
-#: playersmodel.cpp:190
+#: playersmodel.cpp:208
 #, kde-format
 msgctxt "@title:column"
 msgid "Birth date"
 msgstr "Födelsedatum"
 
-#: playersmodel.cpp:192
+#: playersmodel.cpp:210
 #, kde-format
 msgctxt "@title:column Player Federation"
 msgid "Federation"
 msgstr "Förbund"
 
-#: playersmodel.cpp:194
+#: playersmodel.cpp:212
 #, kde-format
 msgctxt "@title:column Player Origin"
 msgid "Origin"
 msgstr "Ursprung"
 
-#: playersmodel.cpp:196
+#: playersmodel.cpp:214
 #, kde-format
 msgctxt "@title:column"
 msgid "Sex"
@@ -316,10 +312,16 @@ msgstr "Arkiv"
 #: qml/components/MenuBar.qml:38
 #, kde-format
 msgctxt "@action:menu"
+msgid "View"
+msgstr ""
+
+#: qml/components/MenuBar.qml:46
+#, kde-format
+msgctxt "@action:menu"
 msgid "Settings"
 msgstr "Inställningar"
 
-#: qml/components/MenuBar.qml:49
+#: qml/components/MenuBar.qml:57
 #, kde-format
 msgctxt "@action:menu"
 msgid "Help"
@@ -428,47 +430,63 @@ msgctxt "@label"
 msgid "Number of rounds"
 msgstr "Antal omgångar"
 
-#: qml/PairingsPage.qml:49
-#, kde-format
-msgid "Pair Round %1"
-msgstr "Parningsomgång %1"
-
-#: qml/PairingsPage.qml:58
+#: qml/PairingsPage.qml:50
 #, kde-format
 msgctxt "@option:check"
 msgid "Hide finished games"
 msgstr "Dölj färdiga matcher"
 
-#: qml/PairingsPage.qml:71 qml/PlayersPage.qml:83 qml/StandingsPage.qml:52
+#: qml/PairingsPage.qml:63 qml/PlayersPage.qml:83 qml/StandingsPage.qml:52
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Print…"
 msgstr "Skriv ut…"
 
-#: qml/PairingsPage.qml:76 qml/PlayersPage.qml:88 qml/StandingsPage.qml:57
+#: qml/PairingsPage.qml:68 qml/PlayersPage.qml:88 qml/StandingsPage.qml:57
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Export as PDF…"
 msgstr "Exportera som PDF…"
 
-#: qml/PairingsPage.qml:85
+#: qml/PairingsPage.qml:77
 #, kde-format
 msgid "Round %1"
 msgstr "Omgång %1"
 
-#: qml/PairingsPage.qml:103
+#: qml/PairingsPage.qml:95
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Remove pairings of this and following rounds…"
 msgstr "Ta bort parningar för den här och följande omgångar…"
 
-#: qml/PairingsPage.qml:149
+#: qml/PairingsPage.qml:109
+#, kde-format
+msgctxt "@info"
+msgid "The tournament hasn't started yet."
+msgstr ""
+
+#: qml/PairingsPage.qml:109
+#, fuzzy, kde-format
+#| msgctxt "@info:placeholder"
+#| msgid "All games of round %1 have finished"
+msgctxt "@info"
+msgid "Round %1 has finished."
+msgstr "Alla spel i omgång %1 är klara"
+
+#: qml/PairingsPage.qml:113
+#, fuzzy, kde-format
+#| msgid "Pair Round %1"
+msgctxt "@action:button"
+msgid "Pair Round %1"
+msgstr "Parningsomgång %1"
+
+#: qml/PairingsPage.qml:156
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No pairings for round %1 yet"
 msgstr "Ingen parning för omgång %1 ännu"
 
-#: qml/PairingsPage.qml:151
+#: qml/PairingsPage.qml:158
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "All games of round %1 have finished"
@@ -514,18 +532,16 @@ msgstr "Svart"
 #, kde-format
 msgctxt "@title:window"
 msgid "Details of player \"%1\""
-msgstr ""
+msgstr "Information om spelare \"%1\""
 
 #: qml/player/PlayerDetails.qml:21
-#, fuzzy, kde-format
-#| msgid "Pairings"
+#, kde-format
 msgctxt "@action:button"
 msgid "Pairings"
 msgstr "Parningar"
 
 #: qml/player/PlayerPairingsPage.qml:19
-#, fuzzy, kde-format
-#| msgid "Pairings"
+#, kde-format
 msgctxt "@title"
 msgid "Pairings"
 msgstr "Parningar"
@@ -534,7 +550,7 @@ msgstr "Parningar"
 #, kde-format
 msgctxt "@item:inlistbox Available to play"
 msgid "Available"
-msgstr ""
+msgstr "Tillgänglig"
 
 #: qml/player/PlayerPairingsPage.qml:79 qml/TournamentSettingsFormat.qml:41
 #, kde-format
@@ -543,8 +559,7 @@ msgid "Pairings"
 msgstr "Parningar"
 
 #: qml/player/PlayerPairingsPage.qml:98
-#, fuzzy, kde-format
-#| msgid "Round %1"
+#, kde-format
 msgctxt "@info:label"
 msgid "Round %1"
 msgstr "Omgång %1"
@@ -553,7 +568,7 @@ msgstr "Omgång %1"
 #, kde-format
 msgctxt "@action:intoolbar Open player details"
 msgid "Details…"
-msgstr ""
+msgstr "Information…"
 
 #: qml/PlayersPage.qml:74
 #, kde-format
@@ -567,19 +582,19 @@ msgctxt "@action:intoolbar"
 msgid "Add Player…"
 msgstr "Lägg till spelare…"
 
-#: qml/PlayersPage.qml:187
+#: qml/PlayersPage.qml:190
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No players yet"
 msgstr "Inga spelare ännu"
 
-#: qml/PlayersPage.qml:191
+#: qml/PlayersPage.qml:194
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Player…"
 msgstr "Lägg till spelare…"
 
-#: qml/PlayersPage.qml:209
+#: qml/PlayersPage.qml:212
 #, kde-format
 msgctxt "@info:status Number of players"
 msgid "1 player"
@@ -587,7 +602,7 @@ msgid_plural "%1 players"
 msgstr[0] "1 spelare"
 msgstr[1] "%1 spelare"
 
-#: qml/PlayersPage.qml:210
+#: qml/PlayersPage.qml:213
 #, kde-format
 msgctxt "@info:status Number of rated players"
 msgid "1 rated"
@@ -595,7 +610,7 @@ msgid_plural "%1 rated"
 msgstr[0] "1 rankad"
 msgstr[1] "%1 rankade"
 
-#: qml/PlayersPage.qml:212
+#: qml/PlayersPage.qml:215
 #, kde-format
 msgctxt "@info:status players, rated"
 msgid "%1, %2"
@@ -647,7 +662,7 @@ msgstr "0F-0F"
 #, kde-format
 msgctxt "@action:intoolbar Other game results"
 msgid "Other"
-msgstr ""
+msgstr "Annat"
 
 #: qml/ResultsFooter.qml:118
 #, kde-format
@@ -741,18 +756,16 @@ msgstr ""
 "fjärde rundans parning i officiella turneringar."
 
 #: qml/StandingsPage.qml:69 qml/StandingsPage.qml:79
-#, fuzzy, kde-format
-#| msgid "Standings"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Final Standings"
-msgstr "Ställning"
+msgstr "Slutställning"
 
 #: qml/StandingsPage.qml:71 qml/StandingsPage.qml:81
-#, fuzzy, kde-format
-#| msgid "Pair Round %1"
+#, kde-format
 msgctxt "@item:inlistbox Standings After Round %1"
 msgid "After Round %1"
-msgstr "Parningsomgång %1"
+msgstr "Efter omgång %1"
 
 #: qml/StandingsPage.qml:131
 #, kde-format
@@ -905,12 +918,10 @@ msgid "General"
 msgstr "Allmänt"
 
 #: settings/ChessamentConfigurationView.qml:30
-#, fuzzy, kde-format
-#| msgctxt "@title:column Player Rating"
-#| msgid "Rating"
+#, kde-format
 msgctxt "@action:button"
 msgid "Rating Lists"
-msgstr "Rankning"
+msgstr "Rankningslistor"
 
 #: settings/GeneralPage.qml:16
 #, kde-format
@@ -941,29 +952,25 @@ msgid "Logout"
 msgstr "Logga ut"
 
 #: settings/RatingListsPage.qml:21 settings/RatingListsPage.qml:127
-#, fuzzy, kde-format
-#| msgctxt "@title:column Player Rating"
-#| msgid "Rating"
+#, kde-format
 msgctxt "@title"
 msgid "Rating Lists"
-msgstr "Rankning"
+msgstr "Rankningslistor"
 
 #: settings/RatingListsPage.qml:26
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Rating List"
-msgstr ""
+msgstr "Lägg till rankningslista"
 
 #: settings/RatingListsPage.qml:31
 #, kde-format
 msgctxt "@action:button"
 msgid "Import"
-msgstr ""
+msgstr "Importera"
 
 #: settings/RatingListsPage.qml:46
-#, fuzzy, kde-format
-#| msgctxt "@title:column Player Name"
-#| msgid "Name"
+#, kde-format
 msgctxt "@info:label"
 msgid "Name"
 msgstr "Namn"
@@ -972,51 +979,49 @@ msgstr "Namn"
 #, kde-format
 msgctxt "@info:label"
 msgid "Rating list URL"
-msgstr ""
+msgstr "Webbadress för rankningslista"
 
 #: settings/RatingListsPage.qml:71
 #, kde-format
 msgctxt "@title:window"
 msgid "Importing Rating List"
-msgstr ""
+msgstr "Importerar rankningslista"
 
 #: settings/RatingListsPage.qml:111
 #, kde-format
 msgctxt "@title"
 msgid "Delete Rating List"
-msgstr ""
+msgstr "Ta bort rankningslista"
 
 #: settings/RatingListsPage.qml:119
 #, kde-format
 msgctxt "@action:button Delete Rating List"
 msgid "Delete"
-msgstr ""
+msgstr "Ta bort"
 
 #: settings/RatingListsPage.qml:132
-#, fuzzy, kde-format
-#| msgctxt "@info:placeholder"
-#| msgid "No standings yet"
+#, kde-format
 msgctxt "@info:status"
 msgid "No rating lists yet."
-msgstr "Ingen ställning ännu"
+msgstr "Inga rankningslistor ännu."
 
 #: settings/RatingListsPage.qml:152
 #, kde-format
 msgctxt "@action:button"
 msgid "Delete Rating List"
-msgstr ""
+msgstr "Ta bort rankningslista"
 
 #: settings/RatingListsPage.qml:160
 #, kde-format
 msgctxt "@action:button"
 msgid "Delete rating list"
-msgstr ""
+msgstr "Ta bort rankningslista"
 
 #: settings/RatingListsPage.qml:170
 #, kde-format
 msgctxt "@action:button"
 msgid "Add rating list"
-msgstr ""
+msgstr "Lägg till rankningslista"
 
 #: standingsmodel.cpp:90
 #, kde-format
@@ -1058,53 +1063,47 @@ msgstr "Ogiltig spelare \"%1\" för parning \"%2\"."
 #, kde-format
 msgctxt "@info:progress"
 msgid "Downloading file"
-msgstr ""
+msgstr "Laddar ner fil"
 
 #: tournament/ratinglist.cpp:143
 #, kde-format
 msgctxt "@info:progress"
 msgid "Downloading file (%1 %)"
-msgstr ""
+msgstr "Laddar ner fil (%1 %)"
 
 #: tournament/ratinglist.cpp:149
 #, kde-format
 msgctxt "@info"
 msgid "Couldn't download rating list: %1"
-msgstr ""
+msgstr "Kunde inte ladda ner rankningslista: %1"
 
 #: tournament/ratinglist.cpp:161
-#, fuzzy, kde-format
-#| msgid "Couldn't open file"
+#, kde-format
 msgctxt "@info"
 msgid "Couldn't extract file."
-msgstr "Kunde inte öppna fil"
+msgstr "Kunde inte extrahera fil."
 
 #: tournament/ratinglist.cpp:166
 #, kde-format
 msgctxt "@info"
 msgid "File format not supported."
-msgstr ""
+msgstr "Filformat stöds inte."
 
 #: tournament/ratinglist.cpp:186
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Sort players"
+#, kde-format
 msgctxt "@info:progress"
 msgid "Imported one player."
 msgid_plural "Imported %1 players."
-msgstr[0] "Sortera spelare"
-msgstr[1] "Sortera spelare"
+msgstr[0] "Importerade en spelare."
+msgstr[1] "Importerade %1 spelare."
 
 #: tournament/ratinglist.cpp:360
-#, fuzzy, kde-format
-#| msgctxt "@info:status Number of players"
-#| msgid "1 player"
-#| msgid_plural "%1 players"
+#, kde-format
 msgctxt "@info:progress"
 msgid "Saved 1 player."
 msgid_plural "Saved %1 players."
-msgstr[0] "1 spelare"
-msgstr[1] "%1 spelare"
+msgstr[0] "Sparade 1 spelare."
+msgstr[1] "Sparade %1 spelare."
 
 #: tournament/tiebreaks/buchholz.cpp:14
 #, kde-format
@@ -1134,7 +1133,7 @@ msgstr "Antal vinster"
 #, kde-format
 msgctxt "Tiebreak"
 msgid "Average Buchholz of Opponents"
-msgstr ""
+msgstr "Medelvärde av Buchholz för motspelare"
 
 #: tournament/tournament.cpp:820
 #, kde-format
