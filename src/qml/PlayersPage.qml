@@ -12,6 +12,7 @@ import QtQuick.Layouts as Layouts
 import org.kde.ki18n
 import org.kde.kitemmodels as KItemModels
 import org.kde.kirigami as Kirigami
+import org.kde.kirigamiaddons.components as Components
 
 import org.kde.chessament
 
@@ -55,20 +56,22 @@ TablePage {
         }
     }
 
+    function openPlayerDetails(): void {
+        const index = proxyModel.mapToSource(root.tableView.selectionModel.currentIndex);
+        const player = root.model.sourceModel.data(index, PlayersModel.PlayerRole);
+        const dialog = Qt.createComponent("org.kde.chessament", "PlayerDetails").createObject(root.Controls.ApplicationWindow.window, {
+            "tournament": Controller.tournament,
+            "player": player
+        }) as PlayerDetails;
+        dialog.open();
+    }
+
     actions: [
         Kirigami.Action {
             icon.name: "documentinfo-symbolic"
             text: KI18n.i18nc("@action:intoolbar Open player details", "Details…")
             enabled: root.tableView.currentRow >= 0
-            onTriggered: function (): void {
-                const index = proxyModel.mapToSource(root.tableView.selectionModel.currentIndex);
-                const player = root.model.sourceModel.data(index, PlayersModel.PlayerRole);
-                const dialog = Qt.createComponent("org.kde.chessament", "PlayerDetails").createObject(root.Controls.ApplicationWindow.window, {
-                    "tournament": Controller.tournament,
-                    "player": player
-                }) as PlayerDetails;
-                dialog.open();
-            }
+            onTriggered: root.openPlayerDetails()
         },
         Kirigami.Action {
             icon.name: "view-sort-symbolic"
@@ -98,6 +101,16 @@ TablePage {
         }
     ]
 
+    Components.ConvergentContextMenu {
+        id: menu
+
+        Controls.Action {
+            icon.name: "documentinfo-symbolic"
+            text: KI18n.i18nc("@action:inmenu", "Open Player Details")
+            onTriggered: root.openPlayerDetails()
+        }
+    }
+
     delegate: TableDelegate {
         id: delegate
 
@@ -111,6 +124,8 @@ TablePage {
 
         text: model.display
         icon.source: iconSource
+
+        contextMenu: menu
 
         onDoubleClicked: {
             root.tableView.edit(proxyModel.index(delegate.row, delegate.column));
