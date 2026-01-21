@@ -9,6 +9,7 @@ import QtQuick.Controls as Controls
 import QtQuick.Dialogs as Dialogs
 import QtQuick.Layouts as Layouts
 
+import org.kde.ki18n
 import org.kde.kitemmodels as KItemModels
 import org.kde.kirigami as Kirigami
 
@@ -57,7 +58,7 @@ TablePage {
     actions: [
         Kirigami.Action {
             icon.name: "documentinfo-symbolic"
-            text: i18nc("@action:intoolbar Open player details", "Details…")
+            text: KI18n.i18nc("@action:intoolbar Open player details", "Details…")
             enabled: root.tableView.currentRow >= 0
             onTriggered: function (): void {
                 const index = proxyModel.mapToSource(root.tableView.selectionModel.currentIndex);
@@ -71,7 +72,7 @@ TablePage {
         },
         Kirigami.Action {
             icon.name: "view-sort-symbolic"
-            text: i18nc("@action:intoolbar", "Sort Players…")
+            text: KI18n.i18nc("@action:intoolbar", "Sort Players…")
             enabled: Controller.tournament.numberOfPlayers > 1
             onTriggered: {
                 Qt.createComponent("org.kde.chessament", "SortPlayersDialog").createObject(root.Controls.ApplicationWindow.window, {}).open();
@@ -80,18 +81,18 @@ TablePage {
         Kirigami.Action {
             id: printAction
             icon.name: "document-print-symbolic"
-            text: i18nc("@action:intoolbar", "Print…")
+            text: KI18n.i18nc("@action:intoolbar", "Print…")
             onTriggered: Controller.printPlayersDocument()
         },
         Kirigami.Action {
             icon.name: "document-export-symbolic"
-            text: i18nc("@action:intoolbar", "Export as PDF…")
+            text: KI18n.i18nc("@action:intoolbar", "Export as PDF…")
             onTriggered: saveDialog.open()
         },
         Kirigami.Action {
             id: addAction
             icon.name: "list-add-symbolic"
-            text: i18nc("@action:intoolbar", "Add Player…")
+            text: KI18n.i18nc("@action:intoolbar", "Add Player…")
             displayHint: Kirigami.DisplayHint.KeepVisible
             onTriggered: addPlayerDialog.open()
         }
@@ -187,11 +188,11 @@ TablePage {
         parent: root.tableView
         anchors.centerIn: parent
         width: parent.width - Kirigami.Units.gridUnit * 4
-        text: i18nc("@info:placeholder", "No players yet")
+        text: KI18n.i18nc("@info:placeholder", "No players yet")
         visible: root.tableView.rows === 0
         helpfulAction: Kirigami.Action {
             icon.name: "list-add"
-            text: i18nc("@action:button", "Add Player…")
+            text: KI18n.i18nc("@action:button", "Add Player…")
             onTriggered: addPlayerDialog.open()
         }
     }
@@ -209,10 +210,10 @@ TablePage {
 
             Controls.Label {
                 text: {
-                    const players = i18ncp("@info:status Number of players", "1 player", "%1 players", Controller.tournament.numberOfPlayers);
-                    const rated = i18ncp("@info:status Number of rated players", "1 rated", "%1 rated", Controller.tournament.numberOfRatedPlayers);
+                    const players = KI18n.i18ncp("@info:status Number of players", "1 player", "%1 players", Controller.tournament.numberOfPlayers);
+                    const rated = KI18n.i18ncp("@info:status Number of rated players", "1 rated", "%1 rated", Controller.tournament.numberOfRatedPlayers);
 
-                    return i18nc("@info:status players, rated", "%1, %2", players, rated);
+                    return KI18n.i18nc("@info:status players, rated", "%1, %2", players, rated);
                 }
             }
         }

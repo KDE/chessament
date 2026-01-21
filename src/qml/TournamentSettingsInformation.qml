@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 // SPDX-FileCopyrightText: 2024 Manuel Alcaraz Zambrano <manuel@alcarazzam.dev>
 
+import org.kde.ki18n
 import org.kde.kirigamiaddons.formcard as FormCard
 
 import org.kde.chessament
@@ -8,15 +9,15 @@ import org.kde.chessament
 FormCard.FormCardPage {
     id: root
 
-    title: i18nc("@title", "Information")
+    title: KI18n.i18nc("@title", "Information")
 
     FormCard.FormHeader {
-        title: i18nc("@title:group", "Basic details")
+        title: KI18n.i18nc("@title:group", "Basic details")
     }
     FormCard.FormCard {
         FormCard.FormTextFieldDelegate {
             id: name
-            label: i18nc("@label:textbox", "Tournament name")
+            label: KI18n.i18nc("@label:textbox", "Tournament name")
             text: Controller.tournament.name
             onEditingFinished: {
                 Controller.tournament.name = text;
@@ -25,7 +26,7 @@ FormCard.FormCardPage {
 
         FormCard.FormTextFieldDelegate {
             id: city
-            label: i18nc("@label:textbox", "City")
+            label: KI18n.i18nc("@label:textbox", "City")
             text: Controller.tournament.city
             onEditingFinished: {
                 Controller.tournament.city = text;
@@ -34,7 +35,7 @@ FormCard.FormCardPage {
 
         FormCard.FormTextFieldDelegate {
             id: federation
-            label: i18nc("@label:textbox", "Federation")
+            label: KI18n.i18nc("@label:textbox", "Federation")
             text: Controller.tournament.federation
             onEditingFinished: {
                 Controller.tournament.federation = text;
@@ -43,7 +44,7 @@ FormCard.FormCardPage {
 
         FormCard.FormTextFieldDelegate {
             id: chiefArbiter
-            label: i18nc("@label:textbox", "Chief arbiter")
+            label: KI18n.i18nc("@label:textbox", "Chief arbiter")
             text: Controller.tournament.chiefArbiter
             onEditingFinished: {
                 Controller.tournament.chiefArbiter = text;
@@ -52,7 +53,7 @@ FormCard.FormCardPage {
 
         FormCard.FormTextFieldDelegate {
             id: deputyChiefArbiter
-            label: i18nc("@label:textbox", "Deputy chief arbiter")
+            label: KI18n.i18nc("@label:textbox", "Deputy chief arbiter")
             text: Controller.tournament.deputyChiefArbiter
             onEditingFinished: {
                 Controller.tournament.deputyChiefArbiter = text;

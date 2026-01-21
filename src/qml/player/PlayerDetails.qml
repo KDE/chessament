@@ -3,6 +3,7 @@
 
 import QtQuick
 
+import org.kde.ki18n
 import org.kde.kirigamiaddons.settings as KirigamiSettings
 
 import org.kde.chessament
@@ -13,12 +14,12 @@ KirigamiSettings.ConfigurationView {
     required property Tournament tournament
     required property Player player
 
-    title: i18nc("@title:window", "Details of player \"%1\"", player.name)
+    title: KI18n.i18nc("@title:window", "Details of player \"%1\"", player.name)
 
     modules: [
         KirigamiSettings.ConfigurationModule {
             moduleId: "pairings"
-            text: i18nc("@action:button", "Pairings")
+            text: KI18n.i18nc("@action:button", "Pairings")
             icon.name: "system-users-symbolic"
             page: () => Qt.createComponent("org.kde.chessament", "PlayerPairingsPage")
             initialProperties: () => {

@@ -6,6 +6,7 @@ import QtQuick
 import QtQuick.Controls as QQC2
 import QtQuick.Dialogs as Dialogs
 
+import org.kde.ki18n
 import org.kde.kirigami as Kirigami
 import org.kde.kirigamiaddons.statefulapp as StatefulApp
 
@@ -17,7 +18,7 @@ StatefulApp.StatefulWindow {
 
     property var pageCache: Object.create(null)
 
-    title: i18nc("@title:window", "Chessament")
+    title: KI18n.i18nc("@title:window", "Chessament")
     minimumWidth: Kirigami.Units.gridUnit * 30
     minimumHeight: Kirigami.Units.gridUnit * 20
 
@@ -98,7 +99,7 @@ StatefulApp.StatefulWindow {
 
     Kirigami.PromptDialog {
         id: errorDialog
-        title: i18nc("@title", "Error")
+        title: KI18n.i18nc("@title", "Error")
         subtitle: Controller.error
         standardButtons: Kirigami.Dialog.Ok
     }

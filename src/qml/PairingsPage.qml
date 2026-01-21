@@ -7,6 +7,7 @@ import QtQuick
 import QtQuick.Controls as Controls
 import QtQuick.Dialogs as Dialogs
 
+import org.kde.ki18n
 import org.kde.kitemmodels as KItemModels
 import org.kde.kirigami as Kirigami
 
@@ -47,7 +48,7 @@ TablePage {
     actions: [
         Kirigami.Action {
             id: hideFinishedAction
-            text: i18nc("@option:check", "Hide finished games")
+            text: KI18n.i18nc("@option:check", "Hide finished games")
             checkable: true
             checked: false
             displayComponent: Controls.Switch {
@@ -60,12 +61,12 @@ TablePage {
         Kirigami.Action {
             id: printAction
             icon.name: "document-print-symbolic"
-            text: i18nc("@action:intoolbar", "Print…")
+            text: KI18n.i18nc("@action:intoolbar", "Print…")
             onTriggered: Controller.printPairingsDocument()
         },
         Kirigami.Action {
             icon.name: "document-export-symbolic"
-            text: i18nc("@action:intoolbar", "Export as PDF…")
+            text: KI18n.i18nc("@action:intoolbar", "Export as PDF…")
             onTriggered: saveDialog.open()
         },
         Kirigami.Action {
@@ -74,7 +75,7 @@ TablePage {
                 id: roundSelector
                 model: Controller.tournament.numberOfRounds
                 currentIndex: Controller.currentRound - 1
-                displayText: i18n("Round %1", currentIndex + 1)
+                displayText: KI18n.i18n("Round %1", currentIndex + 1)
                 flat: true
                 delegate: Controls.ItemDelegate {
                     required property int index
@@ -92,7 +93,7 @@ TablePage {
             }
         },
         Kirigami.Action {
-            text: i18nc("@action:intoolbar", "Remove pairings of this and following rounds…")
+            text: KI18n.i18nc("@action:intoolbar", "Remove pairings of this and following rounds…")
             icon.name: "edit-delete"
             displayHint: Kirigami.DisplayHint.AlwaysHide
             onTriggered: {
@@ -106,11 +107,11 @@ TablePage {
 
     header: Kirigami.InlineMessage {
         position: Kirigami.InlineMessage.Position.Header
-        text: Controller.tournament.currentRound === 0 ? i18nc("@info", "The tournament hasn't started yet.") : i18nc("@info", "Round %1 has finished.", Controller.tournament.currentRound)
+        text: Controller.tournament.currentRound === 0 ? KI18n.i18nc("@info", "The tournament hasn't started yet.") : KI18n.i18nc("@info", "Round %1 has finished.", Controller.tournament.currentRound)
         visible: Controller.tournament.numberOfPlayers > 0 && (Controller.tournament.currentRound + 1 <= Controller.tournament.numberOfRounds) && Controller.hasCurrentRoundFinished
         actions: [
             Kirigami.Action {
-                text: i18nc("@action:button", "Pair Round %1", Controller.tournament.currentRound + 1)
+                text: KI18n.i18nc("@action:button", "Pair Round %1", Controller.tournament.currentRound + 1)
                 onTriggered: {
                     const dialog = Qt.createComponent("org.kde.chessament", "PairRoundDialog").createObject(root.Controls.ApplicationWindow.window, {}) as PairRoundDialog;
                     dialog.open();
@@ -153,9 +154,9 @@ TablePage {
         width: parent.width - Kirigami.Units.gridUnit * 4
         text: {
             if (proxyModel.sourceModel.rowCount() === 0) {
-                return i18nc("@info:placeholder", "No pairings for round %1 yet", Controller.currentRound);
+                return KI18n.i18nc("@info:placeholder", "No pairings for round %1 yet", Controller.currentRound);
             }
-            return i18nc("@info:placeholder", "All games of round %1 have finished", Controller.currentRound);
+            return KI18n.i18nc("@info:placeholder", "All games of round %1 have finished", Controller.currentRound);
         }
         visible: proxyModel.count === 0
     }

@@ -6,6 +6,7 @@ pragma ComponentBehavior: Bound
 import QtQuick
 import QtQuick.Controls as Controls
 
+import org.kde.ki18n
 import org.kde.kirigamiaddons.formcard as FormCard
 
 import org.kde.chessament
@@ -13,18 +14,18 @@ import org.kde.chessament
 FormCard.FormCardPage {
     id: root
 
-    title: i18nc("@title", "Format")
+    title: KI18n.i18nc("@title", "Format")
 
     FormCard.FormHeader {
-        title: i18nc("@title:group", "Format")
+        title: KI18n.i18nc("@title:group", "Format")
     }
     FormCard.FormCard {
         FormCard.FormTextDelegate {
-            text: i18n("Swiss system")
+            text: KI18n.i18n("Swiss system")
         }
 
         FormCard.FormSpinBoxDelegate {
-            label: i18n("Rounds")
+            label: KI18n.i18n("Rounds")
             from: 1
             to: 99
             value: Controller.tournament.numberOfRounds
@@ -38,24 +39,24 @@ FormCard.FormCardPage {
     }
 
     FormCard.FormHeader {
-        title: i18nc("@title:group", "Pairings")
+        title: KI18n.i18nc("@title:group", "Pairings")
     }
     FormCard.FormCard {
         FormCard.FormTextDelegate {
-            text: i18n("Pairing engine")
-            description: i18n("bbpPairings")
+            text: KI18n.i18n("Pairing engine")
+            description: KI18n.i18n("bbpPairings")
         }
         FormCard.FormComboBoxDelegate {
             id: pairingBye
             visible: Config.developer
-            text: i18n("Pairing allocated bye")
-            description: i18n("The value of the pairing allocated bye")
+            text: KI18n.i18n("Pairing allocated bye")
+            description: KI18n.i18n("The value of the pairing allocated bye")
             model: ["1 point", "0.5 points", "0 points"]
         }
     }
 
     FormCard.FormHeader {
-        title: i18nc("@title:group", "Tiebreaks")
+        title: KI18n.i18nc("@title:group", "Tiebreaks")
     }
     FormCard.FormCard {
         Repeater {
@@ -79,7 +80,7 @@ FormCard.FormCardPage {
         FormCard.FormDelegateSeparator {}
 
         FormCard.FormButtonDelegate {
-            text: i18nc("@action:button", "Add Tiebreak")
+            text: KI18n.i18nc("@action:button", "Add Tiebreak")
             icon.name: "list-add-symbolic"
             onPressed: {
                 const dialog = Qt.createComponent("org.kde.chessament", "AddTiebreakDialog").createObject(root, {

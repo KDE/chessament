@@ -7,6 +7,7 @@ import QtQml.Models as Models
 import QtQuick
 import QtQuick.Controls as Controls
 
+import org.kde.ki18n
 import org.kde.kirigamiaddons.formcard as FormCard
 
 FormCard.FormCardDialog {
@@ -14,7 +15,7 @@ FormCard.FormCardDialog {
 
     required property var options
 
-    title: i18nc("@title:window", "Edit Tiebreak")
+    title: KI18n.i18nc("@title:window", "Edit Tiebreak")
     standardButtons: Controls.Dialog.Ok | Controls.Dialog.Cancel
 
     Repeater {

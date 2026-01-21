@@ -6,6 +6,7 @@ pragma ComponentBehavior: Bound
 import QtQuick
 import QtQuick.Controls as Controls
 
+import org.kde.ki18n
 import org.kde.kirigamiaddons.formcard as FormCard
 
 import org.kde.chessament
@@ -16,7 +17,7 @@ FormCard.FormCardPage {
     required property Tournament tournament
     required property Player player
 
-    title: i18nc("@title", "Pairings")
+    title: KI18n.i18nc("@title", "Pairings")
 
     Component {
         id: statusChooser
@@ -29,7 +30,7 @@ FormCard.FormCardPage {
 
             model: [
                 {
-                    text: i18nc("@item:inlistbox Available to play", "Available"),
+                    text: KI18n.i18nc("@item:inlistbox Available to play", "Available"),
                     result: Pairing.PartialResult.Unknown
                 },
                 {
@@ -76,7 +77,7 @@ FormCard.FormCardPage {
     }
 
     FormCard.FormHeader {
-        title: i18nc("@title:group", "Pairings")
+        title: KI18n.i18nc("@title:group", "Pairings")
     }
     FormCard.FormCard {
         Repeater {
@@ -95,7 +96,7 @@ FormCard.FormCardPage {
                 required property int result
                 required property string resultString
 
-                text: i18nc("@info:label", "Round %1", pairing.row + 1)
+                text: KI18n.i18nc("@info:label", "Round %1", pairing.row + 1)
                 description: {
                     if (pairing.row >= repeater.model.tournament.currentRound) {
                         return "";

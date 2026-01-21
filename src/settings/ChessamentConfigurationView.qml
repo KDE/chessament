@@ -4,6 +4,8 @@
 pragma ComponentBehavior: Bound
 
 import QtQuick
+
+import org.kde.ki18n
 import org.kde.kirigamiaddons.settings as KirigamiSettings
 
 import org.kde.chessament
@@ -16,7 +18,7 @@ KirigamiSettings.ConfigurationView {
     modules: [
         KirigamiSettings.ConfigurationModule {
             moduleId: "general"
-            text: i18nc("@action:button", "General")
+            text: KI18n.i18nc("@action:button", "General")
             icon.name: "preferences-system-symbolic"
             page: () => Qt.createComponent("org.kde.chessament.settings", "GeneralPage")
             initialProperties: () => {
@@ -27,7 +29,7 @@ KirigamiSettings.ConfigurationView {
         },
         KirigamiSettings.ConfigurationModule {
             moduleId: "ratinglists"
-            text: i18nc("@action:button", "Rating Lists")
+            text: KI18n.i18nc("@action:button", "Rating Lists")
             icon.name: "view-list-details-symbolic"
             page: () => Qt.createComponent("org.kde.chessament.settings", "RatingListsPage")
             initialProperties: () => {

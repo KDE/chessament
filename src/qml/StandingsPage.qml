@@ -9,6 +9,7 @@ import QtQuick
 import QtQuick.Controls as Controls
 import QtQuick.Dialogs as Dialogs
 
+import org.kde.ki18n
 import org.kde.kirigami as Kirigami
 
 import org.kde.chessament
@@ -49,12 +50,12 @@ TablePage {
         Kirigami.Action {
             id: printAction
             icon.name: "document-print-symbolic"
-            text: i18nc("@action:intoolbar", "Print…")
+            text: KI18n.i18nc("@action:intoolbar", "Print…")
             onTriggered: Controller.printStandingsDocument(root.round)
         },
         Kirigami.Action {
             icon.name: "document-export-symbolic"
-            text: i18nc("@action:intoolbar", "Export as PDF…")
+            text: KI18n.i18nc("@action:intoolbar", "Export as PDF…")
             onTriggered: saveDialog.open()
         },
         Kirigami.Action {
@@ -66,9 +67,9 @@ TablePage {
                 currentIndex: root.round - 1
                 displayText: {
                     if (currentIndex === roundSelector.count - 1) {
-                        return i18nc("@item:inlistbox", "Final Standings");
+                        return KI18n.i18nc("@item:inlistbox", "Final Standings");
                     }
-                    return i18nc("@item:inlistbox Standings After Round %1", "After Round %1", currentIndex + 1);
+                    return KI18n.i18nc("@item:inlistbox Standings After Round %1", "After Round %1", currentIndex + 1);
                 }
                 flat: true
                 delegate: Controls.ItemDelegate {
@@ -76,9 +77,9 @@ TablePage {
 
                     text: {
                         if (index === roundSelector.count - 1) {
-                            return i18nc("@item:inlistbox", "Final Standings");
+                            return KI18n.i18nc("@item:inlistbox", "Final Standings");
                         }
-                        return i18nc("@item:inlistbox Standings After Round %1", "After Round %1", index + 1);
+                        return KI18n.i18nc("@item:inlistbox Standings After Round %1", "After Round %1", index + 1);
                     }
                     width: roundSelector.width
                     highlighted: roundSelector.highlightedIndex === index
@@ -128,7 +129,7 @@ TablePage {
         parent: root
         anchors.centerIn: parent
         width: parent.width - Kirigami.Units.gridUnit * 4
-        text: i18nc("@info:placeholder", "No standings yet")
+        text: KI18n.i18nc("@info:placeholder", "No standings yet")
         visible: Controller.tournament.currentRound < 1
     }
 }

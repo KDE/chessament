@@ -1,4 +1,4 @@
-// SPDX-FileCopyrightText: 2025 Manuel Alcaraz Zambrano <manuelalcarazzam@gmail.com>
+// SPDX-FileCopyrightText: 2025 Manuel Alcaraz Zambrano <manuel@alcarazzam.dev>
 // SPDX-License-Identifier: GPL-3.0-or-later
 
 pragma ComponentBehavior: Bound
@@ -8,6 +8,7 @@ import QtQuick
 import QtQuick.Controls as Controls
 import QtQuick.Layouts as Layouts
 
+import org.kde.ki18n
 import org.kde.kirigami as Kirigami
 import org.kde.kirigamiaddons.formcard as FormCard
 
@@ -18,17 +19,17 @@ FormCard.FormCardPage {
 
     required property ChessamentApplication application
 
-    title: i18nc("@title", "Rating Lists")
+    title: KI18n.i18nc("@title", "Rating Lists")
 
     FormCard.FormCardDialog {
         id: addListDialog
         parent: Controls.Overlay.overlay
-        title: i18nc("@title:window", "Add Rating List")
+        title: KI18n.i18nc("@title:window", "Add Rating List")
         footer: Controls.DialogButtonBox {
             standardButtons: Controls.Dialog.Cancel
 
             Controls.Button {
-                text: i18nc("@action:button", "Import")
+                text: KI18n.i18nc("@action:button", "Import")
                 icon.name: "document-import-symbolic"
                 Controls.DialogButtonBox.buttonRole: Controls.DialogButtonBox.AcceptRole
             }
@@ -43,12 +44,12 @@ FormCard.FormCardPage {
 
         FormCard.FormTextFieldDelegate {
             id: nameField
-            label: i18nc("@info:label", "Name")
+            label: KI18n.i18nc("@info:label", "Name")
         }
 
         FormCard.FormComboBoxDelegate {
             id: urlField
-            text: i18nc("@info:label", "Rating list URL")
+            text: KI18n.i18nc("@info:label", "Rating list URL")
             editable: true
             model: {
                 let lists = ["https://ratings.fide.com/download/players_list.zip"];
@@ -68,7 +69,7 @@ FormCard.FormCardPage {
         property bool finished: false
 
         parent: Controls.Overlay.overlay
-        title: i18nc("@title:window", "Importing Rating List")
+        title: KI18n.i18nc("@title:window", "Importing Rating List")
         closePolicy: Controls.Dialog.NoAutoClose
         showCloseButton: false
         padding: Kirigami.Units.largeSpacing
@@ -108,7 +109,7 @@ FormCard.FormCardPage {
         property string listId
 
         parent: Controls.Overlay.overlay
-        title: i18nc("@title", "Delete Rating List")
+        title: KI18n.i18nc("@title", "Delete Rating List")
 
         onAccepted: listsModel.removeList(deleteListDialog.listId)
 
@@ -116,7 +117,7 @@ FormCard.FormCardPage {
             standardButtons: Controls.Dialog.Cancel
 
             Controls.Button {
-                text: i18nc("@action:button Delete Rating List", "Delete")
+                text: KI18n.i18nc("@action:button Delete Rating List", "Delete")
                 icon.name: "delete-symbolic"
                 Controls.DialogButtonBox.buttonRole: Controls.DialogButtonBox.AcceptRole
             }
@@ -124,12 +125,12 @@ FormCard.FormCardPage {
     }
 
     FormCard.FormHeader {
-        title: i18nc("@title", "Rating Lists")
+        title: KI18n.i18nc("@title", "Rating Lists")
     }
 
     FormCard.FormCard {
         FormCard.FormPlaceholderMessageDelegate {
-            text: i18nc("@info:status", "No rating lists yet.")
+            text: KI18n.i18nc("@info:status", "No rating lists yet.")
             icon.name: "view-list-details-symbolic"
             visible: listRepeater.count === 0
         }
@@ -149,7 +150,7 @@ FormCard.FormCardPage {
 
                 text: name
                 trailing: Controls.Button {
-                    text: i18nc("@action:button", "Delete Rating List")
+                    text: KI18n.i18nc("@action:button", "Delete Rating List")
                     icon.name: "list-remove-symbolic"
                     flat: true
                     display: Controls.Button.IconOnly
@@ -157,7 +158,7 @@ FormCard.FormCardPage {
                         deleteListDialog.listId = listDelegate.row;
                         deleteListDialog.open();
                     }
-                    Controls.ToolTip.text: i18nc("@action:button", "Delete rating list")
+                    Controls.ToolTip.text: KI18n.i18nc("@action:button", "Delete rating list")
                     Controls.ToolTip.visible: hovered
                     Controls.ToolTip.delay: Kirigami.Units.toolTipDelay
                 }
@@ -167,7 +168,7 @@ FormCard.FormCardPage {
         FormCard.FormDelegateSeparator {}
 
         FormCard.FormButtonDelegate {
-            text: i18nc("@action:button", "Add rating list")
+            text: KI18n.i18nc("@action:button", "Add rating list")
             onClicked: addListDialog.open()
         }
     }

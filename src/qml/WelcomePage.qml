@@ -3,6 +3,7 @@
 
 import QtQuick
 
+import org.kde.ki18n
 import org.kde.kirigami as Kirigami
 
 import org.kde.chessament
@@ -12,13 +13,13 @@ Kirigami.Page {
 
     required property AbstractKirigamiApplication application
 
-    title: i18nc("@title", "Chessament")
+    title: KI18n.i18nc("@title", "Chessament")
 
     Kirigami.PlaceholderMessage {
         spacing: Kirigami.Units.gridUnit
         width: parent.width - (Kirigami.Units.largeSpacing * 4)
-        text: i18nc("@title", "Welcome to Chessament")
-        explanation: i18nc("@info", "Chessament is a chess tournament manager")
+        text: KI18n.i18nc("@title", "Welcome to Chessament")
+        explanation: KI18n.i18nc("@info", "Chessament is a chess tournament manager")
         helpfulAction: Kirigami.Action {
             fromQAction: root.application.action("file_new")
         }

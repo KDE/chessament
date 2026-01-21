@@ -6,6 +6,7 @@ import QtQuick
 import QtQuick.Controls as QQC2
 import QtQuick.Dialogs as Dialogs
 
+import org.kde.ki18n
 import org.kde.kirigamiaddons.formcard as FormCard
 
 FormCard.FormCardDialog {
@@ -13,7 +14,7 @@ FormCard.FormCardDialog {
 
     signal create(fileName: string, name: string, rounds: int)
 
-    title: i18nc("@title", "New tournament")
+    title: KI18n.i18nc("@title", "New tournament")
     standardButtons: QQC2.Dialog.Save | QQC2.Dialog.Cancel
 
     onAccepted: {
@@ -26,17 +27,17 @@ FormCard.FormCardDialog {
 
     FormCard.FormTextFieldDelegate {
         id: name
-        label: i18nc("@label:textbox tournament name", "Name:")
+        label: KI18n.i18nc("@label:textbox tournament name", "Name:")
     }
 
     FormCard.FormTextDelegate {
-        text: i18nc("@label", "Format")
-        description: i18nc("@label", "Swiss system")
+        text: KI18n.i18nc("@label", "Format")
+        description: KI18n.i18nc("@label", "Swiss system")
     }
 
     FormCard.FormSpinBoxDelegate {
         id: rounds
-        label: i18nc("@label", "Number of rounds")
+        label: KI18n.i18nc("@label", "Number of rounds")
         from: 1
         to: 99
     }

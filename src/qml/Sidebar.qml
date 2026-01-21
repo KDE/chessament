@@ -5,6 +5,7 @@ import QtQuick
 import QtQuick.Controls as Controls
 import QtQuick.Layouts
 
+import org.kde.ki18n
 import org.kde.kirigami as Kirigami
 
 import org.kde.chessament
@@ -52,21 +53,21 @@ Kirigami.OverlayDrawer {
 
             Kirigami.NavigationTabButton {
                 Layout.fillWidth: true
-                text: i18n("Players")
+                text: KI18n.i18n("Players")
                 icon.name: "user-symbolic"
                 checked: Controller.currentView === "PlayersPage"
                 onClicked: root.goToPage("PlayersPage")
             }
             Kirigami.NavigationTabButton {
                 Layout.fillWidth: true
-                text: i18n("Pairings")
+                text: KI18n.i18n("Pairings")
                 icon.name: "system-users-symbolic"
                 checked: Controller.currentView === "PairingsPage"
                 onClicked: root.goToPage("PairingsPage")
             }
             Kirigami.NavigationTabButton {
                 Layout.fillWidth: true
-                text: i18n("Standings")
+                text: KI18n.i18n("Standings")
                 icon.name: "games-highscores-symbolic"
                 checked: Controller.currentView === "StandingsPage"
                 onClicked: root.goToPage("StandingsPage")
@@ -90,7 +91,7 @@ Kirigami.OverlayDrawer {
         Layout.fillWidth: true
         visible: Controller.hasOpenTournament
         action: Kirigami.Action {
-            text: i18nc("@action:button", "Settings")
+            text: KI18n.i18nc("@action:button", "Settings")
             icon.name: "settings-configure"
             onTriggered: {
                 const dialog = Qt.createComponent("org.kde.chessament", "TournamentSettings").createObject(root.Controls.Overlay.overlay, {

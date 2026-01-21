@@ -4,6 +4,7 @@
 import QtQuick
 import QtQuick.Layouts
 
+import org.kde.ki18n
 import org.kde.kirigamiaddons.formcard as FormCard
 
 import org.kde.chessament
@@ -11,7 +12,7 @@ import org.kde.chessament
 FormCard.FormCardPage {
     id: root
 
-    title: i18nc("@title", "Calendar")
+    title: KI18n.i18nc("@title", "Calendar")
 
     Repeater {
         model: RoundModel {
@@ -26,7 +27,7 @@ FormCard.FormCardPage {
             required property var model
 
             FormCard.FormHeader {
-                title: i18nc("round number", "Round %1", delegate.index + 1)
+                title: KI18n.i18nc("round number", "Round %1", delegate.index + 1)
             }
             FormCard.FormCard {
                 FormCard.FormDateTimeDelegate {

@@ -5,6 +5,7 @@ pragma ComponentBehavior: Bound
 
 import QtQuick
 
+import org.kde.ki18n
 import org.kde.kirigamiaddons.formcard as FormCard
 
 import org.kde.chessament.tournament
@@ -16,7 +17,7 @@ FormCard.FormCardDialog {
 
     property string tiebreak
 
-    title: i18nc("@title:window", "Add Tiebreak")
+    title: KI18n.i18nc("@title:window", "Add Tiebreak")
 
     Repeater {
         model: root.tournament.availableTiebreaks()

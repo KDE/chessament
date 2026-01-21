@@ -5,6 +5,7 @@ import QtQuick
 import QtQuick.Layouts
 import QtQuick.Controls as QQC2
 
+import org.kde.ki18n
 import org.kde.kirigami as Kirigami
 import org.kde.kirigamiaddons.formcard as FormCard
 
@@ -13,7 +14,7 @@ import org.kde.chessament
 QQC2.Dialog {
     id: root
 
-    title: i18nc("@title:window", "Add player")
+    title: KI18n.i18nc("@title:window", "Add player")
     standardButtons: Kirigami.Dialog.Cancel | Kirigami.Dialog.Ok
     implicitWidth: Math.min(QQC2.ApplicationWindow.window.width - Kirigami.Units.gridUnit * 4, Kirigami.Units.gridUnit * 35)
     implicitHeight: Math.min(QQC2.ApplicationWindow.window.height - Kirigami.Units.gridUnit * 4, contentItem.implicitHeight)
@@ -50,57 +51,57 @@ QQC2.Dialog {
 
             FormCard.FormComboBoxDelegate {
                 id: titleField
-                text: i18nc("@label:textbox", "Title")
+                text: KI18n.i18nc("@label:textbox", "Title")
                 model: ["", "GM", "IM", "FM", "WGM", "CM", "WIM", "WFM", "WCM"]
             }
 
             FormCard.FormTextFieldDelegate {
                 id: nameField
-                label: i18nc("@label:textbox", "Name")
+                label: KI18n.i18nc("@label:textbox", "Name")
             }
 
             FormCard.FormSpinBoxDelegate {
                 id: ratingField
-                label: i18nc("@label:textbox", "Rating")
+                label: KI18n.i18nc("@label:textbox", "Rating")
                 from: 0
                 to: 4000
             }
 
             FormCard.FormSpinBoxDelegate {
                 id: nationalRatingField
-                label: i18nc("@label:textbox", "National rating")
+                label: KI18n.i18nc("@label:textbox", "National rating")
                 from: 0
                 to: 4000
             }
 
             FormCard.FormTextFieldDelegate {
                 id: playerIdField
-                label: i18nc("@label:textbox", "Player ID")
-                placeholderText: i18n("Optional")
+                label: KI18n.i18nc("@label:textbox", "Player ID")
+                placeholderText: KI18n.i18n("Optional")
             }
 
             FormCard.FormTextFieldDelegate {
                 id: birthDateField
-                label: i18nc("@label:textbox", "Birth date")
-                placeholderText: i18n("Optional")
+                label: KI18n.i18nc("@label:textbox", "Birth date")
+                placeholderText: KI18n.i18n("Optional")
             }
 
             FormCard.FormTextFieldDelegate {
                 id: federationField
-                label: i18nc("@label:textbox", "Federation")
-                placeholderText: i18n("Optional")
+                label: KI18n.i18nc("@label:textbox", "Federation")
+                placeholderText: KI18n.i18n("Optional")
             }
 
             FormCard.FormTextFieldDelegate {
                 id: originField
-                label: i18nc("@label:textbox", "Origin")
-                placeholderText: i18n("Optional")
+                label: KI18n.i18nc("@label:textbox", "Origin")
+                placeholderText: KI18n.i18n("Optional")
             }
 
             FormCard.FormTextFieldDelegate {
                 id: sexField
-                label: i18nc("@label:textbox", "Sex")
-                placeholderText: i18n("Optional")
+                label: KI18n.i18nc("@label:textbox", "Sex")
+                placeholderText: KI18n.i18n("Optional")
             }
         }
     }

@@ -3,6 +3,7 @@
 
 import QtQuick.Controls as Controls
 
+import org.kde.ki18n
 import org.kde.kirigami as Kirigami
 
 import org.kde.chessament
@@ -13,7 +14,7 @@ Controls.MenuBar {
     required property ChessamentApplication application
 
     Controls.Menu {
-        title: i18nc("@action:menu", "File")
+        title: KI18n.i18nc("@action:menu", "File")
 
         Kirigami.Action {
             fromQAction: root.application.action("file_new")
@@ -35,7 +36,7 @@ Controls.MenuBar {
     }
 
     Controls.Menu {
-        title: i18nc("@action:menu", "View")
+        title: KI18n.i18nc("@action:menu", "View")
 
         Kirigami.Action {
             fromQAction: root.application.action("open_kcommand_bar")
@@ -43,7 +44,7 @@ Controls.MenuBar {
     }
 
     Controls.Menu {
-        title: i18nc("@action:menu", "Settings")
+        title: KI18n.i18nc("@action:menu", "Settings")
 
         Kirigami.Action {
             fromQAction: root.application.action("options_configure_keybinding")
@@ -54,7 +55,7 @@ Controls.MenuBar {
     }
 
     Controls.Menu {
-        title: i18nc("@action:menu", "Help")
+        title: KI18n.i18nc("@action:menu", "Help")
 
         Kirigami.Action {
             fromQAction: root.application.action("open_about_page")
