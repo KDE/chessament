@@ -55,14 +55,6 @@ void ChessamentApplication::setupActions()
         mainCollection()->addAction(action->objectName(), action);
     }
 
-    actionName = "connect_account"_L1;
-    if (KAuthorized::authorizeAction(actionName)) {
-        auto action = mainCollection()->addAction(actionName, this, &ChessamentApplication::connectAccount);
-        action->setText(i18nc("@action:inmenu", "Connect account"));
-        action->setIcon(QIcon::fromTheme(u"internet-services-symbolic"_s));
-        mainCollection()->addAction(action->objectName(), action);
-    }
-
     readSettings();
 }
 

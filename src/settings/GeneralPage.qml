@@ -3,7 +3,6 @@
 
 pragma ComponentBehavior: Bound
 
-import org.kde.kirigami as Kirigami
 import org.kde.kirigamiaddons.formcard as FormCard
 
 import org.kde.chessament
@@ -24,11 +23,10 @@ FormCard.FormCardPage {
         visible: Config.developer
 
         FormCard.FormButtonDelegate {
-            text: i18nc("@label:button", "Connect Account")
-            action: Kirigami.Action {
-                fromQAction: root.application.action("connect_account")
-            }
+            icon.name: "internet-services-symbolic"
+            text: i18nc("@action:button", "Connect Account")
             visible: !Controller.account.isLogged
+            onPressed: Controller.connectAccount()
         }
         FormCard.FormTextDelegate {
             text: i18n("Logged in as %1", Controller.account.username)

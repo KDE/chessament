@@ -78,11 +78,6 @@ StatefulApp.StatefulWindow {
             });
             dialog.open();
         }
-
-        function onConnectAccount() {
-            console.log("connect account");
-            Controller.connectAccount();
-        }
     }
 
     Connections {
