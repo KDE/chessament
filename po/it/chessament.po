@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-21 00:41+0000\n"
+"POT-Creation-Date: 2026-01-22 00:55+0000\n"
 "PO-Revision-Date: 2026-01-11 19:04+0100\n"
 "Last-Translator: Valter Mura <valtermura@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -42,12 +42,6 @@ msgctxt "@action:inmenu"
 msgid "Export tournament report…"
 msgstr "Resoconto di esportazione del torneo..."
 
-#: chessamentapplication.cpp:61
-#, kde-format
-msgctxt "@action:inmenu"
-msgid "Connect account"
-msgstr "Connetti account"
-
 #: controller.cpp:155
 #, kde-format
 msgid "Couldn't export tournament."
@@ -59,37 +53,37 @@ msgctxt "@title"
 msgid "Starting Rank"
 msgstr "Posizione di partenza"
 
-#: documents.cpp:47
+#: documents.cpp:50
 #, kde-format
 msgctxt "@title"
 msgid "Round %1 Pairings"
 msgstr "Abbinamenti turno %1"
 
-#: documents.cpp:81
+#: documents.cpp:84
 #, kde-format
 msgctxt "@title"
 msgid "Standings After Round %1"
 msgstr "Posizioni dopo il turno %1"
 
-#: documents.cpp:83
+#: documents.cpp:86
 #, kde-format
 msgctxt "@title"
 msgid "Provisional Standings After Round %1"
 msgstr "Posizioni provvisorie dopo il turno %1"
 
-#: documents.cpp:87
+#: documents.cpp:90
 #, kde-format
 msgctxt "@title"
 msgid "Final Standings"
 msgstr "Posizioni finali"
 
-#: documents.cpp:89
+#: documents.cpp:92
 #, kde-format
 msgctxt "@title"
 msgid "Provisional Final Standings"
 msgstr "Posizioni finali provvisorie"
 
-#: main.cpp:58 qml/WelcomePage.qml:15
+#: main.cpp:58 qml/WelcomePage.qml:16
 #, kde-format
 msgctxt "@title"
 msgid "Chessament"
@@ -171,302 +165,302 @@ msgctxt "@title:column Black Player Starting Rank Number"
 msgid "№"
 msgstr "№"
 
-#: playersmodel.cpp:196 standingsmodel.cpp:92
+#: playersmodel.cpp:198 standingsmodel.cpp:92
 #, kde-format
 msgctxt "@title:column Player Starting Rank Number"
 msgid "№"
 msgstr "№"
 
-#: playersmodel.cpp:198 standingsmodel.cpp:94
+#: playersmodel.cpp:200 standingsmodel.cpp:94
 #, kde-format
 msgctxt "@title:column Player Title"
 msgid "Title"
 msgstr "Titolo"
 
-#: playersmodel.cpp:200 standingsmodel.cpp:96
+#: playersmodel.cpp:202 standingsmodel.cpp:96
 #, kde-format
 msgctxt "@title:column Player Name"
 msgid "Name"
 msgstr "Nome"
 
-#: playersmodel.cpp:202
+#: playersmodel.cpp:204
 #, kde-format
 msgctxt "@title:column Player Rating"
 msgid "Rating"
 msgstr "Valutazione"
 
-#: playersmodel.cpp:204
+#: playersmodel.cpp:206
 #, kde-format
 msgctxt "@title:column Player National Rating"
 msgid "National Rating"
 msgstr "Valutazione nazionale"
 
-#: playersmodel.cpp:206
+#: playersmodel.cpp:208
 #, kde-format
 msgctxt "@title:column"
 msgid "Player ID"
 msgstr "ID del giocatore"
 
-#: playersmodel.cpp:208
+#: playersmodel.cpp:210
 #, kde-format
 msgctxt "@title:column"
 msgid "Birth date"
 msgstr "Data di nascita"
 
-#: playersmodel.cpp:210
+#: playersmodel.cpp:212
 #, kde-format
 msgctxt "@title:column Player Federation"
 msgid "Federation"
 msgstr "Federazione"
 
-#: playersmodel.cpp:212
+#: playersmodel.cpp:214
 #, kde-format
 msgctxt "@title:column Player Origin"
 msgid "Origin"
 msgstr "Origine"
 
-#: playersmodel.cpp:214
+#: playersmodel.cpp:216
 #, kde-format
 msgctxt "@title:column"
 msgid "Sex"
 msgstr "Sesso"
 
-#: qml/AddPlayerDialog.qml:16
+#: qml/AddPlayerDialog.qml:17
 #, kde-format
 msgctxt "@title:window"
 msgid "Add player"
 msgstr "Aggiunta giocatore"
 
-#: qml/AddPlayerDialog.qml:53
+#: qml/AddPlayerDialog.qml:54
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Title"
 msgstr "Titolo"
 
-#: qml/AddPlayerDialog.qml:59
+#: qml/AddPlayerDialog.qml:60
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Name"
 msgstr "Nome"
 
-#: qml/AddPlayerDialog.qml:64
+#: qml/AddPlayerDialog.qml:65
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Rating"
 msgstr "Valutazione"
 
-#: qml/AddPlayerDialog.qml:71
+#: qml/AddPlayerDialog.qml:72
 #, kde-format
 msgctxt "@label:textbox"
 msgid "National rating"
 msgstr "Valutazione nazionale"
 
-#: qml/AddPlayerDialog.qml:78
+#: qml/AddPlayerDialog.qml:79
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Player ID"
 msgstr "ID del giocatore"
 
-#: qml/AddPlayerDialog.qml:79 qml/AddPlayerDialog.qml:85
-#: qml/AddPlayerDialog.qml:91 qml/AddPlayerDialog.qml:97
-#: qml/AddPlayerDialog.qml:103
+#: qml/AddPlayerDialog.qml:80 qml/AddPlayerDialog.qml:86
+#: qml/AddPlayerDialog.qml:92 qml/AddPlayerDialog.qml:98
+#: qml/AddPlayerDialog.qml:104
 #, kde-format
 msgid "Optional"
 msgstr "Facoltativo"
 
-#: qml/AddPlayerDialog.qml:84
+#: qml/AddPlayerDialog.qml:85
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Birth date"
 msgstr "Data di nascita"
 
-#: qml/AddPlayerDialog.qml:90 qml/TournamentSettingsInformation.qml:37
+#: qml/AddPlayerDialog.qml:91 qml/TournamentSettingsInformation.qml:38
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Federation"
 msgstr "Federazione"
 
-#: qml/AddPlayerDialog.qml:96
+#: qml/AddPlayerDialog.qml:97
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Origin"
 msgstr "Origine"
 
-#: qml/AddPlayerDialog.qml:102
+#: qml/AddPlayerDialog.qml:103
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Sex"
 msgstr "Sesso"
 
-#: qml/AddTiebreakDialog.qml:19
+#: qml/AddTiebreakDialog.qml:20
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Tiebreak"
 msgstr "Aggiunta spareggio"
 
-#: qml/components/MenuBar.qml:16
+#: qml/components/MenuBar.qml:17
 #, kde-format
 msgctxt "@action:menu"
 msgid "File"
 msgstr "File"
 
-#: qml/components/MenuBar.qml:38
+#: qml/components/MenuBar.qml:39
 #, kde-format
 msgctxt "@action:menu"
 msgid "View"
 msgstr ""
 
-#: qml/components/MenuBar.qml:46
+#: qml/components/MenuBar.qml:47
 #, kde-format
 msgctxt "@action:menu"
 msgid "Settings"
 msgstr "Impostazioni"
 
-#: qml/components/MenuBar.qml:57
+#: qml/components/MenuBar.qml:58
 #, kde-format
 msgctxt "@action:menu"
 msgid "Help"
 msgstr "Aiuto"
 
-#: qml/components/TiebreakDelegate.qml:30
-#: qml/components/TiebreakDelegate.qml:35
+#: qml/components/TiebreakDelegate.qml:31
+#: qml/components/TiebreakDelegate.qml:36
 #, kde-format
 msgctxt "@action:button"
 msgid "Configure tiebreak"
 msgstr "Configura spareggio"
 
-#: qml/components/TiebreakDelegate.qml:51
+#: qml/components/TiebreakDelegate.qml:52
 #, kde-format
 msgctxt "@action:button Move tiebreak up"
 msgid "Move Up"
 msgstr "Sposta su"
 
-#: qml/components/TiebreakDelegate.qml:56
+#: qml/components/TiebreakDelegate.qml:57
 #, kde-format
 msgctxt "@action:button Move tiebreak up"
 msgid "Move up"
 msgstr "Sposta su"
 
-#: qml/components/TiebreakDelegate.qml:63
+#: qml/components/TiebreakDelegate.qml:64
 #, kde-format
 msgctxt "@action:button Move tiebreak down"
 msgid "Move Down"
 msgstr "Sposta giù"
 
-#: qml/components/TiebreakDelegate.qml:68
+#: qml/components/TiebreakDelegate.qml:69
 #, kde-format
 msgctxt "@action:button Move tiebreak down"
 msgid "Move down"
 msgstr "Sposta giù"
 
-#: qml/components/TiebreakDelegate.qml:75
+#: qml/components/TiebreakDelegate.qml:76
 #, kde-format
 msgctxt "@action:button"
 msgid "Delete Tiebreak"
 msgstr "Elimina spareggio"
 
-#: qml/components/TiebreakDelegate.qml:80
+#: qml/components/TiebreakDelegate.qml:81
 #, kde-format
 msgctxt "@action:button"
 msgid "Delete tiebreak"
 msgstr "Elimina spareggio"
 
-#: qml/DeletePairingsDialog.qml:16
+#: qml/DeletePairingsDialog.qml:17
 #, kde-format
 msgctxt "@title"
 msgid "Remove pairings"
 msgstr "Rimuovi gli abbinamenti"
 
-#: qml/DeletePairingsDialog.qml:24
+#: qml/DeletePairingsDialog.qml:25
 #, kde-format
 msgctxt "@action:check"
 msgid "Keep byes"
 msgstr "Mantieni i bye"
 
-#: qml/DeletePairingsDialog.qml:31
+#: qml/DeletePairingsDialog.qml:32
 #, kde-format
 msgctxt "@action:button Remove pairings"
 msgid "Remove"
 msgstr "Rimuovi"
 
-#: qml/Main.qml:20
+#: qml/Main.qml:21
 #, kde-format
 msgctxt "@title:window"
 msgid "Chessament"
 msgstr "Chessament"
 
-#: qml/Main.qml:106
+#: qml/Main.qml:102
 #, kde-format
 msgctxt "@title"
 msgid "Error"
 msgstr "Errore"
 
-#: qml/NewTournamentDialog.qml:16
+#: qml/NewTournamentDialog.qml:17
 #, kde-format
 msgctxt "@title"
 msgid "New tournament"
 msgstr "Nuovo torneo"
 
-#: qml/NewTournamentDialog.qml:29
+#: qml/NewTournamentDialog.qml:30
 #, kde-format
 msgctxt "@label:textbox tournament name"
 msgid "Name:"
 msgstr "Nome:"
 
-#: qml/NewTournamentDialog.qml:33
+#: qml/NewTournamentDialog.qml:34
 #, kde-format
 msgctxt "@label"
 msgid "Format"
 msgstr "Formato"
 
-#: qml/NewTournamentDialog.qml:34
+#: qml/NewTournamentDialog.qml:35
 #, kde-format
 msgctxt "@label"
 msgid "Swiss system"
 msgstr "Sistema svizzero"
 
-#: qml/NewTournamentDialog.qml:39
+#: qml/NewTournamentDialog.qml:40
 #, kde-format
 msgctxt "@label"
 msgid "Number of rounds"
 msgstr "Numero di turni"
 
-#: qml/PairingsPage.qml:50
+#: qml/PairingsPage.qml:51
 #, kde-format
 msgctxt "@option:check"
 msgid "Hide finished games"
 msgstr "Nascondi le partite terminate"
 
-#: qml/PairingsPage.qml:63 qml/PlayersPage.qml:83 qml/StandingsPage.qml:52
+#: qml/PairingsPage.qml:64 qml/PlayersPage.qml:87 qml/StandingsPage.qml:53
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Print…"
 msgstr "Stampa..."
 
-#: qml/PairingsPage.qml:68 qml/PlayersPage.qml:88 qml/StandingsPage.qml:57
+#: qml/PairingsPage.qml:69 qml/PlayersPage.qml:92 qml/StandingsPage.qml:58
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Export as PDF…"
 msgstr "Esporta come PDF…"
 
-#: qml/PairingsPage.qml:77
+#: qml/PairingsPage.qml:78
 #, kde-format
 msgid "Round %1"
 msgstr "Turno %1"
 
-#: qml/PairingsPage.qml:95
+#: qml/PairingsPage.qml:96
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Remove pairings of this and following rounds…"
 msgstr "Rimuovi gli abbinamenti di questo e dei turni successivi…"
 
-#: qml/PairingsPage.qml:109
+#: qml/PairingsPage.qml:110
 #, kde-format
 msgctxt "@info"
 msgid "The tournament hasn't started yet."
 msgstr ""
 
-#: qml/PairingsPage.qml:109
+#: qml/PairingsPage.qml:110
 #, fuzzy, kde-format
 #| msgctxt "@info:placeholder"
 #| msgid "All games of round %1 have finished"
@@ -474,128 +468,134 @@ msgctxt "@info"
 msgid "Round %1 has finished."
 msgstr "Tutte le partite del turno %1 sono terminate"
 
-#: qml/PairingsPage.qml:113
+#: qml/PairingsPage.qml:114
 #, fuzzy, kde-format
 #| msgid "Pair Round %1"
 msgctxt "@action:button"
 msgid "Pair Round %1"
 msgstr "Abbinamento turno %1"
 
-#: qml/PairingsPage.qml:156
+#: qml/PairingsPage.qml:157
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No pairings for round %1 yet"
 msgstr "Ancora nessun abbinamento per il turno %1"
 
-#: qml/PairingsPage.qml:158
+#: qml/PairingsPage.qml:159
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "All games of round %1 have finished"
 msgstr "Tutte le partite del turno %1 sono terminate"
 
-#: qml/PairRoundDialog.qml:17
+#: qml/PairRoundDialog.qml:18
 #, kde-format
 msgctxt "@title %1 is a number >= 1"
 msgid "Pair Round %1"
 msgstr "Abbinamento turno %1"
 
-#: qml/PairRoundDialog.qml:26
+#: qml/PairRoundDialog.qml:27
 #, kde-format
 msgctxt "@option:check"
 msgid "Sort players"
 msgstr "Ordina giocatori"
 
-#: qml/PairRoundDialog.qml:33
+#: qml/PairRoundDialog.qml:34
 #, kde-format
 msgctxt "@label:listbox"
 msgid "First player color:"
 msgstr "Colore del primo giocatore:"
 
-#: qml/PairRoundDialog.qml:41
+#: qml/PairRoundDialog.qml:42
 #, kde-format
 msgctxt "@item:inlistbox As in 'Random color'"
 msgid "Random"
 msgstr "Casuale"
 
-#: qml/PairRoundDialog.qml:45
+#: qml/PairRoundDialog.qml:46
 #, kde-format
 msgctxt "@item:inlistbox As in 'White pieces'"
 msgid "White"
 msgstr "Bianco"
 
-#: qml/PairRoundDialog.qml:49
+#: qml/PairRoundDialog.qml:50
 #, kde-format
 msgctxt "@item:inlistbox As in 'Black pieces'"
 msgid "Black"
 msgstr "Nero"
 
-#: qml/player/PlayerDetails.qml:16
+#: qml/player/PlayerDetails.qml:17
 #, kde-format
 msgctxt "@title:window"
 msgid "Details of player \"%1\""
 msgstr "Dettagli del giocatore «%1»"
 
-#: qml/player/PlayerDetails.qml:21
+#: qml/player/PlayerDetails.qml:22
 #, kde-format
 msgctxt "@action:button"
 msgid "Pairings"
 msgstr "Abbinamenti"
 
-#: qml/player/PlayerPairingsPage.qml:19
+#: qml/player/PlayerPairingsPage.qml:20
 #, kde-format
 msgctxt "@title"
 msgid "Pairings"
 msgstr "Abbinamenti"
 
-#: qml/player/PlayerPairingsPage.qml:32
+#: qml/player/PlayerPairingsPage.qml:33
 #, kde-format
 msgctxt "@item:inlistbox Available to play"
 msgid "Available"
 msgstr "Disponibile"
 
-#: qml/player/PlayerPairingsPage.qml:79 qml/TournamentSettingsFormat.qml:41
+#: qml/player/PlayerPairingsPage.qml:80 qml/TournamentSettingsFormat.qml:42
 #, kde-format
 msgctxt "@title:group"
 msgid "Pairings"
 msgstr "Abbinamenti"
 
-#: qml/player/PlayerPairingsPage.qml:98
+#: qml/player/PlayerPairingsPage.qml:99
 #, kde-format
 msgctxt "@info:label"
 msgid "Round %1"
 msgstr "Turno %1"
 
-#: qml/PlayersPage.qml:60
+#: qml/PlayersPage.qml:72
 #, kde-format
 msgctxt "@action:intoolbar Open player details"
 msgid "Details…"
 msgstr "Dettagli…"
 
-#: qml/PlayersPage.qml:74
+#: qml/PlayersPage.qml:78
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Sort Players…"
 msgstr "Ordina giocatori…"
 
-#: qml/PlayersPage.qml:94
+#: qml/PlayersPage.qml:98
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Add Player…"
 msgstr "Aggiunta giocatore…"
 
-#: qml/PlayersPage.qml:190
+#: qml/PlayersPage.qml:109
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Open Player Details"
+msgstr ""
+
+#: qml/PlayersPage.qml:206
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No players yet"
 msgstr "Ancora nessun giocatore"
 
-#: qml/PlayersPage.qml:194
+#: qml/PlayersPage.qml:210
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Player…"
 msgstr "Aggiungi giocatore..."
 
-#: qml/PlayersPage.qml:212
+#: qml/PlayersPage.qml:228
 #, kde-format
 msgctxt "@info:status Number of players"
 msgid "1 player"
@@ -603,7 +603,7 @@ msgid_plural "%1 players"
 msgstr[0] "1 giocatore"
 msgstr[1] "%1 giocatori"
 
-#: qml/PlayersPage.qml:213
+#: qml/PlayersPage.qml:229
 #, kde-format
 msgctxt "@info:status Number of rated players"
 msgid "1 rated"
@@ -611,142 +611,142 @@ msgid_plural "%1 rated"
 msgstr[0] "1 valutato"
 msgstr[1] "%1 valutati"
 
-#: qml/PlayersPage.qml:215
+#: qml/PlayersPage.qml:231
 #, kde-format
 msgctxt "@info:status players, rated"
 msgid "%1, %2"
 msgstr "%1, %2"
 
-#: qml/ResultsFooter.qml:42
+#: qml/ResultsFooter.qml:43
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "*"
 msgstr "*"
 
-#: qml/ResultsFooter.qml:53
+#: qml/ResultsFooter.qml:54
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "1-0"
 msgstr "1-0"
 
-#: qml/ResultsFooter.qml:61
+#: qml/ResultsFooter.qml:62
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "½-½"
 msgstr "½-½"
 
-#: qml/ResultsFooter.qml:69
+#: qml/ResultsFooter.qml:70
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "0-1"
 msgstr "0-1"
 
-#: qml/ResultsFooter.qml:80
+#: qml/ResultsFooter.qml:81
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "1F-0F"
 msgstr "1F-0F"
 
-#: qml/ResultsFooter.qml:88
+#: qml/ResultsFooter.qml:89
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "0F-1F"
 msgstr "0F-1F"
 
-#: qml/ResultsFooter.qml:96
+#: qml/ResultsFooter.qml:97
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "0F-0F"
 msgstr "0F-0F"
 
-#: qml/ResultsFooter.qml:106
+#: qml/ResultsFooter.qml:107
 #, kde-format
 msgctxt "@action:intoolbar Other game results"
 msgid "Other"
 msgstr "Altro"
 
-#: qml/ResultsFooter.qml:118
+#: qml/ResultsFooter.qml:119
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "1U-0U"
 msgstr "1U-0U"
 
-#: qml/ResultsFooter.qml:125
+#: qml/ResultsFooter.qml:126
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "½U-½U"
 msgstr "½U-½U"
 
-#: qml/ResultsFooter.qml:132
+#: qml/ResultsFooter.qml:133
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "0U-1U"
 msgstr "0U-1U"
 
-#: qml/ResultsFooter.qml:140
+#: qml/ResultsFooter.qml:141
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "½U-0U"
 msgstr "½U-0U"
 
-#: qml/ResultsFooter.qml:147
+#: qml/ResultsFooter.qml:148
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "0U-½U"
 msgstr "0U-½U"
 
-#: qml/ResultsFooter.qml:154
+#: qml/ResultsFooter.qml:155
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "0U-0U"
 msgstr "0U-0U"
 
-#: qml/ResultsFooter.qml:162
+#: qml/ResultsFooter.qml:163
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "½-0"
 msgstr "½-0"
 
-#: qml/ResultsFooter.qml:169
+#: qml/ResultsFooter.qml:170
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "0-0"
 msgstr "0-0"
 
-#: qml/ResultsFooter.qml:176
+#: qml/ResultsFooter.qml:177
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "0-½"
 msgstr "0-½"
 
-#: qml/Sidebar.qml:55
+#: qml/Sidebar.qml:56
 #, kde-format
 msgid "Players"
 msgstr "Giocatori"
 
-#: qml/Sidebar.qml:62
+#: qml/Sidebar.qml:63
 #, kde-format
 msgid "Pairings"
 msgstr "Abbinamenti"
 
-#: qml/Sidebar.qml:69
+#: qml/Sidebar.qml:70
 #, kde-format
 msgid "Standings"
 msgstr "Posizioni"
 
-#: qml/Sidebar.qml:93
+#: qml/Sidebar.qml:94
 #, kde-format
 msgctxt "@action:button"
 msgid "Settings"
 msgstr "Impostazioni"
 
-#: qml/SortPlayersDialog.qml:17
+#: qml/SortPlayersDialog.qml:18
 #, kde-format
 msgctxt "@title"
 msgid "Sort Players"
 msgstr "Ordinamento giocatori"
 
-#: qml/SortPlayersDialog.qml:26
+#: qml/SortPlayersDialog.qml:27
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -756,169 +756,169 @@ msgstr ""
 "Il cambio della valutazione iniziale dopo l'abbinamento del quarto turno non "
 "è consentito nei tornei ufficiali."
 
-#: qml/StandingsPage.qml:69 qml/StandingsPage.qml:79
+#: qml/StandingsPage.qml:70 qml/StandingsPage.qml:80
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Final Standings"
 msgstr "Posizioni finali"
 
-#: qml/StandingsPage.qml:71 qml/StandingsPage.qml:81
+#: qml/StandingsPage.qml:72 qml/StandingsPage.qml:82
 #, kde-format
 msgctxt "@item:inlistbox Standings After Round %1"
 msgid "After Round %1"
 msgstr "Dopo il turno %1"
 
-#: qml/StandingsPage.qml:131
+#: qml/StandingsPage.qml:132
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No standings yet"
 msgstr "Ancora nessuna classifica"
 
-#: qml/TiebreakDialog.qml:17
+#: qml/TiebreakDialog.qml:18
 #, kde-format
 msgctxt "@title:window"
 msgid "Edit Tiebreak"
 msgstr "Modifica spareggio"
 
-#: qml/TournamentSettings.qml:14
+#: qml/TournamentSettings.qml:15
 #, kde-format
 msgctxt "@action:button"
 msgid "Information"
 msgstr "Informazioni"
 
-#: qml/TournamentSettings.qml:20
+#: qml/TournamentSettings.qml:21
 #, kde-format
 msgctxt "@action:button"
 msgid "Format"
 msgstr "Formato"
 
-#: qml/TournamentSettings.qml:26
+#: qml/TournamentSettings.qml:27
 #, kde-format
 msgctxt "@action:button"
 msgid "Calendar"
 msgstr "Calendario"
 
-#: qml/TournamentSettingsCalendar.qml:14
+#: qml/TournamentSettingsCalendar.qml:15
 #, kde-format
 msgctxt "@title"
 msgid "Calendar"
 msgstr "Calendario"
 
-#: qml/TournamentSettingsCalendar.qml:29
+#: qml/TournamentSettingsCalendar.qml:30
 #, kde-format
 msgctxt "round number"
 msgid "Round %1"
 msgstr "Turno %1"
 
-#: qml/TournamentSettingsFormat.qml:16
+#: qml/TournamentSettingsFormat.qml:17
 #, kde-format
 msgctxt "@title"
 msgid "Format"
 msgstr "Formato"
 
-#: qml/TournamentSettingsFormat.qml:19
+#: qml/TournamentSettingsFormat.qml:20
 #, kde-format
 msgctxt "@title:group"
 msgid "Format"
 msgstr "Formato"
 
-#: qml/TournamentSettingsFormat.qml:23
+#: qml/TournamentSettingsFormat.qml:24
 #, kde-format
 msgid "Swiss system"
 msgstr "Sistema svizzero"
 
-#: qml/TournamentSettingsFormat.qml:27
+#: qml/TournamentSettingsFormat.qml:28
 #, kde-format
 msgid "Rounds"
 msgstr "Turni"
 
-#: qml/TournamentSettingsFormat.qml:45
+#: qml/TournamentSettingsFormat.qml:46
 #, kde-format
 msgid "Pairing engine"
 msgstr "Motore degli abbinamenti"
 
-#: qml/TournamentSettingsFormat.qml:46
+#: qml/TournamentSettingsFormat.qml:47
 #, kde-format
 msgid "bbpPairings"
 msgstr "bbpPairings"
 
-#: qml/TournamentSettingsFormat.qml:51
+#: qml/TournamentSettingsFormat.qml:52
 #, kde-format
 msgid "Pairing allocated bye"
 msgstr "Abbinamento assegnato per bye"
 
-#: qml/TournamentSettingsFormat.qml:52
+#: qml/TournamentSettingsFormat.qml:53
 #, kde-format
 msgid "The value of the pairing allocated bye"
 msgstr "Il valore dell'abbinamento assegnato per bye"
 
-#: qml/TournamentSettingsFormat.qml:58
+#: qml/TournamentSettingsFormat.qml:59
 #, kde-format
 msgctxt "@title:group"
 msgid "Tiebreaks"
 msgstr "Spareggi"
 
-#: qml/TournamentSettingsFormat.qml:82
+#: qml/TournamentSettingsFormat.qml:83
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Tiebreak"
 msgstr "Aggiungi spareggio"
 
-#: qml/TournamentSettingsInformation.qml:11
+#: qml/TournamentSettingsInformation.qml:12
 #, kde-format
 msgctxt "@title"
 msgid "Information"
 msgstr "Informazioni"
 
-#: qml/TournamentSettingsInformation.qml:14
+#: qml/TournamentSettingsInformation.qml:15
 #, kde-format
 msgctxt "@title:group"
 msgid "Basic details"
 msgstr "Dettagli di base"
 
-#: qml/TournamentSettingsInformation.qml:19
+#: qml/TournamentSettingsInformation.qml:20
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Tournament name"
 msgstr "Nome del torneo"
 
-#: qml/TournamentSettingsInformation.qml:28
+#: qml/TournamentSettingsInformation.qml:29
 #, kde-format
 msgctxt "@label:textbox"
 msgid "City"
 msgstr "Città"
 
-#: qml/TournamentSettingsInformation.qml:46
+#: qml/TournamentSettingsInformation.qml:47
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Chief arbiter"
 msgstr "Capo arbitro"
 
-#: qml/TournamentSettingsInformation.qml:55
+#: qml/TournamentSettingsInformation.qml:56
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Deputy chief arbiter"
 msgstr "Vice capo arbitro"
 
-#: qml/WelcomePage.qml:20
+#: qml/WelcomePage.qml:21
 #, kde-format
 msgctxt "@title"
 msgid "Welcome to Chessament"
 msgstr "Benvenuto in Chessament"
 
-#: qml/WelcomePage.qml:21
+#: qml/WelcomePage.qml:22
 #, kde-format
 msgctxt "@info"
 msgid "Chessament is a chess tournament manager"
 msgstr "Chessament è un gestore di tornei di scacchi"
 
-#: settings/ChessamentConfigurationView.qml:19
+#: settings/ChessamentConfigurationView.qml:21
 #, kde-format
 msgctxt "@action:button"
 msgid "General"
 msgstr "Generale"
 
-#: settings/ChessamentConfigurationView.qml:30
+#: settings/ChessamentConfigurationView.qml:32
 #, kde-format
 msgctxt "@action:button"
 msgid "Rating Lists"
@@ -936,89 +936,91 @@ msgctxt "@title:group"
 msgid "Account"
 msgstr "Account"
 
-#: settings/GeneralPage.qml:27
-#, kde-format
-msgctxt "@label:button"
+#: settings/GeneralPage.qml:28
+#, fuzzy, kde-format
+#| msgctxt "@label:button"
+#| msgid "Connect Account"
+msgctxt "@action:button"
 msgid "Connect Account"
 msgstr "Connetti account"
 
-#: settings/GeneralPage.qml:34
+#: settings/GeneralPage.qml:33
 #, kde-format
 msgid "Logged in as %1"
 msgstr "Accesso eseguito come %1"
 
-#: settings/GeneralPage.qml:39
+#: settings/GeneralPage.qml:38
 #, kde-format
 msgid "Logout"
 msgstr "Chiudi sessione"
 
-#: settings/RatingListsPage.qml:21 settings/RatingListsPage.qml:127
+#: settings/RatingListsPage.qml:22 settings/RatingListsPage.qml:128
 #, kde-format
 msgctxt "@title"
 msgid "Rating Lists"
 msgstr "Liste di valutazione"
 
-#: settings/RatingListsPage.qml:26
+#: settings/RatingListsPage.qml:27
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Rating List"
 msgstr "Aggiungi lista di valutazione"
 
-#: settings/RatingListsPage.qml:31
+#: settings/RatingListsPage.qml:32
 #, kde-format
 msgctxt "@action:button"
 msgid "Import"
 msgstr "Importa"
 
-#: settings/RatingListsPage.qml:46
+#: settings/RatingListsPage.qml:47
 #, kde-format
 msgctxt "@info:label"
 msgid "Name"
 msgstr "Nome"
 
-#: settings/RatingListsPage.qml:51
+#: settings/RatingListsPage.qml:52
 #, kde-format
 msgctxt "@info:label"
 msgid "Rating list URL"
 msgstr "URL della lista di valutazione"
 
-#: settings/RatingListsPage.qml:71
+#: settings/RatingListsPage.qml:72
 #, kde-format
 msgctxt "@title:window"
 msgid "Importing Rating List"
 msgstr "Importazione della lista di valutazione"
 
-#: settings/RatingListsPage.qml:111
+#: settings/RatingListsPage.qml:112
 #, kde-format
 msgctxt "@title"
 msgid "Delete Rating List"
 msgstr "Elimina lista di valutazione"
 
-#: settings/RatingListsPage.qml:119
+#: settings/RatingListsPage.qml:120
 #, kde-format
 msgctxt "@action:button Delete Rating List"
 msgid "Delete"
 msgstr "Elimina"
 
-#: settings/RatingListsPage.qml:132
+#: settings/RatingListsPage.qml:133
 #, kde-format
 msgctxt "@info:status"
 msgid "No rating lists yet."
 msgstr "Ancora nessuna lista di valutazione."
 
-#: settings/RatingListsPage.qml:152
+#: settings/RatingListsPage.qml:153
 #, kde-format
 msgctxt "@action:button"
 msgid "Delete Rating List"
 msgstr "Elimina lista di valutazione"
 
-#: settings/RatingListsPage.qml:160
+#: settings/RatingListsPage.qml:161
 #, kde-format
 msgctxt "@action:button"
 msgid "Delete rating list"
 msgstr "Elimina lista di valutazione"
 
-#: settings/RatingListsPage.qml:170
+#: settings/RatingListsPage.qml:171
 #, kde-format
 msgctxt "@action:button"
 msgid "Add rating list"
@@ -1171,6 +1173,10 @@ msgstr "Risultato «%1» sconosciuto per l'abbinamento «%2»."
 #, kde-format
 msgid "Pairing \"%1\" has no opponent."
 msgstr "L'abbinamento «%1» non ha avversari."
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Connect account"
+#~ msgstr "Connetti account"
 
 #~ msgctxt "@action:button"
 #~ msgid "Add player"
