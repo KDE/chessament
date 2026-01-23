@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-22 00:55+0000\n"
-"PO-Revision-Date: 2026-01-09 11:35+0100\n"
+"PO-Revision-Date: 2026-01-22 10:33+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -309,7 +309,7 @@ msgstr "Fitxer"
 #, kde-format
 msgctxt "@action:menu"
 msgid "View"
-msgstr ""
+msgstr "Vista"
 
 #: qml/components/MenuBar.qml:47
 #, kde-format
@@ -459,22 +459,19 @@ msgstr "Elimina els aparellaments d'esta ronda i les següents…"
 #, kde-format
 msgctxt "@info"
 msgid "The tournament hasn't started yet."
-msgstr ""
+msgstr "El torneig encara no ha començat."
 
 #: qml/PairingsPage.qml:110
-#, fuzzy, kde-format
-#| msgctxt "@info:placeholder"
-#| msgid "All games of round %1 have finished"
+#, kde-format
 msgctxt "@info"
 msgid "Round %1 has finished."
-msgstr "Han acabat totes les partides de la ronda %1"
+msgstr "Ha acabat la ronda %1."
 
 #: qml/PairingsPage.qml:114
-#, fuzzy, kde-format
-#| msgid "Pair Round %1"
+#, kde-format
 msgctxt "@action:button"
 msgid "Pair Round %1"
-msgstr "Ronda d'aparellament %1"
+msgstr "Aparella la ronda %1"
 
 #: qml/PairingsPage.qml:157
 #, kde-format
@@ -582,7 +579,7 @@ msgstr "Afig un jugador…"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Open Player Details"
-msgstr ""
+msgstr "Obri els detalls del jugador"
 
 #: qml/PlayersPage.qml:206
 #, kde-format
@@ -938,12 +935,10 @@ msgid "Account"
 msgstr "Compte"
 
 #: settings/GeneralPage.qml:28
-#, fuzzy, kde-format
-#| msgctxt "@label:button"
-#| msgid "Connect Account"
+#, kde-format
 msgctxt "@action:button"
 msgid "Connect Account"
-msgstr "Connecta amb el compte"
+msgstr "Connecta el compte"
 
 #: settings/GeneralPage.qml:33
 #, kde-format
@@ -1175,7 +1170,3 @@ msgstr "Resultat «%1» desconegut a l'aparellament «%2»."
 #, kde-format
 msgid "Pairing \"%1\" has no opponent."
 msgstr "L'aparellament «%1» no té oponent."
-
-#~ msgctxt "@action:inmenu"
-#~ msgid "Connect account"
-#~ msgstr "Connecta amb el compte"

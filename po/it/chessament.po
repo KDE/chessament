@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-22 00:55+0000\n"
-"PO-Revision-Date: 2026-01-11 19:04+0100\n"
+"PO-Revision-Date: 2026-01-22 22:41+0100\n"
 "Last-Translator: Valter Mura <valtermura@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.12.0\n"
+"X-Generator: Lokalize 25.12.1\n"
 
 #: byesmodel.cpp:68
 #, kde-format
@@ -308,7 +308,7 @@ msgstr "File"
 #, kde-format
 msgctxt "@action:menu"
 msgid "View"
-msgstr ""
+msgstr "Visualizza"
 
 #: qml/components/MenuBar.qml:47
 #, kde-format
@@ -458,19 +458,16 @@ msgstr "Rimuovi gli abbinamenti di questo e dei turni successivi…"
 #, kde-format
 msgctxt "@info"
 msgid "The tournament hasn't started yet."
-msgstr ""
+msgstr "Il torneo non è ancora iniziato."
 
 #: qml/PairingsPage.qml:110
-#, fuzzy, kde-format
-#| msgctxt "@info:placeholder"
-#| msgid "All games of round %1 have finished"
+#, kde-format
 msgctxt "@info"
 msgid "Round %1 has finished."
-msgstr "Tutte le partite del turno %1 sono terminate"
+msgstr "Il turno %1 è terminato."
 
 #: qml/PairingsPage.qml:114
-#, fuzzy, kde-format
-#| msgid "Pair Round %1"
+#, kde-format
 msgctxt "@action:button"
 msgid "Pair Round %1"
 msgstr "Abbinamento turno %1"
@@ -581,7 +578,7 @@ msgstr "Aggiunta giocatore…"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Open Player Details"
-msgstr ""
+msgstr "Apri dettagli giocatore"
 
 #: qml/PlayersPage.qml:206
 #, kde-format
@@ -937,9 +934,7 @@ msgid "Account"
 msgstr "Account"
 
 #: settings/GeneralPage.qml:28
-#, fuzzy, kde-format
-#| msgctxt "@label:button"
-#| msgid "Connect Account"
+#, kde-format
 msgctxt "@action:button"
 msgid "Connect Account"
 msgstr "Connetti account"

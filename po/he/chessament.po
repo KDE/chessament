@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-22 00:55+0000\n"
-"PO-Revision-Date: 2026-01-21 08:55+0200\n"
+"PO-Revision-Date: 2026-01-22 09:04+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -578,7 +578,7 @@ msgstr "הוספת שחקן/נית…"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Open Player Details"
-msgstr ""
+msgstr "פתיחת פרטי שחקן/ית"
 
 #: qml/PlayersPage.qml:206
 #, kde-format
@@ -937,9 +937,7 @@ msgid "Account"
 msgstr "חשבון"
 
 #: settings/GeneralPage.qml:28
-#, fuzzy, kde-format
-#| msgctxt "@label:button"
-#| msgid "Connect Account"
+#, kde-format
 msgctxt "@action:button"
 msgid "Connect Account"
 msgstr "חיבור חשבון"

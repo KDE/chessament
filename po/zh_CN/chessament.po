@@ -460,19 +460,16 @@ msgid "The tournament hasn't started yet."
 msgstr ""
 
 #: qml/PairingsPage.qml:110
-#, fuzzy, kde-format
-#| msgctxt "@info:placeholder"
-#| msgid "All games of round %1 have finished"
+#, kde-format
 msgctxt "@info"
 msgid "Round %1 has finished."
-msgstr "第 %1 轮的所有比赛已经结束"
+msgstr ""
 
 #: qml/PairingsPage.qml:114
-#, fuzzy, kde-format
-#| msgid "Pair Round %1"
+#, kde-format
 msgctxt "@action:button"
 msgid "Pair Round %1"
-msgstr "配对轮次 %1"
+msgstr ""
 
 #: qml/PairingsPage.qml:157
 #, kde-format
@@ -932,12 +929,10 @@ msgid "Account"
 msgstr "账户"
 
 #: settings/GeneralPage.qml:28
-#, fuzzy, kde-format
-#| msgctxt "@label:button"
-#| msgid "Connect Account"
+#, kde-format
 msgctxt "@action:button"
 msgid "Connect Account"
-msgstr "关联账户"
+msgstr ""
 
 #: settings/GeneralPage.qml:33
 #, kde-format
@@ -1165,7 +1160,3 @@ msgstr "对阵“%2”时出现未知结果“%1”。"
 #, kde-format
 msgid "Pairing \"%1\" has no opponent."
 msgstr "对阵“%1”无对手。"
-
-#~ msgctxt "@action:inmenu"
-#~ msgid "Connect account"
-#~ msgstr "关联账户"

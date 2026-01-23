@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-22 00:55+0000\n"
-"PO-Revision-Date: 2026-01-21 09:46+0100\n"
+"PO-Revision-Date: 2026-01-22 10:33+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -579,7 +579,7 @@ msgstr "Afegeix un jugador…"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Open Player Details"
-msgstr ""
+msgstr "Obre els detalls del jugador"
 
 #: qml/PlayersPage.qml:206
 #, kde-format
@@ -935,12 +935,10 @@ msgid "Account"
 msgstr "Compte"
 
 #: settings/GeneralPage.qml:28
-#, fuzzy, kde-format
-#| msgctxt "@label:button"
-#| msgid "Connect Account"
+#, kde-format
 msgctxt "@action:button"
 msgid "Connect Account"
-msgstr "Connecta amb el compte"
+msgstr "Connecta el compte"
 
 #: settings/GeneralPage.qml:33
 #, kde-format
