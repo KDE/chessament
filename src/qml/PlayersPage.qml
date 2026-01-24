@@ -78,7 +78,8 @@ TablePage {
             text: KI18n.i18nc("@action:intoolbar", "Sort Players…")
             enabled: Controller.tournament.numberOfPlayers > 1
             onTriggered: {
-                Qt.createComponent("org.kde.chessament", "SortPlayersDialog").createObject(root.Controls.ApplicationWindow.window, {}).open();
+                const dialog = Qt.createComponent("org.kde.chessament", "SortPlayersDialog").createObject(root.Controls.ApplicationWindow.window, {}) as SortPlayersDialog;
+                dialog.open();
             }
         },
         Kirigami.Action {

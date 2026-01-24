@@ -42,7 +42,7 @@ TablePage {
         currentFolder: StandardPaths.standardLocations(StandardPaths.HomeLocation)[0]
         onAccepted: {
             const fileName = new URL(selectedFile).pathname;
-            Controller.saveStandingsDocument(fileName, round);
+            Controller.saveStandingsDocument(fileName, root.round);
         }
     }
 
