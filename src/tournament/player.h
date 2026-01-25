@@ -247,6 +247,8 @@ public:
      */
     [[nodiscard]] QString sex() const;
 
+    [[nodiscard]] QByteArray extraString() const;
+
     /*!
      * Returns a JSON representation of the player.
      *
@@ -290,6 +292,7 @@ public Q_SLOTS:
     void setFederation(const QString &federation);
     void setOrigin(const QString &origin);
     void setSex(const QString &sex);
+    void setExtra(const QByteArray &extra);
 
 Q_SIGNALS:
     void idChanged();
@@ -316,4 +319,5 @@ private:
     QString m_federation;
     QString m_origin;
     QString m_sex;
+    QJsonObject m_extra;
 };

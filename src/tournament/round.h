@@ -23,6 +23,7 @@ public:
     [[nodiscard]] int id() const;
     [[nodiscard]] int number() const;
     [[nodiscard]] QDateTime dateTime() const;
+    [[nodiscard]] QByteArray extraString() const;
 
     [[nodiscard]] QList<Pairing *> pairings() const;
     Pairing *getPairing(int board);
@@ -33,6 +34,7 @@ public Q_SLOTS:
     void setId(int id);
     void setNumber(int number);
     void setDateTime(const QDateTime &dateTime);
+    void setExtra(const QByteArray &extra);
 
 Q_SIGNALS:
     void idChanged();
@@ -43,6 +45,7 @@ private:
     int m_id;
     int m_number;
     QDateTime m_dateTime;
+    QJsonObject m_extra;
 
     std::vector<std::unique_ptr<Pairing>> m_pairings;
 

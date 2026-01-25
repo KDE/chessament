@@ -203,6 +203,7 @@ std::expected<void, QString> Tournament::addPlayer(std::unique_ptr<Player> playe
     query.bindValue(u":federation"_s, player->federation());
     query.bindValue(u":origin"_s, player->origin());
     query.bindValue(u":sex"_s, player->sex());
+    query.bindValue(u":extra"_s, player->extraString());
     query.bindValue(u":tournament"_s, m_id);
 
     if (!query.exec()) {
@@ -257,6 +258,7 @@ void Tournament::savePlayer(Player *player)
     query.bindValue(u":federation"_s, player->federation());
     query.bindValue(u":origin"_s, player->origin());
     query.bindValue(u":sex"_s, player->sex());
+    query.bindValue(u":extra"_s, player->extraString());
     query.bindValue(u":tournament"_s, m_id);
     query.exec();
 
@@ -503,17 +505,19 @@ std::expected<void, QString> Tournament::ensureRoundExists(int round)
 
     if (m_rounds.size() < static_cast<size_t>(round)) {
         for (size_t i = m_rounds.size() + 1; i <= static_cast<size_t>(round); ++i) {
+            auto round = std::make_unique<Round>();
+
             QSqlQuery query(m_event->getDB());
             query.prepare(ADD_ROUND_QUERY);
             query.bindValue(u":number"_s, static_cast<qulonglong>(i));
             query.bindValue(u":tournament"_s, m_id);
+            query.bindValue(u":extra"_s, round->extraString());
             query.exec();
 
             if (query.lastError().isValid()) {
                 return std::unexpected(query.lastError().text());
             }
 
-            auto round = std::make_unique<Round>();
             round->setId(query.lastInsertId().toInt());
             m_rounds.push_back(std::move(round));
         }
@@ -530,6 +534,7 @@ std::expected<void, QString> Tournament::saveRound(Round *round)
     query.prepare(UPDATE_ROUND_QUERY);
     query.bindValue(u":id"_s, round->id());
     query.bindValue(u":datetime"_s, dateTime);
+    query.bindValue(u":extra"_s, round->extraString());
     query.exec();
 
     if (query.lastError().isValid()) {
@@ -583,6 +588,7 @@ std::expected<void, QString> Tournament::savePairing(Pairing *pairing, int round
     }
     query.bindValue(u":whiteResult"_s, std::to_underlying(pairing->whiteResult()));
     query.bindValue(u":blackResult"_s, std::to_underlying(pairing->blackResult()));
+    query.bindValue(u":extra"_s, pairing->extraString());
     query.exec();
 
     if (query.lastError().isValid()) {
@@ -1150,6 +1156,7 @@ std::expected<void, QString> Tournament::loadPlayers()
     int federationNo = query.record().indexOf("federation");
     int originNo = query.record().indexOf("origin");
     int sexNo = query.record().indexOf("sex");
+    int extraNo = query.record().indexOf("extra");
 
     while (query.next()) {
         auto player = std::make_unique<Player>(query.value(stRankNo).toInt(),
@@ -1163,6 +1170,7 @@ std::expected<void, QString> Tournament::loadPlayers()
                                                query.value(originNo).toString(),
                                                query.value(sexNo).toString());
         player->setId(query.value(idNo).toInt());
+        player->setExtra(query.value(extraNo).toByteArray());
         m_players.push_back(std::move(player));
     }
 
@@ -1183,12 +1191,14 @@ std::expected<void, QString> Tournament::loadRounds()
     int idNo = query.record().indexOf("id");
     int numberNo = query.record().indexOf("number");
     int dateTimeNo = query.record().indexOf("datetime");
+    int extraNo = query.record().indexOf("extra");
 
     while (query.next()) {
         auto round = std::make_unique<Round>();
         round->setId(query.value(idNo).toInt());
         round->setNumber(query.value(numberNo).toInt());
         round->setDateTime(query.value(dateTimeNo).toDateTime());
+        round->setExtra(query.value(extraNo).toByteArray());
         m_rounds.push_back(std::move(round));
     }
 

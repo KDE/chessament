@@ -44,19 +44,20 @@ const QString PLAYERS_TABLE_SCHEMA =
     u"federation TEXT,"_s
     u"origin TEXT,"_s
     u"sex TEXT,"_s
+    u"extra TEXT,"_s
     u"tournament TEXT NOT NULL,"_s
     u"FOREIGN KEY (tournament) REFERENCES tournaments(id)"_s
     u");"_s;
 
 const QString ADD_PLAYER_QUERY =
-    u"INSERT INTO players(startingRank, title, name, rating, nationalRating, playerId, birthDate, federation, origin, sex, tournament) "_s
-    u"VALUES (:startingRank, :title, :name, :rating, :nationalRating, :playerId, :birthDate, :federation, :origin, :sex, :tournament);"_s;
+    u"INSERT INTO players(startingRank, title, name, rating, nationalRating, playerId, birthDate, federation, origin, sex, extra, tournament) "_s
+    u"VALUES (:startingRank, :title, :name, :rating, :nationalRating, :playerId, :birthDate, :federation, :origin, :sex, :extra, :tournament);"_s;
 
 const QString GET_PLAYERS_QUERY = u"SELECT * FROM players WHERE tournament = :tournament;"_s;
 
 const QString UPDATE_PLAYER_QUERY =
-    u"UPDATE players SET (startingRank, title, name, rating, nationalRating, playerId, birthDate, federation, origin, sex, tournament) = "_s
-    u"(:startingRank, :title, :name, :rating, :nationalRating, :playerId, :birthDate, :federation, :origin, :sex, :tournament) "_s
+    u"UPDATE players SET (startingRank, title, name, rating, nationalRating, playerId, birthDate, federation, origin, sex, extra, tournament) = "_s
+    u"(:startingRank, :title, :name, :rating, :nationalRating, :playerId, :birthDate, :federation, :origin, :sex, :extra, :tournament) "_s
     u"WHERE id = :id;"_s;
 
 const QString ROUNDS_TABLE_SCHEMA =
@@ -65,19 +66,20 @@ const QString ROUNDS_TABLE_SCHEMA =
     u"number INTEGER NOT NULL,"_s
     u"tournament TEXT NOT NULL,"_s
     u"datetime TEXT,"_s
+    u"extra TEXT,"_s
     u"FOREIGN KEY (tournament) REFERENCES tournaments(id),"_s
     u"UNIQUE (tournament, number)"_s
     u");"_s;
 
 const QString ADD_ROUND_QUERY =
-    u"INSERT INTO rounds(number, tournament) "_s
-    u"VALUES (:number, :tournament);"_s;
+    u"INSERT INTO rounds(number, tournament, extra) "_s
+    u"VALUES (:number, :tournament, :extra);"_s;
 
 const QString GET_ROUNDS_QUERY = u"SELECT * FROM rounds WHERE tournament = :tournament;"_s;
 
 const QString UPDATE_ROUND_QUERY =
-    u"UPDATE rounds SET (datetime) = "_s
-    u"(:datetime) "_s
+    u"UPDATE rounds SET (datetime, extra) = "_s
+    u"(:datetime, :extra) "_s
     u"WHERE id = :id;"_s;
 
 const QString PAIRINGS_TABLE_SCHEMA =
@@ -89,14 +91,15 @@ const QString PAIRINGS_TABLE_SCHEMA =
     u"whiteResult INTEGER NOT NULL,"_s
     u"blackResult INTEGER NOT NULL,"_s
     u"round INTEGER NOT NULL,"_s
+    u"extra TEXT,"_s
     u"FOREIGN KEY(whitePlayer) REFERENCES players(id),"_s
     u"FOREIGN KEY(blackPlayer) REFERENCES players(id),"_s
     u"FOREIGN KEY(round) REFERENCES rounds(id)"_s
     u");"_s;
 
 const QString ADD_PAIRING_QUERY =
-    u"INSERT INTO pairings(id, board, whitePlayer, blackPlayer, whiteResult, blackResult, round) "_s
-    u"VALUES (:id, :board, :whitePlayer, :blackPlayer, :whiteResult, :blackResult, :round);"_s;
+    u"INSERT INTO pairings(id, board, whitePlayer, blackPlayer, whiteResult, blackResult, round, extra) "_s
+    u"VALUES (:id, :board, :whitePlayer, :blackPlayer, :whiteResult, :blackResult, :round, :extra);"_s;
 
 const QString GET_PAIRINGS_QUERY =
     u"SELECT * FROM pairings "_s
@@ -105,8 +108,8 @@ const QString GET_PAIRINGS_QUERY =
     u"ORDER BY rounds.number, pairings.board;"_s;
 
 const QString UPDATE_PAIRING_QUERY =
-    u"UPDATE pairings SET (board, whitePlayer, blackPlayer, whiteResult, blackResult) = "_s
-    u"(:board, :whitePlayer, :blackPlayer, :whiteResult, :blackResult) "
+    u"UPDATE pairings SET (board, whitePlayer, blackPlayer, whiteResult, blackResult, extra) = "_s
+    u"(:board, :whitePlayer, :blackPlayer, :whiteResult, :blackResult, :extra) "
     u"WHERE id = :id;"_s;
 
 const QString DELETE_PAIRING_QUERY = u"DELETE FROM pairings WHERE id = :id;"_s;

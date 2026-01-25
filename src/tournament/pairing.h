@@ -402,6 +402,8 @@ public:
      */
     PartialResult blackResult();
 
+    [[nodiscard]] QByteArray extraString() const;
+
     Pairing::PartialResult getResultOfPlayer(Player *p)
     {
         if (p == m_whitePlayer) {
@@ -438,6 +440,7 @@ public Q_SLOTS:
     void setBlackResult(Pairing::PartialResult blackResult);
     void setResult(Pairing::Result result);
     void setResult(Pairing::PartialResult whiteResult, Pairing::PartialResult blackResult);
+    void setExtra(const QByteArray &extra);
 
 Q_SIGNALS:
     void idChanged();
@@ -454,4 +457,5 @@ private:
     Pairing::PartialResult m_whiteResult = PartialResult::Unknown;
     Player *m_blackPlayer;
     Pairing::PartialResult m_blackResult = PartialResult::Unknown;
+    QJsonObject m_extra;
 };

@@ -108,6 +108,21 @@ void Pairing::setResult(PartialResult whiteResult, PartialResult blackResult)
     setBlackResult(blackResult);
 }
 
+QByteArray Pairing::extraString() const
+{
+    const auto doc = QJsonDocument{m_extra};
+    return doc.toJson(QJsonDocument::JsonFormat::Compact);
+}
+
+void Pairing::setExtra(const QByteArray &extra)
+{
+    const auto doc = QJsonDocument::fromJson(extra);
+
+    Q_ASSERT(doc.isObject());
+
+    m_extra = doc.object();
+}
+
 Player *Pairing::opponent(const Player *player)
 {
     if (player == m_whitePlayer) {

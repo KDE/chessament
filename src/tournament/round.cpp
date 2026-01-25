@@ -47,6 +47,21 @@ void Round::setDateTime(const QDateTime &dateTime)
     Q_EMIT dateTimeChanged();
 }
 
+QByteArray Round::extraString() const
+{
+    const auto doc = QJsonDocument{m_extra};
+    return doc.toJson(QJsonDocument::JsonFormat::Compact);
+}
+
+void Round::setExtra(const QByteArray &extra)
+{
+    const auto doc = QJsonDocument::fromJson(extra);
+
+    Q_ASSERT(doc.isObject());
+
+    m_extra = doc.object();
+}
+
 QList<Pairing *> Round::pairings() const
 {
     QList<Pairing *> result;

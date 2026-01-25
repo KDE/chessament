@@ -192,6 +192,21 @@ void Player::setSex(const QString &sex)
     Q_EMIT sexChanged();
 }
 
+QByteArray Player::extraString() const
+{
+    const auto doc = QJsonDocument{m_extra};
+    return doc.toJson(QJsonDocument::JsonFormat::Compact);
+}
+
+void Player::setExtra(const QByteArray &extra)
+{
+    const auto doc = QJsonDocument::fromJson(extra);
+
+    Q_ASSERT(doc.isObject());
+
+    m_extra = doc.object();
+}
+
 QJsonObject Player::toJson() const
 {
     QJsonObject json;
