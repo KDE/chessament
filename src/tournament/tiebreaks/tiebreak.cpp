@@ -27,6 +27,11 @@ QList<QVariantMap> Tiebreak::options()
     return {};
 }
 
+void Tiebreak::setOption(const QString &key, const QVariant &value)
+{
+    m_options[key] = value;
+}
+
 void Tiebreak::setOptions(const QList<QVariantMap> &options)
 {
     for (const auto &option : options) {
@@ -39,6 +44,12 @@ void Tiebreak::setOptions(const QVariantMap &options)
     for (const auto option : options.asKeyValueRange()) {
         m_options[option.first] = option.second;
     }
+}
+
+std::expected<void, QString> Tiebreak::setTrfOptions(const QList<QString> &options)
+{
+    Q_UNUSED(options);
+    return {};
 }
 
 QJsonObject Tiebreak::toJson()

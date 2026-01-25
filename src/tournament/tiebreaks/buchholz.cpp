@@ -25,6 +25,22 @@ QList<QVariantMap> Buchholz::options()
 };*/
 }
 
+std::expected<void, QString> Buchholz::setTrfOptions(const QList<QString> &options)
+{
+    for (const auto &option : options) {
+        if (option.startsWith(u'C', Qt::CaseSensitivity::CaseInsensitive)) {
+            bool ok;
+            const int cutLowest = option.mid(1).toInt(&ok);
+            if (!ok || cutLowest <= 0) {
+                return std::unexpected(i18nc("@info", "Unsupported tiebreak option \"%1\"", option));
+            }
+            setOption("cut_lowest"_L1, cutLowest);
+        }
+    }
+
+    return {};
+}
+
 double Buchholz::calculate(Tournament *tournament, State state, QList<Player *> players, Player *player)
 {
     Q_UNUSED(tournament)

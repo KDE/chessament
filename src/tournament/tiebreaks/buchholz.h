@@ -30,7 +30,11 @@ public:
 
     [[nodiscard]] QString code() override
     {
-        return "BH"_L1;
+        const auto cutLowest = option("cut_lowest"_L1, 0).toInt();
+        if (cutLowest == 0) {
+            return "BH"_L1;
+        }
+        return "BH/C%1"_L1.arg(QString::number(cutLowest));
     }
 
     [[nodiscard]] bool isConfigurable() override
@@ -39,6 +43,8 @@ public:
     }
 
     [[nodiscard]] QList<QVariantMap> options() override;
+
+    std::expected<void, QString> setTrfOptions(const QList<QString> &options) override;
 
     double calculate(Tournament *tournament, State state, QList<Player *> players, Player *player) override;
 };

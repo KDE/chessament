@@ -41,6 +41,8 @@ QString reportFieldString(Trf::Field field)
         return QStringLiteral("132");
     case Trf::Field::ProgramName:
         return "182"_L1;
+    case Trf::Field::Tiebreaks:
+        return "212"_L1;
     case Trf::Field::Unknown:
         return {};
     }
@@ -77,6 +79,8 @@ Trf::Field reportFieldForString(QStringView number)
         return Trf::Field::TimeControl;
     } else if (number == QStringLiteral("132")) {
         return Trf::Field::Calendar;
+    } else if (number == "212"_L1) {
+        return Trf::Field::Tiebreaks;
     }
     return Trf::Field::Unknown;
 }

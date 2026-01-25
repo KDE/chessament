@@ -6,6 +6,8 @@
 #include <QList>
 #include <QVariant>
 
+#include <expected>
+
 class Tournament;
 class Player;
 class State;
@@ -31,9 +33,13 @@ public:
 
     [[nodiscard]] QVariant option(const QString &key, const QVariant &defaultValue = {});
 
+    void setOption(const QString &key, const QVariant &value);
+
     void setOptions(const QList<QVariantMap> &options);
 
     void setOptions(const QVariantMap &options);
+
+    virtual std::expected<void, QString> setTrfOptions(const QList<QString> &options);
 
     virtual double calculate(Tournament *tournament, State state, QList<Player *> players, Player *player) = 0;
 

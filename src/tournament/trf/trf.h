@@ -27,6 +27,7 @@ enum class Field {
     TimeControl,
     Calendar,
     ProgramName,
+    Tiebreaks,
     Unknown,
 };
 Q_ENUM_NS(Field)

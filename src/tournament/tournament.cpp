@@ -144,6 +144,28 @@ void Tournament::setTiebreaks(std::vector<std::unique_ptr<Tiebreak>> tiebreaks)
     saveTiebreaks();
 }
 
+std::expected<void, QString> Tournament::setTiebreaksFromTrf(const QString &line)
+{
+    std::vector<std::unique_ptr<Tiebreak>> tiebreaks;
+
+    const auto codes = line.split(u',', Qt::SkipEmptyParts);
+
+    for (const auto &code : codes) {
+        auto tiebreak = tiebreakFromTrf(code);
+        if (!tiebreak) {
+            return std::unexpected(tiebreak.error());
+        }
+        if (tiebreak == nullptr) {
+            continue;
+        }
+        tiebreaks.push_back(std::move(*tiebreak));
+    }
+
+    setTiebreaks(std::move(tiebreaks));
+
+    return {};
+}
+
 int Tournament::numberOfRounds() const
 {
     return m_numberOfRounds;
@@ -478,6 +500,28 @@ std::unique_ptr<Tiebreak> Tournament::tiebreak(const QString &id)
         return std::make_unique<AverageBuchholzOfOpponents>();
     }
     return nullptr;
+}
+
+std::expected<std::unique_ptr<Tiebreak>, QString> Tournament::tiebreakFromTrf(const QString &code)
+{
+    if (code.startsWith("OTHER_"_L1, Qt::CaseSensitivity::CaseInsensitive)) {
+        qWarning() << "Unsupported tiebreak" << code;
+        return nullptr;
+    }
+
+    const auto options = code.split(u'/', Qt::SkipEmptyParts);
+
+    auto tiebreak = Tournament::tiebreak(options[0].toLower());
+    if (tiebreak == nullptr) {
+        qWarning() << "Unsupported tiebreak" << code;
+        return nullptr;
+    }
+
+    if (const auto ok = tiebreak->setTrfOptions(options.mid(1)); !ok) {
+        return std::unexpected(ok.error());
+    }
+
+    return tiebreak;
 }
 
 void Tournament::setInitialColor(Tournament::InitialColor color)

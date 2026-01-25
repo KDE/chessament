@@ -132,6 +132,12 @@ std::expected<void, QString> TrfReader::readField(QStringView line)
         }
         break;
     }
+    case Trf::Field::Tiebreaks: {
+        if (const auto ok = m_tournament->setTiebreaksFromTrf(value.toString()); !ok) {
+            return ok;
+        }
+        break;
+    }
     case Trf::Field::Player: {
         if (const auto player = readPlayer(line); !player) {
             return std::unexpected(player.error());

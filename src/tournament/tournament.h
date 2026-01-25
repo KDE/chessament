@@ -192,7 +192,11 @@ public:
 
     static std::unique_ptr<Tiebreak> tiebreak(const QString &id);
 
+    static std::expected<std::unique_ptr<Tiebreak>, QString> tiebreakFromTrf(const QString &code);
+
     void setTiebreaks(std::vector<std::unique_ptr<Tiebreak>> tiebreaks);
+
+    std::expected<void, QString> setTiebreaksFromTrf(const QString &line);
 
     [[nodiscard]] Round *round(int number) const;
 

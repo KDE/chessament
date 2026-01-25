@@ -60,14 +60,14 @@ void TiebreaksTest::testTiebreaks_data()
     QTest::addColumn<QString>("fileName");
     QTest::addColumn<QString>("expected");
     QTest::addColumn<int>("precision");
-    QTest::addColumn<QString>("tiebreakName");
+    QTest::addColumn<QString>("tiebreaks");
 
-    QTest::newRow("tournament_1.txt Buchholz") << u"tournament_1.txt"_s << u".standings"_s << 1 << u"bh"_s;
-    QTest::newRow("buchholz_1.trf") << u"buchholz_1.trf"_s << u".standings"_s << 1 << u"bh"_s;
-    QTest::newRow("buchholz_2.trf") << u"buchholz_2.trf"_s << u".standings"_s << 1 << u"bh"_s;
-    QTest::newRow("buchholz_3.trf") << u"buchholz_3.trf"_s << u".standings"_s << 1 << u"bh"_s;
-    QTest::newRow("buchholz_4.trf") << u"buchholz_4.trf"_s << u".standings"_s << 1 << u"bh"_s;
-    QTest::newRow("tournament_1.txt AOB") << u"tournament_1.txt"_s << u".aob"_s << 2 << u"aob"_s;
+    QTest::newRow("tournament_1.txt Buchholz") << u"tournament_1.txt"_s << u".standings"_s << 1 << u"pts,bh"_s;
+    QTest::newRow("buchholz_1.trf") << u"buchholz_1.trf"_s << u".standings"_s << 1 << u"pts,bh"_s;
+    QTest::newRow("buchholz_2.trf") << u"buchholz_2.trf"_s << u".standings"_s << 1 << u"pts,bh"_s;
+    QTest::newRow("buchholz_3.trf") << u"buchholz_3.trf"_s << u".standings"_s << 1 << u"pts,bh"_s;
+    QTest::newRow("buchholz_4.trf") << u"buchholz_4.trf"_s << u".standings"_s << 1 << u"pts,bh"_s;
+    QTest::newRow("tournament_1.txt AOB") << u"tournament_1.txt"_s << u".aob"_s << 2 << u"pts,aob"_s;
 }
 
 void TiebreaksTest::testTiebreaks()
@@ -75,7 +75,7 @@ void TiebreaksTest::testTiebreaks()
     QFETCH(QString, fileName);
     QFETCH(QString, expected);
     QFETCH(int, precision);
-    QFETCH(QString, tiebreakName);
+    QFETCH(QString, tiebreaks);
 
     const auto expectedStandings = readStandings(QLatin1StringView(DATA_DIR) + "/"_L1 + fileName + expected);
 
@@ -85,11 +85,7 @@ void TiebreaksTest::testTiebreaks()
     auto tournament = event->importTournament(QLatin1StringView(DATA_DIR) + "/"_L1 + fileName);
     QVERIFY(tournament.has_value());
 
-    std::vector<std::unique_ptr<Tiebreak>> tiebreaks;
-    tiebreaks.push_back(std::make_unique<Points>());
-    auto tiebreak = Tournament::tiebreak(tiebreakName);
-    tiebreaks.push_back(std::move(tiebreak));
-    (*tournament)->setTiebreaks(std::move(tiebreaks));
+    QVERIFY((*tournament)->setTiebreaksFromTrf(tiebreaks));
 
     const auto state = (*tournament)->getState();
     const auto standings = (*tournament)->getStandings(state);
