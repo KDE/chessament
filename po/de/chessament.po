@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-22 00:55+0000\n"
+"POT-Creation-Date: 2026-01-25 00:41+0000\n"
 "PO-Revision-Date: 2025-06-25 18:44+0200\n"
 "Last-Translator: Philipp Kiemle <l10n.daphipz@fastmail.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -461,7 +461,7 @@ msgctxt "@option:check"
 msgid "Hide finished games"
 msgstr ""
 
-#: qml/PairingsPage.qml:64 qml/PlayersPage.qml:87 qml/StandingsPage.qml:53
+#: qml/PairingsPage.qml:64 qml/PlayersPage.qml:88 qml/StandingsPage.qml:53
 #, fuzzy, kde-format
 #| msgctxt "@action:button"
 #| msgid "Print"
@@ -469,7 +469,7 @@ msgctxt "@action:intoolbar"
 msgid "Print…"
 msgstr "Drucken"
 
-#: qml/PairingsPage.qml:69 qml/PlayersPage.qml:92 qml/StandingsPage.qml:58
+#: qml/PairingsPage.qml:69 qml/PlayersPage.qml:93 qml/StandingsPage.qml:58
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Export as PDF…"
@@ -611,7 +611,7 @@ msgctxt "@action:intoolbar"
 msgid "Sort Players…"
 msgstr "Spieler"
 
-#: qml/PlayersPage.qml:98
+#: qml/PlayersPage.qml:99
 #, fuzzy, kde-format
 #| msgctxt "@action:button"
 #| msgid "Add player"
@@ -619,19 +619,19 @@ msgctxt "@action:intoolbar"
 msgid "Add Player…"
 msgstr "Spieler hinzufügen"
 
-#: qml/PlayersPage.qml:109
+#: qml/PlayersPage.qml:110
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Open Player Details"
 msgstr ""
 
-#: qml/PlayersPage.qml:206
+#: qml/PlayersPage.qml:207
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No players yet"
 msgstr "Bisher noch keine Spieler"
 
-#: qml/PlayersPage.qml:210
+#: qml/PlayersPage.qml:211
 #, fuzzy, kde-format
 #| msgctxt "@action:button"
 #| msgid "Add player"
@@ -639,7 +639,7 @@ msgctxt "@action:button"
 msgid "Add Player…"
 msgstr "Spieler hinzufügen"
 
-#: qml/PlayersPage.qml:228
+#: qml/PlayersPage.qml:229
 #, fuzzy, kde-format
 #| msgctxt "@title:window"
 #| msgid "Add player"
@@ -649,7 +649,7 @@ msgid_plural "%1 players"
 msgstr[0] "Spieler hinzufügen"
 msgstr[1] "Spieler hinzufügen"
 
-#: qml/PlayersPage.qml:229
+#: qml/PlayersPage.qml:230
 #, kde-format
 msgctxt "@info:status Number of rated players"
 msgid "1 rated"
@@ -657,7 +657,7 @@ msgid_plural "%1 rated"
 msgstr[0] ""
 msgstr[1] ""
 
-#: qml/PlayersPage.qml:231
+#: qml/PlayersPage.qml:232
 #, kde-format
 msgctxt "@info:status players, rated"
 msgid "%1, %2"

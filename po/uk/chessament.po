@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-22 00:55+0000\n"
+"POT-Creation-Date: 2026-01-25 00:41+0000\n"
 "PO-Revision-Date: 2026-01-22 21:05+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -431,13 +431,13 @@ msgctxt "@option:check"
 msgid "Hide finished games"
 msgstr "Приховати завершені ігри"
 
-#: qml/PairingsPage.qml:64 qml/PlayersPage.qml:87 qml/StandingsPage.qml:53
+#: qml/PairingsPage.qml:64 qml/PlayersPage.qml:88 qml/StandingsPage.qml:53
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Print…"
 msgstr "Надрукувати…"
 
-#: qml/PairingsPage.qml:69 qml/PlayersPage.qml:92 qml/StandingsPage.qml:58
+#: qml/PairingsPage.qml:69 qml/PlayersPage.qml:93 qml/StandingsPage.qml:58
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Export as PDF…"
@@ -568,31 +568,31 @@ msgctxt "@action:intoolbar"
 msgid "Sort Players…"
 msgstr "Упорядкувати гравців…"
 
-#: qml/PlayersPage.qml:98
+#: qml/PlayersPage.qml:99
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Add Player…"
 msgstr "Додати гравця…"
 
-#: qml/PlayersPage.qml:109
+#: qml/PlayersPage.qml:110
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Open Player Details"
 msgstr "Відкрити параметри гравця"
 
-#: qml/PlayersPage.qml:206
+#: qml/PlayersPage.qml:207
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No players yet"
 msgstr "Ще немає жодного гравця"
 
-#: qml/PlayersPage.qml:210
+#: qml/PlayersPage.qml:211
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Player…"
 msgstr "Додати гравця…"
 
-#: qml/PlayersPage.qml:228
+#: qml/PlayersPage.qml:229
 #, kde-format
 msgctxt "@info:status Number of players"
 msgid "1 player"
@@ -602,7 +602,7 @@ msgstr[1] "%1 гравці"
 msgstr[2] "%1 гравців"
 msgstr[3] "%1 гравець"
 
-#: qml/PlayersPage.qml:229
+#: qml/PlayersPage.qml:230
 #, kde-format
 msgctxt "@info:status Number of rated players"
 msgid "1 rated"
@@ -612,7 +612,7 @@ msgstr[1] "%1 з рейтингом"
 msgstr[2] "%1 з рейтингом"
 msgstr[3] "%1 з рейтингом"
 
-#: qml/PlayersPage.qml:231
+#: qml/PlayersPage.qml:232
 #, kde-format
 msgctxt "@info:status players, rated"
 msgid "%1, %2"

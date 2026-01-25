@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-22 00:55+0000\n"
+"POT-Creation-Date: 2026-01-25 00:41+0000\n"
 "PO-Revision-Date: 2025-09-01 00:39+0000\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -431,13 +431,13 @@ msgctxt "@option:check"
 msgid "Hide finished games"
 msgstr ""
 
-#: qml/PairingsPage.qml:64 qml/PlayersPage.qml:87 qml/StandingsPage.qml:53
+#: qml/PairingsPage.qml:64 qml/PlayersPage.qml:88 qml/StandingsPage.qml:53
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Print…"
 msgstr ""
 
-#: qml/PairingsPage.qml:69 qml/PlayersPage.qml:92 qml/StandingsPage.qml:58
+#: qml/PairingsPage.qml:69 qml/PlayersPage.qml:93 qml/StandingsPage.qml:58
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Export as PDF…"
@@ -568,31 +568,31 @@ msgctxt "@action:intoolbar"
 msgid "Sort Players…"
 msgstr ""
 
-#: qml/PlayersPage.qml:98
+#: qml/PlayersPage.qml:99
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Add Player…"
 msgstr ""
 
-#: qml/PlayersPage.qml:109
+#: qml/PlayersPage.qml:110
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Open Player Details"
 msgstr ""
 
-#: qml/PlayersPage.qml:206
+#: qml/PlayersPage.qml:207
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No players yet"
 msgstr ""
 
-#: qml/PlayersPage.qml:210
+#: qml/PlayersPage.qml:211
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Player…"
 msgstr ""
 
-#: qml/PlayersPage.qml:228
+#: qml/PlayersPage.qml:229
 #, kde-format
 msgctxt "@info:status Number of players"
 msgid "1 player"
@@ -601,7 +601,7 @@ msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
 
-#: qml/PlayersPage.qml:229
+#: qml/PlayersPage.qml:230
 #, kde-format
 msgctxt "@info:status Number of rated players"
 msgid "1 rated"
@@ -610,7 +610,7 @@ msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
 
-#: qml/PlayersPage.qml:231
+#: qml/PlayersPage.qml:232
 #, kde-format
 msgctxt "@info:status players, rated"
 msgid "%1, %2"

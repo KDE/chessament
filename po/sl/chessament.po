@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-22 00:55+0000\n"
+"POT-Creation-Date: 2026-01-25 00:41+0000\n"
 "PO-Revision-Date: 2026-01-22 07:33+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -428,13 +428,13 @@ msgctxt "@option:check"
 msgid "Hide finished games"
 msgstr "Skrij končane igre"
 
-#: qml/PairingsPage.qml:64 qml/PlayersPage.qml:87 qml/StandingsPage.qml:53
+#: qml/PairingsPage.qml:64 qml/PlayersPage.qml:88 qml/StandingsPage.qml:53
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Print…"
 msgstr "Natisni…"
 
-#: qml/PairingsPage.qml:69 qml/PlayersPage.qml:92 qml/StandingsPage.qml:58
+#: qml/PairingsPage.qml:69 qml/PlayersPage.qml:93 qml/StandingsPage.qml:58
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Export as PDF…"
@@ -565,31 +565,31 @@ msgctxt "@action:intoolbar"
 msgid "Sort Players…"
 msgstr "Razvrsti igralce…"
 
-#: qml/PlayersPage.qml:98
+#: qml/PlayersPage.qml:99
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Add Player…"
 msgstr "Dodaj igralca…"
 
-#: qml/PlayersPage.qml:109
+#: qml/PlayersPage.qml:110
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Open Player Details"
 msgstr "Odpri podrobnosti igralca"
 
-#: qml/PlayersPage.qml:206
+#: qml/PlayersPage.qml:207
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No players yet"
 msgstr "Še ni igralcev"
 
-#: qml/PlayersPage.qml:210
+#: qml/PlayersPage.qml:211
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Player…"
 msgstr "Dodaj igralca…"
 
-#: qml/PlayersPage.qml:228
+#: qml/PlayersPage.qml:229
 #, kde-format
 msgctxt "@info:status Number of players"
 msgid "1 player"
@@ -599,7 +599,7 @@ msgstr[1] "%1igralec"
 msgstr[2] "%1 igralca"
 msgstr[3] "%1 igralci"
 
-#: qml/PlayersPage.qml:229
+#: qml/PlayersPage.qml:230
 #, kde-format
 msgctxt "@info:status Number of rated players"
 msgid "1 rated"
@@ -609,7 +609,7 @@ msgstr[1] "%1 ocenjen"
 msgstr[2] "%1 ocenjena"
 msgstr[3] "%1 ocenjeni"
 
-#: qml/PlayersPage.qml:231
+#: qml/PlayersPage.qml:232
 #, kde-format
 msgctxt "@info:status players, rated"
 msgid "%1, %2"

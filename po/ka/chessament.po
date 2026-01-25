@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-22 00:55+0000\n"
+"POT-Creation-Date: 2026-01-25 00:41+0000\n"
 "PO-Revision-Date: 2026-01-22 06:24+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -431,13 +431,13 @@ msgctxt "@option:check"
 msgid "Hide finished games"
 msgstr "დასრულებული თამაშების დამალვა"
 
-#: qml/PairingsPage.qml:64 qml/PlayersPage.qml:87 qml/StandingsPage.qml:53
+#: qml/PairingsPage.qml:64 qml/PlayersPage.qml:88 qml/StandingsPage.qml:53
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Print…"
 msgstr "ბეჭდვა…"
 
-#: qml/PairingsPage.qml:69 qml/PlayersPage.qml:92 qml/StandingsPage.qml:58
+#: qml/PairingsPage.qml:69 qml/PlayersPage.qml:93 qml/StandingsPage.qml:58
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Export as PDF…"
@@ -568,31 +568,31 @@ msgctxt "@action:intoolbar"
 msgid "Sort Players…"
 msgstr "მოთამაშეების დალაგება…"
 
-#: qml/PlayersPage.qml:98
+#: qml/PlayersPage.qml:99
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Add Player…"
 msgstr "მოთამაშის დამატება…"
 
-#: qml/PlayersPage.qml:109
+#: qml/PlayersPage.qml:110
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Open Player Details"
 msgstr "მოთამაშის დეტალების გახსნა"
 
-#: qml/PlayersPage.qml:206
+#: qml/PlayersPage.qml:207
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No players yet"
 msgstr "ჯერ მოთამაშეები არაა"
 
-#: qml/PlayersPage.qml:210
+#: qml/PlayersPage.qml:211
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Player…"
 msgstr "მოთამაშის დამატება…"
 
-#: qml/PlayersPage.qml:228
+#: qml/PlayersPage.qml:229
 #, kde-format
 msgctxt "@info:status Number of players"
 msgid "1 player"
@@ -600,7 +600,7 @@ msgid_plural "%1 players"
 msgstr[0] "1 მოთამაშე"
 msgstr[1] "%1 მოთამაშე"
 
-#: qml/PlayersPage.qml:229
+#: qml/PlayersPage.qml:230
 #, kde-format
 msgctxt "@info:status Number of rated players"
 msgid "1 rated"
@@ -608,7 +608,7 @@ msgid_plural "%1 rated"
 msgstr[0] "1 რეიტინგული"
 msgstr[1] "%1 რეიტინგული"
 
-#: qml/PlayersPage.qml:231
+#: qml/PlayersPage.qml:232
 #, kde-format
 msgctxt "@info:status players, rated"
 msgid "%1, %2"
