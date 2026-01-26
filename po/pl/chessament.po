@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-25 00:41+0000\n"
+"POT-Creation-Date: 2026-01-26 00:40+0000\n"
 "PO-Revision-Date: 2025-11-22 22:09+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
@@ -1069,14 +1069,14 @@ msgctxt "bbpPairings is the name of a program, should not be translated"
 msgid "bbpPairings terminated with a non zero exit code: %1"
 msgstr "bbpPairings zakończyło z niezerowym kodem wyjścia: %1"
 
-#: tournament/pairingengine.cpp:73 tournament/trf/reader.cpp:221
+#: tournament/pairingengine.cpp:73 tournament/trf/reader.cpp:227
 #, kde-format
 msgid "Invalid pairing \"%1\"."
 msgstr "Nieprawidłowe parowanie \"%1\"."
 
 #: tournament/pairingengine.cpp:79 tournament/pairingengine.cpp:83
 #: tournament/pairingengine.cpp:87 tournament/pairingengine.cpp:91
-#: tournament/trf/reader.cpp:234
+#: tournament/trf/reader.cpp:240
 #, kde-format
 msgid "Invalid player \"%1\" on pairing \"%2\"."
 msgstr "Nieprawidłowy gracz \"%1\" w parowaniu\"%2\"."
@@ -1141,36 +1141,42 @@ msgctxt "@label:spinbox"
 msgid "Exclude the lowest scores:"
 msgstr "Wyklucz najniższe wyniki:"
 
-#: tournament/tournament.cpp:447
+#: tournament/tiebreaks/buchholz.cpp:35
+#, kde-format
+msgctxt "@info"
+msgid "Unsupported tiebreak option \"%1\""
+msgstr ""
+
+#: tournament/tournament.cpp:471
 #, kde-format
 msgctxt "Game points"
 msgid "Points"
 msgstr "Punkty"
 
-#: tournament/tournament.cpp:451
+#: tournament/tournament.cpp:475
 #, kde-format
 msgctxt "Buchholz tiebreak"
 msgid "Buchholz"
 msgstr "Buchholz"
 
-#: tournament/tournament.cpp:455
+#: tournament/tournament.cpp:479
 #, kde-format
 msgctxt "Number of Wins tiebreak"
 msgid "Number of Wins"
 msgstr "Liczba zwycięstw"
 
-#: tournament/tournament.cpp:459
+#: tournament/tournament.cpp:483
 #, kde-format
 msgctxt "Tiebreak"
 msgid "Average Buchholz of Opponents"
 msgstr ""
 
-#: tournament/tournament.cpp:820
+#: tournament/tournament.cpp:870
 #, kde-format
 msgid "An error ocurred while pairing the round: %1"
 msgstr "Wystąpił błąd podczas parowania rundy: %1"
 
-#: tournament/tournament.cpp:1051
+#: tournament/tournament.cpp:1101
 #, kde-format
 msgid "Couldn't open file"
 msgstr "Nie udało się otworzyć pliku"
@@ -1185,18 +1191,18 @@ msgstr "Nie odnaleziono gracza \"%1\"."
 msgid "Unknown result on pairing \"%1\" with \"%2\"."
 msgstr "Nieznany wynik parowania \"%1\" z \"%2\"."
 
-#: tournament/trf/reader.cpp:167
+#: tournament/trf/reader.cpp:173
 #, kde-format
 msgctxt "@info"
 msgid "Date \"%1\" is invalid."
 msgstr "Data \"%1\" jest nieprawidłowa."
 
-#: tournament/trf/reader.cpp:241
+#: tournament/trf/reader.cpp:247
 #, kde-format
 msgid "Unknown result \"%1\" on pairing \"%2\"."
 msgstr "Nieznany wynik \"%1\" przy parowaniu \"%2\"."
 
-#: tournament/trf/reader.cpp:244
+#: tournament/trf/reader.cpp:250
 #, kde-format
 msgid "Pairing \"%1\" has no opponent."
 msgstr "Parowanie \"%1\" nie ma przeciwnika."

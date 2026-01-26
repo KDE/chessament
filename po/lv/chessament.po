@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-25 00:41+0000\n"
+"POT-Creation-Date: 2026-01-26 00:40+0000\n"
 "PO-Revision-Date: 2025-11-09 11:05+0200\n"
 "Last-Translator: Toms Trasūns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -1068,14 +1068,14 @@ msgctxt "bbpPairings is the name of a program, should not be translated"
 msgid "bbpPairings terminated with a non zero exit code: %1"
 msgstr "„bbpPairings“ ir izbeigts ar ne nulles izejas kodu: %1"
 
-#: tournament/pairingengine.cpp:73 tournament/trf/reader.cpp:221
+#: tournament/pairingengine.cpp:73 tournament/trf/reader.cpp:227
 #, kde-format
 msgid "Invalid pairing \"%1\"."
 msgstr "Nederīgs pāris „%1“."
 
 #: tournament/pairingengine.cpp:79 tournament/pairingengine.cpp:83
 #: tournament/pairingengine.cpp:87 tournament/pairingengine.cpp:91
-#: tournament/trf/reader.cpp:234
+#: tournament/trf/reader.cpp:240
 #, kde-format
 msgid "Invalid player \"%1\" on pairing \"%2\"."
 msgstr "Nederīgs spēlētājs „%1“ pāra izveidošanai „%2“."
@@ -1140,36 +1140,42 @@ msgctxt "@label:spinbox"
 msgid "Exclude the lowest scores:"
 msgstr "Izņemot zemākos rezultātus:"
 
-#: tournament/tournament.cpp:447
+#: tournament/tiebreaks/buchholz.cpp:35
+#, kde-format
+msgctxt "@info"
+msgid "Unsupported tiebreak option \"%1\""
+msgstr ""
+
+#: tournament/tournament.cpp:471
 #, kde-format
 msgctxt "Game points"
 msgid "Points"
 msgstr "Punkti"
 
-#: tournament/tournament.cpp:451
+#: tournament/tournament.cpp:475
 #, kde-format
 msgctxt "Buchholz tiebreak"
 msgid "Buchholz"
 msgstr "Buhholca sistēma"
 
-#: tournament/tournament.cpp:455
+#: tournament/tournament.cpp:479
 #, kde-format
 msgctxt "Number of Wins tiebreak"
 msgid "Number of Wins"
 msgstr "Uzvaru skaits"
 
-#: tournament/tournament.cpp:459
+#: tournament/tournament.cpp:483
 #, kde-format
 msgctxt "Tiebreak"
 msgid "Average Buchholz of Opponents"
 msgstr ""
 
-#: tournament/tournament.cpp:820
+#: tournament/tournament.cpp:870
 #, kde-format
 msgid "An error ocurred while pairing the round: %1"
 msgstr "Pārojot kārtu, notika kļūda: %1"
 
-#: tournament/tournament.cpp:1051
+#: tournament/tournament.cpp:1101
 #, kde-format
 msgid "Couldn't open file"
 msgstr "Datni atvērt neizdevās"
@@ -1184,18 +1190,18 @@ msgstr "Spēlētājs „%1“ nav atrasts."
 msgid "Unknown result on pairing \"%1\" with \"%2\"."
 msgstr "Nezināms rezultāts pāra „%1“ izveidošanai ar „%2“."
 
-#: tournament/trf/reader.cpp:167
+#: tournament/trf/reader.cpp:173
 #, kde-format
 msgctxt "@info"
 msgid "Date \"%1\" is invalid."
 msgstr "Datums „%1“ nav derīgs."
 
-#: tournament/trf/reader.cpp:241
+#: tournament/trf/reader.cpp:247
 #, kde-format
 msgid "Unknown result \"%1\" on pairing \"%2\"."
 msgstr "Nezināms rezultāts „%1“, pārojot „%2“."
 
-#: tournament/trf/reader.cpp:244
+#: tournament/trf/reader.cpp:250
 #, kde-format
 msgid "Pairing \"%1\" has no opponent."
 msgstr "Pārim „%1“ nav pretinieka."
