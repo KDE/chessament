@@ -34,10 +34,7 @@ TablePage {
         defaultSuffix: "pdf"
         nameFilters: ["PDF Files (*.pdf)"]
         currentFolder: StandardPaths.standardLocations(StandardPaths.HomeLocation)[0]
-        onAccepted: {
-            const fileName = new URL(selectedFile).pathname;
-            Controller.savePlayersDocument(fileName);
-        }
+        onAccepted: Controller.savePlayersDocument(selectedFile)
     }
 
     model: KItemModels.KSortFilterProxyModel {

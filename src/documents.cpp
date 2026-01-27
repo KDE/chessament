@@ -28,10 +28,10 @@ std::unique_ptr<Document> Controller::playersDocument()
 
     return doc;
 }
-void Controller::savePlayersDocument(const QString &fileName)
+void Controller::savePlayersDocument(const QUrl &fileUrl)
 {
     auto doc = playersDocument();
-    doc->saveAs(fileName);
+    doc->saveAs(fileUrl.toLocalFile());
 }
 
 void Controller::printPlayersDocument()
@@ -57,10 +57,10 @@ std::unique_ptr<Document> Controller::pairingsDocument()
     return doc;
 }
 
-void Controller::savePairingsDocument(const QString &fileName)
+void Controller::savePairingsDocument(const QUrl &fileUrl)
 {
     auto doc = pairingsDocument();
-    doc->saveAs(fileName);
+    doc->saveAs(fileUrl.toLocalFile());
 }
 
 void Controller::printPairingsDocument()
@@ -104,10 +104,10 @@ std::unique_ptr<Document> Controller::standingsDocument(int round)
     return doc;
 }
 
-void Controller::saveStandingsDocument(const QString &fileName, int round)
+void Controller::saveStandingsDocument(const QUrl &fileUrl, int round)
 {
     const auto doc = standingsDocument(round);
-    doc->saveAs(fileName);
+    doc->saveAs(fileUrl.toLocalFile());
 }
 
 void Controller::printStandingsDocument(int round)

@@ -71,13 +71,13 @@ public:
     Q_INVOKABLE QCoro::QmlTask reloadStandings(int maxRound);
 
     std::unique_ptr<Document> playersDocument();
-    Q_INVOKABLE void savePlayersDocument(const QString &fileName);
+    Q_INVOKABLE void savePlayersDocument(const QUrl &fileUrl);
     Q_INVOKABLE void printPlayersDocument();
     std::unique_ptr<Document> pairingsDocument();
-    Q_INVOKABLE void savePairingsDocument(const QString &fileName);
+    Q_INVOKABLE void savePairingsDocument(const QUrl &fileUrl);
     Q_INVOKABLE void printPairingsDocument();
     std::unique_ptr<Document> standingsDocument(int round);
-    Q_INVOKABLE void saveStandingsDocument(const QString &fileName, int round);
+    Q_INVOKABLE void saveStandingsDocument(const QUrl &fileUrl, int round);
     Q_INVOKABLE void printStandingsDocument(int round);
 
     [[nodiscard]] PlayersModel *playersModel() const;

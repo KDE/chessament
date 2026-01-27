@@ -39,10 +39,7 @@ TablePage {
         defaultSuffix: "pdf"
         nameFilters: ["PDF Files (*.pdf)"]
         currentFolder: StandardPaths.standardLocations(StandardPaths.HomeLocation)[0]
-        onAccepted: {
-            const fileName = new URL(selectedFile).pathname;
-            Controller.savePairingsDocument(fileName);
-        }
+        onAccepted: Controller.savePairingsDocument(selectedFile)
     }
 
     actions: [
