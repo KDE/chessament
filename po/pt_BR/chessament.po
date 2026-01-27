@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-26 00:40+0000\n"
-"PO-Revision-Date: 2026-01-22 10:03-0300\n"
+"PO-Revision-Date: 2026-01-26 14:24-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -1112,7 +1112,7 @@ msgstr "Excluir as pontuações mais baixas:"
 #, kde-format
 msgctxt "@info"
 msgid "Unsupported tiebreak option \"%1\""
-msgstr ""
+msgstr "Opção de desempate não suportada \"%1\""
 
 #: tournament/tournament.cpp:471
 #, kde-format

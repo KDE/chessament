@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-26 00:40+0000\n"
-"PO-Revision-Date: 2026-01-22 07:33+0100\n"
+"PO-Revision-Date: 2026-01-26 06:46+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -1094,7 +1094,7 @@ msgctxt "@info:progress"
 msgid "Imported one player."
 msgid_plural "Imported %1 players."
 msgstr[0] "Uvoženo %1 igralcev."
-msgstr[1] "Uvožen %1 igralec"
+msgstr[1] "Uvožen %1 igralec."
 msgstr[2] "Uvožena %1 igralca."
 msgstr[3] "Uvoženi %1 igralci."
 
@@ -1103,10 +1103,10 @@ msgstr[3] "Uvoženi %1 igralci."
 msgctxt "@info:progress"
 msgid "Saved 1 player."
 msgid_plural "Saved %1 players."
-msgstr[0] "Shranjeno %1 igralcev"
-msgstr[1] "Shranjen %1 igralec"
-msgstr[2] "Shranjena %1 igralca"
-msgstr[3] "Shranjeni %1 igralci"
+msgstr[0] "Shranjeno %1 igralcev."
+msgstr[1] "Shranjen %1 igralec."
+msgstr[2] "Shranjena %1 igralca."
+msgstr[3] "Shranjeni %1 igralci."
 
 #: tournament/tiebreaks/buchholz.cpp:14
 #, kde-format
@@ -1118,7 +1118,7 @@ msgstr "Izključi najnižje ocene:"
 #, kde-format
 msgctxt "@info"
 msgid "Unsupported tiebreak option \"%1\""
-msgstr ""
+msgstr "Nepodprta možnost tiebreaka \"%1\""
 
 #: tournament/tournament.cpp:471
 #, kde-format
