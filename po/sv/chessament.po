@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-26 00:40+0000\n"
-"PO-Revision-Date: 2026-01-22 17:09+0100\n"
+"PO-Revision-Date: 2026-01-27 18:26+0100\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -1112,7 +1112,7 @@ msgstr "Undanta lägsta resultaten:"
 #, kde-format
 msgctxt "@info"
 msgid "Unsupported tiebreak option \"%1\""
-msgstr ""
+msgstr "Alternativ för tiebreak som inte stöds \"%1\""
 
 #: tournament/tournament.cpp:471
 #, kde-format
