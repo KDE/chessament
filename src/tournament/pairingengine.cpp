@@ -4,6 +4,8 @@
 #include "pairingengine.h"
 
 #include <KLocalizedString>
+#include <QCoreApplication>
+#include <QOperatingSystemVersion>
 #include <QProcess>
 #include <QStandardPaths>
 #include <QTemporaryFile>
@@ -16,7 +18,12 @@ using namespace std::literals::chrono_literals;
 
 QCoro::Task<std::expected<QList<std::pair<uint, uint>>, QString>> PairingEngine::pair(int round, Tournament *tournament)
 {
-    const auto &path = QStandardPaths::findExecutable(u"bbpPairings"_s);
+    auto path = QStandardPaths::findExecutable(u"bbpPairings"_s);
+    if constexpr (QOperatingSystemVersion::currentType() == QOperatingSystemVersion::Windows) {
+        if (path.isEmpty()) {
+            path = QStandardPaths::findExecutable(u"bbpPairings"_s, {QCoreApplication::applicationDirPath()});
+        }
+    }
     if (path.isEmpty()) {
         co_return std::unexpected(
             i18nc("bbpPairings is the name of a program, should not be translated", "The pairing engine bbpPairings could not be found. Is it installed?"));
