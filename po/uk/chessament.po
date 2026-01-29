@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-26 00:40+0000\n"
+"POT-Creation-Date: 2026-01-29 00:41+0000\n"
 "PO-Revision-Date: 2026-01-26 13:18+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -425,60 +425,60 @@ msgctxt "@label"
 msgid "Number of rounds"
 msgstr "Кількість раундів"
 
-#: qml/PairingsPage.qml:51
+#: qml/PairingsPage.qml:48
 #, kde-format
 msgctxt "@option:check"
 msgid "Hide finished games"
 msgstr "Приховати завершені ігри"
 
-#: qml/PairingsPage.qml:64 qml/PlayersPage.qml:88 qml/StandingsPage.qml:53
+#: qml/PairingsPage.qml:61 qml/PlayersPage.qml:85 qml/StandingsPage.qml:50
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Print…"
 msgstr "Надрукувати…"
 
-#: qml/PairingsPage.qml:69 qml/PlayersPage.qml:93 qml/StandingsPage.qml:58
+#: qml/PairingsPage.qml:66 qml/PlayersPage.qml:90 qml/StandingsPage.qml:55
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Export as PDF…"
 msgstr "Експортувати до PDF…"
 
-#: qml/PairingsPage.qml:78
+#: qml/PairingsPage.qml:75
 #, kde-format
 msgid "Round %1"
 msgstr "Раунд %1"
 
-#: qml/PairingsPage.qml:96
+#: qml/PairingsPage.qml:93
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Remove pairings of this and following rounds…"
 msgstr "Вилучити поділ на пари для цього і наступного раундів…"
 
-#: qml/PairingsPage.qml:110
+#: qml/PairingsPage.qml:107
 #, kde-format
 msgctxt "@info"
 msgid "The tournament hasn't started yet."
 msgstr "Турнір ще не розпочато."
 
-#: qml/PairingsPage.qml:110
+#: qml/PairingsPage.qml:107
 #, kde-format
 msgctxt "@info"
 msgid "Round %1 has finished."
 msgstr "Раунд %1 завершено."
 
-#: qml/PairingsPage.qml:114
+#: qml/PairingsPage.qml:111
 #, kde-format
 msgctxt "@action:button"
 msgid "Pair Round %1"
 msgstr "Поділ на пари раунду %1"
 
-#: qml/PairingsPage.qml:157
+#: qml/PairingsPage.qml:154
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No pairings for round %1 yet"
 msgstr "Поділу на пари для раунду %1 ще немає"
 
-#: qml/PairingsPage.qml:159
+#: qml/PairingsPage.qml:156
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "All games of round %1 have finished"
@@ -556,43 +556,43 @@ msgctxt "@info:label"
 msgid "Round %1"
 msgstr "Раунд %1"
 
-#: qml/PlayersPage.qml:72
+#: qml/PlayersPage.qml:69
 #, kde-format
 msgctxt "@action:intoolbar Open player details"
 msgid "Details…"
 msgstr "Подробиці…"
 
-#: qml/PlayersPage.qml:78
+#: qml/PlayersPage.qml:75
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Sort Players…"
 msgstr "Упорядкувати гравців…"
 
-#: qml/PlayersPage.qml:99
+#: qml/PlayersPage.qml:96
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Add Player…"
 msgstr "Додати гравця…"
 
-#: qml/PlayersPage.qml:110
+#: qml/PlayersPage.qml:107
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Open Player Details"
 msgstr "Відкрити параметри гравця"
 
-#: qml/PlayersPage.qml:207
+#: qml/PlayersPage.qml:204
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No players yet"
 msgstr "Ще немає жодного гравця"
 
-#: qml/PlayersPage.qml:211
+#: qml/PlayersPage.qml:208
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Player…"
 msgstr "Додати гравця…"
 
-#: qml/PlayersPage.qml:229
+#: qml/PlayersPage.qml:226
 #, kde-format
 msgctxt "@info:status Number of players"
 msgid "1 player"
@@ -602,7 +602,7 @@ msgstr[1] "%1 гравці"
 msgstr[2] "%1 гравців"
 msgstr[3] "%1 гравець"
 
-#: qml/PlayersPage.qml:230
+#: qml/PlayersPage.qml:227
 #, kde-format
 msgctxt "@info:status Number of rated players"
 msgid "1 rated"
@@ -612,7 +612,7 @@ msgstr[1] "%1 з рейтингом"
 msgstr[2] "%1 з рейтингом"
 msgstr[3] "%1 з рейтингом"
 
-#: qml/PlayersPage.qml:232
+#: qml/PlayersPage.qml:229
 #, kde-format
 msgctxt "@info:status players, rated"
 msgid "%1, %2"
@@ -757,19 +757,19 @@ msgstr ""
 "Зміну початкових рангів після розподілу пар у четвертому раунді в офіційних "
 "турнірах заборонено."
 
-#: qml/StandingsPage.qml:70 qml/StandingsPage.qml:80
+#: qml/StandingsPage.qml:67 qml/StandingsPage.qml:77
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Final Standings"
 msgstr "Остаточні результати"
 
-#: qml/StandingsPage.qml:72 qml/StandingsPage.qml:82
+#: qml/StandingsPage.qml:69 qml/StandingsPage.qml:79
 #, kde-format
 msgctxt "@item:inlistbox Standings After Round %1"
 msgid "After Round %1"
 msgstr "Після раунду %1"
 
-#: qml/StandingsPage.qml:132
+#: qml/StandingsPage.qml:129
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No standings yet"
@@ -1031,31 +1031,31 @@ msgctxt "@title:column Player Ranking"
 msgid "Rank"
 msgstr "Ранг"
 
-#: tournament/pairingengine.cpp:22
+#: tournament/pairingengine.cpp:29
 #, kde-format
 msgctxt "bbpPairings is the name of a program, should not be translated"
 msgid "The pairing engine bbpPairings could not be found. Is it installed?"
 msgstr ""
 "Не вдалося знайти рушій поділу на пари bbpPairings. Чи встановлено цей рушій?"
 
-#: tournament/pairingengine.cpp:30
+#: tournament/pairingengine.cpp:37
 #, kde-format
 msgid "Could not create temporary file."
 msgstr "Не вдалося створити тимчасовий файл."
 
-#: tournament/pairingengine.cpp:55
+#: tournament/pairingengine.cpp:62
 #, kde-format
 msgctxt "bbpPairings is the name of a program, should not be translated"
 msgid "bbpPairings terminated with a non zero exit code: %1"
 msgstr "Роботу bbpPairings перервано з ненульовим кодом виходу: %1"
 
-#: tournament/pairingengine.cpp:73 tournament/trf/reader.cpp:227
+#: tournament/pairingengine.cpp:80 tournament/trf/reader.cpp:227
 #, kde-format
 msgid "Invalid pairing \"%1\"."
 msgstr "Некоректний розподіл на пари «%1»."
 
-#: tournament/pairingengine.cpp:79 tournament/pairingengine.cpp:83
-#: tournament/pairingengine.cpp:87 tournament/pairingengine.cpp:91
+#: tournament/pairingengine.cpp:86 tournament/pairingengine.cpp:90
+#: tournament/pairingengine.cpp:94 tournament/pairingengine.cpp:98
 #: tournament/trf/reader.cpp:240
 #, kde-format
 msgid "Invalid player \"%1\" on pairing \"%2\"."
