@@ -20,25 +20,25 @@ TrfWriter::TrfWriter(Tournament *tournament, Trf::Options options, int maxRound)
 {
 }
 
-void TrfWriter::write(QTextStream *stream)
+void TrfWriter::write(QTextStream &stream)
 {
     writeTournamentInformation(stream);
     writePairingEngineInformation(stream);
     writePlayers(stream);
 }
 
-void TrfWriter::writeTournamentInformation(QTextStream *stream)
+void TrfWriter::writeTournamentInformation(QTextStream &stream)
 {
-    *stream << reportFieldString(Trf::Field::TournamentName) << space << m_tournament->name() << newLine;
-    *stream << reportFieldString(Trf::Field::City) << space << m_tournament->city() << newLine;
-    *stream << reportFieldString(Trf::Field::Federation) << space << m_tournament->federation() << newLine;
-    *stream << reportFieldString(Trf::Field::NumberOfPlayers) << space << m_tournament->numberOfPlayers() << newLine;
-    *stream << reportFieldString(Trf::Field::NumberOfRatedPlayers) << space << m_tournament->numberOfRatedPlayers() << newLine;
-    *stream << reportFieldString(Trf::Field::ChiefArbiter) << space << m_tournament->chiefArbiter() << newLine;
-    *stream << reportFieldString(Trf::Field::TimeControl) << space << m_tournament->timeControl() << newLine;
-    *stream << Trf::reportFieldString(Trf::Field::ProgramName) << space << "Chessament %1"_L1.arg(QCoreApplication::applicationVersion()) << newLine;
+    stream << Trf::reportFieldString(Trf::Field::TournamentName) << space << m_tournament->name() << newLine;
+    stream << Trf::reportFieldString(Trf::Field::City) << space << m_tournament->city() << newLine;
+    stream << Trf::reportFieldString(Trf::Field::Federation) << space << m_tournament->federation() << newLine;
+    stream << Trf::reportFieldString(Trf::Field::NumberOfPlayers) << space << m_tournament->numberOfPlayers() << newLine;
+    stream << Trf::reportFieldString(Trf::Field::NumberOfRatedPlayers) << space << m_tournament->numberOfRatedPlayers() << newLine;
+    stream << Trf::reportFieldString(Trf::Field::ChiefArbiter) << space << m_tournament->chiefArbiter() << newLine;
+    stream << Trf::reportFieldString(Trf::Field::TimeControl) << space << m_tournament->timeControl() << newLine;
+    stream << Trf::reportFieldString(Trf::Field::ProgramName) << space << "Chessament %1"_L1.arg(QCoreApplication::applicationVersion()) << newLine;
 
-    *stream << reportFieldString(Trf::Field::Calendar) << QString(space).repeated(86);
+    stream << Trf::reportFieldString(Trf::Field::Calendar) << QString(space).repeated(86);
     for (size_t i = 0; i < m_state.lastRound(); ++i) {
         QString date;
         if (i < m_tournament->m_rounds.size() && m_tournament->m_rounds[i]->dateTime().isValid()) {
@@ -46,27 +46,27 @@ void TrfWriter::writeTournamentInformation(QTextStream *stream)
         } else {
             date = "        "_L1;
         }
-        *stream << "  "_L1 << date;
+        stream << "  "_L1 << date;
     }
-    *stream << newLine;
+    stream << newLine;
 }
 
-void TrfWriter::writePairingEngineInformation(QTextStream *stream)
+void TrfWriter::writePairingEngineInformation(QTextStream &stream)
 {
     if (m_options.testFlag(Trf::Option::NumberOfRounds)) {
-        *stream << "XXR "_L1 + QString::number(m_tournament->numberOfRounds()) << newLine;
+        stream << "XXR "_L1 + QString::number(m_tournament->numberOfRounds()) << newLine;
     }
 
     if (m_options.testFlag(Trf::Option::InitialColorWhite)) {
-        *stream << "XXC white1\n"_L1;
+        stream << "XXC white1\n"_L1;
     } else if (m_options.testFlag(Trf::Option::InitialColorBlack)) {
-        *stream << "XXC black1\n"_L1;
+        stream << "XXC black1\n"_L1;
     }
 }
 
-void TrfWriter::writePlayers(QTextStream *stream)
+void TrfWriter::writePlayers(QTextStream &stream)
 {
-    auto standings = m_tournament->getStandings(m_state);
+    const auto standings = m_tournament->getStandings(m_state);
     auto players = m_tournament->players();
 
     std::ranges::sort(players, Player::SortByStartingRank);
@@ -78,17 +78,17 @@ void TrfWriter::writePlayers(QTextStream *stream)
         const auto rank = std::distance(standings.constBegin(), standing) + 1;
         const auto result = player->toTrf(m_state.getPoints(player), rank);
 
-        *stream << result.c_str();
+        stream << result.c_str();
 
-        auto pairings = m_state.getPairings(player);
+        const auto pairings = m_state.getPairings(player);
         for (int i = 0; i < m_state.lastRound(); i++) {
             if (i < pairings.size()) {
-                *stream << pairings.value(i)->toTrf(player);
+                stream << pairings.value(i)->toTrf(player);
             } else {
-                *stream << "          "_L1;
+                stream << "          "_L1;
             }
         }
 
-        *stream << newLine;
+        stream << newLine;
     }
 }

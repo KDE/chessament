@@ -18,11 +18,11 @@ class TrfWriter : public QObject
 private:
     explicit TrfWriter(Tournament *tournament, Trf::Options options, int maxRound = -1);
 
-    void write(QTextStream *stream);
+    void write(QTextStream &stream);
 
-    void writeTournamentInformation(QTextStream *stream);
-    void writePairingEngineInformation(QTextStream *stream);
-    void writePlayers(QTextStream *stream);
+    void writeTournamentInformation(QTextStream &stream);
+    void writePairingEngineInformation(QTextStream &stream);
+    void writePlayers(QTextStream &stream);
 
     Tournament *m_tournament;
     Trf::Options m_options;

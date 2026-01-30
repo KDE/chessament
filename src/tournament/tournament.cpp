@@ -1088,7 +1088,7 @@ QString Tournament::toTrf(Trf::Options options, int maxRound)
     QTextStream stream(&result);
 
     TrfWriter writer(this, options, maxRound);
-    writer.write(&stream);
+    writer.write(stream);
 
     return result;
 }
