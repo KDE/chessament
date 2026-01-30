@@ -21,6 +21,7 @@ private:
     void write(QTextStream &stream);
 
     void writeTournamentInformation(QTextStream &stream);
+    void writeTiebreaks(QTextStream &stream);
     void writePairingEngineInformation(QTextStream &stream);
     void writePlayers(QTextStream &stream);
 
