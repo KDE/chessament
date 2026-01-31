@@ -93,4 +93,9 @@ QHash<int, QByteArray> ByesModel::roleNames() const
     };
 }
 
+void ByesModel::reload()
+{
+    Q_EMIT dataChanged(index(0), index(rowCount() - 1));
+}
+
 #include "moc_byesmodel.cpp"

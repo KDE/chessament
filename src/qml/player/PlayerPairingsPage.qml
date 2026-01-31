@@ -7,6 +7,7 @@ import QtQuick
 import QtQuick.Controls as Controls
 
 import org.kde.ki18n
+import org.kde.kirigami as Kirigami
 import org.kde.kirigamiaddons.formcard as FormCard
 
 import org.kde.chessament
@@ -18,6 +19,17 @@ FormCard.FormCardPage {
     required property Player player
 
     title: KI18n.i18nc("@title", "Pairings")
+
+    actions: [
+        Kirigami.Action {
+            icon.name: "im-kick-user-symbolic"
+            text: KI18n.i18nc("@action:button", "Retire player")
+            onTriggered: {
+                Controller.retire(root.tournament, root.player);
+                byesModel.reload();
+            }
+        }
+    ]
 
     Component {
         id: statusChooser
@@ -47,21 +59,11 @@ FormCard.FormCardPage {
                 }
             ]
             textRole: "text"
-            currentIndex: {
-                switch (comboBox.result) {
-                case Pairing.PartialResult.FullBye:
-                    return 1;
-                case Pairing.PartialResult.HalfBye:
-                    return 2;
-                case Pairing.PartialResult.ZeroBye:
-                    return 3;
-                default:
-                    return 0;
-                }
-            }
-            onActivated: function (): void {
-                console.log(currentIndex);
-                Controller.setBye(root.tournament, root.player, comboBox.round, comboBox.currentValue.result);
+            valueRole: "result"
+            currentValue: comboBox.result
+            onActivated: {
+                Controller.setBye(root.tournament, root.player, comboBox.round, comboBox.currentValue);
+                byesModel.reload();
             }
         }
     }
@@ -84,6 +86,8 @@ FormCard.FormCardPage {
             id: repeater
 
             model: ByesModel {
+                id: byesModel
+
                 tournament: root.tournament
                 player: root.player
             }
@@ -108,11 +112,11 @@ FormCard.FormCardPage {
                     if (pairing.row >= repeater.model.tournament.currentRound) {
                         return statusChooser.createObject(null, {
                             "round": pairing.row + 1,
-                            "result": pairing.result
+                            "result": Qt.binding(() => pairing.result)
                         });
                     }
                     return resultLabel.createObject(null, {
-                        "result": pairing.resultString
+                        "result": Qt.binding(() => pairing.resultString)
                     });
                 }
             }

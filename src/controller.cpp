@@ -195,6 +195,16 @@ void Controller::setBye(Tournament *tournament, Player *player, int round, Pairi
     m_pairingModel->setPairings(m_tournament->getPairings(m_currentRound));
 }
 
+void Controller::retire(Tournament *tournament, Player *player)
+{
+    if (const auto ok = tournament->retire(player); !ok) {
+        setError(ok.error());
+    }
+
+    setAreStandingsValid(false);
+    m_pairingModel->setPairings(m_tournament->getPairings(m_currentRound));
+}
+
 void Controller::removePairings(bool keepByes)
 {
     if (auto ok = m_tournament->removePairings(m_currentRound, keepByes); !ok) {
