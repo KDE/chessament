@@ -33,6 +33,9 @@ public:
     [[nodiscard]] QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
     [[nodiscard]] QHash<int, QByteArray> roleNames() const override;
 
+    Q_INVOKABLE void reload();
+    Q_INVOKABLE void retire();
+
 public Q_SLOTS:
     void setTournament(Tournament *tournament);
     void setPlayer(Player *player);
@@ -40,6 +43,7 @@ public Q_SLOTS:
 Q_SIGNALS:
     void tournamentChanged();
     void playerChanged();
+    void errorOcurred(const QString &error);
 
 private:
     Tournament *m_tournament;

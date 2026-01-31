@@ -223,6 +223,8 @@ public:
 
     std::expected<void, QString> setBye(Player *player, int round, Pairing::PartialResult result);
 
+    std::expected<void, QString> retire(Player *player);
+
     /*!
      * Returns the pairing corresponding to the \a round and \a board.
      */

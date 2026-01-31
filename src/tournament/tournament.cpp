@@ -706,6 +706,17 @@ std::expected<void, QString> Tournament::setBye(Player *player, int round, Pairi
     return savePairing(pairing);
 }
 
+std::expected<void, QString> Tournament::retire(Player *player)
+{
+    for (int i = m_currentRound + 1; i <= m_numberOfRounds; ++i) {
+        if (const auto ok = setBye(player, i, Pairing::PartialResult::ZeroBye); !ok) {
+            return ok;
+        }
+    }
+
+    return {};
+}
+
 Pairing *Tournament::getPairing(int round, int board)
 {
     Q_ASSERT(round >= 1);

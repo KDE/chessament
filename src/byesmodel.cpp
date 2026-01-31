@@ -93,4 +93,18 @@ QHash<int, QByteArray> ByesModel::roleNames() const
     };
 }
 
+void ByesModel::reload()
+{
+    Q_EMIT dataChanged(index(0), index(rowCount() - 1));
+}
+
+void ByesModel::retire()
+{
+    if (const auto ok = m_tournament->retire(m_player); !ok) {
+        Q_EMIT errorOcurred(ok.error());
+    }
+
+    Q_EMIT dataChanged(index(0), index(rowCount() - 1));
+}
+
 #include "moc_byesmodel.cpp"
