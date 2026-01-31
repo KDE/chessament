@@ -7,6 +7,7 @@ target_sources(tournament PRIVATE
     aob.cpp
     buchholz.cpp
     numberwins.cpp
+    playedblack.cpp
     points.cpp
     won.cpp
 )

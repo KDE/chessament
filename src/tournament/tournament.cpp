@@ -16,6 +16,7 @@
 #include "tiebreaks/aob.h"
 #include "tiebreaks/buchholz.h"
 #include "tiebreaks/numberwins.h"
+#include "tiebreaks/playedblack.h"
 #include "tiebreaks/points.h"
 #include "tiebreaks/won.h"
 #include "trf/reader.h"
@@ -484,6 +485,10 @@ QList<QVariantMap> Tournament::availableTiebreaks()
             {"name"_L1, i18nc("Number of Games Won tiebreak", "Number of Games Won")},
         },
         {
+            {"id"_L1, "bpg"_L1},
+            {"name"_L1, i18nc("Number of Games Played with Black tiebreak", "Number of Games Played with Black")},
+        },
+        {
             {"id"_L1, "aob"_L1},
             {"name"_L1, i18nc("Tiebreak", "Average Buchholz of Opponents")},
         },
@@ -503,6 +508,9 @@ std::unique_ptr<Tiebreak> Tournament::tiebreak(const QString &id)
     }
     if (id == "won"_L1) {
         return std::make_unique<NumberOfGamesWon>();
+    }
+    if (id == "bpg"_L1) {
+        return std::make_unique<NumberOfGamesPlayedWithBlack>();
     }
     if (id == "aob"_L1) {
         return std::make_unique<AverageBuchholzOfOpponents>();
