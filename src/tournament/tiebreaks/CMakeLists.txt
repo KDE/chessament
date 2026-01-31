@@ -8,5 +8,6 @@ target_sources(tournament PRIVATE
     buchholz.cpp
     numberwins.cpp
     points.cpp
+    won.cpp
 )
 
