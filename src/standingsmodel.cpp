@@ -36,12 +36,12 @@ QVariant StandingsModel::data(const QModelIndex &index, int role) const
         return {};
     }
 
-    auto standing = m_standings.at(index.row());
+    const auto standing = m_standings.at(index.row());
 
     if (role == Qt::DisplayRole) {
         switch (index.column()) {
         case RankRole:
-            return index.row() + 1;
+            return standing.rank();
         case StartingRankRole:
             return standing.player()->startingRank();
         case TitleRole:

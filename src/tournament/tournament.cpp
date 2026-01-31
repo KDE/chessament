@@ -462,6 +462,16 @@ QList<Standing> Tournament::getStandings(const State &state)
         sortStandings();
     }
 
+    // Calculate ranks
+    for (int i = 1; i < standings.size(); ++i) {
+        auto &standing = standings[i];
+        if (standing.values() == standings.at(i - 1).values()) {
+            standing.setRank(standings.at(i - 1).rank());
+        } else {
+            standing.setRank(i + 1);
+        }
+    }
+
     return standings;
 }
 
