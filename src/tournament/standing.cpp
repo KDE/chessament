@@ -9,6 +9,11 @@ Standing::Standing(Player *player, std::vector<double> values)
 {
 }
 
+int Standing::rank() const
+{
+    return m_rank;
+}
+
 Player *Standing::player() const
 {
     return m_player;
@@ -17,6 +22,11 @@ Player *Standing::player() const
 std::vector<double> Standing::values() const
 {
     return m_values;
+}
+
+void Standing::setRank(int rank)
+{
+    m_rank = rank;
 }
 
 void Standing::addValue(double value)

@@ -9,8 +9,6 @@
 #include "event.h"
 #include "standing.h"
 #include "state.h"
-#include "tiebreaks/buchholz.h"
-#include "tiebreaks/points.h"
 #include "tournament.h"
 
 using namespace Qt::Literals::StringLiterals;
@@ -87,7 +85,7 @@ void TiebreaksTest::testTiebreaks()
 
     QVERIFY((*tournament)->setTiebreaksFromTrf(tiebreaks));
 
-    const auto state = (*tournament)->getState();
+    const State state = (*tournament)->getState();
     const auto standings = (*tournament)->getStandings(state);
 
     for (qsizetype i = 0; i < standings.size(); ++i) {
@@ -96,7 +94,7 @@ void TiebreaksTest::testTiebreaks()
 
         const auto result = QStringList{
             QString::number(standing.player()->startingRank()),
-            QString::number(i + 1),
+            QString::number(standing.rank()),
             QString::number(standing.values()[0], 'f', 1),
             QString::number(standing.values()[1], 'f', precision),
         };
