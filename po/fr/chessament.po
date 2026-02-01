@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-29 00:41+0000\n"
+"POT-Creation-Date: 2026-02-01 00:40+0000\n"
 "PO-Revision-Date: 2026-01-27 19:34+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: \n"
@@ -1111,36 +1111,50 @@ msgctxt "@info"
 msgid "Unsupported tiebreak option \"%1\""
 msgstr "Option « %1 » de jeu décisif non prise en charge"
 
-#: tournament/tournament.cpp:471
+#: tournament/tournament.cpp:473
 #, kde-format
 msgctxt "Game points"
 msgid "Points"
 msgstr "Points"
 
-#: tournament/tournament.cpp:475
+#: tournament/tournament.cpp:477
 #, kde-format
 msgctxt "Buchholz tiebreak"
 msgid "Buchholz"
 msgstr "Buchholz"
 
-#: tournament/tournament.cpp:479
+#: tournament/tournament.cpp:481
 #, kde-format
 msgctxt "Number of Wins tiebreak"
 msgid "Number of Wins"
 msgstr "Nombre de victoires"
 
-#: tournament/tournament.cpp:483
+#: tournament/tournament.cpp:485
+#, fuzzy, kde-format
+#| msgctxt "Number of Wins tiebreak"
+#| msgid "Number of Wins"
+msgctxt "Number of Games Won tiebreak"
+msgid "Number of Games Won"
+msgstr "Nombre de victoires"
+
+#: tournament/tournament.cpp:489
+#, kde-format
+msgctxt "Number of Games Played with Black tiebreak"
+msgid "Number of Games Played with Black"
+msgstr ""
+
+#: tournament/tournament.cpp:493
 #, kde-format
 msgctxt "Tiebreak"
 msgid "Average Buchholz of Opponents"
 msgstr "Système de Buchholz moyen des adversaires"
 
-#: tournament/tournament.cpp:870
+#: tournament/tournament.cpp:886
 #, kde-format
 msgid "An error ocurred while pairing the round: %1"
 msgstr "Une erreur s'est produite lors du couplage de la manche : %1"
 
-#: tournament/tournament.cpp:1101
+#: tournament/tournament.cpp:1117
 #, kde-format
 msgid "Couldn't open file"
 msgstr "Impossible d'ouvrir le fichier"
