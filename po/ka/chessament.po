@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-01 00:40+0000\n"
-"PO-Revision-Date: 2026-01-26 06:23+0100\n"
+"PO-Revision-Date: 2026-02-01 03:14+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -1133,18 +1133,16 @@ msgid "Number of Wins"
 msgstr "მოგებების რაოდენობა"
 
 #: tournament/tournament.cpp:485
-#, fuzzy, kde-format
-#| msgctxt "Number of Wins tiebreak"
-#| msgid "Number of Wins"
+#, kde-format
 msgctxt "Number of Games Won tiebreak"
 msgid "Number of Games Won"
-msgstr "მოგებების რაოდენობა"
+msgstr "მოგებული თამაშების რაოდენობა"
 
 #: tournament/tournament.cpp:489
 #, kde-format
 msgctxt "Number of Games Played with Black tiebreak"
 msgid "Number of Games Played with Black"
-msgstr ""
+msgstr "შავით თამაშების რაოდენობა"
 
 #: tournament/tournament.cpp:493
 #, kde-format

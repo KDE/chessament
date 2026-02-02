@@ -1126,12 +1126,10 @@ msgid "Number of Wins"
 msgstr "获胜次数"
 
 #: tournament/tournament.cpp:485
-#, fuzzy, kde-format
-#| msgctxt "Number of Wins tiebreak"
-#| msgid "Number of Wins"
+#, kde-format
 msgctxt "Number of Games Won tiebreak"
 msgid "Number of Games Won"
-msgstr "获胜次数"
+msgstr ""
 
 #: tournament/tournament.cpp:489
 #, kde-format

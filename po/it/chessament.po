@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-01 00:40+0000\n"
-"PO-Revision-Date: 2026-01-22 22:41+0100\n"
+"PO-Revision-Date: 2026-01-28 20:15+0100\n"
 "Last-Translator: Valter Mura <valtermura@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -1113,7 +1113,7 @@ msgstr "Escludi i punteggi più bassi:"
 #, kde-format
 msgctxt "@info"
 msgid "Unsupported tiebreak option \"%1\""
-msgstr ""
+msgstr "Opzione di spareggio «%1» non supportata"
 
 #: tournament/tournament.cpp:473
 #, kde-format
