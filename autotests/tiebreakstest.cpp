@@ -61,6 +61,7 @@ void TiebreaksTest::testTiebreaks_data()
     QTest::addColumn<QString>("tiebreaks");
 
     QTest::newRow("tournament_1.txt BH") << u"tournament_1.txt"_s << u".bh"_s << 1 << u"pts,bh"_s;
+    QTest::newRow("tournament_1.txt WIN") << u"tournament_1.txt"_s << u".win"_s << 1 << u"pts,win"_s;
     QTest::newRow("buchholz_1.trf BH") << u"buchholz_1.trf"_s << u".bh"_s << 1 << u"pts,bh"_s;
     QTest::newRow("buchholz_2.trf BH") << u"buchholz_2.trf"_s << u".bh"_s << 1 << u"pts,bh"_s;
     QTest::newRow("buchholz_3.trf BH") << u"buchholz_3.trf"_s << u".bh"_s << 1 << u"pts,bh"_s;
