@@ -196,6 +196,15 @@ void Controller::removePairings(bool keepByes)
     setAreStandingsValid(false);
 }
 
+void Controller::reloadPairings(int round)
+{
+    Q_ASSERT(round >= 1);
+
+    if (m_currentRound == round) {
+        m_pairingModel->setPairings(m_tournament->getPairings(m_currentRound));
+    }
+}
+
 QCoro::QmlTask Controller::reloadStandings(int maxRound)
 {
     qDebug() << "reloading standings";

@@ -25,7 +25,10 @@ FormCard.FormCardPage {
             icon.name: "im-kick-user-symbolic"
             text: KI18n.i18nc("@action:button", "Retire player")
             enabled: root.tournament.currentRound < root.tournament.numberOfRounds
-            onTriggered: byesModel.retire()
+            onTriggered: {
+                byesModel.retire();
+                Controller.reloadPairings(Controller.currentRound);
+            }
         }
     ]
 
@@ -61,6 +64,7 @@ FormCard.FormCardPage {
             currentValue: comboBox.result
             onActivated: {
                 byesModel.setBye(comboBox.round, comboBox.currentValue);
+                Controller.reloadPairings(comboBox.round);
             }
         }
     }
