@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-01 00:40+0000\n"
+"POT-Creation-Date: 2026-02-06 00:41+0000\n"
 "PO-Revision-Date: 2026-02-02 17:03+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -1123,48 +1123,48 @@ msgctxt "@info"
 msgid "Unsupported tiebreak option \"%1\""
 msgstr "Непідтримуваний варіант тай-брейка «%1»"
 
-#: tournament/tournament.cpp:473
+#: tournament/tournament.cpp:483
 #, kde-format
 msgctxt "Game points"
 msgid "Points"
 msgstr "Очки"
 
-#: tournament/tournament.cpp:477
+#: tournament/tournament.cpp:487
 #, kde-format
 msgctxt "Buchholz tiebreak"
 msgid "Buchholz"
 msgstr "Бухгольц"
 
-#: tournament/tournament.cpp:481
+#: tournament/tournament.cpp:491
 #, kde-format
 msgctxt "Number of Wins tiebreak"
 msgid "Number of Wins"
 msgstr "Кількість перемог"
 
-#: tournament/tournament.cpp:485
+#: tournament/tournament.cpp:495
 #, kde-format
 msgctxt "Number of Games Won tiebreak"
 msgid "Number of Games Won"
 msgstr "Кількість перемог"
 
-#: tournament/tournament.cpp:489
+#: tournament/tournament.cpp:499
 #, kde-format
 msgctxt "Number of Games Played with Black tiebreak"
 msgid "Number of Games Played with Black"
 msgstr "Кількість перемог при грі чорними"
 
-#: tournament/tournament.cpp:493
+#: tournament/tournament.cpp:503
 #, kde-format
 msgctxt "Tiebreak"
 msgid "Average Buchholz of Opponents"
 msgstr "Середнє Бухгольца для суперників"
 
-#: tournament/tournament.cpp:886
+#: tournament/tournament.cpp:896
 #, kde-format
 msgid "An error ocurred while pairing the round: %1"
 msgstr "Під час поділу на пари для раунду сталася помилка: %1"
 
-#: tournament/tournament.cpp:1117
+#: tournament/tournament.cpp:1127
 #, kde-format
 msgid "Couldn't open file"
 msgstr "Не вдалося відкрити файл"
