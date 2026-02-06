@@ -60,8 +60,7 @@ FormCard.FormCardPage {
             valueRole: "result"
             currentValue: comboBox.result
             onActivated: {
-                Controller.setBye(root.tournament, root.player, comboBox.round, comboBox.currentValue);
-                byesModel.reload();
+                byesModel.setBye(comboBox.round, comboBox.currentValue);
             }
         }
     }

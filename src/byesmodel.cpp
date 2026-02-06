@@ -93,8 +93,12 @@ QHash<int, QByteArray> ByesModel::roleNames() const
     };
 }
 
-void ByesModel::reload()
+void ByesModel::setBye(int round, Pairing::PartialResult result)
 {
+    if (const auto ok = m_tournament->setBye(m_player, round, result); !ok) {
+        Q_EMIT errorOcurred(ok.error());
+    }
+
     Q_EMIT dataChanged(index(0), index(rowCount() - 1));
 }
 

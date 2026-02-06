@@ -185,16 +185,6 @@ QCoro::Task<void> Controller::pairRound(bool sort, uint color)
     Q_EMIT hasCurrentRoundFinishedChanged();
 }
 
-void Controller::setBye(Tournament *tournament, Player *player, int round, Pairing::PartialResult result)
-{
-    if (const auto ok = tournament->setBye(player, round, result); !ok) {
-        setError(ok.error());
-    }
-
-    setAreStandingsValid(false);
-    m_pairingModel->setPairings(m_tournament->getPairings(m_currentRound));
-}
-
 void Controller::removePairings(bool keepByes)
 {
     if (auto ok = m_tournament->removePairings(m_currentRound, keepByes); !ok) {

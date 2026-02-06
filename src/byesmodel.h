@@ -6,6 +6,8 @@
 #include <QAbstractListModel>
 #include <qqmlregistration.h>
 
+#include "tournament/pairing.h"
+
 class Tournament;
 class Player;
 
@@ -33,7 +35,7 @@ public:
     [[nodiscard]] QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
     [[nodiscard]] QHash<int, QByteArray> roleNames() const override;
 
-    Q_INVOKABLE void reload();
+    Q_INVOKABLE void setBye(int round, Pairing::PartialResult result);
     Q_INVOKABLE void retire();
 
 public Q_SLOTS:

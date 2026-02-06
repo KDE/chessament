@@ -66,7 +66,6 @@ public:
     Q_INVOKABLE void importTrf(const QUrl &fileUrl);
     Q_INVOKABLE void exportTrf(const QUrl &fileUrl);
     Q_INVOKABLE QCoro::Task<void> pairRound(bool sort, uint color);
-    Q_INVOKABLE void setBye(Tournament *tournament, Player *player, int round, Pairing::PartialResult result);
     Q_INVOKABLE void removePairings(bool keepByes);
     Q_INVOKABLE QCoro::QmlTask reloadStandings(int maxRound);
 
