@@ -74,7 +74,7 @@ QList<Pairing *> Round::pairings() const
     return result;
 }
 
-Pairing *Round::getPairing(int board)
+Pairing *Round::pairing(int board)
 {
     const auto it = std::ranges::find_if(m_pairings, [board](const std::unique_ptr<Pairing> &p) {
         return p->board() == board;

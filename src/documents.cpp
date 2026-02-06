@@ -50,7 +50,7 @@ std::unique_ptr<Document> Controller::pairingsDocument()
     doc->addTitle(2, i18nc("@title", "Round %1 Pairings", m_currentRound));
 
     PairingModel model;
-    model.setPairings(m_tournament->getPairings(m_currentRound));
+    model.setPairings(m_tournament->pairings(m_currentRound));
     model.setColumns({Board, WhiteStartingRank, WhiteName, Result, BlackName, BlackStartingRank});
     doc->addTable(model);
 
@@ -94,11 +94,11 @@ std::unique_ptr<Document> Controller::standingsDocument(int round)
     }
     doc->addTitle(2, title);
 
-    const auto state = m_tournament->getState(round);
+    const State state = m_tournament->state(round);
 
     StandingsModel model;
     model.setTournament(m_tournament);
-    model.setStandings(m_tournament->getStandings(state));
+    model.setStandings(m_tournament->standings(state));
     doc->addTable(model);
 
     return doc;

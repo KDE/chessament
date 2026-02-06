@@ -12,7 +12,7 @@ State::State(Tournament *tournament, int maxRound)
         m_maxRound = maxRound;
     }
 
-    m_pairingsByPlayer = m_tournament->getPairingsByPlayer(m_maxRound);
+    m_pairingsByPlayer = m_tournament->pairingsByPlayer(m_maxRound);
 }
 
 size_t State::lastRound() const
@@ -20,22 +20,22 @@ size_t State::lastRound() const
     return m_maxRound;
 }
 
-QList<Pairing *> State::getPairings(Player *player) const
+QList<Pairing *> State::pairings(Player *player) const
 {
     return m_pairingsByPlayer.value(player);
 }
 
-double State::getPoints(Player *player)
+double State::points(Player *player) const
 {
     double points = 0.;
     const auto pairings = m_pairingsByPlayer.value(player);
     for (const auto &pairing : pairings) {
-        points += pairing->getPointsOfPlayer(player);
+        points += pairing->pointsOfPlayer(player);
     }
     return points;
 }
 
-double State::getPointsForTiebreaks(Player *player)
+double State::pointsForTiebreaks(Player *player) const
 {
     double points = 0.;
     bool hadVUR = false;
@@ -46,8 +46,8 @@ double State::getPointsForTiebreaks(Player *player)
                 points += .5;
                 hadVUR = true;
             } else {
-                points += (*pairing)->getPointsOfPlayer(player);
-                const auto result = (*pairing)->getResultOfPlayer(player);
+                points += (*pairing)->pointsOfPlayer(player);
+                const auto result = (*pairing)->resultOfPlayer(player);
                 if (pairing == pairings.rbegin()) {
                     hadVUR = Pairing::isVUR(result);
                 } else {
@@ -55,7 +55,7 @@ double State::getPointsForTiebreaks(Player *player)
                 }
             }
         } else {
-            points += (*pairing)->getPointsOfPlayer(player);
+            points += (*pairing)->pointsOfPlayer(player);
             hadVUR = false;
         }
     }

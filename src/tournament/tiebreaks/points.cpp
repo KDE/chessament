@@ -9,5 +9,5 @@ double Points::calculate(Tournament *tournament, State state, QList<Player *> pl
     Q_UNUSED(tournament)
     Q_UNUSED(players)
 
-    return state.getPoints(player);
+    return state.points(player);
 }

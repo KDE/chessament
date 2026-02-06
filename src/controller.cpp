@@ -57,7 +57,7 @@ void Controller::setTournament(Tournament *tournament)
 
     m_playersModel->setTournament(m_tournament);
     m_playersModel->setPlayers(m_tournament->players());
-    m_pairingModel->setPairings(m_tournament->getPairings(1));
+    m_pairingModel->setPairings(m_tournament->pairings(1));
     m_standingsModel->setTournament(m_tournament);
 
     setHasOpenTournament(true);
@@ -110,7 +110,7 @@ void Controller::setCurrentRound(int currentRound)
     Q_ASSERT(currentRound >= 1);
 
     m_currentRound = currentRound;
-    m_pairingModel->setPairings(m_tournament->getPairings(currentRound));
+    m_pairingModel->setPairings(m_tournament->pairings(currentRound));
     Q_EMIT currentRoundChanged();
 }
 
@@ -179,7 +179,7 @@ QCoro::Task<void> Controller::pairRound(bool sort, uint color)
     }
 
     setCurrentRound(m_tournament->currentRound());
-    m_pairingModel->setPairings(m_tournament->getPairings(m_tournament->currentRound()));
+    m_pairingModel->setPairings(m_tournament->pairings(m_tournament->currentRound()));
 
     setAreStandingsValid(false);
     Q_EMIT hasCurrentRoundFinishedChanged();
@@ -201,7 +201,7 @@ void Controller::reloadPairings(int round)
     Q_ASSERT(round >= 1);
 
     if (m_currentRound == round) {
-        m_pairingModel->setPairings(m_tournament->getPairings(m_currentRound));
+        m_pairingModel->setPairings(m_tournament->pairings(m_currentRound));
     }
 }
 
@@ -214,7 +214,7 @@ QCoro::QmlTask Controller::reloadStandings(int maxRound)
 QCoro::Task<> Controller::updateStandings(int maxRound)
 {
     const auto standings = co_await QtConcurrent::run([this, maxRound]() -> QList<Standing> {
-        return m_tournament->getStandings(m_tournament->getState(maxRound));
+        return m_tournament->standings(m_tournament->state(maxRound));
     });
 
     m_standingsModel->setStandings(standings);
@@ -272,7 +272,7 @@ bool Controller::setResult(int board, Qt::Key key)
 
 bool Controller::setResult(int board, Pairing::PartialResult whiteResult, Pairing::PartialResult blackResult)
 {
-    auto pairing = m_tournament->getPairing(m_currentRound, board);
+    auto pairing = m_tournament->pairing(m_currentRound, board);
 
     Pairing::Result result = {whiteResult, blackResult};
 
@@ -322,7 +322,7 @@ void Controller::openEvent(const QUrl &fileUrl)
     }
 
     setEvent(std::move(event));
-    setTournament(m_event->getTournament(0));
+    setTournament(m_event->tournament(0));
     setCurrentView(u"PlayersPage"_s);
 }
 

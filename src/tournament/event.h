@@ -45,7 +45,7 @@ public:
     /*!
      * Returns the tournament with index \a index.
      */
-    Tournament *getTournament(uint index);
+    Tournament *tournament(uint index);
 
     /*!
      * Returns a new tournament.
@@ -80,12 +80,12 @@ Q_SIGNALS:
     void fileNameChanged();
 
 private:
-    QSqlDatabase getDB();
+    QSqlDatabase db();
     std::expected<void, QString> openDatabase();
     void closeDatabase();
     std::expected<void, QString> createTables();
-    std::expected<int, QString> getDBVersion();
-    std::expected<void, QString> setDBVersion(int version);
+    std::expected<int, QString> dbVersion();
+    std::expected<void, QString> setDbVersion(int version);
     std::expected<void, QString> loadTournaments();
 
     QString m_connName;

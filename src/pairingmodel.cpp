@@ -139,7 +139,7 @@ void PairingModel::updatePairing(int board)
     Q_EMIT dataChanged(index(board - 1, 0), index(board - 1, columnCount() - 1), {});
 }
 
-Pairing *PairingModel::getPairing(int board)
+Pairing *PairingModel::pairing(int board)
 {
     if (board < 0) {
         return nullptr;

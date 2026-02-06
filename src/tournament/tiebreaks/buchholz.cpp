@@ -49,7 +49,7 @@ double Buchholz::calculate(Tournament *tournament, State state, QList<Player *> 
     std::vector<double> contributions;
     std::vector<double> vurContributions;
 
-    for (const auto &pairing : state.getPairings(player)) {
+    for (const auto &pairing : state.pairings(player)) {
         double p;
 
         const auto opponent = pairing->opponent(player);
@@ -57,12 +57,12 @@ double Buchholz::calculate(Tournament *tournament, State state, QList<Player *> 
         // Handle unplayed rounds of player
         if (Pairing::isUnplayed(pairing->whiteResult())) {
             // 16.4: dummy opponent with the same points as the player
-            p = state.getPoints(player);
+            p = state.points(player);
         } else {
-            p = state.getPointsForTiebreaks(opponent);
+            p = state.pointsForTiebreaks(opponent);
         }
 
-        if (Pairing::isVUR(pairing->getResultOfPlayer(player))) {
+        if (Pairing::isVUR(pairing->resultOfPlayer(player))) {
             vurContributions.push_back(p);
         } else {
             contributions.push_back(p);

@@ -165,19 +165,19 @@ public:
     /*!
      * Returns the players grouped by their starting rank.
      */
-    QMap<uint, Player *> getPlayersByStartingRank();
+    QMap<uint, Player *> playersByStartingRank();
 
     /*!
      * Returns the players grouped by their id.
      */
-    QMap<uint, Player *> getPlayersById();
+    QMap<uint, Player *> playersById();
 
     /*!
      * Returns the pairings of each player.
      *
      * \a maxRound The number of the highest round to consider. Negative number to use all rounds.
      */
-    QHash<Player *, QList<Pairing *>> getPairingsByPlayer(int maxRound = -1);
+    QHash<Player *, QList<Pairing *>> pairingsByPlayer(int maxRound = -1);
 
     QList<Pairing *> pairingsOfPlayer(Player *player);
 
@@ -186,7 +186,7 @@ public:
      *
      * \a state Helper object to compute the standings.
      */
-    QList<Standing> getStandings(const State &state);
+    QList<Standing> standings(const State &state);
 
     Q_INVOKABLE QList<QVariantMap> availableTiebreaks();
 
@@ -228,14 +228,14 @@ public:
     /*!
      * Returns the pairing corresponding to the \a round and \a board.
      */
-    Pairing *getPairing(int round, int board);
+    Pairing *pairing(int round, int board);
 
-    Pairing *getPairing(int round, Player *player) const;
+    Pairing *pairing(int round, Player *player) const;
 
     /*!
      * Returns the pairing of the \a round.
      */
-    [[nodiscard]] QList<Pairing *> getPairings(int round) const;
+    [[nodiscard]] QList<Pairing *> pairings(int round) const;
 
     /*!
      * Sorts the pairings of round \a round.
@@ -298,7 +298,7 @@ public:
      *
      * \a maxRound The number of the highest round to include.
      */
-    State getState(int maxRound = -1);
+    State state(int maxRound = -1);
 
     /*!
      * \property Tournament::numberOfPlayers
@@ -320,12 +320,12 @@ public:
      *
      * \sa setOption()
      */
-    QVariant getOption(const QString &name);
+    QVariant option(const QString &name);
 
     /*!
      * Sets the option \a name to \a value.
      *
-     * \sa getOption()
+     * \sa option()
      */
     void setOption(const QString &name, const QVariant &value);
 

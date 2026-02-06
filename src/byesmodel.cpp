@@ -71,13 +71,13 @@ QVariant ByesModel::data(const QModelIndex &index, int role) const
         if (pairing == nullptr) {
             return QVariant::fromValue(Pairing::PartialResult::Unknown);
         }
-        return QVariant::fromValue(pairing->getResultOfPlayer(m_player));
+        return QVariant::fromValue(pairing->resultOfPlayer(m_player));
     }
     case ByesModel::Roles::ResultStringRole: {
         if (pairing == nullptr) {
             return Pairing::partialResultToString(Pairing::PartialResult::Unknown);
         }
-        return Pairing::partialResultToString(pairing->getResultOfPlayer(m_player));
+        return Pairing::partialResultToString(pairing->resultOfPlayer(m_player));
     }
     }
 

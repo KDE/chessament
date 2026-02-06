@@ -11,8 +11,8 @@ double NumberOfGamesWon::calculate(Tournament *tournament, State state, QList<Pl
 
     int result = 0;
 
-    for (const auto &pairing : state.getPairings(player)) {
-        if (pairing->getPointsOfPlayer(player) == 1. && !Pairing::isUnplayed(pairing->getResultOfPlayer(player))) {
+    for (const auto &pairing : state.pairings(player)) {
+        if (pairing->pointsOfPlayer(player) == 1. && !Pairing::isUnplayed(pairing->resultOfPlayer(player))) {
             ++result;
         }
     }

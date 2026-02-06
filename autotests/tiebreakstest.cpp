@@ -87,8 +87,8 @@ void TiebreaksTest::testTiebreaks()
 
     QVERIFY((*tournament)->setTiebreaksFromTrf(tiebreaks));
 
-    const State state = (*tournament)->getState();
-    const auto standings = (*tournament)->getStandings(state);
+    const State state = (*tournament)->state();
+    const auto standings = (*tournament)->standings(state);
 
     for (qsizetype i = 0; i < standings.size(); ++i) {
         const auto &standing = standings.at(i);

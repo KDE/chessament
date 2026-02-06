@@ -84,7 +84,7 @@ public:
         Q_UNREACHABLE();
     }
 
-    double getPointsOfPlayer(Player *p)
+    double pointsOfPlayer(Player *p)
     {
         if (p == m_whitePlayer) {
             return Pairing::pointsForResult(m_whiteResult);
@@ -404,7 +404,7 @@ public:
 
     [[nodiscard]] QByteArray extraString() const;
 
-    Pairing::PartialResult getResultOfPlayer(Player *p)
+    Pairing::PartialResult resultOfPlayer(Player *p)
     {
         if (p == m_whitePlayer) {
             return m_whiteResult;

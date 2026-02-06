@@ -40,7 +40,7 @@ public:
     void setColumns(const QList<int> &columns);
     void setPairings(const QList<Pairing *> &pairings);
     Q_INVOKABLE void updatePairing(int board);
-    Q_INVOKABLE Pairing *getPairing(int board);
+    Q_INVOKABLE Pairing *pairing(int board);
 
 private:
     QList<Pairing *> m_pairings;

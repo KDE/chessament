@@ -64,7 +64,7 @@ QCoro::Task<std::expected<QList<std::pair<uint, uint>>, QString>> PairingEngine:
     }
 
     auto pairings = QList<std::pair<uint, uint>>();
-    const auto players = tournament->getPlayersByStartingRank();
+    const auto players = tournament->playersByStartingRank();
 
     const auto output = QString::fromUtf8(process.readAll());
     std::cout << output.toStdString();

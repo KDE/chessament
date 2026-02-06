@@ -18,15 +18,15 @@ double AverageBuchholzOfOpponents::calculate(Tournament *tournament, State state
         }
 
         double result = 0.;
-        for (const auto pairing : state.getPairings(p)) {
+        for (const auto pairing : state.pairings(p)) {
             const auto opponent = pairing->opponent(p);
 
             // Handle unplayed rounds of player
             if (Pairing::isUnplayed(pairing->whiteResult())) {
                 // 16.4: dummy opponent with the same points as the player
-                result += state.getPoints(p);
+                result += state.points(p);
             } else {
-                result += state.getPointsForTiebreaks(opponent);
+                result += state.pointsForTiebreaks(opponent);
             }
         }
 
@@ -37,7 +37,7 @@ double AverageBuchholzOfOpponents::calculate(Tournament *tournament, State state
     double result = 0.;
     int count = 0;
 
-    for (const auto &pairing : state.getPairings(player)) {
+    for (const auto &pairing : state.pairings(player)) {
         const auto opponent = pairing->opponent(player);
 
         if (!Pairing::isUnplayed(pairing->whiteResult())) {

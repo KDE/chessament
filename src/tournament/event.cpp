@@ -48,7 +48,7 @@ std::expected<void, QString> Event::open(const QString &fileName)
     return {};
 }
 
-Tournament *Event::getTournament(uint index)
+Tournament *Event::tournament(uint index)
 {
     return m_tournaments.at(index).get();
 }
@@ -82,7 +82,7 @@ std::expected<Tournament *, QString> Event::importTournament(const QString &file
 
 void Event::saveAs(const QString &fileName)
 {
-    QSqlQuery query(getDB());
+    QSqlQuery query(db());
     query.prepare(u"VACUUM INTO :fileName;"_s);
     query.bindValue(u":fileName"_s, fileName);
     query.exec();
@@ -104,7 +104,7 @@ bool Event::remove()
     return true;
 }
 
-QSqlDatabase Event::getDB()
+QSqlDatabase Event::db()
 {
     return QSqlDatabase::database(m_connName);
 }
@@ -136,19 +136,19 @@ std::expected<void, QString> Event::openDatabase()
 
 void Event::closeDatabase()
 {
-    getDB().close();
+    db().close();
     QSqlDatabase::removeDatabase(m_connName);
 }
 
 std::expected<void, QString> Event::createTables()
 {
-    QSqlQuery query(ENABLE_FOREIGN_KEYS_QUERY, getDB());
+    QSqlQuery query(ENABLE_FOREIGN_KEYS_QUERY, db());
 
     if (query.lastError().isValid()) {
         return std::unexpected(query.lastError().text());
     }
 
-    query = QSqlQuery(getDB());
+    query = QSqlQuery(db());
     query.prepare(TOURNAMENTS_TABLE_SCHEMA);
     query.exec();
 
@@ -156,7 +156,7 @@ std::expected<void, QString> Event::createTables()
         return std::unexpected(query.lastError().text());
     }
 
-    query = QSqlQuery(getDB());
+    query = QSqlQuery(db());
     query.prepare(OPTIONS_TABLE_SCHEMA);
     query.exec();
 
@@ -164,7 +164,7 @@ std::expected<void, QString> Event::createTables()
         return std::unexpected(query.lastError().text());
     }
 
-    query = QSqlQuery(getDB());
+    query = QSqlQuery(db());
     query.prepare(PLAYERS_TABLE_SCHEMA);
     query.exec();
 
@@ -172,7 +172,7 @@ std::expected<void, QString> Event::createTables()
         return std::unexpected(query.lastError().text());
     }
 
-    query = QSqlQuery(getDB());
+    query = QSqlQuery(db());
     query.prepare(ROUNDS_TABLE_SCHEMA);
     query.exec();
 
@@ -180,7 +180,7 @@ std::expected<void, QString> Event::createTables()
         return std::unexpected(query.lastError().text());
     }
 
-    query = QSqlQuery(getDB());
+    query = QSqlQuery(db());
     query.prepare(PAIRINGS_TABLE_SCHEMA);
     query.exec();
 
@@ -188,16 +188,16 @@ std::expected<void, QString> Event::createTables()
         return std::unexpected(query.lastError().text());
     }
 
-    if (auto ok = setDBVersion(1); !ok) {
+    if (auto ok = setDbVersion(1); !ok) {
         return ok;
     }
 
     return {};
 }
 
-std::expected<int, QString> Event::getDBVersion()
+std::expected<int, QString> Event::dbVersion()
 {
-    QSqlQuery query(u"PRAGMA user_version;"_s, getDB());
+    QSqlQuery query(u"PRAGMA user_version;"_s, db());
 
     if (query.lastError().isValid()) {
         return std::unexpected(query.lastError().text());
@@ -206,9 +206,9 @@ std::expected<int, QString> Event::getDBVersion()
     return query.value(0).toInt();
 }
 
-std::expected<void, QString> Event::setDBVersion(int version)
+std::expected<void, QString> Event::setDbVersion(int version)
 {
-    QSqlQuery query(getDB());
+    QSqlQuery query(db());
     query.prepare(u"PRAGMA user_version = %1;"_s.arg(version)); // Can't bind in a PRAGMA statement
     query.exec();
 
@@ -221,7 +221,7 @@ std::expected<void, QString> Event::setDBVersion(int version)
 
 std::expected<void, QString> Event::loadTournaments()
 {
-    QSqlQuery query(getDB());
+    QSqlQuery query(db());
     query.prepare(GET_TOURNAMENTS_QUERY);
     query.exec();
 

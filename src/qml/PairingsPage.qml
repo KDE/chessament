@@ -123,7 +123,7 @@ TablePage {
 
         pairing: {
             const index = proxyModel.mapToSource(root.tableView.selectionModel.currentIndex);
-            return root.model.sourceModel.getPairing(index.row);
+            return root.model.sourceModel.pairing(index.row);
         }
 
         onSaveResult: (pairing, whiteResult, blackResult) => {
@@ -162,7 +162,7 @@ TablePage {
         const selection = tableView.selectionModel.currentIndex;
         if (selection) {
             const index = proxyModel.mapToSource(selection);
-            const pairing = root.model.sourceModel.getPairing(index.row);
+            const pairing = root.model.sourceModel.pairing(index.row);
 
             if (pairing.blackPlayer === null) {
                 return;

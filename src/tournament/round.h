@@ -26,7 +26,7 @@ public:
     [[nodiscard]] QByteArray extraString() const;
 
     [[nodiscard]] QList<Pairing *> pairings() const;
-    Pairing *getPairing(int board);
+    Pairing *pairing(int board);
     void addPairing(std::unique_ptr<Pairing> pairing);
     void removePairings(std::function<bool(Pairing *)> predicate);
 

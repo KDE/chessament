@@ -12,9 +12,9 @@ public:
 
     [[nodiscard]] size_t lastRound() const;
 
-    QList<Pairing *> getPairings(Player *player) const;
-    double getPoints(Player *player);
-    double getPointsForTiebreaks(Player *player);
+    QList<Pairing *> pairings(Player *player) const;
+    double points(Player *player) const;
+    double pointsForTiebreaks(Player *player) const;
 
 private:
     Tournament *m_tournament;
