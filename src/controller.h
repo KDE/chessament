@@ -55,6 +55,7 @@ public:
                                int nationalRating,
                                const QString &playerId,
                                const QString &birthDate,
+                               const QString &federation,
                                const QString &origin,
                                const QString &sex);
     Q_INVOKABLE void sortPlayers();

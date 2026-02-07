@@ -27,7 +27,7 @@ QQC2.Dialog {
     bottomPadding: 0
 
     onAccepted: {
-        Controller.addPlayer(titleField.currentText, nameField.text, ratingField.value, nationalRatingField.value, playerIdField.text, birthDateField.text, originField.text, sexField.text);
+        Controller.addPlayer(titleField.currentText, nameField.text, ratingField.value, nationalRatingField.value, playerIdField.text, birthDateField.text, federationField.text, originField.text, sexField.text);
     }
 
     header: Kirigami.DialogHeader {
