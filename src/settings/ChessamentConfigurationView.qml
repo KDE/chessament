@@ -31,6 +31,7 @@ KirigamiSettings.ConfigurationView {
             moduleId: "ratinglists"
             text: KI18n.i18nc("@action:button", "Rating Lists")
             icon.name: "view-list-details-symbolic"
+            visible: Config.developer
             page: () => Qt.createComponent("org.kde.chessament.settings", "RatingListsPage")
             initialProperties: () => {
                 return {
