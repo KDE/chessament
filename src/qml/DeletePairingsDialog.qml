@@ -23,6 +23,7 @@ FormCard.FormCardDialog {
     FormCard.FormCheckDelegate {
         id: byes
         text: KI18n.i18nc("@action:check", "Keep byes")
+        checked: true
     }
 
     footer: Controls.DialogButtonBox {
