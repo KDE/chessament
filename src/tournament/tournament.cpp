@@ -717,6 +717,21 @@ std::expected<void, QString> Tournament::retire(Player *player)
     return {};
 }
 
+QList<Player *> Tournament::voluntaryByes(int round) const
+{
+    Q_ASSERT(round >= 1);
+
+    QList<Player *> result{};
+
+    for (const auto p : pairings(round)) {
+        if (Pairing::isVoluntaryBye(p->whiteResult())) {
+            result << p->whitePlayer();
+        }
+    }
+
+    return result;
+}
+
 Pairing *Tournament::pairing(int round, int board)
 {
     Q_ASSERT(round >= 1);

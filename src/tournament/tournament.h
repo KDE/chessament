@@ -225,6 +225,8 @@ public:
 
     std::expected<void, QString> retire(Player *player);
 
+    Q_INVOKABLE [[nodiscard]] QList<Player *> voluntaryByes(int round) const;
+
     /*!
      * Returns the pairing corresponding to the \a round and \a board.
      */

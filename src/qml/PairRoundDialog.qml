@@ -15,11 +15,23 @@ import org.kde.chessament.tournament
 FormCard.FormCardDialog {
     id: root
 
+    readonly property list<Player> byes: Controller.tournament.voluntaryByes(Controller.tournament.currentRound + 1)
+    readonly property string players: "\n<ul>" + byes.map(p => "<li>" + p.name + "</li>").join("\n") + "</ul>"
+
     title: KI18n.i18nc("@title %1 is a number >= 1", "Pair Round %1", Controller.tournament.currentRound + 1)
     standardButtons: Controls.Dialog.Ok | Controls.Dialog.Cancel
 
     onAccepted: {
         Controller.pairRound(sortPlayers.checked, initialColor.currentValue);
+    }
+
+    FormCard.FormTextDelegate {
+        text: root.byes.length === 0 ? KI18n.i18nc("@info", "All players will be paired.") : KI18n.i18ncp("@info %1 is a number", "The following player won't be paired: %2", "The following %1 players won't be paired: %2", root.byes.length, root.players)
+        textItem {
+            textFormat: Text.StyledText
+            elide: Text.ElideNone
+            wrapMode: Text.Wrap
+        }
     }
 
     FormCard.FormCheckDelegate {

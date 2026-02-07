@@ -215,6 +215,18 @@ public:
         }
     }
 
+    static bool isVoluntaryBye(PartialResult result)
+    {
+        switch (result) {
+        case PartialResult::HalfBye:
+        case PartialResult::FullBye:
+        case PartialResult::ZeroBye:
+            return true;
+        default:
+            return false;
+        }
+    }
+
     static bool isVUR(PartialResult result)
     {
         switch (result) {
