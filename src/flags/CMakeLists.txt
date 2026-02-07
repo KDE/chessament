@@ -137,7 +137,7 @@ qt_add_resources(chessament_static "flags"
         MYA.svg
         NAM.svg
         NCA.svg
-        NDE.svg
+        NED.svg
         NEP.svg
         NGR.svg
         NIG.svg
