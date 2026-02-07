@@ -87,11 +87,13 @@ feature_summary(WHAT ALL INCLUDE_QUIET_PACKAGES FATAL_ON_MISSING_REQUIRED_PACKAG
 qcoro_enable_coroutines()
 qt_policy(SET QTP0001 NEW)
 
-ecm_find_qmlmodule(org.kde.kirigamiaddons.components)
-ecm_find_qmlmodule(org.kde.kirigamiaddons.delegates)
-ecm_find_qmlmodule(org.kde.kirigamiaddons.formcard)
-ecm_find_qmlmodule(org.kde.kirigamiaddons.statefulapp)
-ecm_find_qmlmodule(org.kde.kitemmodels)
+ecm_find_qmlmodule(org.kde.ki18n REQUIRED)
+ecm_find_qmlmodule(org.kde.kirigamiaddons.components REQUIRED)
+ecm_find_qmlmodule(org.kde.kirigamiaddons.delegates REQUIRED)
+ecm_find_qmlmodule(org.kde.kirigamiaddons.formcard REQUIRED)
+ecm_find_qmlmodule(org.kde.kirigamiaddons.settings REQUIRED)
+ecm_find_qmlmodule(org.kde.kirigamiaddons.statefulapp REQUIRED)
+ecm_find_qmlmodule(org.kde.kitemmodels REQUIRED)
 
 add_subdirectory(src)
 
