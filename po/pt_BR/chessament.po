@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-06 00:41+0000\n"
+"POT-Creation-Date: 2026-02-07 00:40+0000\n"
 "PO-Revision-Date: 2026-02-01 04:59-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -531,25 +531,34 @@ msgctxt "@action:button"
 msgid "Pairings"
 msgstr "Pares"
 
-#: qml/player/PlayerPairingsPage.qml:20
+#: qml/player/PlayerPairingsPage.qml:21
 #, kde-format
 msgctxt "@title"
 msgid "Pairings"
 msgstr "Pares"
 
-#: qml/player/PlayerPairingsPage.qml:33
+#: qml/player/PlayerPairingsPage.qml:26
+#, fuzzy, kde-format
+#| msgctxt "@info:status Number of players"
+#| msgid "1 player"
+#| msgid_plural "%1 players"
+msgctxt "@action:button"
+msgid "Retire player"
+msgstr "1 jogador"
+
+#: qml/player/PlayerPairingsPage.qml:46
 #, kde-format
 msgctxt "@item:inlistbox Available to play"
 msgid "Available"
 msgstr "Disponível"
 
-#: qml/player/PlayerPairingsPage.qml:80 qml/TournamentSettingsFormat.qml:42
+#: qml/player/PlayerPairingsPage.qml:83 qml/TournamentSettingsFormat.qml:42
 #, kde-format
 msgctxt "@title:group"
 msgid "Pairings"
 msgstr "Pares"
 
-#: qml/player/PlayerPairingsPage.qml:99
+#: qml/player/PlayerPairingsPage.qml:108
 #, kde-format
 msgctxt "@info:label"
 msgid "Round %1"
@@ -1150,12 +1159,12 @@ msgctxt "Tiebreak"
 msgid "Average Buchholz of Opponents"
 msgstr "Buchholz médio dos oponentes"
 
-#: tournament/tournament.cpp:896
+#: tournament/tournament.cpp:907
 #, kde-format
 msgid "An error ocurred while pairing the round: %1"
 msgstr "Ocorreu um erro ao parear a rodada: %1"
 
-#: tournament/tournament.cpp:1127
+#: tournament/tournament.cpp:1138
 #, kde-format
 msgid "Couldn't open file"
 msgstr "Não foi possível abrir o arquivo"
