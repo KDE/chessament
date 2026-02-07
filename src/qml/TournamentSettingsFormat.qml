@@ -42,9 +42,10 @@ FormCard.FormCardPage {
         title: KI18n.i18nc("@title:group", "Pairings")
     }
     FormCard.FormCard {
-        FormCard.FormTextDelegate {
+        FormCard.FormLinkDelegate {
             text: KI18n.i18n("Pairing engine")
             description: KI18n.i18n("bbpPairings")
+            url: "https://github.com/BieremaBoyzProgramming/bbpPairings"
         }
         FormCard.FormComboBoxDelegate {
             id: pairingBye

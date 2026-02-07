@@ -69,6 +69,11 @@ int main(int argc, char *argv[])
                         u"manuel@alcarazzam.dev"_s,
                         u"https://alcarazzam.dev"_s);
     aboutData.setTranslator(i18nc("NAME OF TRANSLATORS", "Your names"), i18nc("EMAIL OF TRANSLATORS", "Your emails"));
+    aboutData.addComponent(u"bbpPairings"_s,
+                           i18n("Swiss-system chess tournament pairing engine."),
+                           QString(),
+                           u"https://github.com/BieremaBoyzProgramming/bbpPairings"_s,
+                           KAboutLicense::LicenseKey::Apache_V2);
     KAboutData::setApplicationData(aboutData);
     QGuiApplication::setWindowIcon(QIcon::fromTheme(u"org.kde.chessament"_s));
 
