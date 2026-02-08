@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-07 00:40+0000\n"
-"PO-Revision-Date: 2026-02-02 17:03+0200\n"
+"POT-Creation-Date: 2026-02-08 00:40+0000\n"
+"PO-Revision-Date: 2026-02-07 17:50+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -123,7 +123,12 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "yurchor@ukr.net"
 
-#: main.cpp:77
+#: main.cpp:73
+#, kde-format
+msgid "Swiss-system chess tournament pairing engine."
+msgstr ""
+
+#: main.cpp:82
 #, kde-format
 msgctxt "Command line option description"
 msgid "Import Tournament Report File."
@@ -377,7 +382,7 @@ msgctxt "@action:check"
 msgid "Keep byes"
 msgstr "Зберегти заміни"
 
-#: qml/DeletePairingsDialog.qml:32
+#: qml/DeletePairingsDialog.qml:33
 #, kde-format
 msgctxt "@action:button Remove pairings"
 msgid "Remove"
@@ -467,9 +472,11 @@ msgid "Round %1 has finished."
 msgstr "Раунд %1 завершено."
 
 #: qml/PairingsPage.qml:111
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Pair Round %1"
 msgctxt "@action:button"
-msgid "Pair Round %1"
+msgid "Pair Round %1…"
 msgstr "Поділ на пари раунду %1"
 
 #: qml/PairingsPage.qml:154
@@ -484,37 +491,53 @@ msgctxt "@info:placeholder"
 msgid "All games of round %1 have finished"
 msgstr "Усі ігри раунду %1 завершено"
 
-#: qml/PairRoundDialog.qml:18
+#: qml/PairRoundDialog.qml:21
 #, kde-format
 msgctxt "@title %1 is a number >= 1"
 msgid "Pair Round %1"
 msgstr "Поділ на пари раунду %1"
 
-#: qml/PairRoundDialog.qml:27
+#: qml/PairRoundDialog.qml:29
+#, kde-format
+msgctxt "@info"
+msgid "All players will be paired."
+msgstr ""
+
+#: qml/PairRoundDialog.qml:29
+#, kde-format
+msgctxt "@info %1 is a number"
+msgid "The following player won't be paired: %2"
+msgid_plural "The following %1 players won't be paired: %2"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: qml/PairRoundDialog.qml:39
 #, kde-format
 msgctxt "@option:check"
 msgid "Sort players"
 msgstr "Упорядкування гравців"
 
-#: qml/PairRoundDialog.qml:34
+#: qml/PairRoundDialog.qml:46
 #, kde-format
 msgctxt "@label:listbox"
 msgid "First player color:"
 msgstr "Колір першого гравця:"
 
-#: qml/PairRoundDialog.qml:42
+#: qml/PairRoundDialog.qml:54
 #, kde-format
 msgctxt "@item:inlistbox As in 'Random color'"
 msgid "Random"
 msgstr "Випадковий"
 
-#: qml/PairRoundDialog.qml:46
+#: qml/PairRoundDialog.qml:58
 #, kde-format
 msgctxt "@item:inlistbox As in 'White pieces'"
 msgid "White"
 msgstr "Білий"
 
-#: qml/PairRoundDialog.qml:50
+#: qml/PairRoundDialog.qml:62
 #, kde-format
 msgctxt "@item:inlistbox As in 'Black pieces'"
 msgid "Black"
@@ -539,13 +562,10 @@ msgid "Pairings"
 msgstr "Поділ на пари"
 
 #: qml/player/PlayerPairingsPage.qml:26
-#, fuzzy, kde-format
-#| msgctxt "@info:status Number of players"
-#| msgid "1 player"
-#| msgid_plural "%1 players"
+#, kde-format
 msgctxt "@action:button"
 msgid "Retire player"
-msgstr "%1 гравець"
+msgstr "Виключити гравця"
 
 #: qml/player/PlayerPairingsPage.qml:46
 #, kde-format
@@ -852,23 +872,23 @@ msgstr "Рушій розподілу на пари"
 msgid "bbpPairings"
 msgstr "bbpPairings"
 
-#: qml/TournamentSettingsFormat.qml:52
+#: qml/TournamentSettingsFormat.qml:53
 #, kde-format
 msgid "Pairing allocated bye"
 msgstr "Призначений фіктивний парний гравець"
 
-#: qml/TournamentSettingsFormat.qml:53
+#: qml/TournamentSettingsFormat.qml:54
 #, kde-format
 msgid "The value of the pairing allocated bye"
 msgstr "Значення призначеного фіктивного парного гравця"
 
-#: qml/TournamentSettingsFormat.qml:59
+#: qml/TournamentSettingsFormat.qml:60
 #, kde-format
 msgctxt "@title:group"
 msgid "Tiebreaks"
 msgstr "Тай-брейки"
 
-#: qml/TournamentSettingsFormat.qml:83
+#: qml/TournamentSettingsFormat.qml:84
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Tiebreak"
@@ -1168,12 +1188,12 @@ msgctxt "Tiebreak"
 msgid "Average Buchholz of Opponents"
 msgstr "Середнє Бухгольца для суперників"
 
-#: tournament/tournament.cpp:907
+#: tournament/tournament.cpp:922
 #, kde-format
 msgid "An error ocurred while pairing the round: %1"
 msgstr "Під час поділу на пари для раунду сталася помилка: %1"
 
-#: tournament/tournament.cpp:1138
+#: tournament/tournament.cpp:1153
 #, kde-format
 msgid "Couldn't open file"
 msgstr "Не вдалося відкрити файл"
