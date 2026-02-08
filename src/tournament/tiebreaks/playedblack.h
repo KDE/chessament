@@ -17,14 +17,9 @@ public:
         return "bpg"_L1;
     }
 
-    QString shortName() override
-    {
-        return i18nc("Number of Games Played with Black tiebreak", "Played With Black");
-    };
-
     [[nodiscard]] QString name() override
     {
-        return i18nc("Number of Games Played with Black tiebreak", "Number of Games Played with Black");
+        return i18nc("Number of Games Played with Black (over the board) tiebreak", "Number of Games Played with Black (over the board)");
     };
 
     [[nodiscard]] QString code() override

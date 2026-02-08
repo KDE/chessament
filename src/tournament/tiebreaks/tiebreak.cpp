@@ -9,7 +9,7 @@ using namespace Qt::Literals::StringLiterals;
 
 QString Tiebreak::shortName()
 {
-    return name();
+    return {};
 }
 
 QVariant Tiebreak::option(const QString &key, const QVariant &defaultValue)

@@ -17,6 +17,11 @@ public:
         return "pts"_L1;
     }
 
+    QString shortName() override
+    {
+        return i18nc("Game points", "Points");
+    }
+
     [[nodiscard]] QString name() override
     {
         return i18nc("Game points", "Points");

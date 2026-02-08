@@ -492,11 +492,13 @@ QList<QVariantMap> Tournament::availableTiebreaks()
         },
         {
             {"id"_L1, "won"_L1},
-            {"name"_L1, i18nc("Number of Games Won tiebreak", "Number of Games Won")},
+            {"name"_L1,
+             i18nc("Number of Games Won (over the board) tiebreak. Different from the 'Number of Wins' tiebreak, which includes games won by forfeit.",
+                   "Number of Games Won (over the board)")},
         },
         {
             {"id"_L1, "bpg"_L1},
-            {"name"_L1, i18nc("Number of Games Played with Black tiebreak", "Number of Games Played with Black")},
+            {"name"_L1, i18nc("Number of Games Played with Black (over the board) tiebreak", "Number of Games Played with Black (over the board)")},
         },
         {
             {"id"_L1, "aob"_L1},

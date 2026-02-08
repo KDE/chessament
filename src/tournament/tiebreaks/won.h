@@ -17,14 +17,10 @@ public:
         return "won"_L1;
     }
 
-    QString shortName() override
-    {
-        return i18nc("Number of Games Won tiebreak", "Games Won");
-    };
-
     [[nodiscard]] QString name() override
     {
-        return i18nc("Number of Games Won tiebreak", "Number of Games Won");
+        return i18nc("Number of Games Won (over the board) tiebreak. Different from the 'Number of Wins' tiebreak, which includes games won by forfeit.",
+                     "Number of Games Won (over the board)");
     };
 
     [[nodiscard]] QString code() override
