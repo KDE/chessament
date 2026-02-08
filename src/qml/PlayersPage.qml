@@ -226,7 +226,7 @@ TablePage {
                     const players = KI18n.i18ncp("@info:status Number of players", "1 player", "%1 players", Controller.tournament.numberOfPlayers);
                     const rated = KI18n.i18ncp("@info:status Number of rated players", "1 rated", "%1 rated", Controller.tournament.numberOfRatedPlayers);
 
-                    return KI18n.i18nc("@info:status players, rated", "%1, %2", players, rated);
+                    return KI18n.i18nc("@info:status Total number of players (Number of players rated)", "%1 (%2)", players, rated);
                 }
             }
         }
