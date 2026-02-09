@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-08 00:40+0000\n"
-"PO-Revision-Date: 2026-02-01 11:52+0100\n"
+"POT-Creation-Date: 2026-02-09 00:40+0000\n"
+"PO-Revision-Date: 2026-02-08 11:03+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -127,7 +127,7 @@ msgstr "txemaq@gmail.com"
 #: main.cpp:73
 #, kde-format
 msgid "Swiss-system chess tournament pairing engine."
-msgstr ""
+msgstr "Motor d'aparellament de tornejos d'escacs amb el sistema suís."
 
 #: main.cpp:82
 #, kde-format
@@ -232,37 +232,31 @@ msgid "Sex"
 msgstr "Sexe"
 
 #: qml/AddPlayerDialog.qml:17
-#, kde-format
 msgctxt "@title:window"
 msgid "Add player"
 msgstr "Afig un jugador"
 
 #: qml/AddPlayerDialog.qml:54
-#, kde-format
 msgctxt "@label:textbox"
 msgid "Title"
 msgstr "Títol"
 
 #: qml/AddPlayerDialog.qml:60
-#, kde-format
 msgctxt "@label:textbox"
 msgid "Name"
 msgstr "Nom"
 
 #: qml/AddPlayerDialog.qml:65
-#, kde-format
 msgctxt "@label:textbox"
 msgid "Rating"
 msgstr "Classificació"
 
 #: qml/AddPlayerDialog.qml:72
-#, kde-format
 msgctxt "@label:textbox"
 msgid "National rating"
 msgstr "Classificació nacional"
 
 #: qml/AddPlayerDialog.qml:79
-#, kde-format
 msgctxt "@label:textbox"
 msgid "Player ID"
 msgstr "ID de jugador"
@@ -270,361 +264,299 @@ msgstr "ID de jugador"
 #: qml/AddPlayerDialog.qml:80 qml/AddPlayerDialog.qml:86
 #: qml/AddPlayerDialog.qml:92 qml/AddPlayerDialog.qml:98
 #: qml/AddPlayerDialog.qml:104
-#, kde-format
 msgid "Optional"
 msgstr "Opcional"
 
 #: qml/AddPlayerDialog.qml:85
-#, kde-format
 msgctxt "@label:textbox"
 msgid "Birth date"
 msgstr "Data de naixement"
 
 #: qml/AddPlayerDialog.qml:91 qml/TournamentSettingsInformation.qml:38
-#, kde-format
 msgctxt "@label:textbox"
 msgid "Federation"
 msgstr "Federació"
 
 #: qml/AddPlayerDialog.qml:97
-#, kde-format
 msgctxt "@label:textbox"
 msgid "Origin"
 msgstr "Origen"
 
 #: qml/AddPlayerDialog.qml:103
-#, kde-format
 msgctxt "@label:textbox"
 msgid "Sex"
 msgstr "Sexe"
 
 #: qml/AddTiebreakDialog.qml:20
-#, kde-format
 msgctxt "@title:window"
 msgid "Add Tiebreak"
 msgstr "Addició de desempat"
 
 #: qml/components/MenuBar.qml:17
-#, kde-format
 msgctxt "@action:menu"
 msgid "File"
 msgstr "Fitxer"
 
 #: qml/components/MenuBar.qml:39
-#, kde-format
 msgctxt "@action:menu"
 msgid "View"
 msgstr "Vista"
 
 #: qml/components/MenuBar.qml:47
-#, kde-format
 msgctxt "@action:menu"
 msgid "Settings"
 msgstr "Configuració"
 
 #: qml/components/MenuBar.qml:58
-#, kde-format
 msgctxt "@action:menu"
 msgid "Help"
 msgstr "Ajuda"
 
 #: qml/components/TiebreakDelegate.qml:31
 #: qml/components/TiebreakDelegate.qml:36
-#, kde-format
 msgctxt "@action:button"
 msgid "Configure tiebreak"
 msgstr "Configura el desempat"
 
 #: qml/components/TiebreakDelegate.qml:52
-#, kde-format
 msgctxt "@action:button Move tiebreak up"
 msgid "Move Up"
 msgstr "Mou cap amunt"
 
 #: qml/components/TiebreakDelegate.qml:57
-#, kde-format
 msgctxt "@action:button Move tiebreak up"
 msgid "Move up"
 msgstr "Mou cap amunt"
 
 #: qml/components/TiebreakDelegate.qml:64
-#, kde-format
 msgctxt "@action:button Move tiebreak down"
 msgid "Move Down"
 msgstr "Mou cap avall"
 
 #: qml/components/TiebreakDelegate.qml:69
-#, kde-format
 msgctxt "@action:button Move tiebreak down"
 msgid "Move down"
 msgstr "Mou cap avall"
 
 #: qml/components/TiebreakDelegate.qml:76
-#, kde-format
 msgctxt "@action:button"
 msgid "Delete Tiebreak"
 msgstr "Suprimix el desempat"
 
 #: qml/components/TiebreakDelegate.qml:81
-#, kde-format
 msgctxt "@action:button"
 msgid "Delete tiebreak"
 msgstr "Suprimix el desempat"
 
 #: qml/DeletePairingsDialog.qml:17
-#, kde-format
 msgctxt "@title"
 msgid "Remove pairings"
 msgstr "Elimina aparellaments"
 
 #: qml/DeletePairingsDialog.qml:25
-#, kde-format
 msgctxt "@action:check"
 msgid "Keep byes"
 msgstr "Mantín les exempcions"
 
 #: qml/DeletePairingsDialog.qml:33
-#, kde-format
 msgctxt "@action:button Remove pairings"
 msgid "Remove"
 msgstr "Elimina"
 
 #: qml/Main.qml:21
-#, kde-format
 msgctxt "@title:window"
 msgid "Chessament"
 msgstr "Chessament"
 
 #: qml/Main.qml:102
-#, kde-format
 msgctxt "@title"
 msgid "Error"
 msgstr "S'ha produït un error"
 
 #: qml/NewTournamentDialog.qml:17
-#, kde-format
 msgctxt "@title"
 msgid "New tournament"
 msgstr "Torneig nou"
 
 #: qml/NewTournamentDialog.qml:30
-#, kde-format
 msgctxt "@label:textbox tournament name"
 msgid "Name:"
 msgstr "Nom:"
 
 #: qml/NewTournamentDialog.qml:34
-#, kde-format
 msgctxt "@label"
 msgid "Format"
 msgstr "Format"
 
 #: qml/NewTournamentDialog.qml:35
-#, kde-format
 msgctxt "@label"
 msgid "Swiss system"
 msgstr "Sistema suís"
 
 #: qml/NewTournamentDialog.qml:40
-#, kde-format
 msgctxt "@label"
 msgid "Number of rounds"
 msgstr "Nombre de rondes"
 
 #: qml/PairingsPage.qml:48
-#, kde-format
 msgctxt "@option:check"
 msgid "Hide finished games"
 msgstr "Oculta les partides finalitzades"
 
 #: qml/PairingsPage.qml:61 qml/PlayersPage.qml:85 qml/StandingsPage.qml:50
-#, kde-format
 msgctxt "@action:intoolbar"
 msgid "Print…"
 msgstr "Imprimix…"
 
 #: qml/PairingsPage.qml:66 qml/PlayersPage.qml:90 qml/StandingsPage.qml:55
-#, kde-format
 msgctxt "@action:intoolbar"
 msgid "Export as PDF…"
 msgstr "Exporta com a PDF…"
 
 #: qml/PairingsPage.qml:75
-#, kde-format
 msgid "Round %1"
 msgstr "Ronda %1"
 
 #: qml/PairingsPage.qml:93
-#, kde-format
 msgctxt "@action:intoolbar"
 msgid "Remove pairings of this and following rounds…"
 msgstr "Elimina els aparellaments d'esta ronda i les següents…"
 
 #: qml/PairingsPage.qml:107
-#, kde-format
 msgctxt "@info"
 msgid "The tournament hasn't started yet."
 msgstr "El torneig encara no ha començat."
 
 #: qml/PairingsPage.qml:107
-#, kde-format
 msgctxt "@info"
 msgid "Round %1 has finished."
 msgstr "Ha acabat la ronda %1."
 
 #: qml/PairingsPage.qml:111
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Pair Round %1"
 msgctxt "@action:button"
 msgid "Pair Round %1…"
-msgstr "Aparella la ronda %1"
+msgstr "Aparella la ronda %1…"
 
 #: qml/PairingsPage.qml:154
-#, kde-format
 msgctxt "@info:placeholder"
 msgid "No pairings for round %1 yet"
 msgstr "Encara no hi ha aparellaments per a la ronda %1"
 
 #: qml/PairingsPage.qml:156
-#, kde-format
 msgctxt "@info:placeholder"
 msgid "All games of round %1 have finished"
 msgstr "Han acabat totes les partides de la ronda %1"
 
 #: qml/PairRoundDialog.qml:21
-#, kde-format
 msgctxt "@title %1 is a number >= 1"
 msgid "Pair Round %1"
 msgstr "Ronda d'aparellament %1"
 
 #: qml/PairRoundDialog.qml:29
-#, kde-format
 msgctxt "@info"
 msgid "All players will be paired."
-msgstr ""
+msgstr "S'aparellaran tots els jugadors."
 
 #: qml/PairRoundDialog.qml:29
-#, kde-format
 msgctxt "@info %1 is a number"
 msgid "The following player won't be paired: %2"
 msgid_plural "The following %1 players won't be paired: %2"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "El jugador següent no s'aparellarà: %2"
+msgstr[1] "%1 jugadors següents no s'aparellaran: %2"
 
 #: qml/PairRoundDialog.qml:39
-#, kde-format
 msgctxt "@option:check"
 msgid "Sort players"
 msgstr "Ordena els jugadors"
 
 #: qml/PairRoundDialog.qml:46
-#, kde-format
 msgctxt "@label:listbox"
 msgid "First player color:"
 msgstr "Color del primer jugador:"
 
 #: qml/PairRoundDialog.qml:54
-#, kde-format
 msgctxt "@item:inlistbox As in 'Random color'"
 msgid "Random"
 msgstr "Aleatori"
 
-#: qml/PairRoundDialog.qml:58
+#: qml/PairRoundDialog.qml:58 tournament/pairing.h:78
 #, kde-format
 msgctxt "@item:inlistbox As in 'White pieces'"
 msgid "White"
 msgstr "Blanques"
 
-#: qml/PairRoundDialog.qml:62
+#: qml/PairRoundDialog.qml:62 tournament/pairing.h:80
 #, kde-format
 msgctxt "@item:inlistbox As in 'Black pieces'"
 msgid "Black"
 msgstr "Negres"
 
 #: qml/player/PlayerDetails.qml:17
-#, kde-format
 msgctxt "@title:window"
 msgid "Details of player \"%1\""
 msgstr "Detalls del jugador «%1»"
 
 #: qml/player/PlayerDetails.qml:22
-#, kde-format
 msgctxt "@action:button"
 msgid "Pairings"
 msgstr "Aparella"
 
 #: qml/player/PlayerPairingsPage.qml:21
-#, kde-format
 msgctxt "@title"
 msgid "Pairings"
 msgstr "Aparellaments"
 
 #: qml/player/PlayerPairingsPage.qml:26
-#, fuzzy, kde-format
-#| msgctxt "@info:status Number of players"
-#| msgid "1 player"
-#| msgid_plural "%1 players"
 msgctxt "@action:button"
 msgid "Retire player"
-msgstr "1 jugador"
+msgstr "Retira el jugador"
 
 #: qml/player/PlayerPairingsPage.qml:46
-#, kde-format
 msgctxt "@item:inlistbox Available to play"
 msgid "Available"
 msgstr "Disponible"
 
 #: qml/player/PlayerPairingsPage.qml:83 qml/TournamentSettingsFormat.qml:42
-#, kde-format
 msgctxt "@title:group"
 msgid "Pairings"
 msgstr "Aparellaments"
 
 #: qml/player/PlayerPairingsPage.qml:108
-#, kde-format
 msgctxt "@info:label"
 msgid "Round %1"
 msgstr "Ronda %1"
 
 #: qml/PlayersPage.qml:69
-#, kde-format
 msgctxt "@action:intoolbar Open player details"
 msgid "Details…"
 msgstr "Detalls…"
 
 #: qml/PlayersPage.qml:75
-#, kde-format
 msgctxt "@action:intoolbar"
 msgid "Sort Players…"
 msgstr "Ordena els jugadors…"
 
 #: qml/PlayersPage.qml:96
-#, kde-format
 msgctxt "@action:intoolbar"
 msgid "Add Player…"
 msgstr "Afig un jugador…"
 
 #: qml/PlayersPage.qml:107
-#, kde-format
 msgctxt "@action:inmenu"
 msgid "Open Player Details"
 msgstr "Obri els detalls del jugador"
 
 #: qml/PlayersPage.qml:204
-#, kde-format
 msgctxt "@info:placeholder"
 msgid "No players yet"
 msgstr "Encara no hi ha cap jugador"
 
 #: qml/PlayersPage.qml:208
-#, kde-format
 msgctxt "@action:button"
 msgid "Add Player…"
 msgstr "Afig un jugador…"
 
 #: qml/PlayersPage.qml:226
-#, kde-format
 msgctxt "@info:status Number of players"
 msgid "1 player"
 msgid_plural "%1 players"
@@ -632,7 +564,6 @@ msgstr[0] "1 jugador"
 msgstr[1] "%1 jugadors"
 
 #: qml/PlayersPage.qml:227
-#, kde-format
 msgctxt "@info:status Number of rated players"
 msgid "1 rated"
 msgid_plural "%1 rated"
@@ -640,142 +571,118 @@ msgstr[0] "1 avaluat"
 msgstr[1] "%1 avaluats"
 
 #: qml/PlayersPage.qml:229
-#, kde-format
-msgctxt "@info:status players, rated"
-msgid "%1, %2"
-msgstr "%1, %2"
+msgctxt "@info:status Total number of players (Number of players rated)"
+msgid "%1 (%2)"
+msgstr ""
 
 #: qml/ResultsFooter.qml:43
-#, kde-format
 msgctxt "@action:intoolbar"
 msgid "*"
 msgstr "*"
 
 #: qml/ResultsFooter.qml:54
-#, kde-format
 msgctxt "@action:intoolbar"
 msgid "1-0"
 msgstr "1-0"
 
 #: qml/ResultsFooter.qml:62
-#, kde-format
 msgctxt "@action:intoolbar"
 msgid "½-½"
 msgstr "½-½"
 
 #: qml/ResultsFooter.qml:70
-#, kde-format
 msgctxt "@action:intoolbar"
 msgid "0-1"
 msgstr "0-1"
 
 #: qml/ResultsFooter.qml:81
-#, kde-format
 msgctxt "@action:intoolbar"
 msgid "1F-0F"
 msgstr "1F-0F"
 
 #: qml/ResultsFooter.qml:89
-#, kde-format
 msgctxt "@action:intoolbar"
 msgid "0F-1F"
 msgstr "0F-1F"
 
 #: qml/ResultsFooter.qml:97
-#, kde-format
 msgctxt "@action:intoolbar"
 msgid "0F-0F"
 msgstr "0F-0F"
 
 #: qml/ResultsFooter.qml:107
-#, kde-format
 msgctxt "@action:intoolbar Other game results"
 msgid "Other"
 msgstr "Altres"
 
 #: qml/ResultsFooter.qml:119
-#, kde-format
 msgctxt "@action:intoolbar"
 msgid "1U-0U"
 msgstr "1U-0U"
 
 #: qml/ResultsFooter.qml:126
-#, kde-format
 msgctxt "@action:intoolbar"
 msgid "½U-½U"
 msgstr "½U-½U"
 
 #: qml/ResultsFooter.qml:133
-#, kde-format
 msgctxt "@action:intoolbar"
 msgid "0U-1U"
 msgstr "0U-1U"
 
 #: qml/ResultsFooter.qml:141
-#, kde-format
 msgctxt "@action:intoolbar"
 msgid "½U-0U"
 msgstr "½U-0U"
 
 #: qml/ResultsFooter.qml:148
-#, kde-format
 msgctxt "@action:intoolbar"
 msgid "0U-½U"
 msgstr "0U-½U"
 
 #: qml/ResultsFooter.qml:155
-#, kde-format
 msgctxt "@action:intoolbar"
 msgid "0U-0U"
 msgstr "0U-0U"
 
 #: qml/ResultsFooter.qml:163
-#, kde-format
 msgctxt "@action:intoolbar"
 msgid "½-0"
 msgstr "½-0"
 
 #: qml/ResultsFooter.qml:170
-#, kde-format
 msgctxt "@action:intoolbar"
 msgid "0-0"
 msgstr "0-0"
 
 #: qml/ResultsFooter.qml:177
-#, kde-format
 msgctxt "@action:intoolbar"
 msgid "0-½"
 msgstr "0-½"
 
 #: qml/Sidebar.qml:56
-#, kde-format
 msgid "Players"
 msgstr "Jugadors"
 
 #: qml/Sidebar.qml:63
-#, kde-format
 msgid "Pairings"
 msgstr "Aparellaments"
 
 #: qml/Sidebar.qml:70
-#, kde-format
 msgid "Standings"
 msgstr "Resultats"
 
 #: qml/Sidebar.qml:94
-#, kde-format
 msgctxt "@action:button"
 msgid "Settings"
 msgstr "Configuració"
 
 #: qml/SortPlayersDialog.qml:18
-#, kde-format
 msgctxt "@title"
 msgid "Sort Players"
 msgstr "Ordenació dels jugadors"
 
 #: qml/SortPlayersDialog.qml:27
-#, kde-format
 msgctxt "@info"
 msgid ""
 "Changing the initial ranking after the fourth round has been paired is not "
@@ -785,269 +692,223 @@ msgstr ""
 "quarta ronda en tornejos oficials."
 
 #: qml/StandingsPage.qml:67 qml/StandingsPage.qml:77
-#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Final Standings"
 msgstr "Resultats finals"
 
 #: qml/StandingsPage.qml:69 qml/StandingsPage.qml:79
-#, kde-format
 msgctxt "@item:inlistbox Standings After Round %1"
 msgid "After Round %1"
 msgstr "Després de la ronda %1"
 
 #: qml/StandingsPage.qml:129
-#, kde-format
 msgctxt "@info:placeholder"
 msgid "No standings yet"
 msgstr "Encara no hi ha cap resultat"
 
 #: qml/TiebreakDialog.qml:18
-#, kde-format
 msgctxt "@title:window"
 msgid "Edit Tiebreak"
 msgstr "Edició de desempat"
 
 #: qml/TournamentSettings.qml:15
-#, kde-format
 msgctxt "@action:button"
 msgid "Information"
 msgstr "Informació"
 
 #: qml/TournamentSettings.qml:21
-#, kde-format
 msgctxt "@action:button"
 msgid "Format"
 msgstr "Format"
 
 #: qml/TournamentSettings.qml:27
-#, kde-format
 msgctxt "@action:button"
 msgid "Calendar"
 msgstr "Calendari"
 
 #: qml/TournamentSettingsCalendar.qml:15
-#, kde-format
 msgctxt "@title"
 msgid "Calendar"
 msgstr "Calendari"
 
 #: qml/TournamentSettingsCalendar.qml:30
-#, kde-format
 msgctxt "round number"
 msgid "Round %1"
 msgstr "Ronda %1"
 
 #: qml/TournamentSettingsFormat.qml:17
-#, kde-format
 msgctxt "@title"
 msgid "Format"
 msgstr "Format"
 
 #: qml/TournamentSettingsFormat.qml:20
-#, kde-format
 msgctxt "@title:group"
 msgid "Format"
 msgstr "Format"
 
 #: qml/TournamentSettingsFormat.qml:24
-#, kde-format
 msgid "Swiss system"
 msgstr "Sistema suís"
 
 #: qml/TournamentSettingsFormat.qml:28
-#, kde-format
 msgid "Rounds"
 msgstr "Rondes"
 
 #: qml/TournamentSettingsFormat.qml:46
-#, kde-format
 msgid "Pairing engine"
 msgstr "Motor d'aparellament"
 
 #: qml/TournamentSettingsFormat.qml:47
-#, kde-format
 msgid "bbpPairings"
 msgstr "bbpPairings"
 
 #: qml/TournamentSettingsFormat.qml:53
-#, kde-format
 msgid "Pairing allocated bye"
 msgstr "Exempció d'aparellament assignat"
 
 #: qml/TournamentSettingsFormat.qml:54
-#, kde-format
 msgid "The value of the pairing allocated bye"
 msgstr "El valor de l'exempció d'aparellament assignat"
 
 #: qml/TournamentSettingsFormat.qml:60
-#, kde-format
 msgctxt "@title:group"
 msgid "Tiebreaks"
 msgstr "Desempats"
 
 #: qml/TournamentSettingsFormat.qml:84
-#, kde-format
 msgctxt "@action:button"
 msgid "Add Tiebreak"
 msgstr "Afig un desempat"
 
 #: qml/TournamentSettingsInformation.qml:12
-#, kde-format
 msgctxt "@title"
 msgid "Information"
 msgstr "Informació"
 
 #: qml/TournamentSettingsInformation.qml:15
-#, kde-format
 msgctxt "@title:group"
 msgid "Basic details"
 msgstr "Detalls bàsics"
 
 #: qml/TournamentSettingsInformation.qml:20
-#, kde-format
 msgctxt "@label:textbox"
 msgid "Tournament name"
 msgstr "Nom del torneig"
 
 #: qml/TournamentSettingsInformation.qml:29
-#, kde-format
 msgctxt "@label:textbox"
 msgid "City"
 msgstr "Ciutat"
 
 #: qml/TournamentSettingsInformation.qml:47
-#, kde-format
 msgctxt "@label:textbox"
 msgid "Chief arbiter"
 msgstr "Àrbitre en cap"
 
 #: qml/TournamentSettingsInformation.qml:56
-#, kde-format
 msgctxt "@label:textbox"
 msgid "Deputy chief arbiter"
 msgstr "Àrbitre en cap director"
 
 #: qml/WelcomePage.qml:21
-#, kde-format
 msgctxt "@title"
 msgid "Welcome to Chessament"
 msgstr "Us donem la benvinguda a Chessament"
 
 #: qml/WelcomePage.qml:22
-#, kde-format
 msgctxt "@info"
 msgid "Chessament is a chess tournament manager"
 msgstr "Chessament és un gestor de torneigs d'escacs"
 
 #: settings/ChessamentConfigurationView.qml:21
-#, kde-format
 msgctxt "@action:button"
 msgid "General"
 msgstr "General"
 
 #: settings/ChessamentConfigurationView.qml:32
-#, kde-format
 msgctxt "@action:button"
 msgid "Rating Lists"
 msgstr "Llistes de classificació"
 
 #: settings/GeneralPage.qml:16
-#, kde-format
 msgctxt "@title"
 msgid "General"
 msgstr "General"
 
 #: settings/GeneralPage.qml:20
-#, kde-format
 msgctxt "@title:group"
 msgid "Account"
 msgstr "Compte"
 
 #: settings/GeneralPage.qml:28
-#, kde-format
 msgctxt "@action:button"
 msgid "Connect Account"
 msgstr "Connecta el compte"
 
 #: settings/GeneralPage.qml:33
-#, kde-format
 msgid "Logged in as %1"
 msgstr "Connectat com a %1"
 
 #: settings/GeneralPage.qml:38
-#, kde-format
 msgid "Logout"
 msgstr "Eixida"
 
 #: settings/RatingListsPage.qml:22 settings/RatingListsPage.qml:128
-#, kde-format
 msgctxt "@title"
 msgid "Rating Lists"
 msgstr "Llistes de classificació"
 
 #: settings/RatingListsPage.qml:27
-#, kde-format
 msgctxt "@title:window"
 msgid "Add Rating List"
 msgstr "Afig una llista de classificació"
 
 #: settings/RatingListsPage.qml:32
-#, kde-format
 msgctxt "@action:button"
 msgid "Import"
 msgstr "Importa"
 
 #: settings/RatingListsPage.qml:47
-#, kde-format
 msgctxt "@info:label"
 msgid "Name"
 msgstr "Nom"
 
 #: settings/RatingListsPage.qml:52
-#, kde-format
 msgctxt "@info:label"
 msgid "Rating list URL"
 msgstr "URL de la llista de classificació"
 
 #: settings/RatingListsPage.qml:72
-#, kde-format
 msgctxt "@title:window"
 msgid "Importing Rating List"
 msgstr "Importació de llista de classificació"
 
 #: settings/RatingListsPage.qml:112
-#, kde-format
 msgctxt "@title"
 msgid "Delete Rating List"
 msgstr "Suprimiu de llista de classificació"
 
 #: settings/RatingListsPage.qml:120
-#, kde-format
 msgctxt "@action:button Delete Rating List"
 msgid "Delete"
 msgstr "Suprimix"
 
 #: settings/RatingListsPage.qml:133
-#, kde-format
 msgctxt "@info:status"
 msgid "No rating lists yet."
 msgstr "Encara no hi ha cap llista de classificació."
 
 #: settings/RatingListsPage.qml:153
-#, kde-format
 msgctxt "@action:button"
 msgid "Delete Rating List"
 msgstr "Suprimix la llista de classificació"
 
 #: settings/RatingListsPage.qml:161
-#, kde-format
 msgctxt "@action:button"
 msgid "Delete rating list"
 msgstr "Suprimix la llista de classificació"
 
 #: settings/RatingListsPage.qml:171
-#, kde-format
 msgctxt "@action:button"
 msgid "Add rating list"
 msgstr "Afig una llista de classificació"
@@ -1057,6 +918,21 @@ msgstr "Afig una llista de classificació"
 msgctxt "@title:column Player Ranking"
 msgid "Rank"
 msgstr "Posició"
+
+#: tournament/federations.h:118
+msgctxt "FIDE Federation"
+msgid "Chinese Taipei"
+msgstr ""
+
+#: tournament/federations.h:211
+msgctxt "FIDE Federation"
+msgid "Scotland"
+msgstr ""
+
+#: tournament/federations.h:220
+msgctxt "FIDE Federation"
+msgid "Wales"
+msgstr ""
 
 #: tournament/pairingengine.cpp:29
 #, kde-format
@@ -1135,6 +1011,12 @@ msgid_plural "Saved %1 players."
 msgstr[0] "S'ha guardat 1 jugador."
 msgstr[1] "S'han guardat %1 jugadors."
 
+#: tournament/tiebreaks/aob.h:23 tournament/tournament.cpp:505
+#, kde-format
+msgctxt "Tiebreak"
+msgid "Average Buchholz of Opponents"
+msgstr "Mitjana Buchholz dels oponents"
+
 #: tournament/tiebreaks/buchholz.cpp:14
 #, kde-format
 msgctxt "@label:spinbox"
@@ -1147,48 +1029,57 @@ msgctxt "@info"
 msgid "Unsupported tiebreak option \"%1\""
 msgstr "Opció de desempat «%1» no admesa"
 
+#: tournament/tiebreaks/buchholz.h:25 tournament/tournament.cpp:487
+#, kde-format
+msgctxt "Buchholz tiebreak"
+msgid "Buchholz"
+msgstr "Buchholz"
+
+#: tournament/tiebreaks/buchholz.h:28
+#, fuzzy, kde-format
+#| msgctxt "Buchholz tiebreak"
+#| msgid "Buchholz"
+msgctxt "Buchholz N tiebreak, N is a number < 0"
+msgid "Buchholz %1"
+msgstr "Buchholz"
+
+#: tournament/tiebreaks/numberwins.h:22 tournament/tournament.cpp:491
+#, kde-format
+msgctxt "Number of Wins tiebreak"
+msgid "Number of Wins"
+msgstr "Nombre de partides guanyades"
+
+#: tournament/tiebreaks/playedblack.h:22 tournament/tournament.cpp:501
+#, fuzzy, kde-format
+#| msgctxt "Number of Games Played with Black tiebreak"
+#| msgid "Number of Games Played with Black"
+msgctxt "Number of Games Played with Black (over the board) tiebreak"
+msgid "Number of Games Played with Black (over the board)"
+msgstr "Nombre de partides jugades amb negres"
+
+#: tournament/tiebreaks/points.h:22 tournament/tiebreaks/points.h:27
 #: tournament/tournament.cpp:483
 #, kde-format
 msgctxt "Game points"
 msgid "Points"
 msgstr "Punts"
 
-#: tournament/tournament.cpp:487
-#, kde-format
-msgctxt "Buchholz tiebreak"
-msgid "Buchholz"
-msgstr "Buchholz"
-
-#: tournament/tournament.cpp:491
-#, kde-format
-msgctxt "Number of Wins tiebreak"
-msgid "Number of Wins"
+#: tournament/tiebreaks/won.h:23 tournament/tournament.cpp:497
+#, fuzzy, kde-format
+#| msgctxt "Number of Games Won tiebreak"
+#| msgid "Number of Games Won"
+msgctxt ""
+"Number of Games Won (over the board) tiebreak. Different from the 'Number of "
+"Wins' tiebreak, which includes games won by forfeit."
+msgid "Number of Games Won (over the board)"
 msgstr "Nombre de partides guanyades"
 
-#: tournament/tournament.cpp:495
-#, kde-format
-msgctxt "Number of Games Won tiebreak"
-msgid "Number of Games Won"
-msgstr "Nombre de partides guanyades"
-
-#: tournament/tournament.cpp:499
-#, kde-format
-msgctxt "Number of Games Played with Black tiebreak"
-msgid "Number of Games Played with Black"
-msgstr "Nombre de partides jugades amb negres"
-
-#: tournament/tournament.cpp:503
-#, kde-format
-msgctxt "Tiebreak"
-msgid "Average Buchholz of Opponents"
-msgstr "Mitjana Buchholz dels oponents"
-
-#: tournament/tournament.cpp:922
+#: tournament/tournament.cpp:924
 #, kde-format
 msgid "An error ocurred while pairing the round: %1"
 msgstr "S'ha produït un error en aparellar la ronda: %1"
 
-#: tournament/tournament.cpp:1153
+#: tournament/tournament.cpp:1155
 #, kde-format
 msgid "Couldn't open file"
 msgstr "No s'ha pogut obrir el fitxer"
@@ -1218,3 +1109,7 @@ msgstr "Resultat «%1» desconegut a l'aparellament «%2»."
 #, kde-format
 msgid "Pairing \"%1\" has no opponent."
 msgstr "L'aparellament «%1» no té oponent."
+
+#~ msgctxt "@info:status players, rated"
+#~ msgid "%1, %2"
+#~ msgstr "%1, %2"

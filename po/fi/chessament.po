@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-08 00:40+0000\n"
+"POT-Creation-Date: 2026-02-09 00:40+0000\n"
 "PO-Revision-Date: 2026-01-16 17:53+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -235,37 +235,31 @@ msgid "Sex"
 msgstr "Sukupuoli"
 
 #: qml/AddPlayerDialog.qml:17
-#, kde-format
 msgctxt "@title:window"
 msgid "Add player"
 msgstr "Lisää pelaaja"
 
 #: qml/AddPlayerDialog.qml:54
-#, kde-format
 msgctxt "@label:textbox"
 msgid "Title"
 msgstr "Otsikko"
 
 #: qml/AddPlayerDialog.qml:60
-#, kde-format
 msgctxt "@label:textbox"
 msgid "Name"
 msgstr "Nimi"
 
 #: qml/AddPlayerDialog.qml:65
-#, kde-format
 msgctxt "@label:textbox"
 msgid "Rating"
 msgstr "Vahvuusluku"
 
 #: qml/AddPlayerDialog.qml:72
-#, kde-format
 msgctxt "@label:textbox"
 msgid "National rating"
 msgstr "Kansallinen vahvuusluku"
 
 #: qml/AddPlayerDialog.qml:79
-#, kde-format
 msgctxt "@label:textbox"
 msgid "Player ID"
 msgstr "Pelaajatunniste"
@@ -273,204 +267,171 @@ msgstr "Pelaajatunniste"
 #: qml/AddPlayerDialog.qml:80 qml/AddPlayerDialog.qml:86
 #: qml/AddPlayerDialog.qml:92 qml/AddPlayerDialog.qml:98
 #: qml/AddPlayerDialog.qml:104
-#, kde-format
 msgid "Optional"
 msgstr "Valinnainen"
 
 #: qml/AddPlayerDialog.qml:85
-#, kde-format
 msgctxt "@label:textbox"
 msgid "Birth date"
 msgstr "Syntymäaika"
 
 #: qml/AddPlayerDialog.qml:91 qml/TournamentSettingsInformation.qml:38
-#, kde-format
 msgctxt "@label:textbox"
 msgid "Federation"
 msgstr "Liitto"
 
 #: qml/AddPlayerDialog.qml:97
-#, kde-format
 msgctxt "@label:textbox"
 msgid "Origin"
 msgstr "Alkuperä"
 
 #: qml/AddPlayerDialog.qml:103
-#, kde-format
 msgctxt "@label:textbox"
 msgid "Sex"
 msgstr "Sukupuoli"
 
 #: qml/AddTiebreakDialog.qml:20
-#, kde-format
 msgctxt "@title:window"
 msgid "Add Tiebreak"
 msgstr "Lisää katkaisupeli"
 
 #: qml/components/MenuBar.qml:17
-#, kde-format
 msgctxt "@action:menu"
 msgid "File"
 msgstr "Tiedosto"
 
 #: qml/components/MenuBar.qml:39
-#, kde-format
 msgctxt "@action:menu"
 msgid "View"
 msgstr ""
 
 #: qml/components/MenuBar.qml:47
-#, kde-format
 msgctxt "@action:menu"
 msgid "Settings"
 msgstr "Asetukset"
 
 #: qml/components/MenuBar.qml:58
-#, kde-format
 msgctxt "@action:menu"
 msgid "Help"
 msgstr "Ohje"
 
 #: qml/components/TiebreakDelegate.qml:31
 #: qml/components/TiebreakDelegate.qml:36
-#, kde-format
 msgctxt "@action:button"
 msgid "Configure tiebreak"
 msgstr "Katkaisupelin asetukset"
 
 #: qml/components/TiebreakDelegate.qml:52
-#, kde-format
 msgctxt "@action:button Move tiebreak up"
 msgid "Move Up"
 msgstr "Siirrä ylemmäs"
 
 #: qml/components/TiebreakDelegate.qml:57
-#, kde-format
 msgctxt "@action:button Move tiebreak up"
 msgid "Move up"
 msgstr "Siirrä ylemmäs"
 
 #: qml/components/TiebreakDelegate.qml:64
-#, kde-format
 msgctxt "@action:button Move tiebreak down"
 msgid "Move Down"
 msgstr "Siirrä alemmas"
 
 #: qml/components/TiebreakDelegate.qml:69
-#, kde-format
 msgctxt "@action:button Move tiebreak down"
 msgid "Move down"
 msgstr "Siirrä alemmas"
 
 #: qml/components/TiebreakDelegate.qml:76
-#, kde-format
 msgctxt "@action:button"
 msgid "Delete Tiebreak"
 msgstr "Poista katkaisupeli"
 
 #: qml/components/TiebreakDelegate.qml:81
-#, kde-format
 msgctxt "@action:button"
 msgid "Delete tiebreak"
 msgstr "Poista katkaisupeli"
 
 #: qml/DeletePairingsDialog.qml:17
-#, kde-format
 msgctxt "@title"
 msgid "Remove pairings"
 msgstr "Poista paritukset"
 
 #: qml/DeletePairingsDialog.qml:25
-#, kde-format
 msgctxt "@action:check"
 msgid "Keep byes"
 msgstr ""
 
 #: qml/DeletePairingsDialog.qml:33
-#, kde-format
 msgctxt "@action:button Remove pairings"
 msgid "Remove"
 msgstr "Poista"
 
 #: qml/Main.qml:21
-#, kde-format
 msgctxt "@title:window"
 msgid "Chessament"
 msgstr "Chessament"
 
 #: qml/Main.qml:102
-#, kde-format
 msgctxt "@title"
 msgid "Error"
 msgstr "Virhe"
 
 #: qml/NewTournamentDialog.qml:17
-#, kde-format
 msgctxt "@title"
 msgid "New tournament"
 msgstr "Uusi turnaus"
 
 #: qml/NewTournamentDialog.qml:30
-#, kde-format
 msgctxt "@label:textbox tournament name"
 msgid "Name:"
 msgstr "Nimi:"
 
 #: qml/NewTournamentDialog.qml:34
-#, kde-format
 msgctxt "@label"
 msgid "Format"
 msgstr "Muoto"
 
 #: qml/NewTournamentDialog.qml:35
-#, kde-format
 msgctxt "@label"
 msgid "Swiss system"
 msgstr "Sveitsiläinen järjestelmä"
 
 #: qml/NewTournamentDialog.qml:40
-#, kde-format
 msgctxt "@label"
 msgid "Number of rounds"
 msgstr "Kierrosten määrä"
 
 #: qml/PairingsPage.qml:48
-#, kde-format
 msgctxt "@option:check"
 msgid "Hide finished games"
 msgstr "Piilota päättyneet pelit"
 
 #: qml/PairingsPage.qml:61 qml/PlayersPage.qml:85 qml/StandingsPage.qml:50
-#, kde-format
 msgctxt "@action:intoolbar"
 msgid "Print…"
 msgstr "Tulosta…"
 
 #: qml/PairingsPage.qml:66 qml/PlayersPage.qml:90 qml/StandingsPage.qml:55
-#, kde-format
 msgctxt "@action:intoolbar"
 msgid "Export as PDF…"
 msgstr "Vie PDF:ksi…"
 
 #: qml/PairingsPage.qml:75
-#, kde-format
 msgid "Round %1"
 msgstr "%1. kierros"
 
 #: qml/PairingsPage.qml:93
-#, kde-format
 msgctxt "@action:intoolbar"
 msgid "Remove pairings of this and following rounds…"
 msgstr "Poista tämän ja seuraavien kierrosten paritukset…"
 
 #: qml/PairingsPage.qml:107
-#, kde-format
 msgctxt "@info"
 msgid "The tournament hasn't started yet."
 msgstr ""
 
 #: qml/PairingsPage.qml:107
-#, fuzzy, kde-format
+#, fuzzy
 #| msgctxt "@info:placeholder"
 #| msgid "All games of round %1 have finished"
 msgctxt "@info"
@@ -478,38 +439,33 @@ msgid "Round %1 has finished."
 msgstr "Kaikki %1. kierroksen pelit ovat päättyneet"
 
 #: qml/PairingsPage.qml:111
-#, fuzzy, kde-format
+#, fuzzy
 #| msgid "Pair Round %1"
 msgctxt "@action:button"
 msgid "Pair Round %1…"
 msgstr "%1. parikierros"
 
 #: qml/PairingsPage.qml:154
-#, kde-format
 msgctxt "@info:placeholder"
 msgid "No pairings for round %1 yet"
 msgstr "Kierrokselle %1 ei vielä parituksia"
 
 #: qml/PairingsPage.qml:156
-#, kde-format
 msgctxt "@info:placeholder"
 msgid "All games of round %1 have finished"
 msgstr "Kaikki %1. kierroksen pelit ovat päättyneet"
 
 #: qml/PairRoundDialog.qml:21
-#, kde-format
 msgctxt "@title %1 is a number >= 1"
 msgid "Pair Round %1"
 msgstr "%1. parikierros"
 
 #: qml/PairRoundDialog.qml:29
-#, kde-format
 msgctxt "@info"
 msgid "All players will be paired."
 msgstr ""
 
 #: qml/PairRoundDialog.qml:29
-#, kde-format
 msgctxt "@info %1 is a number"
 msgid "The following player won't be paired: %2"
 msgid_plural "The following %1 players won't be paired: %2"
@@ -517,57 +473,53 @@ msgstr[0] ""
 msgstr[1] ""
 
 #: qml/PairRoundDialog.qml:39
-#, kde-format
 msgctxt "@option:check"
 msgid "Sort players"
 msgstr "Lajittele pelaajat"
 
 #: qml/PairRoundDialog.qml:46
-#, kde-format
 msgctxt "@label:listbox"
 msgid "First player color:"
 msgstr "Ensimmäisen pelaajan väri:"
 
 #: qml/PairRoundDialog.qml:54
-#, kde-format
 msgctxt "@item:inlistbox As in 'Random color'"
 msgid "Random"
 msgstr "Satunnainen"
 
-#: qml/PairRoundDialog.qml:58
+#: qml/PairRoundDialog.qml:58 tournament/pairing.h:78
 #, kde-format
 msgctxt "@item:inlistbox As in 'White pieces'"
 msgid "White"
 msgstr "Valkoinen"
 
-#: qml/PairRoundDialog.qml:62
+#: qml/PairRoundDialog.qml:62 tournament/pairing.h:80
 #, kde-format
 msgctxt "@item:inlistbox As in 'Black pieces'"
 msgid "Black"
 msgstr "Musta"
 
 #: qml/player/PlayerDetails.qml:17
-#, kde-format
 msgctxt "@title:window"
 msgid "Details of player \"%1\""
 msgstr ""
 
 #: qml/player/PlayerDetails.qml:22
-#, fuzzy, kde-format
+#, fuzzy
 #| msgid "Pairings"
 msgctxt "@action:button"
 msgid "Pairings"
 msgstr "Paritukset"
 
 #: qml/player/PlayerPairingsPage.qml:21
-#, fuzzy, kde-format
+#, fuzzy
 #| msgid "Pairings"
 msgctxt "@title"
 msgid "Pairings"
 msgstr "Paritukset"
 
 #: qml/player/PlayerPairingsPage.qml:26
-#, fuzzy, kde-format
+#, fuzzy
 #| msgctxt "@info:status Number of players"
 #| msgid "1 player"
 #| msgid_plural "%1 players"
@@ -576,62 +528,53 @@ msgid "Retire player"
 msgstr "1 pelaaja"
 
 #: qml/player/PlayerPairingsPage.qml:46
-#, kde-format
 msgctxt "@item:inlistbox Available to play"
 msgid "Available"
 msgstr ""
 
 #: qml/player/PlayerPairingsPage.qml:83 qml/TournamentSettingsFormat.qml:42
-#, kde-format
 msgctxt "@title:group"
 msgid "Pairings"
 msgstr "Paritukset"
 
 #: qml/player/PlayerPairingsPage.qml:108
-#, fuzzy, kde-format
+#, fuzzy
 #| msgid "Round %1"
 msgctxt "@info:label"
 msgid "Round %1"
 msgstr "%1. kierros"
 
 #: qml/PlayersPage.qml:69
-#, kde-format
 msgctxt "@action:intoolbar Open player details"
 msgid "Details…"
 msgstr ""
 
 #: qml/PlayersPage.qml:75
-#, kde-format
 msgctxt "@action:intoolbar"
 msgid "Sort Players…"
 msgstr "Lajittele pelaajat…"
 
 #: qml/PlayersPage.qml:96
-#, kde-format
 msgctxt "@action:intoolbar"
 msgid "Add Player…"
 msgstr "Lisää pelaaja…"
 
 #: qml/PlayersPage.qml:107
-#, kde-format
 msgctxt "@action:inmenu"
 msgid "Open Player Details"
 msgstr ""
 
 #: qml/PlayersPage.qml:204
-#, kde-format
 msgctxt "@info:placeholder"
 msgid "No players yet"
 msgstr "Ei vielä pelaajia"
 
 #: qml/PlayersPage.qml:208
-#, kde-format
 msgctxt "@action:button"
 msgid "Add Player…"
 msgstr "Lisää pelaaja…"
 
 #: qml/PlayersPage.qml:226
-#, kde-format
 msgctxt "@info:status Number of players"
 msgid "1 player"
 msgid_plural "%1 players"
@@ -639,7 +582,6 @@ msgstr[0] "1 pelaaja"
 msgstr[1] "%1 pelaajaa"
 
 #: qml/PlayersPage.qml:227
-#, kde-format
 msgctxt "@info:status Number of rated players"
 msgid "1 rated"
 msgid_plural "%1 rated"
@@ -647,142 +589,118 @@ msgstr[0] ""
 msgstr[1] ""
 
 #: qml/PlayersPage.qml:229
-#, kde-format
-msgctxt "@info:status players, rated"
-msgid "%1, %2"
-msgstr "%1, %2"
+msgctxt "@info:status Total number of players (Number of players rated)"
+msgid "%1 (%2)"
+msgstr ""
 
 #: qml/ResultsFooter.qml:43
-#, kde-format
 msgctxt "@action:intoolbar"
 msgid "*"
 msgstr "*"
 
 #: qml/ResultsFooter.qml:54
-#, kde-format
 msgctxt "@action:intoolbar"
 msgid "1-0"
 msgstr "1–0"
 
 #: qml/ResultsFooter.qml:62
-#, kde-format
 msgctxt "@action:intoolbar"
 msgid "½-½"
 msgstr "½–½"
 
 #: qml/ResultsFooter.qml:70
-#, kde-format
 msgctxt "@action:intoolbar"
 msgid "0-1"
 msgstr "0–1"
 
 #: qml/ResultsFooter.qml:81
-#, kde-format
 msgctxt "@action:intoolbar"
 msgid "1F-0F"
 msgstr "1F–0F"
 
 #: qml/ResultsFooter.qml:89
-#, kde-format
 msgctxt "@action:intoolbar"
 msgid "0F-1F"
 msgstr "0F–1F"
 
 #: qml/ResultsFooter.qml:97
-#, kde-format
 msgctxt "@action:intoolbar"
 msgid "0F-0F"
 msgstr "0F–0F"
 
 #: qml/ResultsFooter.qml:107
-#, kde-format
 msgctxt "@action:intoolbar Other game results"
 msgid "Other"
 msgstr ""
 
 #: qml/ResultsFooter.qml:119
-#, kde-format
 msgctxt "@action:intoolbar"
 msgid "1U-0U"
 msgstr "1U–0U"
 
 #: qml/ResultsFooter.qml:126
-#, kde-format
 msgctxt "@action:intoolbar"
 msgid "½U-½U"
 msgstr "½U–½U"
 
 #: qml/ResultsFooter.qml:133
-#, kde-format
 msgctxt "@action:intoolbar"
 msgid "0U-1U"
 msgstr "0U–1U"
 
 #: qml/ResultsFooter.qml:141
-#, kde-format
 msgctxt "@action:intoolbar"
 msgid "½U-0U"
 msgstr "½U–0U"
 
 #: qml/ResultsFooter.qml:148
-#, kde-format
 msgctxt "@action:intoolbar"
 msgid "0U-½U"
 msgstr "0U–½U"
 
 #: qml/ResultsFooter.qml:155
-#, kde-format
 msgctxt "@action:intoolbar"
 msgid "0U-0U"
 msgstr "0U–0U"
 
 #: qml/ResultsFooter.qml:163
-#, kde-format
 msgctxt "@action:intoolbar"
 msgid "½-0"
 msgstr "½–0"
 
 #: qml/ResultsFooter.qml:170
-#, kde-format
 msgctxt "@action:intoolbar"
 msgid "0-0"
 msgstr "0–0"
 
 #: qml/ResultsFooter.qml:177
-#, kde-format
 msgctxt "@action:intoolbar"
 msgid "0-½"
 msgstr "0–½"
 
 #: qml/Sidebar.qml:56
-#, kde-format
 msgid "Players"
 msgstr "Pelaajat"
 
 #: qml/Sidebar.qml:63
-#, kde-format
 msgid "Pairings"
 msgstr "Paritukset"
 
 #: qml/Sidebar.qml:70
-#, kde-format
 msgid "Standings"
 msgstr "Sijoitukset"
 
 #: qml/Sidebar.qml:94
-#, kde-format
 msgctxt "@action:button"
 msgid "Settings"
 msgstr "Asetukset"
 
 #: qml/SortPlayersDialog.qml:18
-#, kde-format
 msgctxt "@title"
 msgid "Sort Players"
 msgstr "Lajittele pelaajat"
 
 #: qml/SortPlayersDialog.qml:27
-#, kde-format
 msgctxt "@info"
 msgid ""
 "Changing the initial ranking after the fourth round has been paired is not "
@@ -792,135 +710,114 @@ msgstr ""
 "sallita virallisissa turnauksissa."
 
 #: qml/StandingsPage.qml:67 qml/StandingsPage.qml:77
-#, fuzzy, kde-format
+#, fuzzy
 #| msgid "Standings"
 msgctxt "@item:inlistbox"
 msgid "Final Standings"
 msgstr "Sijoitukset"
 
 #: qml/StandingsPage.qml:69 qml/StandingsPage.qml:79
-#, fuzzy, kde-format
+#, fuzzy
 #| msgid "Pair Round %1"
 msgctxt "@item:inlistbox Standings After Round %1"
 msgid "After Round %1"
 msgstr "%1. parikierros"
 
 #: qml/StandingsPage.qml:129
-#, kde-format
 msgctxt "@info:placeholder"
 msgid "No standings yet"
 msgstr "Ei vielä sijoituksia"
 
 #: qml/TiebreakDialog.qml:18
-#, kde-format
 msgctxt "@title:window"
 msgid "Edit Tiebreak"
 msgstr "Muokkaa katkaisupeliä"
 
 #: qml/TournamentSettings.qml:15
-#, kde-format
 msgctxt "@action:button"
 msgid "Information"
 msgstr "Tietoa"
 
 #: qml/TournamentSettings.qml:21
-#, kde-format
 msgctxt "@action:button"
 msgid "Format"
 msgstr "Muoto"
 
 #: qml/TournamentSettings.qml:27
-#, kde-format
 msgctxt "@action:button"
 msgid "Calendar"
 msgstr "Kalenteri"
 
 #: qml/TournamentSettingsCalendar.qml:15
-#, kde-format
 msgctxt "@title"
 msgid "Calendar"
 msgstr "Kalenteri"
 
 #: qml/TournamentSettingsCalendar.qml:30
-#, kde-format
 msgctxt "round number"
 msgid "Round %1"
 msgstr "%1. kierros"
 
 #: qml/TournamentSettingsFormat.qml:17
-#, kde-format
 msgctxt "@title"
 msgid "Format"
 msgstr "Muoto"
 
 #: qml/TournamentSettingsFormat.qml:20
-#, kde-format
 msgctxt "@title:group"
 msgid "Format"
 msgstr "Muoto"
 
 #: qml/TournamentSettingsFormat.qml:24
-#, kde-format
 msgid "Swiss system"
 msgstr "Sveitsiläinen järjestelmä"
 
 #: qml/TournamentSettingsFormat.qml:28
-#, kde-format
 msgid "Rounds"
 msgstr "Kierroksia"
 
 #: qml/TournamentSettingsFormat.qml:46
-#, kde-format
 msgid "Pairing engine"
 msgstr "Paritusmoottori"
 
 #: qml/TournamentSettingsFormat.qml:47
-#, kde-format
 msgid "bbpPairings"
 msgstr "bbpPairings"
 
 #: qml/TournamentSettingsFormat.qml:53
-#, kde-format
 msgid "Pairing allocated bye"
 msgstr ""
 
 #: qml/TournamentSettingsFormat.qml:54
-#, kde-format
 msgid "The value of the pairing allocated bye"
 msgstr ""
 
 #: qml/TournamentSettingsFormat.qml:60
-#, kde-format
 msgctxt "@title:group"
 msgid "Tiebreaks"
 msgstr "Katkaisupelit"
 
 #: qml/TournamentSettingsFormat.qml:84
-#, kde-format
 msgctxt "@action:button"
 msgid "Add Tiebreak"
 msgstr "Lisää katkaisupeli"
 
 #: qml/TournamentSettingsInformation.qml:12
-#, kde-format
 msgctxt "@title"
 msgid "Information"
 msgstr "Tietoa"
 
 #: qml/TournamentSettingsInformation.qml:15
-#, kde-format
 msgctxt "@title:group"
 msgid "Basic details"
 msgstr "Perustiedot"
 
 #: qml/TournamentSettingsInformation.qml:20
-#, kde-format
 msgctxt "@label:textbox"
 msgid "Tournament name"
 msgstr "Turnauksen nimi"
 
 #: qml/TournamentSettingsInformation.qml:29
-#, kde-format
 msgctxt "@label:textbox"
 msgid "City"
 msgstr "Kaupunki"
@@ -928,55 +825,47 @@ msgstr "Kaupunki"
 # Lähde arbiter-käännökseen:
 # https://www.shakkiliitto.fi/wp-content/uploads/2020/07/Määräykset-shakin-tuomarikoulutuksesta_2020.pdf
 #: qml/TournamentSettingsInformation.qml:47
-#, kde-format
 msgctxt "@label:textbox"
 msgid "Chief arbiter"
 msgstr "Päätuomari"
 
 #: qml/TournamentSettingsInformation.qml:56
-#, kde-format
 msgctxt "@label:textbox"
 msgid "Deputy chief arbiter"
 msgstr "Varatuomari"
 
 #: qml/WelcomePage.qml:21
-#, kde-format
 msgctxt "@title"
 msgid "Welcome to Chessament"
 msgstr "Tervetuloa Chessamentiin"
 
 #: qml/WelcomePage.qml:22
-#, kde-format
 msgctxt "@info"
 msgid "Chessament is a chess tournament manager"
 msgstr "Chessament on šakkiturnausten hallintasovellus"
 
 #: settings/ChessamentConfigurationView.qml:21
-#, kde-format
 msgctxt "@action:button"
 msgid "General"
 msgstr "Perusasetukset"
 
 #: settings/ChessamentConfigurationView.qml:32
-#, kde-format
 msgctxt "@action:button"
 msgid "Rating Lists"
 msgstr "Vahvuuslukuluettelot"
 
 #: settings/GeneralPage.qml:16
-#, kde-format
 msgctxt "@title"
 msgid "General"
 msgstr "Perusasetukset"
 
 #: settings/GeneralPage.qml:20
-#, kde-format
 msgctxt "@title:group"
 msgid "Account"
 msgstr "Tili"
 
 #: settings/GeneralPage.qml:28
-#, fuzzy, kde-format
+#, fuzzy
 #| msgctxt "@label:button"
 #| msgid "Connect Account"
 msgctxt "@action:button"
@@ -984,83 +873,69 @@ msgid "Connect Account"
 msgstr "Yhdistä tiliin"
 
 #: settings/GeneralPage.qml:33
-#, kde-format
 msgid "Logged in as %1"
 msgstr "Kirjauduttu tunnuksella %1"
 
 #: settings/GeneralPage.qml:38
-#, kde-format
 msgid "Logout"
 msgstr "Kirjaudu ulos"
 
 #: settings/RatingListsPage.qml:22 settings/RatingListsPage.qml:128
-#, kde-format
 msgctxt "@title"
 msgid "Rating Lists"
 msgstr "Vahvuuslukuluettelot"
 
 #: settings/RatingListsPage.qml:27
-#, kde-format
 msgctxt "@title:window"
 msgid "Add Rating List"
 msgstr "Lisää vahvuuslukuluettelo"
 
 #: settings/RatingListsPage.qml:32
-#, kde-format
 msgctxt "@action:button"
 msgid "Import"
 msgstr "Tuo"
 
 #: settings/RatingListsPage.qml:47
-#, kde-format
 msgctxt "@info:label"
 msgid "Name"
 msgstr "Nimi"
 
 #: settings/RatingListsPage.qml:52
-#, kde-format
 msgctxt "@info:label"
 msgid "Rating list URL"
 msgstr "vahvuuslukuluettelon verkko-osoite"
 
 #: settings/RatingListsPage.qml:72
-#, kde-format
 msgctxt "@title:window"
 msgid "Importing Rating List"
 msgstr "Tuo vahvuuslukuluettelo"
 
 #: settings/RatingListsPage.qml:112
-#, kde-format
 msgctxt "@title"
 msgid "Delete Rating List"
 msgstr "Poista vahvuuslukuluettelo"
 
 #: settings/RatingListsPage.qml:120
-#, kde-format
 msgctxt "@action:button Delete Rating List"
 msgid "Delete"
 msgstr "Poista"
 
 #: settings/RatingListsPage.qml:133
-#, kde-format
 msgctxt "@info:status"
 msgid "No rating lists yet."
 msgstr "Ei vielä vahvuuslukuluetteloja."
 
 #: settings/RatingListsPage.qml:153
-#, kde-format
 msgctxt "@action:button"
 msgid "Delete Rating List"
 msgstr "Poista vahvuuslukuluettelo"
 
 #: settings/RatingListsPage.qml:161
-#, kde-format
 msgctxt "@action:button"
 msgid "Delete rating list"
 msgstr "Poista vahvuuslukuluettelo"
 
 #: settings/RatingListsPage.qml:171
-#, kde-format
 msgctxt "@action:button"
 msgid "Add rating list"
 msgstr "Lisää vahvuuslukuluettelo"
@@ -1070,6 +945,21 @@ msgstr "Lisää vahvuuslukuluettelo"
 msgctxt "@title:column Player Ranking"
 msgid "Rank"
 msgstr "Sijoitus"
+
+#: tournament/federations.h:118
+msgctxt "FIDE Federation"
+msgid "Chinese Taipei"
+msgstr ""
+
+#: tournament/federations.h:211
+msgctxt "FIDE Federation"
+msgid "Scotland"
+msgstr ""
+
+#: tournament/federations.h:220
+msgctxt "FIDE Federation"
+msgid "Wales"
+msgstr ""
 
 # ”Paritus” esiintyy ainakin šakkiliiton kilpailusäännöissä: https://www.shakkiliitto.fi/shakin-kilpailumaaraykset-suomessa/
 #: tournament/pairingengine.cpp:29
@@ -1147,6 +1037,12 @@ msgid_plural "Saved %1 players."
 msgstr[0] "Tallennettiin yksi pelaaja."
 msgstr[1] "Tallennettiin %1 pelaajaa."
 
+#: tournament/tiebreaks/aob.h:23 tournament/tournament.cpp:505
+#, kde-format
+msgctxt "Tiebreak"
+msgid "Average Buchholz of Opponents"
+msgstr ""
+
 #: tournament/tiebreaks/buchholz.cpp:14
 #, kde-format
 msgctxt "@label:spinbox"
@@ -1159,50 +1055,55 @@ msgctxt "@info"
 msgid "Unsupported tiebreak option \"%1\""
 msgstr ""
 
+#: tournament/tiebreaks/buchholz.h:25 tournament/tournament.cpp:487
+#, kde-format
+msgctxt "Buchholz tiebreak"
+msgid "Buchholz"
+msgstr "Buchholz"
+
+#: tournament/tiebreaks/buchholz.h:28
+#, fuzzy, kde-format
+#| msgctxt "Buchholz tiebreak"
+#| msgid "Buchholz"
+msgctxt "Buchholz N tiebreak, N is a number < 0"
+msgid "Buchholz %1"
+msgstr "Buchholz"
+
+#: tournament/tiebreaks/numberwins.h:22 tournament/tournament.cpp:491
+#, kde-format
+msgctxt "Number of Wins tiebreak"
+msgid "Number of Wins"
+msgstr "Voittojen määrä"
+
+#: tournament/tiebreaks/playedblack.h:22 tournament/tournament.cpp:501
+#, kde-format
+msgctxt "Number of Games Played with Black (over the board) tiebreak"
+msgid "Number of Games Played with Black (over the board)"
+msgstr ""
+
+#: tournament/tiebreaks/points.h:22 tournament/tiebreaks/points.h:27
 #: tournament/tournament.cpp:483
 #, kde-format
 msgctxt "Game points"
 msgid "Points"
 msgstr "Pisteet"
 
-#: tournament/tournament.cpp:487
-#, kde-format
-msgctxt "Buchholz tiebreak"
-msgid "Buchholz"
-msgstr "Buchholz"
-
-#: tournament/tournament.cpp:491
-#, kde-format
-msgctxt "Number of Wins tiebreak"
-msgid "Number of Wins"
-msgstr "Voittojen määrä"
-
-#: tournament/tournament.cpp:495
+#: tournament/tiebreaks/won.h:23 tournament/tournament.cpp:497
 #, fuzzy, kde-format
 #| msgctxt "Number of Wins tiebreak"
 #| msgid "Number of Wins"
-msgctxt "Number of Games Won tiebreak"
-msgid "Number of Games Won"
+msgctxt ""
+"Number of Games Won (over the board) tiebreak. Different from the 'Number of "
+"Wins' tiebreak, which includes games won by forfeit."
+msgid "Number of Games Won (over the board)"
 msgstr "Voittojen määrä"
 
-#: tournament/tournament.cpp:499
-#, kde-format
-msgctxt "Number of Games Played with Black tiebreak"
-msgid "Number of Games Played with Black"
-msgstr ""
-
-#: tournament/tournament.cpp:503
-#, kde-format
-msgctxt "Tiebreak"
-msgid "Average Buchholz of Opponents"
-msgstr ""
-
-#: tournament/tournament.cpp:922
+#: tournament/tournament.cpp:924
 #, kde-format
 msgid "An error ocurred while pairing the round: %1"
 msgstr "Tapahtui virhe paritettaessa kierrosta: %1"
 
-#: tournament/tournament.cpp:1153
+#: tournament/tournament.cpp:1155
 #, kde-format
 msgid "Couldn't open file"
 msgstr "Tiedostoa ei voitu avata"
@@ -1232,6 +1133,10 @@ msgstr "Tuntematon tulos ”%1” parissa ”%2”."
 #, kde-format
 msgid "Pairing \"%1\" has no opponent."
 msgstr "Parituksessa ”%1” ei ole vastapelaajaa."
+
+#~ msgctxt "@info:status players, rated"
+#~ msgid "%1, %2"
+#~ msgstr "%1, %2"
 
 #~ msgctxt "@action:inmenu"
 #~ msgid "Connect account"
