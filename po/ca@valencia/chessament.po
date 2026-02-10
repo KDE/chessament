@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-09 00:40+0000\n"
-"PO-Revision-Date: 2026-02-08 11:03+0100\n"
+"PO-Revision-Date: 2026-02-09 11:07+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.04.0\n"
+"X-Generator: Lokalize 25.12.2\n"
 
 #: byesmodel.cpp:68
 #, kde-format
@@ -573,7 +573,7 @@ msgstr[1] "%1 avaluats"
 #: qml/PlayersPage.qml:229
 msgctxt "@info:status Total number of players (Number of players rated)"
 msgid "%1 (%2)"
-msgstr ""
+msgstr "%1 (%2)"
 
 #: qml/ResultsFooter.qml:43
 msgctxt "@action:intoolbar"
@@ -922,17 +922,17 @@ msgstr "Posició"
 #: tournament/federations.h:118
 msgctxt "FIDE Federation"
 msgid "Chinese Taipei"
-msgstr ""
+msgstr "Taipei xinesa"
 
 #: tournament/federations.h:211
 msgctxt "FIDE Federation"
 msgid "Scotland"
-msgstr ""
+msgstr "Escòcia"
 
 #: tournament/federations.h:220
 msgctxt "FIDE Federation"
 msgid "Wales"
-msgstr ""
+msgstr "Gal·les"
 
 #: tournament/pairingengine.cpp:29
 #, kde-format
@@ -1036,12 +1036,10 @@ msgid "Buchholz"
 msgstr "Buchholz"
 
 #: tournament/tiebreaks/buchholz.h:28
-#, fuzzy, kde-format
-#| msgctxt "Buchholz tiebreak"
-#| msgid "Buchholz"
+#, kde-format
 msgctxt "Buchholz N tiebreak, N is a number < 0"
 msgid "Buchholz %1"
-msgstr "Buchholz"
+msgstr "Buchholz %1"
 
 #: tournament/tiebreaks/numberwins.h:22 tournament/tournament.cpp:491
 #, kde-format
@@ -1050,12 +1048,10 @@ msgid "Number of Wins"
 msgstr "Nombre de partides guanyades"
 
 #: tournament/tiebreaks/playedblack.h:22 tournament/tournament.cpp:501
-#, fuzzy, kde-format
-#| msgctxt "Number of Games Played with Black tiebreak"
-#| msgid "Number of Games Played with Black"
+#, kde-format
 msgctxt "Number of Games Played with Black (over the board) tiebreak"
 msgid "Number of Games Played with Black (over the board)"
-msgstr "Nombre de partides jugades amb negres"
+msgstr "Nombre de partides jugades amb negres (sobre el tauler)"
 
 #: tournament/tiebreaks/points.h:22 tournament/tiebreaks/points.h:27
 #: tournament/tournament.cpp:483
@@ -1065,14 +1061,12 @@ msgid "Points"
 msgstr "Punts"
 
 #: tournament/tiebreaks/won.h:23 tournament/tournament.cpp:497
-#, fuzzy, kde-format
-#| msgctxt "Number of Games Won tiebreak"
-#| msgid "Number of Games Won"
+#, kde-format
 msgctxt ""
 "Number of Games Won (over the board) tiebreak. Different from the 'Number of "
 "Wins' tiebreak, which includes games won by forfeit."
 msgid "Number of Games Won (over the board)"
-msgstr "Nombre de partides guanyades"
+msgstr "Nombre de partides guanyades (sobre el tauler)"
 
 #: tournament/tournament.cpp:924
 #, kde-format
@@ -1109,7 +1103,3 @@ msgstr "Resultat «%1» desconegut a l'aparellament «%2»."
 #, kde-format
 msgid "Pairing \"%1\" has no opponent."
 msgstr "L'aparellament «%1» no té oponent."
-
-#~ msgctxt "@info:status players, rated"
-#~ msgid "%1, %2"
-#~ msgstr "%1, %2"

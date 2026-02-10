@@ -1025,12 +1025,10 @@ msgid "Buchholz"
 msgstr "Buchholz"
 
 #: tournament/tiebreaks/buchholz.h:28
-#, fuzzy, kde-format
-#| msgctxt "Buchholz tiebreak"
-#| msgid "Buchholz"
+#, kde-format
 msgctxt "Buchholz N tiebreak, N is a number < 0"
 msgid "Buchholz %1"
-msgstr "Buchholz"
+msgstr ""
 
 #: tournament/tiebreaks/numberwins.h:22 tournament/tournament.cpp:491
 #, kde-format
@@ -1094,7 +1092,3 @@ msgstr "对阵“%2”时出现未知结果“%1”。"
 #, kde-format
 msgid "Pairing \"%1\" has no opponent."
 msgstr "对阵“%1”无对手。"
-
-#~ msgctxt "@info:status players, rated"
-#~ msgid "%1, %2"
-#~ msgstr "%1，%2"

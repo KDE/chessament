@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-09 00:40+0000\n"
-"PO-Revision-Date: 2026-02-08 14:13+0100\n"
+"PO-Revision-Date: 2026-02-09 10:28+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -571,7 +571,7 @@ msgstr[1] "%1 met rating"
 #: qml/PlayersPage.qml:229
 msgctxt "@info:status Total number of players (Number of players rated)"
 msgid "%1 (%2)"
-msgstr ""
+msgstr "%1 (%2)"
 
 #: qml/ResultsFooter.qml:43
 msgctxt "@action:intoolbar"
@@ -920,17 +920,17 @@ msgstr "Rangorde"
 #: tournament/federations.h:118
 msgctxt "FIDE Federation"
 msgid "Chinese Taipei"
-msgstr ""
+msgstr "Chinees Taipei"
 
 #: tournament/federations.h:211
 msgctxt "FIDE Federation"
 msgid "Scotland"
-msgstr ""
+msgstr "Schotland"
 
 #: tournament/federations.h:220
 msgctxt "FIDE Federation"
 msgid "Wales"
-msgstr ""
+msgstr "Wales"
 
 #: tournament/pairingengine.cpp:29
 #, kde-format
@@ -1033,12 +1033,10 @@ msgid "Buchholz"
 msgstr "Buchholz"
 
 #: tournament/tiebreaks/buchholz.h:28
-#, fuzzy, kde-format
-#| msgctxt "Buchholz tiebreak"
-#| msgid "Buchholz"
+#, kde-format
 msgctxt "Buchholz N tiebreak, N is a number < 0"
 msgid "Buchholz %1"
-msgstr "Buchholz"
+msgstr "Buchholz %1"
 
 #: tournament/tiebreaks/numberwins.h:22 tournament/tournament.cpp:491
 #, kde-format
@@ -1047,12 +1045,10 @@ msgid "Number of Wins"
 msgstr "Aantal winsten"
 
 #: tournament/tiebreaks/playedblack.h:22 tournament/tournament.cpp:501
-#, fuzzy, kde-format
-#| msgctxt "Number of Games Played with Black tiebreak"
-#| msgid "Number of Games Played with Black"
+#, kde-format
 msgctxt "Number of Games Played with Black (over the board) tiebreak"
 msgid "Number of Games Played with Black (over the board)"
-msgstr "Aantal spellen gespeeld met zwart"
+msgstr "Aantal spellen gespeeld met zwart (op het bord)"
 
 #: tournament/tiebreaks/points.h:22 tournament/tiebreaks/points.h:27
 #: tournament/tournament.cpp:483
@@ -1062,14 +1058,12 @@ msgid "Points"
 msgstr "Punten"
 
 #: tournament/tiebreaks/won.h:23 tournament/tournament.cpp:497
-#, fuzzy, kde-format
-#| msgctxt "Number of Games Won tiebreak"
-#| msgid "Number of Games Won"
+#, kde-format
 msgctxt ""
 "Number of Games Won (over the board) tiebreak. Different from the 'Number of "
 "Wins' tiebreak, which includes games won by forfeit."
 msgid "Number of Games Won (over the board)"
-msgstr "Aantal gewonnen spellen"
+msgstr "Aantal gewonnen spellen (op het bord)"
 
 #: tournament/tournament.cpp:924
 #, kde-format
