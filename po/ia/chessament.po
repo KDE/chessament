@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-09 00:40+0000\n"
-"PO-Revision-Date: 2026-01-22 11:28+0100\n"
+"PO-Revision-Date: 2026-02-10 09:41+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -431,11 +431,9 @@ msgid "Round %1 has finished."
 msgstr ""
 
 #: qml/PairingsPage.qml:111
-#, fuzzy
-#| msgid "Round %1"
 msgctxt "@action:button"
 msgid "Pair Round %1…"
-msgstr "Round (Circular) %1"
+msgstr "Pair Round (Copula Circular) %1..."
 
 #: qml/PairingsPage.qml:154
 msgctxt "@info:placeholder"
@@ -507,13 +505,9 @@ msgid "Pairings"
 msgstr ""
 
 #: qml/player/PlayerPairingsPage.qml:26
-#, fuzzy
-#| msgctxt "@info:status Number of players"
-#| msgid "1 player"
-#| msgid_plural "%1 players"
 msgctxt "@action:button"
 msgid "Retire player"
-msgstr "1 Jocator"
+msgstr "Jocator se retira"
 
 #: qml/player/PlayerPairingsPage.qml:46
 msgctxt "@item:inlistbox Available to play"

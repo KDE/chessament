@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-09 00:40+0000\n"
-"PO-Revision-Date: 2026-01-28 20:15+0100\n"
+"PO-Revision-Date: 2026-02-10 10:49+0100\n"
 "Last-Translator: Valter Mura <valtermura@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -115,18 +115,18 @@ msgstr "Autore e responsabile"
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Vincenzo Reale"
+msgstr "Valter Mura"
 
 #: main.cpp:71
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "smart2128vr@gmail.com"
+msgstr "valtermura@gmail.com"
 
 #: main.cpp:73
 #, kde-format
 msgid "Swiss-system chess tournament pairing engine."
-msgstr ""
+msgstr "Motore per l'abbinamento nei tornei di scacchi con sistema svizzero."
 
 #: main.cpp:82
 #, kde-format
@@ -432,12 +432,9 @@ msgid "Round %1 has finished."
 msgstr "Il turno %1 è terminato."
 
 #: qml/PairingsPage.qml:111
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Pair Round %1"
 msgctxt "@action:button"
 msgid "Pair Round %1…"
-msgstr "Abbinamento turno %1"
+msgstr "Abbinamento turno %1…"
 
 #: qml/PairingsPage.qml:154
 msgctxt "@info:placeholder"
@@ -457,14 +454,14 @@ msgstr "Abbinamento turno %1"
 #: qml/PairRoundDialog.qml:29
 msgctxt "@info"
 msgid "All players will be paired."
-msgstr ""
+msgstr "Tutti i giocatori saranno abbinati."
 
 #: qml/PairRoundDialog.qml:29
 msgctxt "@info %1 is a number"
 msgid "The following player won't be paired: %2"
 msgid_plural "The following %1 players won't be paired: %2"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Il seguente giocatore non sarà abbinato: %2"
+msgstr[1] "I seguenti %1 giocatori non saranno abbinati: %2"
 
 #: qml/PairRoundDialog.qml:39
 msgctxt "@option:check"
@@ -509,13 +506,9 @@ msgid "Pairings"
 msgstr "Abbinamenti"
 
 #: qml/player/PlayerPairingsPage.qml:26
-#, fuzzy
-#| msgctxt "@info:status Number of players"
-#| msgid "1 player"
-#| msgid_plural "%1 players"
 msgctxt "@action:button"
 msgid "Retire player"
-msgstr "1 giocatore"
+msgstr "Elimina giocatore"
 
 #: qml/player/PlayerPairingsPage.qml:46
 msgctxt "@item:inlistbox Available to play"
@@ -579,7 +572,7 @@ msgstr[1] "%1 valutati"
 #: qml/PlayersPage.qml:229
 msgctxt "@info:status Total number of players (Number of players rated)"
 msgid "%1 (%2)"
-msgstr ""
+msgstr "%1 (%2)"
 
 #: qml/ResultsFooter.qml:43
 msgctxt "@action:intoolbar"
@@ -928,17 +921,17 @@ msgstr "Posizione"
 #: tournament/federations.h:118
 msgctxt "FIDE Federation"
 msgid "Chinese Taipei"
-msgstr ""
+msgstr "Taipei cinese"
 
 #: tournament/federations.h:211
 msgctxt "FIDE Federation"
 msgid "Scotland"
-msgstr ""
+msgstr "Scozia"
 
 #: tournament/federations.h:220
 msgctxt "FIDE Federation"
 msgid "Wales"
-msgstr ""
+msgstr "Galles"
 
 #: tournament/pairingengine.cpp:29
 #, kde-format
@@ -1041,12 +1034,10 @@ msgid "Buchholz"
 msgstr "Buchholz"
 
 #: tournament/tiebreaks/buchholz.h:28
-#, fuzzy, kde-format
-#| msgctxt "Buchholz tiebreak"
-#| msgid "Buchholz"
+#, kde-format
 msgctxt "Buchholz N tiebreak, N is a number < 0"
 msgid "Buchholz %1"
-msgstr "Buchholz"
+msgstr "Buchholz %1"
 
 #: tournament/tiebreaks/numberwins.h:22 tournament/tournament.cpp:491
 #, kde-format
@@ -1058,7 +1049,7 @@ msgstr "Numero di vittorie"
 #, kde-format
 msgctxt "Number of Games Played with Black (over the board) tiebreak"
 msgid "Number of Games Played with Black (over the board)"
-msgstr ""
+msgstr "Numero di partite giocate col nero (sulla scacchiera)"
 
 #: tournament/tiebreaks/points.h:22 tournament/tiebreaks/points.h:27
 #: tournament/tournament.cpp:483
@@ -1068,14 +1059,12 @@ msgid "Points"
 msgstr "Punti"
 
 #: tournament/tiebreaks/won.h:23 tournament/tournament.cpp:497
-#, fuzzy, kde-format
-#| msgctxt "Number of Wins tiebreak"
-#| msgid "Number of Wins"
+#, kde-format
 msgctxt ""
 "Number of Games Won (over the board) tiebreak. Different from the 'Number of "
 "Wins' tiebreak, which includes games won by forfeit."
 msgid "Number of Games Won (over the board)"
-msgstr "Numero di vittorie"
+msgstr "Numero di partite vinte (sulla scacchiera)"
 
 #: tournament/tournament.cpp:924
 #, kde-format
