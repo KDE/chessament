@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-09 00:40+0000\n"
-"PO-Revision-Date: 2026-02-05 11:35+0400\n"
+"PO-Revision-Date: 2026-02-11 21:08+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -432,12 +432,9 @@ msgid "Round %1 has finished."
 msgstr "الجولة %1 انتهت"
 
 #: qml/PairingsPage.qml:111
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Pair Round %1"
 msgctxt "@action:button"
 msgid "Pair Round %1…"
-msgstr "أقرِن الجولة %1"
+msgstr "أقرِن الجولة %1…"
 
 #: qml/PairingsPage.qml:154
 msgctxt "@info:placeholder"
@@ -591,7 +588,7 @@ msgstr[5] "%1 مقيَّم"
 #: qml/PlayersPage.qml:229
 msgctxt "@info:status Total number of players (Number of players rated)"
 msgid "%1 (%2)"
-msgstr ""
+msgstr "%1 (%2)"
 
 #: qml/ResultsFooter.qml:43
 msgctxt "@action:intoolbar"
@@ -939,17 +936,17 @@ msgstr "الرتبة"
 #: tournament/federations.h:118
 msgctxt "FIDE Federation"
 msgid "Chinese Taipei"
-msgstr ""
+msgstr "تايبيه الصينية"
 
 #: tournament/federations.h:211
 msgctxt "FIDE Federation"
 msgid "Scotland"
-msgstr ""
+msgstr "إسكتلندا"
 
 #: tournament/federations.h:220
 msgctxt "FIDE Federation"
 msgid "Wales"
-msgstr ""
+msgstr "ويلز"
 
 #: tournament/pairingengine.cpp:29
 #, kde-format
@@ -1059,12 +1056,10 @@ msgid "Buchholz"
 msgstr "بوخهولز"
 
 #: tournament/tiebreaks/buchholz.h:28
-#, fuzzy, kde-format
-#| msgctxt "Buchholz tiebreak"
-#| msgid "Buchholz"
+#, kde-format
 msgctxt "Buchholz N tiebreak, N is a number < 0"
 msgid "Buchholz %1"
-msgstr "بوخهولز"
+msgstr "بوخهولز %1"
 
 #: tournament/tiebreaks/numberwins.h:22 tournament/tournament.cpp:491
 #, kde-format
