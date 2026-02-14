@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-09 00:40+0000\n"
-"PO-Revision-Date: 2026-02-11 21:08+0400\n"
+"PO-Revision-Date: 2026-02-12 08:12+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -126,7 +126,7 @@ msgstr "zayed.alsaidi@gmail.com"
 #: main.cpp:73
 #, kde-format
 msgid "Swiss-system chess tournament pairing engine."
-msgstr ""
+msgstr "محرك تزويج بطولات الشطرنج بالنظام السويسري."
 
 #: main.cpp:82
 #, kde-format
@@ -454,18 +454,18 @@ msgstr "أقرِن الجولة %1"
 #: qml/PairRoundDialog.qml:29
 msgctxt "@info"
 msgid "All players will be paired."
-msgstr ""
+msgstr "سيُزوّج كل اللاعبين."
 
 #: qml/PairRoundDialog.qml:29
 msgctxt "@info %1 is a number"
 msgid "The following player won't be paired: %2"
 msgid_plural "The following %1 players won't be paired: %2"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
-msgstr[4] ""
-msgstr[5] ""
+msgstr[0] "لن يُزوّج أي لاعب: %2"
+msgstr[1] "لن يُزوّج اللاعب التالي: %2"
+msgstr[2] "لن يُزوّج اللاعبان التاليان: %2"
+msgstr[3] "لن يُزوّج اللاعبون %1 التالون: %2"
+msgstr[4] "لن يُزوّج الـ %1 لاعباً التالين: %2"
+msgstr[5] "لن يُزوّج الـ %1 لاعب التالين: %2"
 
 #: qml/PairRoundDialog.qml:39
 msgctxt "@option:check"
@@ -510,13 +510,9 @@ msgid "Pairings"
 msgstr "الإقرانات"
 
 #: qml/player/PlayerPairingsPage.qml:26
-#, fuzzy
-#| msgctxt "@info:status Number of players"
-#| msgid "1 player"
-#| msgid_plural "%1 players"
 msgctxt "@action:button"
 msgid "Retire player"
-msgstr "0 لاعب"
+msgstr "تقاعد اللاعب"
 
 #: qml/player/PlayerPairingsPage.qml:46
 msgctxt "@item:inlistbox Available to play"
@@ -1068,12 +1064,10 @@ msgid "Number of Wins"
 msgstr "عدد الكسب"
 
 #: tournament/tiebreaks/playedblack.h:22 tournament/tournament.cpp:501
-#, fuzzy, kde-format
-#| msgctxt "Number of Games Played with Black tiebreak"
-#| msgid "Number of Games Played with Black"
+#, kde-format
 msgctxt "Number of Games Played with Black (over the board) tiebreak"
 msgid "Number of Games Played with Black (over the board)"
-msgstr "عدد المباريات التي لعبت مع التعادل الأسود"
+msgstr "عدد المباريات الملعوبة بالقطع السوداء (على الرقعة)"
 
 #: tournament/tiebreaks/points.h:22 tournament/tiebreaks/points.h:27
 #: tournament/tournament.cpp:483
@@ -1083,14 +1077,12 @@ msgid "Points"
 msgstr "النقاط"
 
 #: tournament/tiebreaks/won.h:23 tournament/tournament.cpp:497
-#, fuzzy, kde-format
-#| msgctxt "Number of Games Won tiebreak"
-#| msgid "Number of Games Won"
+#, kde-format
 msgctxt ""
 "Number of Games Won (over the board) tiebreak. Different from the 'Number of "
 "Wins' tiebreak, which includes games won by forfeit."
 msgid "Number of Games Won (over the board)"
-msgstr "عدد المباريات الفائزة في الشوط الفاصل"
+msgstr "عدد المباريات الفائزة (على الرقعة)"
 
 #: tournament/tournament.cpp:924
 #, kde-format
