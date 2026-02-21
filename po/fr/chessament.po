@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-09 00:40+0000\n"
-"PO-Revision-Date: 2026-02-02 09:07+0100\n"
+"PO-Revision-Date: 2026-02-13 17:38+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.12.1\n"
+"X-Generator: Lokalize 25.12.2\n"
 
 #: byesmodel.cpp:68
 #, kde-format
@@ -123,7 +123,7 @@ msgstr "thomas.vergnaud@mailo.eu"
 #: main.cpp:73
 #, kde-format
 msgid "Swiss-system chess tournament pairing engine."
-msgstr ""
+msgstr "Moteur d’associations pour tournoi d’échecs selon le système suisse."
 
 #: main.cpp:82
 #, kde-format
@@ -429,12 +429,9 @@ msgid "Round %1 has finished."
 msgstr "Le tour %1 est terminé."
 
 #: qml/PairingsPage.qml:111
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Pair Round %1"
 msgctxt "@action:button"
 msgid "Pair Round %1…"
-msgstr "Tour de l'adversaire %1"
+msgstr "Association pour la partie %1..."
 
 #: qml/PairingsPage.qml:154
 msgctxt "@info:placeholder"
@@ -454,14 +451,14 @@ msgstr "Tour de l'adversaire %1"
 #: qml/PairRoundDialog.qml:29
 msgctxt "@info"
 msgid "All players will be paired."
-msgstr ""
+msgstr "Tous les joueurs seront associés."
 
 #: qml/PairRoundDialog.qml:29
 msgctxt "@info %1 is a number"
 msgid "The following player won't be paired: %2"
 msgid_plural "The following %1 players won't be paired: %2"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Le joueur suivant ne sera pas associé : %2"
+msgstr[1] "Les joueurs suivants, %1, ne seront pas associés : %2"
 
 #: qml/PairRoundDialog.qml:39
 msgctxt "@option:check"
@@ -506,13 +503,9 @@ msgid "Pairings"
 msgstr "Couplages"
 
 #: qml/player/PlayerPairingsPage.qml:26
-#, fuzzy
-#| msgctxt "@info:status Number of players"
-#| msgid "1 player"
-#| msgid_plural "%1 players"
 msgctxt "@action:button"
 msgid "Retire player"
-msgstr "1 joueur"
+msgstr "Enlever un joueur"
 
 #: qml/player/PlayerPairingsPage.qml:46
 msgctxt "@item:inlistbox Available to play"
@@ -576,7 +569,7 @@ msgstr[1] "Noté %1"
 #: qml/PlayersPage.qml:229
 msgctxt "@info:status Total number of players (Number of players rated)"
 msgid "%1 (%2)"
-msgstr ""
+msgstr "%1 (%2)"
 
 #: qml/ResultsFooter.qml:43
 msgctxt "@action:intoolbar"
@@ -925,17 +918,17 @@ msgstr "Rang"
 #: tournament/federations.h:118
 msgctxt "FIDE Federation"
 msgid "Chinese Taipei"
-msgstr ""
+msgstr "Taipei chinoise"
 
 #: tournament/federations.h:211
 msgctxt "FIDE Federation"
 msgid "Scotland"
-msgstr ""
+msgstr "Écosse"
 
 #: tournament/federations.h:220
 msgctxt "FIDE Federation"
 msgid "Wales"
-msgstr ""
+msgstr "Pays de Galles"
 
 #: tournament/pairingengine.cpp:29
 #, kde-format
@@ -1037,12 +1030,10 @@ msgid "Buchholz"
 msgstr "Buchholz"
 
 #: tournament/tiebreaks/buchholz.h:28
-#, fuzzy, kde-format
-#| msgctxt "Buchholz tiebreak"
-#| msgid "Buchholz"
+#, kde-format
 msgctxt "Buchholz N tiebreak, N is a number < 0"
 msgid "Buchholz %1"
-msgstr "Buchholz"
+msgstr "Buchholz %1"
 
 #: tournament/tiebreaks/numberwins.h:22 tournament/tournament.cpp:491
 #, kde-format
@@ -1051,12 +1042,10 @@ msgid "Number of Wins"
 msgstr "Nombre de victoires"
 
 #: tournament/tiebreaks/playedblack.h:22 tournament/tournament.cpp:501
-#, fuzzy, kde-format
-#| msgctxt "Number of Games Played with Black tiebreak"
-#| msgid "Number of Games Played with Black"
+#, kde-format
 msgctxt "Number of Games Played with Black (over the board) tiebreak"
 msgid "Number of Games Played with Black (over the board)"
-msgstr "Nombre de parties jouées avec les noirs"
+msgstr "Nombre de parties jouées avec les noirs (Sur le plateau)"
 
 #: tournament/tiebreaks/points.h:22 tournament/tiebreaks/points.h:27
 #: tournament/tournament.cpp:483
@@ -1066,14 +1055,12 @@ msgid "Points"
 msgstr "Points"
 
 #: tournament/tiebreaks/won.h:23 tournament/tournament.cpp:497
-#, fuzzy, kde-format
-#| msgctxt "Number of Games Won tiebreak"
-#| msgid "Number of Games Won"
+#, kde-format
 msgctxt ""
 "Number of Games Won (over the board) tiebreak. Different from the 'Number of "
 "Wins' tiebreak, which includes games won by forfeit."
 msgid "Number of Games Won (over the board)"
-msgstr "Nombre de victoires"
+msgstr "Nombre de parties gagnées (Sur le plateau)"
 
 #: tournament/tournament.cpp:924
 #, kde-format
