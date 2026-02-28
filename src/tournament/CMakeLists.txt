@@ -8,7 +8,6 @@ target_sources(tournament PRIVATE
     pairing.cpp
     pairingengine.cpp
     player.cpp
-    ratinglist.cpp
     round.cpp
     standing.cpp
     state.cpp
@@ -18,6 +17,7 @@ target_sources(tournament PRIVATE
     utils.cpp
 )
 
+add_subdirectory(ratinglists)
 add_subdirectory(tiebreaks)
 add_subdirectory(trf)
 

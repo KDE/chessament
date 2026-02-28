@@ -1,4 +1,4 @@
-// SPDX-FileCopyrightText: 2025 Manuel Alcaraz Zambrano <manuelalcarazzam@gmail.com>
+// SPDX-FileCopyrightText: 2025-2026 Manuel Alcaraz Zambrano <manuel@alcarazzam.dev>
 // SPDX-License-Identifier: GPL-3.0-or-later
 
 #include "ratinglist.h"
@@ -20,6 +20,8 @@
 #include <KZip>
 
 #include "db.h"
+#include "fidereader.h"
+#include "reader.h"
 
 using namespace Qt::StringLiterals;
 
@@ -34,7 +36,7 @@ std::expected<QSqlDatabase, QString> RatingList::getDB(const QString &connection
     QDir().mkpath(dbFolder);
 
     auto db = QSqlDatabase::addDatabase(u"QSQLITE"_s, connectionName);
-    db.setDatabaseName(dbFolder + "/rating-lists.db"_L1);
+    db.setDatabaseName(dbFolder + "/ratinglists.db"_L1);
 
     if (!db.open()) {
         return std::unexpected(db.lastError().text());
@@ -127,7 +129,7 @@ QCoro::Task<std::expected<void, QString>> RatingList::import(const QString &name
     QNetworkAccessManager manager;
 
     QNetworkRequest request{url};
-    const QString userAgent = "Chessament/"_L1 + QCoreApplication::applicationVersion() + " (https://apps.kde.org/chessament/)"_L1;
+    const QString userAgent = "Chessament/"_L1 + QCoreApplication::applicationVersion() + " (+https://apps.kde.org/chessament/)"_L1;
     request.setHeader(QNetworkRequest::UserAgentHeader, userAgent);
 
     Q_EMIT statusChanged(i18nc("@info:progress", "Downloading file"));
@@ -149,63 +151,57 @@ QCoro::Task<std::expected<void, QString>> RatingList::import(const QString &name
         co_return std::unexpected(i18nc("@info", "Couldn't download rating list: %1", reply->errorString()));
     }
 
-    auto result = reply->readAll();
-
     m_etag = QString::fromLatin1(reply->headers().value(QHttpHeaders::WellKnownHeader::ETag));
     m_lastModified = QString::fromLatin1(reply->headers().value(QHttpHeaders::WellKnownHeader::LastModified));
 
-    QBuffer buffer(&result);
-    auto zip = KZip(&buffer);
-    if (!zip.open(QIODevice::ReadOnly)) {
-        qWarning() << zip.errorString();
-        co_return std::unexpected(i18nc("@info", "Couldn't extract file."));
-    }
-
-    const auto directory = zip.directory();
-    if (directory->entries().size() != 1) {
-        co_return std::unexpected(i18nc("@info", "File format not supported."));
-    }
-
-    const auto archiveFile = directory->file(directory->entries().constFirst());
-    const auto device = archiveFile->createDevice();
-
-    QTextStream stream(device);
-
-    const auto ok = co_await QtConcurrent::run([this, &stream]() {
-        return readPlayers(&stream);
+    const auto result = reply->readAll();
+    const auto count = co_await QtConcurrent::run([this, &result]() -> std::expected<uint, QString> {
+        return processFile(result);
     });
 
     QSqlDatabase::removeDatabase(RATING_LISTS_DB_CONNECTION_NAME);
     reply->deleteLater();
-    device->deleteLater();
 
-    if (!ok) {
-        co_return std::unexpected(ok.error());
+    if (!count) {
+        co_return std::unexpected(count.error());
     }
 
-    Q_EMIT statusChanged(i18ncp("@info:progress", "Imported one player.", "Imported %1 players.", *ok));
+    Q_EMIT statusChanged(i18ncp("@info:progress", "Imported one player.", "Imported %1 players.", *count));
 
     co_return {};
 }
 
-std::expected<int, QString> RatingList::readPlayers(QTextStream *stream)
+std::expected<uint, QString> RatingList::processFile(QByteArray content)
+{
+    QBuffer buffer(&content);
+    auto zip = KZip(&buffer);
+    if (!zip.open(QIODevice::ReadOnly)) {
+        qWarning() << zip.errorString();
+        return std::unexpected(i18nc("@info", "Couldn't extract file."));
+    }
+
+    const auto directory = zip.directory();
+    if (directory->entries().size() != 1) {
+        return std::unexpected(i18nc("@info", "File format not supported."));
+    }
+
+    const auto archiveFile = directory->file(directory->entries().constFirst());
+    const auto device = archiveFile->createDevice();
+    device->deleteLater();
+
+    QTextStream stream(device);
+
+    const auto count = readPlayers(&stream);
+    if (!count) {
+        return std::unexpected(count.error());
+    }
+
+    return *count;
+}
+
+std::expected<uint, QString> RatingList::readPlayers(QTextStream *stream)
 {
     QString line;
-    int count = 0;
-
-    QVariantList lists;
-    QVariantList names;
-    QVariantList ids;
-    QVariantList federations;
-    QVariantList genders;
-    QVariantList titles;
-    QVariantList birthdates;
-    QVariantList stdRatings;
-    QVariantList rpdRatings;
-    QVariantList btzRatings;
-    QVariantList extras;
-
-    stream->readLine(); // Skip header
 
     auto db = getDB();
     if (!db) {
@@ -230,139 +226,12 @@ std::expected<int, QString> RatingList::readPlayers(QTextStream *stream)
 
     m_id = query.lastInsertId().toInt();
 
-    auto addPlayers = [&db, &lists, &names, &ids, &federations, &genders, &titles, &birthdates, &stdRatings, &rpdRatings, &btzRatings, &extras]()
-        -> std::expected<void, QString> {
-        QSqlQuery query(*db);
-        query.prepare(ADD_RATING_LIST_PLAYER_QUERY);
-        query.addBindValue(lists);
-        query.addBindValue(names);
-        query.addBindValue(ids);
-        query.addBindValue(federations);
-        query.addBindValue(genders);
-        query.addBindValue(titles);
-        query.addBindValue(birthdates);
-        query.addBindValue(stdRatings);
-        query.addBindValue(rpdRatings);
-        query.addBindValue(btzRatings);
-        query.addBindValue(extras);
+    std::unique_ptr<RatingListReader> reader;
+    reader = std::make_unique<FideRatingListReader>(this);
 
-        if (!query.execBatch()) {
-            qWarning() << "create players" << query.lastError().text();
-            return std::unexpected(query.lastError().text());
-        }
-
-        lists.clear();
-        names.clear();
-        ids.clear();
-        federations.clear();
-        genders.clear();
-        titles.clear();
-        birthdates.clear();
-        stdRatings.clear();
-        rpdRatings.clear();
-        btzRatings.clear();
-        extras.clear();
-
-        return {};
-    };
-
-    while (stream->readLineInto(&line)) {
-        if (line.size() < 162) {
-            continue;
-        }
-
-        bool ok;
-
-        const int playerId = line.sliced(0, 15).toInt(&ok);
-        if (!ok) {
-            qWarning() << "invalid player id of player" << line;
-            continue;
-        }
-
-        const QString name = line.sliced(15, 61).trimmed();
-        const QString federation = line.sliced(76, 3);
-        const QString gender = line.sliced(80, 3).trimmed();
-        const QString title = line.sliced(84, 4).trimmed();
-        const auto standardRating = line.sliced(113, 4).toUInt(&ok);
-        if (!ok) {
-            qWarning() << "invalid standard rating of player" << line;
-            continue;
-        }
-
-        const auto rapidRating = line.sliced(126, 4).toUInt(&ok);
-        if (!ok) {
-            qWarning() << "invalid rapid rating of player" << line;
-            continue;
-        }
-
-        const auto blitzRating = line.sliced(139, 4).toUInt(&ok);
-        if (!ok) {
-            qWarning() << "invalid blitz rating of player" << line;
-            continue;
-        }
-
-        const auto otherTitles = line.sliced(94, 15).trimmed().split(u',', Qt::SkipEmptyParts);
-
-        const auto sk = line.sliced(123, 2).toInt(&ok);
-        if (!ok) {
-            continue;
-        }
-
-        const auto rk = line.sliced(136, 2).toInt(&ok);
-        if (!ok) {
-            continue;
-        }
-
-        const auto bk = line.sliced(149, 2).toInt(&ok);
-        if (!ok) {
-            continue;
-        }
-
-        QJsonObject extraJson;
-        if (sk != 0) {
-            extraJson["sk"_L1] = sk;
-        }
-        if (rk != 0) {
-            extraJson["rk"_L1] = rk;
-        }
-        if (bk != 0) {
-            extraJson["bk"_L1] = bk;
-        }
-        if (!otherTitles.empty()) {
-            extraJson["other_titles"_L1] = QJsonValue::fromVariant(otherTitles);
-        }
-        const auto extra = QJsonDocument{extraJson}.toJson(QJsonDocument::Compact);
-
-        const auto birthdate = line.sliced(152, 4).toInt(&ok);
-        if (!ok) {
-            continue;
-        }
-
-        lists << m_id;
-        names << name;
-        ids << playerId;
-        federations << federation;
-        genders << gender;
-        titles << title;
-        birthdates << birthdate;
-        stdRatings << standardRating;
-        rpdRatings << rapidRating;
-        btzRatings << blitzRating;
-        extras << extra;
-
-        ++count;
-
-        if (count % 100 == 0) {
-            if (const auto ok = addPlayers(); !ok) {
-                return std::unexpected(ok.error());
-            }
-
-            Q_EMIT statusChanged(i18ncp("@info:progress", "Saved 1 player.", "Saved %1 players.", count));
-        }
-    }
-
-    if (const auto ok = addPlayers(); !ok) {
-        return std::unexpected(ok.error());
+    const auto count = reader->readPlayers(stream);
+    if (!count) {
+        return std::unexpected(count.error());
     }
 
     if (!db->commit()) {
@@ -371,7 +240,7 @@ std::expected<int, QString> RatingList::readPlayers(QTextStream *stream)
 
     db->close();
 
-    return count;
+    return *count;
 }
 
 void RatingList::remove(int id)
@@ -396,3 +265,73 @@ void RatingList::remove(int id)
 
     QSqlDatabase::removeDatabase(RATING_LISTS_DB_CONNECTION_NAME);
 }
+
+std::expected<void, QString> RatingList::savePlayers(const QList<RatingList::Player> &players)
+{
+    QVariantList lists;
+    QVariantList names;
+    QVariantList ids;
+    QVariantList federations;
+    QVariantList genders;
+    QVariantList titles;
+    QVariantList birthdates;
+    QVariantList stdRatings;
+    QVariantList rpdRatings;
+    QVariantList btzRatings;
+    QVariantList nationalIds;
+    QVariantList nationalRatings;
+    QVariantList extras;
+
+    auto db = RatingList::getDB();
+    if (!db) {
+        return std::unexpected(db.error());
+    }
+
+    for (const auto &player : players) {
+        lists << m_id;
+        names << player.name;
+        ids << player.id;
+        federations << player.federation;
+        genders << player.gender;
+        titles << player.title;
+        birthdates << player.birthDate;
+        stdRatings << player.standardRating;
+        rpdRatings << player.rapidRating;
+        btzRatings << player.blitzRating;
+        nationalIds << player.nationalId;
+        nationalRatings << player.nationalRating;
+
+        const auto extra = QJsonDocument{player.extra}.toJson(QJsonDocument::Compact);
+
+        extras << extra;
+    }
+
+    QSqlQuery query(*db);
+    query.prepare(ADD_RATING_LIST_PLAYER_QUERY);
+    query.addBindValue(lists);
+    query.addBindValue(names);
+    query.addBindValue(ids);
+    query.addBindValue(federations);
+    query.addBindValue(genders);
+    query.addBindValue(titles);
+    query.addBindValue(birthdates);
+    query.addBindValue(stdRatings);
+    query.addBindValue(rpdRatings);
+    query.addBindValue(btzRatings);
+    query.addBindValue(nationalIds);
+    query.addBindValue(nationalRatings);
+    query.addBindValue(extras);
+
+    if (!query.execBatch()) {
+        qWarning() << "create players" << query.lastError().text();
+        return std::unexpected(query.lastError().text());
+    }
+
+    m_playerCount += players.size();
+
+    Q_EMIT statusChanged(i18ncp("@info:progress", "Saved 1 player.", "Saved %1 players.", m_playerCount));
+
+    return {};
+}
+
+#include "moc_ratinglist.cpp"

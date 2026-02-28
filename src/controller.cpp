@@ -4,7 +4,7 @@
 #include "controller.h"
 #include "standing.h"
 #include "tournament/pairing.h"
-#include "tournament/ratinglist.h"
+#include "tournament/ratinglists/ratinglist.h"
 #include "tournament/state.h"
 
 #include <QCoroFuture>

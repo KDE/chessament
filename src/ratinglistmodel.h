@@ -1,4 +1,4 @@
-// SPDX-FileCopyrightText: 2025 Manuel Alcaraz Zambrano <manuelalcarazzam@gmail.com>
+// SPDX-FileCopyrightText: 2025 Manuel Alcaraz Zambrano <manuel@alcarazzam.dev>
 // SPDX-License-Identifier: GPL-3.0-or-later
 
 #pragma once
@@ -7,7 +7,7 @@
 #include <QCoroQmlTask>
 #include <qqmlregistration.h>
 
-#include "tournament/ratinglist.h"
+#include "tournament/ratinglists/ratinglist.h"
 
 class RatingListModel : public QAbstractListModel
 {
