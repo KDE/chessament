@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-09 00:40+0000\n"
+"POT-Creation-Date: 2026-03-01 00:42+0000\n"
 "PO-Revision-Date: 2026-02-12 08:12+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -973,37 +973,25 @@ msgstr "الإقران ”%1“ غير صالح."
 msgid "Invalid player \"%1\" on pairing \"%2\"."
 msgstr "اللاعب ”%1“ غير صالح على الإقران ”%2“."
 
-#: tournament/ratinglist.cpp:133
+#: tournament/ratinglists/ratinglist.cpp:135
 #, kde-format
 msgctxt "@info:progress"
 msgid "Downloading file"
 msgstr "ينزل ملف"
 
-#: tournament/ratinglist.cpp:143
+#: tournament/ratinglists/ratinglist.cpp:145
 #, kde-format
 msgctxt "@info:progress"
 msgid "Downloading file (%1 %)"
 msgstr "ينزل ملف (%1 ٪)"
 
-#: tournament/ratinglist.cpp:149
+#: tournament/ratinglists/ratinglist.cpp:151
 #, kde-format
 msgctxt "@info"
 msgid "Couldn't download rating list: %1"
 msgstr "تعذر تنزيل قائمة التقييم: %1"
 
-#: tournament/ratinglist.cpp:161
-#, kde-format
-msgctxt "@info"
-msgid "Couldn't extract file."
-msgstr "لا يمكن فك الملف."
-
-#: tournament/ratinglist.cpp:166
-#, kde-format
-msgctxt "@info"
-msgid "File format not supported."
-msgstr "صيغة الملف غير متاحة."
-
-#: tournament/ratinglist.cpp:186
+#: tournament/ratinglists/ratinglist.cpp:169
 #, kde-format
 msgctxt "@info:progress"
 msgid "Imported one player."
@@ -1015,7 +1003,19 @@ msgstr[3] "استُورد %1 لاعبين."
 msgstr[4] "استُورد %1 لاعبًا."
 msgstr[5] "استُورد %1 لاعب."
 
-#: tournament/ratinglist.cpp:360
+#: tournament/ratinglists/ratinglist.cpp:180
+#, kde-format
+msgctxt "@info"
+msgid "Couldn't extract file."
+msgstr "لا يمكن فك الملف."
+
+#: tournament/ratinglists/ratinglist.cpp:185
+#, kde-format
+msgctxt "@info"
+msgid "File format not supported."
+msgstr "صيغة الملف غير متاحة."
+
+#: tournament/ratinglists/ratinglist.cpp:332
 #, kde-format
 msgctxt "@info:progress"
 msgid "Saved 1 player."

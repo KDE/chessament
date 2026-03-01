@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-09 00:40+0000\n"
+"POT-Creation-Date: 2026-03-01 00:42+0000\n"
 "PO-Revision-Date: 2026-02-09 07:54+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -969,37 +969,25 @@ msgstr "Некоректний розподіл на пари «%1»."
 msgid "Invalid player \"%1\" on pairing \"%2\"."
 msgstr "Некоректний гравець «%1» у поділі на пари «%2»."
 
-#: tournament/ratinglist.cpp:133
+#: tournament/ratinglists/ratinglist.cpp:135
 #, kde-format
 msgctxt "@info:progress"
 msgid "Downloading file"
 msgstr "Отримання файла"
 
-#: tournament/ratinglist.cpp:143
+#: tournament/ratinglists/ratinglist.cpp:145
 #, kde-format
 msgctxt "@info:progress"
 msgid "Downloading file (%1 %)"
 msgstr "Отримання файла (%1 %)"
 
-#: tournament/ratinglist.cpp:149
+#: tournament/ratinglists/ratinglist.cpp:151
 #, kde-format
 msgctxt "@info"
 msgid "Couldn't download rating list: %1"
 msgstr "Не вдалося отримати рейтинговий список: %1"
 
-#: tournament/ratinglist.cpp:161
-#, kde-format
-msgctxt "@info"
-msgid "Couldn't extract file."
-msgstr "Не вдалося видобути файл."
-
-#: tournament/ratinglist.cpp:166
-#, kde-format
-msgctxt "@info"
-msgid "File format not supported."
-msgstr "Підтримки формату файлів не передбачено."
-
-#: tournament/ratinglist.cpp:186
+#: tournament/ratinglists/ratinglist.cpp:169
 #, kde-format
 msgctxt "@info:progress"
 msgid "Imported one player."
@@ -1009,7 +997,19 @@ msgstr[1] "Імпортовано дані %1 гравців."
 msgstr[2] "Імпортовано дані %1 гравців."
 msgstr[3] "Імпортовано дані гравця."
 
-#: tournament/ratinglist.cpp:360
+#: tournament/ratinglists/ratinglist.cpp:180
+#, kde-format
+msgctxt "@info"
+msgid "Couldn't extract file."
+msgstr "Не вдалося видобути файл."
+
+#: tournament/ratinglists/ratinglist.cpp:185
+#, kde-format
+msgctxt "@info"
+msgid "File format not supported."
+msgstr "Підтримки формату файлів не передбачено."
+
+#: tournament/ratinglists/ratinglist.cpp:332
 #, kde-format
 msgctxt "@info:progress"
 msgid "Saved 1 player."

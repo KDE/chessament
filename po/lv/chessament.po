@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-09 00:40+0000\n"
+"POT-Creation-Date: 2026-03-01 00:42+0000\n"
 "PO-Revision-Date: 2025-11-09 11:05+0200\n"
 "Last-Translator: Toms Trasūns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -1003,38 +1003,25 @@ msgstr "Nederīgs pāris „%1“."
 msgid "Invalid player \"%1\" on pairing \"%2\"."
 msgstr "Nederīgs spēlētājs „%1“ pāra izveidošanai „%2“."
 
-#: tournament/ratinglist.cpp:133
+#: tournament/ratinglists/ratinglist.cpp:135
 #, kde-format
 msgctxt "@info:progress"
 msgid "Downloading file"
 msgstr ""
 
-#: tournament/ratinglist.cpp:143
+#: tournament/ratinglists/ratinglist.cpp:145
 #, kde-format
 msgctxt "@info:progress"
 msgid "Downloading file (%1 %)"
 msgstr ""
 
-#: tournament/ratinglist.cpp:149
+#: tournament/ratinglists/ratinglist.cpp:151
 #, kde-format
 msgctxt "@info"
 msgid "Couldn't download rating list: %1"
 msgstr ""
 
-#: tournament/ratinglist.cpp:161
-#, fuzzy, kde-format
-#| msgid "Couldn't open file"
-msgctxt "@info"
-msgid "Couldn't extract file."
-msgstr "Datni atvērt neizdevās"
-
-#: tournament/ratinglist.cpp:166
-#, kde-format
-msgctxt "@info"
-msgid "File format not supported."
-msgstr ""
-
-#: tournament/ratinglist.cpp:186
+#: tournament/ratinglists/ratinglist.cpp:169
 #, fuzzy, kde-format
 #| msgctxt "@option:check"
 #| msgid "Sort players"
@@ -1045,7 +1032,20 @@ msgstr[0] "Kārtot spēlētājus"
 msgstr[1] "Kārtot spēlētājus"
 msgstr[2] "Kārtot spēlētājus"
 
-#: tournament/ratinglist.cpp:360
+#: tournament/ratinglists/ratinglist.cpp:180
+#, fuzzy, kde-format
+#| msgid "Couldn't open file"
+msgctxt "@info"
+msgid "Couldn't extract file."
+msgstr "Datni atvērt neizdevās"
+
+#: tournament/ratinglists/ratinglist.cpp:185
+#, kde-format
+msgctxt "@info"
+msgid "File format not supported."
+msgstr ""
+
+#: tournament/ratinglists/ratinglist.cpp:332
 #, fuzzy, kde-format
 #| msgctxt "@info:status Number of players"
 #| msgid "1 player"
