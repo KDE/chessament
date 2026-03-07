@@ -7,10 +7,12 @@
 
 #include <QCoroTask>
 #include <QJsonObject>
+#include <QMimeType>
 #include <QUrl>
 #include <qqmlregistration.h>
 
 class QSqlDatabase;
+class RatingListReader;
 
 using namespace Qt::StringLiterals;
 
@@ -95,8 +97,8 @@ Q_SIGNALS:
 private:
     static std::expected<QSqlDatabase, QString> getDB(const QString &connectionName = RATING_LISTS_DB_CONNECTION_NAME);
 
-    std::expected<uint, QString> processFile(QByteArray content);
-    std::expected<uint, QString> readPlayers(QTextStream *stream);
+    std::expected<uint, QString> processFile(QByteArray content, const QMimeType &mime);
+    std::expected<uint, QString> readPlayers(QTextStream *stream, std::unique_ptr<RatingListReader> reader);
 
     int m_id;
     QString m_name;

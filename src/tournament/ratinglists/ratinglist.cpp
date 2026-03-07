@@ -21,6 +21,7 @@
 
 #include "db.h"
 #include "fidereader.h"
+#include "htmlreader.h"
 #include "reader.h"
 
 using namespace Qt::StringLiterals;
@@ -151,12 +152,16 @@ QCoro::Task<std::expected<void, QString>> RatingList::import(const QString &name
         co_return std::unexpected(i18nc("@info", "Couldn't download rating list: %1", reply->errorString()));
     }
 
+    const auto contentType = QString::fromLatin1(reply->headers().value(QHttpHeaders::WellKnownHeader::ContentType));
+    QMimeDatabase mimeDb{};
+    const auto mimeType = mimeDb.mimeTypeForName(contentType);
+
     m_etag = QString::fromLatin1(reply->headers().value(QHttpHeaders::WellKnownHeader::ETag));
     m_lastModified = QString::fromLatin1(reply->headers().value(QHttpHeaders::WellKnownHeader::LastModified));
 
     const auto result = reply->readAll();
-    const auto count = co_await QtConcurrent::run([this, &result]() -> std::expected<uint, QString> {
-        return processFile(result);
+    const auto count = co_await QtConcurrent::run([this, &result, mimeType]() -> std::expected<uint, QString> {
+        return processFile(result, mimeType);
     });
 
     QSqlDatabase::removeDatabase(RATING_LISTS_DB_CONNECTION_NAME);
@@ -171,27 +176,41 @@ QCoro::Task<std::expected<void, QString>> RatingList::import(const QString &name
     co_return {};
 }
 
-std::expected<uint, QString> RatingList::processFile(QByteArray content)
+std::expected<uint, QString> RatingList::processFile(QByteArray content, const QMimeType &mime)
 {
+    std::expected<uint, QString> count;
+
     QBuffer buffer(&content);
-    auto zip = KZip(&buffer);
-    if (!zip.open(QIODevice::ReadOnly)) {
-        qWarning() << zip.errorString();
-        return std::unexpected(i18nc("@info", "Couldn't extract file."));
+    std::unique_ptr<RatingListReader> reader;
+
+    if (mime.inherits(u"application/zip"_s)) {
+        auto zip = KZip(&buffer);
+        if (!zip.open(QIODevice::ReadOnly)) {
+            qWarning() << zip.errorString();
+            return std::unexpected(i18nc("@info", "Couldn't extract file."));
+        }
+
+        const auto directory = zip.directory();
+        if (directory->entries().size() != 1) {
+            return std::unexpected(i18nc("@info", "File format not supported."));
+        }
+
+        const auto archiveFile = directory->file(directory->entries().constFirst());
+        const auto device = archiveFile->createDevice();
+        QTextStream stream{device};
+        stream.setDevice(device);
+        device->deleteLater();
+
+        reader = std::make_unique<FideRatingListReader>(this);
+        count = readPlayers(&stream, std::move(reader));
+    } else if (mime.inherits(u"application/vnd.ms-excel"_s)) {
+        buffer.open(QBuffer::ReadOnly);
+        QTextStream stream{&buffer};
+
+        reader = std::make_unique<HtmlRatingListReader>(this);
+        count = readPlayers(&stream, std::move(reader));
     }
 
-    const auto directory = zip.directory();
-    if (directory->entries().size() != 1) {
-        return std::unexpected(i18nc("@info", "File format not supported."));
-    }
-
-    const auto archiveFile = directory->file(directory->entries().constFirst());
-    const auto device = archiveFile->createDevice();
-    device->deleteLater();
-
-    QTextStream stream(device);
-
-    const auto count = readPlayers(&stream);
     if (!count) {
         return std::unexpected(count.error());
     }
@@ -199,7 +218,7 @@ std::expected<uint, QString> RatingList::processFile(QByteArray content)
     return *count;
 }
 
-std::expected<uint, QString> RatingList::readPlayers(QTextStream *stream)
+std::expected<uint, QString> RatingList::readPlayers(QTextStream *stream, std::unique_ptr<RatingListReader> reader)
 {
     QString line;
 
@@ -225,9 +244,6 @@ std::expected<uint, QString> RatingList::readPlayers(QTextStream *stream)
     }
 
     m_id = query.lastInsertId().toInt();
-
-    std::unique_ptr<RatingListReader> reader;
-    reader = std::make_unique<FideRatingListReader>(this);
 
     const auto count = reader->readPlayers(stream);
     if (!count) {

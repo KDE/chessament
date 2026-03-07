@@ -6,5 +6,6 @@ target_sources(tournament PRIVATE
 
     reader.cpp
     fidereader.cpp
+    htmlreader.cpp
 )
 
