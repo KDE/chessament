@@ -49,12 +49,22 @@ public:
     void setColumns(const QList<int> &columns);
     void setTournament(Tournament *tournament);
     void setPlayers(const QList<Player *> &players);
-    void addPlayer(Player *player);
+    Q_INVOKABLE void addPlayer(const QString &title,
+                               const QString &name,
+                               int rating,
+                               int nationalRating,
+                               const QString &playerId,
+                               const QString &birthDate,
+                               const QString &federation,
+                               const QString &origin,
+                               const QString &sex);
     void updatePlayer(Player *player);
     void reloadPlayers();
 
 Q_SIGNALS:
     void playerChanged(Player *player, Columns field);
+
+    void errorOcurred(const QString &error);
 
 private:
     Tournament *m_tournament;

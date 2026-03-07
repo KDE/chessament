@@ -49,15 +49,6 @@ public:
     [[nodiscard]] bool areStandingsValid() const;
 
     void setEvent(std::unique_ptr<Event> event);
-    Q_INVOKABLE void addPlayer(const QString &title,
-                               const QString &name,
-                               int rating,
-                               int nationalRating,
-                               const QString &playerId,
-                               const QString &birthDate,
-                               const QString &federation,
-                               const QString &origin,
-                               const QString &sex);
     Q_INVOKABLE void sortPlayers();
     Q_INVOKABLE bool setResult(int board, Qt::Key key);
     Q_INVOKABLE bool setResult(int board, Pairing::PartialResult whiteResult, Pairing::PartialResult blackResult);

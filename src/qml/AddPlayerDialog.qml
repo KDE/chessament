@@ -9,10 +9,10 @@ import org.kde.ki18n
 import org.kde.kirigami as Kirigami
 import org.kde.kirigamiaddons.formcard as FormCard
 
-import org.kde.chessament
-
 QQC2.Dialog {
     id: root
+
+    signal addPlayer(title: string, name: string, rating: int, nationalRating: int, playerId: string, birthDate: string, federation: string, origin: string, gender: string)
 
     title: KI18n.i18nc("@title:window", "Add player")
     standardButtons: Kirigami.Dialog.Cancel | Kirigami.Dialog.Ok
@@ -27,7 +27,7 @@ QQC2.Dialog {
     bottomPadding: 0
 
     onAccepted: {
-        Controller.addPlayer(titleField.currentText, nameField.text, ratingField.value, nationalRatingField.value, playerIdField.text, birthDateField.text, federationField.text, originField.text, sexField.text);
+        root.addPlayer(titleField.currentText, nameField.text, ratingField.value, nationalRatingField.value, playerIdField.text, birthDateField.text, federationField.text, originField.text, sexField.text);
     }
 
     header: Kirigami.DialogHeader {

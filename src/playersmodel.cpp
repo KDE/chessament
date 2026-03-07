@@ -235,10 +235,26 @@ void PlayersModel::setPlayers(const QList<Player *> &players)
     endResetModel();
 }
 
-void PlayersModel::addPlayer(Player *player)
+void PlayersModel::addPlayer(const QString &title,
+                             const QString &name,
+                             int rating,
+                             int nationalRating,
+                             const QString &playerId,
+                             const QString &birthDate,
+                             const QString &federation,
+                             const QString &origin,
+                             const QString &sex)
 {
+    auto startingRank = m_tournament->numberOfPlayers() + 1;
+    auto player = std::make_unique<Player>(startingRank, title, name, rating, nationalRating, playerId, birthDate, federation, origin, sex);
+
+    if (auto ok = m_tournament->addPlayer(std::move(player)); !ok) {
+        Q_EMIT errorOcurred(ok.error());
+        return;
+    }
+
     beginInsertRows({}, static_cast<int>(m_players.size()), static_cast<int>(m_players.size()));
-    m_players << player;
+    m_players << m_tournament->players().last();
     endInsertRows();
 }
 

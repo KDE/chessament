@@ -26,6 +26,10 @@ TablePage {
 
     AddPlayerDialog {
         id: addPlayerDialog
+
+        onAddPlayer: function (title: string, name: string, rating: int, nationalRating: int, playerId: string, birthDate: string, federation: string, origin: string, gender: string): void {
+            Controller.playersModel.addPlayer(title, name, rating, nationalRating, playerId, birthDate, federation, origin, gender);
+        }
     }
 
     Dialogs.FileDialog {
@@ -50,6 +54,14 @@ TablePage {
 
         function onEventChanged(): void {
             root.tableView.selectionModel.clear();
+        }
+    }
+
+    Connections {
+        target: Controller.playersModel
+
+        function onErrorOcurred(error: string): void {
+            Controller.setError(error);
         }
     }
 

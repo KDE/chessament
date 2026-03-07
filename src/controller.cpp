@@ -222,27 +222,6 @@ QCoro::Task<> Controller::updateStandings(int maxRound)
     setAreStandingsValid(true);
 }
 
-void Controller::addPlayer(const QString &title,
-                           const QString &name,
-                           int rating,
-                           int nationalRating,
-                           const QString &playerId,
-                           const QString &birthDate,
-                           const QString &federation,
-                           const QString &origin,
-                           const QString &sex)
-{
-    auto startingRank = m_tournament->numberOfPlayers() + 1;
-    auto player = std::make_unique<Player>(startingRank, title, name, rating, nationalRating, playerId, birthDate, federation, origin, sex);
-
-    if (auto ok = m_tournament->addPlayer(std::move(player)); !ok) {
-        setError(ok.error());
-        return;
-    }
-
-    m_playersModel->addPlayer(m_tournament->players().last());
-}
-
 void Controller::sortPlayers()
 {
     m_tournament->sortPlayers();
