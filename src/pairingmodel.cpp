@@ -3,6 +3,8 @@
 
 #include "pairingmodel.h"
 
+#include "tournament.h"
+
 #include <KLocalizedString>
 
 PairingModel::PairingModel(QObject *parent)
@@ -113,6 +115,11 @@ void PairingModel::setColumns(const QList<int> &columns)
     m_columns = columns;
 }
 
+void PairingModel::setTournament(Tournament *tournament)
+{
+    m_tournament = tournament;
+}
+
 void PairingModel::setPairings(const QList<Pairing *> &pairings)
 {
     auto rowDiff = static_cast<long int>(pairings.size() - m_pairings.size());
@@ -134,9 +141,43 @@ void PairingModel::setPairings(const QList<Pairing *> &pairings)
     Q_EMIT dataChanged(index(0, 0), index(rowCount() - 1, columnCount() - 1), {});
 }
 
-void PairingModel::updatePairing(int board)
+bool PairingModel::setResult(int board, Qt::Key key)
 {
+    Pairing::Result result;
+
+    switch (key) {
+    case Qt::Key_0:
+        result = {Pairing::PartialResult::Lost, Pairing::PartialResult::Win};
+        break;
+    case Qt::Key_1:
+        result = {Pairing::PartialResult::Win, Pairing::PartialResult::Lost};
+        break;
+    case Qt::Key_5:
+        result = {Pairing::PartialResult::Draw, Pairing::PartialResult::Draw};
+        break;
+    default:
+        // Enter key changes to the next pairing
+        return key == Qt::Key_Enter;
+    }
+
+    return setResult(board, result.first, result.second);
+}
+
+bool PairingModel::setResult(int board, Pairing::PartialResult whiteResult, Pairing::PartialResult blackResult)
+{
+    auto pairing = m_pairings[board - 1];
+
+    Pairing::Result result = {whiteResult, blackResult};
+
+    if (auto ok = m_tournament->setResult(pairing, result); !ok) {
+        Q_EMIT errorOcurred(ok.error());
+        return false;
+    }
+
     Q_EMIT dataChanged(index(board - 1, 0), index(board - 1, columnCount() - 1), {});
+    Q_EMIT pairingChanged();
+
+    return true;
 }
 
 Pairing *PairingModel::pairing(int board)

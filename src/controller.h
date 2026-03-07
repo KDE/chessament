@@ -50,8 +50,6 @@ public:
 
     void setEvent(std::unique_ptr<Event> event);
     Q_INVOKABLE void sortPlayers();
-    Q_INVOKABLE bool setResult(int board, Qt::Key key);
-    Q_INVOKABLE bool setResult(int board, Pairing::PartialResult whiteResult, Pairing::PartialResult blackResult);
     Q_INVOKABLE void newTournament(const QUrl &fileUrl, const QString &name, int numberOfRounds);
     Q_INVOKABLE void openEvent(const QUrl &fileUrl);
     Q_INVOKABLE void saveEventAs(const QUrl &fileUrl);

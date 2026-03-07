@@ -27,6 +27,11 @@ Controller::Controller(QObject *parent)
             m_tournament->savePlayer(player);
         }
     });
+
+    connect(m_pairingModel, &PairingModel::pairingChanged, this, [this]() {
+        setAreStandingsValid(false);
+        Q_EMIT hasCurrentRoundFinishedChanged();
+    });
 }
 
 Event *Controller::getEvent() const
@@ -57,6 +62,7 @@ void Controller::setTournament(Tournament *tournament)
 
     m_playersModel->setTournament(m_tournament);
     m_playersModel->setPlayers(m_tournament->players());
+    m_pairingModel->setTournament(m_tournament);
     m_pairingModel->setPairings(m_tournament->pairings(1));
     m_standingsModel->setTournament(m_tournament);
 
@@ -226,47 +232,6 @@ void Controller::sortPlayers()
 {
     m_tournament->sortPlayers();
     m_playersModel->reloadPlayers();
-}
-
-bool Controller::setResult(int board, Qt::Key key)
-{
-    Pairing::Result result;
-
-    switch (key) {
-    case Qt::Key_0:
-        result = {Pairing::PartialResult::Lost, Pairing::PartialResult::Win};
-        break;
-    case Qt::Key_1:
-        result = {Pairing::PartialResult::Win, Pairing::PartialResult::Lost};
-        break;
-    case Qt::Key_5:
-        result = {Pairing::PartialResult::Draw, Pairing::PartialResult::Draw};
-        break;
-    default:
-        // Enter key changes to the next pairing
-        return key == Qt::Key_Enter;
-    }
-
-    return setResult(board, result.first, result.second);
-}
-
-bool Controller::setResult(int board, Pairing::PartialResult whiteResult, Pairing::PartialResult blackResult)
-{
-    auto pairing = m_tournament->pairing(m_currentRound, board);
-
-    Pairing::Result result = {whiteResult, blackResult};
-
-    if (auto ok = m_tournament->setResult(pairing, result); !ok) {
-        setError(ok.error());
-        return false;
-    }
-
-    m_pairingModel->updatePairing(board);
-
-    setAreStandingsValid(false);
-    Q_EMIT hasCurrentRoundFinishedChanged();
-
-    return true;
 }
 
 void Controller::newTournament(const QUrl &fileUrl, const QString &name, int numberOfRounds)

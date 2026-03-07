@@ -3,9 +3,11 @@
 
 #pragma once
 
+#include "tournament/pairing.h"
+
 #include <QAbstractTableModel>
 
-#include "tournament/pairing.h"
+class Tournament;
 
 class PairingModel : public QAbstractTableModel
 {
@@ -38,11 +40,19 @@ public:
     [[nodiscard]] QHash<int, QByteArray> roleNames() const override;
 
     void setColumns(const QList<int> &columns);
+    void setTournament(Tournament *tournament);
     void setPairings(const QList<Pairing *> &pairings);
-    Q_INVOKABLE void updatePairing(int board);
+    Q_INVOKABLE bool setResult(int board, Qt::Key key);
+    Q_INVOKABLE bool setResult(int board, Pairing::PartialResult whiteResult, Pairing::PartialResult blackResult);
     Q_INVOKABLE Pairing *pairing(int board);
 
+Q_SIGNALS:
+    void pairingChanged();
+
+    void errorOcurred(const QString &error);
+
 private:
+    Tournament *m_tournament;
     QList<Pairing *> m_pairings;
 
     QList<int> m_columns = {Board, WhiteStartingRank, WhiteName, Result, BlackName, BlackStartingRank};

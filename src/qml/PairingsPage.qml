@@ -127,7 +127,7 @@ TablePage {
         }
 
         onSaveResult: (pairing, whiteResult, blackResult) => {
-            if (Controller.setResult(pairing.board, whiteResult, blackResult)) {
+            if (Controller.pairingModel.setResult(pairing.board, whiteResult, blackResult)) {
                 root.selectNextBoard();
             }
         }
@@ -169,7 +169,7 @@ TablePage {
             }
 
             const board = index.row + 1;
-            if (board && Controller.setResult(board, event.key)) {
+            if (board && Controller.pairingModel.setResult(board, event.key)) {
                 event.accepted = true;
                 root.selectNextBoard();
             }
