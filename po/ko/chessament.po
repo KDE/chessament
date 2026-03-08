@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-01 00:42+0000\n"
+"POT-Creation-Date: 2026-03-08 00:40+0000\n"
 "PO-Revision-Date: 2025-07-21 00:46+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -41,7 +41,7 @@ msgctxt "@action:inmenu"
 msgid "Export tournament report…"
 msgstr "토너먼트 보고서 내보내기…"
 
-#: controller.cpp:155
+#: controller.cpp:161
 #, kde-format
 msgid "Couldn't export tournament."
 msgstr ""
@@ -137,7 +137,7 @@ msgctxt "Command line option description"
 msgid "Import Tournament Report File."
 msgstr "토너먼트 보고서 가져오기…"
 
-#: pairingmodel.cpp:95
+#: pairingmodel.cpp:97
 #, fuzzy, kde-format
 #| msgctxt "@title:column"
 #| msgid "Board"
@@ -145,20 +145,20 @@ msgctxt "@title:column Board Number"
 msgid "Board"
 msgstr "보드"
 
-#: pairingmodel.cpp:97
+#: pairingmodel.cpp:99
 #, kde-format
 msgctxt "@title:column White Player Starting Rank Number"
 msgid "№"
 msgstr ""
 
-#: pairingmodel.cpp:99
+#: pairingmodel.cpp:101
 #, fuzzy, kde-format
 #| msgid "Players"
 msgctxt "@title:column Name of the White Player"
 msgid "White Player"
 msgstr "플레이어"
 
-#: pairingmodel.cpp:101
+#: pairingmodel.cpp:103
 #, fuzzy, kde-format
 #| msgctxt "@title:column"
 #| msgid "Result"
@@ -166,7 +166,7 @@ msgctxt "@title:column Game Result"
 msgid "Result"
 msgstr "결과"
 
-#: pairingmodel.cpp:103
+#: pairingmodel.cpp:105
 #, fuzzy, kde-format
 #| msgctxt "@title:column"
 #| msgid "Black Player"
@@ -174,7 +174,7 @@ msgctxt "@title:column Name of the Black Player"
 msgid "Black Player"
 msgstr "흑돌 플레이어"
 
-#: pairingmodel.cpp:105
+#: pairingmodel.cpp:107
 #, kde-format
 msgctxt "@title:column Black Player Starting Rank Number"
 msgid "№"
@@ -419,12 +419,12 @@ msgctxt "@option:check"
 msgid "Hide finished games"
 msgstr ""
 
-#: qml/PairingsPage.qml:61 qml/PlayersPage.qml:85 qml/StandingsPage.qml:50
+#: qml/PairingsPage.qml:61 qml/PlayersPage.qml:97 qml/StandingsPage.qml:50
 msgctxt "@action:intoolbar"
 msgid "Print…"
 msgstr ""
 
-#: qml/PairingsPage.qml:66 qml/PlayersPage.qml:90 qml/StandingsPage.qml:55
+#: qml/PairingsPage.qml:66 qml/PlayersPage.qml:102 qml/StandingsPage.qml:55
 msgctxt "@action:intoolbar"
 msgid "Export as PDF…"
 msgstr ""
@@ -547,53 +547,53 @@ msgctxt "@info:label"
 msgid "Round %1"
 msgstr "라운드"
 
-#: qml/PlayersPage.qml:69
+#: qml/PlayersPage.qml:81
 msgctxt "@action:intoolbar Open player details"
 msgid "Details…"
 msgstr ""
 
-#: qml/PlayersPage.qml:75
+#: qml/PlayersPage.qml:87
 #, fuzzy
 #| msgid "Players"
 msgctxt "@action:intoolbar"
 msgid "Sort Players…"
 msgstr "플레이어"
 
-#: qml/PlayersPage.qml:96
+#: qml/PlayersPage.qml:108
 #, fuzzy
 #| msgid "Players"
 msgctxt "@action:intoolbar"
 msgid "Add Player…"
 msgstr "플레이어"
 
-#: qml/PlayersPage.qml:107
+#: qml/PlayersPage.qml:119
 msgctxt "@action:inmenu"
 msgid "Open Player Details"
 msgstr ""
 
-#: qml/PlayersPage.qml:204
+#: qml/PlayersPage.qml:216
 msgctxt "@info:placeholder"
 msgid "No players yet"
 msgstr ""
 
-#: qml/PlayersPage.qml:208
+#: qml/PlayersPage.qml:220
 msgctxt "@action:button"
 msgid "Add Player…"
 msgstr ""
 
-#: qml/PlayersPage.qml:226
+#: qml/PlayersPage.qml:238
 msgctxt "@info:status Number of players"
 msgid "1 player"
 msgid_plural "%1 players"
 msgstr[0] ""
 
-#: qml/PlayersPage.qml:227
+#: qml/PlayersPage.qml:239
 msgctxt "@info:status Number of rated players"
 msgid "1 rated"
 msgid_plural "%1 rated"
 msgstr[0] ""
 
-#: qml/PlayersPage.qml:229
+#: qml/PlayersPage.qml:241
 msgctxt "@info:status Total number of players (Number of players rated)"
 msgid "%1 (%2)"
 msgstr ""
@@ -992,45 +992,45 @@ msgstr ""
 msgid "Invalid player \"%1\" on pairing \"%2\"."
 msgstr ""
 
-#: tournament/ratinglists/ratinglist.cpp:135
+#: tournament/ratinglists/ratinglist.cpp:136
 #, kde-format
 msgctxt "@info:progress"
 msgid "Downloading file"
 msgstr ""
 
-#: tournament/ratinglists/ratinglist.cpp:145
+#: tournament/ratinglists/ratinglist.cpp:146
 #, kde-format
 msgctxt "@info:progress"
 msgid "Downloading file (%1 %)"
 msgstr ""
 
-#: tournament/ratinglists/ratinglist.cpp:151
+#: tournament/ratinglists/ratinglist.cpp:152
 #, kde-format
 msgctxt "@info"
 msgid "Couldn't download rating list: %1"
 msgstr ""
 
-#: tournament/ratinglists/ratinglist.cpp:169
+#: tournament/ratinglists/ratinglist.cpp:174
 #, kde-format
 msgctxt "@info:progress"
 msgid "Imported one player."
 msgid_plural "Imported %1 players."
 msgstr[0] ""
 
-#: tournament/ratinglists/ratinglist.cpp:180
+#: tournament/ratinglists/ratinglist.cpp:190
 #, fuzzy, kde-format
 #| msgid "Could not create temporary file."
 msgctxt "@info"
 msgid "Couldn't extract file."
 msgstr "임시 파일을 만들 수 없습니다."
 
-#: tournament/ratinglists/ratinglist.cpp:185
+#: tournament/ratinglists/ratinglist.cpp:195
 #, kde-format
 msgctxt "@info"
 msgid "File format not supported."
 msgstr ""
 
-#: tournament/ratinglists/ratinglist.cpp:332
+#: tournament/ratinglists/ratinglist.cpp:348
 #, kde-format
 msgctxt "@info:progress"
 msgid "Saved 1 player."
