@@ -104,6 +104,7 @@ QVariant PlayersModel::data(const QModelIndex &index, int role) const
             return Qt::AlignLeading;
         }
     } else if (role == Roles::PlayerRole) {
+        QQmlEngine::setObjectOwnership(player, QJSEngine::CppOwnership);
         return QVariant::fromValue(player);
     } else if (role == Roles::IconRole) {
         switch (column) {

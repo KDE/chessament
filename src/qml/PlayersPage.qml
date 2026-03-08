@@ -19,6 +19,8 @@ import org.kde.chessament
 TablePage {
     id: root
 
+    property string filterString: ""
+
     Kirigami.ColumnView.fillWidth: true
 
     columnWidths: [55, 55, 250, 60, 90, 90, 100, 100, 150, 50]
@@ -47,6 +49,10 @@ TablePage {
         sourceModel: Controller.playersModel
         sortColumn: 0
         sortOrder: Qt.AscendingOrder
+        filterRowCallback: function (source_row: int, source_parent): bool {
+            const player = sourceModel.data(sourceModel.index(source_row, 0), PlayersModel.PlayerRole) as Player;
+            return player.name.toLowerCase().includes(root.filterString);
+        }
     }
 
     Connections {
@@ -76,6 +82,16 @@ TablePage {
     }
 
     actions: [
+        Kirigami.Action {
+            displayComponent: Kirigami.SearchField {
+                id: searchField
+                text: root.filterString
+                onAccepted: {
+                    root.filterString = text.trim().toLowerCase();
+                    proxyModel.invalidateFilter();
+                }
+            }
+        },
         Kirigami.Action {
             icon.name: "documentinfo-symbolic"
             text: KI18n.i18nc("@action:intoolbar Open player details", "Details…")
@@ -213,11 +229,12 @@ TablePage {
         parent: root.tableView
         anchors.centerIn: parent
         width: parent.width - Kirigami.Units.gridUnit * 4
-        text: KI18n.i18nc("@info:placeholder", "No players yet")
+        text: root.filterString.length ? KI18n.i18nc("@info:placeholder", "No players found") : KI18n.i18nc("@info:placeholder", "No players yet")
         visible: root.tableView.rows === 0
         helpfulAction: Kirigami.Action {
             icon.name: "list-add"
             text: KI18n.i18nc("@action:button", "Add Player…")
+            enabled: root.filterString.length === 0
             onTriggered: addPlayerDialog.open()
         }
     }
