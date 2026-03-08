@@ -9,6 +9,10 @@ SPDX-License-Identifier: LGPL-3.0-or-later
 -->
     <kcfgfile name="chessamentrc" />
     <group name="General">
+        <entry key="OpenExportedPdfFiles" type="bool">
+            <label>Automatically open exported PDF files.</label>
+            <default>false</default>
+        </entry>
         <entry key="Developer" type="bool">
             <label>Enable experimental/developer options.</label>
             <default>false</default>

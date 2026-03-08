@@ -1,10 +1,12 @@
 // SPDX-FileCopyrightText: 2024-2025 Manuel Alcaraz Zambrano <manuel@alcarazzam.dev>
 // SPDX-License-Identifier: GPL-3.0-or-later
 
+#include "config.h"
 #include "controller.h"
 #include "document.h"
 #include "tournament/state.h"
 
+#include <KIO/OpenUrlJob>
 #include <KLocalizedString>
 
 #include <QTextDocument>
@@ -28,10 +30,16 @@ std::unique_ptr<Document> Controller::playersDocument()
 
     return doc;
 }
+
 void Controller::savePlayersDocument(const QUrl &fileUrl)
 {
     auto doc = playersDocument();
     doc->saveAs(fileUrl.toLocalFile());
+
+    if (Config::openExportedPdfFiles()) {
+        auto *job = new KIO::OpenUrlJob(fileUrl);
+        job->start();
+    }
 }
 
 void Controller::printPlayersDocument()
@@ -61,6 +69,11 @@ void Controller::savePairingsDocument(const QUrl &fileUrl)
 {
     auto doc = pairingsDocument();
     doc->saveAs(fileUrl.toLocalFile());
+
+    if (Config::openExportedPdfFiles()) {
+        auto *job = new KIO::OpenUrlJob(fileUrl);
+        job->start();
+    }
 }
 
 void Controller::printPairingsDocument()
@@ -108,6 +121,11 @@ void Controller::saveStandingsDocument(const QUrl &fileUrl, int round)
 {
     const auto doc = standingsDocument(round);
     doc->saveAs(fileUrl.toLocalFile());
+
+    if (Config::openExportedPdfFiles()) {
+        auto *job = new KIO::OpenUrlJob(fileUrl);
+        job->start();
+    }
 }
 
 void Controller::printStandingsDocument(int round)

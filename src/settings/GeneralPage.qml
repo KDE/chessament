@@ -16,6 +16,21 @@ FormCard.FormCardPage {
     title: KI18n.i18nc("@title", "General")
 
     FormCard.FormHeader {
+        title: KI18n.i18nc("@title:group", "General")
+    }
+
+    FormCard.FormCard {
+        FormCard.FormSwitchDelegate {
+            text: KI18n.i18nc("@option:check", "Automatically open exported PDF files")
+            checked: Config.openExportedPdfFiles
+            onToggled: {
+                Config.openExportedPdfFiles = checked;
+                Config.save();
+            }
+        }
+    }
+
+    FormCard.FormHeader {
         visible: Config.developer
         title: KI18n.i18nc("@title:group", "Account")
     }
