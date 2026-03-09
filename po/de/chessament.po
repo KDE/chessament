@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-08 00:40+0000\n"
+"POT-Creation-Date: 2026-03-09 00:40+0000\n"
 "PO-Revision-Date: 2026-02-15 16:12+0100\n"
 "Last-Translator: Alois Spitzbart <spitz234@hotmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -172,61 +172,61 @@ msgctxt "@title:column Black Player Starting Rank Number"
 msgid "№"
 msgstr "№"
 
-#: playersmodel.cpp:198 standingsmodel.cpp:92
+#: playersmodel.cpp:199 standingsmodel.cpp:92
 #, kde-format
 msgctxt "@title:column Player Starting Rank Number"
 msgid "№"
 msgstr "№"
 
-#: playersmodel.cpp:200 standingsmodel.cpp:94
+#: playersmodel.cpp:201 standingsmodel.cpp:94
 #, kde-format
 msgctxt "@title:column Player Title"
 msgid "Title"
 msgstr "Titel"
 
-#: playersmodel.cpp:202 standingsmodel.cpp:96
+#: playersmodel.cpp:203 standingsmodel.cpp:96
 #, kde-format
 msgctxt "@title:column Player Name"
 msgid "Name"
 msgstr "Name"
 
-#: playersmodel.cpp:204
+#: playersmodel.cpp:205
 #, kde-format
 msgctxt "@title:column Player Rating"
 msgid "Rating"
 msgstr "Wertung"
 
-#: playersmodel.cpp:206
+#: playersmodel.cpp:207
 #, kde-format
 msgctxt "@title:column Player National Rating"
 msgid "National Rating"
 msgstr "Nationale Wertung"
 
-#: playersmodel.cpp:208
+#: playersmodel.cpp:209
 #, kde-format
 msgctxt "@title:column"
 msgid "Player ID"
 msgstr "Spieler-ID"
 
-#: playersmodel.cpp:210
+#: playersmodel.cpp:211
 #, kde-format
 msgctxt "@title:column"
 msgid "Birth date"
 msgstr "Geburtsdatum"
 
-#: playersmodel.cpp:212
+#: playersmodel.cpp:213
 #, kde-format
 msgctxt "@title:column Player Federation"
 msgid "Federation"
 msgstr "Verband"
 
-#: playersmodel.cpp:214
+#: playersmodel.cpp:215
 #, kde-format
 msgctxt "@title:column Player Origin"
 msgid "Origin"
 msgstr "Herkunft"
 
-#: playersmodel.cpp:216
+#: playersmodel.cpp:217
 #, kde-format
 msgctxt "@title:column"
 msgid "Sex"
@@ -404,12 +404,12 @@ msgctxt "@option:check"
 msgid "Hide finished games"
 msgstr "Abgeschlossene Spiele ausblenden"
 
-#: qml/PairingsPage.qml:61 qml/PlayersPage.qml:97 qml/StandingsPage.qml:50
+#: qml/PairingsPage.qml:61 qml/PlayersPage.qml:113 qml/StandingsPage.qml:50
 msgctxt "@action:intoolbar"
 msgid "Print…"
 msgstr "Drucken …"
 
-#: qml/PairingsPage.qml:66 qml/PlayersPage.qml:102 qml/StandingsPage.qml:55
+#: qml/PairingsPage.qml:66 qml/PlayersPage.qml:118 qml/StandingsPage.qml:55
 msgctxt "@action:intoolbar"
 msgid "Export as PDF…"
 msgstr "Als PDF exportieren …"
@@ -532,51 +532,59 @@ msgctxt "@info:label"
 msgid "Round %1"
 msgstr "Runde %1"
 
-#: qml/PlayersPage.qml:81
+#: qml/PlayersPage.qml:97
 msgctxt "@action:intoolbar Open player details"
 msgid "Details…"
 msgstr "Details …"
 
-#: qml/PlayersPage.qml:87
+#: qml/PlayersPage.qml:103
 msgctxt "@action:intoolbar"
 msgid "Sort Players…"
 msgstr "Spieler sortieren …"
 
-#: qml/PlayersPage.qml:108
+#: qml/PlayersPage.qml:124
 msgctxt "@action:intoolbar"
 msgid "Add Player…"
 msgstr "Spieler hinzufügen …"
 
-#: qml/PlayersPage.qml:119
+#: qml/PlayersPage.qml:135
 msgctxt "@action:inmenu"
 msgid "Open Player Details"
 msgstr "Spielerdetails öffnen"
 
-#: qml/PlayersPage.qml:216
+#: qml/PlayersPage.qml:232
+#, fuzzy
+#| msgctxt "@info:placeholder"
+#| msgid "No players yet"
+msgctxt "@info:placeholder"
+msgid "No players found"
+msgstr "Bisher noch keine Spieler"
+
+#: qml/PlayersPage.qml:232
 msgctxt "@info:placeholder"
 msgid "No players yet"
 msgstr "Bisher noch keine Spieler"
 
-#: qml/PlayersPage.qml:220
+#: qml/PlayersPage.qml:236
 msgctxt "@action:button"
 msgid "Add Player…"
 msgstr "Spieler hinzufügen …"
 
-#: qml/PlayersPage.qml:238
+#: qml/PlayersPage.qml:255
 msgctxt "@info:status Number of players"
 msgid "1 player"
 msgid_plural "%1 players"
 msgstr[0] "1 Spieler"
 msgstr[1] "%1 Spieler"
 
-#: qml/PlayersPage.qml:239
+#: qml/PlayersPage.qml:256
 msgctxt "@info:status Number of rated players"
 msgid "1 rated"
 msgid_plural "%1 rated"
 msgstr[0] "1 bewertet"
 msgstr[1] "%1 bewertet"
 
-#: qml/PlayersPage.qml:241
+#: qml/PlayersPage.qml:258
 msgctxt "@info:status Total number of players (Number of players rated)"
 msgid "%1 (%2)"
 msgstr ""
