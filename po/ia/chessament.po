@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-09 00:40+0000\n"
-"PO-Revision-Date: 2026-02-10 09:41+0100\n"
+"PO-Revision-Date: 2026-03-09 10:36+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -86,12 +86,12 @@ msgstr ""
 #, kde-format
 msgctxt "@title"
 msgid "Chessament"
-msgstr ""
+msgstr "Chessament"
 
 #: main.cpp:62
 #, kde-format
 msgid "Chess Tournament Manager"
-msgstr ""
+msgstr "Gerente de Torneo de chacos"
 
 #: main.cpp:66
 #, kde-format
@@ -364,7 +364,7 @@ msgstr "Remove"
 #: qml/Main.qml:21
 msgctxt "@title:window"
 msgid "Chessament"
-msgstr ""
+msgstr "Chessament"
 
 #: qml/Main.qml:102
 msgctxt "@title"
@@ -448,7 +448,7 @@ msgstr ""
 #: qml/PairRoundDialog.qml:21
 msgctxt "@title %1 is a number >= 1"
 msgid "Pair Round %1"
-msgstr ""
+msgstr "Pair Round (Copula Circular) %1"
 
 #: qml/PairRoundDialog.qml:29
 msgctxt "@info"
@@ -542,20 +542,17 @@ msgstr "Adde Jocator…"
 #: qml/PlayersPage.qml:135
 msgctxt "@action:inmenu"
 msgid "Open Player Details"
-msgstr ""
+msgstr "Aperi detalios de jocatores"
 
 #: qml/PlayersPage.qml:232
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Sort players"
 msgctxt "@info:placeholder"
 msgid "No players found"
-msgstr "Ordina Jocatores"
+msgstr "Necun Jocatores trovate"
 
 #: qml/PlayersPage.qml:232
 msgctxt "@info:placeholder"
 msgid "No players yet"
-msgstr ""
+msgstr "Ancora necun Jocatores"
 
 #: qml/PlayersPage.qml:236
 msgctxt "@action:button"
@@ -579,7 +576,7 @@ msgstr[1] ""
 #: qml/PlayersPage.qml:258
 msgctxt "@info:status Total number of players (Number of players rated)"
 msgid "%1 (%2)"
-msgstr ""
+msgstr "%1 (%2)"
 
 #: qml/ResultsFooter.qml:43
 msgctxt "@action:intoolbar"
@@ -931,12 +928,12 @@ msgstr ""
 #: tournament/federations.h:211
 msgctxt "FIDE Federation"
 msgid "Scotland"
-msgstr ""
+msgstr "Scotia"
 
 #: tournament/federations.h:220
 msgctxt "FIDE Federation"
 msgid "Wales"
-msgstr ""
+msgstr "Galles"
 
 #: tournament/pairingengine.cpp:29
 #, kde-format

@@ -544,12 +544,9 @@ msgid "Open Player Details"
 msgstr ""
 
 #: qml/PlayersPage.qml:232
-#, fuzzy
-#| msgctxt "@info:placeholder"
-#| msgid "No players yet"
 msgctxt "@info:placeholder"
 msgid "No players found"
-msgstr "暂无玩家"
+msgstr ""
 
 #: qml/PlayersPage.qml:232
 msgctxt "@info:placeholder"

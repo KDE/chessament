@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-09 00:40+0000\n"
-"PO-Revision-Date: 2026-02-09 08:00-0300\n"
+"PO-Revision-Date: 2026-03-09 07:56-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -545,12 +545,9 @@ msgid "Open Player Details"
 msgstr "Abrir detalhes do jogador"
 
 #: qml/PlayersPage.qml:232
-#, fuzzy
-#| msgctxt "@info:placeholder"
-#| msgid "No players yet"
 msgctxt "@info:placeholder"
 msgid "No players found"
-msgstr "Nenhum jogador ainda"
+msgstr "Nenhum jogador encontrado"
 
 #: qml/PlayersPage.qml:232
 msgctxt "@info:placeholder"

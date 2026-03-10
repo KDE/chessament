@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-09 00:40+0000\n"
-"PO-Revision-Date: 2026-02-09 07:07+0100\n"
+"PO-Revision-Date: 2026-03-09 07:04+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -545,12 +545,9 @@ msgid "Open Player Details"
 msgstr "Odpri podrobnosti igralca"
 
 #: qml/PlayersPage.qml:232
-#, fuzzy
-#| msgctxt "@info:placeholder"
-#| msgid "No players yet"
 msgctxt "@info:placeholder"
 msgid "No players found"
-msgstr "Še ni igralcev"
+msgstr "Ni najdenih igralcev"
 
 #: qml/PlayersPage.qml:232
 msgctxt "@info:placeholder"
