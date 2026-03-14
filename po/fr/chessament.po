@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-09 00:40+0000\n"
-"PO-Revision-Date: 2026-02-13 17:38+0100\n"
+"PO-Revision-Date: 2026-03-12 12:15+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.12.2\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: byesmodel.cpp:68
 #, kde-format
@@ -543,12 +543,9 @@ msgid "Open Player Details"
 msgstr "Ouvrir les détails du joueur"
 
 #: qml/PlayersPage.qml:232
-#, fuzzy
-#| msgctxt "@info:placeholder"
-#| msgid "No players yet"
 msgctxt "@info:placeholder"
 msgid "No players found"
-msgstr "Aucun joueur pour le moment"
+msgstr "Aucun joueur n'a été trouvé."
 
 #: qml/PlayersPage.qml:232
 msgctxt "@info:placeholder"
