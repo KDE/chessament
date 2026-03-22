@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-09 00:40+0000\n"
+"POT-Creation-Date: 2026-03-22 00:40+0000\n"
 "PO-Revision-Date: 2025-09-29 01:32+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -46,37 +46,37 @@ msgstr ""
 msgid "Couldn't export tournament."
 msgstr ""
 
-#: documents.cpp:19
+#: documents.cpp:21
 #, kde-format
 msgctxt "@title"
 msgid "Starting Rank"
 msgstr ""
 
-#: documents.cpp:50
+#: documents.cpp:58
 #, kde-format
 msgctxt "@title"
 msgid "Round %1 Pairings"
 msgstr ""
 
-#: documents.cpp:84
+#: documents.cpp:97
 #, kde-format
 msgctxt "@title"
 msgid "Standings After Round %1"
 msgstr ""
 
-#: documents.cpp:86
+#: documents.cpp:99
 #, kde-format
 msgctxt "@title"
 msgid "Provisional Standings After Round %1"
 msgstr ""
 
-#: documents.cpp:90
+#: documents.cpp:103
 #, kde-format
 msgctxt "@title"
 msgid "Final Standings"
 msgstr ""
 
-#: documents.cpp:92
+#: documents.cpp:105
 #, kde-format
 msgctxt "@title"
 msgid "Provisional Final Standings"
@@ -840,12 +840,25 @@ msgctxt "@title"
 msgid "General"
 msgstr "一般"
 
-#: settings/GeneralPage.qml:20
+#: settings/GeneralPage.qml:19
+#, fuzzy
+#| msgctxt "@action:button"
+#| msgid "General"
+msgctxt "@title:group"
+msgid "General"
+msgstr "一般"
+
+#: settings/GeneralPage.qml:24
+msgctxt "@option:check"
+msgid "Automatically open exported PDF files"
+msgstr ""
+
+#: settings/GeneralPage.qml:35
 msgctxt "@title:group"
 msgid "Account"
 msgstr "帳號"
 
-#: settings/GeneralPage.qml:28
+#: settings/GeneralPage.qml:43
 #, fuzzy
 #| msgctxt "@label:button"
 #| msgid "Connect Account"
@@ -853,11 +866,11 @@ msgctxt "@action:button"
 msgid "Connect Account"
 msgstr "連線到帳號"
 
-#: settings/GeneralPage.qml:33
+#: settings/GeneralPage.qml:48
 msgid "Logged in as %1"
 msgstr "已作為 %1 登入"
 
-#: settings/GeneralPage.qml:38
+#: settings/GeneralPage.qml:53
 msgid "Logout"
 msgstr "登出"
 
