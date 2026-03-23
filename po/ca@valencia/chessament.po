@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-22 00:40+0000\n"
-"PO-Revision-Date: 2026-03-09 11:10+0100\n"
+"PO-Revision-Date: 2026-03-22 09:18+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.12.3\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #: byesmodel.cpp:68
 #, kde-format
@@ -841,9 +841,6 @@ msgid "General"
 msgstr "General"
 
 #: settings/GeneralPage.qml:19
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "General"
 msgctxt "@title:group"
 msgid "General"
 msgstr "General"
@@ -851,7 +848,7 @@ msgstr "General"
 #: settings/GeneralPage.qml:24
 msgctxt "@option:check"
 msgid "Automatically open exported PDF files"
-msgstr ""
+msgstr "Obri automàticament els fitxers PDF exportats"
 
 #: settings/GeneralPage.qml:35
 msgctxt "@title:group"

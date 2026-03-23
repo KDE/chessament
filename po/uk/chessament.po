@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-22 00:40+0000\n"
-"PO-Revision-Date: 2026-03-09 09:49+0200\n"
+"PO-Revision-Date: 2026-03-22 23:04+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -846,9 +846,6 @@ msgid "General"
 msgstr "Загальне"
 
 #: settings/GeneralPage.qml:19
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "General"
 msgctxt "@title:group"
 msgid "General"
 msgstr "Загальне"
@@ -856,7 +853,7 @@ msgstr "Загальне"
 #: settings/GeneralPage.qml:24
 msgctxt "@option:check"
 msgid "Automatically open exported PDF files"
-msgstr ""
+msgstr "Автоматично відкривати експортовані файли PDF"
 
 #: settings/GeneralPage.qml:35
 msgctxt "@title:group"
