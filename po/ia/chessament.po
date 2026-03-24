@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-22 00:40+0000\n"
-"PO-Revision-Date: 2026-03-09 10:36+0100\n"
+"PO-Revision-Date: 2026-03-23 16:52+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -837,9 +837,6 @@ msgid "General"
 msgstr "General"
 
 #: settings/GeneralPage.qml:19
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "General"
 msgctxt "@title:group"
 msgid "General"
 msgstr "General"
