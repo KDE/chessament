@@ -834,12 +834,9 @@ msgid "General"
 msgstr "常规"
 
 #: settings/GeneralPage.qml:19
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "General"
 msgctxt "@title:group"
 msgid "General"
-msgstr "常规"
+msgstr ""
 
 #: settings/GeneralPage.qml:24
 msgctxt "@option:check"

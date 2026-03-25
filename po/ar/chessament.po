@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-22 00:40+0000\n"
-"PO-Revision-Date: 2026-03-09 21:11+0400\n"
+"PO-Revision-Date: 2026-03-23 22:34+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -851,9 +851,6 @@ msgid "General"
 msgstr "عامّ"
 
 #: settings/GeneralPage.qml:19
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "General"
 msgctxt "@title:group"
 msgid "General"
 msgstr "عامّ"
@@ -861,7 +858,7 @@ msgstr "عامّ"
 #: settings/GeneralPage.qml:24
 msgctxt "@option:check"
 msgid "Automatically open exported PDF files"
-msgstr ""
+msgstr "فتح ملفات البدي إف دي المصدرة تلقائيًا"
 
 #: settings/GeneralPage.qml:35
 msgctxt "@title:group"
