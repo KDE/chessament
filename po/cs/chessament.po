@@ -855,9 +855,6 @@ msgid "General"
 msgstr "Obecné"
 
 #: settings/GeneralPage.qml:19
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "General"
 msgctxt "@title:group"
 msgid "General"
 msgstr "Obecné"
