@@ -48,12 +48,12 @@ void Document::addTitle(uint level, const QString &text)
         fontSize = 10;
     }
 
-    m_content += u"<p style=\"font-size: %1pt; font-weight: bold; margin-top: 16px;\">%2</p>\n"_s.arg(QString::number(fontSize), text);
+    m_content += u"<p style=\"font-size: %1pt; font-weight: bold; margin-top: 16px;\">%2</p>\n"_s.arg(QString::number(fontSize), text.toHtmlEscaped());
 }
 
 void Document::addTable(const QAbstractItemModel &model)
 {
-    m_content += u"<table cellpadding=\"0\" style=\"border-collapse: collapse; border: 1px solid #aaa; margin-top: 16px;\">\n"_s;
+    m_content += u"<table cellpadding=\"0\" width=\"100%\" style=\"border-collapse: collapse; border: 1px solid #000000; margin-top: 16px;\">\n"_s;
 
     m_content += u"<thead><tr bgcolor=\"#efefef\">\n"_s;
     for (auto i = 0; i < model.columnCount(); i++) {
