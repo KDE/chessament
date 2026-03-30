@@ -2,12 +2,15 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 
 #include "controller.h"
+#include "accountmanager.h"
 #include "standing.h"
 #include "tournament/pairing.h"
 #include "tournament/ratinglists/ratinglist.h"
 #include "tournament/state.h"
+#include "tournament/sync/syncengine.h"
 
 #include <QCoroFuture>
+#include <QDesktopServices>
 #include <QRandomGenerator>
 #include <QtConcurrent>
 
@@ -18,7 +21,7 @@ Controller::Controller(QObject *parent)
     , m_playersModel(new PlayersModel(this))
     , m_pairingModel(new PairingModel(this))
     , m_standingsModel(new StandingsModel(this))
-    , m_account(new Account)
+    , m_accountManager(std::make_unique<AccountManager>())
 {
     connect(m_playersModel, &PlayersModel::playerChanged, this, [this](Player *player, PlayersModel::Columns field) {
         if (field == PlayersModel::Columns::StartingRank) {
@@ -31,6 +34,10 @@ Controller::Controller(QObject *parent)
     connect(m_pairingModel, &PairingModel::pairingChanged, this, [this]() {
         setAreStandingsValid(false);
         Q_EMIT hasCurrentRoundFinishedChanged();
+    });
+
+    connect(m_accountManager.get(), &AccountManager::openUrl, this, [](const QUrl &url) {
+        QDesktopServices::openUrl(url);
     });
 }
 
@@ -292,14 +299,19 @@ StandingsModel *Controller::standingsModel() const
     return m_standingsModel;
 }
 
-Account *Controller::account() const
+AccountManager *Controller::accountManager() const
 {
-    return m_account;
+    return m_accountManager.get();
 }
 
-void Controller::connectAccount()
+void Controller::uploadTournament()
 {
-    m_account->login();
+    auto account = m_accountManager->first();
+
+    Q_ASSERT(account);
+
+    auto engine = new SyncEngine{account, m_tournament};
+    engine->upload();
 }
 
 QString Controller::currentView() const

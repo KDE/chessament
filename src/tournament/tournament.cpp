@@ -21,6 +21,7 @@
 #include "tiebreaks/won.h"
 #include "trf/reader.h"
 #include "trf/writer.h"
+#include "utils.h"
 
 Tournament::Tournament(Event *event)
     : m_event(event)
@@ -1066,27 +1067,22 @@ void Tournament::setOption(const QString &name, const QVariant &value)
 
 QJsonObject Tournament::toJson() const
 {
-    QJsonObject json;
-
     QJsonObject tournament;
-    tournament[u"id"_s] = m_id;
-    tournament[QStringLiteral("name")] = m_name;
-    tournament[QStringLiteral("city")] = m_city;
-    tournament[QStringLiteral("federation")] = m_federation;
-    tournament[QStringLiteral("chief_arbiter")] = m_chiefArbiter;
-    tournament[QStringLiteral("deputy_chief_arbiter")] = m_deputyChiefArbiter;
-    tournament[QStringLiteral("time_control")] = m_timeControl;
-    tournament[QStringLiteral("number_of_rounds")] = m_numberOfRounds;
+    tournament["id"_L1] = m_id;
+    tournament["name"_L1] = m_name;
+    tournament["slug"_L1] = Utils::normalize(m_name.toLower()).replace(" "_L1, "-"_L1);
+    tournament["federation"_L1] = m_federation;
+    tournament["city"_L1] = m_city;
+    tournament["time_control"_L1] = m_timeControl;
+    tournament["number_rounds"_L1] = m_numberOfRounds;
+    tournament["chief_arbiter"_L1] = m_chiefArbiter;
 
     QJsonArray players;
     for (const auto &player : std::as_const(m_players)) {
         players << player->toJson();
     }
 
-    json[QStringLiteral("tournament")] = tournament;
-    json[QStringLiteral("players")] = players;
-
-    return json;
+    return tournament;
 }
 
 void Tournament::read(const QJsonObject &json)

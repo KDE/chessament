@@ -39,6 +39,7 @@ ecm_add_qml_module(chessament_static
         # Tournament settings
         qml/TournamentSettings.qml
         qml/TournamentSettingsCalendar.qml
+        qml/TournamentSettingsCloud.qml
         qml/TournamentSettingsInformation.qml
         qml/TournamentSettingsFormat.qml
         qml/TiebreakDialog.qml
@@ -46,7 +47,6 @@ ecm_add_qml_module(chessament_static
         QtCore
         QtQuick
     SOURCES
-        account.cpp
         controller.cpp
         byesmodel.cpp
         document.cpp
@@ -85,8 +85,6 @@ target_link_libraries(chessament_static PUBLIC
     Qt6::QuickControls2
     Qt6::Sql
     Qt6::Svg
-    Qt6::Network
-    Qt6::NetworkAuth
     Qt6::PrintSupport
     KF6::I18n
     KF6::I18nLocaleData
@@ -104,7 +102,17 @@ target_link_libraries(chessament_static PUBLIC
 )
 target_include_directories(chessament_static PUBLIC ${CMAKE_BINARY_DIR})
 
-kconfig_target_kcfg_file(chessament_static FILE config.kcfg CLASS_NAME Config MUTATORS GENERATE_PROPERTIES GENERATE_MOC DEFAULT_VALUE_GETTERS PARENT_IN_CONSTRUCTOR SINGLETON QML_REGISTRATION)
+kconfig_target_kcfg_file(chessament_static
+    FILE config.kcfg
+    CLASS_NAME Config
+    MUTATORS
+    GENERATE_PROPERTIES
+    GENERATE_MOC
+    DEFAULT_VALUE_GETTERS
+    PARENT_IN_CONSTRUCTOR
+    SINGLETON
+    QML_REGISTRATION
+)
 
 add_subdirectory(flags)
 

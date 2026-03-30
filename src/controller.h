@@ -7,11 +7,12 @@
 #include <QObject>
 #include <QTemporaryFile>
 
-#include "account.h"
+#include "accountmanager.h"
 #include "pairingmodel.h"
 #include "playersmodel.h"
 #include "standingsmodel.h"
 #include "tournament/event.h"
+#include "tournament/sync/account.h"
 #include "tournament/tournament.h"
 
 class Controller : public QObject
@@ -32,7 +33,7 @@ class Controller : public QObject
     Q_PROPERTY(PairingModel *pairingModel READ pairingModel CONSTANT)
     Q_PROPERTY(StandingsModel *standingsModel READ standingsModel CONSTANT)
 
-    Q_PROPERTY(Account *account READ account CONSTANT)
+    Q_PROPERTY(AccountManager *accounts READ accountManager CONSTANT)
 
     Q_PROPERTY(QString currentView READ currentView WRITE setCurrentView NOTIFY currentViewChanged)
     Q_PROPERTY(QString error READ error WRITE setError NOTIFY errorChanged)
@@ -74,9 +75,8 @@ public:
     [[nodiscard]] PairingModel *pairingModel() const;
     [[nodiscard]] StandingsModel *standingsModel() const;
 
-    [[nodiscard]] Account *account() const;
-
-    Q_INVOKABLE void connectAccount();
+    [[nodiscard]] AccountManager *accountManager() const;
+    Q_INVOKABLE void uploadTournament();
 
     [[nodiscard]] QString currentView() const;
     [[nodiscard]] QString error() const;
@@ -116,7 +116,7 @@ private:
     PairingModel *m_pairingModel;
     StandingsModel *m_standingsModel;
 
-    Account *m_account;
+    std::unique_ptr<AccountManager> m_accountManager;
 
     QString m_currentView;
     QString m_error;

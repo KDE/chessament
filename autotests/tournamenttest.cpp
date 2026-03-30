@@ -49,7 +49,7 @@ void TournamentTest::testToJson()
 
     auto json = (*t)->toJson();
 
-    QCOMPARE(json[u"tournament"_s].toObject()[u"name"_s], u"Test tournament"_s);
+    QCOMPARE(json[u"name"_s], u"Test tournament"_s);
 }
 
 void TournamentTest::testTrf()

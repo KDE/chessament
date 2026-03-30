@@ -3,10 +3,13 @@
 
 #pragma once
 
+#include "qqml.h"
+#include <QCoroTask>
 #include <QNetworkAccessManager>
+#include <QNetworkRequestFactory>
 #include <QOAuth2AuthorizationCodeFlow>
 #include <QObject>
-#include <QQmlEngine>
+#include <QRestAccessManager>
 
 class Account : public QObject
 {
@@ -14,37 +17,52 @@ class Account : public QObject
     QML_ELEMENT
     QML_UNCREATABLE("")
 
-    Q_PROPERTY(bool isLogged READ isLogged WRITE setIsLogged NOTIFY isLoggedChanged)
     Q_PROPERTY(QString username READ username WRITE setUsername NOTIFY usernameChanged)
 
 public:
     explicit Account();
 
-    bool isLogged();
+    [[nodiscard]] QString accountId() const;
+    [[nodiscard]] QString serverUrl() const;
     [[nodiscard]] QString username() const;
 
+    QCoro::Task<> load();
     void login();
-    Q_INVOKABLE void logout();
+    QCoro::Task<> logout();
+
+    QNetworkRequestFactory *api();
+    QRestAccessManager *rest();
 
 public Q_SLOTS:
-    void setIsLogged(bool logged);
+    void setAccountId(const QString &accountId);
+    void setServerUrl(const QString &serverUrl);
+
     void setUsername(const QString &username);
 
     void setAccessToken(const QString &token);
 
 Q_SIGNALS:
-    void isLoggedChanged();
+    void openUrl(const QUrl &url);
+
+    void ready();
+
     void usernameChanged();
 
 private:
-    bool m_isLogged;
+    QString m_accountId;
+    QString m_serverUrl;
     QString m_username;
     QString m_accessToken;
 
     QNetworkAccessManager m_nam;
     QOAuth2AuthorizationCodeFlow m_oauth;
 
-    void saveAccessToken(const QString &token);
-    void loadAccount();
-    void fetchUserDetails();
+    std::unique_ptr<QNetworkRequestFactory> m_api;
+    std::unique_ptr<QRestAccessManager> m_rest;
+
+    QString accessTokenKey();
+
+    [[nodiscard]] QString settingsGroup() const;
+    QCoro::Task<> saveAccount(const QString &token);
+    QCoro::Task<> fetchUserDetails();
 };

@@ -12,12 +12,11 @@ target_sources(tournament PRIVATE
     standing.cpp
     state.cpp
     tournament.cpp
-    trf/reader.cpp
-    trf/writer.cpp
     utils.cpp
 )
 
 add_subdirectory(ratinglists)
+add_subdirectory(sync)
 add_subdirectory(tiebreaks)
 add_subdirectory(trf)
 
@@ -31,11 +30,30 @@ target_link_libraries(tournament PUBLIC
     Qt6::Concurrent
     Qt6::Core
     Qt6::Network
+    Qt6::NetworkAuth
     Qt6::Qml
     Qt6::Sql
     KF6::Archive
+    KF6::ConfigCore
+    KF6::ConfigGui
     KF6::I18n
     QCoro6::Core
     QCoro6::Network
+    QCoro6::Qml
+    ${QTKEYCHAIN_LIBRARIES}
+)
+
+kde_source_files_enable_exceptions(
+    ${CMAKE_CURRENT_SOURCE_DIR}/sync/accountmanager.cpp
+)
+
+kconfig_target_kcfg_file(tournament
+    FILE accountconfig.kcfg
+    CLASS_NAME AccountConfig
+
+    MUTATORS
+    GENERATE_PROPERTIES
+    GENERATE_MOC
+    PARENT_IN_CONSTRUCTOR
 )
 

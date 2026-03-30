@@ -6,6 +6,8 @@ import QtQuick
 import org.kde.ki18n
 import org.kde.kirigamiaddons.settings as KirigamiSettings
 
+import org.kde.chessament
+
 KirigamiSettings.ConfigurationView {
     id: root
 
@@ -27,6 +29,13 @@ KirigamiSettings.ConfigurationView {
             text: KI18n.i18nc("@action:button", "Calendar")
             icon.name: "view-calendar-symbolic"
             page: () => Qt.createComponent("org.kde.chessament", "TournamentSettingsCalendar")
+        },
+        KirigamiSettings.ConfigurationModule {
+            moduleId: "cloud"
+            text: "Cloud"
+            icon.name: "cloudstatus-symbolic"
+            visible: Config.developer
+            page: () => Qt.createComponent("org.kde.chessament", "TournamentSettingsCloud")
         }
     ]
 }

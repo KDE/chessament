@@ -7,6 +7,8 @@ ecm_add_qml_module(chessament_settings
     URI org.kde.chessament.settings
     OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/src/org/kde/chessament/settings
     QML_FILES
+        AccountsPage.qml
+        AddAccountDialog.qml
         ChessamentConfigurationView.qml
         GeneralPage.qml
         RatingListsPage.qml
