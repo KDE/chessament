@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-22 00:40+0000\n"
+"POT-Creation-Date: 2026-04-01 00:41+0000\n"
 "PO-Revision-Date: 2026-03-21 06:45+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
@@ -42,7 +42,7 @@ msgctxt "@action:inmenu"
 msgid "Export tournament report…"
 msgstr "Wyeksportuj sprawozdanie z turnieju…"
 
-#: controller.cpp:161
+#: controller.cpp:168
 #, kde-format
 msgid "Couldn't export tournament."
 msgstr "Nie można wyeksportować turnieju."
@@ -718,17 +718,17 @@ msgctxt "@title:window"
 msgid "Edit Tiebreak"
 msgstr "Zmień przełamanie remisu"
 
-#: qml/TournamentSettings.qml:15
+#: qml/TournamentSettings.qml:17
 msgctxt "@action:button"
 msgid "Information"
 msgstr "Informacje"
 
-#: qml/TournamentSettings.qml:21
+#: qml/TournamentSettings.qml:23
 msgctxt "@action:button"
 msgid "Format"
 msgstr "Format"
 
-#: qml/TournamentSettings.qml:27
+#: qml/TournamentSettings.qml:29
 msgctxt "@action:button"
 msgid "Calendar"
 msgstr "Kalendarz"
@@ -827,12 +827,69 @@ msgctxt "@info"
 msgid "Chessament is a chess tournament manager"
 msgstr "Chessament jest programem do zarządzania turniejami szachowymi"
 
+#: settings/AccountsPage.qml:21
+#, fuzzy
+#| msgctxt "@title:group"
+#| msgid "Account"
+msgctxt "@title"
+msgid "Accounts"
+msgstr "Konto"
+
+#: settings/AccountsPage.qml:24
+#, fuzzy
+#| msgctxt "@title:group"
+#| msgid "Account"
+msgctxt "@title:group"
+msgid "Accounts"
+msgstr "Konto"
+
+#: settings/AccountsPage.qml:45
+#, fuzzy
+#| msgid "Logout"
+msgctxt "@action:button"
+msgid "Logout"
+msgstr "Wyloguj"
+
+#: settings/AccountsPage.qml:56
+#, fuzzy
+#| msgctxt "@title:group"
+#| msgid "Account"
+msgctxt "@action:button"
+msgid "Add Account"
+msgstr "Konto"
+
+#: settings/AddAccountDialog.qml:16
+#, fuzzy
+#| msgctxt "@title:group"
+#| msgid "Account"
+msgctxt "@title"
+msgid "Add Account"
+msgstr "Konto"
+
+#: settings/AddAccountDialog.qml:24
+msgctxt "@label:textbox"
+msgid "Server URL"
+msgstr ""
+
+#: settings/AddAccountDialog.qml:35
+msgctxt "@action:button"
+msgid "Continue"
+msgstr ""
+
 #: settings/ChessamentConfigurationView.qml:21
 msgctxt "@action:button"
 msgid "General"
 msgstr "Ogólne"
 
 #: settings/ChessamentConfigurationView.qml:32
+#, fuzzy
+#| msgctxt "@title:group"
+#| msgid "Account"
+msgctxt "@action:button"
+msgid "Accounts"
+msgstr "Konto"
+
+#: settings/ChessamentConfigurationView.qml:44
 msgctxt "@action:button"
 msgid "Rating Lists"
 msgstr "Lista wyników"
@@ -854,24 +911,6 @@ msgstr "Ogólne"
 msgctxt "@option:check"
 msgid "Automatically open exported PDF files"
 msgstr ""
-
-#: settings/GeneralPage.qml:35
-msgctxt "@title:group"
-msgid "Account"
-msgstr "Konto"
-
-#: settings/GeneralPage.qml:43
-msgctxt "@action:button"
-msgid "Connect Account"
-msgstr "Podłącz konto"
-
-#: settings/GeneralPage.qml:48
-msgid "Logged in as %1"
-msgstr "Zalogowano jako %1"
-
-#: settings/GeneralPage.qml:53
-msgid "Logout"
-msgstr "Wyloguj"
 
 #: settings/RatingListsPage.qml:22 settings/RatingListsPage.qml:128
 msgctxt "@title"
@@ -1032,7 +1071,7 @@ msgstr[0] "Zapisano 1 gracza."
 msgstr[1] "Zapisano %1 graczy."
 msgstr[2] "Zapisano %1 graczy."
 
-#: tournament/tiebreaks/aob.h:23 tournament/tournament.cpp:505
+#: tournament/tiebreaks/aob.h:23 tournament/tournament.cpp:506
 #, kde-format
 msgctxt "Tiebreak"
 msgid "Average Buchholz of Opponents"
@@ -1050,7 +1089,7 @@ msgctxt "@info"
 msgid "Unsupported tiebreak option \"%1\""
 msgstr "Nieobsługiwane ustawienie remisu \"%1\""
 
-#: tournament/tiebreaks/buchholz.h:25 tournament/tournament.cpp:487
+#: tournament/tiebreaks/buchholz.h:25 tournament/tournament.cpp:488
 #, kde-format
 msgctxt "Buchholz tiebreak"
 msgid "Buchholz"
@@ -1062,26 +1101,26 @@ msgctxt "Buchholz N tiebreak, N is a number < 0"
 msgid "Buchholz %1"
 msgstr "Buchholz %1"
 
-#: tournament/tiebreaks/numberwins.h:22 tournament/tournament.cpp:491
+#: tournament/tiebreaks/numberwins.h:22 tournament/tournament.cpp:492
 #, kde-format
 msgctxt "Number of Wins tiebreak"
 msgid "Number of Wins"
 msgstr "Liczba zwycięstw"
 
-#: tournament/tiebreaks/playedblack.h:22 tournament/tournament.cpp:501
+#: tournament/tiebreaks/playedblack.h:22 tournament/tournament.cpp:502
 #, kde-format
 msgctxt "Number of Games Played with Black (over the board) tiebreak"
 msgid "Number of Games Played with Black (over the board)"
 msgstr "Liczba gier rozegranych czarnymi (na szachownicy)"
 
 #: tournament/tiebreaks/points.h:22 tournament/tiebreaks/points.h:27
-#: tournament/tournament.cpp:483
+#: tournament/tournament.cpp:484
 #, kde-format
 msgctxt "Game points"
 msgid "Points"
 msgstr "Punkty"
 
-#: tournament/tiebreaks/won.h:23 tournament/tournament.cpp:497
+#: tournament/tiebreaks/won.h:23 tournament/tournament.cpp:498
 #, kde-format
 msgctxt ""
 "Number of Games Won (over the board) tiebreak. Different from the 'Number of "
@@ -1089,12 +1128,12 @@ msgctxt ""
 msgid "Number of Games Won (over the board)"
 msgstr "Liczba gier wygranych (na szachownicy)"
 
-#: tournament/tournament.cpp:924
+#: tournament/tournament.cpp:925
 #, kde-format
 msgid "An error ocurred while pairing the round: %1"
 msgstr "Wystąpił błąd podczas parowania rundy: %1"
 
-#: tournament/tournament.cpp:1155
+#: tournament/tournament.cpp:1151
 #, kde-format
 msgid "Couldn't open file"
 msgstr "Nie udało się otworzyć pliku"
@@ -1124,6 +1163,13 @@ msgstr "Nieznany wynik \"%1\" przy parowaniu \"%2\"."
 #, kde-format
 msgid "Pairing \"%1\" has no opponent."
 msgstr "Parowanie \"%1\" nie ma przeciwnika."
+
+#~ msgctxt "@action:button"
+#~ msgid "Connect Account"
+#~ msgstr "Podłącz konto"
+
+#~ msgid "Logged in as %1"
+#~ msgstr "Zalogowano jako %1"
 
 #~ msgctxt "@info:status players, rated"
 #~ msgid "%1, %2"

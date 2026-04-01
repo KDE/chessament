@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-22 00:40+0000\n"
+"POT-Creation-Date: 2026-04-01 00:41+0000\n"
 "PO-Revision-Date: 2026-03-22 09:18+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -43,7 +43,7 @@ msgctxt "@action:inmenu"
 msgid "Export tournament report…"
 msgstr "Exporta l'informe del torneig…"
 
-#: controller.cpp:161
+#: controller.cpp:168
 #, kde-format
 msgid "Couldn't export tournament."
 msgstr "No s'ha pogut exportar el torneig."
@@ -716,17 +716,17 @@ msgctxt "@title:window"
 msgid "Edit Tiebreak"
 msgstr "Edició de desempat"
 
-#: qml/TournamentSettings.qml:15
+#: qml/TournamentSettings.qml:17
 msgctxt "@action:button"
 msgid "Information"
 msgstr "Informació"
 
-#: qml/TournamentSettings.qml:21
+#: qml/TournamentSettings.qml:23
 msgctxt "@action:button"
 msgid "Format"
 msgstr "Format"
 
-#: qml/TournamentSettings.qml:27
+#: qml/TournamentSettings.qml:29
 msgctxt "@action:button"
 msgid "Calendar"
 msgstr "Calendari"
@@ -825,12 +825,69 @@ msgctxt "@info"
 msgid "Chessament is a chess tournament manager"
 msgstr "Chessament és un gestor de torneigs d'escacs"
 
+#: settings/AccountsPage.qml:21
+#, fuzzy
+#| msgctxt "@title:group"
+#| msgid "Account"
+msgctxt "@title"
+msgid "Accounts"
+msgstr "Compte"
+
+#: settings/AccountsPage.qml:24
+#, fuzzy
+#| msgctxt "@title:group"
+#| msgid "Account"
+msgctxt "@title:group"
+msgid "Accounts"
+msgstr "Compte"
+
+#: settings/AccountsPage.qml:45
+#, fuzzy
+#| msgid "Logout"
+msgctxt "@action:button"
+msgid "Logout"
+msgstr "Eixida"
+
+#: settings/AccountsPage.qml:56
+#, fuzzy
+#| msgctxt "@title:group"
+#| msgid "Account"
+msgctxt "@action:button"
+msgid "Add Account"
+msgstr "Compte"
+
+#: settings/AddAccountDialog.qml:16
+#, fuzzy
+#| msgctxt "@title:group"
+#| msgid "Account"
+msgctxt "@title"
+msgid "Add Account"
+msgstr "Compte"
+
+#: settings/AddAccountDialog.qml:24
+msgctxt "@label:textbox"
+msgid "Server URL"
+msgstr ""
+
+#: settings/AddAccountDialog.qml:35
+msgctxt "@action:button"
+msgid "Continue"
+msgstr ""
+
 #: settings/ChessamentConfigurationView.qml:21
 msgctxt "@action:button"
 msgid "General"
 msgstr "General"
 
 #: settings/ChessamentConfigurationView.qml:32
+#, fuzzy
+#| msgctxt "@title:group"
+#| msgid "Account"
+msgctxt "@action:button"
+msgid "Accounts"
+msgstr "Compte"
+
+#: settings/ChessamentConfigurationView.qml:44
 msgctxt "@action:button"
 msgid "Rating Lists"
 msgstr "Llistes de classificació"
@@ -849,24 +906,6 @@ msgstr "General"
 msgctxt "@option:check"
 msgid "Automatically open exported PDF files"
 msgstr "Obri automàticament els fitxers PDF exportats"
-
-#: settings/GeneralPage.qml:35
-msgctxt "@title:group"
-msgid "Account"
-msgstr "Compte"
-
-#: settings/GeneralPage.qml:43
-msgctxt "@action:button"
-msgid "Connect Account"
-msgstr "Connecta el compte"
-
-#: settings/GeneralPage.qml:48
-msgid "Logged in as %1"
-msgstr "Connectat com a %1"
-
-#: settings/GeneralPage.qml:53
-msgid "Logout"
-msgstr "Eixida"
 
 #: settings/RatingListsPage.qml:22 settings/RatingListsPage.qml:128
 msgctxt "@title"
@@ -1026,7 +1065,7 @@ msgid_plural "Saved %1 players."
 msgstr[0] "S'ha guardat 1 jugador."
 msgstr[1] "S'han guardat %1 jugadors."
 
-#: tournament/tiebreaks/aob.h:23 tournament/tournament.cpp:505
+#: tournament/tiebreaks/aob.h:23 tournament/tournament.cpp:506
 #, kde-format
 msgctxt "Tiebreak"
 msgid "Average Buchholz of Opponents"
@@ -1044,7 +1083,7 @@ msgctxt "@info"
 msgid "Unsupported tiebreak option \"%1\""
 msgstr "Opció de desempat «%1» no admesa"
 
-#: tournament/tiebreaks/buchholz.h:25 tournament/tournament.cpp:487
+#: tournament/tiebreaks/buchholz.h:25 tournament/tournament.cpp:488
 #, kde-format
 msgctxt "Buchholz tiebreak"
 msgid "Buchholz"
@@ -1056,26 +1095,26 @@ msgctxt "Buchholz N tiebreak, N is a number < 0"
 msgid "Buchholz %1"
 msgstr "Buchholz %1"
 
-#: tournament/tiebreaks/numberwins.h:22 tournament/tournament.cpp:491
+#: tournament/tiebreaks/numberwins.h:22 tournament/tournament.cpp:492
 #, kde-format
 msgctxt "Number of Wins tiebreak"
 msgid "Number of Wins"
 msgstr "Nombre de partides guanyades"
 
-#: tournament/tiebreaks/playedblack.h:22 tournament/tournament.cpp:501
+#: tournament/tiebreaks/playedblack.h:22 tournament/tournament.cpp:502
 #, kde-format
 msgctxt "Number of Games Played with Black (over the board) tiebreak"
 msgid "Number of Games Played with Black (over the board)"
 msgstr "Nombre de partides jugades amb negres (sobre el tauler)"
 
 #: tournament/tiebreaks/points.h:22 tournament/tiebreaks/points.h:27
-#: tournament/tournament.cpp:483
+#: tournament/tournament.cpp:484
 #, kde-format
 msgctxt "Game points"
 msgid "Points"
 msgstr "Punts"
 
-#: tournament/tiebreaks/won.h:23 tournament/tournament.cpp:497
+#: tournament/tiebreaks/won.h:23 tournament/tournament.cpp:498
 #, kde-format
 msgctxt ""
 "Number of Games Won (over the board) tiebreak. Different from the 'Number of "
@@ -1083,12 +1122,12 @@ msgctxt ""
 msgid "Number of Games Won (over the board)"
 msgstr "Nombre de partides guanyades (sobre el tauler)"
 
-#: tournament/tournament.cpp:924
+#: tournament/tournament.cpp:925
 #, kde-format
 msgid "An error ocurred while pairing the round: %1"
 msgstr "S'ha produït un error en aparellar la ronda: %1"
 
-#: tournament/tournament.cpp:1155
+#: tournament/tournament.cpp:1151
 #, kde-format
 msgid "Couldn't open file"
 msgstr "No s'ha pogut obrir el fitxer"
@@ -1118,3 +1157,10 @@ msgstr "Resultat «%1» desconegut a l'aparellament «%2»."
 #, kde-format
 msgid "Pairing \"%1\" has no opponent."
 msgstr "L'aparellament «%1» no té oponent."
+
+#~ msgctxt "@action:button"
+#~ msgid "Connect Account"
+#~ msgstr "Connecta el compte"
+
+#~ msgid "Logged in as %1"
+#~ msgstr "Connectat com a %1"
