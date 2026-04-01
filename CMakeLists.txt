@@ -82,7 +82,7 @@ set_package_properties(Qt6Keychain PROPERTIES
     PURPOSE "Store authentication credentials"
 )
 
-feature_summary(WHAT ALL INCLUDE_QUIET_PACKAGES FATAL_ON_MISSING_REQUIRED_PACKAGES)
+feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)
 
 qcoro_enable_coroutines()
 qt_policy(SET QTP0001 NEW)
