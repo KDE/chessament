@@ -30,6 +30,8 @@ public:
     void addPairing(std::unique_ptr<Pairing> pairing);
     void removePairings(std::function<bool(Pairing *)> predicate);
 
+    [[nodiscard]] QJsonObject toJson() const;
+
 public Q_SLOTS:
     void setId(int id);
     void setNumber(int number);

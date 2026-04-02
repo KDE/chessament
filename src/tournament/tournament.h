@@ -170,7 +170,7 @@ public:
     /*!
      * Returns the players grouped by their id.
      */
-    QMap<uint, Player *> playersById();
+    QMap<QString, Player *> playersById();
 
     /*!
      * Returns the pairings of each player.

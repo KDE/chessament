@@ -33,7 +33,7 @@ const QString UPDATE_OPTION_QUERY = u"INSERT OR REPLACE INTO options(tournament,
 
 const QString PLAYERS_TABLE_SCHEMA =
     u"CREATE TABLE IF NOT EXISTS players("_s
-    u"id INTEGER PRIMARY KEY,"_s
+    u"id TEXT PRIMARY KEY,"_s
     u"startingRank INTEGER,"_s
     u"title TEXT,"_s
     u"name TEXT,"_s
@@ -50,8 +50,8 @@ const QString PLAYERS_TABLE_SCHEMA =
     u");"_s;
 
 const QString ADD_PLAYER_QUERY =
-    u"INSERT INTO players(startingRank, title, name, rating, nationalRating, playerId, birthDate, federation, origin, sex, extra, tournament) "_s
-    u"VALUES (:startingRank, :title, :name, :rating, :nationalRating, :playerId, :birthDate, :federation, :origin, :sex, :extra, :tournament);"_s;
+    u"INSERT INTO players(id, startingRank, title, name, rating, nationalRating, playerId, birthDate, federation, origin, sex, extra, tournament) "_s
+    u"VALUES (:id, :startingRank, :title, :name, :rating, :nationalRating, :playerId, :birthDate, :federation, :origin, :sex, :extra, :tournament);"_s;
 
 const QString GET_PLAYERS_QUERY = u"SELECT * FROM players WHERE tournament = :tournament;"_s;
 

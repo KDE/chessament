@@ -439,6 +439,9 @@ public:
     bool hasFinished();
 
     QString resultString();
+
+    [[nodiscard]] QJsonObject toJson() const;
+
     QString toTrf(Player *player);
 
     friend QDebug operator<<(QDebug dbg, Pairing &pairing);

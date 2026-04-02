@@ -216,8 +216,11 @@ std::expected<void, QString> Tournament::addPlayer(std::unique_ptr<Player> playe
 {
     m_event->db().transaction();
 
+    player->setId(QUuid::createUuid().toString(QUuid::StringFormat::WithoutBraces));
+
     QSqlQuery query(m_event->db());
     query.prepare(ADD_PLAYER_QUERY);
+    query.bindValue(u":id"_s, player->id());
     query.bindValue(u":startingRank"_s, player->startingRank());
     query.bindValue(u":title"_s, player->title());
     query.bindValue(u":name"_s, player->name());
@@ -235,8 +238,6 @@ std::expected<void, QString> Tournament::addPlayer(std::unique_ptr<Player> playe
         qDebug() << "add player" << *player << query.lastError();
         return std::unexpected(query.lastError().text());
     }
-
-    player->setId(query.lastInsertId().toInt());
 
     std::vector<std::unique_ptr<Pairing>> pairings;
     for (int i = 1; i <= m_currentRound; ++i) {
@@ -346,9 +347,9 @@ QMap<uint, Player *> Tournament::playersByStartingRank()
     return players;
 }
 
-QMap<uint, Player *> Tournament::playersById()
+QMap<QString, Player *> Tournament::playersById()
 {
-    QMap<uint, Player *> players;
+    QMap<QString, Player *> players;
 
     for (const auto &player : std::as_const(m_players)) {
         players[player->id()] = player.get();
@@ -1085,6 +1086,13 @@ QJsonObject Tournament::toJson() const
     for (const auto &player : std::as_const(m_players)) {
         players << player->toJson();
     }
+    tournament["players"_L1] = players;
+
+    QJsonArray rounds;
+    for (const auto &round : std::as_const(m_rounds)) {
+        rounds << round->toJson();
+    }
+    tournament["rounds"_L1] = rounds;
 
     return tournament;
 }
@@ -1267,7 +1275,7 @@ std::expected<void, QString> Tournament::loadPlayers()
                                                query.value(federationNo).toString(),
                                                query.value(originNo).toString(),
                                                query.value(sexNo).toString());
-        player->setId(query.value(idNo).toInt());
+        player->setId(query.value(idNo).toString());
         player->setExtra(query.value(extraNo).toByteArray());
         m_players.push_back(std::move(player));
     }
@@ -1331,8 +1339,8 @@ std::expected<void, QString> Tournament::loadPairings()
     while (query.next()) {
         auto round = query.value(roundNo).toInt();
         auto pairing = std::make_unique<Pairing>(query.value(boardNo).toInt(),
-                                                 players.value(query.value(whitePlayerNo).toInt()),
-                                                 players.value(query.value(blackPlayerNo).toInt()),
+                                                 players.value(query.value(whitePlayerNo).toString()),
+                                                 players.value(query.value(blackPlayerNo).toString()),
                                                  Pairing::PartialResult(query.value(whiteResultNo).toInt()),
                                                  Pairing::PartialResult(query.value(blackResultNo).toInt()));
         pairing->setId(query.value(idNo).toString());

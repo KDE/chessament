@@ -5,6 +5,8 @@
 
 #include <algorithm>
 
+#include <QJsonArray>
+
 int Round::id() const
 {
     return m_id;
@@ -95,6 +97,19 @@ void Round::removePairings(std::function<bool(Pairing *)> predicate)
     std::erase_if(m_pairings, [&predicate](const std::unique_ptr<Pairing> &pairing) {
         return predicate(pairing.get());
     });
+}
+
+QJsonObject Round::toJson() const
+{
+    QJsonArray pairings;
+    for (const auto &pairing : m_pairings) {
+        pairings << pairing->toJson();
+    }
+
+    return {
+        {u"number"_s, m_number},
+        {u"pairings"_s, pairings},
+    };
 }
 
 #include "moc_round.cpp"

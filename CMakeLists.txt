@@ -48,7 +48,7 @@ ecm_set_disabled_deprecation_versions(
     KF ${KF6_MIN_VERSION}
 )
 
-find_package(Qt6 ${QT6_MIN_VERSION} COMPONENTS Concurrent Core Gui Qml QuickControls2 Sql Svg Network NetworkAuth PrintSupport)
+find_package(Qt6 ${QT6_MIN_VERSION} COMPONENTS Concurrent Core Gui Qml QuickControls2 Sql Svg Network NetworkAuth PrintSupport WebSockets)
 set_package_properties(Qt6 PROPERTIES
     TYPE REQUIRED
     PURPOSE "Required application components"

@@ -33,6 +33,7 @@ target_link_libraries(tournament PUBLIC
     Qt6::NetworkAuth
     Qt6::Qml
     Qt6::Sql
+    Qt6::WebSockets
     KF6::Archive
     KF6::ConfigCore
     KF6::ConfigGui

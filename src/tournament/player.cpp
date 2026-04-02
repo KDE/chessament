@@ -38,12 +38,12 @@ Player::Player(int startingRank,
     setSex(sex);
 }
 
-int Player::id() const
+QString Player::id() const
 {
     return m_id;
 }
 
-void Player::setId(int id)
+void Player::setId(const QString &id)
 {
     if (m_id == id) {
         return;
@@ -211,16 +211,18 @@ QJsonObject Player::toJson() const
 {
     QJsonObject json;
 
+    json[u"id"_s] = m_id;
+    // json[u"slug"_s] = u"im-a-slug"_s;
     json[u"starting_rank"_s] = m_startingRank;
     json[u"title"_s] = m_title;
     json[u"name"_s] = m_name;
     json[u"rating"_s] = m_rating;
     json[u"national_rating"_s] = m_nationalRating;
     json[u"player_id"_s] = m_playerId;
-    json[u"birth_date"_s] = m_birthDate;
+    // json[u"birth_date"_s] = m_birthDate;
     json[u"federation"_s] = m_federation;
     json[u"origin"_s] = m_origin;
-    json[u"sex"_s] = m_sex;
+    json[u"gender"_s] = m_sex;
 
     return json;
 }

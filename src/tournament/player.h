@@ -21,7 +21,7 @@ class Player : public QObject
     QML_ELEMENT
     QML_UNCREATABLE("")
 
-    Q_PROPERTY(int id READ id NOTIFY idChanged)
+    Q_PROPERTY(QString id READ id NOTIFY idChanged)
     Q_PROPERTY(int startingRank READ startingRank NOTIFY startingRankChanged)
     Q_PROPERTY(QString title READ title WRITE setTitle NOTIFY titleChanged)
     Q_PROPERTY(QString name READ name WRITE setName NOTIFY nameChanged)
@@ -165,7 +165,7 @@ public:
      *
      * This property holds the database ID of the player.
      */
-    [[nodiscard]] int id() const;
+    [[nodiscard]] QString id() const;
 
     /*!
      * \property Player::startingRank
@@ -281,7 +281,7 @@ public:
     friend QDebug operator<<(QDebug dbg, const Player &player);
 
 public Q_SLOTS:
-    void setId(int id);
+    void setId(const QString &id);
     void setStartingRank(int startingRank);
     void setTitle(const QString &titleString);
     void setName(const QString &name);
@@ -308,7 +308,7 @@ Q_SIGNALS:
     void sexChanged();
 
 private:
-    int m_id = 0;
+    QString m_id;
     int m_startingRank = 1;
     QString m_title;
     QString m_name;

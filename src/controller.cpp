@@ -311,7 +311,8 @@ void Controller::uploadTournament()
     Q_ASSERT(account);
 
     auto engine = new SyncEngine{account, m_tournament};
-    engine->upload();
+    // engine->upload();
+    engine->start();
 }
 
 QString Controller::currentView() const

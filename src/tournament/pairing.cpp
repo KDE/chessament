@@ -183,6 +183,22 @@ QString Pairing::toTrf(Player *player)
     return result;
 }
 
+QJsonObject Pairing::toJson() const
+{
+    QJsonObject json{
+        {u"id"_s, m_id},
+        {u"board"_s, m_board},
+        {u"white_player"_s, m_whitePlayer->id()},
+        {u"black_player"_s, QJsonValue{}},
+    };
+
+    if (m_blackPlayer != nullptr) {
+        json[u"black_player"_s] = m_blackPlayer->id();
+    }
+
+    return json;
+}
+
 QDebug operator<<(QDebug dbg, Pairing &pairing)
 {
     dbg.nospace() << "Pairing(" << pairing.board() << "," << *pairing.whitePlayer() << "," << pairing.blackPlayer() << ")";
