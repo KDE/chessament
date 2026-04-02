@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-01 00:41+0000\n"
-"PO-Revision-Date: 2026-03-23 03:12+0100\n"
+"PO-Revision-Date: 2026-04-01 04:14+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -825,53 +825,39 @@ msgid "Chessament is a chess tournament manager"
 msgstr "Chessament ჭადრაკის ტურნირის მმართველია"
 
 #: settings/AccountsPage.qml:21
-#, fuzzy
-#| msgctxt "@title:group"
-#| msgid "Account"
 msgctxt "@title"
 msgid "Accounts"
-msgstr "ანგარიში"
+msgstr "ანგარიშები"
 
 #: settings/AccountsPage.qml:24
-#, fuzzy
-#| msgctxt "@title:group"
-#| msgid "Account"
 msgctxt "@title:group"
 msgid "Accounts"
-msgstr "ანგარიში"
+msgstr "ანგარიშები"
 
 #: settings/AccountsPage.qml:45
-#, fuzzy
-#| msgid "Logout"
 msgctxt "@action:button"
 msgid "Logout"
 msgstr "გასვლა"
 
 #: settings/AccountsPage.qml:56
-#, fuzzy
-#| msgctxt "@title:group"
-#| msgid "Account"
 msgctxt "@action:button"
 msgid "Add Account"
-msgstr "ანგარიში"
+msgstr "ანგარიშის დამატება"
 
 #: settings/AddAccountDialog.qml:16
-#, fuzzy
-#| msgctxt "@title:group"
-#| msgid "Account"
 msgctxt "@title"
 msgid "Add Account"
-msgstr "ანგარიში"
+msgstr "ანგარიშის დამატება"
 
 #: settings/AddAccountDialog.qml:24
 msgctxt "@label:textbox"
 msgid "Server URL"
-msgstr ""
+msgstr "სერვერის URL"
 
 #: settings/AddAccountDialog.qml:35
 msgctxt "@action:button"
 msgid "Continue"
-msgstr ""
+msgstr "გაგრძელება"
 
 #: settings/ChessamentConfigurationView.qml:21
 msgctxt "@action:button"
@@ -879,12 +865,9 @@ msgid "General"
 msgstr "ზოგადი"
 
 #: settings/ChessamentConfigurationView.qml:32
-#, fuzzy
-#| msgctxt "@title:group"
-#| msgid "Account"
 msgctxt "@action:button"
 msgid "Accounts"
-msgstr "ანგარიში"
+msgstr "ანგარიშები"
 
 #: settings/ChessamentConfigurationView.qml:44
 msgctxt "@action:button"

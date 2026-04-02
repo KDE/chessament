@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-01 00:41+0000\n"
-"PO-Revision-Date: 2026-03-22 15:50+0100\n"
+"PO-Revision-Date: 2026-04-01 11:12+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -824,53 +824,39 @@ msgid "Chessament is a chess tournament manager"
 msgstr "Chessament is een beheerder van een schaaktoernooi"
 
 #: settings/AccountsPage.qml:21
-#, fuzzy
-#| msgctxt "@title:group"
-#| msgid "Account"
 msgctxt "@title"
 msgid "Accounts"
-msgstr "Account"
+msgstr "Accounts"
 
 #: settings/AccountsPage.qml:24
-#, fuzzy
-#| msgctxt "@title:group"
-#| msgid "Account"
 msgctxt "@title:group"
 msgid "Accounts"
-msgstr "Account"
+msgstr "Accounts"
 
 #: settings/AccountsPage.qml:45
-#, fuzzy
-#| msgid "Logout"
 msgctxt "@action:button"
 msgid "Logout"
 msgstr "Afmelden"
 
 #: settings/AccountsPage.qml:56
-#, fuzzy
-#| msgctxt "@title:group"
-#| msgid "Account"
 msgctxt "@action:button"
 msgid "Add Account"
-msgstr "Account"
+msgstr "Account toevoegen"
 
 #: settings/AddAccountDialog.qml:16
-#, fuzzy
-#| msgctxt "@title:group"
-#| msgid "Account"
 msgctxt "@title"
 msgid "Add Account"
-msgstr "Account"
+msgstr "Account toevoegen"
 
 #: settings/AddAccountDialog.qml:24
 msgctxt "@label:textbox"
 msgid "Server URL"
-msgstr ""
+msgstr "URL van server"
 
 #: settings/AddAccountDialog.qml:35
 msgctxt "@action:button"
 msgid "Continue"
-msgstr ""
+msgstr "Doorgaan"
 
 #: settings/ChessamentConfigurationView.qml:21
 msgctxt "@action:button"
@@ -878,12 +864,9 @@ msgid "General"
 msgstr "Algemeen"
 
 #: settings/ChessamentConfigurationView.qml:32
-#, fuzzy
-#| msgctxt "@title:group"
-#| msgid "Account"
 msgctxt "@action:button"
 msgid "Accounts"
-msgstr "Account"
+msgstr "Accounts"
 
 #: settings/ChessamentConfigurationView.qml:44
 msgctxt "@action:button"

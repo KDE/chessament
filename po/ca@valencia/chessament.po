@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-01 00:41+0000\n"
-"PO-Revision-Date: 2026-03-22 09:18+0100\n"
+"PO-Revision-Date: 2026-04-01 11:26+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.04.0\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: byesmodel.cpp:68
 #, kde-format
@@ -826,53 +826,39 @@ msgid "Chessament is a chess tournament manager"
 msgstr "Chessament és un gestor de torneigs d'escacs"
 
 #: settings/AccountsPage.qml:21
-#, fuzzy
-#| msgctxt "@title:group"
-#| msgid "Account"
 msgctxt "@title"
 msgid "Accounts"
-msgstr "Compte"
+msgstr "Comptes"
 
 #: settings/AccountsPage.qml:24
-#, fuzzy
-#| msgctxt "@title:group"
-#| msgid "Account"
 msgctxt "@title:group"
 msgid "Accounts"
-msgstr "Compte"
+msgstr "Comptes"
 
 #: settings/AccountsPage.qml:45
-#, fuzzy
-#| msgid "Logout"
 msgctxt "@action:button"
 msgid "Logout"
 msgstr "Eixida"
 
 #: settings/AccountsPage.qml:56
-#, fuzzy
-#| msgctxt "@title:group"
-#| msgid "Account"
 msgctxt "@action:button"
 msgid "Add Account"
-msgstr "Compte"
+msgstr "Afig un compte"
 
 #: settings/AddAccountDialog.qml:16
-#, fuzzy
-#| msgctxt "@title:group"
-#| msgid "Account"
 msgctxt "@title"
 msgid "Add Account"
-msgstr "Compte"
+msgstr "Afig un compte"
 
 #: settings/AddAccountDialog.qml:24
 msgctxt "@label:textbox"
 msgid "Server URL"
-msgstr ""
+msgstr "URL del servidor"
 
 #: settings/AddAccountDialog.qml:35
 msgctxt "@action:button"
 msgid "Continue"
-msgstr ""
+msgstr "Continua"
 
 #: settings/ChessamentConfigurationView.qml:21
 msgctxt "@action:button"
@@ -880,12 +866,9 @@ msgid "General"
 msgstr "General"
 
 #: settings/ChessamentConfigurationView.qml:32
-#, fuzzy
-#| msgctxt "@title:group"
-#| msgid "Account"
 msgctxt "@action:button"
 msgid "Accounts"
-msgstr "Compte"
+msgstr "Comptes"
 
 #: settings/ChessamentConfigurationView.qml:44
 msgctxt "@action:button"
@@ -1157,10 +1140,3 @@ msgstr "Resultat «%1» desconegut a l'aparellament «%2»."
 #, kde-format
 msgid "Pairing \"%1\" has no opponent."
 msgstr "L'aparellament «%1» no té oponent."
-
-#~ msgctxt "@action:button"
-#~ msgid "Connect Account"
-#~ msgstr "Connecta el compte"
-
-#~ msgid "Logged in as %1"
-#~ msgstr "Connectat com a %1"

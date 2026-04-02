@@ -819,43 +819,29 @@ msgid "Chessament is a chess tournament manager"
 msgstr "Chessament 是一款国际象棋赛事管理器"
 
 #: settings/AccountsPage.qml:21
-#, fuzzy
-#| msgctxt "@title:group"
-#| msgid "Account"
 msgctxt "@title"
 msgid "Accounts"
-msgstr "账户"
+msgstr ""
 
 #: settings/AccountsPage.qml:24
-#, fuzzy
-#| msgctxt "@title:group"
-#| msgid "Account"
 msgctxt "@title:group"
 msgid "Accounts"
-msgstr "账户"
+msgstr ""
 
 #: settings/AccountsPage.qml:45
-#, fuzzy
-#| msgid "Logout"
 msgctxt "@action:button"
 msgid "Logout"
-msgstr "退出登录"
+msgstr ""
 
 #: settings/AccountsPage.qml:56
-#, fuzzy
-#| msgctxt "@title:group"
-#| msgid "Account"
 msgctxt "@action:button"
 msgid "Add Account"
-msgstr "账户"
+msgstr ""
 
 #: settings/AddAccountDialog.qml:16
-#, fuzzy
-#| msgctxt "@title:group"
-#| msgid "Account"
 msgctxt "@title"
 msgid "Add Account"
-msgstr "账户"
+msgstr ""
 
 #: settings/AddAccountDialog.qml:24
 msgctxt "@label:textbox"
@@ -873,12 +859,9 @@ msgid "General"
 msgstr "常规"
 
 #: settings/ChessamentConfigurationView.qml:32
-#, fuzzy
-#| msgctxt "@title:group"
-#| msgid "Account"
 msgctxt "@action:button"
 msgid "Accounts"
-msgstr "账户"
+msgstr ""
 
 #: settings/ChessamentConfigurationView.qml:44
 msgctxt "@action:button"
@@ -1146,6 +1129,3 @@ msgstr "对阵“%2”时出现未知结果“%1”。"
 #, kde-format
 msgid "Pairing \"%1\" has no opponent."
 msgstr "对阵“%1”无对手。"
-
-#~ msgid "Logged in as %1"
-#~ msgstr "以 %1 身份登录"
