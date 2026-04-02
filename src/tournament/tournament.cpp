@@ -592,6 +592,8 @@ std::expected<void, QString> Tournament::ensureRoundExists(int round)
             }
 
             round->setId(query.lastInsertId().toInt());
+            round->setNumber(int(i));
+
             m_rounds.push_back(std::move(round));
         }
     }
