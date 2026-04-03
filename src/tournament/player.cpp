@@ -240,7 +240,7 @@ QJsonObject Player::toJson() const
 {
     QJsonObject json;
 
-    json[u"id"_s] = m_id;
+    json[u"uid"_s] = m_id;
     json[u"starting_rank"_s] = m_startingRank;
     json[u"title"_s] = m_title;
     json[u"name"_s] = m_name;

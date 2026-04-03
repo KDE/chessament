@@ -187,10 +187,12 @@ QString Pairing::toTrf(Player *player)
 QJsonObject Pairing::toJson() const
 {
     QJsonObject json{
-        {u"id"_s, m_id},
+        {u"uid"_s, m_id},
         {u"board"_s, m_board},
         {u"white_player"_s, m_whitePlayer->id()},
+        {u"white_result"_s, std::to_underlying(m_whiteResult)},
         {u"black_player"_s, QJsonValue{}},
+        {u"black_result"_s, std::to_underlying(m_blackResult)},
         {u"last_modified"_s, m_lastModified.toUTC().toString(Qt::ISODate)},
     };
 

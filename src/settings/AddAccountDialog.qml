@@ -16,14 +16,14 @@ FormCard.FormCardDialog {
     title: KI18n.i18nc("@title", "Add Account")
 
     onAccepted: {
-        Controller.accounts.createAccount(serverUrl.text);
+        AccountManager.createAccount(serverUrl.text);
     }
 
     FormCard.FormTextFieldDelegate {
         id: serverUrl
         label: KI18n.i18nc("@label:textbox", "Server URL")
         onTextChanged: {
-            Controller.accounts.isChessamentServer(serverUrl.text).then(valid => continueButton.enabled = valid);
+            AccountManager.isChessamentServer(serverUrl.text).then(valid => continueButton.enabled = valid);
         }
     }
 

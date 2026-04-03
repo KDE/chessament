@@ -3,10 +3,10 @@
 
 #pragma once
 
-#include "qqml.h"
 #include <QAbstractListModel>
 #include <QCoroQmlTask>
 #include <QCoroTask>
+#include <qqml.h>
 
 #include "account.h"
 
@@ -14,7 +14,7 @@ class AccountManager : public QAbstractListModel
 {
     Q_OBJECT
     QML_ELEMENT
-    QML_UNCREATABLE("")
+    QML_SINGLETON
 
 public:
     enum Roles {
@@ -23,7 +23,16 @@ public:
     };
     Q_ENUM(Roles);
 
-    explicit AccountManager();
+    static AccountManager *create(QQmlEngine *qmlEngine, QJSEngine *jsEngine)
+    {
+        Q_UNUSED(qmlEngine);
+        Q_UNUSED(jsEngine);
+        auto inst = &instance();
+        QJSEngine::setObjectOwnership(inst, QJSEngine::ObjectOwnership::CppOwnership);
+        return inst;
+    }
+
+    static AccountManager &instance();
 
     [[nodiscard]] int rowCount(const QModelIndex &parent = {}) const override;
     [[nodiscard]] QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
@@ -43,6 +52,8 @@ Q_SIGNALS:
     void openUrl(const QUrl &url);
 
 private:
+    explicit AccountManager();
+
     void loadAccounts();
 
     static QCoro::Task<bool> checkServer(const QString &serverUrl);

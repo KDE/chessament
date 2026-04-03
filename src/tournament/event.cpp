@@ -8,6 +8,11 @@
 #include <QSqlQuery>
 #include <QSqlRecord>
 
+#ifdef BUILD_EXPERIMENTAL
+#include "accountmanager.h"
+#include "cloudengine.h"
+#endif
+
 #include "db.h"
 
 Event::~Event()
@@ -119,6 +124,56 @@ bool Event::remove()
 
     return true;
 }
+
+#ifdef BUILD_EXPERIMENTAL
+bool Event::syncEnabled() const
+{
+    return m_syncEnabled;
+}
+
+void Event::setSyncEnabled(bool enabled)
+{
+    if (m_syncEnabled == enabled) {
+        return;
+    }
+    m_syncEnabled = enabled;
+
+    if (m_syncEnabled) {
+        if (!m_syncEngine) {
+            auto account = AccountManager::instance().first();
+            addSyncEngine(account);
+        }
+        m_syncEngine->start();
+    }
+
+    Q_EMIT syncEnabledChanged();
+}
+
+SyncEngine *Event::addSyncEngine(Account *account)
+{
+    m_syncEngine = std::make_unique<CloudEngine>(account, tournament(0));
+
+    connect(m_syncEngine.get(), &SyncEngine::statusChanged, this, [this]() {
+        Q_EMIT syncStatusChanged();
+    });
+
+    return m_syncEngine.get();
+}
+
+SyncEngine::Status Event::syncStatus() const
+{
+    if (m_syncEngine) {
+        return m_syncEngine->status();
+    }
+
+    return SyncEngine::Status::Offline;
+}
+
+QString Event::syncStatusString() const
+{
+    return SyncEngine::statusString(syncStatus());
+}
+#endif
 
 QSqlDatabase Event::db()
 {

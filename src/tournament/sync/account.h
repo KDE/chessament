@@ -3,13 +3,13 @@
 
 #pragma once
 
-#include "qqml.h"
 #include <QCoroTask>
 #include <QNetworkAccessManager>
 #include <QNetworkRequestFactory>
 #include <QOAuth2AuthorizationCodeFlow>
 #include <QObject>
 #include <QRestAccessManager>
+#include <qqmlintegration.h>
 
 class Account : public QObject
 {
