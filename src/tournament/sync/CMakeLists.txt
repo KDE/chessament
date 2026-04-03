@@ -6,6 +6,7 @@ target_include_directories(tournament PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 target_sources(tournament PRIVATE
     account.cpp
     accountmanager.cpp
+    cloudengine.cpp
     syncengine.cpp
 )
 

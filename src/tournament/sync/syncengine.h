@@ -3,36 +3,47 @@
 
 #pragma once
 
-#include <QCoroTask>
+#include <KLocalizedString>
 #include <QObject>
-#include <QWebSocket>
-
-class Account;
-class Tournament;
 
 class SyncEngine : public QObject
 {
+    Q_OBJECT
+
 public:
-    explicit SyncEngine(Account *account, Tournament *tournament);
+    enum class Status {
+        Offline,
+        Connecting,
+        Online,
+        Refused,
+    };
+    Q_ENUM(Status);
 
-    QCoro::Task<> upload();
+    static QString statusString(Status status)
+    {
+        switch (status) {
+        case Status::Offline:
+            return i18nc("@info:status", "Offline");
+        case Status::Connecting:
+            return i18nc("@info:status", "Connecting");
+        case Status::Online:
+            return i18nc("@info:status", "Online");
+        case Status::Refused:
+            return i18nc("@info:status", "Warning");
+        }
+        Q_UNREACHABLE();
+    }
 
-    void start();
+    SyncEngine::Status status();
+
+    virtual void start() = 0;
 
 public Q_SLOTS:
-    void onConnected();
+    void setStatus(Status status);
 
-    void onDisconnected();
-
-    void onError(QAbstractSocket::SocketError error);
-
-    void onTextMessageReceived(const QString &message);
+Q_SIGNALS:
+    void statusChanged();
 
 private:
-    void uploadTournament();
-
-    Account *m_account;
-    Tournament *m_tournament;
-
-    QWebSocket m_webSocket;
+    Status m_status = Status::Offline;
 };

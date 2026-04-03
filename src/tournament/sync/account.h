@@ -3,13 +3,14 @@
 
 #pragma once
 
-#include "qqml.h"
 #include <QCoroTask>
 #include <QNetworkAccessManager>
 #include <QNetworkRequestFactory>
 #include <QOAuth2AuthorizationCodeFlow>
+#include <QOAuthHttpServerReplyHandler>
 #include <QObject>
 #include <QRestAccessManager>
+#include <qqmlintegration.h>
 
 class Account : public QObject
 {
@@ -35,11 +36,14 @@ public:
 
 public Q_SLOTS:
     void setAccountId(const QString &accountId);
+
     void setServerUrl(const QString &serverUrl);
 
     void setUsername(const QString &username);
 
     void setAccessToken(const QString &token);
+
+    void setRefreshToken(const QString &token);
 
 Q_SIGNALS:
     void openUrl(const QUrl &url);
@@ -53,16 +57,19 @@ private:
     QString m_serverUrl;
     QString m_username;
     QString m_accessToken;
+    QString m_refreshToken;
 
     QNetworkAccessManager m_nam;
     QOAuth2AuthorizationCodeFlow m_oauth;
+    std::unique_ptr<QOAuthHttpServerReplyHandler> m_replyHandler;
 
     std::unique_ptr<QNetworkRequestFactory> m_api;
     std::unique_ptr<QRestAccessManager> m_rest;
 
-    QString accessTokenKey();
+    [[nodiscard]] QString accessTokenKey() const;
+    [[nodiscard]] QString refreshTokenKey() const;
 
     [[nodiscard]] QString settingsGroup() const;
-    QCoro::Task<> saveAccount(const QString &token);
+    QCoro::Task<> saveAccount(QString accessToken, QString refreshToken);
     QCoro::Task<> fetchUserDetails();
 };

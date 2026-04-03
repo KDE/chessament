@@ -9,15 +9,20 @@
 #include <QQmlEngine>
 #include <qt6keychain/keychain.h>
 
-#include <KLocalizedString>
-
 #include "accountconfig.h"
+#include "utils.h"
 
 using namespace Qt::Literals::StringLiterals;
 
 AccountManager::AccountManager()
 {
     loadAccounts();
+}
+
+AccountManager &AccountManager::instance()
+{
+    static AccountManager _instance;
+    return _instance;
 }
 
 void AccountManager::loadAccounts()
@@ -46,7 +51,7 @@ int AccountManager::rowCount(const QModelIndex &parent) const
 {
     Q_UNUSED(parent);
 
-    return m_accounts.size();
+    return static_cast<int>(m_accounts.size());
 }
 
 QVariant AccountManager::data(const QModelIndex &index, int role) const
@@ -103,7 +108,7 @@ QList<Account *> AccountManager::accounts()
 
 void AccountManager::addAccount(std::unique_ptr<Account> account)
 {
-    beginInsertRows({}, m_accounts.size(), m_accounts.size());
+    beginInsertRows({}, static_cast<int>(m_accounts.size()), static_cast<int>(m_accounts.size()));
     m_accounts.push_back(std::move(account));
     endInsertRows();
 }
@@ -146,21 +151,20 @@ QCoro::QmlTask AccountManager::isChessamentServer(const QString &serverUrl)
 QCoro::Task<bool> AccountManager::checkServer(const QString &serverUrl)
 {
     auto url = QUrl::fromUserInput(serverUrl);
-    if (url.scheme() != "http"_L1 && url.scheme() != "https"_L1) {
+    if (!url.isValid()) {
         co_return false;
     }
-    if (!url.isValid()) {
+    if (url.scheme() != "http"_L1 && url.scheme() != "https"_L1) {
         co_return false;
     }
     url.setPath(u"/api/v1/instance"_s);
 
-    QNetworkAccessManager manager;
+    auto manager = Utils::networkAccessManager();
 
     QNetworkRequest request{url};
-    const QString userAgent = "Chessament/"_L1 + QCoreApplication::applicationVersion() + " (+https://apps.kde.org/chessament/)"_L1;
-    request.setHeader(QNetworkRequest::UserAgentHeader, userAgent);
+    request.setHeader(QNetworkRequest::UserAgentHeader, Utils::userAgent());
 
-    auto *reply = co_await manager.get(request);
+    auto *reply = co_await manager->get(request);
 
     if (reply->error() != QNetworkReply::NoError) {
         qDebug() << reply->error();

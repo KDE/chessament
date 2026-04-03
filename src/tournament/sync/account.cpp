@@ -10,18 +10,35 @@
 #include <QJsonObject>
 #include <QNetworkReply>
 #include <QNetworkRequest>
-#include <QOAuthHttpServerReplyHandler>
 #include <QRestReply>
 #include <qt6keychain/keychain.h>
 
 #include "accountconfig.h"
 
 using namespace Qt::Literals::StringLiterals;
+using namespace std::chrono_literals;
 
 Account::Account()
     : m_api(std::make_unique<QNetworkRequestFactory>())
     , m_rest(std::make_unique<QRestAccessManager>(&m_nam))
 {
+    m_oauth.setClientIdentifier("scY2hIzd461zzTUePINaJldKy7GEeg7YVgLLncXm"_L1);
+    m_oauth.setRequestedScopeTokens({"read", "write"});
+    m_oauth.setRefreshLeadTime(3min);
+
+    connect(&m_oauth, &QAbstractOAuth::authorizeWithBrowser, this, [this](const QUrl &url) {
+        Q_EMIT openUrl(url);
+    });
+
+    connect(&m_oauth, &QAbstractOAuth::granted, this, [this]() {
+        qDebug() << "Received token expires at:" << m_oauth.expirationAt();
+        saveAccount(m_oauth.token(), m_oauth.refreshToken());
+
+        if (m_replyHandler) {
+            m_replyHandler->close();
+            m_replyHandler.reset();
+        }
+    });
 }
 
 QString Account::accountId() const
@@ -70,16 +87,33 @@ QCoro::Task<> Account::load()
     Q_ASSERT(!m_accountId.isEmpty());
     Q_ASSERT(!m_serverUrl.isEmpty());
 
-    auto job = new QKeychain::ReadPasswordJob{u"Chessament"_s};
-    job->setKey(accessTokenKey());
-    job->start();
+    m_oauth.setAuthorizationUrl(QUrl{m_serverUrl + "/oauth2/authorize/"_L1});
+    m_oauth.setTokenUrl(QUrl{m_serverUrl + "/oauth2/token/"_L1});
 
-    co_await qCoro(job, &QKeychain::ReadPasswordJob::finished);
+    auto accessTokenJob = new QKeychain::ReadPasswordJob{u"Chessament"_s};
+    accessTokenJob->setKey(accessTokenKey());
+    accessTokenJob->start();
 
-    setAccessToken(job->textData());
+    co_await qCoro(accessTokenJob, &QKeychain::ReadPasswordJob::finished);
 
-    delete job;
+    setAccessToken(accessTokenJob->textData());
+
+    auto refreshTokenJob = new QKeychain::ReadPasswordJob{u"Chessament"_s};
+    refreshTokenJob->setKey(refreshTokenKey());
+    refreshTokenJob->start();
+
+    co_await qCoro(refreshTokenJob, &QKeychain::ReadPasswordJob::finished);
+
+    setRefreshToken(refreshTokenJob->textData());
+
+    // delete accessTokenJob;
+    // delete refreshTokenJob;
+
+    m_oauth.refreshTokens();
+    m_oauth.setAutoRefresh(true);
+
     Q_EMIT ready();
+
     qDebug() << "Loaded account" << m_accountId << "with username" << m_username;
 }
 
@@ -89,21 +123,11 @@ void Account::login()
 
     m_oauth.setAuthorizationUrl(QUrl{m_serverUrl + "/oauth2/authorize/"_L1});
     m_oauth.setTokenUrl(QUrl{m_serverUrl + "/oauth2/token/"_L1});
-    m_oauth.setClientIdentifier("scY2hIzd461zzTUePINaJldKy7GEeg7YVgLLncXm"_L1);
-    m_oauth.setRequestedScopeTokens({"read", "write"});
 
-    auto handler = new QOAuthHttpServerReplyHandler(1234, this);
-    m_oauth.setReplyHandler(handler);
+    m_replyHandler = std::make_unique<QOAuthHttpServerReplyHandler>(1234);
+    m_oauth.setReplyHandler(m_replyHandler.get());
 
-    connect(&m_oauth, &QAbstractOAuth::authorizeWithBrowser, this, [this](const QUrl &url) {
-        Q_EMIT openUrl(url);
-    });
-    QObject::connect(&m_oauth, &QAbstractOAuth::granted, this, [this, handler]() {
-        saveAccount(m_oauth.token());
-        handler->close();
-    });
-
-    if (handler->isListening()) {
+    if (m_replyHandler->isListening()) {
         m_oauth.grant();
     }
 }
@@ -113,6 +137,13 @@ QCoro::Task<> Account::logout()
     auto job = new QKeychain::DeletePasswordJob{u"Chessament"_s};
     job->setAutoDelete(true);
     job->setKey(accessTokenKey());
+    job->start();
+
+    co_await qCoro(job, &QKeychain::DeletePasswordJob::finished);
+
+    job = new QKeychain::DeletePasswordJob{u"Chessament"_s};
+    job->setAutoDelete(true);
+    job->setKey(refreshTokenKey());
     job->start();
 
     co_await qCoro(job, &QKeychain::DeletePasswordJob::finished);
@@ -134,10 +165,16 @@ QRestAccessManager *Account::rest()
     return m_rest.get();
 }
 
-QString Account::accessTokenKey()
+QString Account::accessTokenKey() const
 {
     Q_ASSERT(!m_accountId.isEmpty());
     return u"access-token-%1"_s.arg(m_accountId);
+}
+
+QString Account::refreshTokenKey() const
+{
+    Q_ASSERT(!m_accountId.isEmpty());
+    return u"refresh-token-%1"_s.arg(m_accountId);
 }
 
 void Account::setAccessToken(const QString &token)
@@ -148,22 +185,41 @@ void Account::setAccessToken(const QString &token)
     m_api->setBearerToken(m_accessToken.toLatin1());
 }
 
+void Account::setRefreshToken(const QString &token)
+{
+    Q_ASSERT(!token.isEmpty());
+
+    m_refreshToken = token;
+    m_oauth.setRefreshToken(token);
+}
+
 QString Account::settingsGroup() const
 {
     Q_ASSERT(!m_accountId.isEmpty());
     return "Account-%1"_L1.arg(m_accountId);
 }
 
-QCoro::Task<> Account::saveAccount(const QString &token)
+QCoro::Task<> Account::saveAccount(QString accessToken, QString refreshToken)
 {
-    m_accountId = QUuid::createUuid().toString(QUuid::StringFormat::WithoutBraces);
+    if (m_accountId.isEmpty()) {
+        m_accountId = QUuid::createUuid().toString(QUuid::StringFormat::WithoutBraces);
+    }
 
-    setAccessToken(token);
+    setAccessToken(accessToken);
+    setRefreshToken(refreshToken);
 
     auto job = new QKeychain::WritePasswordJob{u"Chessament"_s};
     job->setAutoDelete(true);
     job->setKey(accessTokenKey());
-    job->setTextData(token);
+    job->setTextData(accessToken);
+    job->start();
+
+    co_await qCoro(job, &QKeychain::WritePasswordJob::finished);
+
+    job = new QKeychain::WritePasswordJob{u"Chessament"_s};
+    job->setAutoDelete(true);
+    job->setKey(refreshTokenKey());
+    job->setTextData(refreshToken);
     job->start();
 
     co_await qCoro(job, &QKeychain::WritePasswordJob::finished);
@@ -173,7 +229,11 @@ QCoro::Task<> Account::saveAccount(const QString &token)
     config->setServerUrl(m_serverUrl);
     config->save();
 
-    co_await fetchUserDetails();
+    m_oauth.setAutoRefresh(true);
+
+    if (m_username.isEmpty()) {
+        co_await fetchUserDetails();
+    }
 }
 
 QCoro::Task<> Account::fetchUserDetails()

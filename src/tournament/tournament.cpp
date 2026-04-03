@@ -242,6 +242,7 @@ std::expected<void, QString> Tournament::addPlayer(std::unique_ptr<Player> playe
 
     Q_EMIT numberOfPlayersChanged();
     Q_EMIT numberOfRatedPlayersChanged();
+    Q_EMIT playerChanged();
 
     return {};
 }
@@ -314,6 +315,7 @@ void Tournament::savePlayer(Player *player)
     }
 
     Q_EMIT numberOfRatedPlayersChanged();
+    Q_EMIT playerChanged();
 }
 
 void Tournament::sortPlayers()
@@ -639,6 +641,8 @@ std::expected<void, QString> Tournament::addPairing(int roundNumber, std::unique
     const auto round = this->round(roundNumber);
     round->addPairing(std::move(pairing));
 
+    Q_EMIT pairingChanged();
+
     return {};
 }
 
@@ -696,6 +700,8 @@ std::expected<void, QString> Tournament::setResult(Pairing *pairing, Pairing::Re
         return ok;
     }
 
+    Q_EMIT pairingChanged();
+
     return {};
 }
 
@@ -722,7 +728,13 @@ std::expected<void, QString> Tournament::setBye(Player *player, int round, Pairi
 
     pairing->setWhiteResult(result);
 
-    return savePairing(pairing);
+    if (const auto ok = savePairing(pairing); !ok) {
+        return ok;
+    }
+
+    Q_EMIT pairingChanged();
+
+    return {};
 }
 
 bool Tournament::hasRetired(Player *player)
@@ -914,6 +926,8 @@ std::expected<void, QString> Tournament::sortPairings(std::optional<int> round)
         }
     }
 
+    Q_EMIT pairingChanged();
+
     return {};
 }
 
@@ -1025,6 +1039,8 @@ std::expected<void, QString> Tournament::removePairing(int round, Pairing *pairi
         return p->id() == pairing->id();
     });
 
+    Q_EMIT pairingChanged();
+
     return {};
 }
 
@@ -1118,12 +1134,13 @@ void Tournament::setOption(const QString &name, const QVariant &value)
     }
 
     m_options[name] = value;
+    Q_EMIT optionChanged();
 }
 
 QJsonObject Tournament::toJson() const
 {
     QJsonObject tournament;
-    tournament["id"_L1] = m_id;
+    tournament["uid"_L1] = m_id;
     tournament["name"_L1] = m_name;
     tournament["slug"_L1] = Utils::normalize(m_name.toLower()).replace(" "_L1, "-"_L1);
     tournament["federation"_L1] = m_federation;
@@ -1347,6 +1364,7 @@ std::expected<void, QString> Tournament::loadPlayers()
         player->setNationalId(query.value(nationalIdNo).toString());
         player->setLastModified(QDateTime::fromSecsSinceEpoch(query.value(lastModifiedNo).toLongLong()));
         player->setExtra(query.value(extraNo).toByteArray());
+
         m_players.push_back(std::move(player));
     }
 
@@ -1391,7 +1409,7 @@ std::expected<void, QString> Tournament::loadPairings()
     const auto rounds = roundsById();
 
     QSqlQuery query(m_event->db());
-    query.prepare(GET_PAIRINGS_QUERY);
+    query.prepare(GET_PAIRINGS_QUERY); // FIXME: sort
     query.bindValue(u":tournament"_s, m_id);
 
     if (!query.exec()) {

@@ -7,6 +7,11 @@
 #include <QSqlDatabase>
 #include <QString>
 
+#ifdef BUILD_EXPERIMENTAL
+#include "sync/account.h"
+#include "sync/syncengine.h"
+#endif
+
 #include "tournament.h"
 
 /*!
@@ -21,6 +26,12 @@ class Event : public QObject
     QML_UNCREATABLE("")
 
     Q_PROPERTY(QString fileName READ fileName WRITE setFileName NOTIFY fileNameChanged)
+
+#ifdef BUILD_EXPERIMENTAL
+    Q_PROPERTY(bool syncEnabled READ syncEnabled WRITE setSyncEnabled NOTIFY syncEnabledChanged)
+    Q_PROPERTY(SyncEngine::Status syncStatus READ syncStatus NOTIFY syncStatusChanged)
+    Q_PROPERTY(QString syncStatusString READ syncStatusString NOTIFY syncStatusChanged)
+#endif
 
 public:
     explicit Event() = default;
@@ -82,11 +93,31 @@ public:
      */
     bool remove();
 
+#ifdef BUILD_EXPERIMENTAL
+    [[nodiscard]] bool syncEnabled() const;
+
+    SyncEngine *addSyncEngine(Account *account);
+
+    [[nodiscard]] SyncEngine::Status syncStatus() const;
+
+    [[nodiscard]] QString syncStatusString() const;
+#endif
+
 public Q_SLOTS:
     void setFileName(const QString &fileName);
 
+#ifdef BUILD_EXPERIMENTAL
+    void setSyncEnabled(bool enabled);
+#endif
+
 Q_SIGNALS:
     void fileNameChanged();
+
+#ifdef BUILD_EXPERIMENTAL
+    void syncEnabledChanged();
+
+    void syncStatusChanged();
+#endif
 
 private:
     QSqlDatabase db();
@@ -101,6 +132,11 @@ private:
     QString m_fileName;
 
     std::vector<std::unique_ptr<Tournament>> m_tournaments;
+
+#ifdef BUILD_EXPERIMENTAL
+    bool m_syncEnabled = false;
+    std::unique_ptr<SyncEngine> m_syncEngine;
+#endif
 
     friend class Tournament;
 };

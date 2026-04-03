@@ -15,7 +15,7 @@
 
 #ifdef BUILD_EXPERIMENTAL
 #include "accountmanager.h"
-#include "tournament/sync/syncengine.h"
+#include "tournament/sync/cloudengine.h"
 #endif
 
 using namespace Qt::Literals::StringLiterals;
@@ -25,9 +25,6 @@ Controller::Controller(QObject *parent)
     , m_playersModel(new PlayersModel(this))
     , m_pairingModel(new PairingModel(this))
     , m_standingsModel(new StandingsModel(this))
-#ifdef BUILD_EXPERIMENTAL
-    , m_accountManager(std::make_unique<AccountManager>())
-#endif
 {
     connect(m_playersModel, &PlayersModel::playerChanged, this, [this](Player *player, PlayersModel::Columns field) {
         Q_UNUSED(field);
@@ -40,7 +37,7 @@ Controller::Controller(QObject *parent)
     });
 
 #ifdef BUILD_EXPERIMENTAL
-    connect(m_accountManager.get(), &AccountManager::openUrl, this, [](const QUrl &url) {
+    connect(&AccountManager::instance(), &AccountManager::openUrl, this, [](const QUrl &url) {
         QDesktopServices::openUrl(url);
     });
 #endif
@@ -330,23 +327,6 @@ StandingsModel *Controller::standingsModel() const
 {
     return m_standingsModel;
 }
-
-#ifdef BUILD_EXPERIMENTAL
-AccountManager *Controller::accountManager() const
-{
-    return m_accountManager.get();
-}
-
-void Controller::uploadTournament()
-{
-    auto account = m_accountManager->first();
-
-    Q_ASSERT(account);
-
-    auto engine = new SyncEngine{account, m_tournament};
-    engine->start();
-}
-#endif
 
 Controller::View Controller::currentView() const
 {

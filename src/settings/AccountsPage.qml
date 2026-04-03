@@ -23,9 +23,15 @@ FormCard.FormCardPage {
     }
 
     FormCard.FormCard {
+        FormCard.FormPlaceholderMessageDelegate {
+            text: KI18n.i18nc("@info:status", "No accounts yet.")
+            icon.name: "system-users-symbolic"
+            visible: accountsRepeater.count === 0
+        }
+
         Repeater {
             id: accountsRepeater
-            model: Controller.accounts
+            model: AccountManager
 
             delegate: ColumnLayout {
                 id: accountDelegate
