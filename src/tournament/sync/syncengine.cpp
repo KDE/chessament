@@ -13,6 +13,8 @@
 #include "account.h"
 #include "tournament.h"
 
+using namespace std::chrono_literals;
+
 namespace
 {
 
@@ -29,6 +31,30 @@ SyncEngine::SyncEngine(Account *account, Tournament *tournament)
 {
     Q_ASSERT(m_account);
     Q_ASSERT(m_tournament);
+
+    m_timer.setSingleShot(true);
+    m_timer.setInterval(2s);
+
+    connect(&m_timer, &QTimer::timeout, this, &SyncEngine::uploadTournament);
+
+    connect(m_tournament, &Tournament::optionChanged, this, &SyncEngine::markDirty);
+    connect(m_tournament, &Tournament::playerChanged, this, &SyncEngine::markDirty);
+    connect(m_tournament, &Tournament::pairingChanged, this, &SyncEngine::markDirty);
+}
+
+SyncEngine::Status SyncEngine::status()
+{
+    return m_status;
+}
+
+void SyncEngine::setStatus(SyncEngine::Status status)
+{
+    if (m_status == status) {
+        return;
+    }
+    qDebug() << "Sync status changed to" << status;
+    m_status = status;
+    Q_EMIT statusChanged();
 }
 
 QCoro::Task<> SyncEngine::upload()
@@ -50,6 +76,8 @@ QCoro::Task<> SyncEngine::upload()
 
 void SyncEngine::start()
 {
+    setStatus(Status::Connecting);
+
     connect(&m_webSocket, &QWebSocket::connected, this, &SyncEngine::onConnected);
     connect(&m_webSocket, &QWebSocket::disconnected, this, &SyncEngine::onDisconnected);
     connect(&m_webSocket, &QWebSocket::errorOccurred, this, &SyncEngine::onError);
@@ -70,7 +98,7 @@ void SyncEngine::start()
 
 void SyncEngine::onConnected()
 {
-    qDebug() << "connected to websocket";
+    setStatus(Status::Online);
 
     connect(&m_webSocket, &QWebSocket::textMessageReceived, this, &SyncEngine::onTextMessageReceived);
 
@@ -79,7 +107,7 @@ void SyncEngine::onConnected()
 
 void SyncEngine::onDisconnected()
 {
-    qDebug() << "disconnected";
+    setStatus(Status::Offline);
 }
 
 void SyncEngine::onError(QAbstractSocket::SocketError error)
@@ -93,8 +121,15 @@ void SyncEngine::onTextMessageReceived(const QString &message)
     std::cout << message.toStdString() << '\n' << std::flush;
 }
 
+void SyncEngine::markDirty()
+{
+    m_timer.start();
+}
+
 void SyncEngine::uploadTournament()
 {
+    qDebug() << "Uploading tournament";
+
     auto tournament = m_tournament->toJson();
     const auto rounds = tournament.take("rounds"_L1);
     const auto json = QJsonObject{

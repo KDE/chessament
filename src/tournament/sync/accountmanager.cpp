@@ -20,6 +20,12 @@ AccountManager::AccountManager()
     loadAccounts();
 }
 
+AccountManager &AccountManager::instance()
+{
+    static AccountManager _instance;
+    return _instance;
+}
+
 void AccountManager::loadAccounts()
 {
     auto config = KSharedConfig::openStateConfig();

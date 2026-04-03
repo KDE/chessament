@@ -415,6 +415,12 @@ Q_SIGNALS:
     void numberOfRoundsChanged();
     void currentRoundChanged();
 
+    void optionChanged();
+
+    void playerChanged();
+
+    void pairingChanged();
+
 private:
     explicit Tournament(Event *event);
 

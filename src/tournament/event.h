@@ -7,6 +7,8 @@
 #include <QSqlDatabase>
 #include <QString>
 
+#include "account.h"
+#include "sync/syncengine.h"
 #include "tournament.h"
 
 /*!
@@ -21,6 +23,9 @@ class Event : public QObject
     QML_UNCREATABLE("")
 
     Q_PROPERTY(QString fileName READ fileName WRITE setFileName NOTIFY fileNameChanged)
+    Q_PROPERTY(bool syncEnabled READ syncEnabled WRITE setSyncEnabled NOTIFY syncEnabledChanged)
+    Q_PROPERTY(SyncEngine::Status syncStatus READ syncStatus NOTIFY syncStatusChanged)
+    Q_PROPERTY(QString syncStatusString READ syncStatusString NOTIFY syncStatusChanged)
 
 public:
     explicit Event() = default;
@@ -73,11 +78,25 @@ public:
      */
     bool remove();
 
+    [[nodiscard]] bool syncEnabled() const;
+
+    SyncEngine *addSyncEngine(Account *account);
+
+    [[nodiscard]] SyncEngine::Status syncStatus() const;
+
+    [[nodiscard]] QString syncStatusString() const;
+
 public Q_SLOTS:
     void setFileName(const QString &fileName);
 
+    void setSyncEnabled(bool enabled);
+
 Q_SIGNALS:
     void fileNameChanged();
+
+    void syncEnabledChanged();
+
+    void syncStatusChanged();
 
 private:
     QSqlDatabase db();
@@ -92,6 +111,9 @@ private:
     QString m_fileName;
 
     std::vector<std::unique_ptr<Tournament>> m_tournaments;
+
+    bool m_syncEnabled = false;
+    std::unique_ptr<SyncEngine> m_syncEngine;
 
     friend class Tournament;
 };

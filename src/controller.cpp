@@ -21,7 +21,6 @@ Controller::Controller(QObject *parent)
     , m_playersModel(new PlayersModel(this))
     , m_pairingModel(new PairingModel(this))
     , m_standingsModel(new StandingsModel(this))
-    , m_accountManager(std::make_unique<AccountManager>())
 {
     connect(m_playersModel, &PlayersModel::playerChanged, this, [this](Player *player, PlayersModel::Columns field) {
         if (field == PlayersModel::Columns::StartingRank) {
@@ -36,7 +35,7 @@ Controller::Controller(QObject *parent)
         Q_EMIT hasCurrentRoundFinishedChanged();
     });
 
-    connect(m_accountManager.get(), &AccountManager::openUrl, this, [](const QUrl &url) {
+    connect(&AccountManager::instance(), &AccountManager::openUrl, this, [](const QUrl &url) {
         QDesktopServices::openUrl(url);
     });
 }
@@ -297,22 +296,6 @@ PairingModel *Controller::pairingModel() const
 StandingsModel *Controller::standingsModel() const
 {
     return m_standingsModel;
-}
-
-AccountManager *Controller::accountManager() const
-{
-    return m_accountManager.get();
-}
-
-void Controller::uploadTournament()
-{
-    auto account = m_accountManager->first();
-
-    Q_ASSERT(account);
-
-    auto engine = new SyncEngine{account, m_tournament};
-    // engine->upload();
-    engine->start();
 }
 
 QString Controller::currentView() const

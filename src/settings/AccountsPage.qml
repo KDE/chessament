@@ -27,7 +27,7 @@ FormCard.FormCardPage {
     FormCard.FormCard {
         Repeater {
             id: accountsRepeater
-            model: Controller.accounts
+            model: AccountManager
 
             delegate: ColumnLayout {
                 id: accountDelegate
