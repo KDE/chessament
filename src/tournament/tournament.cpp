@@ -243,7 +243,7 @@ std::expected<void, QString> Tournament::addPlayer(std::unique_ptr<Player> playe
         const qsizetype board = this->pairings(i).size() + 1;
 
         auto pairing = std::make_unique<Pairing>(board, player.get(), nullptr, Pairing::PartialResult::ZeroBye, Pairing::PartialResult::Unknown);
-        if (auto ok = savePairing(pairing.get(), i + 1); !ok) {
+        if (auto ok = savePairing(pairing.get(), i); !ok) {
             return std::unexpected(ok.error());
         }
 
@@ -634,6 +634,8 @@ std::expected<void, QString> Tournament::addPairing(int roundNumber, std::unique
 
 std::expected<void, QString> Tournament::savePairing(Pairing *pairing, int roundNumber)
 {
+    Q_ASSERT(roundNumber >= 0);
+
     QSqlQuery query(m_event->db());
 
     if (pairing->id().isEmpty()) {
