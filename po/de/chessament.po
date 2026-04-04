@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-03 00:40+0000\n"
+"POT-Creation-Date: 2026-04-04 00:41+0000\n"
 "PO-Revision-Date: 2026-02-15 16:12+0100\n"
 "Last-Translator: Alois Spitzbart <spitz234@hotmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -1074,7 +1074,7 @@ msgid_plural "Saved %1 players."
 msgstr[0] "1 Spieler gespeichert."
 msgstr[1] "%1 Spieler gespeichert."
 
-#: tournament/tiebreaks/aob.h:23 tournament/tournament.cpp:506
+#: tournament/tiebreaks/aob.h:23 tournament/tournament.cpp:507
 #, kde-format
 msgctxt "Tiebreak"
 msgid "Average Buchholz of Opponents"
@@ -1092,7 +1092,7 @@ msgctxt "@info"
 msgid "Unsupported tiebreak option \"%1\""
 msgstr "Nicht unterstützte Tie-Break-Einstellung „%1“"
 
-#: tournament/tiebreaks/buchholz.h:25 tournament/tournament.cpp:488
+#: tournament/tiebreaks/buchholz.h:25 tournament/tournament.cpp:489
 #, kde-format
 msgctxt "Buchholz tiebreak"
 msgid "Buchholz"
@@ -1104,26 +1104,26 @@ msgctxt "Buchholz N tiebreak, N is a number < 0"
 msgid "Buchholz %1"
 msgstr ""
 
-#: tournament/tiebreaks/numberwins.h:22 tournament/tournament.cpp:492
+#: tournament/tiebreaks/numberwins.h:22 tournament/tournament.cpp:493
 #, kde-format
 msgctxt "Number of Wins tiebreak"
 msgid "Number of Wins"
 msgstr "Anzahl der Siege"
 
-#: tournament/tiebreaks/playedblack.h:22 tournament/tournament.cpp:502
+#: tournament/tiebreaks/playedblack.h:22 tournament/tournament.cpp:503
 #, kde-format
 msgctxt "Number of Games Played with Black (over the board) tiebreak"
 msgid "Number of Games Played with Black (over the board)"
 msgstr ""
 
 #: tournament/tiebreaks/points.h:22 tournament/tiebreaks/points.h:27
-#: tournament/tournament.cpp:484
+#: tournament/tournament.cpp:485
 #, kde-format
 msgctxt "Game points"
 msgid "Points"
 msgstr "Punkte"
 
-#: tournament/tiebreaks/won.h:23 tournament/tournament.cpp:498
+#: tournament/tiebreaks/won.h:23 tournament/tournament.cpp:499
 #, fuzzy, kde-format
 #| msgctxt "@label"
 #| msgid "Number of rounds"
@@ -1133,13 +1133,13 @@ msgctxt ""
 msgid "Number of Games Won (over the board)"
 msgstr "Anzahl der Runden"
 
-#: tournament/tournament.cpp:927
+#: tournament/tournament.cpp:930
 #, kde-format
 msgid "An error ocurred while pairing the round: %1"
 msgstr ""
 "Beim Erstellen der Paarungen für diese Runde ist ein Fehler aufgetreten: %1"
 
-#: tournament/tournament.cpp:1153
+#: tournament/tournament.cpp:1163
 #, kde-format
 msgid "Couldn't open file"
 msgstr "Die Datei kann nicht geöffnet werden"

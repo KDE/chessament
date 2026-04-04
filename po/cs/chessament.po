@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-03 00:40+0000\n"
+"POT-Creation-Date: 2026-04-04 00:41+0000\n"
 "PO-Revision-Date: 2025-12-15 13:49+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -837,12 +837,9 @@ msgid "Chessament is a chess tournament manager"
 msgstr ""
 
 #: settings/AccountsPage.qml:21
-#, fuzzy
-#| msgctxt "@title:group"
-#| msgid "Account"
 msgctxt "@title"
 msgid "Accounts"
-msgstr "Účet"
+msgstr "Účty"
 
 #: settings/AccountsPage.qml:24
 #, fuzzy
@@ -853,19 +850,14 @@ msgid "Accounts"
 msgstr "Účet"
 
 #: settings/AccountsPage.qml:45
-#, fuzzy
-#| msgid "Logout"
 msgctxt "@action:button"
 msgid "Logout"
 msgstr "Odhlásit se"
 
 #: settings/AccountsPage.qml:56
-#, fuzzy
-#| msgctxt "@title:group"
-#| msgid "Account"
 msgctxt "@action:button"
 msgid "Add Account"
-msgstr "Účet"
+msgstr "Přidat účet"
 
 #: settings/AddAccountDialog.qml:16
 #, fuzzy
@@ -883,7 +875,7 @@ msgstr ""
 #: settings/AddAccountDialog.qml:35
 msgctxt "@action:button"
 msgid "Continue"
-msgstr ""
+msgstr "Pokračovat"
 
 #: settings/ChessamentConfigurationView.qml:21
 msgctxt "@action:button"
@@ -1089,7 +1081,7 @@ msgstr[0] "1 hráč"
 msgstr[1] "%1 hráči"
 msgstr[2] "%1 hráčů"
 
-#: tournament/tiebreaks/aob.h:23 tournament/tournament.cpp:506
+#: tournament/tiebreaks/aob.h:23 tournament/tournament.cpp:507
 #, kde-format
 msgctxt "Tiebreak"
 msgid "Average Buchholz of Opponents"
@@ -1107,7 +1099,7 @@ msgctxt "@info"
 msgid "Unsupported tiebreak option \"%1\""
 msgstr ""
 
-#: tournament/tiebreaks/buchholz.h:25 tournament/tournament.cpp:488
+#: tournament/tiebreaks/buchholz.h:25 tournament/tournament.cpp:489
 #, kde-format
 msgctxt "Buchholz tiebreak"
 msgid "Buchholz"
@@ -1119,26 +1111,26 @@ msgctxt "Buchholz N tiebreak, N is a number < 0"
 msgid "Buchholz %1"
 msgstr ""
 
-#: tournament/tiebreaks/numberwins.h:22 tournament/tournament.cpp:492
+#: tournament/tiebreaks/numberwins.h:22 tournament/tournament.cpp:493
 #, kde-format
 msgctxt "Number of Wins tiebreak"
 msgid "Number of Wins"
 msgstr ""
 
-#: tournament/tiebreaks/playedblack.h:22 tournament/tournament.cpp:502
+#: tournament/tiebreaks/playedblack.h:22 tournament/tournament.cpp:503
 #, kde-format
 msgctxt "Number of Games Played with Black (over the board) tiebreak"
 msgid "Number of Games Played with Black (over the board)"
 msgstr ""
 
 #: tournament/tiebreaks/points.h:22 tournament/tiebreaks/points.h:27
-#: tournament/tournament.cpp:484
+#: tournament/tournament.cpp:485
 #, kde-format
 msgctxt "Game points"
 msgid "Points"
 msgstr "Body"
 
-#: tournament/tiebreaks/won.h:23 tournament/tournament.cpp:498
+#: tournament/tiebreaks/won.h:23 tournament/tournament.cpp:499
 #, kde-format
 msgctxt ""
 "Number of Games Won (over the board) tiebreak. Different from the 'Number of "
@@ -1146,12 +1138,12 @@ msgctxt ""
 msgid "Number of Games Won (over the board)"
 msgstr ""
 
-#: tournament/tournament.cpp:927
+#: tournament/tournament.cpp:930
 #, kde-format
 msgid "An error ocurred while pairing the round: %1"
 msgstr ""
 
-#: tournament/tournament.cpp:1153
+#: tournament/tournament.cpp:1163
 #, kde-format
 msgid "Couldn't open file"
 msgstr "Soubor nelze otevřít"
