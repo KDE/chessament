@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-04 00:41+0000\n"
+"POT-Creation-Date: 2026-04-05 00:41+0000\n"
 "PO-Revision-Date: 2026-04-01 19:15+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -230,58 +230,58 @@ msgctxt "@title:column"
 msgid "Sex"
 msgstr "الجنس"
 
-#: qml/AddPlayerDialog.qml:17
+#: qml/AddPlayerDialog.qml:19
 msgctxt "@title:window"
 msgid "Add player"
 msgstr "أضف لاعبًا"
 
-#: qml/AddPlayerDialog.qml:54
+#: qml/AddPlayerDialog.qml:56
 msgctxt "@label:textbox"
 msgid "Title"
 msgstr "العنوان"
 
-#: qml/AddPlayerDialog.qml:60
+#: qml/AddPlayerDialog.qml:62
 msgctxt "@label:textbox"
 msgid "Name"
 msgstr "الاسم"
 
-#: qml/AddPlayerDialog.qml:65
+#: qml/AddPlayerDialog.qml:85
 msgctxt "@label:textbox"
 msgid "Rating"
 msgstr "التّقييم"
 
-#: qml/AddPlayerDialog.qml:72
+#: qml/AddPlayerDialog.qml:92
 msgctxt "@label:textbox"
 msgid "National rating"
 msgstr "التقييم الوطني"
 
-#: qml/AddPlayerDialog.qml:79
+#: qml/AddPlayerDialog.qml:99
 msgctxt "@label:textbox"
 msgid "Player ID"
 msgstr "هوية اللاعب"
 
-#: qml/AddPlayerDialog.qml:80 qml/AddPlayerDialog.qml:86
-#: qml/AddPlayerDialog.qml:92 qml/AddPlayerDialog.qml:98
-#: qml/AddPlayerDialog.qml:104
+#: qml/AddPlayerDialog.qml:100 qml/AddPlayerDialog.qml:106
+#: qml/AddPlayerDialog.qml:112 qml/AddPlayerDialog.qml:118
+#: qml/AddPlayerDialog.qml:124
 msgid "Optional"
 msgstr "اختياري"
 
-#: qml/AddPlayerDialog.qml:85
+#: qml/AddPlayerDialog.qml:105
 msgctxt "@label:textbox"
 msgid "Birth date"
 msgstr "تاريخ الميلاد"
 
-#: qml/AddPlayerDialog.qml:91 qml/TournamentSettingsInformation.qml:38
+#: qml/AddPlayerDialog.qml:111 qml/TournamentSettingsInformation.qml:38
 msgctxt "@label:textbox"
 msgid "Federation"
 msgstr "اتحاد"
 
-#: qml/AddPlayerDialog.qml:97
+#: qml/AddPlayerDialog.qml:117
 msgctxt "@label:textbox"
 msgid "Origin"
 msgstr "الأصل"
 
-#: qml/AddPlayerDialog.qml:103
+#: qml/AddPlayerDialog.qml:123
 msgctxt "@label:textbox"
 msgid "Sex"
 msgstr "الجنس"
@@ -1052,7 +1052,7 @@ msgctxt "@info"
 msgid "File format not supported."
 msgstr "صيغة الملف غير متاحة."
 
-#: tournament/ratinglists/ratinglist.cpp:348
+#: tournament/ratinglists/ratinglist.cpp:416
 #, kde-format
 msgctxt "@info:progress"
 msgid "Saved 1 player."

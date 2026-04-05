@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-04 00:41+0000\n"
+"POT-Creation-Date: 2026-04-05 00:41+0000\n"
 "PO-Revision-Date: 2025-05-12 14:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -229,58 +229,58 @@ msgctxt "@title:column"
 msgid "Sex"
 msgstr "性别"
 
-#: qml/AddPlayerDialog.qml:17
+#: qml/AddPlayerDialog.qml:19
 msgctxt "@title:window"
 msgid "Add player"
 msgstr "添加玩家"
 
-#: qml/AddPlayerDialog.qml:54
+#: qml/AddPlayerDialog.qml:56
 msgctxt "@label:textbox"
 msgid "Title"
 msgstr "标题"
 
-#: qml/AddPlayerDialog.qml:60
+#: qml/AddPlayerDialog.qml:62
 msgctxt "@label:textbox"
 msgid "Name"
 msgstr "姓名"
 
-#: qml/AddPlayerDialog.qml:65
+#: qml/AddPlayerDialog.qml:85
 msgctxt "@label:textbox"
 msgid "Rating"
 msgstr "评分"
 
-#: qml/AddPlayerDialog.qml:72
+#: qml/AddPlayerDialog.qml:92
 msgctxt "@label:textbox"
 msgid "National rating"
 msgstr "国家级评级"
 
-#: qml/AddPlayerDialog.qml:79
+#: qml/AddPlayerDialog.qml:99
 msgctxt "@label:textbox"
 msgid "Player ID"
 msgstr "玩家 ID"
 
-#: qml/AddPlayerDialog.qml:80 qml/AddPlayerDialog.qml:86
-#: qml/AddPlayerDialog.qml:92 qml/AddPlayerDialog.qml:98
-#: qml/AddPlayerDialog.qml:104
+#: qml/AddPlayerDialog.qml:100 qml/AddPlayerDialog.qml:106
+#: qml/AddPlayerDialog.qml:112 qml/AddPlayerDialog.qml:118
+#: qml/AddPlayerDialog.qml:124
 msgid "Optional"
 msgstr "可选"
 
-#: qml/AddPlayerDialog.qml:85
+#: qml/AddPlayerDialog.qml:105
 msgctxt "@label:textbox"
 msgid "Birth date"
 msgstr "出生日期"
 
-#: qml/AddPlayerDialog.qml:91 qml/TournamentSettingsInformation.qml:38
+#: qml/AddPlayerDialog.qml:111 qml/TournamentSettingsInformation.qml:38
 msgctxt "@label:textbox"
 msgid "Federation"
 msgstr "已知实例"
 
-#: qml/AddPlayerDialog.qml:97
+#: qml/AddPlayerDialog.qml:117
 msgctxt "@label:textbox"
 msgid "Origin"
 msgstr "来源"
 
-#: qml/AddPlayerDialog.qml:103
+#: qml/AddPlayerDialog.qml:123
 msgctxt "@label:textbox"
 msgid "Sex"
 msgstr "性别"
@@ -1030,7 +1030,7 @@ msgctxt "@info"
 msgid "File format not supported."
 msgstr ""
 
-#: tournament/ratinglists/ratinglist.cpp:348
+#: tournament/ratinglists/ratinglist.cpp:416
 #, kde-format
 msgctxt "@info:progress"
 msgid "Saved 1 player."

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-04 00:41+0000\n"
+"POT-Creation-Date: 2026-04-05 00:41+0000\n"
 "PO-Revision-Date: 2026-04-01 04:14+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -230,58 +230,58 @@ msgctxt "@title:column"
 msgid "Sex"
 msgstr "სქესი"
 
-#: qml/AddPlayerDialog.qml:17
+#: qml/AddPlayerDialog.qml:19
 msgctxt "@title:window"
 msgid "Add player"
 msgstr "მოთამაშის დამატება"
 
-#: qml/AddPlayerDialog.qml:54
+#: qml/AddPlayerDialog.qml:56
 msgctxt "@label:textbox"
 msgid "Title"
 msgstr "სათაური"
 
-#: qml/AddPlayerDialog.qml:60
+#: qml/AddPlayerDialog.qml:62
 msgctxt "@label:textbox"
 msgid "Name"
 msgstr "სახელი"
 
-#: qml/AddPlayerDialog.qml:65
+#: qml/AddPlayerDialog.qml:85
 msgctxt "@label:textbox"
 msgid "Rating"
 msgstr "რეიტინგი"
 
-#: qml/AddPlayerDialog.qml:72
+#: qml/AddPlayerDialog.qml:92
 msgctxt "@label:textbox"
 msgid "National rating"
 msgstr "ეროვნული რეიტინგი"
 
-#: qml/AddPlayerDialog.qml:79
+#: qml/AddPlayerDialog.qml:99
 msgctxt "@label:textbox"
 msgid "Player ID"
 msgstr "მოთამაშის ID"
 
-#: qml/AddPlayerDialog.qml:80 qml/AddPlayerDialog.qml:86
-#: qml/AddPlayerDialog.qml:92 qml/AddPlayerDialog.qml:98
-#: qml/AddPlayerDialog.qml:104
+#: qml/AddPlayerDialog.qml:100 qml/AddPlayerDialog.qml:106
+#: qml/AddPlayerDialog.qml:112 qml/AddPlayerDialog.qml:118
+#: qml/AddPlayerDialog.qml:124
 msgid "Optional"
 msgstr "არასავალდებულო"
 
-#: qml/AddPlayerDialog.qml:85
+#: qml/AddPlayerDialog.qml:105
 msgctxt "@label:textbox"
 msgid "Birth date"
 msgstr "დაბადების თარიღი"
 
-#: qml/AddPlayerDialog.qml:91 qml/TournamentSettingsInformation.qml:38
+#: qml/AddPlayerDialog.qml:111 qml/TournamentSettingsInformation.qml:38
 msgctxt "@label:textbox"
 msgid "Federation"
 msgstr "ფედერაცია"
 
-#: qml/AddPlayerDialog.qml:97
+#: qml/AddPlayerDialog.qml:117
 msgctxt "@label:textbox"
 msgid "Origin"
 msgstr "საწყისი"
 
-#: qml/AddPlayerDialog.qml:103
+#: qml/AddPlayerDialog.qml:123
 msgctxt "@label:textbox"
 msgid "Sex"
 msgstr "სქესი"
@@ -1037,7 +1037,7 @@ msgctxt "@info"
 msgid "File format not supported."
 msgstr "ფაილის ფორმატი მხარდაჭერილი არაა."
 
-#: tournament/ratinglists/ratinglist.cpp:348
+#: tournament/ratinglists/ratinglist.cpp:416
 #, kde-format
 msgctxt "@info:progress"
 msgid "Saved 1 player."
