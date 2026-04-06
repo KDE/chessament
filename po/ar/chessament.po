@@ -828,7 +828,7 @@ msgstr "نائب كبير الحكّام"
 #: qml/WelcomePage.qml:21
 msgctxt "@title"
 msgid "Welcome to Chessament"
-msgstr "مرحبا بك في شطرنج"
+msgstr "مرحبًا بك في شطرنج"
 
 #: qml/WelcomePage.qml:22
 msgctxt "@info"
