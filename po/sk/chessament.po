@@ -1,0 +1,1143 @@
+# Slovak translations for chessament package.
+# Copyright (C) 2026 This file is copyright:
+# This file is distributed under the same license as the chessament package.
+# Automatically generated, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: chessament\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2026-04-05 00:41+0000\n"
+"PO-Revision-Date: 2026-04-05 00:41+0000\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: sk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+
+#: byesmodel.cpp:68
+#, kde-format
+msgctxt "Pieces Color · Player Name"
+msgid "%1 · %2"
+msgstr "%1 · %2"
+
+#: chessamentapplication.cpp:23
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "New tournament…"
+msgstr "Nový turnaj…"
+
+#: chessamentapplication.cpp:44
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Import tournament report…"
+msgstr "Importovať správu o turnaji…"
+
+#: chessamentapplication.cpp:53
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Export tournament report…"
+msgstr "Exportovať správu o turnaji…"
+
+#: controller.cpp:168
+#, kde-format
+msgid "Couldn't export tournament."
+msgstr "Nepodarilo sa exportovať turnaj."
+
+#: documents.cpp:21
+#, kde-format
+msgctxt "@title"
+msgid "Starting Rank"
+msgstr "Počiatočné poradie"
+
+#: documents.cpp:58
+#, kde-format
+msgctxt "@title"
+msgid "Round %1 Pairings"
+msgstr "Párovanie kola %1"
+
+#: documents.cpp:97
+#, kde-format
+msgctxt "@title"
+msgid "Standings After Round %1"
+msgstr "Poradie po kole %1"
+
+#: documents.cpp:99
+#, kde-format
+msgctxt "@title"
+msgid "Provisional Standings After Round %1"
+msgstr "Predbežné poradie po kole %1"
+
+#: documents.cpp:103
+#, kde-format
+msgctxt "@title"
+msgid "Final Standings"
+msgstr "Konečné skóre"
+
+#: documents.cpp:105
+#, kde-format
+msgctxt "@title"
+msgid "Provisional Final Standings"
+msgstr "Predbežné konečné poradie"
+
+#: main.cpp:58 qml/WelcomePage.qml:16
+#, kde-format
+msgctxt "@title"
+msgid "Chessament"
+msgstr "Chessament"
+
+#: main.cpp:62
+#, kde-format
+msgid "Chess Tournament Manager"
+msgstr "Správca šachových turnajov"
+
+#: main.cpp:66
+#, kde-format
+msgid "© 2024–2026 Manuel Alcaraz Zambrano"
+msgstr "© 2024–2026 Manuel Alcaraz Zambrano"
+
+#: main.cpp:67
+#, kde-format
+msgctxt "@info:credit"
+msgid "Manuel Alcaraz Zambrano"
+msgstr "Manuel Alcaraz Zambrano"
+
+#: main.cpp:68
+#, kde-format
+msgctxt "@info:credit"
+msgid "Author & Maintainer"
+msgstr "Autor a správca"
+
+#: main.cpp:71
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Roman Paholík"
+
+#: main.cpp:71
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "wizzardsk@gmail.com"
+
+#: main.cpp:73
+#, kde-format
+msgid "Swiss-system chess tournament pairing engine."
+msgstr "Párovací engine pre šachové turnaje švajčiarskym systémom."
+
+#: main.cpp:82
+#, kde-format
+msgctxt "Command line option description"
+msgid "Import Tournament Report File."
+msgstr "Importovať súbor správy o turnaji."
+
+#: pairingmodel.cpp:97
+#, kde-format
+msgctxt "@title:column Board Number"
+msgid "Board"
+msgstr "Hrací plán"
+
+#: pairingmodel.cpp:99
+#, kde-format
+msgctxt "@title:column White Player Starting Rank Number"
+msgid "№"
+msgstr "№"
+
+#: pairingmodel.cpp:101
+#, kde-format
+msgctxt "@title:column Name of the White Player"
+msgid "White Player"
+msgstr "Biely hráč"
+
+#: pairingmodel.cpp:103
+#, kde-format
+msgctxt "@title:column Game Result"
+msgid "Result"
+msgstr "Výsledok"
+
+#: pairingmodel.cpp:105
+#, kde-format
+msgctxt "@title:column Name of the Black Player"
+msgid "Black Player"
+msgstr "Čierny hráč"
+
+#: pairingmodel.cpp:107
+#, kde-format
+msgctxt "@title:column Black Player Starting Rank Number"
+msgid "№"
+msgstr "№"
+
+#: playersmodel.cpp:199 standingsmodel.cpp:92
+#, kde-format
+msgctxt "@title:column Player Starting Rank Number"
+msgid "№"
+msgstr "№"
+
+#: playersmodel.cpp:201 standingsmodel.cpp:94
+#, kde-format
+msgctxt "@title:column Player Title"
+msgid "Title"
+msgstr "Titul"
+
+#: playersmodel.cpp:203 standingsmodel.cpp:96
+#, kde-format
+msgctxt "@title:column Player Name"
+msgid "Name"
+msgstr "Meno"
+
+#: playersmodel.cpp:205
+#, kde-format
+msgctxt "@title:column Player Rating"
+msgid "Rating"
+msgstr "Rating"
+
+#: playersmodel.cpp:207
+#, kde-format
+msgctxt "@title:column Player National Rating"
+msgid "National Rating"
+msgstr "Národný rating"
+
+#: playersmodel.cpp:209
+#, kde-format
+msgctxt "@title:column"
+msgid "Player ID"
+msgstr "ID hráča"
+
+#: playersmodel.cpp:211
+#, kde-format
+msgctxt "@title:column"
+msgid "Birth date"
+msgstr "Dátum narodenia"
+
+#: playersmodel.cpp:213
+#, kde-format
+msgctxt "@title:column Player Federation"
+msgid "Federation"
+msgstr "Voľby:"
+
+#: playersmodel.cpp:215
+#, kde-format
+msgctxt "@title:column Player Origin"
+msgid "Origin"
+msgstr "Pôvod"
+
+#: playersmodel.cpp:217
+#, kde-format
+msgctxt "@title:column"
+msgid "Sex"
+msgstr "Pohlavie"
+
+#: qml/AddPlayerDialog.qml:19
+msgctxt "@title:window"
+msgid "Add player"
+msgstr "Pridať hráča"
+
+#: qml/AddPlayerDialog.qml:56
+msgctxt "@label:textbox"
+msgid "Title"
+msgstr "Názov"
+
+#: qml/AddPlayerDialog.qml:62
+msgctxt "@label:textbox"
+msgid "Name"
+msgstr "Meno"
+
+#: qml/AddPlayerDialog.qml:85
+msgctxt "@label:textbox"
+msgid "Rating"
+msgstr "Rating"
+
+#: qml/AddPlayerDialog.qml:92
+msgctxt "@label:textbox"
+msgid "National rating"
+msgstr "Národný rating"
+
+#: qml/AddPlayerDialog.qml:99
+msgctxt "@label:textbox"
+msgid "Player ID"
+msgstr "ID hráča"
+
+#: qml/AddPlayerDialog.qml:100 qml/AddPlayerDialog.qml:106
+#: qml/AddPlayerDialog.qml:112 qml/AddPlayerDialog.qml:118
+#: qml/AddPlayerDialog.qml:124
+msgid "Optional"
+msgstr "Voliteľné"
+
+#: qml/AddPlayerDialog.qml:105
+msgctxt "@label:textbox"
+msgid "Birth date"
+msgstr "Dátum narodenia"
+
+#: qml/AddPlayerDialog.qml:111 qml/TournamentSettingsInformation.qml:38
+msgctxt "@label:textbox"
+msgid "Federation"
+msgstr "Voľby:"
+
+#: qml/AddPlayerDialog.qml:117
+msgctxt "@label:textbox"
+msgid "Origin"
+msgstr "Pôvod"
+
+#: qml/AddPlayerDialog.qml:123
+msgctxt "@label:textbox"
+msgid "Sex"
+msgstr "Pohlavie"
+
+#: qml/AddTiebreakDialog.qml:20
+msgctxt "@title:window"
+msgid "Add Tiebreak"
+msgstr "Pridať rozstrel"
+
+#: qml/components/MenuBar.qml:17
+msgctxt "@action:menu"
+msgid "File"
+msgstr "Súbor"
+
+#: qml/components/MenuBar.qml:39
+msgctxt "@action:menu"
+msgid "View"
+msgstr "Zobraziť"
+
+#: qml/components/MenuBar.qml:47
+msgctxt "@action:menu"
+msgid "Settings"
+msgstr "Nastavenia"
+
+#: qml/components/MenuBar.qml:58
+msgctxt "@action:menu"
+msgid "Help"
+msgstr "Pomocník"
+
+#: qml/components/TiebreakDelegate.qml:31
+#: qml/components/TiebreakDelegate.qml:36
+msgctxt "@action:button"
+msgid "Configure tiebreak"
+msgstr "Nastaviť rozstrel"
+
+#: qml/components/TiebreakDelegate.qml:52
+msgctxt "@action:button Move tiebreak up"
+msgid "Move Up"
+msgstr "Posunúť nahor"
+
+#: qml/components/TiebreakDelegate.qml:57
+msgctxt "@action:button Move tiebreak up"
+msgid "Move up"
+msgstr "Posunúť nahor"
+
+#: qml/components/TiebreakDelegate.qml:64
+msgctxt "@action:button Move tiebreak down"
+msgid "Move Down"
+msgstr "Posunúť nadol"
+
+#: qml/components/TiebreakDelegate.qml:69
+msgctxt "@action:button Move tiebreak down"
+msgid "Move down"
+msgstr "Posunúť nadol"
+
+#: qml/components/TiebreakDelegate.qml:76
+msgctxt "@action:button"
+msgid "Delete Tiebreak"
+msgstr "Odstrániť rozstrel"
+
+#: qml/components/TiebreakDelegate.qml:81
+msgctxt "@action:button"
+msgid "Delete tiebreak"
+msgstr "Odstrániť rozstrel"
+
+#: qml/DeletePairingsDialog.qml:17
+msgctxt "@title"
+msgid "Remove pairings"
+msgstr "Odstrániť párovania"
+
+#: qml/DeletePairingsDialog.qml:25
+msgctxt "@action:check"
+msgid "Keep byes"
+msgstr "Zachovať voľné kolá"
+
+#: qml/DeletePairingsDialog.qml:33
+msgctxt "@action:button Remove pairings"
+msgid "Remove"
+msgstr "Odstrániť"
+
+#: qml/Main.qml:21
+msgctxt "@title:window"
+msgid "Chessament"
+msgstr "Chessament"
+
+#: qml/Main.qml:102
+msgctxt "@title"
+msgid "Error"
+msgstr "Chyba"
+
+#: qml/NewTournamentDialog.qml:17
+msgctxt "@title"
+msgid "New tournament"
+msgstr "Nový turnaj"
+
+#: qml/NewTournamentDialog.qml:30
+msgctxt "@label:textbox tournament name"
+msgid "Name:"
+msgstr "Názov:"
+
+#: qml/NewTournamentDialog.qml:34
+msgctxt "@label"
+msgid "Format"
+msgstr "Formát"
+
+#: qml/NewTournamentDialog.qml:35
+msgctxt "@label"
+msgid "Swiss system"
+msgstr "Švajčiarsky systém"
+
+#: qml/NewTournamentDialog.qml:40
+msgctxt "@label"
+msgid "Number of rounds"
+msgstr "Počet kôl"
+
+#: qml/PairingsPage.qml:48
+msgctxt "@option:check"
+msgid "Hide finished games"
+msgstr "Skryť dokončené partie"
+
+#: qml/PairingsPage.qml:61 qml/PlayersPage.qml:113 qml/StandingsPage.qml:50
+msgctxt "@action:intoolbar"
+msgid "Print…"
+msgstr "Tlačiť..."
+
+#: qml/PairingsPage.qml:66 qml/PlayersPage.qml:118 qml/StandingsPage.qml:55
+msgctxt "@action:intoolbar"
+msgid "Export as PDF…"
+msgstr "Exportovať ako PDF…"
+
+#: qml/PairingsPage.qml:75
+msgid "Round %1"
+msgstr "Kolo %1"
+
+#: qml/PairingsPage.qml:93
+msgctxt "@action:intoolbar"
+msgid "Remove pairings of this and following rounds…"
+msgstr "Odstrániť párovania tohto a nasledujúcich kôl…"
+
+#: qml/PairingsPage.qml:107
+msgctxt "@info"
+msgid "The tournament hasn't started yet."
+msgstr "Turnaj sa ešte nezačal."
+
+#: qml/PairingsPage.qml:107
+msgctxt "@info"
+msgid "Round %1 has finished."
+msgstr "Kolo %1 skončilo."
+
+#: qml/PairingsPage.qml:111
+msgctxt "@action:button"
+msgid "Pair Round %1…"
+msgstr "Párovať kolo %1…"
+
+#: qml/PairingsPage.qml:154
+msgctxt "@info:placeholder"
+msgid "No pairings for round %1 yet"
+msgstr "Zatiaľ žiadne párovania pre kolo %1"
+
+#: qml/PairingsPage.qml:156
+msgctxt "@info:placeholder"
+msgid "All games of round %1 have finished"
+msgstr "Všetky partie kola %1 sa skončili"
+
+#: qml/PairRoundDialog.qml:21
+msgctxt "@title %1 is a number >= 1"
+msgid "Pair Round %1"
+msgstr "Párovať kolo %1"
+
+#: qml/PairRoundDialog.qml:29
+msgctxt "@info"
+msgid "All players will be paired."
+msgstr "Všetci hráči budú spárovaní."
+
+#: qml/PairRoundDialog.qml:29
+msgctxt "@info %1 is a number"
+msgid "The following player won't be paired: %2"
+msgid_plural "The following %1 players won't be paired: %2"
+msgstr[0] "Nasledujúci hráč nebude spárovaný: %2"
+msgstr[1] "Nasledujúci %1 hráči nebudú spárovaní: %2"
+msgstr[2] "Nasledujúcich %1 hráčov nebude spárovaných: %2"
+
+#: qml/PairRoundDialog.qml:39
+msgctxt "@option:check"
+msgid "Sort players"
+msgstr "Zoradiť hráčov"
+
+#: qml/PairRoundDialog.qml:46
+msgctxt "@label:listbox"
+msgid "First player color:"
+msgstr "Farba prvého hráča:"
+
+#: qml/PairRoundDialog.qml:54
+msgctxt "@item:inlistbox As in 'Random color'"
+msgid "Random"
+msgstr "Náhodná"
+
+#: qml/PairRoundDialog.qml:58 tournament/pairing.h:78
+#, kde-format
+msgctxt "@item:inlistbox As in 'White pieces'"
+msgid "White"
+msgstr "Biely"
+
+#: qml/PairRoundDialog.qml:62 tournament/pairing.h:80
+#, kde-format
+msgctxt "@item:inlistbox As in 'Black pieces'"
+msgid "Black"
+msgstr "Čierny"
+
+#: qml/player/PlayerDetails.qml:17
+msgctxt "@title:window"
+msgid "Details of player \"%1\""
+msgstr "Podrobnosti hráča „%1“"
+
+#: qml/player/PlayerDetails.qml:22
+msgctxt "@action:button"
+msgid "Pairings"
+msgstr "Párovania"
+
+#: qml/player/PlayerPairingsPage.qml:21
+msgctxt "@title"
+msgid "Pairings"
+msgstr "Párovania"
+
+#: qml/player/PlayerPairingsPage.qml:26
+msgctxt "@action:button"
+msgid "Retire player"
+msgstr "Vyradiť hráča"
+
+#: qml/player/PlayerPairingsPage.qml:46
+msgctxt "@item:inlistbox Available to play"
+msgid "Available"
+msgstr "K dispozícii"
+
+#: qml/player/PlayerPairingsPage.qml:83 qml/TournamentSettingsFormat.qml:42
+msgctxt "@title:group"
+msgid "Pairings"
+msgstr "Párovania"
+
+#: qml/player/PlayerPairingsPage.qml:108
+msgctxt "@info:label"
+msgid "Round %1"
+msgstr "Kolo %1"
+
+#: qml/PlayersPage.qml:97
+msgctxt "@action:intoolbar Open player details"
+msgid "Details…"
+msgstr "Podrobnosti..."
+
+#: qml/PlayersPage.qml:103
+msgctxt "@action:intoolbar"
+msgid "Sort Players…"
+msgstr "Zoradiť hráčov…"
+
+#: qml/PlayersPage.qml:124
+msgctxt "@action:intoolbar"
+msgid "Add Player…"
+msgstr "Pridať hráča…"
+
+#: qml/PlayersPage.qml:135
+msgctxt "@action:inmenu"
+msgid "Open Player Details"
+msgstr "Otvoriť podrobnosti hráča"
+
+#: qml/PlayersPage.qml:232
+msgctxt "@info:placeholder"
+msgid "No players found"
+msgstr "Nenašli sa žiadni hráči"
+
+#: qml/PlayersPage.qml:232
+msgctxt "@info:placeholder"
+msgid "No players yet"
+msgstr "Zatiaľ žiadni hráči"
+
+#: qml/PlayersPage.qml:236
+msgctxt "@action:button"
+msgid "Add Player…"
+msgstr "Pridať hráča…"
+
+#: qml/PlayersPage.qml:255
+msgctxt "@info:status Number of players"
+msgid "1 player"
+msgid_plural "%1 players"
+msgstr[0] "1 hráč"
+msgstr[1] "%1 hráči"
+msgstr[2] "%1 hráčov"
+
+#: qml/PlayersPage.qml:256
+msgctxt "@info:status Number of rated players"
+msgid "1 rated"
+msgid_plural "%1 rated"
+msgstr[0] "1 hodnotený"
+msgstr[1] "%1 hodnotení"
+msgstr[2] "%1 hodnotených"
+
+#: qml/PlayersPage.qml:258
+msgctxt "@info:status Total number of players (Number of players rated)"
+msgid "%1 (%2)"
+msgstr "%1 (%2)"
+
+#: qml/ResultsFooter.qml:43
+msgctxt "@action:intoolbar"
+msgid "*"
+msgstr "*"
+
+#: qml/ResultsFooter.qml:54
+msgctxt "@action:intoolbar"
+msgid "1-0"
+msgstr "1-0"
+
+#: qml/ResultsFooter.qml:62
+msgctxt "@action:intoolbar"
+msgid "½-½"
+msgstr "½-½"
+
+#: qml/ResultsFooter.qml:70
+msgctxt "@action:intoolbar"
+msgid "0-1"
+msgstr "0-1"
+
+#: qml/ResultsFooter.qml:81
+msgctxt "@action:intoolbar"
+msgid "1F-0F"
+msgstr "1F-0F"
+
+#: qml/ResultsFooter.qml:89
+msgctxt "@action:intoolbar"
+msgid "0F-1F"
+msgstr "0F-1F"
+
+#: qml/ResultsFooter.qml:97
+msgctxt "@action:intoolbar"
+msgid "0F-0F"
+msgstr "0F-0F"
+
+#: qml/ResultsFooter.qml:107
+msgctxt "@action:intoolbar Other game results"
+msgid "Other"
+msgstr "Iné"
+
+#: qml/ResultsFooter.qml:119
+msgctxt "@action:intoolbar"
+msgid "1U-0U"
+msgstr "1U-0U"
+
+#: qml/ResultsFooter.qml:126
+msgctxt "@action:intoolbar"
+msgid "½U-½U"
+msgstr "½U-½U"
+
+#: qml/ResultsFooter.qml:133
+msgctxt "@action:intoolbar"
+msgid "0U-1U"
+msgstr "0U-1U"
+
+#: qml/ResultsFooter.qml:141
+msgctxt "@action:intoolbar"
+msgid "½U-0U"
+msgstr "½U-0U"
+
+#: qml/ResultsFooter.qml:148
+msgctxt "@action:intoolbar"
+msgid "0U-½U"
+msgstr "0U-½U"
+
+#: qml/ResultsFooter.qml:155
+msgctxt "@action:intoolbar"
+msgid "0U-0U"
+msgstr "0U-0U"
+
+#: qml/ResultsFooter.qml:163
+msgctxt "@action:intoolbar"
+msgid "½-0"
+msgstr "½-0"
+
+#: qml/ResultsFooter.qml:170
+msgctxt "@action:intoolbar"
+msgid "0-0"
+msgstr "0-0"
+
+#: qml/ResultsFooter.qml:177
+msgctxt "@action:intoolbar"
+msgid "0-½"
+msgstr "0-½"
+
+#: qml/Sidebar.qml:56
+msgid "Players"
+msgstr "Hráči"
+
+#: qml/Sidebar.qml:63
+msgid "Pairings"
+msgstr "Párovania"
+
+#: qml/Sidebar.qml:70
+msgid "Standings"
+msgstr "Konečné skóre"
+
+#: qml/Sidebar.qml:94
+msgctxt "@action:button"
+msgid "Settings"
+msgstr "Nastavenia"
+
+#: qml/SortPlayersDialog.qml:18
+msgctxt "@title"
+msgid "Sort Players"
+msgstr "Zoradiť hráčov"
+
+#: qml/SortPlayersDialog.qml:27
+msgctxt "@info"
+msgid ""
+"Changing the initial ranking after the fourth round has been paired is not "
+"allowed in official tournaments."
+msgstr ""
+"Zmena počiatočného poradia po spárovaní štvrtého kola nie je v oficiálnych "
+"turnajoch povolená."
+
+#: qml/StandingsPage.qml:67 qml/StandingsPage.qml:77
+msgctxt "@item:inlistbox"
+msgid "Final Standings"
+msgstr "Konečné skóre"
+
+#: qml/StandingsPage.qml:69 qml/StandingsPage.qml:79
+msgctxt "@item:inlistbox Standings After Round %1"
+msgid "After Round %1"
+msgstr "Po kole %1"
+
+#: qml/StandingsPage.qml:129
+msgctxt "@info:placeholder"
+msgid "No standings yet"
+msgstr "Zatiaľ žiadne poradie"
+
+#: qml/TiebreakDialog.qml:18
+msgctxt "@title:window"
+msgid "Edit Tiebreak"
+msgstr "Upraviť rozstrel"
+
+#: qml/TournamentSettings.qml:17
+msgctxt "@action:button"
+msgid "Information"
+msgstr "Informácia"
+
+#: qml/TournamentSettings.qml:23
+msgctxt "@action:button"
+msgid "Format"
+msgstr "Formát"
+
+#: qml/TournamentSettings.qml:29
+msgctxt "@action:button"
+msgid "Calendar"
+msgstr "Kalendár"
+
+#: qml/TournamentSettingsCalendar.qml:15
+msgctxt "@title"
+msgid "Calendar"
+msgstr "Kalendár"
+
+#: qml/TournamentSettingsCalendar.qml:30
+msgctxt "round number"
+msgid "Round %1"
+msgstr "Kolo %1"
+
+#: qml/TournamentSettingsFormat.qml:17
+msgctxt "@title"
+msgid "Format"
+msgstr "Formát"
+
+#: qml/TournamentSettingsFormat.qml:20
+msgctxt "@title:group"
+msgid "Format"
+msgstr "Formát"
+
+#: qml/TournamentSettingsFormat.qml:24
+msgid "Swiss system"
+msgstr "Švajčiarsky systém"
+
+#: qml/TournamentSettingsFormat.qml:28
+msgid "Rounds"
+msgstr "Kolá"
+
+#: qml/TournamentSettingsFormat.qml:46
+msgid "Pairing engine"
+msgstr "Párovací engine"
+
+#: qml/TournamentSettingsFormat.qml:47
+msgid "bbpPairings"
+msgstr "bbpPairings"
+
+#: qml/TournamentSettingsFormat.qml:53
+msgid "Pairing allocated bye"
+msgstr "Párovanie pridelených voľných kôl"
+
+#: qml/TournamentSettingsFormat.qml:54
+msgid "The value of the pairing allocated bye"
+msgstr "Hodnota pridelených voľných kôl pri párovaní"
+
+#: qml/TournamentSettingsFormat.qml:60
+msgctxt "@title:group"
+msgid "Tiebreaks"
+msgstr "Rozstrely"
+
+#: qml/TournamentSettingsFormat.qml:84
+msgctxt "@action:button"
+msgid "Add Tiebreak"
+msgstr "Pridať rozstrel"
+
+#: qml/TournamentSettingsInformation.qml:12
+msgctxt "@title"
+msgid "Information"
+msgstr "Informácie"
+
+#: qml/TournamentSettingsInformation.qml:15
+msgctxt "@title:group"
+msgid "Basic details"
+msgstr "Základné údaje"
+
+#: qml/TournamentSettingsInformation.qml:20
+msgctxt "@label:textbox"
+msgid "Tournament name"
+msgstr "Názov turnaja"
+
+#: qml/TournamentSettingsInformation.qml:29
+msgctxt "@label:textbox"
+msgid "City"
+msgstr "Mesto"
+
+#: qml/TournamentSettingsInformation.qml:47
+msgctxt "@label:textbox"
+msgid "Chief arbiter"
+msgstr "Hlavný rozhodca"
+
+#: qml/TournamentSettingsInformation.qml:56
+msgctxt "@label:textbox"
+msgid "Deputy chief arbiter"
+msgstr "Zástupca hlavného rozhodcu"
+
+#: qml/WelcomePage.qml:21
+msgctxt "@title"
+msgid "Welcome to Chessament"
+msgstr "Vitajte v Chessamente"
+
+#: qml/WelcomePage.qml:22
+msgctxt "@info"
+msgid "Chessament is a chess tournament manager"
+msgstr "Chessament je správca šachových turnajov"
+
+#: settings/AccountsPage.qml:21
+msgctxt "@title"
+msgid "Accounts"
+msgstr "Účty"
+
+#: settings/AccountsPage.qml:24
+msgctxt "@title:group"
+msgid "Accounts"
+msgstr "Kontá"
+
+#: settings/AccountsPage.qml:45
+msgctxt "@action:button"
+msgid "Logout"
+msgstr "Odhlásenie"
+
+#: settings/AccountsPage.qml:56
+msgctxt "@action:button"
+msgid "Add Account"
+msgstr "Pridať účet"
+
+#: settings/AddAccountDialog.qml:16
+msgctxt "@title"
+msgid "Add Account"
+msgstr "Pridať účet"
+
+#: settings/AddAccountDialog.qml:24
+msgctxt "@label:textbox"
+msgid "Server URL"
+msgstr "URL servera"
+
+#: settings/AddAccountDialog.qml:35
+msgctxt "@action:button"
+msgid "Continue"
+msgstr "Pokračovať"
+
+#: settings/ChessamentConfigurationView.qml:21
+msgctxt "@action:button"
+msgid "General"
+msgstr "Všeobecné:"
+
+#: settings/ChessamentConfigurationView.qml:32
+msgctxt "@action:button"
+msgid "Accounts"
+msgstr "Účty"
+
+#: settings/ChessamentConfigurationView.qml:44
+msgctxt "@action:button"
+msgid "Rating Lists"
+msgstr "Ratingové listiny"
+
+#: settings/GeneralPage.qml:16
+msgctxt "@title"
+msgid "General"
+msgstr "Všeobecné"
+
+#: settings/GeneralPage.qml:19
+msgctxt "@title:group"
+msgid "General"
+msgstr "Všeobecné"
+
+#: settings/GeneralPage.qml:24
+msgctxt "@option:check"
+msgid "Automatically open exported PDF files"
+msgstr "Automaticky otvoriť exportované súbory PDF"
+
+#: settings/RatingListsPage.qml:22 settings/RatingListsPage.qml:128
+msgctxt "@title"
+msgid "Rating Lists"
+msgstr "Ratingové listiny"
+
+#: settings/RatingListsPage.qml:27
+msgctxt "@title:window"
+msgid "Add Rating List"
+msgstr "Pridať ratingovú listinu"
+
+#: settings/RatingListsPage.qml:32
+msgctxt "@action:button"
+msgid "Import"
+msgstr "Importovať"
+
+#: settings/RatingListsPage.qml:47
+msgctxt "@info:label"
+msgid "Name"
+msgstr "Názov"
+
+#: settings/RatingListsPage.qml:52
+msgctxt "@info:label"
+msgid "Rating list URL"
+msgstr "URL ratingovej listiny"
+
+#: settings/RatingListsPage.qml:72
+msgctxt "@title:window"
+msgid "Importing Rating List"
+msgstr "Importovanie ratingovej listiny"
+
+#: settings/RatingListsPage.qml:112
+msgctxt "@title"
+msgid "Delete Rating List"
+msgstr "Odstrániť ratingovú listinu"
+
+#: settings/RatingListsPage.qml:120
+msgctxt "@action:button Delete Rating List"
+msgid "Delete"
+msgstr "Odstrániť"
+
+#: settings/RatingListsPage.qml:133
+msgctxt "@info:status"
+msgid "No rating lists yet."
+msgstr "Zatiaľ žiadne ratingové listiny."
+
+#: settings/RatingListsPage.qml:153
+msgctxt "@action:button"
+msgid "Delete Rating List"
+msgstr "Odstrániť ratingovú listinu"
+
+#: settings/RatingListsPage.qml:161
+msgctxt "@action:button"
+msgid "Delete rating list"
+msgstr "Odstrániť ratingovú listinu"
+
+#: settings/RatingListsPage.qml:171
+msgctxt "@action:button"
+msgid "Add rating list"
+msgstr "Pridať ratingovú listinu"
+
+#: standingsmodel.cpp:90
+#, kde-format
+msgctxt "@title:column Player Ranking"
+msgid "Rank"
+msgstr "Poradie"
+
+#: tournament/federations.h:118
+msgctxt "FIDE Federation"
+msgid "Chinese Taipei"
+msgstr "Čínsky Tchaj-pej"
+
+#: tournament/federations.h:211
+msgctxt "FIDE Federation"
+msgid "Scotland"
+msgstr "Škótsko"
+
+#: tournament/federations.h:220
+msgctxt "FIDE Federation"
+msgid "Wales"
+msgstr "Wales"
+
+#: tournament/pairingengine.cpp:29
+#, kde-format
+msgctxt "bbpPairings is the name of a program, should not be translated"
+msgid "The pairing engine bbpPairings could not be found. Is it installed?"
+msgstr "Párovací engine bbpPairings sa nenašiel. Je nainštalovaný?"
+
+#: tournament/pairingengine.cpp:37
+#, kde-format
+msgid "Could not create temporary file."
+msgstr "Nepodarilo sa vytvoriť dočasný súbor."
+
+#: tournament/pairingengine.cpp:62
+#, kde-format
+msgctxt "bbpPairings is the name of a program, should not be translated"
+msgid "bbpPairings terminated with a non zero exit code: %1"
+msgstr "bbpPairings skončil s nenulovým návratovým kódom: %1"
+
+#: tournament/pairingengine.cpp:80 tournament/trf/reader.cpp:227
+#, kde-format
+msgid "Invalid pairing \"%1\"."
+msgstr "Neplatné párovanie „%1“."
+
+#: tournament/pairingengine.cpp:86 tournament/pairingengine.cpp:90
+#: tournament/pairingengine.cpp:94 tournament/pairingengine.cpp:98
+#: tournament/trf/reader.cpp:240
+#, kde-format
+msgid "Invalid player \"%1\" on pairing \"%2\"."
+msgstr "Neplatný hráč „%1“ v párovaní „%2“."
+
+#: tournament/ratinglists/ratinglist.cpp:136
+#, kde-format
+msgctxt "@info:progress"
+msgid "Downloading file"
+msgstr "Sťahovanie súboru"
+
+#: tournament/ratinglists/ratinglist.cpp:146
+#, kde-format
+msgctxt "@info:progress"
+msgid "Downloading file (%1 %)"
+msgstr "Sťahovanie súboru (%1 %)"
+
+#: tournament/ratinglists/ratinglist.cpp:152
+#, kde-format
+msgctxt "@info"
+msgid "Couldn't download rating list: %1"
+msgstr "Nepodarilo sa stiahnuť ratingovú listinu: %1"
+
+#: tournament/ratinglists/ratinglist.cpp:174
+#, kde-format
+msgctxt "@info:progress"
+msgid "Imported one player."
+msgid_plural "Imported %1 players."
+msgstr[0] "Importovaný jeden hráč."
+msgstr[1] "Importovaní %1 hráči."
+msgstr[2] "Importovaných %1 hráčov."
+
+#: tournament/ratinglists/ratinglist.cpp:190
+#, kde-format
+msgctxt "@info"
+msgid "Couldn't extract file."
+msgstr "Nepodarilo sa extrahovať súbor."
+
+#: tournament/ratinglists/ratinglist.cpp:195
+#, kde-format
+msgctxt "@info"
+msgid "File format not supported."
+msgstr "Nepodporovaný formát súboru."
+
+#: tournament/ratinglists/ratinglist.cpp:416
+#, kde-format
+msgctxt "@info:progress"
+msgid "Saved 1 player."
+msgid_plural "Saved %1 players."
+msgstr[0] "Uložený 1 hráč."
+msgstr[1] "Uložení %1 hráči."
+msgstr[2] "Uložených %1 hráčov."
+
+#: tournament/tiebreaks/aob.h:23 tournament/tournament.cpp:507
+#, kde-format
+msgctxt "Tiebreak"
+msgid "Average Buchholz of Opponents"
+msgstr "Priemerný Buchholz súperov"
+
+#: tournament/tiebreaks/buchholz.cpp:14
+#, kde-format
+msgctxt "@label:spinbox"
+msgid "Exclude the lowest scores:"
+msgstr "Vylúčiť najnižšie skóre:"
+
+#: tournament/tiebreaks/buchholz.cpp:35
+#, kde-format
+msgctxt "@info"
+msgid "Unsupported tiebreak option \"%1\""
+msgstr "Nepodporovaná voľba rozstrelu „%1“"
+
+#: tournament/tiebreaks/buchholz.h:25 tournament/tournament.cpp:489
+#, kde-format
+msgctxt "Buchholz tiebreak"
+msgid "Buchholz"
+msgstr "Buchholz"
+
+#: tournament/tiebreaks/buchholz.h:28
+#, kde-format
+msgctxt "Buchholz N tiebreak, N is a number < 0"
+msgid "Buchholz %1"
+msgstr "Buchholz %1"
+
+#: tournament/tiebreaks/numberwins.h:22 tournament/tournament.cpp:493
+#, kde-format
+msgctxt "Number of Wins tiebreak"
+msgid "Number of Wins"
+msgstr "Počet výhier"
+
+#: tournament/tiebreaks/playedblack.h:22 tournament/tournament.cpp:503
+#, kde-format
+msgctxt "Number of Games Played with Black (over the board) tiebreak"
+msgid "Number of Games Played with Black (over the board)"
+msgstr "Počet partií hraných čiernym (za doskou)"
+
+#: tournament/tiebreaks/points.h:22 tournament/tiebreaks/points.h:27
+#: tournament/tournament.cpp:485
+#, kde-format
+msgctxt "Game points"
+msgid "Points"
+msgstr "Body"
+
+#: tournament/tiebreaks/won.h:23 tournament/tournament.cpp:499
+#, kde-format
+msgctxt ""
+"Number of Games Won (over the board) tiebreak. Different from the 'Number of "
+"Wins' tiebreak, which includes games won by forfeit."
+msgid "Number of Games Won (over the board)"
+msgstr "Počet partií vyhratých (za doskou)"
+
+#: tournament/tournament.cpp:930
+#, kde-format
+msgid "An error ocurred while pairing the round: %1"
+msgstr "Pri párovaní kola sa vyskytla chyba: %1"
+
+#: tournament/tournament.cpp:1163
+#, kde-format
+msgid "Couldn't open file"
+msgstr "Nepodarilo sa otvoriť súbor"
+
+#: tournament/trf/reader.cpp:52 tournament/trf/reader.cpp:59
+#, kde-format
+msgid "Player \"%1\" not found."
+msgstr "Hráč „%1“ sa nenašiel."
+
+#: tournament/trf/reader.cpp:65
+#, kde-format
+msgid "Unknown result on pairing \"%1\" with \"%2\"."
+msgstr "Neznámy výsledok v párovaní „%1“ s „%2“."
+
+#: tournament/trf/reader.cpp:173
+#, kde-format
+msgctxt "@info"
+msgid "Date \"%1\" is invalid."
+msgstr "Dátum „%1“ je neplatný."
+
+#: tournament/trf/reader.cpp:247
+#, kde-format
+msgid "Unknown result \"%1\" on pairing \"%2\"."
+msgstr "Neznámy výsledok „%1“ v párovaní „%2“."
+
+#: tournament/trf/reader.cpp:250
+#, kde-format
+msgid "Pairing \"%1\" has no opponent."
+msgstr "Párovanie „%1“ nemá súpera."
