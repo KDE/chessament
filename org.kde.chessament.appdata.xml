@@ -28,6 +28,7 @@
   <name xml:lang="nl">Chessament</name>
   <name xml:lang="pl">Chessament</name>
   <name xml:lang="pt-BR">Chessament</name>
+  <name xml:lang="sk">Chessament</name>
   <name xml:lang="sl">Chessament</name>
   <name xml:lang="sv">Chessament</name>
   <name xml:lang="tr">Chessament</name>
@@ -52,6 +53,7 @@
   <summary xml:lang="nl">Beheerder van een schaaktoernooi</summary>
   <summary xml:lang="pl">Zarządzanie turniejami szachowymi</summary>
   <summary xml:lang="pt-BR">Gerenciador de torneio de xadrez</summary>
+  <summary xml:lang="sk">Správca šachových turnajov</summary>
   <summary xml:lang="sl">Upravljalnik šahovskih turnirjev</summary>
   <summary xml:lang="sv">Schackturneringshanterare</summary>
   <summary xml:lang="tr">Satranç turnuvası yöneticisi</summary>
@@ -82,6 +84,7 @@
     <p xml:lang="nl">Chessament is een beheerder van schaaktoernooien. Het ondersteunt op dit moment individuele toernooien volgens het Zwitserse systeem.</p>
     <p xml:lang="pl">Chessament jest programem do zarządzania turniejami szachowymi. Obecnie obsługuje pojedyncze turnieje w systemie szwajcarskim.</p>
     <p xml:lang="pt-BR">Chessament é um gerenciador de torneios de xadrez. Atualmente, ele suporta torneios individuais no sistema suíço.</p>
+    <p xml:lang="sk">Chessament je správca šachových turnajov. Momentálne podporuje individuálne turnaje švajčiarskym systémom.</p>
     <p xml:lang="sl">Chessament je upravitelj šahovskih turnirjev. Trenutno podpira posamezne turnirje po švicarskem sistemu.</p>
     <p xml:lang="sv">Chessament är en schackturneringshanterare. Den stöder för närvarande individuella schweizerturneringar.</p>
     <p xml:lang="tr">Chessament, bir satranç turnuvası yöneticisidir. Şu anda yalnızca İsviçre tarzı turnuvaları destekler.</p>
