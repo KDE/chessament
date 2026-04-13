@@ -159,8 +159,8 @@ TablePage {
     }
 
     Keys.onPressed: event => {
-        const selection = tableView.selectionModel.currentIndex;
-        if (selection) {
+        if (tableView.selectionModel.hasSelection) {
+            const selection = tableView.selectionModel.currentIndex;
             const index = proxyModel.mapToSource(selection);
             const pairing = root.model.sourceModel.pairing(index.row);
 
