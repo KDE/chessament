@@ -45,6 +45,7 @@ public:
     Q_INVOKABLE bool setResult(int board, Qt::Key key);
     Q_INVOKABLE bool setResult(int board, Pairing::PartialResult whiteResult, Pairing::PartialResult blackResult);
     Q_INVOKABLE Pairing *pairing(int board);
+    Q_INVOKABLE QVariant nextPendingBoardAfter(int board);
 
 Q_SIGNALS:
     void pairingChanged();

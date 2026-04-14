@@ -128,7 +128,7 @@ TablePage {
 
         onSaveResult: (pairing, whiteResult, blackResult) => {
             if (Controller.pairingModel.setResult(pairing.board, whiteResult, blackResult)) {
-                root.selectNextBoard();
+                root.selectNextBoardAfter(pairing.board);
             }
         }
     }
@@ -171,19 +171,20 @@ TablePage {
             const board = index.row + 1;
             if (board && Controller.pairingModel.setResult(board, event.key)) {
                 event.accepted = true;
-                root.selectNextBoard();
+                root.selectNextBoardAfter(board);
             }
         }
     }
 
-    function selectNextBoard(): void {
-        const currentRow = tableView.selectionModel.currentIndex.row;
-        if (currentRow > 0 && hideFinishedAction.checked || currentRow >= 0 && !hideFinishedAction.checked) {
-            const index = root.tableView.model.index(currentRow + 1, 0);
+    function selectNextBoardAfter(board: int): void {
+        const nextBoard = root.model.sourceModel.nextPendingBoardAfter(board);
+        if (nextBoard !== undefined) {
+            const index = tableView.model.sourceModel.index(nextBoard - 1, 3);
+            const proxyIndex = proxyModel.mapFromSource(index);
             tableView.selectionModel.clear();
-            tableView.selectionModel.setCurrentIndex(index, ItemSelectionModel.SelectCurrent | ItemSelectionModel.Rows);
-            tableView.itemAtIndex(index)?.forceActiveFocus();
-            tableView.positionViewAtRow(index.row, TableView.Contain);
+            tableView.selectionModel.setCurrentIndex(proxyIndex, ItemSelectionModel.SelectCurrent | ItemSelectionModel.Rows);
+            tableView.itemAtIndex(proxyIndex)?.forceActiveFocus();
+            tableView.positionViewAtRow(proxyIndex.row, TableView.Contain);
         }
     }
 }

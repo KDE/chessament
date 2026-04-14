@@ -191,4 +191,22 @@ Pairing *PairingModel::pairing(int board)
     return pairing;
 }
 
+QVariant PairingModel::nextPendingBoardAfter(int board)
+{
+    for (int i = board; i < m_pairings.size(); ++i) {
+        const auto pairing = m_pairings.at(i);
+        if (!pairing->hasFinished()) {
+            return i + 1;
+        }
+    }
+    for (int i = 0; i < board; ++i) {
+        const auto pairing = m_pairings.at(i);
+        if (!pairing->hasFinished()) {
+            return i + 1;
+        }
+    }
+
+    return {};
+}
+
 #include "moc_pairingmodel.cpp"
