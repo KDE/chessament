@@ -1,0 +1,338 @@
+<?xml version="1.0" ?>
+<!--
+SPDX-FileCopyrightText: 2026 Manuel Alcaraz Zambrano <manuel@alcarazzam.dev>
+SPDX-License-Identifier: CC-BY-SA-4.0
+-->
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+    <!ENTITY chessament "<application>Chessament</application>">
+    <!ENTITY % addindex "IGNORE">
+    <!ENTITY % English "INCLUDE">
+    <!ENTITY Manuel.Alcaraz.Zambrano "<personname><firstname>Manuel</firstname><surname>Alcaraz Zambrano</surname></personname>">
+    <!ENTITY Manuel.Alcaraz.Zambrano.mail "<email>manuel@alcarazzam.dev</email>">
+]>
+<book id="chessament" lang="&language;">
+  <bookinfo>
+    <title>The &chessament; Handbook</title>
+    <authorgroup>
+      <author>&Manuel.Alcaraz.Zambrano; &Manuel.Alcaraz.Zambrano.mail;</author>
+      <!-- TRANS:ROLES_OF_TRANSLATORS -->
+    </authorgroup>
+    <copyright>
+      <year>2026</year>
+      <holder>&Manuel.Alcaraz.Zambrano;</holder>
+    </copyright>
+    <legalnotice>&CCBYSA4Notice;</legalnotice>
+    <date>2026-04-17</date>
+    <releaseinfo>0.1</releaseinfo>
+      <abstract>
+        <para>
+          &chessament; is a chess tournament manager.
+        </para>
+      </abstract>
+    <keywordset>
+      <keyword>KDE</keyword>
+      <keyword>Chessament</keyword>
+			<keyword>chess</keyword>
+			<keyword>tournament</keyword>
+    </keywordset>
+  </bookinfo>
+
+	<chapter id="introduction">
+		<title>Introduction</title>
+		<para>
+			&chessament; is a chess tournament manager. It supports individual Swiss-system tournaments.
+		</para>
+		<para>
+			Main features of &chessament;:
+		</para>
+		<itemizedlist>
+			<listitem>
+				<para>Registering players.</para>
+			</listitem>
+			<listitem>
+				<para>Pairing rounds.</para>
+			</listitem>
+			<listitem>
+				<para>Calculating standings.</para>
+			</listitem>
+		</itemizedlist>
+	</chapter>
+
+	<chapter id="basic-usage">
+		<title>Basic Usage</title>
+		<sect1 id="opening">
+			<title>Creating a New Tournament</title>
+			<para>
+				To create a new &chessament; tournament, select <menuchoice><guimenu>File</guimenu><guimenuitem>New…</guimenuitem></menuchoice>,
+				enter a name, choose the number of rounds, and click <guibutton>Save</guibutton>. You will be asked to choose a location where
+				you want to save the tournament.
+			</para>
+		</sect1>
+
+		<sect1 id="registering-players">
+			<title>Registering Players</title>
+			<para>
+				To add a new player to the tournament click on the <guibutton>Add Player…</guibutton> button in the toolbar.
+			</para>
+		</sect1>
+
+		<sect1 id="making-pairings">
+			<title>Pairings &amp; Results</title>
+			<para>
+				After you have finished registering all the players of the tournament, you can now make the pairings for the first round.
+				Go to the <guibutton>Pairings</guibutton> view and click on the <guibutton>Pair Round 1…</guibutton> button.
+				A dialog will appear where you can customize some options for the first round. It is recommended that you leave the
+				<guibutton>Sort players</guibutton> option enabled. You can choose the color of the pieces of the highest ranked player,
+				or let &chessament; choose a random color for you.
+			</para>
+			<para>
+				To enter the results, click on a pairing and choose from one of the supported results at the bottom. You can also enter
+				the results using the keyboard. Pressing <keycap>1</keycap> sets the result to White wins, <keycap>0</keycap> to Black wins
+				and <keycap>5</keycap> to draw. After entering a resuls, the next pairing without a result is automatically selected.
+			</para>
+		</sect1>
+
+		<sect1 id="viewing-standings">
+			<title>Viewing Standings</title>
+			<para>
+				To view the standings of the tournament, go to the <guibutton>Standings</guibutton> view. From there you can choose to view
+				the final standings or the standings from a previous round.
+			</para>
+		</sect1>
+	</chapter>
+
+	<chapter id="tournaments">
+		<title>Tournaments</title>
+		<sect1 id="tournament-settings">
+			<title>Settings</title>
+			<para>
+				To open the settings window of a tournament, click on the <guibutton>Settings</guibutton> button at the bottom of the
+				&chessament; window. This section describes the available options in details.
+			</para>
+			<sect2 id="tournament-settings-information">
+				<title>Information</title>
+				<para>
+					In this section you can set some basic information such as the tournament's name, location, and arbiters.
+				</para>
+			</sect2>
+			<sect2 id="tournament-settings-format">
+				<title>Format</title>
+				<para>
+					In this section you can configure the number of rounds of the tournament and the tiebreaks used for
+					calculating the standings. More information about the tiebreaks is available in the
+					<link linkend="tournament-tiebreaks">Tiebreaks</link> section.
+				</para>
+			</sect2>
+			<sect2 id="tournament-settings-calendar">
+				<title>Calendar</title>
+				<para>
+					In this section you can set the tournament's schedule.
+				</para>
+			</sect2>
+		</sect1>
+		<sect1 id="tournament-tiebreaks">
+			<title>Tiebreaks</title>
+			<para>
+				&chessament; supports the following tiebreaks as described in the
+				<ulink url="https://handbook.fide.com/"><acronym>FIDE</acronym> Handbook</ulink>:
+			</para>
+			<itemizedlist>
+				<listitem>
+					<para>Average Buchholz of Opponents (<acronym>AOB</acronym>)</para>
+				</listitem>
+				<listitem>
+					<para>Buchholz (<acronym>BH</acronym>)</para>
+				</listitem>
+				<listitem>
+					<para>Number of Games Played with Black (<acronym>BPG</acronym>)</para>
+				</listitem>
+				<listitem>
+					<para>Number of Games Won (over the board) (<acronym>WON</acronym>)</para>
+				</listitem>
+				<listitem>
+					<para>Number of Wins (<acronym>WIN</acronym>)</para>
+				</listitem>
+				<listitem>
+					<para>Points (<acronym>PTS</acronym>)</para>
+				</listitem>
+			</itemizedlist>
+		</sect1>
+	</chapter>
+
+	<chapter id="reference">
+		<title>Reference</title>
+
+		<sect1 id="reference-menus">
+			<title>The Menubar</title>
+			<sect2 id="reference-menus-file">
+				<title>The File Menu</title>
+				<variablelist>
+					<varlistentry id="menu-file-new">
+						<term>
+							<menuchoice>
+								<guimenu>File</guimenu>
+								<guimenuitem>New tournament…</guimenuitem>
+							</menuchoice>
+						</term>
+						<listitem>
+							<para>
+								<action>Create</action> a new tournament. If there is already an opened tournament it will be closed.
+							</para>
+						</listitem>
+					</varlistentry>
+					<varlistentry id="menu-file-open">
+						<term>
+							<menuchoice>
+								<shortcut>
+									<keycombo action="simul">&Ctrl;<keycap>O</keycap></keycombo>
+								</shortcut>
+								<guimenu>File</guimenu>
+								<guimenuitem>Open…</guimenuitem>
+							</menuchoice>
+						</term>
+						<listitem>
+							<para>
+								<action>Open</action> a &chessament; file.
+							</para>
+						</listitem>
+					</varlistentry>
+					<varlistentry id="menu-file-save-as">
+						<term>
+							<menuchoice>
+								<shortcut>
+									<keycombo action="simul">&Ctrl;&Shift;<keycap>S</keycap></keycombo>
+								</shortcut>
+								<guimenu>File</guimenu>
+								<guimenuitem>Save As…</guimenuitem>
+							</menuchoice>
+						</term>
+						<listitem>
+							<para>
+								<action>Save</action> the tournament under a new name.
+							</para>
+						</listitem>
+					</varlistentry>
+					<varlistentry id="menu-file-import-trf">
+						<term>
+							<menuchoice>
+								<shortcut>
+									<keycombo action="simul">&Ctrl;<keycap>I</keycap></keycombo>
+								</shortcut>
+								<guimenu>File</guimenu>
+								<guimenuitem>Import tournament report…</guimenuitem>
+							</menuchoice>
+						</term>
+						<listitem>
+							<para>
+								<action>Import</action> a Tournament Report File (<acronym>TRF</acronym>). If there is already a opened tournament it will be closed.
+							</para>
+						</listitem>
+					</varlistentry>
+					<varlistentry id="menu-file-export-trf">
+						<term>
+							<menuchoice>
+								<guimenu>File</guimenu>
+								<guimenuitem>Export tournament report…</guimenuitem>
+							</menuchoice>
+						</term>
+						<listitem>
+							<para>
+								<action>Export</action> the current tournament to a Tournament Report File (<acronym>TRF</acronym>).
+							</para>
+						</listitem>
+					</varlistentry>
+				</variablelist>
+			</sect2>
+			<sect2 id="reference-menus-view">
+				<title>The View Menu</title>
+				<variablelist>
+					<varlistentry id="menu-view-commandbar">
+						<term>
+							<menuchoice>
+								<shortcut>
+									<keycombo action="simul">&Ctrl;&Alt;<keycap>I</keycap></keycombo>
+								</shortcut>
+								<guimenu>View</guimenu>
+								<guimenuitem>Open Command Bar</guimenuitem>
+							</menuchoice>
+						</term>
+						<listitem>
+							<para>
+								<action>Opens</action> the command bar.
+							</para>
+						</listitem>
+					</varlistentry>
+				</variablelist>
+			</sect2>
+			<sect2 id="reference-menus-settings">
+				<title>The Settings Menu</title>
+				<variablelist>
+					<varlistentry id="menu-settings-keyboard-shortcuts">
+						<term>
+							<menuchoice>
+								<shortcut>
+									<keycombo action="simul">&Ctrl;&Alt;<keycap>,</keycap></keycombo>
+								</shortcut>
+								<guimenu>Settings</guimenu>
+								<guimenuitem>Configure Keyboard Shortcuts…</guimenuitem>
+							</menuchoice>
+						</term>
+						<listitem>
+							<para>
+								<action>Opens</action> the Keyboard Shortcuts window.
+							</para>
+						</listitem>
+					</varlistentry>
+					<varlistentry id="menu-settings-chessament">
+						<term>
+							<menuchoice>
+								<shortcut>
+									<keycombo action="simul">&Ctrl;&Shift;<keycap>,</keycap></keycombo>
+								</shortcut>
+								<guimenu>Settings</guimenu>
+								<guimenuitem>Configure Chessament…</guimenuitem>
+							</menuchoice>
+						</term>
+						<listitem>
+							<para>
+								<action>Opens</action> &chessament; Settings window.
+							</para>
+						</listitem>
+					</varlistentry>
+				</variablelist>
+			</sect2>
+		</sect1>
+
+		<sect1 id="reference-command-line-options">
+			<title>Command Line Options</title>
+			<variablelist>
+			  <varlistentry>
+					<term>
+						<userinput>
+							<command>chessament</command> <option>--import-trf <replaceable>file</replaceable></option>
+						</userinput>
+					</term>
+					<listitem>
+						<para>
+							Import a Tournament Report File (<acronym>TRF</acronym>) as a new tournament.
+						</para>
+					</listitem>
+			  </varlistentry>
+			</variablelist>
+		</sect1>
+	</chapter>
+
+	<chapter id="credits">
+		<title>Credits and License</title>
+		<para>Documentation Copyright &copy; &Manuel.Alcaraz.Zambrano; &Manuel.Alcaraz.Zambrano.mail;</para>
+		<!-- TRANS:CREDIT_FOR_TRANSLATORS -->
+		&underCCBYSA4;
+		&underGPL;
+	</chapter>
+
+	&documentation.index;
+
+</book>
+<!--
+// vim:ts=2:sw=2:tw=78:noet
+-->

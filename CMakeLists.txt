@@ -82,6 +82,12 @@ set_package_properties(Qt6Keychain PROPERTIES
     PURPOSE "Store authentication credentials"
 )
 
+find_package(KF6DocTools ${KF6_MIN_VERSION})
+set_package_properties(KF6DocTools PROPERTIES
+    TYPE OPTIONAL
+    PURPOSE "User documentation"
+)
+
 feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)
 
 qcoro_enable_coroutines()
@@ -106,6 +112,11 @@ install(FILES org.kde.chessament.desktop DESTINATION ${KDE_INSTALL_APPDIR})
 install(FILES org.kde.chessament.appdata.xml DESTINATION ${KDE_INSTALL_METAINFODIR})
 install(FILES org.kde.chessament.svg DESTINATION ${KDE_INSTALL_FULL_ICONDIR}/hicolor/scalable/apps)
 ki18n_install(po)
+
+if(KF6DocTools_FOUND)
+    add_subdirectory(doc)
+    kdoctools_install(po)
+endif()
 
 file(GLOB_RECURSE ALL_CLANG_FORMAT_SOURCE_FILES src/*.cpp src/*.h)
 kde_clang_format(${ALL_CLANG_FORMAT_SOURCE_FILES})

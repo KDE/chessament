@@ -18,6 +18,10 @@ Dependencies:
       "third-party/qtkeychain": "@latest"
       "third-party/qcoro": "@latest"
 
+  - "on": ["Linux"]
+    "require":
+      "frameworks/kdoctools": "@latest-kf6"
+
 Options:
   require-passing-tests-on: ["@all"]
   run-qmllint: true
