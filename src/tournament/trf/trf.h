@@ -26,6 +26,7 @@ enum class Field {
     DeputyChiefArbiter,
     TimeControl,
     Calendar,
+    NumberOfRounds,
     ProgramName,
     Tiebreaks,
     Unknown,
@@ -41,16 +42,14 @@ Field reportFieldForString(QStringView number);
  *
  * This enum type specifies the options for the Tournament Report File export.
  *
- * \value NumberOfRounds Adds the number of rounds of the tournament for pairing engines.
  * \value InitialColorWhite Adds an indication for pairing engines that the first player had the white pieces in the first round.
  * \value InitialColorBlack Adds an indication for pairing engines that the first player had the black pieces in the first round.
  *
  * \sa toTrf(), exportTrf()
  */
 enum class Option {
-    NumberOfRounds = 0x1,
-    InitialColorWhite = 0x2,
-    InitialColorBlack = 0x4,
+    InitialColorWhite = 0x1,
+    InitialColorBlack = 0x2,
 };
 Q_DECLARE_FLAGS(Options, Option)
 Q_DECLARE_OPERATORS_FOR_FLAGS(Trf::Options)

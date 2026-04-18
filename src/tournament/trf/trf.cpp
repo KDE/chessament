@@ -39,6 +39,8 @@ QString reportFieldString(Trf::Field field)
         return QStringLiteral("122");
     case Trf::Field::Calendar:
         return QStringLiteral("132");
+    case Trf::Field::NumberOfRounds:
+        return "142"_L1;
     case Trf::Field::ProgramName:
         return "182"_L1;
     case Trf::Field::Tiebreaks:
@@ -79,6 +81,8 @@ Trf::Field reportFieldForString(QStringView number)
         return Trf::Field::TimeControl;
     } else if (number == QStringLiteral("132")) {
         return Trf::Field::Calendar;
+    } else if (number == "142"_L1) {
+        return Trf::Field::NumberOfRounds;
     } else if (number == "212"_L1) {
         return Trf::Field::Tiebreaks;
     }

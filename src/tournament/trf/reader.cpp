@@ -132,6 +132,13 @@ std::expected<void, QString> TrfReader::readField(QStringView line)
         }
         break;
     }
+    case Trf::Field::NumberOfRounds: {
+        bool ok;
+        const auto numberOfRounds = value.toInt(&ok);
+        if (ok && numberOfRounds > 0) {
+            m_tournament->setNumberOfRounds(numberOfRounds);
+        }
+    }
     case Trf::Field::Tiebreaks: {
         if (const auto ok = m_tournament->setTiebreaksFromTrf(value.toString()); !ok) {
             return ok;

@@ -37,6 +37,7 @@ void TrfWriter::writeTournamentInformation(QTextStream &stream)
     stream << Trf::reportFieldString(Trf::Field::ChiefArbiter) << space << m_tournament->chiefArbiter() << newLine;
     stream << Trf::reportFieldString(Trf::Field::TimeControl) << space << m_tournament->timeControl() << newLine;
     stream << Trf::reportFieldString(Trf::Field::ProgramName) << space << "Chessament %1"_L1.arg(QCoreApplication::applicationVersion()) << newLine;
+    stream << Trf::reportFieldString(Trf::Field::NumberOfRounds) << space << m_tournament->numberOfRounds() << newLine;
     writeTiebreaks(stream);
 
     stream << Trf::reportFieldString(Trf::Field::Calendar) << QString(space).repeated(86);
@@ -66,10 +67,6 @@ void TrfWriter::writeTiebreaks(QTextStream &stream)
 
 void TrfWriter::writePairingEngineInformation(QTextStream &stream)
 {
-    if (m_options.testFlag(Trf::Option::NumberOfRounds)) {
-        stream << "XXR "_L1 + QString::number(m_tournament->numberOfRounds()) << newLine;
-    }
-
     if (m_options.testFlag(Trf::Option::InitialColorWhite)) {
         stream << "XXC white1\n"_L1;
     } else if (m_options.testFlag(Trf::Option::InitialColorBlack)) {
