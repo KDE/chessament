@@ -82,6 +82,11 @@ set_package_properties(Qt6Keychain PROPERTIES
     PURPOSE "Store authentication credentials"
 )
 
+find_package(SharedMimeInfo 1.3)
+set_package_properties(SharedMimeInfo PROPERTIES
+    TYPE REQUIRED
+)
+
 find_package(KF6DocTools ${KF6_MIN_VERSION})
 set_package_properties(KF6DocTools PROPERTIES
     TYPE OPTIONAL
@@ -111,6 +116,8 @@ endif()
 install(FILES org.kde.chessament.desktop DESTINATION ${KDE_INSTALL_APPDIR})
 install(FILES org.kde.chessament.appdata.xml DESTINATION ${KDE_INSTALL_METAINFODIR})
 install(FILES org.kde.chessament.svg DESTINATION ${KDE_INSTALL_FULL_ICONDIR}/hicolor/scalable/apps)
+install(FILES application-vnd-kde-chessament.xml DESTINATION ${KDE_INSTALL_MIMEDIR})
+update_xdg_mimetypes(${KDE_INSTALL_MIMEDIR})
 ki18n_install(po)
 
 if(KF6DocTools_FOUND)

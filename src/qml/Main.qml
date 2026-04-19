@@ -48,6 +48,7 @@ StatefulApp.StatefulWindow {
 
         function onOpenTournament() {
             const dialog = fileDialog.createObject(QQC2.Overlay.overlay);
+            dialog.nameFilters = [KI18n.i18nc("@label:listbox", "Chessament event (*.chessament)")];
             dialog.accepted.connect(() => {
                 Controller.openEvent(dialog.selectedFile);
             });
@@ -57,6 +58,8 @@ StatefulApp.StatefulWindow {
         function onSaveTournamentAs() {
             const dialog = fileDialog.createObject(QQC2.Overlay.overlay);
             dialog.fileMode = Dialogs.FileDialog.SaveFile;
+            dialog.nameFilters = [KI18n.i18nc("@label:listbox", "Chessament event (*.chessament)")];
+            dialog.defaultSuffix = "chessament";
             dialog.accepted.connect(() => {
                 Controller.saveEventAs(dialog.selectedFile);
             });
@@ -65,6 +68,7 @@ StatefulApp.StatefulWindow {
 
         function onImportTrf() {
             const dialog = fileDialog.createObject(QQC2.Overlay.overlay);
+            dialog.nameFilters = [KI18n.i18nc("@label:listbox", "TRF files (*.trf *.txt)")];
             dialog.accepted.connect(() => {
                 Controller.importTrf(dialog.selectedFile);
             });
@@ -74,6 +78,8 @@ StatefulApp.StatefulWindow {
         function onExportTrf() {
             const dialog = fileDialog.createObject(QQC2.Overlay.overlay);
             dialog.fileMode = Dialogs.FileDialog.SaveFile;
+            dialog.nameFilters = [KI18n.i18nc("@label:listbox", "TRF files (*.trf *.txt)")];
+            dialog.defaultSuffix = "trf";
             dialog.accepted.connect(() => {
                 Controller.exportTrf(dialog.selectedFile);
             });

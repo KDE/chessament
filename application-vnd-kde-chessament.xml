@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  SPDX-License-Identifier: CC0-1.0
+  SPDX-FileCopyrightText: 2026 Manuel Alcaraz Zambrano <manuel@alcarazzam.dev>
+-->
+<mime-info xmlns="http://www.freedesktop.org/standards/shared-mime-info">
+  <mime-type type="application/vnd.kde.chessament">
+    <sub-class-of type="application/vnd.sqlite3"/>
+    <comment>Chessament event</comment>
+    <glob pattern="*.chessament"/>
+  </mime-type>
+</mime-info>
