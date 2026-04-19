@@ -59,11 +59,6 @@ set_package_properties(KF6 PROPERTIES
     PURPOSE "Required application components"
 )
 
-if (Qt6Qml_VERSION VERSION_GREATER_EQUAL "6.10.0")
-    # QCoro Qml requires QmlPrivate
-    find_package(Qt6QmlPrivate ${REQUIRED_QT_VERSION} REQUIRED NO_MODULE)
-endif()
-
 find_package(QCoro6 0.11 COMPONENTS Core Network Qml)
 set_package_properties(QCoro6 PROPERTIES
     TYPE REQUIRED
