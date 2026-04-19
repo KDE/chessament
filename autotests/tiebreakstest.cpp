@@ -80,7 +80,7 @@ void TiebreaksTest::testTiebreaks()
     const auto expectedStandings = readStandings(QLatin1StringView(DATA_DIR) + "/"_L1 + fileName + expected);
 
     auto event = std::make_unique<Event>();
-    QVERIFY(event->open());
+    QVERIFY(event->create());
 
     auto tournament = event->importTournament(QLatin1StringView(DATA_DIR) + "/"_L1 + fileName);
     QVERIFY(tournament.has_value());

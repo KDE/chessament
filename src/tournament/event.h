@@ -40,7 +40,9 @@ public:
      */
     size_t numberOfTournaments();
 
-    std::expected<void, QString> open(const QString &fileName = {});
+    std::expected<void, QString> create(const QString &fileName = {});
+
+    std::expected<void, QString> open(const QString &fileName);
 
     /*!
      * Returns the tournament with index \a index.
@@ -81,7 +83,7 @@ Q_SIGNALS:
 
 private:
     QSqlDatabase db();
-    std::expected<void, QString> openDatabase();
+    std::expected<void, QString> openDatabase(const QString &dbName);
     void closeDatabase();
     std::expected<void, QString> createTables();
     std::expected<int, QString> dbVersion();

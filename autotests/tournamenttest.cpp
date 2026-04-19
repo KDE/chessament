@@ -17,6 +17,7 @@ class TournamentTest : public QObject
 private Q_SLOTS:
 
     void testNewTournament();
+    void testCreateTournament();
     void testToJson();
     void testTrf();
     void testImportTrf();
@@ -29,7 +30,21 @@ private Q_SLOTS:
 void TournamentTest::testNewTournament()
 {
     auto event = std::make_unique<Event>();
-    QVERIFY(event->open());
+    QVERIFY(event->create());
+
+    auto t = event->createTournament();
+
+    QVERIFY(t.has_value());
+    QCOMPARE((*t)->name(), u""_s);
+}
+
+void TournamentTest::testCreateTournament()
+{
+    QTemporaryFile file;
+    QVERIFY(file.open());
+
+    auto event = std::make_unique<Event>();
+    QVERIFY(event->create(file.fileName()));
 
     auto t = event->createTournament();
 
@@ -40,7 +55,7 @@ void TournamentTest::testNewTournament()
 void TournamentTest::testToJson()
 {
     auto event = std::make_unique<Event>();
-    QVERIFY(event->open());
+    QVERIFY(event->create());
 
     auto t = event->createTournament();
     QVERIFY(t.has_value());
@@ -55,7 +70,7 @@ void TournamentTest::testToJson()
 void TournamentTest::testTrf()
 {
     auto event = std::make_unique<Event>();
-    QVERIFY(event->open());
+    QVERIFY(event->create());
 
     auto t = event->createTournament();
     QVERIFY(t.has_value());
@@ -67,7 +82,7 @@ void TournamentTest::testTrf()
     QVERIFY(trf.contains(u"012 Test tournament"_s));
 
     event = std::make_unique<Event>();
-    QVERIFY(event->open());
+    QVERIFY(event->create());
 
     t = event->createTournament();
     QVERIFY(t.has_value());
@@ -80,7 +95,7 @@ void TournamentTest::testTrf()
 void TournamentTest::testImportTrf()
 {
     auto event = std::make_unique<Event>();
-    QVERIFY(event->open());
+    QVERIFY(event->create());
 
     auto tournament = event->importTournament(QLatin1String(DATA_DIR) + u"/tournament_1.txt"_s);
     QVERIFY(tournament.has_value());
@@ -108,7 +123,7 @@ void TournamentTest::testImportTrf()
 void TournamentTest::testLoadTournament()
 {
     auto event = std::make_unique<Event>();
-    QVERIFY(event->open());
+    QVERIFY(event->create());
 
     auto tournament = event->importTournament(QLatin1String(DATA_DIR) + u"/tournament_1.txt"_s);
     QVERIFY(tournament.has_value());
@@ -147,7 +162,7 @@ void TournamentTest::testLoadTournament()
 void TournamentTest::testSortPlayers()
 {
     auto event = std::make_unique<Event>();
-    QVERIFY(event->open());
+    QVERIFY(event->create());
 
     auto tournament = event->importTournament(QLatin1String(DATA_DIR) + u"/tournament_2.trf"_s);
     QVERIFY(tournament.has_value());
@@ -181,7 +196,7 @@ void TournamentTest::testRemovePairings()
     QFETCH(QList<int>, pairings);
 
     auto event = std::make_unique<Event>();
-    QVERIFY(event->open());
+    QVERIFY(event->create());
 
     auto tournament = event->importTournament(QLatin1String(DATA_DIR) + u"/tournament_1.txt"_s);
     QVERIFY(tournament.has_value());

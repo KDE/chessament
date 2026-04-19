@@ -145,7 +145,7 @@ void Controller::importTrf(const QUrl &fileUrl)
 {
     auto event = std::make_unique<Event>();
 
-    if (auto ok = event->open(); !ok) {
+    if (auto ok = event->create(); !ok) {
         setError(ok.error());
         return;
     }
@@ -245,7 +245,7 @@ void Controller::newTournament(const QUrl &fileUrl, const QString &name, int num
 {
     auto event = std::make_unique<Event>();
 
-    if (auto ok = event->open(fileUrl.toLocalFile()); !ok) {
+    if (auto ok = event->create(fileUrl.toLocalFile()); !ok) {
         setError(ok.error());
         return;
     }

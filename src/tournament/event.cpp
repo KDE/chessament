@@ -34,11 +34,26 @@ size_t Event::numberOfTournaments()
     return m_tournaments.size();
 }
 
-std::expected<void, QString> Event::open(const QString &fileName)
+std::expected<void, QString> Event::create(const QString &fileName)
 {
+    QString dbName = fileName.isEmpty() ? ":memory:"_L1 : fileName;
+
+    if (auto ok = openDatabase(dbName); !ok) {
+        return ok;
+    }
+
     setFileName(fileName);
 
-    if (auto ok = openDatabase(); !ok) {
+    return {};
+}
+
+std::expected<void, QString> Event::open(const QString &fileName)
+{
+    Q_ASSERT(!fileName.isEmpty());
+
+    setFileName(fileName);
+
+    if (auto ok = openDatabase(fileName); !ok) {
         return ok;
     }
     if (auto ok = loadTournaments(); !ok) {
@@ -109,13 +124,11 @@ QSqlDatabase Event::db()
     return QSqlDatabase::database(m_connName);
 }
 
-std::expected<void, QString> Event::openDatabase()
+std::expected<void, QString> Event::openDatabase(const QString &dbName)
 {
     Q_ASSERT(m_connName.isEmpty());
 
     m_connName = QUuid::createUuid().toString(QUuid::WithoutBraces);
-
-    QString dbName = m_fileName.isEmpty() ? ":memory:"_L1 : m_fileName;
 
     auto db = QSqlDatabase::addDatabase(u"QSQLITE"_s, m_connName);
     db.setDatabaseName(dbName);
