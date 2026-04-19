@@ -7,6 +7,11 @@
 
 using namespace Qt::StringLiterals;
 
+constexpr auto SQLITE_NOTADB = "26"_L1;
+
+// SQLite Application ID
+constexpr int CHESSAMENT_MAGIC_APPLICATION_ID = 937847437;
+
 constexpr auto ENABLE_FOREIGN_KEYS_QUERY = "PRAGMA foreign_keys = ON;"_L1;
 
 const QString TOURNAMENTS_TABLE_SCHEMA =

@@ -115,7 +115,6 @@ std::expected<void, QString> Event::openDatabase()
 
     m_connName = QUuid::createUuid().toString(QUuid::WithoutBraces);
 
-    qDebug() << m_fileName;
     QString dbName = m_fileName.isEmpty() ? ":memory:"_L1 : m_fileName;
 
     auto db = QSqlDatabase::addDatabase(u"QSQLITE"_s, m_connName);
@@ -124,6 +123,27 @@ std::expected<void, QString> Event::openDatabase()
     if (!db.open()) {
         qDebug() << "error while opening database";
         return std::unexpected(db.lastError().text());
+    }
+
+    // If the file already exists, check that it's a Chessament event
+    if (!m_fileName.isEmpty()) {
+        QSqlQuery query(u"PRAGMA application_id;"_s, db);
+
+        if (query.lastError().isValid()) {
+            qDebug() << "error while quering app id" << query.lastError().text() << query.lastError().nativeErrorCode();
+
+            if (query.lastError().nativeErrorCode() == SQLITE_NOTADB) {
+                return std::unexpected(xi18nc("@info", "The file is not a <application>Chessament</application> event."));
+            }
+            return std::unexpected(query.lastError().text());
+        }
+
+        query.next();
+
+        const auto applicationId = query.value(0).toInt();
+        if (applicationId != CHESSAMENT_MAGIC_APPLICATION_ID) {
+            return std::unexpected(xi18nc("@info", "The file is not a <application>Chessament</application> event."));
+        }
     }
 
     if (auto ok = createTables(); !ok) {
@@ -190,6 +210,13 @@ std::expected<void, QString> Event::createTables()
 
     if (auto ok = setDbVersion(1); !ok) {
         return ok;
+    }
+
+    query = QSqlQuery(db());
+    query.prepare(u"PRAGMA application_id = %1;"_s.arg(CHESSAMENT_MAGIC_APPLICATION_ID));
+
+    if (!query.exec()) {
+        return std::unexpected(query.lastError().text());
     }
 
     return {};
