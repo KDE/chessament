@@ -989,7 +989,7 @@ std::expected<void, QString> Tournament::removePairings(int round, bool keepByes
     for (size_t i = round; i <= m_rounds.size(); i++) {
         QSqlQuery query(m_event->db());
         if (keepByes) {
-            query.prepare(DELETE_PAIRINGS_NO_BYES_QUERY);
+            query.prepare(DELETE_PAIRINGS_KEEP_BYES_QUERY);
         } else {
             query.prepare(DELETE_PAIRINGS_QUERY);
         }
@@ -1002,7 +1002,7 @@ std::expected<void, QString> Tournament::removePairings(int round, bool keepByes
         }
 
         m_rounds.at(i - 1)->removePairings([keepByes](Pairing *pairing) {
-            return !keepByes || !Pairing::isRequestedBye(pairing->whiteResult());
+            return !keepByes || !Pairing::isVoluntaryBye(pairing->whiteResult());
         });
     }
 
