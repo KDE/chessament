@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-05 00:41+0000\n"
+"POT-Creation-Date: 2026-04-19 00:40+0000\n"
 "PO-Revision-Date: 2026-04-01 04:14+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -981,20 +981,20 @@ msgstr "დაწყვილების ძრავა bbpPairings ვერ 
 msgid "Could not create temporary file."
 msgstr "დროებითი ფაილის შექმნის შეცდომა."
 
-#: tournament/pairingengine.cpp:62
+#: tournament/pairingengine.cpp:61
 #, kde-format
 msgctxt "bbpPairings is the name of a program, should not be translated"
 msgid "bbpPairings terminated with a non zero exit code: %1"
 msgstr "bbpPairings დასრულდა არანულოვანი გასვლის კოდით: %1"
 
-#: tournament/pairingengine.cpp:80 tournament/trf/reader.cpp:227
+#: tournament/pairingengine.cpp:79 tournament/trf/reader.cpp:234
 #, kde-format
 msgid "Invalid pairing \"%1\"."
 msgstr "არასწორი დაწყვილება \"%1\"."
 
-#: tournament/pairingengine.cpp:86 tournament/pairingengine.cpp:90
-#: tournament/pairingengine.cpp:94 tournament/pairingengine.cpp:98
-#: tournament/trf/reader.cpp:240
+#: tournament/pairingengine.cpp:85 tournament/pairingengine.cpp:89
+#: tournament/pairingengine.cpp:93 tournament/pairingengine.cpp:97
+#: tournament/trf/reader.cpp:247
 #, kde-format
 msgid "Invalid player \"%1\" on pairing \"%2\"."
 msgstr "არასწორი მოთამაშე \"%1\" დაწყვილებისთვის \"%2\"."
@@ -1122,18 +1122,18 @@ msgstr "მოთამაშე %1 აღმოჩენილი არაა.
 msgid "Unknown result on pairing \"%1\" with \"%2\"."
 msgstr "უცნობი შედეგი %1-ის %2-სთან დაწყვილებიდან."
 
-#: tournament/trf/reader.cpp:173
+#: tournament/trf/reader.cpp:180
 #, kde-format
 msgctxt "@info"
 msgid "Date \"%1\" is invalid."
 msgstr "თარიღი \"%1\" არასწორია."
 
-#: tournament/trf/reader.cpp:247
+#: tournament/trf/reader.cpp:254
 #, kde-format
 msgid "Unknown result \"%1\" on pairing \"%2\"."
 msgstr "უცნობი შედეგი '%1' დაწყვილებისთვის \"%2\"."
 
-#: tournament/trf/reader.cpp:250
+#: tournament/trf/reader.cpp:257
 #, kde-format
 msgid "Pairing \"%1\" has no opponent."
 msgstr "წყვილს \"%1\" ოპონენტი არ გააჩნია."

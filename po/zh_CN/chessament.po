@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-05 00:41+0000\n"
+"POT-Creation-Date: 2026-04-19 00:40+0000\n"
 "PO-Revision-Date: 2025-05-12 14:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -975,20 +975,20 @@ msgstr "未找到对阵引擎 bbpPairings。是否已安装？"
 msgid "Could not create temporary file."
 msgstr "无法创建临时文件。"
 
-#: tournament/pairingengine.cpp:62
+#: tournament/pairingengine.cpp:61
 #, kde-format
 msgctxt "bbpPairings is the name of a program, should not be translated"
 msgid "bbpPairings terminated with a non zero exit code: %1"
 msgstr "对阵引擎 bbpPairings 已终止，非零退出代码：%1"
 
-#: tournament/pairingengine.cpp:80 tournament/trf/reader.cpp:227
+#: tournament/pairingengine.cpp:79 tournament/trf/reader.cpp:234
 #, kde-format
 msgid "Invalid pairing \"%1\"."
 msgstr "无效对阵“%1”。"
 
-#: tournament/pairingengine.cpp:86 tournament/pairingengine.cpp:90
-#: tournament/pairingengine.cpp:94 tournament/pairingengine.cpp:98
-#: tournament/trf/reader.cpp:240
+#: tournament/pairingengine.cpp:85 tournament/pairingengine.cpp:89
+#: tournament/pairingengine.cpp:93 tournament/pairingengine.cpp:97
+#: tournament/trf/reader.cpp:247
 #, kde-format
 msgid "Invalid player \"%1\" on pairing \"%2\"."
 msgstr "对阵“%2”中的无效选手“%1”。"
@@ -1114,18 +1114,18 @@ msgstr "无法找到玩家“%1”。"
 msgid "Unknown result on pairing \"%1\" with \"%2\"."
 msgstr "配对“%1”和“%2”时出现未知结果。"
 
-#: tournament/trf/reader.cpp:173
+#: tournament/trf/reader.cpp:180
 #, kde-format
 msgctxt "@info"
 msgid "Date \"%1\" is invalid."
 msgstr "日期“%1”无效。"
 
-#: tournament/trf/reader.cpp:247
+#: tournament/trf/reader.cpp:254
 #, kde-format
 msgid "Unknown result \"%1\" on pairing \"%2\"."
 msgstr "对阵“%2”时出现未知结果“%1”。"
 
-#: tournament/trf/reader.cpp:250
+#: tournament/trf/reader.cpp:257
 #, kde-format
 msgid "Pairing \"%1\" has no opponent."
 msgstr "对阵“%1”无对手。"

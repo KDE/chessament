@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-05 00:41+0000\n"
+"POT-Creation-Date: 2026-04-19 00:40+0000\n"
 "PO-Revision-Date: 2026-01-06 11:22+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -1016,20 +1016,20 @@ msgstr ""
 msgid "Could not create temporary file."
 msgstr "Ezin izan du aldi baterako fitxategia sortu."
 
-#: tournament/pairingengine.cpp:62
+#: tournament/pairingengine.cpp:61
 #, kde-format
 msgctxt "bbpPairings is the name of a program, should not be translated"
 msgid "bbpPairings terminated with a non zero exit code: %1"
 msgstr "bbpPairings zero ez den irteera-kode batekin bukatu da: %1"
 
-#: tournament/pairingengine.cpp:80 tournament/trf/reader.cpp:227
+#: tournament/pairingengine.cpp:79 tournament/trf/reader.cpp:234
 #, kde-format
 msgid "Invalid pairing \"%1\"."
 msgstr "Parekatze baliogabea \"%1\"."
 
-#: tournament/pairingengine.cpp:86 tournament/pairingengine.cpp:90
-#: tournament/pairingengine.cpp:94 tournament/pairingengine.cpp:98
-#: tournament/trf/reader.cpp:240
+#: tournament/pairingengine.cpp:85 tournament/pairingengine.cpp:89
+#: tournament/pairingengine.cpp:93 tournament/pairingengine.cpp:97
+#: tournament/trf/reader.cpp:247
 #, kde-format
 msgid "Invalid player \"%1\" on pairing \"%2\"."
 msgstr "\"%1\" jokalari baliogabea \"%2\" parekatzean."
@@ -1161,18 +1161,18 @@ msgstr "\"%1\" jokalaria ez da aurkitu."
 msgid "Unknown result on pairing \"%1\" with \"%2\"."
 msgstr "Emaitza ezezaguna \"%1\" \"%2\"(e)rekin parekatzean."
 
-#: tournament/trf/reader.cpp:173
+#: tournament/trf/reader.cpp:180
 #, kde-format
 msgctxt "@info"
 msgid "Date \"%1\" is invalid."
 msgstr "\"%1\" data baliogabea da."
 
-#: tournament/trf/reader.cpp:247
+#: tournament/trf/reader.cpp:254
 #, kde-format
 msgid "Unknown result \"%1\" on pairing \"%2\"."
 msgstr "\"%1\" emaitza ezezaguna \"%2\" parekatzean."
 
-#: tournament/trf/reader.cpp:250
+#: tournament/trf/reader.cpp:257
 #, kde-format
 msgid "Pairing \"%1\" has no opponent."
 msgstr "\"%1\" parekatzeak ez du aurkaririk."
