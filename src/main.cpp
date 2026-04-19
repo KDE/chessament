@@ -6,6 +6,7 @@
 #include <QIcon>
 #include <QQmlApplicationEngine>
 #include <QQuickStyle>
+#include <QTextStream>
 #include <QUrl>
 
 #include "version-chessament.h"
@@ -78,11 +79,13 @@ int main(int argc, char *argv[])
     QGuiApplication::setWindowIcon(QIcon::fromTheme(u"org.kde.chessament"_s));
 
     QCommandLineParser parser;
+    aboutData.setupCommandLine(&parser);
 
     QCommandLineOption trfFile("import-trf"_L1, i18nc("Command line option description", "Import Tournament Report File."), "file"_L1);
-    parser.addOption(trfFile);
 
-    aboutData.setupCommandLine(&parser);
+    parser.addOption(trfFile);
+    parser.addPositionalArgument(u"file"_s, i18nc("@info:shell Command line option description", "Event to open."));
+
     parser.process(app);
     aboutData.processCommandLine(&parser);
 
@@ -93,10 +96,27 @@ int main(int argc, char *argv[])
     KLocalization::setupLocalizedContext(&engine);
     engine.loadFromModule("org.kde.chessament", u"Main"_s);
 
+    auto *controller = engine.singletonInstance<Controller *>("org.kde.chessament", "Controller");
+
+    const auto positionalArguments = parser.positionalArguments();
+
     if (parser.isSet(trfFile)) {
+        if (!positionalArguments.isEmpty()) {
+            QTextStream stream{stderr};
+            stream << i18nc("@info:shell", "Error: Can't open an event when importing a TRF") << '\n';
+            return 1;
+        }
         const auto fileName = parser.value(trfFile);
-        auto *controller = engine.singletonInstance<Controller *>("org.kde.chessament", "Controller");
         controller->importTrf(QUrl::fromLocalFile(fileName));
+    }
+    if (!positionalArguments.isEmpty()) {
+        if (positionalArguments.size() > 1) {
+            QTextStream stream{stderr};
+            stream << i18nc("@info:shell", "Error: Can't open more that one event") << '\n';
+            return 1;
+        }
+        const auto fileName = parser.positionalArguments().at(0);
+        controller->openEvent(QUrl::fromLocalFile(fileName));
     }
 
     if (engine.rootObjects().isEmpty()) {
