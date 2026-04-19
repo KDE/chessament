@@ -88,7 +88,7 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 			<para>
 				To enter the results, click on a pairing and choose from one of the supported results at the bottom. You can also enter
 				the results using the keyboard. Pressing <keycap>1</keycap> sets the result to White wins, <keycap>0</keycap> to Black wins
-				and <keycap>5</keycap> to draw. After entering a resuls, the next pairing without a result is automatically selected.
+				and <keycap>5</keycap> to draw. After entering a result, the next pairing without a result is automatically selected.
 			</para>
 		</sect1>
 
