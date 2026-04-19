@@ -656,6 +656,8 @@ std::expected<void, QString> Tournament::savePairing(Pairing *pairing, int round
         query.prepare(UPDATE_PAIRING_QUERY);
     }
 
+    pairing->setLastModified(QDateTime::currentDateTimeUtc());
+
     query.bindValue(u":id"_s, pairing->id());
     query.bindValue(u":board"_s, pairing->board());
     query.bindValue(u":whitePlayer"_s, pairing->whitePlayer()->id());
@@ -666,6 +668,7 @@ std::expected<void, QString> Tournament::savePairing(Pairing *pairing, int round
     }
     query.bindValue(u":whiteResult"_s, std::to_underlying(pairing->whiteResult()));
     query.bindValue(u":blackResult"_s, std::to_underlying(pairing->blackResult()));
+    query.bindValue(u":lastModified"_s, pairing->lastModified().toSecsSinceEpoch());
     query.bindValue(u":extra"_s, pairing->extraString());
     query.exec();
 
@@ -1335,6 +1338,7 @@ std::expected<void, QString> Tournament::loadPairings()
     int whiteResultNo = query.record().indexOf("whiteResult");
     int blackResultNo = query.record().indexOf("blackResult");
     int roundNo = query.record().indexOf("round");
+    int lastModifiedNo = query.record().indexOf("lastModified");
 
     while (query.next()) {
         auto round = query.value(roundNo).toInt();
@@ -1344,6 +1348,7 @@ std::expected<void, QString> Tournament::loadPairings()
                                                  Pairing::PartialResult(query.value(whiteResultNo).toInt()),
                                                  Pairing::PartialResult(query.value(blackResultNo).toInt()));
         pairing->setId(query.value(idNo).toString());
+        pairing->setLastModified(QDateTime::fromSecsSinceEpoch(query.value(lastModifiedNo).toLongLong()));
         m_rounds.at(round - 1)->addPairing(std::move(pairing));
     }
 

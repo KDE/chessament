@@ -414,6 +414,8 @@ public:
      */
     PartialResult blackResult();
 
+    [[nodiscard]] QDateTime lastModified() const;
+
     [[nodiscard]] QByteArray extraString() const;
 
     Pairing::PartialResult resultOfPlayer(Player *p)
@@ -455,6 +457,7 @@ public Q_SLOTS:
     void setBlackResult(Pairing::PartialResult blackResult);
     void setResult(Pairing::Result result);
     void setResult(Pairing::PartialResult whiteResult, Pairing::PartialResult blackResult);
+    void setLastModified(const QDateTime &lastModified);
     void setExtra(const QByteArray &extra);
 
 Q_SIGNALS:
@@ -472,5 +475,6 @@ private:
     Pairing::PartialResult m_whiteResult = PartialResult::Unknown;
     Player *m_blackPlayer;
     Pairing::PartialResult m_blackResult = PartialResult::Unknown;
+    QDateTime m_lastModified;
     QJsonObject m_extra;
 };

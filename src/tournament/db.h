@@ -96,6 +96,7 @@ const QString PAIRINGS_TABLE_SCHEMA =
     u"whiteResult INTEGER NOT NULL,"_s
     u"blackResult INTEGER NOT NULL,"_s
     u"round INTEGER NOT NULL,"_s
+    u"lastModified INTEGER,"_s
     u"extra TEXT,"_s
     u"FOREIGN KEY(whitePlayer) REFERENCES players(id),"_s
     u"FOREIGN KEY(blackPlayer) REFERENCES players(id),"_s
@@ -103,8 +104,8 @@ const QString PAIRINGS_TABLE_SCHEMA =
     u");"_s;
 
 const QString ADD_PAIRING_QUERY =
-    u"INSERT INTO pairings(id, board, whitePlayer, blackPlayer, whiteResult, blackResult, round, extra) "_s
-    u"VALUES (:id, :board, :whitePlayer, :blackPlayer, :whiteResult, :blackResult, :round, :extra);"_s;
+    u"INSERT INTO pairings(id, board, whitePlayer, blackPlayer, whiteResult, blackResult, round, lastModified, extra) "_s
+    u"VALUES (:id, :board, :whitePlayer, :blackPlayer, :whiteResult, :blackResult, :round, :lastModified, :extra);"_s;
 
 const QString GET_PAIRINGS_QUERY =
     u"SELECT * FROM pairings "_s
@@ -113,8 +114,8 @@ const QString GET_PAIRINGS_QUERY =
     u"ORDER BY rounds.number, pairings.board;"_s;
 
 const QString UPDATE_PAIRING_QUERY =
-    u"UPDATE pairings SET (board, whitePlayer, blackPlayer, whiteResult, blackResult, extra) = "_s
-    u"(:board, :whitePlayer, :blackPlayer, :whiteResult, :blackResult, :extra) "
+    u"UPDATE pairings SET (board, whitePlayer, blackPlayer, whiteResult, blackResult, lastModified, extra) = "_s
+    u"(:board, :whitePlayer, :blackPlayer, :whiteResult, :blackResult, :lastModified, :extra) "
     u"WHERE id = :id;"_s;
 
 const QString DELETE_PAIRING_QUERY = u"DELETE FROM pairings WHERE id = :id;"_s;

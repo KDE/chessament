@@ -108,6 +108,16 @@ void Pairing::setResult(PartialResult whiteResult, PartialResult blackResult)
     setBlackResult(blackResult);
 }
 
+QDateTime Pairing::lastModified() const
+{
+    return m_lastModified;
+}
+
+void Pairing::setLastModified(const QDateTime &lastModified)
+{
+    m_lastModified = lastModified;
+}
+
 QByteArray Pairing::extraString() const
 {
     const auto doc = QJsonDocument{m_extra};
