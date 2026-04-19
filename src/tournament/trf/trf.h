@@ -27,6 +27,7 @@ enum class Field {
     TimeControl,
     Calendar,
     NumberOfRounds,
+    InitialColor,
     ProgramName,
     Tiebreaks,
     Unknown,

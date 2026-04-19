@@ -68,9 +68,9 @@ void TrfWriter::writeTiebreaks(QTextStream &stream)
 void TrfWriter::writePairingEngineInformation(QTextStream &stream)
 {
     if (m_options.testFlag(Trf::Option::InitialColorWhite)) {
-        stream << "XXC white1\n"_L1;
+        stream << Trf::reportFieldString(Trf::Field::InitialColor) << space << "W" << newLine;
     } else if (m_options.testFlag(Trf::Option::InitialColorBlack)) {
-        stream << "XXC black1\n"_L1;
+        stream << Trf::reportFieldString(Trf::Field::InitialColor) << space << "B" << newLine;
     }
 }
 

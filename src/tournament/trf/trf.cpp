@@ -41,6 +41,8 @@ QString reportFieldString(Trf::Field field)
         return QStringLiteral("132");
     case Trf::Field::NumberOfRounds:
         return "142"_L1;
+    case Trf::Field::InitialColor:
+        return "152"_L1;
     case Trf::Field::ProgramName:
         return "182"_L1;
     case Trf::Field::Tiebreaks:
