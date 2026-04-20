@@ -621,6 +621,17 @@ std::expected<void, QString> Tournament::saveRound(Round *round)
     return {};
 }
 
+QMap<int, Round *> Tournament::roundsById()
+{
+    QMap<int, Round *> rounds;
+
+    for (const auto &round : std::as_const(m_rounds)) {
+        rounds[round->id()] = round.get();
+    }
+
+    return rounds;
+}
+
 std::expected<void, QString> Tournament::addPairing(int roundNumber, std::unique_ptr<Pairing> pairing)
 {
     if (const auto ok = savePairing(pairing.get(), roundNumber); !ok) {
@@ -1251,6 +1262,7 @@ std::expected<void, QString> Tournament::loadPlayers()
     query.exec();
 
     if (query.lastError().isValid()) {
+        qDebug() << "Error loading players" << query.lastError();
         return std::unexpected(query.lastError().text());
     }
 
@@ -1294,6 +1306,7 @@ std::expected<void, QString> Tournament::loadRounds()
     query.exec();
 
     if (query.lastError().isValid()) {
+        qDebug() << "Error loading rounds" << query.lastError();
         return std::unexpected(query.lastError().text());
     }
 
@@ -1320,7 +1333,8 @@ std::expected<void, QString> Tournament::loadRounds()
 
 std::expected<void, QString> Tournament::loadPairings()
 {
-    auto players = playersById();
+    const auto players = playersById();
+    const auto rounds = roundsById();
 
     QSqlQuery query(m_event->db());
     query.prepare(GET_PAIRINGS_QUERY);
@@ -1328,6 +1342,7 @@ std::expected<void, QString> Tournament::loadPairings()
     query.exec();
 
     if (query.lastError().isValid()) {
+        qDebug() << "Error loading pairings" << query.lastError();
         return std::unexpected(query.lastError().text());
     }
 
@@ -1339,9 +1354,12 @@ std::expected<void, QString> Tournament::loadPairings()
     int blackResultNo = query.record().indexOf("blackResult");
     int roundNo = query.record().indexOf("round");
     int lastModifiedNo = query.record().indexOf("lastModified");
+    int extraNo = query.record().indexOf("extra");
 
     while (query.next()) {
-        auto round = query.value(roundNo).toInt();
+        const auto round = query.value(roundNo).toInt();
+        Q_ASSERT(rounds.contains(round));
+
         auto pairing = std::make_unique<Pairing>(query.value(boardNo).toInt(),
                                                  players.value(query.value(whitePlayerNo).toString()),
                                                  players.value(query.value(blackPlayerNo).toString()),
@@ -1349,7 +1367,9 @@ std::expected<void, QString> Tournament::loadPairings()
                                                  Pairing::PartialResult(query.value(blackResultNo).toInt()));
         pairing->setId(query.value(idNo).toString());
         pairing->setLastModified(QDateTime::fromSecsSinceEpoch(query.value(lastModifiedNo).toLongLong()));
-        m_rounds.at(round - 1)->addPairing(std::move(pairing));
+        pairing->setExtra(query.value(extraNo).toByteArray());
+
+        rounds.value(round)->addPairing(std::move(pairing));
     }
 
     return {};

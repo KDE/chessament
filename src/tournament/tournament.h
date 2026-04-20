@@ -204,6 +204,8 @@ public:
 
     std::expected<void, QString> saveRound(Round *round);
 
+    QMap<int, Round *> roundsById();
+
     /*!
      * Adds the \a pairing to the round with number \a roundNumber.
      */
