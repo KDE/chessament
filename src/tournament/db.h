@@ -91,8 +91,8 @@ const QString PAIRINGS_TABLE_SCHEMA =
     u"CREATE TABLE IF NOT EXISTS pairings("_s
     u"id TEXT PRIMARY KEY,"_s
     u"board INTEGER,"_s
-    u"whitePlayer INTEGER NOT NULL,"_s
-    u"blackPlayer INTEGER,"_s
+    u"whitePlayer TEXT NOT NULL,"_s
+    u"blackPlayer TEXT,"_s
     u"whiteResult INTEGER NOT NULL,"_s
     u"blackResult INTEGER NOT NULL,"_s
     u"round INTEGER NOT NULL,"_s

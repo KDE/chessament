@@ -664,7 +664,7 @@ std::expected<void, QString> Tournament::savePairing(Pairing *pairing, int round
     if (pairing->blackPlayer() != nullptr) {
         query.bindValue(u":blackPlayer"_s, pairing->blackPlayer()->id());
     } else {
-        query.bindValue(u":blackPlayer"_s, QVariant(QMetaType::fromType<int>()));
+        query.bindValue(u":blackPlayer"_s, QVariant(QMetaType::fromType<QString>()));
     }
     query.bindValue(u":whiteResult"_s, std::to_underlying(pairing->whiteResult()));
     query.bindValue(u":blackResult"_s, std::to_underlying(pairing->blackResult()));
