@@ -49,7 +49,7 @@ const QString PLAYERS_TABLE_SCHEMA =
     u"federation TEXT,"_s
     u"origin TEXT,"_s
     u"sex TEXT,"_s
-    u"extra TEXT,"_s
+    u"extra BLOB,"_s
     u"tournament TEXT NOT NULL,"_s
     u"FOREIGN KEY (tournament) REFERENCES tournaments(id)"_s
     u");"_s;
@@ -71,7 +71,7 @@ const QString ROUNDS_TABLE_SCHEMA =
     u"number INTEGER NOT NULL,"_s
     u"tournament TEXT NOT NULL,"_s
     u"datetime TEXT,"_s
-    u"extra TEXT,"_s
+    u"extra BLOB,"_s
     u"FOREIGN KEY (tournament) REFERENCES tournaments(id),"_s
     u"UNIQUE (tournament, number)"_s
     u");"_s;
@@ -97,7 +97,7 @@ const QString PAIRINGS_TABLE_SCHEMA =
     u"blackResult INTEGER NOT NULL,"_s
     u"round INTEGER NOT NULL,"_s
     u"lastModified INTEGER,"_s
-    u"extra TEXT,"_s
+    u"extra BLOB,"_s
     u"FOREIGN KEY(whitePlayer) REFERENCES players(id),"_s
     u"FOREIGN KEY(blackPlayer) REFERENCES players(id),"_s
     u"FOREIGN KEY(round) REFERENCES rounds(id)"_s
