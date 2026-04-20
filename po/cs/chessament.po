@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-19 00:40+0000\n"
+"POT-Creation-Date: 2026-04-20 00:41+0000\n"
 "PO-Revision-Date: 2025-12-15 13:49+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -83,55 +83,73 @@ msgctxt "@title"
 msgid "Provisional Final Standings"
 msgstr ""
 
-#: main.cpp:58 qml/WelcomePage.qml:16
+#: main.cpp:59 qml/WelcomePage.qml:16
 #, kde-format
 msgctxt "@title"
 msgid "Chessament"
 msgstr ""
 
-#: main.cpp:62
+#: main.cpp:63
 #, kde-format
 msgid "Chess Tournament Manager"
 msgstr ""
 
-#: main.cpp:66
-#, kde-format
-msgid "© 2024–2026 Manuel Alcaraz Zambrano"
-msgstr ""
-
 #: main.cpp:67
 #, kde-format
-msgctxt "@info:credit"
-msgid "Manuel Alcaraz Zambrano"
+msgid "© 2024–2026 Manuel Alcaraz Zambrano"
 msgstr ""
 
 #: main.cpp:68
 #, kde-format
 msgctxt "@info:credit"
+msgid "Manuel Alcaraz Zambrano"
+msgstr ""
+
+#: main.cpp:69
+#, kde-format
+msgctxt "@info:credit"
 msgid "Author & Maintainer"
 msgstr "Autor a správce"
 
-#: main.cpp:71
+#: main.cpp:72
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "Vít Pelčák"
 
-#: main.cpp:71
+#: main.cpp:72
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "vit@pelcak.org"
 
-#: main.cpp:73
+#: main.cpp:74
 #, kde-format
 msgid "Swiss-system chess tournament pairing engine."
 msgstr ""
 
-#: main.cpp:82
+#: main.cpp:84
 #, kde-format
 msgctxt "Command line option description"
 msgid "Import Tournament Report File."
+msgstr ""
+
+#: main.cpp:87
+#, kde-format
+msgctxt "@info:shell Command line option description"
+msgid "Event to open."
+msgstr ""
+
+#: main.cpp:106
+#, kde-format
+msgctxt "@info:shell"
+msgid "Error: Can't open an event when importing a TRF"
+msgstr ""
+
+#: main.cpp:115
+#, kde-format
+msgctxt "@info:shell"
+msgid "Error: Can't open more that one event"
 msgstr ""
 
 #: pairingmodel.cpp:97
@@ -367,7 +385,17 @@ msgctxt "@title:window"
 msgid "Chessament"
 msgstr ""
 
-#: qml/Main.qml:102
+#: qml/Main.qml:51 qml/Main.qml:61 qml/NewTournamentDialog.qml:50
+msgctxt "@label:listbox"
+msgid "Chessament event (*.chessament)"
+msgstr ""
+
+#: qml/Main.qml:71 qml/Main.qml:81
+msgctxt "@label:listbox"
+msgid "TRF files (*.trf *.txt)"
+msgstr ""
+
+#: qml/Main.qml:108
 msgctxt "@title"
 msgid "Error"
 msgstr "Chyba"
@@ -985,6 +1013,12 @@ msgctxt "@title:column Player Ranking"
 msgid "Rank"
 msgstr "Pořadí"
 
+#: tournament/event.cpp:149 tournament/event.cpp:158
+#, kde-kuit-format
+msgctxt "@info"
+msgid "The file is not a <application>Chessament</application> event."
+msgstr ""
+
 #: tournament/federations.h:118
 msgctxt "FIDE Federation"
 msgid "Chinese Taipei"
@@ -1138,12 +1172,12 @@ msgctxt ""
 msgid "Number of Games Won (over the board)"
 msgstr ""
 
-#: tournament/tournament.cpp:930
+#: tournament/tournament.cpp:933
 #, kde-format
 msgid "An error ocurred while pairing the round: %1"
 msgstr ""
 
-#: tournament/tournament.cpp:1163
+#: tournament/tournament.cpp:1166
 #, kde-format
 msgid "Couldn't open file"
 msgstr "Soubor nelze otevřít"

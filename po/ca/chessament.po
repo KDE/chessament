@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-19 00:40+0000\n"
+"POT-Creation-Date: 2026-04-20 00:41+0000\n"
 "PO-Revision-Date: 2026-04-01 11:26+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -84,56 +84,74 @@ msgctxt "@title"
 msgid "Provisional Final Standings"
 msgstr "Resultats finals provisionals"
 
-#: main.cpp:58 qml/WelcomePage.qml:16
+#: main.cpp:59 qml/WelcomePage.qml:16
 #, kde-format
 msgctxt "@title"
 msgid "Chessament"
 msgstr "Chessament"
 
-#: main.cpp:62
+#: main.cpp:63
 #, kde-format
 msgid "Chess Tournament Manager"
 msgstr "Gestor de torneigs d'escacs"
 
-#: main.cpp:66
+#: main.cpp:67
 #, kde-format
 msgid "© 2024–2026 Manuel Alcaraz Zambrano"
 msgstr "© 2024–2026 Manuel Alcaraz Zambrano"
 
-#: main.cpp:67
+#: main.cpp:68
 #, kde-format
 msgctxt "@info:credit"
 msgid "Manuel Alcaraz Zambrano"
 msgstr "Manuel Alcaraz Zambrano"
 
-#: main.cpp:68
+#: main.cpp:69
 #, kde-format
 msgctxt "@info:credit"
 msgid "Author & Maintainer"
 msgstr "Autor i mantenidor"
 
-#: main.cpp:71
+#: main.cpp:72
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "Josep M. Ferrer"
 
-#: main.cpp:71
+#: main.cpp:72
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "txemaq@gmail.com"
 
-#: main.cpp:73
+#: main.cpp:74
 #, kde-format
 msgid "Swiss-system chess tournament pairing engine."
 msgstr "Motor d'aparellament de tornejos d'escacs amb el sistema suís."
 
-#: main.cpp:82
+#: main.cpp:84
 #, kde-format
 msgctxt "Command line option description"
 msgid "Import Tournament Report File."
 msgstr "Fitxers d'informe d'importació de torneig."
+
+#: main.cpp:87
+#, kde-format
+msgctxt "@info:shell Command line option description"
+msgid "Event to open."
+msgstr ""
+
+#: main.cpp:106
+#, kde-format
+msgctxt "@info:shell"
+msgid "Error: Can't open an event when importing a TRF"
+msgstr ""
+
+#: main.cpp:115
+#, kde-format
+msgctxt "@info:shell"
+msgid "Error: Can't open more that one event"
+msgstr ""
 
 #: pairingmodel.cpp:97
 #, kde-format
@@ -368,7 +386,20 @@ msgctxt "@title:window"
 msgid "Chessament"
 msgstr "Chessament"
 
-#: qml/Main.qml:102
+#: qml/Main.qml:51 qml/Main.qml:61 qml/NewTournamentDialog.qml:50
+#, fuzzy
+#| msgctxt "@info"
+#| msgid "Chessament is a chess tournament manager"
+msgctxt "@label:listbox"
+msgid "Chessament event (*.chessament)"
+msgstr "El Chessament és un gestor de torneigs d'escacs"
+
+#: qml/Main.qml:71 qml/Main.qml:81
+msgctxt "@label:listbox"
+msgid "TRF files (*.trf *.txt)"
+msgstr ""
+
+#: qml/Main.qml:108
 msgctxt "@title"
 msgid "Error"
 msgstr "Error"
@@ -956,6 +987,12 @@ msgctxt "@title:column Player Ranking"
 msgid "Rank"
 msgstr "Posició"
 
+#: tournament/event.cpp:149 tournament/event.cpp:158
+#, kde-kuit-format
+msgctxt "@info"
+msgid "The file is not a <application>Chessament</application> event."
+msgstr ""
+
 #: tournament/federations.h:118
 msgctxt "FIDE Federation"
 msgid "Chinese Taipei"
@@ -1105,12 +1142,12 @@ msgctxt ""
 msgid "Number of Games Won (over the board)"
 msgstr "Nombre de partides guanyades (sobre el tauler)"
 
-#: tournament/tournament.cpp:930
+#: tournament/tournament.cpp:933
 #, kde-format
 msgid "An error ocurred while pairing the round: %1"
 msgstr "S'ha produït un error en aparellar la ronda: %1"
 
-#: tournament/tournament.cpp:1163
+#: tournament/tournament.cpp:1166
 #, kde-format
 msgid "Couldn't open file"
 msgstr "No s'ha pogut obrir el fitxer"
