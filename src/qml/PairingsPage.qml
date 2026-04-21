@@ -122,8 +122,10 @@ TablePage {
         visible: root.tableView.rows !== 0
 
         pairing: {
-            const index = proxyModel.mapToSource(root.tableView.selectionModel.currentIndex);
-            return root.model.sourceModel.pairing(index.row);
+            if (!root.tableView.selectionModel.hasSelection) {
+                return null;
+            }
+            return proxyModel.data(root.tableView.selectionModel.currentIndex, PairingModel.Roles.PairingRole) as Pairing;
         }
 
         onSaveResult: (pairing, whiteResult, blackResult) => {
@@ -161,14 +163,14 @@ TablePage {
     Keys.onPressed: event => {
         if (tableView.selectionModel.hasSelection) {
             const selection = tableView.selectionModel.currentIndex;
-            const index = proxyModel.mapToSource(selection);
-            const pairing = root.model.sourceModel.pairing(index.row);
+            const pairing = proxyModel.data(selection, PairingModel.Roles.PairingRole) as Pairing;
 
             if (pairing.blackPlayer === null) {
                 return;
             }
 
-            const board = index.row + 1;
+            const board = pairing.board;
+
             if (board && Controller.pairingModel.setResult(board, event.key)) {
                 event.accepted = true;
                 root.selectNextBoardAfter(board);

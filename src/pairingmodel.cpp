@@ -60,8 +60,11 @@ QVariant PairingModel::data(const QModelIndex &index, int role) const
             }
             return pairing->blackPlayer()->startingRank();
         }
-    } else if (role == PairingModel::PairingRole::HasFinishedRole) {
+    } else if (role == PairingModel::Roles::HasFinishedRole) {
         return pairing->hasFinished();
+    } else if (role == PairingModel::Roles::PairingRole) {
+        QQmlEngine::setObjectOwnership(pairing, QJSEngine::CppOwnership);
+        return QVariant::fromValue(pairing);
     } else if (role == Qt::TextAlignmentRole) {
         switch (column) {
         case Result:
@@ -79,7 +82,12 @@ QVariant PairingModel::data(const QModelIndex &index, int role) const
 
 QHash<int, QByteArray> PairingModel::roleNames() const
 {
-    return {{Qt::DisplayRole, "display"}, {PairingModel::PairingRole::HasFinishedRole, "hasFinished"}, {Qt::TextAlignmentRole, "textAlignment"}};
+    return {
+        {Qt::DisplayRole, "display"},
+        {PairingModel::Roles::HasFinishedRole, "hasFinished"},
+        {PairingModel::Roles::PairingRole, "pairing"},
+        {Qt::TextAlignmentRole, "textAlignment"},
+    };
 }
 
 QVariant PairingModel::headerData(int section, Qt::Orientation orientation, int role) const
@@ -172,17 +180,6 @@ bool PairingModel::setResult(int board, Pairing::PartialResult whiteResult, Pair
     Q_EMIT pairingChanged();
 
     return true;
-}
-
-Pairing *PairingModel::pairing(int board)
-{
-    if (board < 0) {
-        return nullptr;
-    }
-    Q_ASSERT(board < m_pairings.size());
-    const auto pairing = m_pairings.at(board);
-    QQmlEngine::setObjectOwnership(pairing, QJSEngine::CppOwnership);
-    return pairing;
 }
 
 QVariant PairingModel::nextPendingBoardAfter(int board)

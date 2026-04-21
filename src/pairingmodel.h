@@ -26,10 +26,11 @@ public:
     };
     Q_ENUM(Columns)
 
-    enum PairingRole {
+    enum Roles {
         HasFinishedRole = Qt::UserRole,
+        PairingRole,
     };
-    Q_ENUM(PairingRole)
+    Q_ENUM(Roles)
 
     explicit PairingModel(QObject *parent = nullptr);
 
@@ -44,7 +45,6 @@ public:
     void setPairings(const QList<Pairing *> &pairings);
     Q_INVOKABLE bool setResult(int board, Qt::Key key);
     Q_INVOKABLE bool setResult(int board, Pairing::PartialResult whiteResult, Pairing::PartialResult blackResult);
-    Q_INVOKABLE Pairing *pairing(int board);
     Q_INVOKABLE QVariant nextPendingBoardAfter(int board);
 
 Q_SIGNALS:
