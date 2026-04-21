@@ -122,10 +122,11 @@ TablePage {
         visible: root.tableView.rows !== 0
 
         pairing: {
-            if (!root.tableView.selectionModel.hasSelection) {
+            const currentIndex = root.tableView.selectionModel.currentIndex;
+            if (currentIndex.row < 0 || currentIndex.column < 0) {
                 return null;
             }
-            return proxyModel.data(root.tableView.selectionModel.currentIndex, PairingModel.Roles.PairingRole) as Pairing;
+            return proxyModel.data(currentIndex, PairingModel.Roles.PairingRole) as Pairing;
         }
 
         onSaveResult: (pairing, whiteResult, blackResult) => {
@@ -161,9 +162,9 @@ TablePage {
     }
 
     Keys.onPressed: event => {
-        if (tableView.selectionModel.hasSelection) {
-            const selection = tableView.selectionModel.currentIndex;
-            const pairing = proxyModel.data(selection, PairingModel.Roles.PairingRole) as Pairing;
+        const currentIndex = tableView.selectionModel.currentIndex;
+        if (currentIndex) {
+            const pairing = proxyModel.data(currentIndex, PairingModel.Roles.PairingRole) as Pairing;
 
             if (pairing.blackPlayer === null) {
                 return;
