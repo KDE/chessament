@@ -138,10 +138,8 @@ Player *Pairing::opponent(const Player *player)
     if (player == m_whitePlayer) {
         return m_blackPlayer;
     }
-    if (player == m_blackPlayer) {
-        return m_whitePlayer;
-    }
-    Q_UNREACHABLE();
+    Q_ASSERT(player == m_blackPlayer);
+    return m_whitePlayer;
 }
 
 Pairing::Color Pairing::colorOfPlayer(const Player *player)
@@ -149,10 +147,8 @@ Pairing::Color Pairing::colorOfPlayer(const Player *player)
     if (player == m_whitePlayer) {
         return Pairing::Color::White;
     }
-    if (player == m_blackPlayer) {
-        return Pairing::Color::Black;
-    }
-    Q_UNREACHABLE();
+    Q_ASSERT(player == m_blackPlayer);
+    return Pairing::Color::Black;
 }
 
 bool Pairing::hasFinished()
@@ -188,9 +184,7 @@ QString Pairing::toTrf(Player *player)
         r = Pairing::partialResultToTRF(m_blackResult);
     }
 
-    auto result = QString::fromStdString(std::format("  {:>4s} {} {}", opponent.toStdString(), color.toStdString(), r.toStdString()));
-
-    return result;
+    return QString::fromStdString(std::format("  {:>4s} {} {}", opponent.toStdString(), color.toStdString(), r.toStdString()));
 }
 
 QJsonObject Pairing::toJson() const

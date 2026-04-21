@@ -5,7 +5,6 @@
 #include "accountmanager.h"
 #include "standing.h"
 #include "tournament/pairing.h"
-#include "tournament/ratinglists/ratinglist.h"
 #include "tournament/state.h"
 #include "tournament/sync/syncengine.h"
 
@@ -200,7 +199,7 @@ QCoro::Task<void> Controller::pairRound(bool sort, uint color)
 
 void Controller::removePairings(bool keepByes)
 {
-    if (auto ok = m_tournament->removePairings(m_currentRound, keepByes); !ok) {
+    if (const auto ok = m_tournament->removePairings(m_currentRound, keepByes); !ok) {
         setError(ok.error());
         return;
     }
@@ -227,7 +226,8 @@ QCoro::QmlTask Controller::reloadStandings(int maxRound)
 QCoro::Task<> Controller::updateStandings(int maxRound)
 {
     const auto standings = co_await QtConcurrent::run([this, maxRound]() -> QList<Standing> {
-        return m_tournament->standings(m_tournament->state(maxRound));
+        const State state = m_tournament->state(maxRound);
+        return m_tournament->standings(state);
     });
 
     m_standingsModel->setStandings(standings);
@@ -245,7 +245,7 @@ void Controller::newTournament(const QUrl &fileUrl, const QString &name, int num
 {
     auto event = std::make_unique<Event>();
 
-    if (auto ok = event->create(fileUrl.toLocalFile()); !ok) {
+    if (const auto ok = event->create(fileUrl.toLocalFile()); !ok) {
         setError(ok.error());
         return;
     }
@@ -268,7 +268,7 @@ void Controller::openEvent(const QUrl &fileUrl)
 {
     auto event = std::make_unique<Event>();
 
-    if (auto ok = event->open(fileUrl.toLocalFile()); !ok) {
+    if (const auto ok = event->open(fileUrl.toLocalFile()); !ok) {
         setError(ok.error());
         return;
     }
@@ -280,7 +280,11 @@ void Controller::openEvent(const QUrl &fileUrl)
 
 void Controller::saveEventAs(const QUrl &fileUrl)
 {
-    m_event->saveAs(fileUrl.toLocalFile());
+    if (const auto ok = m_event->saveAs(fileUrl.toLocalFile()); !ok) {
+        setError(ok.error());
+        return;
+    }
+
     openEvent(fileUrl);
 }
 
@@ -311,7 +315,6 @@ void Controller::uploadTournament()
     Q_ASSERT(account);
 
     auto engine = new SyncEngine{account, m_tournament};
-    // engine->upload();
     engine->start();
 }
 

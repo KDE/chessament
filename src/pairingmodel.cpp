@@ -28,11 +28,10 @@ int PairingModel::columnCount(const QModelIndex &parent) const
 
 QVariant PairingModel::data(const QModelIndex &index, int role) const
 {
-    Q_UNUSED(role)
     Q_ASSERT(checkIndex(index, CheckIndexOption::IndexIsValid | CheckIndexOption::ParentIsInvalid));
 
-    auto pairing = m_pairings.at(index.row());
-    int column = m_columns.at(index.column());
+    const auto pairing = m_pairings.at(index.row());
+    const int column = m_columns.at(index.column());
 
     if (role == Qt::DisplayRole) {
         switch (column) {
@@ -117,7 +116,7 @@ void PairingModel::setTournament(Tournament *tournament)
 
 void PairingModel::setPairings(const QList<Pairing *> &pairings)
 {
-    auto rowDiff = static_cast<long int>(pairings.size() - m_pairings.size());
+    const auto rowDiff = static_cast<long int>(pairings.size() - m_pairings.size());
 
     if (rowDiff > 0) {
         beginInsertRows({}, static_cast<int>(m_pairings.size()), static_cast<int>(pairings.size() - 1));
@@ -160,9 +159,9 @@ bool PairingModel::setResult(int board, Qt::Key key)
 
 bool PairingModel::setResult(int board, Pairing::PartialResult whiteResult, Pairing::PartialResult blackResult)
 {
-    auto pairing = m_pairings[board - 1];
+    const auto pairing = m_pairings[board - 1];
 
-    Pairing::Result result = {whiteResult, blackResult};
+    const Pairing::Result result = {whiteResult, blackResult};
 
     if (auto ok = m_tournament->setResult(pairing, result); !ok) {
         Q_EMIT errorOcurred(ok.error());
@@ -181,7 +180,7 @@ Pairing *PairingModel::pairing(int board)
         return nullptr;
     }
     Q_ASSERT(board < m_pairings.size());
-    auto pairing = m_pairings.at(board);
+    const auto pairing = m_pairings.at(board);
     QQmlEngine::setObjectOwnership(pairing, QJSEngine::CppOwnership);
     return pairing;
 }

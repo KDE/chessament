@@ -286,9 +286,8 @@ void Tournament::savePlayer(Player *player)
     query.bindValue(u":sex"_s, player->sex());
     query.bindValue(u":extra"_s, player->extraString());
     query.bindValue(u":tournament"_s, m_id);
-    query.exec();
 
-    if (query.lastError().isValid()) {
+    if (!query.exec()) {
         qDebug() << "save player" << *player << query.lastError();
     }
 
@@ -362,7 +361,7 @@ QHash<Player *, QList<Pairing *>> Tournament::pairingsByPlayer(int maxRound)
 {
     QHash<Player *, QList<Pairing *>> pairings;
 
-    auto r = maxRound < 0 ? m_rounds.size() : maxRound;
+    const auto r = maxRound < 0 ? m_rounds.size() : maxRound;
     for (std::size_t i = 0; i < r; i++) {
         if (i >= m_rounds.size()) {
             break;
@@ -383,7 +382,7 @@ QList<Pairing *> Tournament::pairingsOfPlayer(Player *player)
 {
     QList<Pairing *> result;
 
-    for (size_t i = 0; i < m_numberOfRounds; ++i) {
+    for (std::size_t i = 0; i < m_numberOfRounds; ++i) {
         if (i >= m_rounds.size()) {
             result << nullptr;
             continue;
@@ -586,9 +585,8 @@ std::expected<void, QString> Tournament::ensureRoundExists(int round)
             query.bindValue(u":number"_s, static_cast<qulonglong>(i));
             query.bindValue(u":tournament"_s, m_id);
             query.bindValue(u":extra"_s, round->extraString());
-            query.exec();
 
-            if (query.lastError().isValid()) {
+            if (!query.exec()) {
                 return std::unexpected(query.lastError().text());
             }
 
@@ -611,9 +609,8 @@ std::expected<void, QString> Tournament::saveRound(Round *round)
     query.bindValue(u":id"_s, round->id());
     query.bindValue(u":datetime"_s, dateTime);
     query.bindValue(u":extra"_s, round->extraString());
-    query.exec();
 
-    if (query.lastError().isValid()) {
+    if (!query.exec()) {
         qDebug() << "save round" << query.lastError();
         return std::unexpected(query.lastError().text());
     }
@@ -681,9 +678,8 @@ std::expected<void, QString> Tournament::savePairing(Pairing *pairing, int round
     query.bindValue(u":blackResult"_s, std::to_underlying(pairing->blackResult()));
     query.bindValue(u":lastModified"_s, pairing->lastModified().toSecsSinceEpoch());
     query.bindValue(u":extra"_s, pairing->extraString());
-    query.exec();
 
-    if (query.lastError().isValid()) {
+    if (!query.exec()) {
         qDebug() << "save pairing" << query.lastError();
         return std::unexpected(query.lastError().text());
     }
@@ -1008,9 +1004,8 @@ std::expected<void, QString> Tournament::removePairings(int round, bool keepByes
             query.prepare(DELETE_PAIRINGS_QUERY);
         }
         query.bindValue(u":round"_s, m_rounds.at(i - 1)->id());
-        query.exec();
 
-        if (query.lastError().isValid()) {
+        if (!query.exec()) {
             qDebug() << "remove pairings" << query.lastError();
             return std::unexpected(query.lastError().text());
         }
@@ -1057,9 +1052,8 @@ QVariant Tournament::option(const QString &name)
     query.prepare(GET_OPTION_QUERY);
     query.bindValue(u":tournament"_s, m_id);
     query.bindValue(u":name"_s, name);
-    query.exec();
 
-    if (query.lastError().isValid()) {
+    if (!query.exec()) {
         qDebug() << "get option" << query.lastError();
     }
 
@@ -1077,9 +1071,8 @@ void Tournament::setOption(const QString &name, const QVariant &value)
     query.bindValue(u":tournament"_s, m_id);
     query.bindValue(u":name"_s, name);
     query.bindValue(u":value"_s, value);
-    query.exec();
 
-    if (query.lastError().isValid()) {
+    if (!query.exec()) {
         qDebug() << "set option" << name << value << query.lastError();
     }
 }
@@ -1189,7 +1182,7 @@ bool Tournament::exportTrf(const QString &fileName)
         return false;
     }
 
-    auto trf = toTrf();
+    const auto trf = toTrf();
     file.write(trf.toUtf8());
 
     return true;
@@ -1204,9 +1197,8 @@ std::expected<void, QString> Tournament::createNewTournament()
     QSqlQuery query(m_event->db());
     query.prepare(ADD_TOURNAMENT_QUERY);
     query.bindValue(u":id"_s, newId);
-    query.exec();
 
-    if (query.lastError().isValid()) {
+    if (!query.exec()) {
         qDebug() << "create tournament" << query.lastError();
         return std::unexpected(query.lastError().text());
     }
@@ -1223,16 +1215,17 @@ std::expected<void, QString> Tournament::loadTournament(const QString &id)
     setId(id);
 
     loadOptions();
-    if (auto ok = loadPlayers(); !ok) {
+
+    if (const auto ok = loadPlayers(); !ok) {
         return ok;
     }
-    if (auto ok = loadRounds(); !ok) {
+    if (const auto ok = loadRounds(); !ok) {
         return ok;
     }
-    if (auto ok = loadPairings(); !ok) {
+    if (const auto ok = loadPairings(); !ok) {
         return ok;
     }
-    if (auto ok = loadTiebreaks(); !ok) {
+    if (const auto ok = loadTiebreaks(); !ok) {
         return ok;
     }
 
@@ -1259,25 +1252,24 @@ std::expected<void, QString> Tournament::loadPlayers()
     QSqlQuery query(m_event->db());
     query.prepare(GET_PLAYERS_QUERY);
     query.bindValue(u":tournament"_s, m_id);
-    query.exec();
 
-    if (query.lastError().isValid()) {
+    if (!query.exec()) {
         qDebug() << "Error loading players" << query.lastError();
         return std::unexpected(query.lastError().text());
     }
 
-    int idNo = query.record().indexOf("id");
-    int stRankNo = query.record().indexOf("startingRank");
-    int titleNo = query.record().indexOf("title");
-    int nameNo = query.record().indexOf("name");
-    int ratingNo = query.record().indexOf("rating");
-    int nationalRatingNo = query.record().indexOf("nationalRating");
-    int playerIdNo = query.record().indexOf("playerId");
-    int birthDateNo = query.record().indexOf("birthDate");
-    int federationNo = query.record().indexOf("federation");
-    int originNo = query.record().indexOf("origin");
-    int sexNo = query.record().indexOf("sex");
-    int extraNo = query.record().indexOf("extra");
+    const int idNo = query.record().indexOf("id");
+    const int stRankNo = query.record().indexOf("startingRank");
+    const int titleNo = query.record().indexOf("title");
+    const int nameNo = query.record().indexOf("name");
+    const int ratingNo = query.record().indexOf("rating");
+    const int nationalRatingNo = query.record().indexOf("nationalRating");
+    const int playerIdNo = query.record().indexOf("playerId");
+    const int birthDateNo = query.record().indexOf("birthDate");
+    const int federationNo = query.record().indexOf("federation");
+    const int originNo = query.record().indexOf("origin");
+    const int sexNo = query.record().indexOf("sex");
+    const int extraNo = query.record().indexOf("extra");
 
     while (query.next()) {
         auto player = std::make_unique<Player>(query.value(stRankNo).toInt(),
@@ -1303,17 +1295,16 @@ std::expected<void, QString> Tournament::loadRounds()
     QSqlQuery query(m_event->db());
     query.prepare(GET_ROUNDS_QUERY);
     query.bindValue(u":tournament"_s, m_id);
-    query.exec();
 
-    if (query.lastError().isValid()) {
+    if (!query.exec()) {
         qDebug() << "Error loading rounds" << query.lastError();
         return std::unexpected(query.lastError().text());
     }
 
-    int idNo = query.record().indexOf("id");
-    int numberNo = query.record().indexOf("number");
-    int dateTimeNo = query.record().indexOf("datetime");
-    int extraNo = query.record().indexOf("extra");
+    const int idNo = query.record().indexOf("id");
+    const int numberNo = query.record().indexOf("number");
+    const int dateTimeNo = query.record().indexOf("datetime");
+    const int extraNo = query.record().indexOf("extra");
 
     while (query.next()) {
         auto round = std::make_unique<Round>();
@@ -1339,22 +1330,21 @@ std::expected<void, QString> Tournament::loadPairings()
     QSqlQuery query(m_event->db());
     query.prepare(GET_PAIRINGS_QUERY);
     query.bindValue(u":tournament"_s, m_id);
-    query.exec();
 
-    if (query.lastError().isValid()) {
+    if (!query.exec()) {
         qDebug() << "Error loading pairings" << query.lastError();
         return std::unexpected(query.lastError().text());
     }
 
-    int idNo = query.record().indexOf("id");
-    int boardNo = query.record().indexOf("board");
-    int whitePlayerNo = query.record().indexOf("whitePlayer");
-    int blackPlayerNo = query.record().indexOf("blackPlayer");
-    int whiteResultNo = query.record().indexOf("whiteResult");
-    int blackResultNo = query.record().indexOf("blackResult");
-    int roundNo = query.record().indexOf("round");
-    int lastModifiedNo = query.record().indexOf("lastModified");
-    int extraNo = query.record().indexOf("extra");
+    const int idNo = query.record().indexOf("id");
+    const int boardNo = query.record().indexOf("board");
+    const int whitePlayerNo = query.record().indexOf("whitePlayer");
+    const int blackPlayerNo = query.record().indexOf("blackPlayer");
+    const int whiteResultNo = query.record().indexOf("whiteResult");
+    const int blackResultNo = query.record().indexOf("blackResult");
+    const int roundNo = query.record().indexOf("round");
+    const int lastModifiedNo = query.record().indexOf("lastModified");
+    const int extraNo = query.record().indexOf("extra");
 
     while (query.next()) {
         const auto round = query.value(roundNo).toInt();

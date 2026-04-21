@@ -66,7 +66,7 @@ public:
      *
      * \a fileName The file name.
      */
-    void saveAs(const QString &fileName);
+    std::expected<void, QString> saveAs(const QString &fileName);
 
     /*!
      * Deletes the event.

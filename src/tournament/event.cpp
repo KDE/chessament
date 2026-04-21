@@ -36,9 +36,9 @@ size_t Event::numberOfTournaments()
 
 std::expected<void, QString> Event::create(const QString &fileName)
 {
-    QString dbName = fileName.isEmpty() ? ":memory:"_L1 : fileName;
+    const QString dbName = fileName.isEmpty() ? ":memory:"_L1 : fileName;
 
-    if (auto ok = openDatabase(dbName); !ok) {
+    if (const auto ok = openDatabase(dbName); !ok) {
         return ok;
     }
 
@@ -71,7 +71,7 @@ Tournament *Event::tournament(uint index)
 std::expected<Tournament *, QString> Event::createTournament()
 {
     auto tournament = std::unique_ptr<Tournament>(new Tournament(this));
-    if (auto ok = tournament->createNewTournament(); !ok) {
+    if (const auto ok = tournament->createNewTournament(); !ok) {
         return std::unexpected(ok.error());
     }
 
@@ -87,24 +87,25 @@ std::expected<Tournament *, QString> Event::importTournament(const QString &file
         return tournament;
     }
 
-    auto ok = (*tournament)->loadTrf(fileName);
-    if (!ok) {
+    if (const auto ok = (*tournament)->loadTrf(fileName); !ok) {
         return std::unexpected(ok.error());
     }
 
     return m_tournaments.back().get();
 }
 
-void Event::saveAs(const QString &fileName)
+std::expected<void, QString> Event::saveAs(const QString &fileName)
 {
     QSqlQuery query(db());
     query.prepare(u"VACUUM INTO :fileName;"_s);
     query.bindValue(u":fileName"_s, fileName);
-    query.exec();
 
-    if (query.lastError().isValid()) {
+    if (!query.exec()) {
         qDebug() << "save copy" << query.lastError();
+        return std::unexpected(query.lastError().text());
     }
+
+    return {};
 }
 
 bool Event::remove()
@@ -183,45 +184,40 @@ std::expected<void, QString> Event::createTables()
 
     query = QSqlQuery(db());
     query.prepare(TOURNAMENTS_TABLE_SCHEMA);
-    query.exec();
 
-    if (query.lastError().isValid()) {
+    if (!query.exec()) {
         return std::unexpected(query.lastError().text());
     }
 
     query = QSqlQuery(db());
     query.prepare(OPTIONS_TABLE_SCHEMA);
-    query.exec();
 
-    if (query.lastError().isValid()) {
+    if (!query.exec()) {
         return std::unexpected(query.lastError().text());
     }
 
     query = QSqlQuery(db());
     query.prepare(PLAYERS_TABLE_SCHEMA);
-    query.exec();
 
-    if (query.lastError().isValid()) {
+    if (!query.exec()) {
         return std::unexpected(query.lastError().text());
     }
 
     query = QSqlQuery(db());
     query.prepare(ROUNDS_TABLE_SCHEMA);
-    query.exec();
 
-    if (query.lastError().isValid()) {
+    if (!query.exec()) {
         return std::unexpected(query.lastError().text());
     }
 
     query = QSqlQuery(db());
     query.prepare(PAIRINGS_TABLE_SCHEMA);
-    query.exec();
 
-    if (query.lastError().isValid()) {
+    if (!query.exec()) {
         return std::unexpected(query.lastError().text());
     }
 
-    if (auto ok = setDbVersion(1); !ok) {
+    if (const auto ok = setDbVersion(1); !ok) {
         return ok;
     }
 
@@ -250,9 +246,8 @@ std::expected<void, QString> Event::setDbVersion(int version)
 {
     QSqlQuery query(db());
     query.prepare(u"PRAGMA user_version = %1;"_s.arg(version)); // Can't bind in a PRAGMA statement
-    query.exec();
 
-    if (query.lastError().isValid()) {
+    if (!query.exec()) {
         return std::unexpected(query.lastError().text());
     }
 
@@ -263,19 +258,18 @@ std::expected<void, QString> Event::loadTournaments()
 {
     QSqlQuery query(db());
     query.prepare(GET_TOURNAMENTS_QUERY);
-    query.exec();
 
-    if (query.lastError().isValid()) {
+    if (!query.exec()) {
         return std::unexpected(query.lastError().text());
     }
 
-    int idNo = query.record().indexOf("id");
+    const int idNo = query.record().indexOf("id");
 
     while (query.next()) {
-        auto id = query.value(idNo).toString();
+        const auto id = query.value(idNo).toString();
 
         auto tournament = std::unique_ptr<Tournament>(new Tournament(this));
-        if (auto ok = tournament->loadTournament(id); !ok) {
+        if (const auto ok = tournament->loadTournament(id); !ok) {
             return ok;
         }
 

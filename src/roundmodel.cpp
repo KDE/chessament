@@ -60,7 +60,6 @@ QVariant RoundModel::data(const QModelIndex &index, int role) const
 
 bool RoundModel::setData(const QModelIndex &index, const QVariant &value, int role)
 {
-    Q_UNUSED(role);
     Q_ASSERT(checkIndex(index, CheckIndexOption::IndexIsValid | CheckIndexOption::ParentIsInvalid));
 
     if (const auto ok = m_tournament->ensureRoundExists(index.row() + 1); !ok) {
@@ -71,7 +70,7 @@ bool RoundModel::setData(const QModelIndex &index, const QVariant &value, int ro
     switch (role) {
     case RoundModel::RoundRole::DateTimeRole: {
         auto dateTime = value.toDateTime();
-        auto time = dateTime.time();
+        const auto time = dateTime.time();
         dateTime.setTime({time.hour(), time.minute(), 0});
         if (round->dateTime() == dateTime) {
             return false;

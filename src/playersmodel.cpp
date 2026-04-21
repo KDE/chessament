@@ -33,7 +33,7 @@ QVariant PlayersModel::data(const QModelIndex &index, int role) const
     Q_ASSERT(checkIndex(index, CheckIndexOption::IndexIsValid | CheckIndexOption::ParentIsInvalid));
 
     const auto player = m_players.at(index.row());
-    int column = m_columns.at(index.column());
+    const int column = m_columns.at(index.column());
 
     if (role == Qt::DisplayRole) {
         switch (column) {
@@ -241,7 +241,7 @@ void PlayersModel::addPlayer(const QString &title,
                              const QString &origin,
                              const QString &sex)
 {
-    auto startingRank = m_tournament->numberOfPlayers() + 1;
+    const auto startingRank = m_tournament->numberOfPlayers() + 1;
     auto player = std::make_unique<Player>(startingRank, title, name, rating, nationalRating, playerId, birthDate, federation, origin, sex);
 
     if (auto ok = m_tournament->addPlayer(std::move(player)); !ok) {
@@ -256,8 +256,6 @@ void PlayersModel::addPlayer(const QString &title,
 
 void PlayersModel::updatePlayer(Player *player)
 {
-    Q_UNUSED(player);
-
     Q_EMIT dataChanged(index(player->startingRank() - 1, 0), index(player->startingRank() - 1, columnCount() - 1), {});
 }
 

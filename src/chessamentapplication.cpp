@@ -23,7 +23,7 @@ void ChessamentApplication::setupActions()
         action->setText(i18nc("@action:inmenu", "New tournament…"));
         action->setIcon(QIcon::fromTheme(u"document-new-symbolic"_s));
         mainCollection()->addAction(action->objectName(), action);
-        mainCollection()->setDefaultShortcut(action, Qt::Key_New);
+        KirigamiActionCollection::setDefaultShortcut(action, Qt::CTRL | Qt::Key_N);
     }
 
     actionName = "file_open"_L1;
@@ -44,7 +44,7 @@ void ChessamentApplication::setupActions()
         action->setText(i18nc("@action:inmenu", "Import tournament report…"));
         action->setIcon(QIcon::fromTheme(u"document-import-symbolic"_s));
         mainCollection()->addAction(action->objectName(), action);
-        mainCollection()->setDefaultShortcut(action, Qt::CTRL | Qt::Key_I);
+        KirigamiActionCollection::setDefaultShortcut(action, Qt::CTRL | Qt::Key_I);
     }
 
     actionName = "export_trf"_L1;
