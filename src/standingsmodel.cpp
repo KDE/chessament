@@ -32,9 +32,7 @@ int StandingsModel::columnCount(const QModelIndex &parent) const
 
 QVariant StandingsModel::data(const QModelIndex &index, int role) const
 {
-    if (!index.isValid()) {
-        return {};
-    }
+    Q_ASSERT(checkIndex(index, CheckIndexOption::IndexIsValid | CheckIndexOption::ParentIsInvalid));
 
     const auto standing = m_standings.at(index.row());
 
@@ -74,7 +72,7 @@ QHash<int, QByteArray> StandingsModel::roleNames() const
 
 Qt::ItemFlags StandingsModel::flags(const QModelIndex &index) const
 {
-    Q_UNUSED(index)
+    Q_ASSERT(checkIndex(index, CheckIndexOption::IndexIsValid | CheckIndexOption::ParentIsInvalid));
     return Qt::ItemIsSelectable | Qt::ItemIsEnabled;
 }
 

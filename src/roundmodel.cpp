@@ -42,9 +42,7 @@ int RoundModel::rowCount(const QModelIndex &parent) const
 
 QVariant RoundModel::data(const QModelIndex &index, int role) const
 {
-    if (!index.isValid()) {
-        return {};
-    }
+    Q_ASSERT(checkIndex(index, CheckIndexOption::IndexIsValid | CheckIndexOption::ParentIsInvalid));
 
     const auto round = m_tournament->round(index.row() + 1);
 
@@ -63,10 +61,7 @@ QVariant RoundModel::data(const QModelIndex &index, int role) const
 bool RoundModel::setData(const QModelIndex &index, const QVariant &value, int role)
 {
     Q_UNUSED(role);
-
-    if (!index.isValid()) {
-        return false;
-    }
+    Q_ASSERT(checkIndex(index, CheckIndexOption::IndexIsValid | CheckIndexOption::ParentIsInvalid));
 
     if (const auto ok = m_tournament->ensureRoundExists(index.row() + 1); !ok) {
         return false;

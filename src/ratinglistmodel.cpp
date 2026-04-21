@@ -21,9 +21,7 @@ int RatingListModel::rowCount(const QModelIndex &parent) const
 
 QVariant RatingListModel::data(const QModelIndex &index, int role) const
 {
-    if (!index.isValid()) {
-        return {};
-    }
+    Q_ASSERT(checkIndex(index, CheckIndexOption::IndexIsValid | CheckIndexOption::ParentIsInvalid));
 
     const auto list = m_lists.at(index.row()).get();
 

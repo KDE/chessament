@@ -17,9 +17,7 @@ int SearchPlayersModel::rowCount(const QModelIndex &parent) const
 
 QVariant SearchPlayersModel::data(const QModelIndex &index, int role) const
 {
-    if (!index.isValid()) {
-        return {};
-    }
+    Q_ASSERT(checkIndex(index, CheckIndexOption::IndexIsValid | CheckIndexOption::ParentIsInvalid));
 
     const auto player = m_players[index.row()];
 

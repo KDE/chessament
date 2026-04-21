@@ -47,9 +47,7 @@ int ByesModel::rowCount(const QModelIndex &parent) const
 
 QVariant ByesModel::data(const QModelIndex &index, int role) const
 {
-    if (!index.isValid()) {
-        return {};
-    }
+    Q_ASSERT(checkIndex(index, CheckIndexOption::IndexIsValid | CheckIndexOption::ParentIsInvalid));
 
     const int round = index.row() + 1;
     const auto pairings = m_tournament->pairingsOfPlayer(m_player);

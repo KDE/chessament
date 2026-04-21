@@ -33,9 +33,7 @@ int TiebreakModel::rowCount(const QModelIndex &parent) const
 
 QVariant TiebreakModel::data(const QModelIndex &index, int role) const
 {
-    if (!index.isValid()) {
-        return {};
-    }
+    Q_ASSERT(checkIndex(index, CheckIndexOption::IndexIsValid | CheckIndexOption::ParentIsInvalid));
 
     const auto &tiebreak = m_tournament->tiebreaks()[index.row()];
 
@@ -54,10 +52,7 @@ QVariant TiebreakModel::data(const QModelIndex &index, int role) const
 bool TiebreakModel::setData(const QModelIndex &index, const QVariant &value, int role)
 {
     Q_UNUSED(role);
-
-    if (!index.isValid()) {
-        return false;
-    }
+    Q_ASSERT(checkIndex(index, CheckIndexOption::IndexIsValid | CheckIndexOption::ParentIsInvalid));
 
     const auto &tiebreak = m_tournament->tiebreaks()[index.row()];
     tiebreak->setOptions(value.value<QList<QVariantMap>>());

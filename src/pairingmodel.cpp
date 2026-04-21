@@ -29,12 +29,7 @@ int PairingModel::columnCount(const QModelIndex &parent) const
 QVariant PairingModel::data(const QModelIndex &index, int role) const
 {
     Q_UNUSED(role)
-
-    if (!index.isValid()) {
-        return {};
-    }
-
-    Q_ASSERT(index.row() >= 0 && index.row() < m_pairings.size());
+    Q_ASSERT(checkIndex(index, CheckIndexOption::IndexIsValid | CheckIndexOption::ParentIsInvalid));
 
     auto pairing = m_pairings.at(index.row());
     int column = m_columns.at(index.column());

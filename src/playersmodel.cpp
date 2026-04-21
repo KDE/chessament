@@ -30,9 +30,7 @@ int PlayersModel::columnCount(const QModelIndex &parent) const
 
 QVariant PlayersModel::data(const QModelIndex &index, int role) const
 {
-    if (!index.isValid()) {
-        return {};
-    }
+    Q_ASSERT(checkIndex(index, CheckIndexOption::IndexIsValid | CheckIndexOption::ParentIsInvalid));
 
     const auto player = m_players.at(index.row());
     int column = m_columns.at(index.column());
@@ -120,11 +118,8 @@ QVariant PlayersModel::data(const QModelIndex &index, int role) const
 
 bool PlayersModel::setData(const QModelIndex &index, const QVariant &value, int role)
 {
+    Q_ASSERT(checkIndex(index, CheckIndexOption::IndexIsValid | CheckIndexOption::ParentIsInvalid));
     Q_ASSERT(role == Qt::EditRole);
-
-    if (!index.isValid()) {
-        return false;
-    }
 
     const auto player = m_players.at(index.row());
     const auto field = static_cast<Columns>(m_columns.at(index.column()));
@@ -186,7 +181,7 @@ QHash<int, QByteArray> PlayersModel::roleNames() const
 
 Qt::ItemFlags PlayersModel::flags(const QModelIndex &index) const
 {
-    Q_UNUSED(index)
+    Q_ASSERT(checkIndex(index, CheckIndexOption::IndexIsValid | CheckIndexOption::ParentIsInvalid));
     return Qt::ItemIsSelectable | Qt::ItemIsEnabled | Qt::ItemIsEditable;
 }
 
