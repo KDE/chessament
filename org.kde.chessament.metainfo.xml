@@ -5,9 +5,7 @@
  -->
 <component type="desktop-application">
   <id>org.kde.chessament</id>
-  <provides>
-    <binary>chessament</binary>
-  </provides>
+  <metadata_license>CC0-1.0</metadata_license>
   <name>Chessament</name>
   <name xml:lang="ar">شطرنج</name>
   <name xml:lang="ca">Chessament</name>
@@ -59,12 +57,6 @@
   <summary xml:lang="tr">Satranç turnuvası yöneticisi</summary>
   <summary xml:lang="uk">Керування шаховим турніром</summary>
   <summary xml:lang="zh-CN">国际象棋赛事管理系统</summary>
-  <metadata_license>CC0-1.0</metadata_license>
-  <project_license>GPL-3.0-or-later</project_license>
-  <developer id="kde.org">
-    <name>The KDE Community</name>
-    <url>https://kde.org</url>
-  </developer>
   <description>
     <p>Chessament is a chess tournament manager. It currently supports individual Swiss-system tournaments.</p>
     <p xml:lang="ar">تطبيق شطرنج هو برنامج لإدارة بطولات الشطرنج. يدعم حاليًا بطولات فردية بنظام سويسري.</p>
@@ -91,6 +83,27 @@
     <p xml:lang="uk">Chessament — програма для керування шаховими турнірами. У поточній версії передбачено турніри за індивідуальною швейцарською системою.</p>
     <p xml:lang="zh-CN">Chessament 是一个国际象棋赛事管理系统。目前支持举办个人瑞士制比赛。</p>
   </description>
+  <icon type="stock">org.kde.chessament</icon>
+  <categories>
+    <category>Office</category>
+  </categories>
+  <keywords>
+    <keyword>Chess</keyword>
+  </keywords>
   <url type="homepage">https://apps.kde.org/chessament/</url>
+  <url type="bugtracker">https://bugs.kde.org/enter_bug.cgi?product=chessament</url>
+  <url type="donation">https://kde.org/donate/?app=chessament</url>
+  <url type="translate">https://l10n.kde.org/</url>
+  <url type="vcs-browser">https://invent.kde.org/games/chessament</url>
+  <url type="contribute">https://community.kde.org/Get_Involved/</url>
   <launchable type="desktop-id">org.kde.chessament.desktop</launchable>
+  <provides>
+    <binary>chessament</binary>
+    <mediatype>application/vnd.kde.chessament</mediatype>
+  </provides>
+  <project_license>GPL-3.0-or-later</project_license>
+  <developer id="org.kde">
+    <name>The KDE Community</name>
+    <url>https://kde.org</url>
+  </developer>
 </component>
