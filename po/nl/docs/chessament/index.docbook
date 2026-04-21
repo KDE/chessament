@@ -1,0 +1,455 @@
+<?xml version="1.0" ?>
+<!--
+SPDX-FileCopyrightText: 2026 Manuel Alcaraz Zambrano <manuel@alcarazzam.dev>
+SPDX-License-Identifier: CC-BY-SA-4.0
+-->
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+    <!ENTITY chessament "<application
+>Chessament</application
+>">
+    <!ENTITY % addindex "IGNORE">
+    <!ENTITY % Dutch "INCLUDE">
+    <!ENTITY Manuel.Alcaraz.Zambrano "<personname
+><firstname
+>Manuel</firstname
+><surname
+>Alcaraz Zambrano</surname
+></personname
+>">
+    <!ENTITY Manuel.Alcaraz.Zambrano.mail "<email
+>manuel@alcarazzam.dev</email
+>">
+]>
+<book id="chessament" lang="&language;">
+  <bookinfo>
+    <title
+>Het handboek van &chessament;</title>
+    <authorgroup>
+      <author
+>&Manuel.Alcaraz.Zambrano; &Manuel.Alcaraz.Zambrano.mail;</author>
+      &Freek.de.Kruijf; 
+    </authorgroup>
+    <copyright>
+      <year
+>2026</year>
+      <holder
+>&Manuel.Alcaraz.Zambrano;</holder>
+    </copyright>
+    <legalnotice
+>&CCBYSA4Notice;</legalnotice>
+    <date
+>2026-04-17</date>
+    <releaseinfo
+>0.1</releaseinfo>
+      <abstract>
+        <para
+>&chessament; is een beheerprogramma van een schaaktoernooi. </para>
+      </abstract>
+    <keywordset>
+      <keyword
+>KDE</keyword>
+      <keyword
+>Chessament</keyword>
+			<keyword
+>schaakspel</keyword>
+			<keyword
+>toernooi</keyword>
+    </keywordset>
+  </bookinfo>
+
+	<chapter id="introduction">
+		<title
+>Inleiding</title>
+		<para
+>&chessament; is een beheerprogramma van een schaaktoernooi. Het ondersteunt individuele toernooien volgens het Zwitserse systeem. </para>
+		<para
+>Hoofdkenmerken van &chessament;: </para>
+		<itemizedlist>
+			<listitem>
+				<para
+>Spelers registreren.</para>
+			</listitem>
+			<listitem>
+				<para
+>Rondes paren.</para>
+			</listitem>
+			<listitem>
+				<para
+>Standen berekenen.</para>
+			</listitem>
+		</itemizedlist>
+	</chapter>
+
+	<chapter id="basic-usage">
+		<title
+>Basishandelingen</title>
+		<sect1 id="opening">
+			<title
+>Een nieuw toernooi aanmaken</title>
+			<para
+>Om een ​​nieuw schaaktoernooi te maken, selecteert u <menuchoice
+><guimenu
+>Bestand</guimenu
+><guimenuitem
+>Nieuw…</guimenuitem
+></menuchoice
+>, voer een naam in, kies het aantal rondes en klik op <guibutton
+>Opslaan</guibutton
+>. U wordt gevraagd een locatie te kiezen waar u het toernooi wilt opslaan. </para>
+		</sect1>
+
+		<sect1 id="registering-players">
+			<title
+>Spelers registreren</title>
+			<para
+>Om een ​​nieuwe speler aan het toernooi toe te voegen, klikt u op de knop <guibutton
+>Speler toevoegen…</guibutton
+> in de werkbalk. </para>
+		</sect1>
+
+		<sect1 id="making-pairings">
+			<title
+>Paren maken &amp; resultaten</title>
+			<para
+>Nadat u alle spelers voor het toernooi hebt geregistreerd, kunt u de indeling voor de eerste ronde maken. Ga naar het scherm <guibutton
+>Indelingen</guibutton
+> en klik op de knop <guibutton
+>Indeling ronde 1…</guibutton
+>. Er verschijnt een dialoogvenster waarin u een aantal opties voor de eerste ronde kunt aanpassen. Het is aan te raden de optie <guibutton
+>Spelers sorteren</guibutton
+> ingeschakeld te laten. U kunt de kleur van de stukken van de hoogst gerangschikte speler kiezen, of &chessament; een willekeurige kleur voor u laten kiezen. </para>
+			<para
+>Om de resultaten in te voeren, klikt u op een partij en kiest u een van de ondersteunde resultaten onderaan. U kunt de resultaten ook invoeren met het toetsenbord. Door op <keycap
+>1</keycap
+> te drukken, wordt het resultaat ingesteld op 'Wit wint', op <keycap
+>0</keycap
+> op 'Zwart wint' en op <keycap
+>5</keycap
+> op Remise. Nadat u een resultaat hebt ingevoerd, wordt de volgende partij zonder resultaat automatisch geselecteerd. </para>
+		</sect1>
+
+		<sect1 id="viewing-standings">
+			<title
+>Standen bekijken</title>
+			<para
+>Om de tussenstand van het toernooi te bekijken, ga naar de weergave <guibutton
+>Standen</guibutton
+>. Daar kunt u kiezen om de eindstand of de tussenstand van een vorige ronde te bekijken. </para>
+		</sect1>
+	</chapter>
+
+	<chapter id="tournaments">
+		<title
+>Toernooien</title>
+		<sect1 id="tournament-settings">
+			<title
+>Instellingen</title>
+			<para
+>Om het instellingenvenster van een toernooi te openen, klikt u op de knop <guibutton
+>Instellingen</guibutton
+> onderaan het &chessament;-venster. In dit gedeelte worden de beschikbare opties in detail beschreven. </para>
+			<sect2 id="tournament-settings-information">
+				<title
+>Informatie</title>
+				<para
+>In dit gedeelte kunt u enkele basisgegevens instellen, zoals de naam van het toernooi, de locatie en de scheidsrechters. </para>
+			</sect2>
+			<sect2 id="tournament-settings-format">
+				<title
+>Opmaak</title>
+				<para
+>In dit gedeelte kunt u het aantal rondes van het toernooi configureren en de remises die worden gebruikt voor het berekenen van de eindstand. Meer informatie over de remises vindt u in het gedeelte <link linkend="tournament-tiebreaks"
+>Remises</link
+>. </para>
+			</sect2>
+			<sect2 id="tournament-settings-calendar">
+				<title
+>Agenda</title>
+				<para
+>In dit gedeelte kunt u het toernooischema instellen. </para>
+			</sect2>
+		</sect1>
+		<sect1 id="tournament-tiebreaks">
+			<title
+>Tiebreaks</title>
+			<para
+>&chessament; ondersteunt de volgende remises zoals beschreven in het <ulink url="https://handbook.fide.com/"
+>Handboek van <acronym
+>FIDE</acronym
+></ulink
+>: </para>
+			<itemizedlist>
+				<listitem>
+					<para
+>Average Buchholz of Opponents (<acronym
+>AOB</acronym
+>)</para>
+				</listitem>
+				<listitem>
+					<para
+>Buchholz (<acronym
+>BH</acronym
+>)</para>
+				</listitem>
+				<listitem>
+					<para
+>Aantal spellen gespeeld met zwart (<acronym
+>BPG</acronym
+>)</para>
+				</listitem>
+				<listitem>
+					<para
+>Aantal gewonnen spellen (op het bord) (<acronym
+>WON</acronym
+>)</para>
+				</listitem>
+				<listitem>
+					<para
+>Aantal winsten (<acronym
+>WIN</acronym
+>)</para>
+				</listitem>
+				<listitem>
+					<para
+>Punten (<acronym
+>PTS</acronym
+>)</para>
+				</listitem>
+			</itemizedlist>
+		</sect1>
+	</chapter>
+
+	<chapter id="reference">
+		<title
+>Referentie</title>
+
+		<sect1 id="reference-menus">
+			<title
+>De menubalk</title>
+			<sect2 id="reference-menus-file">
+				<title
+>Het menu Bestand</title>
+				<variablelist>
+					<varlistentry id="menu-file-new">
+						<term>
+							<menuchoice
+><guimenu
+>Bestand</guimenu
+> <guimenuitem
+>Nieuw toernooi…</guimenuitem
+> </menuchoice>
+						</term>
+						<listitem>
+							<para
+><action
+>Maak</action
+> een nieuw toernooi aan. Als er al een geopend toernooi is zal het gesloten worden. </para>
+						</listitem>
+					</varlistentry>
+					<varlistentry id="menu-file-open">
+						<term>
+							<menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;<keycap
+>O</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Bestand</guimenu
+> <guimenuitem
+>Openen…</guimenuitem
+> </menuchoice>
+						</term>
+						<listitem>
+							<para
+><action
+>Open</action
+> een &chessament; bestand. </para>
+						</listitem>
+					</varlistentry>
+					<varlistentry id="menu-file-save-as">
+						<term>
+							<menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;&Shift;<keycap
+>S</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Bestand</guimenu
+> <guimenuitem
+>Opslaan als…</guimenuitem
+> </menuchoice>
+						</term>
+						<listitem>
+							<para
+><action
+>Opslaan</action
+> van het toernooi onder een nieuwe naam. </para>
+						</listitem>
+					</varlistentry>
+					<varlistentry id="menu-file-import-trf">
+						<term>
+							<menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;<keycap
+>I</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Bestand</guimenu
+> <guimenuitem
+>Toernooirapport…</guimenuitem
+> </menuchoice>
+						</term>
+						<listitem>
+							<para
+><action
+>Importeer</action
+> een toernooirapportbestand (<acronym
+>TRF</acronym
+>). Als er al een geopend toernooi is zal het gesloten worden. </para>
+						</listitem>
+					</varlistentry>
+					<varlistentry id="menu-file-export-trf">
+						<term>
+							<menuchoice
+><guimenu
+>Bestand</guimenu
+> <guimenuitem
+>Toernooien exporteren…</guimenuitem
+> </menuchoice>
+						</term>
+						<listitem>
+							<para
+><action
+>Exporteer</action
+> het huidige toernooi naar een toernooirapportbestand (<acronym
+>TRF</acronym
+>). </para>
+						</listitem>
+					</varlistentry>
+				</variablelist>
+			</sect2>
+			<sect2 id="reference-menus-view">
+				<title
+>Het menu Beeld</title>
+				<variablelist>
+					<varlistentry id="menu-view-commandbar">
+						<term>
+							<menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;&Alt;<keycap
+>I</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Beeld</guimenu
+> <guimenuitem
+>Opdrachtbalk openen</guimenuitem
+> </menuchoice>
+						</term>
+						<listitem>
+							<para
+><action
+>Opent</action
+> de opdrachtbalk. </para>
+						</listitem>
+					</varlistentry>
+				</variablelist>
+			</sect2>
+			<sect2 id="reference-menus-settings">
+				<title
+>Het menu Instellingen</title>
+				<variablelist>
+					<varlistentry id="menu-settings-keyboard-shortcuts">
+						<term>
+							<menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;&Alt;<keycap
+>,</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Instellingen</guimenu
+> <guimenuitem
+>Sneltoetsen configureren</guimenuitem
+> </menuchoice>
+						</term>
+						<listitem>
+							<para
+><action
+>Opent</action
+> het venster Sneltoetsen. </para>
+						</listitem>
+					</varlistentry>
+					<varlistentry id="menu-settings-chessament">
+						<term>
+							<menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;&Shift;<keycap
+>,</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Instellingen</guimenu
+> <guimenuitem
+>Chessament configureren…</guimenuitem
+> </menuchoice>
+						</term>
+						<listitem>
+							<para
+><action
+>Opent</action
+> &chessament; het venster Instellingen. </para>
+						</listitem>
+					</varlistentry>
+				</variablelist>
+			</sect2>
+		</sect1>
+
+		<sect1 id="reference-command-line-options">
+			<title
+>Opdrachtregel-opties</title>
+			<variablelist>
+			  <varlistentry>
+					<term>
+						<userinput
+><command
+>chessament</command
+> <option
+>--import-trf <replaceable
+>bestand</replaceable
+></option
+> </userinput>
+					</term>
+					<listitem>
+						<para
+>Importeer een Toernooirapportbestand (<acronym
+>TRF</acronym
+>) als een nieuw toernooi. </para>
+					</listitem>
+			  </varlistentry>
+			</variablelist>
+		</sect1>
+	</chapter>
+
+	<chapter id="credits">
+		<title
+>Dankbetuigingen en licentie</title>
+		<para
+>Documentatie copyright &copy; &Manuel.Alcaraz.Zambrano; &Manuel.Alcaraz.Zambrano.mail;</para>
+		&meld.fouten;&vertaling.freek; &underCCBYSA4; &underGPL; </chapter>
+
+	&documentation.index;
+
+</book>
+<!--
+// vim:ts=2:sw=2:tw=78:noet
+-->

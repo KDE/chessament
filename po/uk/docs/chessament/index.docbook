@@ -1,0 +1,473 @@
+<?xml version="1.0" ?>
+<!--
+SPDX-FileCopyrightText: 2026 Manuel Alcaraz Zambrano <manuel@alcarazzam.dev>
+SPDX-License-Identifier: CC-BY-SA-4.0
+-->
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+    <!ENTITY chessament "<application
+>Chessament</application
+>">
+    <!ENTITY % addindex "IGNORE">
+    <!ENTITY % Ukrainian "INCLUDE">
+    <!ENTITY Manuel.Alcaraz.Zambrano "<personname
+><firstname
+>Manuel</firstname
+><surname
+>Alcaraz Zambrano</surname
+></personname
+>">
+    <!ENTITY Manuel.Alcaraz.Zambrano.mail "<email
+>manuel@alcarazzam.dev</email
+>">
+]>
+<book id="chessament" lang="&language;">
+  <bookinfo>
+    <title
+>Підручник з &chessament;</title>
+    <authorgroup>
+      <author
+>&Manuel.Alcaraz.Zambrano; &Manuel.Alcaraz.Zambrano.mail;</author>
+      <othercredit role="translator"
+><firstname
+>Юрій</firstname
+><surname
+>Чорноіван</surname
+><affiliation
+><address
+><email
+>yurchor@ukr.net</email
+></address
+></affiliation
+><contrib
+>Переклад українською</contrib
+></othercredit
+> 
+    </authorgroup>
+    <copyright>
+      <year
+>2026</year>
+      <holder
+>&Manuel.Alcaraz.Zambrano;</holder>
+    </copyright>
+    <legalnotice
+>&CCBYSA4Notice;</legalnotice>
+    <date
+>17 квітня 2026 року</date>
+    <releaseinfo
+>0.1</releaseinfo>
+      <abstract>
+        <para
+>&chessament; — програма для керування шаховими турнірами. </para>
+      </abstract>
+    <keywordset>
+      <keyword
+>KDE</keyword>
+      <keyword
+>Chessament</keyword>
+			<keyword
+>шахи</keyword>
+			<keyword
+>турнір</keyword>
+    </keywordset>
+  </bookinfo>
+
+	<chapter id="introduction">
+		<title
+>Вступ</title>
+		<para
+>&chessament; — програма для керування шаховими турнірами. У ній передбачено підтримку індивідуальних турнірів за швейцарською системою. </para>
+		<para
+>Основні можливості &chessament;: </para>
+		<itemizedlist>
+			<listitem>
+				<para
+>Реєстрація гравців.</para>
+			</listitem>
+			<listitem>
+				<para
+>Розбиття на пари за раундами.</para>
+			</listitem>
+			<listitem>
+				<para
+>Обчислення місць.</para>
+			</listitem>
+		</itemizedlist>
+	</chapter>
+
+	<chapter id="basic-usage">
+		<title
+>Основні прийоми користування</title>
+		<sect1 id="opening">
+			<title
+>Створення турніру</title>
+			<para
+>Щоб створити турнір &chessament;, виберіть <menuchoice
+><guimenu
+>Файл</guimenu
+><guimenuitem
+>Створити…</guimenuitem
+></menuchoice
+>, введіть назву, виберіть кількість раундів і натисніть <guibutton
+>Зберегти</guibutton
+>. Вам буде запропоновано вибрати місце, де ви хочете зберегти турнір. </para>
+		</sect1>
+
+		<sect1 id="registering-players">
+			<title
+>Реєстрація гравців</title>
+			<para
+>Щоб додати нового гравця до турніру, натисніть кнопку <guibutton
+>Додати гравця…</guibutton
+> на панелі інструментів. </para>
+		</sect1>
+
+		<sect1 id="making-pairings">
+			<title
+>Розбиття на пари і результати</title>
+			<para
+>Після того, як ви закінчите реєстрацію всіх гравців турніру, ви можете скласти пари для першого раунду. Перейдіть до режиму перегляду <guibutton
+>Поділ на пари</guibutton
+> і натисніть кнопку <guibutton
+>Поділ на пари раунду 1…</guibutton
+>. З'явиться діалогове вікно, де ви зможете налаштувати деякі параметри для першого раунду. Рекомендуємо залишити варіант <guibutton
+>Упорядкувати гравців</guibutton
+> увімкненим. Ви можете вибрати колір фігур гравця з найвищим рейтингом або дозволити &chessament; вибрати випадковий колір за вас. </para>
+			<para
+>Щоб ввести результати, натисніть на пару та виберіть один із підтримуваних результатів внизу. Ви також можете ввести результати за допомогою клавіатури. Натискання <keycap
+>1</keycap
+> встановлює результат на перемогу білих, <keycap
+>0</keycap
+> – на перемогу чорних та <keycap
+>5</keycap
+> – на нічию. Після введення результату буде автоматично вибрано наступну пару без результату. </para>
+		</sect1>
+
+		<sect1 id="viewing-standings">
+			<title
+>Перегляд місць</title>
+			<para
+>Щоб переглянути турнірну таблицю турніру, перейдіть до режиму перегляду <guibutton
+>Результати</guibutton
+>. Там ви зможете переглянути остаточну таблицю або таблицю попереднього раунду. </para>
+		</sect1>
+	</chapter>
+
+	<chapter id="tournaments">
+		<title
+>Турніри</title>
+		<sect1 id="tournament-settings">
+			<title
+>Параметри</title>
+			<para
+>Щоб відкрити вікно налаштувань турніру, натисніть кнопку <guibutton
+>Параметри</guibutton
+> внизу вікна &chessament;. У цьому розділі докладно описано доступні параметри. </para>
+			<sect2 id="tournament-settings-information">
+				<title
+>Інформація</title>
+				<para
+>У цьому розділі ви можете встановити деякі основні відомості, зокрема назву турніру, місце проведення та арбітрів. </para>
+			</sect2>
+			<sect2 id="tournament-settings-format">
+				<title
+>Формат</title>
+				<para
+>У цьому розділі ви можете налаштувати кількість раундів турніру та тай-брейки, що використовуються для розрахунку турнірної таблиці. Більше інформації про тай-брейки можна отримати з розділу <link linkend="tournament-tiebreaks"
+>Тай-брейки</link
+>. </para>
+			</sect2>
+			<sect2 id="tournament-settings-calendar">
+				<title
+>Календар</title>
+				<para
+>У цьому розділі ви можете налаштувати розклад турніру. </para>
+			</sect2>
+		</sect1>
+		<sect1 id="tournament-tiebreaks">
+			<title
+>Тай-брейки</title>
+			<para
+>У &chessament; передбачено підтримку таких тай-брейків, як іх описано у <ulink url="https://handbook.fide.com/"
+>підручнику <acronym
+>FIDE</acronym
+></ulink
+>: </para>
+			<itemizedlist>
+				<listitem>
+					<para
+>Середнє Бухгольца для суперників (<acronym
+>AOB</acronym
+>)</para>
+				</listitem>
+				<listitem>
+					<para
+>Бухгольц (<acronym
+>BH</acronym
+>)</para>
+				</listitem>
+				<listitem>
+					<para
+>Кількість перемог при грі чорними (<acronym
+>BPG</acronym
+>)</para>
+				</listitem>
+				<listitem>
+					<para
+>Кількість перемог (за дошкою) (<acronym
+>WON</acronym
+>)</para>
+				</listitem>
+				<listitem>
+					<para
+>Кількість перемог (<acronym
+>WIN</acronym
+>)</para>
+				</listitem>
+				<listitem>
+					<para
+>Очки (<acronym
+>PTS</acronym
+>)</para>
+				</listitem>
+			</itemizedlist>
+		</sect1>
+	</chapter>
+
+	<chapter id="reference">
+		<title
+>Довідник</title>
+
+		<sect1 id="reference-menus">
+			<title
+>Панель меню</title>
+			<sect2 id="reference-menus-file">
+				<title
+>Меню «Файл»</title>
+				<variablelist>
+					<varlistentry id="menu-file-new">
+						<term>
+							<menuchoice
+><guimenu
+>Файл</guimenu
+> <guimenuitem
+>Новий турнір…</guimenuitem
+> </menuchoice>
+						</term>
+						<listitem>
+							<para
+><action
+>Створити</action
+> турнір. Якщо вже було відкрито якийсь турнір, його буде закрито. </para>
+						</listitem>
+					</varlistentry>
+					<varlistentry id="menu-file-open">
+						<term>
+							<menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;<keycap
+>O</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Файл</guimenu
+> <guimenuitem
+>Відкрити...</guimenuitem
+> </menuchoice>
+						</term>
+						<listitem>
+							<para
+><action
+>Відкрити</action
+> файл &chessament;. </para>
+						</listitem>
+					</varlistentry>
+					<varlistentry id="menu-file-save-as">
+						<term>
+							<menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;&Shift;<keycap
+>S</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Файл</guimenu
+><guimenuitem
+>Зберегти як...</guimenuitem
+> </menuchoice>
+						</term>
+						<listitem>
+							<para
+><action
+>Зберегти</action
+> турнір із новою назвою. </para>
+						</listitem>
+					</varlistentry>
+					<varlistentry id="menu-file-import-trf">
+						<term>
+							<menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;<keycap
+>I</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Файл</guimenu
+> <guimenuitem
+>Імпортувати звіт щодо турніру…</guimenuitem
+> </menuchoice>
+						</term>
+						<listitem>
+							<para
+><action
+>Імпортувати</action
+> файл звіту щодо турніру (<acronym
+>TRF</acronym
+>). Якщо було відкрито турнір, його буде закрито. </para>
+						</listitem>
+					</varlistentry>
+					<varlistentry id="menu-file-export-trf">
+						<term>
+							<menuchoice
+><guimenu
+>Файл</guimenu
+> <guimenuitem
+>Експортувати звіт щодо турніру…</guimenuitem
+> </menuchoice>
+						</term>
+						<listitem>
+							<para
+><action
+>Експортувати</action
+> поточний турнір до файла звіту щодо турніру (<acronym
+>TRF</acronym
+>). </para>
+						</listitem>
+					</varlistentry>
+				</variablelist>
+			</sect2>
+			<sect2 id="reference-menus-view">
+				<title
+>Меню «Перегляд»</title>
+				<variablelist>
+					<varlistentry id="menu-view-commandbar">
+						<term>
+							<menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;&Alt;<keycap
+>I</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Перегляд</guimenu
+> <guimenuitem
+>Відкрити панель команд</guimenuitem
+> </menuchoice>
+						</term>
+						<listitem>
+							<para
+><action
+>Відкриває</action
+> панель команд. </para>
+						</listitem>
+					</varlistentry>
+				</variablelist>
+			</sect2>
+			<sect2 id="reference-menus-settings">
+				<title
+>Меню «Параметри»</title>
+				<variablelist>
+					<varlistentry id="menu-settings-keyboard-shortcuts">
+						<term>
+							<menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;&Alt;<keycap
+>,</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Параметри</guimenu
+><guimenuitem
+>Налаштувати клавіатурні скорочення...</guimenuitem
+> </menuchoice>
+						</term>
+						<listitem>
+							<para
+><action
+>Відкриває</action
+> вікно клавіатурних скорочень. </para>
+						</listitem>
+					</varlistentry>
+					<varlistentry id="menu-settings-chessament">
+						<term>
+							<menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;&Shift;<keycap
+>,</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Параметри</guimenu
+> <guimenuitem
+>Налаштувати Chessament…</guimenuitem
+> </menuchoice>
+						</term>
+						<listitem>
+							<para
+><action
+>Відкриває</action
+> вікно параметрів &chessament;. </para>
+						</listitem>
+					</varlistentry>
+				</variablelist>
+			</sect2>
+		</sect1>
+
+		<sect1 id="reference-command-line-options">
+			<title
+>Параметри командного рядка</title>
+			<variablelist>
+			  <varlistentry>
+					<term>
+						<userinput
+><command
+>chessament</command
+> <option
+>--import-trf <replaceable
+>файл</replaceable
+></option
+> </userinput>
+					</term>
+					<listitem>
+						<para
+>Імпортувати файл звіту щодо турніру (<acronym
+>TRF</acronym
+>) як новий турнір. </para>
+					</listitem>
+			  </varlistentry>
+			</variablelist>
+		</sect1>
+	</chapter>
+
+	<chapter id="credits">
+		<title
+>Подяки і ліцензування</title>
+		<para
+>Авторські права на документацію належать &copy; &Manuel.Alcaraz.Zambrano; &Manuel.Alcaraz.Zambrano.mail;</para>
+		<para
+>Переклад українською: Юрій Чорноіван <email
+>yurchor@ukr.net</email
+></para
+> &underCCBYSA4; &underGPL; </chapter>
+
+	&documentation.index;
+
+</book>
+<!--
+// vim:ts=2:sw=2:tw=78:noet
+-->

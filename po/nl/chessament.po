@@ -1,13 +1,13 @@
 # Copyright (C) 2025 This file is copyright:
 # This file is distributed under the same license as the chessament package.
 #
-# SPDX-FileCopyrightText: 2025, 2026 Freek de Kruijf <freekdekruijf@kde.nl>
+# SPDX-FileCopyrightText: 2025-2026 Freek de Kruijf <freekdekruijf@kde.nl>
 msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-20 00:41+0000\n"
-"PO-Revision-Date: 2026-04-01 11:12+0200\n"
+"POT-Creation-Date: 2026-04-21 00:41+0000\n"
+"PO-Revision-Date: 2026-04-20 13:11+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.12.3\n"
+"X-Generator: Lokalize 26.04.0\n"
 
 #: byesmodel.cpp:68
 #, kde-format
@@ -137,19 +137,19 @@ msgstr "Toernooirapportbestand importeren."
 #, kde-format
 msgctxt "@info:shell Command line option description"
 msgid "Event to open."
-msgstr ""
+msgstr "Te openen evenement."
 
 #: main.cpp:106
 #, kde-format
 msgctxt "@info:shell"
 msgid "Error: Can't open an event when importing a TRF"
-msgstr ""
+msgstr "Fout: kan geen evenement openen bij het importeren van een TRF"
 
 #: main.cpp:115
 #, kde-format
 msgctxt "@info:shell"
 msgid "Error: Can't open more that one event"
-msgstr ""
+msgstr "Fout: er kan niet meer dan één evenement tegelijk worden geopend"
 
 #: pairingmodel.cpp:97
 #, kde-format
@@ -385,17 +385,14 @@ msgid "Chessament"
 msgstr "Chessament"
 
 #: qml/Main.qml:51 qml/Main.qml:61 qml/NewTournamentDialog.qml:50
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Chessament is a chess tournament manager"
 msgctxt "@label:listbox"
 msgid "Chessament event (*.chessament)"
-msgstr "Chessament is een beheerder van een schaaktoernooi"
+msgstr "Schaaktoernooi-evenement (*.chessament)"
 
 #: qml/Main.qml:71 qml/Main.qml:81
 msgctxt "@label:listbox"
 msgid "TRF files (*.trf *.txt)"
-msgstr ""
+msgstr "TRF-bestanden (*.trf *.txt)"
 
 #: qml/Main.qml:108
 msgctxt "@title"
@@ -990,6 +987,7 @@ msgstr "Rangorde"
 msgctxt "@info"
 msgid "The file is not a <application>Chessament</application> event."
 msgstr ""
+"Het bestand is geen <application>Schaaktoernooi</application>-evenement."
 
 #: tournament/federations.h:118
 msgctxt "FIDE Federation"
@@ -1139,12 +1137,12 @@ msgctxt ""
 msgid "Number of Games Won (over the board)"
 msgstr "Aantal gewonnen spellen (op het bord)"
 
-#: tournament/tournament.cpp:933
+#: tournament/tournament.cpp:944
 #, kde-format
 msgid "An error ocurred while pairing the round: %1"
 msgstr "Er deed zich een fout voor tijdens paring van ronde: %1"
 
-#: tournament/tournament.cpp:1166
+#: tournament/tournament.cpp:1177
 #, kde-format
 msgid "Couldn't open file"
 msgstr "Kon bestand niet openen"

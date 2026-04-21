@@ -1,0 +1,457 @@
+<?xml version="1.0" ?>
+<!--
+SPDX-FileCopyrightText: 2026 Manuel Alcaraz Zambrano <manuel@alcarazzam.dev>
+SPDX-License-Identifier: CC-BY-SA-4.0
+-->
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+    <!ENTITY chessament "<application
+>Chessament</application
+>">
+    <!ENTITY % addindex "IGNORE">
+    <!ENTITY % Catalan  "INCLUDE">
+    <!ENTITY Manuel.Alcaraz.Zambrano "<personname
+><firstname
+>Manuel</firstname
+><surname
+>Alcaraz Zambrano</surname
+></personname
+>">
+    <!ENTITY Manuel.Alcaraz.Zambrano.mail "<email
+>manuel@alcarazzam.dev</email
+>">
+]>
+<book id="chessament" lang="&language;">
+  <bookinfo>
+    <title
+>El manual del &chessament;</title>
+    <authorgroup>
+      <author
+>&Manuel.Alcaraz.Zambrano; &Manuel.Alcaraz.Zambrano.mail;</author>
+      &traductor.JosepMa.Ferrer; 
+    </authorgroup>
+    <copyright>
+      <year
+>2026</year>
+      <holder
+>&Manuel.Alcaraz.Zambrano;</holder>
+    </copyright>
+    <legalnotice
+>&CCBYSA4Notice;</legalnotice>
+    <date
+>17 d'abril de 2026</date>
+    <releaseinfo
+>0.1</releaseinfo>
+      <abstract>
+        <para
+>El &chessament; és un gestor de torneigs d'escacs. </para>
+      </abstract>
+    <keywordset>
+      <keyword
+>KDE</keyword>
+      <keyword
+>Chessament</keyword>
+			<keyword
+>escacs</keyword>
+			<keyword
+>torneig</keyword>
+    </keywordset>
+  </bookinfo>
+
+	<chapter id="introduction">
+		<title
+>Introducció</title>
+		<para
+>El &chessament; és un gestor de torneigs d'escacs Permet torneigs individuals segons el sistema suís. </para>
+		<para
+>Característiques principals del &chessament;: </para>
+		<itemizedlist>
+			<listitem>
+				<para
+>Inscripció de jugadors.</para>
+			</listitem>
+			<listitem>
+				<para
+>Rondes d'aparellament.</para>
+			</listitem>
+			<listitem>
+				<para
+>Càlculs dels resultats.</para>
+			</listitem>
+		</itemizedlist>
+	</chapter>
+
+	<chapter id="basic-usage">
+		<title
+>Ús bàsic</title>
+		<sect1 id="opening">
+			<title
+>Crear un torneig nou</title>
+			<para
+>Per a crear un torneig nou del &chessament; seleccioneu <menuchoice
+><guimenu
+>Fitxer</guimenu
+><guimenuitem
+>Nou…</guimenuitem
+></menuchoice
+>, introduïu un nom, trieu el nombre de rondes, i feu clic a <guibutton
+>Desa</guibutton
+>. Se us demanarà que trieu una ubicació on voleu desar el torneig. </para>
+		</sect1>
+
+		<sect1 id="registering-players">
+			<title
+>Inscripció de jugadors</title>
+			<para
+>Per a afegir un jugador nou al torneig feu clic al botó <guibutton
+>Afegeix un jugador…</guibutton
+> a la barra d'eines. </para>
+		</sect1>
+
+		<sect1 id="making-pairings">
+			<title
+>Aparellament i resultats</title>
+			<para
+>Un cop hàgiu acabat d'inscriure tots els jugadors del torneig, ja podeu fer els aparellaments per a la primera ronda. Aneu a la vista <guibutton
+>Aparellaments</guibutton
+> i feu clic al botó <guibutton
+>Aparella la ronda %1…</guibutton
+>. Apareixerà un diàleg on podreu personalitzar algunes opcions per a la primera ronda. Es recomana deixar activada l'opció <guibutton
+>Ordena els jugadors</guibutton
+>. Podeu triar el color de les peces del jugador de més posició més alta, o deixar que el &chessament; triï un color aleatori. </para>
+			<para
+>Per a introduir els resultats, feu clic en un aparellament i trieu un dels resultats admesos a la part inferior. També podeu introduir el resultat amb el teclat. En prémer <keycap
+>1</keycap
+> s'estableix el resultat a victòria de les blanques, <keycap
+>0</keycap
+> a les negres i <keycap
+>5</keycap
+> a taules. Després d'introduir un resultat, se selecciona automàticament l'aparellament següent sense resultat. </para>
+		</sect1>
+
+		<sect1 id="viewing-standings">
+			<title
+>Visualització de resultats</title>
+			<para
+>Per veure la classificació del torneig, aneu a la vista <guibutton
+>Classificació</guibutton
+>. Des d'allà es pot optar per veure la classificació final o la classificació d'una ronda anterior. </para>
+		</sect1>
+	</chapter>
+
+	<chapter id="tournaments">
+		<title
+>Torneigs</title>
+		<sect1 id="tournament-settings">
+			<title
+>Configuració</title>
+			<para
+>Per a obrir la finestra de configuració d'un torneig, feu clic al botó <guibutton
+>Configuració</guibutton
+> a la part inferior de la finestra del &chessament;. Aquesta secció descriu en detall les opcions disponibles. </para>
+			<sect2 id="tournament-settings-information">
+				<title
+>Informació</title>
+				<para
+>En aquesta secció podeu establir algunes dades bàsiques com el nom del torneig, la ubicació i els àrbitres. </para>
+			</sect2>
+			<sect2 id="tournament-settings-format">
+				<title
+>Format</title>
+				<para
+>En aquesta secció es pot configurar el nombre de rondes del torneig i els desempats utilitzats per a calcular els resultats. Hi ha disponible més informació sobre els desempats a la secció <link linkend="tournament-tiebreaks"
+>Desempats</link
+>. </para>
+			</sect2>
+			<sect2 id="tournament-settings-calendar">
+				<title
+>Calendari</title>
+				<para
+>En aquesta secció podeu configurar la planificació del torneig. </para>
+			</sect2>
+		</sect1>
+		<sect1 id="tournament-tiebreaks">
+			<title
+>Desempats</title>
+			<para
+>El &chessament; permet els desempats següents tal com es descriuen al <ulink url="https://handbook.fide.com/"
+>Manual de la <acronym
+>FIDE</acronym
+></ulink
+>: </para>
+			<itemizedlist>
+				<listitem>
+					<para
+>Mitjana Buchholz dels oponents (<acronym
+>AOB</acronym
+>)</para>
+				</listitem>
+				<listitem>
+					<para
+>Buchholz (<acronym
+>BH</acronym
+>)</para>
+				</listitem>
+				<listitem>
+					<para
+>Nombre de partides jugades amb negres (<acronym
+>BPG</acronym
+>)</para>
+				</listitem>
+				<listitem>
+					<para
+>Nombre de partides guanyades (sobre el tauler) (<acronym
+>WON</acronym
+>)</para>
+				</listitem>
+				<listitem>
+					<para
+>Nombre de partides guanyades (<acronym
+>WIN</acronym
+>)</para>
+				</listitem>
+				<listitem>
+					<para
+>Punts (<acronym
+>PTS</acronym
+>)</para>
+				</listitem>
+			</itemizedlist>
+		</sect1>
+	</chapter>
+
+	<chapter id="reference">
+		<title
+>Referència</title>
+
+		<sect1 id="reference-menus">
+			<title
+>La barra de menús</title>
+			<sect2 id="reference-menus-file">
+				<title
+>El menú Fitxer</title>
+				<variablelist>
+					<varlistentry id="menu-file-new">
+						<term>
+							<menuchoice
+><guimenu
+>Fitxer</guimenu
+> <guimenuitem
+>Torneig nou…</guimenuitem
+> </menuchoice>
+						</term>
+						<listitem>
+							<para
+><action
+>Crea</action
+> un torneig nou. Si ja hi un torneig obert, es tancarà. </para>
+						</listitem>
+					</varlistentry>
+					<varlistentry id="menu-file-open">
+						<term>
+							<menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;<keycap
+>O</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Fitxer</guimenu
+> <guimenuitem
+>Obre…</guimenuitem
+> </menuchoice>
+						</term>
+						<listitem>
+							<para
+><action
+>Obre</action
+> un fitxer del &chessament;. </para>
+						</listitem>
+					</varlistentry>
+					<varlistentry id="menu-file-save-as">
+						<term>
+							<menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;&Maj;<keycap
+>S</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Fitxer</guimenu
+> <guimenuitem
+>Desa com a…</guimenuitem
+> </menuchoice>
+						</term>
+						<listitem>
+							<para
+><action
+>Desa</action
+> el torneig amb un nom nou. </para>
+						</listitem>
+					</varlistentry>
+					<varlistentry id="menu-file-import-trf">
+						<term>
+							<menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;<keycap
+>I</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Fitxer</guimenu
+> <guimenuitem
+>Importa un informe de torneig…</guimenuitem
+> </menuchoice>
+						</term>
+						<listitem>
+							<para
+><action
+>Importa</action
+> un Fitxer d'informe de torneig (<acronym
+>TRF</acronym
+>). Si ja hi un torneig obert, es tancarà. </para>
+						</listitem>
+					</varlistentry>
+					<varlistentry id="menu-file-export-trf">
+						<term>
+							<menuchoice
+><guimenu
+>Fitxer</guimenu
+> <guimenuitem
+>Exporta un informe de torneig…</guimenuitem
+> </menuchoice>
+						</term>
+						<listitem>
+							<para
+><action
+>Exporta</action
+> el torneig actual a un Fitxer d'informe de torneig (<acronym
+>TRF</acronym
+>). </para>
+						</listitem>
+					</varlistentry>
+				</variablelist>
+			</sect2>
+			<sect2 id="reference-menus-view">
+				<title
+>El menú Vista</title>
+				<variablelist>
+					<varlistentry id="menu-view-commandbar">
+						<term>
+							<menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;&Alt;<keycap
+>I</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Vista</guimenu
+> <guimenuitem
+>Obre la barra d'ordres</guimenuitem
+> </menuchoice>
+						</term>
+						<listitem>
+							<para
+><action
+>Obre</action
+> la barra d'ordres. </para>
+						</listitem>
+					</varlistentry>
+				</variablelist>
+			</sect2>
+			<sect2 id="reference-menus-settings">
+				<title
+>El menú Configuració</title>
+				<variablelist>
+					<varlistentry id="menu-settings-keyboard-shortcuts">
+						<term>
+							<menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;&Alt;<keycap
+>,</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Configuració</guimenu
+> <guimenuitem
+>Configura les dreceres de teclat…</guimenuitem
+> </menuchoice>
+						</term>
+						<listitem>
+							<para
+><action
+>Obre</action
+> la finestra de dreceres de teclat. </para>
+						</listitem>
+					</varlistentry>
+					<varlistentry id="menu-settings-chessament">
+						<term>
+							<menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;&Maj;<keycap
+>,</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Configuració</guimenu
+> <guimenuitem
+>Configura el Chessament…</guimenuitem
+> </menuchoice>
+						</term>
+						<listitem>
+							<para
+><action
+>Obre</action
+> la finestra de configuració del &chessament;. </para>
+						</listitem>
+					</varlistentry>
+				</variablelist>
+			</sect2>
+		</sect1>
+
+		<sect1 id="reference-command-line-options">
+			<title
+>Opcions de la línia d'ordres</title>
+			<variablelist>
+			  <varlistentry>
+					<term>
+						<userinput
+><command
+>chessament</command
+> <option
+>--import-trf <replaceable
+>fitxer</replaceable
+></option
+> </userinput>
+					</term>
+					<listitem>
+						<para
+>Importa un fitxer d'informe de torneig (<acronym
+>TRF</acronym
+>) com a torneig nou. </para>
+					</listitem>
+			  </varlistentry>
+			</variablelist>
+		</sect1>
+	</chapter>
+
+	<chapter id="credits">
+		<title
+>Crèdits i llicència</title>
+		<para
+>Copyright de la documentació &copy; &Manuel.Alcaraz.Zambrano; &Manuel.Alcaraz.Zambrano.mail;</para>
+		<para
+>Traductor de la documentació: &credits.JosepMa.Ferrer;</para
+> &underCCBYSA4; &underGPL; </chapter>
+
+	&documentation.index;
+
+</book>
+<!--
+// vim:ts=2:sw=2:tw=78:noet
+-->

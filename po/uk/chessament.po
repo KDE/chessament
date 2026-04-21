@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-20 00:41+0000\n"
-"PO-Revision-Date: 2026-04-01 08:38+0300\n"
+"POT-Creation-Date: 2026-04-21 00:41+0000\n"
+"PO-Revision-Date: 2026-04-20 08:48+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -138,19 +138,19 @@ msgstr "Імпортувати файл звіту щодо турніру."
 #, kde-format
 msgctxt "@info:shell Command line option description"
 msgid "Event to open."
-msgstr ""
+msgstr "Подія, яку слід відкрити."
 
 #: main.cpp:106
 #, kde-format
 msgctxt "@info:shell"
 msgid "Error: Can't open an event when importing a TRF"
-msgstr ""
+msgstr "Помилка: не вдалося відкрити подію під час імпортування TRF"
 
 #: main.cpp:115
 #, kde-format
 msgctxt "@info:shell"
 msgid "Error: Can't open more that one event"
-msgstr ""
+msgstr "Помилка: не можна відкривати декілька подій одночасно"
 
 #: pairingmodel.cpp:97
 #, kde-format
@@ -386,17 +386,14 @@ msgid "Chessament"
 msgstr "Chessament"
 
 #: qml/Main.qml:51 qml/Main.qml:61 qml/NewTournamentDialog.qml:50
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Chessament is a chess tournament manager"
 msgctxt "@label:listbox"
 msgid "Chessament event (*.chessament)"
-msgstr "Chessament — програма для керування шаховими турнірами"
+msgstr "подія Chessament (*.chessament)"
 
 #: qml/Main.qml:71 qml/Main.qml:81
 msgctxt "@label:listbox"
 msgid "TRF files (*.trf *.txt)"
-msgstr ""
+msgstr "файли TRF (*.trf *.txt)"
 
 #: qml/Main.qml:108
 msgctxt "@title"
@@ -996,7 +993,7 @@ msgstr "Ранг"
 #, kde-kuit-format
 msgctxt "@info"
 msgid "The file is not a <application>Chessament</application> event."
-msgstr ""
+msgstr "Файл не є файлом події <application>Chessament</application>."
 
 #: tournament/federations.h:118
 msgctxt "FIDE Federation"
@@ -1150,12 +1147,12 @@ msgctxt ""
 msgid "Number of Games Won (over the board)"
 msgstr "Кількість перемог (за дошкою)"
 
-#: tournament/tournament.cpp:933
+#: tournament/tournament.cpp:944
 #, kde-format
 msgid "An error ocurred while pairing the round: %1"
 msgstr "Під час поділу на пари для раунду сталася помилка: %1"
 
-#: tournament/tournament.cpp:1166
+#: tournament/tournament.cpp:1177
 #, kde-format
 msgid "Couldn't open file"
 msgstr "Не вдалося відкрити файл"

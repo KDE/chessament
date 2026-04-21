@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-20 00:41+0000\n"
+"POT-Creation-Date: 2026-04-21 00:41+0000\n"
 "PO-Revision-Date: 2026-02-08 00:23+0100\n"
 "Last-Translator: Manuel Alcaraz Zambrano <manuelalcarazzam@gmail.com>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -1175,12 +1175,12 @@ msgctxt ""
 msgid "Number of Games Won (over the board)"
 msgstr "Número de partidas ganadas"
 
-#: tournament/tournament.cpp:933
+#: tournament/tournament.cpp:944
 #, kde-format
 msgid "An error ocurred while pairing the round: %1"
 msgstr "Ocurrió un error mientras se emparejaba la ronda: %1"
 
-#: tournament/tournament.cpp:1166
+#: tournament/tournament.cpp:1177
 #, kde-format
 msgid "Couldn't open file"
 msgstr "No se ha podido abrir el archivo"

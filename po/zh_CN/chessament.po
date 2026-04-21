@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-20 00:41+0000\n"
+"POT-Creation-Date: 2026-04-21 00:41+0000\n"
 "PO-Revision-Date: 2025-05-12 14:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -385,12 +385,9 @@ msgid "Chessament"
 msgstr "Chessament"
 
 #: qml/Main.qml:51 qml/Main.qml:61 qml/NewTournamentDialog.qml:50
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Chessament is a chess tournament manager"
 msgctxt "@label:listbox"
 msgid "Chessament event (*.chessament)"
-msgstr "Chessament 是一款国际象棋赛事管理器"
+msgstr ""
 
 #: qml/Main.qml:71 qml/Main.qml:81
 msgctxt "@label:listbox"
@@ -1131,12 +1128,12 @@ msgctxt ""
 msgid "Number of Games Won (over the board)"
 msgstr ""
 
-#: tournament/tournament.cpp:933
+#: tournament/tournament.cpp:944
 #, kde-format
 msgid "An error ocurred while pairing the round: %1"
 msgstr "在生成本轮对阵时发生错误：%1"
 
-#: tournament/tournament.cpp:1166
+#: tournament/tournament.cpp:1177
 #, kde-format
 msgid "Couldn't open file"
 msgstr "无法打开文件"

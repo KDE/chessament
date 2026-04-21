@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-20 00:41+0000\n"
-"PO-Revision-Date: 2026-04-01 09:41+0300\n"
+"POT-Creation-Date: 2026-04-21 00:41+0000\n"
+"PO-Revision-Date: 2026-04-20 20:17+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -138,19 +138,19 @@ msgstr "ייבוא קובץ דוח תחרות."
 #, kde-format
 msgctxt "@info:shell Command line option description"
 msgid "Event to open."
-msgstr ""
+msgstr "אירוע לפתיחה."
 
 #: main.cpp:106
 #, kde-format
 msgctxt "@info:shell"
 msgid "Error: Can't open an event when importing a TRF"
-msgstr ""
+msgstr "שגיאה: לא ניתן לפתוח אירוע בעת ייבוא TRF"
 
 #: main.cpp:115
 #, kde-format
 msgctxt "@info:shell"
 msgid "Error: Can't open more that one event"
-msgstr ""
+msgstr "שגיאה: לא ניתן לפתוח יותר מאירוע אחד"
 
 #: pairingmodel.cpp:97
 #, kde-format
@@ -386,17 +386,14 @@ msgid "Chessament"
 msgstr "Chessament"
 
 #: qml/Main.qml:51 qml/Main.qml:61 qml/NewTournamentDialog.qml:50
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Chessament is a chess tournament manager"
 msgctxt "@label:listbox"
 msgid "Chessament event (*.chessament)"
-msgstr "Chessament הוא מנהל תחרויות שחמט"
+msgstr "אירוע Chessament ‏(‎*.chessament)"
 
 #: qml/Main.qml:71 qml/Main.qml:81
 msgctxt "@label:listbox"
 msgid "TRF files (*.trf *.txt)"
-msgstr ""
+msgstr "קובצי TRF ‏(‎*.trf‏ ‎*.txt)"
 
 #: qml/Main.qml:108
 msgctxt "@title"
@@ -995,7 +992,7 @@ msgstr "דירוג"
 #, kde-kuit-format
 msgctxt "@info"
 msgid "The file is not a <application>Chessament</application> event."
-msgstr ""
+msgstr "הקובץ הוא לא אירוע <application>Chessament</application>."
 
 #: tournament/federations.h:118
 msgctxt "FIDE Federation"
@@ -1148,12 +1145,12 @@ msgctxt ""
 msgid "Number of Games Won (over the board)"
 msgstr "מספר המשחקים עם ניצחון (על גבי הלוח)"
 
-#: tournament/tournament.cpp:933
+#: tournament/tournament.cpp:944
 #, kde-format
 msgid "An error ocurred while pairing the round: %1"
 msgstr "אירעה שגיאה בעת השיבוץ לסיבוב: %1"
 
-#: tournament/tournament.cpp:1166
+#: tournament/tournament.cpp:1177
 #, kde-format
 msgid "Couldn't open file"
 msgstr "לא ניתן לפתוח את הקובץ"
