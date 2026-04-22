@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-21 00:41+0000\n"
+"POT-Creation-Date: 2026-04-22 00:41+0000\n"
 "PO-Revision-Date: 2026-01-06 11:22+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 25.12.0\n"
 
-#: byesmodel.cpp:68
+#: byesmodel.cpp:66
 #, kde-format
 msgctxt "Pieces Color · Player Name"
 msgid "%1 · %2"
@@ -44,7 +44,7 @@ msgctxt "@action:inmenu"
 msgid "Export tournament report…"
 msgstr "Esportatu txapelketaren txostena…"
 
-#: controller.cpp:168
+#: controller.cpp:167
 #, kde-format
 msgid "Couldn't export tournament."
 msgstr "Ezin izan du txapelketa esportatu."
@@ -154,97 +154,97 @@ msgctxt "@info:shell"
 msgid "Error: Can't open more that one event"
 msgstr ""
 
-#: pairingmodel.cpp:97
+#: pairingmodel.cpp:99
 #, kde-format
 msgctxt "@title:column Board Number"
 msgid "Board"
 msgstr "Taula"
 
-#: pairingmodel.cpp:99
+#: pairingmodel.cpp:101
 #, kde-format
 msgctxt "@title:column White Player Starting Rank Number"
 msgid "№"
 msgstr "Zk"
 
-#: pairingmodel.cpp:101
+#: pairingmodel.cpp:103
 #, kde-format
 msgctxt "@title:column Name of the White Player"
 msgid "White Player"
 msgstr "Jokalari Zuria"
 
-#: pairingmodel.cpp:103
+#: pairingmodel.cpp:105
 #, kde-format
 msgctxt "@title:column Game Result"
 msgid "Result"
 msgstr "Emaitza"
 
-#: pairingmodel.cpp:105
+#: pairingmodel.cpp:107
 #, kde-format
 msgctxt "@title:column Name of the Black Player"
 msgid "Black Player"
 msgstr "Jokalari Beltza"
 
-#: pairingmodel.cpp:107
+#: pairingmodel.cpp:109
 #, kde-format
 msgctxt "@title:column Black Player Starting Rank Number"
 msgid "№"
 msgstr "Zk"
 
-#: playersmodel.cpp:199 standingsmodel.cpp:92
+#: playersmodel.cpp:194 standingsmodel.cpp:90
 #, kde-format
 msgctxt "@title:column Player Starting Rank Number"
 msgid "№"
 msgstr "Zk"
 
-#: playersmodel.cpp:201 standingsmodel.cpp:94
+#: playersmodel.cpp:196 standingsmodel.cpp:92
 #, kde-format
 msgctxt "@title:column Player Title"
 msgid "Title"
 msgstr "Titulua"
 
-#: playersmodel.cpp:203 standingsmodel.cpp:96
+#: playersmodel.cpp:198 standingsmodel.cpp:94
 #, kde-format
 msgctxt "@title:column Player Name"
 msgid "Name"
 msgstr "Izena"
 
-#: playersmodel.cpp:205
+#: playersmodel.cpp:200
 #, kde-format
 msgctxt "@title:column Player Rating"
 msgid "Rating"
 msgstr "Balorazioa"
 
-#: playersmodel.cpp:207
+#: playersmodel.cpp:202
 #, kde-format
 msgctxt "@title:column Player National Rating"
 msgid "National Rating"
 msgstr "Balorazio nazionala"
 
-#: playersmodel.cpp:209
+#: playersmodel.cpp:204
 #, kde-format
 msgctxt "@title:column"
 msgid "Player ID"
 msgstr "Jokalariaren ID"
 
-#: playersmodel.cpp:211
+#: playersmodel.cpp:206
 #, kde-format
 msgctxt "@title:column"
 msgid "Birth date"
 msgstr "Jaioteguna"
 
-#: playersmodel.cpp:213
+#: playersmodel.cpp:208
 #, kde-format
 msgctxt "@title:column Player Federation"
 msgid "Federation"
 msgstr "Federazioa"
 
-#: playersmodel.cpp:215
+#: playersmodel.cpp:210
 #, kde-format
 msgctxt "@title:column Player Origin"
 msgid "Origin"
 msgstr "Jatorria"
 
-#: playersmodel.cpp:217
+#: playersmodel.cpp:212
 #, kde-format
 msgctxt "@title:column"
 msgid "Sex"
@@ -474,12 +474,12 @@ msgctxt "@action:button"
 msgid "Pair Round %1…"
 msgstr "%1. jardunaldiaren parekatzea"
 
-#: qml/PairingsPage.qml:154
+#: qml/PairingsPage.qml:157
 msgctxt "@info:placeholder"
 msgid "No pairings for round %1 yet"
 msgstr "Oraindik ez da %1. jardunaldirako parekatzea egin"
 
-#: qml/PairingsPage.qml:156
+#: qml/PairingsPage.qml:159
 msgctxt "@info:placeholder"
 msgid "All games of round %1 have finished"
 msgstr "%1 jardunaldiko joko guztiak bukatu dira"
@@ -1014,13 +1014,13 @@ msgctxt "@action:button"
 msgid "Add rating list"
 msgstr "Gehitu balorazio-zerrenda"
 
-#: standingsmodel.cpp:90
+#: standingsmodel.cpp:88
 #, kde-format
 msgctxt "@title:column Player Ranking"
 msgid "Rank"
 msgstr "Postua"
 
-#: tournament/event.cpp:149 tournament/event.cpp:158
+#: tournament/event.cpp:150 tournament/event.cpp:159
 #, kde-kuit-format
 msgctxt "@info"
 msgid "The file is not a <application>Chessament</application> event."
@@ -1117,7 +1117,7 @@ msgid_plural "Saved %1 players."
 msgstr[0] "Jokalari 1 gorde da."
 msgstr[1] "%1 jokalari gorde dira."
 
-#: tournament/tiebreaks/aob.h:23 tournament/tournament.cpp:507
+#: tournament/tiebreaks/aob.h:23 tournament/tournament.cpp:506
 #, kde-format
 msgctxt "Tiebreak"
 msgid "Average Buchholz of Opponents"
@@ -1135,7 +1135,7 @@ msgctxt "@info"
 msgid "Unsupported tiebreak option \"%1\""
 msgstr ""
 
-#: tournament/tiebreaks/buchholz.h:25 tournament/tournament.cpp:489
+#: tournament/tiebreaks/buchholz.h:25 tournament/tournament.cpp:488
 #, kde-format
 msgctxt "Buchholz tiebreak"
 msgid "Buchholz"
@@ -1149,26 +1149,26 @@ msgctxt "Buchholz N tiebreak, N is a number < 0"
 msgid "Buchholz %1"
 msgstr "Buchholz"
 
-#: tournament/tiebreaks/numberwins.h:22 tournament/tournament.cpp:493
+#: tournament/tiebreaks/numberwins.h:22 tournament/tournament.cpp:492
 #, kde-format
 msgctxt "Number of Wins tiebreak"
 msgid "Number of Wins"
 msgstr "Garaipen kopurua"
 
-#: tournament/tiebreaks/playedblack.h:22 tournament/tournament.cpp:503
+#: tournament/tiebreaks/playedblack.h:22 tournament/tournament.cpp:502
 #, kde-format
 msgctxt "Number of Games Played with Black (over the board) tiebreak"
 msgid "Number of Games Played with Black (over the board)"
 msgstr ""
 
 #: tournament/tiebreaks/points.h:22 tournament/tiebreaks/points.h:27
-#: tournament/tournament.cpp:485
+#: tournament/tournament.cpp:484
 #, kde-format
 msgctxt "Game points"
 msgid "Points"
 msgstr "Puntuak"
 
-#: tournament/tiebreaks/won.h:23 tournament/tournament.cpp:499
+#: tournament/tiebreaks/won.h:23 tournament/tournament.cpp:498
 #, fuzzy, kde-format
 #| msgctxt "Number of Wins tiebreak"
 #| msgid "Number of Wins"
@@ -1178,12 +1178,12 @@ msgctxt ""
 msgid "Number of Games Won (over the board)"
 msgstr "Garaipen kopurua"
 
-#: tournament/tournament.cpp:944
+#: tournament/tournament.cpp:940
 #, kde-format
 msgid "An error ocurred while pairing the round: %1"
 msgstr "Errore bat gertatu da jardunaldiko parekatzea egitean: %1"
 
-#: tournament/tournament.cpp:1177
+#: tournament/tournament.cpp:1170
 #, kde-format
 msgid "Couldn't open file"
 msgstr "Ezin izan du fitxategia ireki"

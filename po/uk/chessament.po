@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-21 00:41+0000\n"
+"POT-Creation-Date: 2026-04-22 00:41+0000\n"
 "PO-Revision-Date: 2026-04-20 08:48+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Lokalize 23.04.3\n"
 
-#: byesmodel.cpp:68
+#: byesmodel.cpp:66
 #, kde-format
 msgctxt "Pieces Color · Player Name"
 msgid "%1 · %2"
@@ -42,7 +42,7 @@ msgctxt "@action:inmenu"
 msgid "Export tournament report…"
 msgstr "Експортувати звіт щодо турніру…"
 
-#: controller.cpp:168
+#: controller.cpp:167
 #, kde-format
 msgid "Couldn't export tournament."
 msgstr "Не вдалося експортувати дані турніру."
@@ -152,97 +152,97 @@ msgctxt "@info:shell"
 msgid "Error: Can't open more that one event"
 msgstr "Помилка: не можна відкривати декілька подій одночасно"
 
-#: pairingmodel.cpp:97
+#: pairingmodel.cpp:99
 #, kde-format
 msgctxt "@title:column Board Number"
 msgid "Board"
 msgstr "Дошка"
 
-#: pairingmodel.cpp:99
+#: pairingmodel.cpp:101
 #, kde-format
 msgctxt "@title:column White Player Starting Rank Number"
 msgid "№"
 msgstr "№"
 
-#: pairingmodel.cpp:101
+#: pairingmodel.cpp:103
 #, kde-format
 msgctxt "@title:column Name of the White Player"
 msgid "White Player"
 msgstr "Гравець білими"
 
-#: pairingmodel.cpp:103
+#: pairingmodel.cpp:105
 #, kde-format
 msgctxt "@title:column Game Result"
 msgid "Result"
 msgstr "Результат"
 
-#: pairingmodel.cpp:105
+#: pairingmodel.cpp:107
 #, kde-format
 msgctxt "@title:column Name of the Black Player"
 msgid "Black Player"
 msgstr "Гравець чорними"
 
-#: pairingmodel.cpp:107
+#: pairingmodel.cpp:109
 #, kde-format
 msgctxt "@title:column Black Player Starting Rank Number"
 msgid "№"
 msgstr "№"
 
-#: playersmodel.cpp:199 standingsmodel.cpp:92
+#: playersmodel.cpp:194 standingsmodel.cpp:90
 #, kde-format
 msgctxt "@title:column Player Starting Rank Number"
 msgid "№"
 msgstr "№"
 
-#: playersmodel.cpp:201 standingsmodel.cpp:94
+#: playersmodel.cpp:196 standingsmodel.cpp:92
 #, kde-format
 msgctxt "@title:column Player Title"
 msgid "Title"
 msgstr "Титул"
 
-#: playersmodel.cpp:203 standingsmodel.cpp:96
+#: playersmodel.cpp:198 standingsmodel.cpp:94
 #, kde-format
 msgctxt "@title:column Player Name"
 msgid "Name"
 msgstr "Ім'я"
 
-#: playersmodel.cpp:205
+#: playersmodel.cpp:200
 #, kde-format
 msgctxt "@title:column Player Rating"
 msgid "Rating"
 msgstr "Рейтинг"
 
-#: playersmodel.cpp:207
+#: playersmodel.cpp:202
 #, kde-format
 msgctxt "@title:column Player National Rating"
 msgid "National Rating"
 msgstr "Національний рейтинг"
 
-#: playersmodel.cpp:209
+#: playersmodel.cpp:204
 #, kde-format
 msgctxt "@title:column"
 msgid "Player ID"
 msgstr "ІД гравця"
 
-#: playersmodel.cpp:211
+#: playersmodel.cpp:206
 #, kde-format
 msgctxt "@title:column"
 msgid "Birth date"
 msgstr "Дата народження"
 
-#: playersmodel.cpp:213
+#: playersmodel.cpp:208
 #, kde-format
 msgctxt "@title:column Player Federation"
 msgid "Federation"
 msgstr "Федерація"
 
-#: playersmodel.cpp:215
+#: playersmodel.cpp:210
 #, kde-format
 msgctxt "@title:column Player Origin"
 msgid "Origin"
 msgstr "Походження"
 
-#: playersmodel.cpp:217
+#: playersmodel.cpp:212
 #, kde-format
 msgctxt "@title:column"
 msgid "Sex"
@@ -464,12 +464,12 @@ msgctxt "@action:button"
 msgid "Pair Round %1…"
 msgstr "Поділ на пари раунду %1…"
 
-#: qml/PairingsPage.qml:154
+#: qml/PairingsPage.qml:157
 msgctxt "@info:placeholder"
 msgid "No pairings for round %1 yet"
 msgstr "Поділу на пари для раунду %1 ще немає"
 
-#: qml/PairingsPage.qml:156
+#: qml/PairingsPage.qml:159
 msgctxt "@info:placeholder"
 msgid "All games of round %1 have finished"
 msgstr "Усі ігри раунду %1 завершено"
@@ -983,13 +983,13 @@ msgctxt "@action:button"
 msgid "Add rating list"
 msgstr "Додати рейтинговий список"
 
-#: standingsmodel.cpp:90
+#: standingsmodel.cpp:88
 #, kde-format
 msgctxt "@title:column Player Ranking"
 msgid "Rank"
 msgstr "Ранг"
 
-#: tournament/event.cpp:149 tournament/event.cpp:158
+#: tournament/event.cpp:150 tournament/event.cpp:159
 #, kde-kuit-format
 msgctxt "@info"
 msgid "The file is not a <application>Chessament</application> event."
@@ -1090,7 +1090,7 @@ msgstr[1] "Збережено дані %1 гравців."
 msgstr[2] "Збережено дані %1 гравців."
 msgstr[3] "Збережено дані гравця."
 
-#: tournament/tiebreaks/aob.h:23 tournament/tournament.cpp:507
+#: tournament/tiebreaks/aob.h:23 tournament/tournament.cpp:506
 #, kde-format
 msgctxt "Tiebreak"
 msgid "Average Buchholz of Opponents"
@@ -1108,7 +1108,7 @@ msgctxt "@info"
 msgid "Unsupported tiebreak option \"%1\""
 msgstr "Непідтримуваний варіант тай-брейка «%1»"
 
-#: tournament/tiebreaks/buchholz.h:25 tournament/tournament.cpp:489
+#: tournament/tiebreaks/buchholz.h:25 tournament/tournament.cpp:488
 #, kde-format
 msgctxt "Buchholz tiebreak"
 msgid "Buchholz"
@@ -1120,26 +1120,26 @@ msgctxt "Buchholz N tiebreak, N is a number < 0"
 msgid "Buchholz %1"
 msgstr "Бухгольц %1"
 
-#: tournament/tiebreaks/numberwins.h:22 tournament/tournament.cpp:493
+#: tournament/tiebreaks/numberwins.h:22 tournament/tournament.cpp:492
 #, kde-format
 msgctxt "Number of Wins tiebreak"
 msgid "Number of Wins"
 msgstr "Кількість перемог"
 
-#: tournament/tiebreaks/playedblack.h:22 tournament/tournament.cpp:503
+#: tournament/tiebreaks/playedblack.h:22 tournament/tournament.cpp:502
 #, kde-format
 msgctxt "Number of Games Played with Black (over the board) tiebreak"
 msgid "Number of Games Played with Black (over the board)"
 msgstr "Кількість перемог при грі чорними (за дошкою)"
 
 #: tournament/tiebreaks/points.h:22 tournament/tiebreaks/points.h:27
-#: tournament/tournament.cpp:485
+#: tournament/tournament.cpp:484
 #, kde-format
 msgctxt "Game points"
 msgid "Points"
 msgstr "Очки"
 
-#: tournament/tiebreaks/won.h:23 tournament/tournament.cpp:499
+#: tournament/tiebreaks/won.h:23 tournament/tournament.cpp:498
 #, kde-format
 msgctxt ""
 "Number of Games Won (over the board) tiebreak. Different from the 'Number of "
@@ -1147,12 +1147,12 @@ msgctxt ""
 msgid "Number of Games Won (over the board)"
 msgstr "Кількість перемог (за дошкою)"
 
-#: tournament/tournament.cpp:944
+#: tournament/tournament.cpp:940
 #, kde-format
 msgid "An error ocurred while pairing the round: %1"
 msgstr "Під час поділу на пари для раунду сталася помилка: %1"
 
-#: tournament/tournament.cpp:1177
+#: tournament/tournament.cpp:1170
 #, kde-format
 msgid "Couldn't open file"
 msgstr "Не вдалося відкрити файл"
