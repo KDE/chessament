@@ -3,6 +3,7 @@
 
 #include "ratinglistmodel.h"
 
+#include <KLocalizedString>
 #include <QCoroFuture>
 #include <QtConcurrent>
 
@@ -61,13 +62,15 @@ QCoro::QmlTask RatingListModel::importRatingList(const QString &name, const QStr
 
 QCoro::Task<> RatingListModel::importRatingListImpl(const QString &name, const QString &url)
 {
+    auto listUrl = QUrl::fromUserInput(url);
+
     const auto list = std::make_unique<RatingList>();
 
     connect(list.get(), &RatingList::statusChanged, this, [this](const QString &status) {
         setStatus(status);
     });
 
-    const auto result = co_await list->import(name, QUrl{url});
+    const auto result = co_await list->import(name, listUrl);
 
     if (!result) {
         setStatus(result.error());

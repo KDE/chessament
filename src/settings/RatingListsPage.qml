@@ -3,9 +3,11 @@
 
 pragma ComponentBehavior: Bound
 
+import QtCore
 import QtQml
 import QtQuick
 import QtQuick.Controls as Controls
+import QtQuick.Dialogs as Dialogs
 import QtQuick.Layouts as Layouts
 
 import org.kde.ki18n
@@ -42,6 +44,12 @@ FormCard.FormCardPage {
             });
         }
 
+        Dialogs.FileDialog {
+            id: fileDialog
+            currentFolder: StandardPaths.standardLocations(StandardPaths.HomeLocation)[0]
+            onAccepted: urlField.editText = selectedFile.toString().replace("file://", "")
+        }
+
         FormCard.FormTextFieldDelegate {
             id: nameField
             label: KI18n.i18nc("@info:label", "Name")
@@ -51,14 +59,15 @@ FormCard.FormCardPage {
             id: urlField
             text: KI18n.i18nc("@info:label", "Rating list URL")
             editable: true
-            model: {
-                let lists = ["https://ratings.fide.com/download/players_list.zip"];
-
-                if (Config.developer) {
-                    lists.push("http://localhost:1234/players_list.zip");
-                }
-
-                return lists;
+            model: ["https://ratings.fide.com/download/players_list.zip"]
+            trailing: Controls.Button {
+                icon.name: "document-open-data-symbolic"
+                text: KI18n.i18nc("@action:button", "Select file")
+                display: Controls.AbstractButton.IconOnly
+                onPressed: fileDialog.open()
+                Controls.ToolTip.text: text
+                Controls.ToolTip.visible: hovered
+                Controls.ToolTip.delay: Kirigami.Units.toolTipDelay
             }
         }
     }

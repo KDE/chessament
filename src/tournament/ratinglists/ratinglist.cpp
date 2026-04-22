@@ -124,48 +124,75 @@ QString RatingList::name() const
 
 QCoro::Task<std::expected<void, QString>> RatingList::import(const QString &name, const QUrl &url)
 {
+    qDebug() << "Importing rating list from" << url;
+
+    if (!url.isValid()) {
+        co_return std::unexpected(i18nc("@info", "Could not open file."));
+    }
+
     m_name = name;
     m_url = url.toString();
 
-    QNetworkAccessManager manager;
+    QByteArray result;
+    QMimeDatabase mimeDb;
+    QMimeType mimeType;
 
-    QNetworkRequest request{url};
-    const QString userAgent = "Chessament/"_L1 + QCoreApplication::applicationVersion() + " (+https://apps.kde.org/chessament/)"_L1;
-    request.setHeader(QNetworkRequest::UserAgentHeader, userAgent);
-
-    Q_EMIT statusChanged(i18nc("@info:progress", "Downloading file"));
-
-    auto *reply = manager.get(request);
-
-    connect(reply, &QNetworkReply::downloadProgress, this, [this](qint64 received, qint64 total) {
-        if (total == 0) {
-            return;
+    if (url.scheme() == u"file"_s) {
+        if (!QFile::exists(url.toLocalFile())) {
+            co_return std::unexpected(i18nc("@info", "Could not open file: the file does not exists."));
         }
-        const auto progress = 100. * (static_cast<double>(received) / static_cast<double>(total));
-        qDebug() << progress;
-        Q_EMIT statusChanged(i18nc("@info:progress", "Downloading file (%1 %)", progress));
-    });
 
-    co_await qCoro(reply).waitForFinished();
+        QFile file{url.toLocalFile()};
+        if (!file.open(QIODeviceBase::ReadOnly)) {
+            co_return std::unexpected(i18nc("@info", "Could not open file."));
+        }
 
-    if (reply->error() != QNetworkReply::NoError) {
-        co_return std::unexpected(i18nc("@info", "Couldn't download rating list: %1", reply->errorString()));
+        result = file.readAll();
+        mimeType = mimeDb.mimeTypeForFile(url.toLocalFile());
+        file.close();
+    } else if (url.scheme() == u"https"_s) {
+        QNetworkAccessManager manager;
+
+        QNetworkRequest request{url};
+        const QString userAgent = "Chessament/"_L1 + QCoreApplication::applicationVersion() + " (+https://apps.kde.org/chessament/)"_L1;
+        request.setHeader(QNetworkRequest::UserAgentHeader, userAgent);
+
+        Q_EMIT statusChanged(i18nc("@info:progress", "Downloading file"));
+
+        auto *reply = manager.get(request);
+
+        connect(reply, &QNetworkReply::downloadProgress, this, [this](qint64 received, qint64 total) {
+            if (total == 0) {
+                return;
+            }
+            const auto progress = 100. * (static_cast<double>(received) / static_cast<double>(total));
+            qDebug() << progress;
+            Q_EMIT statusChanged(i18nc("@info:progress", "Downloading file (%1 %)", progress));
+        });
+
+        co_await qCoro(reply).waitForFinished();
+
+        if (reply->error() != QNetworkReply::NoError) {
+            co_return std::unexpected(i18nc("@info", "Couldn't download rating list: %1", reply->errorString()));
+        }
+
+        const auto contentType = QString::fromLatin1(reply->headers().value(QHttpHeaders::WellKnownHeader::ContentType));
+        mimeType = mimeDb.mimeTypeForName(contentType);
+
+        m_etag = QString::fromLatin1(reply->headers().value(QHttpHeaders::WellKnownHeader::ETag));
+        m_lastModified = QString::fromLatin1(reply->headers().value(QHttpHeaders::WellKnownHeader::LastModified));
+
+        result = reply->readAll();
+        reply->deleteLater();
+    } else {
+        co_return std::unexpected(i18nc("@info", "Could not download rating list from %1 (unsupported protocol).", url.toString()));
     }
 
-    const auto contentType = QString::fromLatin1(reply->headers().value(QHttpHeaders::WellKnownHeader::ContentType));
-    QMimeDatabase mimeDb{};
-    const auto mimeType = mimeDb.mimeTypeForName(contentType);
-
-    m_etag = QString::fromLatin1(reply->headers().value(QHttpHeaders::WellKnownHeader::ETag));
-    m_lastModified = QString::fromLatin1(reply->headers().value(QHttpHeaders::WellKnownHeader::LastModified));
-
-    const auto result = reply->readAll();
     const auto count = co_await QtConcurrent::run([this, &result, mimeType]() -> std::expected<uint, QString> {
         return processFile(result, mimeType);
     });
 
     QSqlDatabase::removeDatabase(RATING_LISTS_DB_CONNECTION_NAME);
-    reply->deleteLater();
 
     if (!count) {
         co_return std::unexpected(count.error());
