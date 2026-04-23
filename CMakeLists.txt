@@ -111,7 +111,7 @@ endif()
 install(FILES org.kde.chessament.desktop DESTINATION ${KDE_INSTALL_APPDIR})
 install(FILES org.kde.chessament.metainfo.xml DESTINATION ${KDE_INSTALL_METAINFODIR})
 install(FILES org.kde.chessament.svg DESTINATION ${KDE_INSTALL_FULL_ICONDIR}/hicolor/scalable/apps)
-install(FILES application-vnd-kde-chessament.xml DESTINATION ${KDE_INSTALL_MIMEDIR})
+install(FILES org.kde.chessament.xml DESTINATION ${KDE_INSTALL_MIMEDIR})
 update_xdg_mimetypes(${KDE_INSTALL_MIMEDIR})
 ki18n_install(po)
 
