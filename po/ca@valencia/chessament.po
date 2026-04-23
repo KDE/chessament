@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-22 00:41+0000\n"
-"PO-Revision-Date: 2026-04-01 11:26+0200\n"
+"PO-Revision-Date: 2026-04-20 11:29+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.12.3\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #: byesmodel.cpp:66
 #, kde-format
@@ -35,13 +35,13 @@ msgstr "Torneig nou…"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Import tournament report…"
-msgstr "Importa l'informe del torneig…"
+msgstr "Importa un informe de torneig…"
 
 #: chessamentapplication.cpp:53
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Export tournament report…"
-msgstr "Exporta l'informe del torneig…"
+msgstr "Exporta un informe de torneig…"
 
 #: controller.cpp:167
 #, kde-format
@@ -64,25 +64,25 @@ msgstr "Aparellaments de la ronda %1"
 #, kde-format
 msgctxt "@title"
 msgid "Standings After Round %1"
-msgstr "Resultats després de la ronda %1"
+msgstr "Classificació després de la ronda %1"
 
 #: documents.cpp:99
 #, kde-format
 msgctxt "@title"
 msgid "Provisional Standings After Round %1"
-msgstr "Resultats provisionals després de la ronda %1"
+msgstr "Classificació provisional després de la ronda %1"
 
 #: documents.cpp:103
 #, kde-format
 msgctxt "@title"
 msgid "Final Standings"
-msgstr "Resultats finals"
+msgstr "Classificació final"
 
 #: documents.cpp:105
 #, kde-format
 msgctxt "@title"
 msgid "Provisional Final Standings"
-msgstr "Resultats finals provisionals"
+msgstr "Classificació final provisional"
 
 #: main.cpp:59 qml/WelcomePage.qml:16
 #, kde-format
@@ -133,25 +133,26 @@ msgstr "Motor d'aparellament de tornejos d'escacs amb el sistema suís."
 #, kde-format
 msgctxt "Command line option description"
 msgid "Import Tournament Report File."
-msgstr "Importa un fitxer d'informe del torneig."
+msgstr "Importa un fitxer d'informe de torneig."
 
 #: main.cpp:87
 #, kde-format
 msgctxt "@info:shell Command line option description"
 msgid "Event to open."
-msgstr ""
+msgstr "Esdeveniment a obrir."
 
 #: main.cpp:106
 #, kde-format
 msgctxt "@info:shell"
 msgid "Error: Can't open an event when importing a TRF"
 msgstr ""
+"S'ha produït un error: No s'ha pogut obrir un esdeveniment en importar un TRF"
 
 #: main.cpp:115
 #, kde-format
 msgctxt "@info:shell"
 msgid "Error: Can't open more that one event"
-msgstr ""
+msgstr "S'ha produït un error: No es pot obrir més d'un esdeveniment"
 
 #: pairingmodel.cpp:99
 #, kde-format
@@ -211,13 +212,13 @@ msgstr "Nom"
 #, kde-format
 msgctxt "@title:column Player Rating"
 msgid "Rating"
-msgstr "Classificació"
+msgstr "Puntuació"
 
 #: playersmodel.cpp:202
 #, kde-format
 msgctxt "@title:column Player National Rating"
 msgid "National Rating"
-msgstr "Classificació nacional"
+msgstr "Puntuació nacional"
 
 #: playersmodel.cpp:204
 #, kde-format
@@ -267,12 +268,12 @@ msgstr "Nom"
 #: qml/AddPlayerDialog.qml:85
 msgctxt "@label:textbox"
 msgid "Rating"
-msgstr "Classificació"
+msgstr "Puntuació"
 
 #: qml/AddPlayerDialog.qml:92
 msgctxt "@label:textbox"
 msgid "National rating"
-msgstr "Classificació nacional"
+msgstr "Puntuació nacional"
 
 #: qml/AddPlayerDialog.qml:99
 msgctxt "@label:textbox"
@@ -387,17 +388,14 @@ msgid "Chessament"
 msgstr "Chessament"
 
 #: qml/Main.qml:51 qml/Main.qml:61 qml/NewTournamentDialog.qml:50
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Chessament is a chess tournament manager"
 msgctxt "@label:listbox"
 msgid "Chessament event (*.chessament)"
-msgstr "Chessament és un gestor de torneigs d'escacs"
+msgstr "Esdeveniment de Chessament (*chessament)"
 
 #: qml/Main.qml:71 qml/Main.qml:81
 msgctxt "@label:listbox"
 msgid "TRF files (*.trf *.txt)"
-msgstr ""
+msgstr "Fitxers TRF (*.trf *.txt)"
 
 #: qml/Main.qml:108
 msgctxt "@title"
@@ -706,7 +704,7 @@ msgstr "Aparellaments"
 
 #: qml/Sidebar.qml:70
 msgid "Standings"
-msgstr "Resultats"
+msgstr "Classificació"
 
 #: qml/Sidebar.qml:94
 msgctxt "@action:button"
@@ -730,7 +728,7 @@ msgstr ""
 #: qml/StandingsPage.qml:67 qml/StandingsPage.qml:77
 msgctxt "@item:inlistbox"
 msgid "Final Standings"
-msgstr "Resultats finals"
+msgstr "Classificació final"
 
 #: qml/StandingsPage.qml:69 qml/StandingsPage.qml:79
 msgctxt "@item:inlistbox Standings After Round %1"
@@ -740,7 +738,7 @@ msgstr "Després de la ronda %1"
 #: qml/StandingsPage.qml:129
 msgctxt "@info:placeholder"
 msgid "No standings yet"
-msgstr "Encara no hi ha cap resultat"
+msgstr "Encara no hi ha cap classificació"
 
 #: qml/TiebreakDialog.qml:18
 msgctxt "@title:window"
@@ -904,7 +902,7 @@ msgstr "Comptes"
 #: settings/ChessamentConfigurationView.qml:44
 msgctxt "@action:button"
 msgid "Rating Lists"
-msgstr "Llistes de classificació"
+msgstr "Llistes de puntuació"
 
 #: settings/GeneralPage.qml:16
 msgctxt "@title"
@@ -924,12 +922,12 @@ msgstr "Obri automàticament els fitxers PDF exportats"
 #: settings/RatingListsPage.qml:22 settings/RatingListsPage.qml:128
 msgctxt "@title"
 msgid "Rating Lists"
-msgstr "Llistes de classificació"
+msgstr "Llistes de puntuació"
 
 #: settings/RatingListsPage.qml:27
 msgctxt "@title:window"
 msgid "Add Rating List"
-msgstr "Afig una llista de classificació"
+msgstr "Afig una llista de puntuació"
 
 #: settings/RatingListsPage.qml:32
 msgctxt "@action:button"
@@ -944,17 +942,17 @@ msgstr "Nom"
 #: settings/RatingListsPage.qml:52
 msgctxt "@info:label"
 msgid "Rating list URL"
-msgstr "URL de la llista de classificació"
+msgstr "URL de la llista de puntuació"
 
 #: settings/RatingListsPage.qml:72
 msgctxt "@title:window"
 msgid "Importing Rating List"
-msgstr "Importació de llista de classificació"
+msgstr "Importació de llista de puntuació"
 
 #: settings/RatingListsPage.qml:112
 msgctxt "@title"
 msgid "Delete Rating List"
-msgstr "Suprimiu de llista de classificació"
+msgstr "Suprimiu de llista de puntuació"
 
 #: settings/RatingListsPage.qml:120
 msgctxt "@action:button Delete Rating List"
@@ -964,22 +962,22 @@ msgstr "Suprimix"
 #: settings/RatingListsPage.qml:133
 msgctxt "@info:status"
 msgid "No rating lists yet."
-msgstr "Encara no hi ha cap llista de classificació."
+msgstr "Encara no hi ha cap llista de puntuació."
 
 #: settings/RatingListsPage.qml:153
 msgctxt "@action:button"
 msgid "Delete Rating List"
-msgstr "Suprimix la llista de classificació"
+msgstr "Suprimix la llista de puntuació"
 
 #: settings/RatingListsPage.qml:161
 msgctxt "@action:button"
 msgid "Delete rating list"
-msgstr "Suprimix la llista de classificació"
+msgstr "Suprimix la llista de puntuació"
 
 #: settings/RatingListsPage.qml:171
 msgctxt "@action:button"
 msgid "Add rating list"
-msgstr "Afig una llista de classificació"
+msgstr "Afig una llista de puntuació"
 
 #: standingsmodel.cpp:88
 #, kde-format
@@ -992,6 +990,7 @@ msgstr "Posició"
 msgctxt "@info"
 msgid "The file is not a <application>Chessament</application> event."
 msgstr ""
+"El fitxer no és un esdeveniment de <application>Chessament</application>."
 
 #: tournament/federations.h:118
 msgctxt "FIDE Federation"
@@ -1055,7 +1054,7 @@ msgstr "S'està descarregant el fitxer (%1 %)"
 #, kde-format
 msgctxt "@info"
 msgid "Couldn't download rating list: %1"
-msgstr "No s'ha pogut baixar la llista de classificació: %1"
+msgstr "No s'ha pogut baixar la llista de puntuació: %1"
 
 #: tournament/ratinglists/ratinglist.cpp:174
 #, kde-format

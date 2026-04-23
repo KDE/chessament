@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-22 00:41+0000\n"
-"PO-Revision-Date: 2026-04-02 09:46+0200\n"
+"PO-Revision-Date: 2026-04-21 07:18+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: fr\n"
 "Language: fr\n"
@@ -135,19 +135,20 @@ msgstr "Importer le rapport de tournoi."
 #, kde-format
 msgctxt "@info:shell Command line option description"
 msgid "Event to open."
-msgstr ""
+msgstr "Évènement à ouvrir."
 
 #: main.cpp:106
 #, kde-format
 msgctxt "@info:shell"
 msgid "Error: Can't open an event when importing a TRF"
 msgstr ""
+"Erreur : impossible d'ouvrir un évènement lors de l'importation d'un TRF"
 
 #: main.cpp:115
 #, kde-format
 msgctxt "@info:shell"
 msgid "Error: Can't open more that one event"
-msgstr ""
+msgstr "Erreur : impossible d'ouvrir plus d'un évènement"
 
 #: pairingmodel.cpp:99
 #, kde-format
@@ -383,17 +384,14 @@ msgid "Chessament"
 msgstr "Chessament"
 
 #: qml/Main.qml:51 qml/Main.qml:61 qml/NewTournamentDialog.qml:50
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Chessament is a chess tournament manager"
 msgctxt "@label:listbox"
 msgid "Chessament event (*.chessament)"
-msgstr "Chessament est un gestionnaire de tournoi d'échecs"
+msgstr "Évènement de Chessament (*.chessament) "
 
 #: qml/Main.qml:71 qml/Main.qml:81
 msgctxt "@label:listbox"
 msgid "TRF files (*.trf *.txt)"
-msgstr ""
+msgstr "Fichiers TRF (*.trf *.txt)"
 
 #: qml/Main.qml:108
 msgctxt "@title"
@@ -988,6 +986,7 @@ msgstr "Rang"
 msgctxt "@info"
 msgid "The file is not a <application>Chessament</application> event."
 msgstr ""
+"Le fichier n'est pas un événement de <application>Chessament</application>."
 
 #: tournament/federations.h:118
 msgctxt "FIDE Federation"
