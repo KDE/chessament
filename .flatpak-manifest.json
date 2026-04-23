@@ -17,6 +17,12 @@
         "--device=dri"
     ],
     "separate-locales": false,
+    "cleanup": [
+        "/include",
+        "/lib/cmake",
+        "/mkspecs",
+        "/share/doc"
+    ],
     "modules": [
         {
             "name": "qtkeychain",
