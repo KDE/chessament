@@ -1048,20 +1048,7 @@ void Tournament::saveTiebreaks()
 
 QVariant Tournament::option(const QString &name)
 {
-    QSqlQuery query(m_event->db());
-    query.prepare(GET_OPTION_QUERY);
-    query.bindValue(u":tournament"_s, m_id);
-    query.bindValue(u":name"_s, name);
-
-    if (!query.exec()) {
-        qDebug() << "get option" << query.lastError();
-    }
-
-    query.next();
-    if (!query.isValid()) {
-        return {};
-    }
-    return query.value(0);
+    return m_options.value(name);
 }
 
 void Tournament::setOption(const QString &name, const QVariant &value)
@@ -1074,7 +1061,10 @@ void Tournament::setOption(const QString &name, const QVariant &value)
 
     if (!query.exec()) {
         qDebug() << "set option" << name << value << query.lastError();
+        return;
     }
+
+    m_options[name] = value;
 }
 
 QJsonObject Tournament::toJson() const
@@ -1214,8 +1204,9 @@ std::expected<void, QString> Tournament::loadTournament(const QString &id)
 
     setId(id);
 
-    loadOptions();
-
+    if (const auto ok = loadOptions(); !ok) {
+        return ok;
+    }
     if (const auto ok = loadPlayers(); !ok) {
         return ok;
     }
@@ -1232,8 +1223,26 @@ std::expected<void, QString> Tournament::loadTournament(const QString &id)
     return {};
 }
 
-void Tournament::loadOptions()
+std::expected<void, QString> Tournament::loadOptions()
 {
+    QSqlQuery query(m_event->db());
+    query.prepare(GET_OPTIONS_QUERY);
+    query.bindValue(u":tournament"_s, m_id);
+
+    if (!query.exec()) {
+        qDebug() << "Error loading options" << query.lastError();
+        return std::unexpected(query.lastError().text());
+    }
+
+    const int nameNo = query.record().indexOf("name");
+    const int valueNo = query.record().indexOf("value");
+
+    while (query.next()) {
+        const auto name = query.value(nameNo).toString();
+        const auto value = query.value(valueNo);
+        m_options[name] = value;
+    }
+
     setName(option(u"name"_s).toString());
     setCity(option(u"city"_s).toString());
     setFederation(option(u"federation"_s).toString());
@@ -1243,6 +1252,8 @@ void Tournament::loadOptions()
     setNumberOfRounds(option(u"number_of_rounds"_s).toInt());
     setCurrentRound(option(u"current_round"_s).toInt());
     setInitialColor(Tournament::InitialColor(option(u"initial_color"_s).toInt()));
+
+    return {};
 }
 
 std::expected<void, QString> Tournament::loadPlayers()

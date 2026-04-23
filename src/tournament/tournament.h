@@ -422,7 +422,7 @@ private:
 
     std::expected<void, QString> createNewTournament();
     std::expected<void, QString> loadTournament(const QString &id = {});
-    void loadOptions();
+    std::expected<void, QString> loadOptions();
     std::expected<void, QString> loadPlayers();
     std::expected<void, QString> loadRounds();
     std::expected<void, QString> loadPairings();
@@ -439,6 +439,7 @@ private:
     QString m_timeControl;
     int m_numberOfRounds = 1;
     int m_currentRound = 0;
+    QVariantMap m_options;
     std::vector<std::unique_ptr<Tiebreak>> m_tiebreaks;
 
     std::vector<std::unique_ptr<Player>> m_players;

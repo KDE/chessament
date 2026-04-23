@@ -32,7 +32,7 @@ const QString OPTIONS_TABLE_SCHEMA =
     u"FOREIGN KEY (tournament) REFERENCES tournaments(id)"_s
     u");"_s;
 
-const QString GET_OPTION_QUERY = u"SELECT value FROM options WHERE tournament = :tournament AND name = :name LIMIT 1;"_s;
+const QString GET_OPTIONS_QUERY = u"SELECT name, value FROM options WHERE tournament = :tournament;"_s;
 
 const QString UPDATE_OPTION_QUERY = u"INSERT OR REPLACE INTO options(tournament, name, value) VALUES (:tournament, :name, :value);"_s;
 
