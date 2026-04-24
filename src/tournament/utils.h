@@ -3,9 +3,13 @@
 
 #pragma once
 
+#include <KSandbox>
 #include <QString>
+#include <QUrl>
 
 namespace Utils
 {
 QString normalize(const QString &text);
+
+QUrl maybeAddExtension(const QUrl &fileUrl, const QString &extension);
 }

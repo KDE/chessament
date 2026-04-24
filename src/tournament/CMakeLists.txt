@@ -37,6 +37,7 @@ target_link_libraries(tournament PUBLIC
     KF6::Archive
     KF6::ConfigCore
     KF6::ConfigGui
+    KF6::CoreAddons
     KF6::I18n
     QCoro6::Core
     QCoro6::Network

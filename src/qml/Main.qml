@@ -59,7 +59,6 @@ StatefulApp.StatefulWindow {
             const dialog = fileDialog.createObject(QQC2.Overlay.overlay);
             dialog.fileMode = Dialogs.FileDialog.SaveFile;
             dialog.nameFilters = [KI18n.i18nc("@label:listbox", "Chessament event (*.chessament)")];
-            dialog.defaultSuffix = "chessament";
             dialog.accepted.connect(() => {
                 Controller.saveEventAs(dialog.selectedFile);
             });
@@ -79,7 +78,6 @@ StatefulApp.StatefulWindow {
             const dialog = fileDialog.createObject(QQC2.Overlay.overlay);
             dialog.fileMode = Dialogs.FileDialog.SaveFile;
             dialog.nameFilters = [KI18n.i18nc("@label:listbox", "TRF files (*.trf *.txt)")];
-            dialog.defaultSuffix = "trf";
             dialog.accepted.connect(() => {
                 Controller.exportTrf(dialog.selectedFile);
             });

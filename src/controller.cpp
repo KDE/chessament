@@ -7,7 +7,9 @@
 #include "tournament/pairing.h"
 #include "tournament/state.h"
 #include "tournament/sync/syncengine.h"
+#include "utils.h"
 
+#include <KSandbox>
 #include <QCoroFuture>
 #include <QDesktopServices>
 #include <QRandomGenerator>
@@ -243,9 +245,10 @@ void Controller::sortPlayers()
 
 void Controller::newTournament(const QUrl &fileUrl, const QString &name, int numberOfRounds)
 {
+    auto fileName = Utils::maybeAddExtension(fileUrl, u".chessament"_s);
     auto event = std::make_unique<Event>();
 
-    if (const auto ok = event->create(fileUrl.toLocalFile()); !ok) {
+    if (const auto ok = event->create(fileName.toLocalFile()); !ok) {
         setError(ok.error());
         return;
     }
@@ -280,12 +283,14 @@ void Controller::openEvent(const QUrl &fileUrl)
 
 void Controller::saveEventAs(const QUrl &fileUrl)
 {
-    if (const auto ok = m_event->saveAs(fileUrl.toLocalFile()); !ok) {
+    auto fileName = Utils::maybeAddExtension(fileUrl, u".chessament"_s);
+
+    if (const auto ok = m_event->saveAs(fileName.toLocalFile()); !ok) {
         setError(ok.error());
         return;
     }
 
-    openEvent(fileUrl);
+    openEvent(fileName);
 }
 
 PlayersModel *Controller::playersModel() const

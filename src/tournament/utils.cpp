@@ -15,4 +15,12 @@ QString normalize(const QString &text)
     return text.normalized(QString::NormalizationForm_KD).remove(QRegularExpression{u"[^a-zA-Z0-9\\s\\.,-_\\(\\)]"_s});
 }
 
+QUrl maybeAddExtension(const QUrl &fileUrl, const QString &extension)
+{
+    auto result{fileUrl};
+    if (!KSandbox::isInside() && !fileUrl.path().endsWith(extension)) {
+        result.setPath(fileUrl.path() + extension);
+    }
+    return result;
+}
 }

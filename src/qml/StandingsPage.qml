@@ -37,7 +37,6 @@ TablePage {
     Dialogs.FileDialog {
         id: saveDialog
         fileMode: Dialogs.FileDialog.SaveFile
-        defaultSuffix: "pdf"
         nameFilters: ["PDF Files (*.pdf)"]
         currentFolder: StandardPaths.standardLocations(StandardPaths.HomeLocation)[0]
         onAccepted: Controller.saveStandingsDocument(selectedFile, root.round)

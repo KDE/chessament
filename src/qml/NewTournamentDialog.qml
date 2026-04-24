@@ -48,7 +48,6 @@ FormCard.FormCardDialog {
         Dialogs.FileDialog {
             fileMode: Dialogs.FileDialog.SaveFile
             nameFilters: [KI18n.i18nc("@label:listbox", "Chessament event (*.chessament)")]
-            defaultSuffix: "chessament"
             currentFolder: StandardPaths.standardLocations(StandardPaths.HomeLocation)[0]
         }
     }

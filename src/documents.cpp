@@ -5,6 +5,7 @@
 #include "controller.h"
 #include "document.h"
 #include "tournament/state.h"
+#include "tournament/utils.h"
 
 #include <KIO/OpenUrlJob>
 #include <KLocalizedString>
@@ -33,11 +34,13 @@ std::unique_ptr<Document> Controller::playersDocument()
 
 void Controller::savePlayersDocument(const QUrl &fileUrl)
 {
+    auto fileName = Utils::maybeAddExtension(fileUrl, u".pdf"_s);
+
     auto doc = playersDocument();
-    doc->saveAs(fileUrl.toLocalFile());
+    doc->saveAs(fileName.toLocalFile());
 
     if (Config::openExportedPdfFiles()) {
-        auto *job = new KIO::OpenUrlJob(fileUrl);
+        auto *job = new KIO::OpenUrlJob(fileName);
         job->start();
     }
 }
@@ -67,11 +70,13 @@ std::unique_ptr<Document> Controller::pairingsDocument()
 
 void Controller::savePairingsDocument(const QUrl &fileUrl)
 {
+    auto fileName = Utils::maybeAddExtension(fileUrl, u".pdf"_s);
+
     auto doc = pairingsDocument();
-    doc->saveAs(fileUrl.toLocalFile());
+    doc->saveAs(fileName.toLocalFile());
 
     if (Config::openExportedPdfFiles()) {
-        auto *job = new KIO::OpenUrlJob(fileUrl);
+        auto *job = new KIO::OpenUrlJob(fileName);
         job->start();
     }
 }
@@ -119,11 +124,13 @@ std::unique_ptr<Document> Controller::standingsDocument(int round)
 
 void Controller::saveStandingsDocument(const QUrl &fileUrl, int round)
 {
+    auto fileName = Utils::maybeAddExtension(fileUrl, u".pdf"_s);
+
     const auto doc = standingsDocument(round);
-    doc->saveAs(fileUrl.toLocalFile());
+    doc->saveAs(fileName.toLocalFile());
 
     if (Config::openExportedPdfFiles()) {
-        auto *job = new KIO::OpenUrlJob(fileUrl);
+        auto *job = new KIO::OpenUrlJob(fileName);
         job->start();
     }
 }
