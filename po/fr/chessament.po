@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-22 00:41+0000\n"
-"PO-Revision-Date: 2026-04-21 07:18+0200\n"
+"POT-Creation-Date: 2026-04-24 00:40+0000\n"
+"PO-Revision-Date: 2026-04-22 20:50+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: fr\n"
 "Language: fr\n"
@@ -305,7 +305,7 @@ msgstr "Sexe"
 #: qml/AddTiebreakDialog.qml:20
 msgctxt "@title:window"
 msgid "Add Tiebreak"
-msgstr "Ajouter un tiebreak"
+msgstr "Ajouter une manche décisive"
 
 #: qml/components/MenuBar.qml:17
 msgctxt "@action:menu"
@@ -331,7 +331,7 @@ msgstr "Aide"
 #: qml/components/TiebreakDelegate.qml:36
 msgctxt "@action:button"
 msgid "Configure tiebreak"
-msgstr "Configurer le tiebreak"
+msgstr "Configurer la manche décisive"
 
 #: qml/components/TiebreakDelegate.qml:52
 msgctxt "@action:button Move tiebreak up"
@@ -356,12 +356,12 @@ msgstr "Déplacer vers le bas"
 #: qml/components/TiebreakDelegate.qml:76
 msgctxt "@action:button"
 msgid "Delete Tiebreak"
-msgstr "Supprimer le tiebreak"
+msgstr "Supprimer la manche décisive"
 
 #: qml/components/TiebreakDelegate.qml:81
 msgctxt "@action:button"
 msgid "Delete tiebreak"
-msgstr "Supprimer le tiebreak"
+msgstr "Supprimer la manche décisive"
 
 #: qml/DeletePairingsDialog.qml:17
 msgctxt "@title"
@@ -739,7 +739,7 @@ msgstr "Pas encore de classement"
 #: qml/TiebreakDialog.qml:18
 msgctxt "@title:window"
 msgid "Edit Tiebreak"
-msgstr "Modifier le tiebreak"
+msgstr "Modifier la manche décisive"
 
 #: qml/TournamentSettings.qml:17
 msgctxt "@action:button"
@@ -803,12 +803,12 @@ msgstr "La valeur du couplage alloué"
 #: qml/TournamentSettingsFormat.qml:60
 msgctxt "@title:group"
 msgid "Tiebreaks"
-msgstr "Tiebreaks"
+msgstr "Manches décisives"
 
 #: qml/TournamentSettingsFormat.qml:84
 msgctxt "@action:button"
 msgid "Add Tiebreak"
-msgstr "Ajouter un tiebreak"
+msgstr "Ajouter une manche décisive"
 
 #: qml/TournamentSettingsInformation.qml:12
 msgctxt "@title"
@@ -1007,7 +1007,8 @@ msgstr "Pays de Galles"
 #, kde-format
 msgctxt "bbpPairings is the name of a program, should not be translated"
 msgid "The pairing engine bbpPairings could not be found. Is it installed?"
-msgstr "Le moteur de couplage bbpPairings est introuvable. Est-il installé ?"
+msgstr ""
+"Le moteur de couplage « bbpPairings » est introuvable. Est-il installé ?"
 
 #: tournament/pairingengine.cpp:37
 #, kde-format
@@ -1140,7 +1141,7 @@ msgstr "Nombre de parties gagnées (Sur le plateau)"
 msgid "An error ocurred while pairing the round: %1"
 msgstr "Une erreur s'est produite lors du couplage de la manche : %1"
 
-#: tournament/tournament.cpp:1170
+#: tournament/tournament.cpp:1160
 #, kde-format
 msgid "Couldn't open file"
 msgstr "Impossible d'ouvrir le fichier"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-22 00:41+0000\n"
+"POT-Creation-Date: 2026-04-24 00:40+0000\n"
 "PO-Revision-Date: 2025-12-15 13:49+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -1177,7 +1177,7 @@ msgstr ""
 msgid "An error ocurred while pairing the round: %1"
 msgstr ""
 
-#: tournament/tournament.cpp:1170
+#: tournament/tournament.cpp:1160
 #, kde-format
 msgid "Couldn't open file"
 msgstr "Soubor nelze otevřít"
