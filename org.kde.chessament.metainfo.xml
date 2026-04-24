@@ -106,4 +106,22 @@
     <name>The KDE Community</name>
     <url>https://kde.org</url>
   </developer>
+  <screenshots>
+    <screenshot type="default">
+      <image width="2260" height="1716">https://cdn.kde.org/screenshots/chessament/chessament.png</image>
+      <caption>Players view</caption>
+    </screenshot>
+    <screenshot>
+      <image width="2260" height="1716">https://cdn.kde.org/screenshots/chessament/chessament-pairings.png</image>
+      <caption>Pairings view</caption>
+    </screenshot>
+    <screenshot>
+      <image width="2260" height="1716">https://cdn.kde.org/screenshots/chessament/chessament-standings.png</image>
+      <caption>Standings view</caption>
+    </screenshot>
+  </screenshots>
+  <branding>
+    <color type="primary" scheme_preference="light">#dabd9c</color>
+    <color type="primary" scheme_preference="dark">#6e4f29</color>
+  </branding>
 </component>
