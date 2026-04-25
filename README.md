@@ -30,6 +30,7 @@ Nightly builds for Windows can be downloaded from [cdn.kde.org](https://cdn.kde.
 ## Links
 
 - [Homepage](https://apps.kde.org/chessament/)
+- [User documentation](https://docs.kde.org/index.php?package=chessament)
 - [Source code](https://invent.kde.org/games/chessament)
 - [Report a bug or feature request](https://bugs.kde.org/enter_bug.cgi?format=guided&product=chessament)
 
@@ -40,3 +41,14 @@ The easiest way to make changes and test Chessament during development is [using
 ### Requirements
 
 The pairing engine [bbpPairings](https://github.com/BieremaBoyzProgramming/bbpPairings) is required at runtime.
+
+## Developer option
+
+Some in-progress features not ready for release yet are hidden under a developer
+flag. If you know what you are doing, you can enable them adding the following
+option to your configuration file:
+
+```ini
+[General]
+Developer=true
+```
