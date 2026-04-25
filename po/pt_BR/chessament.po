@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-24 00:40+0000\n"
+"POT-Creation-Date: 2026-04-25 00:41+0000\n"
 "PO-Revision-Date: 2026-04-20 08:57-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -41,42 +41,42 @@ msgctxt "@action:inmenu"
 msgid "Export tournament report…"
 msgstr "Exportar relatório de torneio…"
 
-#: controller.cpp:167
+#: controller.cpp:169
 #, kde-format
 msgid "Couldn't export tournament."
 msgstr "Não foi possível exportar o torneio."
 
-#: documents.cpp:21
+#: documents.cpp:22
 #, kde-format
 msgctxt "@title"
 msgid "Starting Rank"
 msgstr "Classificação inicial"
 
-#: documents.cpp:58
+#: documents.cpp:61
 #, kde-format
 msgctxt "@title"
 msgid "Round %1 Pairings"
 msgstr "Pares da rodada %1"
 
-#: documents.cpp:97
+#: documents.cpp:102
 #, kde-format
 msgctxt "@title"
 msgid "Standings After Round %1"
 msgstr "Pontuação após a rodada %1"
 
-#: documents.cpp:99
+#: documents.cpp:104
 #, kde-format
 msgctxt "@title"
 msgid "Provisional Standings After Round %1"
 msgstr "Pontuação provisória após a rodada %1"
 
-#: documents.cpp:103
+#: documents.cpp:108
 #, kde-format
 msgctxt "@title"
 msgid "Final Standings"
 msgstr "Pontuação final"
 
-#: documents.cpp:105
+#: documents.cpp:110
 #, kde-format
 msgctxt "@title"
 msgid "Provisional Final Standings"
@@ -389,12 +389,12 @@ msgctxt "@label:listbox"
 msgid "Chessament event (*.chessament)"
 msgstr "Evento Chessament (*.chessament)"
 
-#: qml/Main.qml:71 qml/Main.qml:81
+#: qml/Main.qml:70 qml/Main.qml:80
 msgctxt "@label:listbox"
 msgid "TRF files (*.trf *.txt)"
 msgstr "Arquivos TRF (*.trf *.txt)"
 
-#: qml/Main.qml:108
+#: qml/Main.qml:106
 msgctxt "@title"
 msgid "Error"
 msgstr "Erro"
@@ -424,51 +424,51 @@ msgctxt "@label"
 msgid "Number of rounds"
 msgstr "Número de rodadas"
 
-#: qml/PairingsPage.qml:48
+#: qml/PairingsPage.qml:47
 msgctxt "@option:check"
 msgid "Hide finished games"
 msgstr "Ocultar jogos terminados"
 
-#: qml/PairingsPage.qml:61 qml/PlayersPage.qml:113 qml/StandingsPage.qml:50
+#: qml/PairingsPage.qml:60 qml/PlayersPage.qml:112 qml/StandingsPage.qml:49
 msgctxt "@action:intoolbar"
 msgid "Print…"
 msgstr "Imprimir…"
 
-#: qml/PairingsPage.qml:66 qml/PlayersPage.qml:118 qml/StandingsPage.qml:55
+#: qml/PairingsPage.qml:65 qml/PlayersPage.qml:117 qml/StandingsPage.qml:54
 msgctxt "@action:intoolbar"
 msgid "Export as PDF…"
 msgstr "Exportar como PDF…"
 
-#: qml/PairingsPage.qml:75
+#: qml/PairingsPage.qml:74
 msgid "Round %1"
 msgstr "Rodada %1"
 
-#: qml/PairingsPage.qml:93
+#: qml/PairingsPage.qml:92
 msgctxt "@action:intoolbar"
 msgid "Remove pairings of this and following rounds…"
 msgstr "Remova os pares desta e das rodadas seguintes…"
 
-#: qml/PairingsPage.qml:107
+#: qml/PairingsPage.qml:106
 msgctxt "@info"
 msgid "The tournament hasn't started yet."
 msgstr "O torneio ainda não começou."
 
-#: qml/PairingsPage.qml:107
+#: qml/PairingsPage.qml:106
 msgctxt "@info"
 msgid "Round %1 has finished."
 msgstr "A rodada %1 terminou."
 
-#: qml/PairingsPage.qml:111
+#: qml/PairingsPage.qml:110
 msgctxt "@action:button"
 msgid "Pair Round %1…"
 msgstr "Pares da rodada %1…"
 
-#: qml/PairingsPage.qml:157
+#: qml/PairingsPage.qml:156
 msgctxt "@info:placeholder"
 msgid "No pairings for round %1 yet"
 msgstr "Nenhum par para a rodada %1 ainda"
 
-#: qml/PairingsPage.qml:159
+#: qml/PairingsPage.qml:158
 msgctxt "@info:placeholder"
 msgid "All games of round %1 have finished"
 msgstr "Todos os jogos da rodada %1 terminaram"
@@ -552,56 +552,56 @@ msgctxt "@info:label"
 msgid "Round %1"
 msgstr "Rodada %1"
 
-#: qml/PlayersPage.qml:97
+#: qml/PlayersPage.qml:96
 msgctxt "@action:intoolbar Open player details"
 msgid "Details…"
 msgstr "Detalhes…"
 
-#: qml/PlayersPage.qml:103
+#: qml/PlayersPage.qml:102
 msgctxt "@action:intoolbar"
 msgid "Sort Players…"
 msgstr "Ordenar jogadores…"
 
-#: qml/PlayersPage.qml:124
+#: qml/PlayersPage.qml:123
 msgctxt "@action:intoolbar"
 msgid "Add Player…"
 msgstr "Adicionar jogador…"
 
-#: qml/PlayersPage.qml:135
+#: qml/PlayersPage.qml:134
 msgctxt "@action:inmenu"
 msgid "Open Player Details"
 msgstr "Abrir detalhes do jogador"
 
-#: qml/PlayersPage.qml:232
+#: qml/PlayersPage.qml:231
 msgctxt "@info:placeholder"
 msgid "No players found"
 msgstr "Nenhum jogador encontrado"
 
-#: qml/PlayersPage.qml:232
+#: qml/PlayersPage.qml:231
 msgctxt "@info:placeholder"
 msgid "No players yet"
 msgstr "Nenhum jogador ainda"
 
-#: qml/PlayersPage.qml:236
+#: qml/PlayersPage.qml:235
 msgctxt "@action:button"
 msgid "Add Player…"
 msgstr "Adicionar jogador…"
 
-#: qml/PlayersPage.qml:255
+#: qml/PlayersPage.qml:254
 msgctxt "@info:status Number of players"
 msgid "1 player"
 msgid_plural "%1 players"
 msgstr[0] "1 jogador"
 msgstr[1] "%1 Jogadores"
 
-#: qml/PlayersPage.qml:256
+#: qml/PlayersPage.qml:255
 msgctxt "@info:status Number of rated players"
 msgid "1 rated"
 msgid_plural "%1 rated"
 msgstr[0] "1 classificado"
 msgstr[1] "%1 classificados"
 
-#: qml/PlayersPage.qml:258
+#: qml/PlayersPage.qml:257
 msgctxt "@info:status Total number of players (Number of players rated)"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
@@ -722,17 +722,17 @@ msgstr ""
 "Alterar a classificação inicial após o pareamento da quarta rodada não é "
 "permitido em torneios oficiais."
 
-#: qml/StandingsPage.qml:67 qml/StandingsPage.qml:77
+#: qml/StandingsPage.qml:66 qml/StandingsPage.qml:76
 msgctxt "@item:inlistbox"
 msgid "Final Standings"
 msgstr "Pontuação final"
 
-#: qml/StandingsPage.qml:69 qml/StandingsPage.qml:79
+#: qml/StandingsPage.qml:68 qml/StandingsPage.qml:78
 msgctxt "@item:inlistbox Standings After Round %1"
 msgid "After Round %1"
 msgstr "Após a rodada %1"
 
-#: qml/StandingsPage.qml:129
+#: qml/StandingsPage.qml:128
 msgctxt "@info:placeholder"
 msgid "No standings yet"
 msgstr "Nenhuma pontuação ainda"

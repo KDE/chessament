@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-24 00:40+0000\n"
+"POT-Creation-Date: 2026-04-25 00:41+0000\n"
 "PO-Revision-Date: 2025-11-09 11:05+0200\n"
 "Last-Translator: Toms Trasūns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -42,44 +42,44 @@ msgctxt "@action:inmenu"
 msgid "Export tournament report…"
 msgstr "Eksportēt turnīra ziņojumu…"
 
-#: controller.cpp:167
+#: controller.cpp:169
 #, kde-format
 msgid "Couldn't export tournament."
 msgstr "Turnīru eksportēt neizdevās."
 
-#: documents.cpp:21
+#: documents.cpp:22
 #, kde-format
 msgctxt "@title"
 msgid "Starting Rank"
 msgstr "Sākuma rinda"
 
-#: documents.cpp:58
+#: documents.cpp:61
 #, kde-format
 msgctxt "@title"
 msgid "Round %1 Pairings"
 msgstr "%1. kārtas pāri"
 
-#: documents.cpp:97
+#: documents.cpp:102
 #, fuzzy, kde-format
 #| msgid "Pair Round %1"
 msgctxt "@title"
 msgid "Standings After Round %1"
 msgstr "Veidot pārus %1. kārtai"
 
-#: documents.cpp:99
+#: documents.cpp:104
 #, kde-format
 msgctxt "@title"
 msgid "Provisional Standings After Round %1"
 msgstr ""
 
-#: documents.cpp:103
+#: documents.cpp:108
 #, fuzzy, kde-format
 #| msgid "Standings"
 msgctxt "@title"
 msgid "Final Standings"
 msgstr "Rezultāti"
 
-#: documents.cpp:105
+#: documents.cpp:110
 #, fuzzy, kde-format
 #| msgid "Standings"
 msgctxt "@title"
@@ -397,12 +397,12 @@ msgctxt "@label:listbox"
 msgid "Chessament event (*.chessament)"
 msgstr "„Chessament“ ir šaha turnīru pārvaldnieks"
 
-#: qml/Main.qml:71 qml/Main.qml:81
+#: qml/Main.qml:70 qml/Main.qml:80
 msgctxt "@label:listbox"
 msgid "TRF files (*.trf *.txt)"
 msgstr ""
 
-#: qml/Main.qml:108
+#: qml/Main.qml:106
 msgctxt "@title"
 msgid "Error"
 msgstr "Kļūda"
@@ -432,36 +432,36 @@ msgctxt "@label"
 msgid "Number of rounds"
 msgstr "Kārtu skaits"
 
-#: qml/PairingsPage.qml:48
+#: qml/PairingsPage.qml:47
 msgctxt "@option:check"
 msgid "Hide finished games"
 msgstr "Slēpt pabeigtās partijas"
 
-#: qml/PairingsPage.qml:61 qml/PlayersPage.qml:113 qml/StandingsPage.qml:50
+#: qml/PairingsPage.qml:60 qml/PlayersPage.qml:112 qml/StandingsPage.qml:49
 msgctxt "@action:intoolbar"
 msgid "Print…"
 msgstr "Drukāt…"
 
-#: qml/PairingsPage.qml:66 qml/PlayersPage.qml:118 qml/StandingsPage.qml:55
+#: qml/PairingsPage.qml:65 qml/PlayersPage.qml:117 qml/StandingsPage.qml:54
 msgctxt "@action:intoolbar"
 msgid "Export as PDF…"
 msgstr "Eksportēt kā PDF…"
 
-#: qml/PairingsPage.qml:75
+#: qml/PairingsPage.qml:74
 msgid "Round %1"
 msgstr "%1. kārta"
 
-#: qml/PairingsPage.qml:93
+#: qml/PairingsPage.qml:92
 msgctxt "@action:intoolbar"
 msgid "Remove pairings of this and following rounds…"
 msgstr "Noņemt pārus no šīs un turpmākajām kārtām…"
 
-#: qml/PairingsPage.qml:107
+#: qml/PairingsPage.qml:106
 msgctxt "@info"
 msgid "The tournament hasn't started yet."
 msgstr ""
 
-#: qml/PairingsPage.qml:107
+#: qml/PairingsPage.qml:106
 #, fuzzy
 #| msgctxt "@info:placeholder"
 #| msgid "All games of round %1 have finished"
@@ -469,19 +469,19 @@ msgctxt "@info"
 msgid "Round %1 has finished."
 msgstr "Visas %1. kārtas spēles ir pabeigtas"
 
-#: qml/PairingsPage.qml:111
+#: qml/PairingsPage.qml:110
 #, fuzzy
 #| msgid "Pair Round %1"
 msgctxt "@action:button"
 msgid "Pair Round %1…"
 msgstr "Veidot pārus %1. kārtai"
 
-#: qml/PairingsPage.qml:157
+#: qml/PairingsPage.qml:156
 msgctxt "@info:placeholder"
 msgid "No pairings for round %1 yet"
 msgstr "%1. kārtai vēl nav pāru"
 
-#: qml/PairingsPage.qml:159
+#: qml/PairingsPage.qml:158
 msgctxt "@info:placeholder"
 msgid "All games of round %1 have finished"
 msgstr "Visas %1. kārtas spēles ir pabeigtas"
@@ -576,27 +576,27 @@ msgctxt "@info:label"
 msgid "Round %1"
 msgstr "%1. kārta"
 
-#: qml/PlayersPage.qml:97
+#: qml/PlayersPage.qml:96
 msgctxt "@action:intoolbar Open player details"
 msgid "Details…"
 msgstr ""
 
-#: qml/PlayersPage.qml:103
+#: qml/PlayersPage.qml:102
 msgctxt "@action:intoolbar"
 msgid "Sort Players…"
 msgstr "Kārtot spēlētājus…"
 
-#: qml/PlayersPage.qml:124
+#: qml/PlayersPage.qml:123
 msgctxt "@action:intoolbar"
 msgid "Add Player…"
 msgstr "Pievienot spēlētāju…"
 
-#: qml/PlayersPage.qml:135
+#: qml/PlayersPage.qml:134
 msgctxt "@action:inmenu"
 msgid "Open Player Details"
 msgstr ""
 
-#: qml/PlayersPage.qml:232
+#: qml/PlayersPage.qml:231
 #, fuzzy
 #| msgctxt "@info:placeholder"
 #| msgid "No players yet"
@@ -604,17 +604,17 @@ msgctxt "@info:placeholder"
 msgid "No players found"
 msgstr "Spēlētāju vēl nav"
 
-#: qml/PlayersPage.qml:232
+#: qml/PlayersPage.qml:231
 msgctxt "@info:placeholder"
 msgid "No players yet"
 msgstr "Spēlētāju vēl nav"
 
-#: qml/PlayersPage.qml:236
+#: qml/PlayersPage.qml:235
 msgctxt "@action:button"
 msgid "Add Player…"
 msgstr "Pievienot spēlētāju…"
 
-#: qml/PlayersPage.qml:255
+#: qml/PlayersPage.qml:254
 msgctxt "@info:status Number of players"
 msgid "1 player"
 msgid_plural "%1 players"
@@ -622,7 +622,7 @@ msgstr[0] "%1 spēlētājs"
 msgstr[1] "%1 spēlētāji"
 msgstr[2] "%1 spēlētāju"
 
-#: qml/PlayersPage.qml:256
+#: qml/PlayersPage.qml:255
 msgctxt "@info:status Number of rated players"
 msgid "1 rated"
 msgid_plural "%1 rated"
@@ -630,7 +630,7 @@ msgstr[0] "%1 ar reitingu"
 msgstr[1] "%1 ar reitingu"
 msgstr[2] "%1 ar reitingu"
 
-#: qml/PlayersPage.qml:258
+#: qml/PlayersPage.qml:257
 msgctxt "@info:status Total number of players (Number of players rated)"
 msgid "%1 (%2)"
 msgstr ""
@@ -751,21 +751,21 @@ msgstr ""
 "Oficiālos turnīros nav atļauts mainīt sākotnējo reitingu pēc pāru "
 "izveidošanas ceturtajā kārtā."
 
-#: qml/StandingsPage.qml:67 qml/StandingsPage.qml:77
+#: qml/StandingsPage.qml:66 qml/StandingsPage.qml:76
 #, fuzzy
 #| msgid "Standings"
 msgctxt "@item:inlistbox"
 msgid "Final Standings"
 msgstr "Rezultāti"
 
-#: qml/StandingsPage.qml:69 qml/StandingsPage.qml:79
+#: qml/StandingsPage.qml:68 qml/StandingsPage.qml:78
 #, fuzzy
 #| msgid "Pair Round %1"
 msgctxt "@item:inlistbox Standings After Round %1"
 msgid "After Round %1"
 msgstr "Veidot pārus %1. kārtai"
 
-#: qml/StandingsPage.qml:129
+#: qml/StandingsPage.qml:128
 msgctxt "@info:placeholder"
 msgid "No standings yet"
 msgstr "Rezultātu vēl nav"
