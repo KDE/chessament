@@ -33,6 +33,8 @@ public:
     Q_INVOKABLE QCoro::QmlTask importRatingList(const QString &name, const QString &url);
     Q_INVOKABLE QCoro::QmlTask removeList(int row);
 
+    static Q_INVOKABLE bool isValidUrl(const QString &location);
+
 public Q_SLOTS:
     void setStatus(const QString &status);
 

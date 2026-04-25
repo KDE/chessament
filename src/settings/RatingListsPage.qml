@@ -33,6 +33,7 @@ FormCard.FormCardPage {
             Controls.Button {
                 text: KI18n.i18nc("@action:button", "Import")
                 icon.name: "document-import-symbolic"
+                enabled: nameField.text.trim().length > 0 && listsModel.isValidUrl(urlField.editText)
                 Controls.DialogButtonBox.buttonRole: Controls.DialogButtonBox.AcceptRole
             }
         }
@@ -57,7 +58,7 @@ FormCard.FormCardPage {
 
         FormCard.FormComboBoxDelegate {
             id: urlField
-            text: KI18n.i18nc("@info:label", "Rating list URL")
+            text: KI18n.i18nc("@info:label", "Rating list file or URL")
             editable: true
             model: ["https://ratings.fide.com/download/players_list.zip"]
             trailing: Controls.Button {

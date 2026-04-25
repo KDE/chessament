@@ -101,4 +101,18 @@ QCoro::Task<> RatingListModel::remove(int row)
     });
 }
 
+bool RatingListModel::isValidUrl(const QString &location)
+{
+    const auto url = QUrl::fromUserInput(location);
+
+    if (!url.isValid()) {
+        return false;
+    }
+    if (url.scheme() != u"file"_s && url.scheme() != u"https"_s) {
+        return false;
+    }
+
+    return true;
+}
+
 #include "moc_ratinglistmodel.cpp"
