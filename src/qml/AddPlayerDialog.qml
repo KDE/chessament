@@ -29,7 +29,7 @@ QQC2.Dialog {
     bottomPadding: 0
 
     onAccepted: {
-        root.addPlayer(titleField.currentText, nameField.value, ratingField.value, nationalRatingField.value, playerIdField.text, birthDateField.text, federationField.text, originField.text, sexField.text);
+        root.addPlayer(titleField.currentText, nameField.value, ratingField.value, nationalRatingField.value, playerIdField.text, birthDateField.text, federationField.text, originField.text, genderField.text);
     }
 
     header: Kirigami.DialogHeader {
@@ -76,7 +76,7 @@ QQC2.Dialog {
                     birthDateField.text = player.birthDate;
                     federationField.text = player.federation;
                     originField.text = player.origin;
-                    sexField.text = player.gender;
+                    genderField.text = player.gender;
                 }
             }
 
@@ -119,8 +119,8 @@ QQC2.Dialog {
             }
 
             FormCard.FormTextFieldDelegate {
-                id: sexField
-                label: KI18n.i18nc("@label:textbox", "Sex")
+                id: genderField
+                label: KI18n.i18nc("@label:textbox", "Gender")
                 placeholderText: KI18n.i18n("Optional")
             }
         }

@@ -230,7 +230,7 @@ std::expected<void, QString> Tournament::addPlayer(std::unique_ptr<Player> playe
     query.bindValue(u":birthDate"_s, player->birthDate());
     query.bindValue(u":federation"_s, player->federation());
     query.bindValue(u":origin"_s, player->origin());
-    query.bindValue(u":sex"_s, player->sex());
+    query.bindValue(u":gender"_s, player->gender());
     query.bindValue(u":extra"_s, player->extraString());
     query.bindValue(u":tournament"_s, m_id);
 
@@ -283,7 +283,7 @@ void Tournament::savePlayer(Player *player)
     query.bindValue(u":birthDate"_s, player->birthDate());
     query.bindValue(u":federation"_s, player->federation());
     query.bindValue(u":origin"_s, player->origin());
-    query.bindValue(u":sex"_s, player->sex());
+    query.bindValue(u":gender"_s, player->gender());
     query.bindValue(u":extra"_s, player->extraString());
     query.bindValue(u":tournament"_s, m_id);
 
@@ -1279,7 +1279,7 @@ std::expected<void, QString> Tournament::loadPlayers()
     const int birthDateNo = query.record().indexOf("birthDate");
     const int federationNo = query.record().indexOf("federation");
     const int originNo = query.record().indexOf("origin");
-    const int sexNo = query.record().indexOf("sex");
+    const int genderNo = query.record().indexOf("gender");
     const int extraNo = query.record().indexOf("extra");
 
     while (query.next()) {
@@ -1292,7 +1292,7 @@ std::expected<void, QString> Tournament::loadPlayers()
                                                query.value(birthDateNo).toString(),
                                                query.value(federationNo).toString(),
                                                query.value(originNo).toString(),
-                                               query.value(sexNo).toString());
+                                               query.value(genderNo).toString());
         player->setId(query.value(idNo).toString());
         player->setExtra(query.value(extraNo).toByteArray());
         m_players.push_back(std::move(player));

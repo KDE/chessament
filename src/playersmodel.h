@@ -57,7 +57,7 @@ public:
                                const QString &birthDate,
                                const QString &federation,
                                const QString &origin,
-                               const QString &sex);
+                               const QString &gender);
     void updatePlayer(Player *player);
     void reloadPlayers();
 

@@ -24,7 +24,7 @@ Player::Player(int startingRank,
                const QString &birthDate,
                const QString &federation,
                const QString &origin,
-               const QString &sex)
+               const QString &gender)
 {
     setStartingRank(startingRank);
     setTitle(title);
@@ -35,7 +35,7 @@ Player::Player(int startingRank,
     setBirthDate(birthDate);
     setFederation(federation);
     setOrigin(origin);
-    setSex(sex);
+    setGender(gender);
 }
 
 QString Player::id() const
@@ -178,18 +178,18 @@ void Player::setOrigin(const QString &origin)
     Q_EMIT originChanged();
 }
 
-QString Player::sex() const
+QString Player::gender() const
 {
-    return m_sex;
+    return m_gender;
 }
 
-void Player::setSex(const QString &sex)
+void Player::setGender(const QString &gender)
 {
-    if (m_sex == sex) {
+    if (m_gender == gender) {
         return;
     }
-    m_sex = sex;
-    Q_EMIT sexChanged();
+    m_gender = gender;
+    Q_EMIT genderChanged();
 }
 
 QByteArray Player::extraString() const
@@ -222,7 +222,7 @@ QJsonObject Player::toJson() const
     // json[u"birth_date"_s] = m_birthDate;
     json[u"federation"_s] = m_federation;
     json[u"origin"_s] = m_origin;
-    json[u"gender"_s] = m_sex;
+    json[u"gender"_s] = m_gender;
 
     return json;
 }
@@ -258,8 +258,8 @@ std::unique_ptr<Player> Player::fromJson(const QJsonObject &json)
     if (const auto v = json[u"origin"_s]; v.isString()) {
         player->m_origin = v.toString();
     }
-    if (const auto v = json[u"sex"_s]; v.isString()) {
-        player->m_sex = v.toString();
+    if (const auto v = json[u"gender"_s]; v.isString()) {
+        player->m_gender = v.toString();
     }
 
     return player;
@@ -272,7 +272,7 @@ std::string Player::toTrf(double points, int rank, bool normalize)
     auto federation = m_federation;
     auto birth = m_birthDate;
     auto playerid = m_playerId;
-    auto sex = m_sex;
+    auto gender = m_gender;
 
     if (normalize) {
         title = Utils::normalize(title);
@@ -280,12 +280,12 @@ std::string Player::toTrf(double points, int rank, bool normalize)
         federation = Utils::normalize(federation);
         birth = Utils::normalize(birth);
         playerid = Utils::normalize(playerid);
-        sex = Utils::normalize(sex);
+        gender = Utils::normalize(gender);
     }
 
     return std::format("001 {:4} {:1.1}{:3.3} {:33.33} {:4} {:3.3} {:>11} {:10.10} {:4.1f} {:4}",
                        m_startingRank,
-                       sex.toStdString(),
+                       gender.toStdString(),
                        title.toStdString(),
                        name.toStdString(),
                        m_rating,

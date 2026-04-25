@@ -66,7 +66,7 @@ QVariant PlayersModel::data(const QModelIndex &index, int role) const
         case PlayersModel::Columns::Origin:
             return player->origin();
         case PlayersModel::Columns::Gender:
-            return player->sex();
+            return player->gender();
         }
     } else if (role == Qt::EditRole) {
         switch (column) {
@@ -89,7 +89,7 @@ QVariant PlayersModel::data(const QModelIndex &index, int role) const
         case PlayersModel::Columns::Origin:
             return player->origin();
         case PlayersModel::Columns::Gender:
-            return player->sex();
+            return player->gender();
         }
     } else if (role == Qt::TextAlignmentRole) {
         switch (column) {
@@ -158,7 +158,7 @@ bool PlayersModel::setData(const QModelIndex &index, const QVariant &value, int 
         player->setOrigin(value.toString());
         break;
     case PlayersModel::Columns::Gender:
-        player->setSex(value.toString());
+        player->setGender(value.toString());
         break;
     }
 
@@ -209,7 +209,7 @@ QVariant PlayersModel::headerData(int section, Qt::Orientation orientation, int 
     case PlayersModel::Columns::Origin:
         return i18nc("@title:column Player Origin", "Origin");
     case PlayersModel::Columns::Gender:
-        return i18nc("@title:column", "Sex");
+        return i18nc("@title:column Player Gender", "Gender");
     }
     return {};
 }
@@ -239,10 +239,10 @@ void PlayersModel::addPlayer(const QString &title,
                              const QString &birthDate,
                              const QString &federation,
                              const QString &origin,
-                             const QString &sex)
+                             const QString &gender)
 {
     const auto startingRank = m_tournament->numberOfPlayers() + 1;
-    auto player = std::make_unique<Player>(startingRank, title, name, rating, nationalRating, playerId, birthDate, federation, origin, sex);
+    auto player = std::make_unique<Player>(startingRank, title, name, rating, nationalRating, playerId, birthDate, federation, origin, gender);
 
     if (auto ok = m_tournament->addPlayer(std::move(player)); !ok) {
         Q_EMIT errorOcurred(ok.error());

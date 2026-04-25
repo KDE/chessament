@@ -31,7 +31,7 @@ class Player : public QObject
     Q_PROPERTY(QString birthDate READ birthDate WRITE setBirthDate NOTIFY birthDateChanged)
     Q_PROPERTY(QString federation READ federation WRITE setFederation NOTIFY federationChanged)
     Q_PROPERTY(QString origin READ origin WRITE setOrigin NOTIFY originChanged)
-    Q_PROPERTY(QString sex READ sex WRITE setSex NOTIFY sexChanged)
+    Q_PROPERTY(QString gender READ gender WRITE setGender NOTIFY genderChanged)
 
 public:
     /*!
@@ -157,7 +157,7 @@ public:
                     const QString &birthDate,
                     const QString &federation,
                     const QString &origin,
-                    const QString &sex);
+                    const QString &gender);
 
     /*!
      * \property Player::id
@@ -240,12 +240,12 @@ public:
     [[nodiscard]] QString origin() const;
 
     /*!
-     * \property Player::sex
-     * \brief the sex of the player
+     * \property Player::gender
+     * \brief the gender of the player
      *
-     * This property holds the sex of the player.
+     * This property holds the gender of the player.
      */
-    [[nodiscard]] QString sex() const;
+    [[nodiscard]] QString gender() const;
 
     [[nodiscard]] QByteArray extraString() const;
 
@@ -291,7 +291,7 @@ public Q_SLOTS:
     void setBirthDate(const QString &birthDate);
     void setFederation(const QString &federation);
     void setOrigin(const QString &origin);
-    void setSex(const QString &sex);
+    void setGender(const QString &gender);
     void setExtra(const QByteArray &extra);
 
 Q_SIGNALS:
@@ -305,7 +305,7 @@ Q_SIGNALS:
     void birthDateChanged();
     void federationChanged();
     void originChanged();
-    void sexChanged();
+    void genderChanged();
 
 private:
     QString m_id;
@@ -318,6 +318,6 @@ private:
     QString m_birthDate;
     QString m_federation;
     QString m_origin;
-    QString m_sex;
+    QString m_gender;
     QJsonObject m_extra;
 };
