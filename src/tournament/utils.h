@@ -12,4 +12,6 @@ namespace Utils
 QString normalize(const QString &text);
 
 QUrl maybeAddExtension(const QUrl &fileUrl, const QString &extension);
+
+QString userAgent();
 }

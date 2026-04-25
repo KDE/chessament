@@ -23,6 +23,7 @@
 #include "fidereader.h"
 #include "htmlreader.h"
 #include "reader.h"
+#include "utils.h"
 
 using namespace Qt::StringLiterals;
 
@@ -154,8 +155,7 @@ QCoro::Task<std::expected<void, QString>> RatingList::import(const QString &name
         QNetworkAccessManager manager;
 
         QNetworkRequest request{url};
-        const QString userAgent = "Chessament/"_L1 + QCoreApplication::applicationVersion() + " (+https://apps.kde.org/chessament/)"_L1;
-        request.setHeader(QNetworkRequest::UserAgentHeader, userAgent);
+        request.setHeader(QNetworkRequest::UserAgentHeader, Utils::userAgent());
 
         Q_EMIT statusChanged(i18nc("@info:progress", "Downloading file"));
 

@@ -3,6 +3,7 @@
 
 #include "utils.h"
 
+#include <QCoreApplication>
 #include <QRegularExpression>
 
 using namespace Qt::StringLiterals;
@@ -22,5 +23,11 @@ QUrl maybeAddExtension(const QUrl &fileUrl, const QString &extension)
         result.setPath(fileUrl.path() + extension);
     }
     return result;
+}
+
+QString userAgent()
+{
+    static QString userAgent = u"Chessament/"_s % QCoreApplication::applicationVersion() % u" (+https://apps.kde.org/chessament/;)"_s;
+    return userAgent;
 }
 }
