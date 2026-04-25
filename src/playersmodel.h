@@ -62,7 +62,7 @@ public:
     void reloadPlayers();
 
 Q_SIGNALS:
-    void playerChanged(Player *player, Columns field);
+    void playerChanged(Player *player, PlayersModel::Columns field);
 
     void errorOcurred(const QString &error);
 

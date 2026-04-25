@@ -250,7 +250,7 @@ void PlayersModel::addPlayer(const QString &title,
     }
 
     beginInsertRows({}, static_cast<int>(m_players.size()), static_cast<int>(m_players.size()));
-    m_players << m_tournament->players().last();
+    m_players << m_tournament->players().constLast();
     endInsertRows();
 }
 

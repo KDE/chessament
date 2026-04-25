@@ -49,7 +49,8 @@ double Buchholz::calculate(Tournament *tournament, State state, QList<Player *> 
     std::vector<double> contributions;
     std::vector<double> vurContributions;
 
-    for (const auto &pairing : state.pairings(player)) {
+    const auto pairings = state.pairings(player);
+    for (const auto &pairing : pairings) {
         double p;
 
         const auto opponent = pairing->opponent(player);

@@ -25,7 +25,7 @@ void RoundModel::setTournament(Tournament *tournament)
     m_tournament = tournament;
     endResetModel();
 
-    connect(m_tournament, &Tournament::numberOfRoundsChanged, [this]() {
+    connect(m_tournament, &Tournament::numberOfRoundsChanged, this, [this]() {
         beginResetModel();
         endResetModel();
     });

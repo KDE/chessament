@@ -8,7 +8,6 @@
 #include <QCoroFuture>
 #include <QCoroNetworkReply>
 #include <QRestReply>
-#include <QtConcurrent>
 
 #include "account.h"
 #include "tournament.h"

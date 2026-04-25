@@ -11,7 +11,6 @@ HtmlRatingListReader::HtmlRatingListReader(RatingList *list)
 
 std::expected<uint, QString> HtmlRatingListReader::readPlayers(QTextStream *stream)
 {
-    QString line;
     uint count{0};
     QList<RatingListPlayer> players{};
 

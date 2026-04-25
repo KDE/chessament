@@ -13,7 +13,7 @@
 #include <QCoroFuture>
 #include <QDesktopServices>
 #include <QRandomGenerator>
-#include <QtConcurrent>
+#include <QtConcurrentRun>
 
 using namespace Qt::Literals::StringLiterals;
 

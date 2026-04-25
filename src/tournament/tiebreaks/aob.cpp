@@ -18,7 +18,8 @@ double AverageBuchholzOfOpponents::calculate(Tournament *tournament, State state
         }
 
         double result = 0.;
-        for (const auto pairing : state.pairings(p)) {
+        const auto pairings = state.pairings(p);
+        for (const auto pairing : pairings) {
             const auto opponent = pairing->opponent(p);
 
             // Handle unplayed rounds of player
@@ -37,7 +38,8 @@ double AverageBuchholzOfOpponents::calculate(Tournament *tournament, State state
     double result = 0.;
     int count = 0;
 
-    for (const auto &pairing : state.pairings(player)) {
+    const auto pairings = state.pairings(player);
+    for (const auto &pairing : pairings) {
         const auto opponent = pairing->opponent(player);
 
         if (!Pairing::isUnplayed(pairing->whiteResult())) {

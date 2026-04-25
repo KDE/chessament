@@ -11,7 +11,8 @@ double NumberOfGamesPlayedWithBlack::calculate(Tournament *tournament, State sta
 
     int result = 0;
 
-    for (const auto &pairing : state.pairings(player)) {
+    const auto pairings = state.pairings(player);
+    for (const auto &pairing : pairings) {
         if (pairing->colorOfPlayer(player) == Pairing::Color::Black && !Pairing::isUnplayed(pairing->resultOfPlayer(player))) {
             ++result;
         }

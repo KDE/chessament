@@ -5,7 +5,7 @@
 
 #include <KLocalizedString>
 #include <QCoroFuture>
-#include <QtConcurrent>
+#include <QtConcurrentRun>
 
 RatingListModel::RatingListModel(QObject *parent)
     : QAbstractListModel(parent)

@@ -23,7 +23,8 @@ AccountManager::AccountManager()
 void AccountManager::loadAccounts()
 {
     auto config = KSharedConfig::openStateConfig();
-    for (const auto &id : config->groupList()) {
+    const auto groups = config->groupList();
+    for (const auto &id : groups) {
         if (!id.startsWith("Account-"_L1)) {
             continue;
         }

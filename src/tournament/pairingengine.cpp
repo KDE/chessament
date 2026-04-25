@@ -67,9 +67,9 @@ QCoro::Task<std::expected<QList<std::pair<uint, uint>>, QString>> PairingEngine:
 
     const auto output = QString::fromUtf8(process.readAll());
     std::cout << output.toStdString();
-    const auto lines = output.split(u'\n');
+    const auto lines = output.split(u'\n').mid(1);
 
-    for (const auto &line : lines.mid(1)) {
+    for (const auto &line : lines) {
         if (line.isEmpty()) {
             continue;
         }

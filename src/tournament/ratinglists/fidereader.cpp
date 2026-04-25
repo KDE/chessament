@@ -68,20 +68,19 @@ std::expected<uint, QString> FideRatingListReader::readPlayers(QTextStream *stre
             continue;
         }
 
-        QJsonObject extraJson;
+        QJsonObject extra;
         if (sk != 0) {
-            extraJson["sk"_L1] = sk;
+            extra["sk"_L1] = sk;
         }
         if (rk != 0) {
-            extraJson["rk"_L1] = rk;
+            extra["rk"_L1] = rk;
         }
         if (bk != 0) {
-            extraJson["bk"_L1] = bk;
+            extra["bk"_L1] = bk;
         }
         if (!otherTitles.empty()) {
-            extraJson["other_titles"_L1] = QJsonValue::fromVariant(otherTitles);
+            extra["other_titles"_L1] = QJsonValue::fromVariant(otherTitles);
         }
-        const auto extra = QJsonDocument{extraJson}.toJson(QJsonDocument::Compact);
 
         const auto birthdate = line.sliced(152, 4).toInt(&ok);
         if (!ok) {
@@ -100,7 +99,7 @@ std::expected<uint, QString> FideRatingListReader::readPlayers(QTextStream *stre
             .blitzRating = blitzRating,
             .nationalId = QString(),
             .nationalRating = 0,
-            .extra = extraJson,
+            .extra = extra,
         };
 
         ++count;

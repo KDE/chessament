@@ -359,7 +359,7 @@ QMap<QString, Player *> Tournament::playersById()
 
 QHash<Player *, QList<Pairing *>> Tournament::pairingsByPlayer(int maxRound)
 {
-    QHash<Player *, QList<Pairing *>> pairings;
+    QHash<Player *, QList<Pairing *>> result;
 
     const auto r = maxRound < 0 ? m_rounds.size() : maxRound;
     for (std::size_t i = 0; i < r; i++) {
@@ -367,15 +367,16 @@ QHash<Player *, QList<Pairing *>> Tournament::pairingsByPlayer(int maxRound)
             break;
         }
         const auto round = m_rounds.at(i).get();
-        for (const auto &pairing : round->pairings()) {
-            pairings[pairing->whitePlayer()] << pairing;
+        const auto pairings = round->pairings();
+        for (const auto &pairing : pairings) {
+            result[pairing->whitePlayer()] << pairing;
             if (pairing->blackPlayer() != nullptr) {
-                pairings[pairing->blackPlayer()] << pairing;
+                result[pairing->blackPlayer()] << pairing;
             }
         }
     }
 
-    return pairings;
+    return result;
 }
 
 QList<Pairing *> Tournament::pairingsOfPlayer(Player *player)
@@ -390,7 +391,8 @@ QList<Pairing *> Tournament::pairingsOfPlayer(Player *player)
 
         Pairing *p = nullptr;
         const auto &round = m_rounds.at(i);
-        for (const auto &pairing : round->pairings()) {
+        const auto pairings = round->pairings();
+        for (const auto &pairing : pairings) {
             if (pairing->whitePlayer() == player || pairing->blackPlayer() == player) {
                 p = pairing;
             }
@@ -741,7 +743,8 @@ QList<Player *> Tournament::voluntaryByes(int round) const
 
     QList<Player *> result{};
 
-    for (const auto p : pairings(round)) {
+    const auto pairs = pairings(round);
+    for (const auto p : pairs) {
         if (Pairing::isVoluntaryBye(p->whiteResult())) {
             result << p->whitePlayer();
         }
@@ -1383,7 +1386,8 @@ std::expected<void, QString> Tournament::loadTiebreaks()
     if (const auto tbs = json["tiebreaks"_L1]; tbs.isArray()) {
         m_tiebreaks.clear();
 
-        for (const auto value : tbs.toArray()) {
+        const auto values = tbs.toArray();
+        for (const auto value : values) {
             const auto obj = value.toObject();
             const auto id = obj["id"_L1].toString();
 

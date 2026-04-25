@@ -8,13 +8,14 @@
 #include <QCoroFuture>
 #include <QCoroNetworkReply>
 #include <QDir>
+#include <QMimeDatabase>
 #include <QNetworkAccessManager>
 #include <QSqlError>
 #include <QSqlQuery>
 #include <QSqlRecord>
 #include <QStandardPaths>
 #include <QTemporaryFile>
-#include <QtConcurrent>
+#include <QtConcurrentRun>
 
 #include <KLocalizedString>
 #include <KZip>
