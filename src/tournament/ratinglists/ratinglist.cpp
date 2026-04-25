@@ -87,11 +87,11 @@ std::vector<std::unique_ptr<RatingList>> RatingList::lists()
             return {};
         }
 
-        int idNo = query.record().indexOf("id");
-        int nameNo = query.record().indexOf("name");
-        int urlNo = query.record().indexOf("url");
-        int etagNo = query.record().indexOf("etag");
-        int lastModifiedNo = query.record().indexOf("lastmodified");
+        const int idNo = query.record().indexOf("id");
+        const int nameNo = query.record().indexOf("name");
+        const int urlNo = query.record().indexOf("url");
+        const int etagNo = query.record().indexOf("etag");
+        const int lastModifiedNo = query.record().indexOf("lastmodified");
 
         while (query.next()) {
             auto list = std::make_unique<RatingList>();
@@ -247,8 +247,6 @@ std::expected<uint, QString> RatingList::processFile(QByteArray content, const Q
 
 std::expected<uint, QString> RatingList::readPlayers(QTextStream *stream, std::unique_ptr<RatingListReader> reader)
 {
-    QString line;
-
     auto db = getDB();
     if (!db) {
         return std::unexpected(db.error());
@@ -327,18 +325,18 @@ std::expected<QList<RatingListPlayer>, QString> RatingList::searchPlayers(const 
         return std::unexpected(query.lastError().text());
     }
 
-    int idNo = query.record().indexOf("playerid");
-    int nameNo = query.record().indexOf("name");
-    int federationNo = query.record().indexOf("federation");
-    int genderNo = query.record().indexOf("gender");
-    int titleNo = query.record().indexOf("title");
-    int birthDayNo = query.record().indexOf("birthday");
-    int standardNo = query.record().indexOf("standard");
-    int rapidNo = query.record().indexOf("rapid");
-    int blitzNo = query.record().indexOf("blitz");
-    int nationalIdNo = query.record().indexOf("nationalid");
-    int nationalRatingNo = query.record().indexOf("nationalrating");
-    int extraNo = query.record().indexOf("extra");
+    const int idNo = query.record().indexOf("playerid");
+    const int nameNo = query.record().indexOf("name");
+    const int federationNo = query.record().indexOf("federation");
+    const int genderNo = query.record().indexOf("gender");
+    const int titleNo = query.record().indexOf("title");
+    const int birthDayNo = query.record().indexOf("birthday");
+    const int standardNo = query.record().indexOf("standard");
+    const int rapidNo = query.record().indexOf("rapid");
+    const int blitzNo = query.record().indexOf("blitz");
+    const int nationalIdNo = query.record().indexOf("nationalid");
+    const int nationalRatingNo = query.record().indexOf("nationalrating");
+    const int extraNo = query.record().indexOf("extra");
 
     while (query.next()) {
         const auto id = query.value(idNo).toString();
