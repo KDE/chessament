@@ -1,0 +1,23 @@
+# SPDX-License-Identifier: CC0-1.0
+# SPDX-FileCopyrightText: 2023 Volker Krause <vkrause@kde.org>
+# SPDX-FileCopyrightText: 2026 Manuel Alcaraz Zambrano <manuel@alcarazzam.dev>
+
+# we use the Breeze style
+QtQuick/Controls/(FluentWinUI3|Fusion|Imagine|Material|Universal|Windows)/.*
+org/kde/kirigami/styles/Material/.*
+
+# other KF6 data files we don't need
+data/mime/packages/kde6\.xml
+data/kf6/jsonschema/.*
+data/kf6/searchproviders/.*
+
+# templates
+data/kdevappwizard/.*
+
+# unused translation catalogs
+data/locale/.*/kf6_entry.desktop
+data/locale/.*/LC_MESSAGES/(kitemviews6|kwidgetsaddons6)_qt\.qm
+data/locale/.*/LC_MESSAGES/breeze_.*\.mo
+data/locale/.*/LC_MESSAGES/kconfigwidgets6\.mo
+translations/(assistant|designer|linguist|qt_help|qtconnectivity|qtdeclarative|qtlocation|qtmultimedia|qtserialport|qtwebengine|qtwebsockets)_.*\.qm
+
