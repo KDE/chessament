@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-25 00:41+0000\n"
+"POT-Creation-Date: 2026-04-26 00:40+0000\n"
 "PO-Revision-Date: 2026-02-08 00:23+0100\n"
 "Last-Translator: Manuel Alcaraz Zambrano <manuelalcarazzam@gmail.com>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -247,9 +247,9 @@ msgstr "Origen"
 
 #: playersmodel.cpp:212
 #, kde-format
-msgctxt "@title:column"
-msgid "Sex"
-msgstr "Sexo"
+msgctxt "@title:column Player Gender"
+msgid "Gender"
+msgstr ""
 
 #: qml/AddPlayerDialog.qml:19
 msgctxt "@title:window"
@@ -304,8 +304,8 @@ msgstr "Origen"
 
 #: qml/AddPlayerDialog.qml:123
 msgctxt "@label:textbox"
-msgid "Sex"
-msgstr "Sexo"
+msgid "Gender"
+msgstr ""
 
 #: qml/AddTiebreakDialog.qml:20
 msgctxt "@title:window"
@@ -949,62 +949,70 @@ msgctxt "@option:check"
 msgid "Automatically open exported PDF files"
 msgstr ""
 
-#: settings/RatingListsPage.qml:22 settings/RatingListsPage.qml:128
+#: settings/RatingListsPage.qml:24 settings/RatingListsPage.qml:138
 msgctxt "@title"
 msgid "Rating Lists"
 msgstr "Listas de valoración"
 
-#: settings/RatingListsPage.qml:27
+#: settings/RatingListsPage.qml:29
 msgctxt "@title:window"
 msgid "Add Rating List"
 msgstr "Añadir lista de valoración"
 
-#: settings/RatingListsPage.qml:32
+#: settings/RatingListsPage.qml:34
 msgctxt "@action:button"
 msgid "Import"
 msgstr "Importar"
 
-#: settings/RatingListsPage.qml:47
+#: settings/RatingListsPage.qml:56
 msgctxt "@info:label"
 msgid "Name"
 msgstr "Nombre"
 
-#: settings/RatingListsPage.qml:52
+#: settings/RatingListsPage.qml:61
+#, fuzzy
+#| msgctxt "@info:label"
+#| msgid "Rating list URL"
 msgctxt "@info:label"
-msgid "Rating list URL"
+msgid "Rating list file or URL"
 msgstr "URL de la lista de valoración"
 
-#: settings/RatingListsPage.qml:72
+#: settings/RatingListsPage.qml:66
+msgctxt "@action:button"
+msgid "Select file"
+msgstr ""
+
+#: settings/RatingListsPage.qml:82
 msgctxt "@title:window"
 msgid "Importing Rating List"
 msgstr "Importando lista de valoración"
 
-#: settings/RatingListsPage.qml:112
+#: settings/RatingListsPage.qml:122
 msgctxt "@title"
 msgid "Delete Rating List"
 msgstr "Eliminar lista de valoración"
 
-#: settings/RatingListsPage.qml:120
+#: settings/RatingListsPage.qml:130
 msgctxt "@action:button Delete Rating List"
 msgid "Delete"
 msgstr "Eliminar"
 
-#: settings/RatingListsPage.qml:133
+#: settings/RatingListsPage.qml:143
 msgctxt "@info:status"
 msgid "No rating lists yet."
 msgstr "No hay listas de valoración todavía."
 
-#: settings/RatingListsPage.qml:153
+#: settings/RatingListsPage.qml:163
 msgctxt "@action:button"
 msgid "Delete Rating List"
 msgstr "Eliminar lista de valoración"
 
-#: settings/RatingListsPage.qml:161
+#: settings/RatingListsPage.qml:171
 msgctxt "@action:button"
 msgid "Delete rating list"
 msgstr "Eliminar lista de valoración"
 
-#: settings/RatingListsPage.qml:171
+#: settings/RatingListsPage.qml:181
 msgctxt "@action:button"
 msgid "Add rating list"
 msgstr "Añadir lista de valoración"
@@ -1054,37 +1062,59 @@ msgctxt "bbpPairings is the name of a program, should not be translated"
 msgid "bbpPairings terminated with a non zero exit code: %1"
 msgstr "bbpPairings finalizó con un código de salida distinto de cero: %1"
 
-#: tournament/pairingengine.cpp:79 tournament/trf/reader.cpp:234
+#: tournament/pairingengine.cpp:79 tournament/trf/reader.cpp:235
 #, kde-format
 msgid "Invalid pairing \"%1\"."
 msgstr "Emparejamiento «%1» no válido."
 
 #: tournament/pairingengine.cpp:85 tournament/pairingengine.cpp:89
 #: tournament/pairingengine.cpp:93 tournament/pairingengine.cpp:97
-#: tournament/trf/reader.cpp:247
+#: tournament/trf/reader.cpp:248
 #, kde-format
 msgid "Invalid player \"%1\" on pairing \"%2\"."
 msgstr "Jugador «%1» no válido para el emparejamiento «%2»."
 
-#: tournament/ratinglists/ratinglist.cpp:136
+#: tournament/ratinglists/ratinglist.cpp:132
+#: tournament/ratinglists/ratinglist.cpp:149
+#, fuzzy, kde-format
+#| msgid "Couldn't open file"
+msgctxt "@info"
+msgid "Could not open file."
+msgstr "No se ha podido abrir el archivo"
+
+#: tournament/ratinglists/ratinglist.cpp:144
+#, kde-format
+msgctxt "@info"
+msgid "Could not open file: the file does not exists."
+msgstr ""
+
+#: tournament/ratinglists/ratinglist.cpp:161
 #, kde-format
 msgctxt "@info:progress"
 msgid "Downloading file"
 msgstr "Descargando archivo"
 
-#: tournament/ratinglists/ratinglist.cpp:146
+#: tournament/ratinglists/ratinglist.cpp:171
 #, kde-format
 msgctxt "@info:progress"
 msgid "Downloading file (%1 %)"
 msgstr "Descargando archivo (%1 %)"
 
-#: tournament/ratinglists/ratinglist.cpp:152
+#: tournament/ratinglists/ratinglist.cpp:177
 #, kde-format
 msgctxt "@info"
 msgid "Couldn't download rating list: %1"
 msgstr "No se pudo descargar la lista de valoración: %1"
 
-#: tournament/ratinglists/ratinglist.cpp:174
+#: tournament/ratinglists/ratinglist.cpp:189
+#, fuzzy, kde-format
+#| msgctxt "@info"
+#| msgid "Couldn't download rating list: %1"
+msgctxt "@info"
+msgid "Could not download rating list from %1 (unsupported protocol)."
+msgstr "No se pudo descargar la lista de valoración: %1"
+
+#: tournament/ratinglists/ratinglist.cpp:202
 #, kde-format
 msgctxt "@info:progress"
 msgid "Imported one player."
@@ -1092,19 +1122,19 @@ msgid_plural "Imported %1 players."
 msgstr[0] "Se importó un jugador."
 msgstr[1] "Se importaron %1 jugadores."
 
-#: tournament/ratinglists/ratinglist.cpp:190
+#: tournament/ratinglists/ratinglist.cpp:218
 #, kde-format
 msgctxt "@info"
 msgid "Couldn't extract file."
 msgstr "No se ha podido extraer el archivo."
 
-#: tournament/ratinglists/ratinglist.cpp:195
+#: tournament/ratinglists/ratinglist.cpp:223
 #, kde-format
 msgctxt "@info"
 msgid "File format not supported."
 msgstr "Formato del archivo no admitido."
 
-#: tournament/ratinglists/ratinglist.cpp:416
+#: tournament/ratinglists/ratinglist.cpp:442
 #, kde-format
 msgctxt "@info:progress"
 msgid "Saved 1 player."
@@ -1112,7 +1142,7 @@ msgid_plural "Saved %1 players."
 msgstr[0] "Se guardó 1 jugador."
 msgstr[1] "Se guardaron %1 jugadores."
 
-#: tournament/tiebreaks/aob.h:23 tournament/tournament.cpp:506
+#: tournament/tiebreaks/aob.h:23 tournament/tournament.cpp:508
 #, kde-format
 msgctxt "Tiebreak"
 msgid "Average Buchholz of Opponents"
@@ -1130,7 +1160,7 @@ msgctxt "@info"
 msgid "Unsupported tiebreak option \"%1\""
 msgstr "Opción «%1» del desempate no admitida."
 
-#: tournament/tiebreaks/buchholz.h:25 tournament/tournament.cpp:488
+#: tournament/tiebreaks/buchholz.h:25 tournament/tournament.cpp:490
 #, kde-format
 msgctxt "Buchholz tiebreak"
 msgid "Buchholz"
@@ -1144,13 +1174,13 @@ msgctxt "Buchholz N tiebreak, N is a number < 0"
 msgid "Buchholz %1"
 msgstr "Buchholz"
 
-#: tournament/tiebreaks/numberwins.h:22 tournament/tournament.cpp:492
+#: tournament/tiebreaks/numberwins.h:22 tournament/tournament.cpp:494
 #, kde-format
 msgctxt "Number of Wins tiebreak"
 msgid "Number of Wins"
 msgstr "Número de victorias"
 
-#: tournament/tiebreaks/playedblack.h:22 tournament/tournament.cpp:502
+#: tournament/tiebreaks/playedblack.h:22 tournament/tournament.cpp:504
 #, fuzzy, kde-format
 #| msgctxt "Number of Games Played with Black tiebreak"
 #| msgid "Number of Games Played with Black"
@@ -1159,13 +1189,13 @@ msgid "Number of Games Played with Black (over the board)"
 msgstr "Número de partidas jugadas con negras"
 
 #: tournament/tiebreaks/points.h:22 tournament/tiebreaks/points.h:27
-#: tournament/tournament.cpp:484
+#: tournament/tournament.cpp:486
 #, kde-format
 msgctxt "Game points"
 msgid "Points"
 msgstr "Puntos"
 
-#: tournament/tiebreaks/won.h:23 tournament/tournament.cpp:498
+#: tournament/tiebreaks/won.h:23 tournament/tournament.cpp:500
 #, fuzzy, kde-format
 #| msgctxt "Number of Games Won tiebreak"
 #| msgid "Number of Games Won"
@@ -1175,12 +1205,12 @@ msgctxt ""
 msgid "Number of Games Won (over the board)"
 msgstr "Número de partidas ganadas"
 
-#: tournament/tournament.cpp:940
+#: tournament/tournament.cpp:943
 #, kde-format
 msgid "An error ocurred while pairing the round: %1"
 msgstr "Ocurrió un error mientras se emparejaba la ronda: %1"
 
-#: tournament/tournament.cpp:1160
+#: tournament/tournament.cpp:1163
 #, kde-format
 msgid "Couldn't open file"
 msgstr "No se ha podido abrir el archivo"
@@ -1195,21 +1225,29 @@ msgstr "No se encuentra el jugador %1."
 msgid "Unknown result on pairing \"%1\" with \"%2\"."
 msgstr "Resultado desconocido en el emparejamiento de «%1» con «%2»."
 
-#: tournament/trf/reader.cpp:180
+#: tournament/trf/reader.cpp:181
 #, kde-format
 msgctxt "@info"
 msgid "Date \"%1\" is invalid."
 msgstr "La fecha «%1» no es válida."
 
-#: tournament/trf/reader.cpp:254
+#: tournament/trf/reader.cpp:255
 #, kde-format
 msgid "Unknown result \"%1\" on pairing \"%2\"."
 msgstr "Resultado «%1» desconocido en el emparejamiento «%2»."
 
-#: tournament/trf/reader.cpp:257
+#: tournament/trf/reader.cpp:258
 #, kde-format
 msgid "Pairing \"%1\" has no opponent."
 msgstr "El emparejamiento «%1» no tiene oponente."
+
+#~ msgctxt "@title:column"
+#~ msgid "Sex"
+#~ msgstr "Sexo"
+
+#~ msgctxt "@label:textbox"
+#~ msgid "Sex"
+#~ msgstr "Sexo"
 
 #~ msgctxt "@action:button"
 #~ msgid "Connect Account"

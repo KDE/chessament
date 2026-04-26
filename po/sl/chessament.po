@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-25 00:41+0000\n"
+"POT-Creation-Date: 2026-04-26 00:40+0000\n"
 "PO-Revision-Date: 2026-04-20 07:54+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -241,9 +241,9 @@ msgstr "Izvor"
 
 #: playersmodel.cpp:212
 #, kde-format
-msgctxt "@title:column"
-msgid "Sex"
-msgstr "Spol"
+msgctxt "@title:column Player Gender"
+msgid "Gender"
+msgstr ""
 
 #: qml/AddPlayerDialog.qml:19
 msgctxt "@title:window"
@@ -298,8 +298,8 @@ msgstr "Izvor"
 
 #: qml/AddPlayerDialog.qml:123
 msgctxt "@label:textbox"
-msgid "Sex"
-msgstr "Spol"
+msgid "Gender"
+msgstr ""
 
 #: qml/AddTiebreakDialog.qml:20
 msgctxt "@title:window"
@@ -920,62 +920,70 @@ msgctxt "@option:check"
 msgid "Automatically open exported PDF files"
 msgstr "Samodejno odpri izvožene datoteke PDF"
 
-#: settings/RatingListsPage.qml:22 settings/RatingListsPage.qml:128
+#: settings/RatingListsPage.qml:24 settings/RatingListsPage.qml:138
 msgctxt "@title"
 msgid "Rating Lists"
 msgstr "Seznami ratingov"
 
-#: settings/RatingListsPage.qml:27
+#: settings/RatingListsPage.qml:29
 msgctxt "@title:window"
 msgid "Add Rating List"
 msgstr "Dodaj seznam ratingov"
 
-#: settings/RatingListsPage.qml:32
+#: settings/RatingListsPage.qml:34
 msgctxt "@action:button"
 msgid "Import"
 msgstr "Uvozi"
 
-#: settings/RatingListsPage.qml:47
+#: settings/RatingListsPage.qml:56
 msgctxt "@info:label"
 msgid "Name"
 msgstr "Ime"
 
-#: settings/RatingListsPage.qml:52
+#: settings/RatingListsPage.qml:61
+#, fuzzy
+#| msgctxt "@info:label"
+#| msgid "Rating list URL"
 msgctxt "@info:label"
-msgid "Rating list URL"
+msgid "Rating list file or URL"
 msgstr "URL seznama ratingov"
 
-#: settings/RatingListsPage.qml:72
+#: settings/RatingListsPage.qml:66
+msgctxt "@action:button"
+msgid "Select file"
+msgstr ""
+
+#: settings/RatingListsPage.qml:82
 msgctxt "@title:window"
 msgid "Importing Rating List"
 msgstr "Uvažanje seznama ratingov"
 
-#: settings/RatingListsPage.qml:112
+#: settings/RatingListsPage.qml:122
 msgctxt "@title"
 msgid "Delete Rating List"
 msgstr "Zbriši seznam ratingov"
 
-#: settings/RatingListsPage.qml:120
+#: settings/RatingListsPage.qml:130
 msgctxt "@action:button Delete Rating List"
 msgid "Delete"
 msgstr "Zbriši"
 
-#: settings/RatingListsPage.qml:133
+#: settings/RatingListsPage.qml:143
 msgctxt "@info:status"
 msgid "No rating lists yet."
 msgstr "Še ni seznamov ratingov."
 
-#: settings/RatingListsPage.qml:153
+#: settings/RatingListsPage.qml:163
 msgctxt "@action:button"
 msgid "Delete Rating List"
 msgstr "Zbriši seznam ratingov"
 
-#: settings/RatingListsPage.qml:161
+#: settings/RatingListsPage.qml:171
 msgctxt "@action:button"
 msgid "Delete rating list"
 msgstr "Zbriši seznam ratingov"
 
-#: settings/RatingListsPage.qml:171
+#: settings/RatingListsPage.qml:181
 msgctxt "@action:button"
 msgid "Add rating list"
 msgstr "Dodaj seznam ratingov"
@@ -1025,37 +1033,59 @@ msgctxt "bbpPairings is the name of a program, should not be translated"
 msgid "bbpPairings terminated with a non zero exit code: %1"
 msgstr "bbpPairings se je končal z neničelno kodo izhoda: %1"
 
-#: tournament/pairingengine.cpp:79 tournament/trf/reader.cpp:234
+#: tournament/pairingengine.cpp:79 tournament/trf/reader.cpp:235
 #, kde-format
 msgid "Invalid pairing \"%1\"."
 msgstr "Neveljaven par \"%1\"."
 
 #: tournament/pairingengine.cpp:85 tournament/pairingengine.cpp:89
 #: tournament/pairingengine.cpp:93 tournament/pairingengine.cpp:97
-#: tournament/trf/reader.cpp:247
+#: tournament/trf/reader.cpp:248
 #, kde-format
 msgid "Invalid player \"%1\" on pairing \"%2\"."
 msgstr "Neveljaven igralec \"%1\" v paru \"%2\"."
 
-#: tournament/ratinglists/ratinglist.cpp:136
+#: tournament/ratinglists/ratinglist.cpp:132
+#: tournament/ratinglists/ratinglist.cpp:149
+#, fuzzy, kde-format
+#| msgid "Couldn't open file"
+msgctxt "@info"
+msgid "Could not open file."
+msgstr "Datoteke ni bilo mogoče odpreti"
+
+#: tournament/ratinglists/ratinglist.cpp:144
+#, kde-format
+msgctxt "@info"
+msgid "Could not open file: the file does not exists."
+msgstr ""
+
+#: tournament/ratinglists/ratinglist.cpp:161
 #, kde-format
 msgctxt "@info:progress"
 msgid "Downloading file"
 msgstr "Prenašanje datoteke"
 
-#: tournament/ratinglists/ratinglist.cpp:146
+#: tournament/ratinglists/ratinglist.cpp:171
 #, kde-format
 msgctxt "@info:progress"
 msgid "Downloading file (%1 %)"
 msgstr "Prenašanje datoteke (%1 %)"
 
-#: tournament/ratinglists/ratinglist.cpp:152
+#: tournament/ratinglists/ratinglist.cpp:177
 #, kde-format
 msgctxt "@info"
 msgid "Couldn't download rating list: %1"
 msgstr "Ni bilo mogoče prenesti seznama ratingov: %1"
 
-#: tournament/ratinglists/ratinglist.cpp:174
+#: tournament/ratinglists/ratinglist.cpp:189
+#, fuzzy, kde-format
+#| msgctxt "@info"
+#| msgid "Couldn't download rating list: %1"
+msgctxt "@info"
+msgid "Could not download rating list from %1 (unsupported protocol)."
+msgstr "Ni bilo mogoče prenesti seznama ratingov: %1"
+
+#: tournament/ratinglists/ratinglist.cpp:202
 #, kde-format
 msgctxt "@info:progress"
 msgid "Imported one player."
@@ -1065,19 +1095,19 @@ msgstr[1] "Uvožen %1 igralec."
 msgstr[2] "Uvožena %1 igralca."
 msgstr[3] "Uvoženi %1 igralci."
 
-#: tournament/ratinglists/ratinglist.cpp:190
+#: tournament/ratinglists/ratinglist.cpp:218
 #, kde-format
 msgctxt "@info"
 msgid "Couldn't extract file."
 msgstr "Datoteke ni bilo mogoče izvleči datoteke."
 
-#: tournament/ratinglists/ratinglist.cpp:195
+#: tournament/ratinglists/ratinglist.cpp:223
 #, kde-format
 msgctxt "@info"
 msgid "File format not supported."
 msgstr "Format datoteke ni podprt."
 
-#: tournament/ratinglists/ratinglist.cpp:416
+#: tournament/ratinglists/ratinglist.cpp:442
 #, kde-format
 msgctxt "@info:progress"
 msgid "Saved 1 player."
@@ -1087,7 +1117,7 @@ msgstr[1] "Shranjen %1 igralec."
 msgstr[2] "Shranjena %1 igralca."
 msgstr[3] "Shranjeni %1 igralci."
 
-#: tournament/tiebreaks/aob.h:23 tournament/tournament.cpp:506
+#: tournament/tiebreaks/aob.h:23 tournament/tournament.cpp:508
 #, kde-format
 msgctxt "Tiebreak"
 msgid "Average Buchholz of Opponents"
@@ -1105,7 +1135,7 @@ msgctxt "@info"
 msgid "Unsupported tiebreak option \"%1\""
 msgstr "Nepodprta možnost tiebreaka \"%1\""
 
-#: tournament/tiebreaks/buchholz.h:25 tournament/tournament.cpp:488
+#: tournament/tiebreaks/buchholz.h:25 tournament/tournament.cpp:490
 #, kde-format
 msgctxt "Buchholz tiebreak"
 msgid "Buchholz"
@@ -1117,26 +1147,26 @@ msgctxt "Buchholz N tiebreak, N is a number < 0"
 msgid "Buchholz %1"
 msgstr "Buchholz %1"
 
-#: tournament/tiebreaks/numberwins.h:22 tournament/tournament.cpp:492
+#: tournament/tiebreaks/numberwins.h:22 tournament/tournament.cpp:494
 #, kde-format
 msgctxt "Number of Wins tiebreak"
 msgid "Number of Wins"
 msgstr "Število zmag"
 
-#: tournament/tiebreaks/playedblack.h:22 tournament/tournament.cpp:502
+#: tournament/tiebreaks/playedblack.h:22 tournament/tournament.cpp:504
 #, kde-format
 msgctxt "Number of Games Played with Black (over the board) tiebreak"
 msgid "Number of Games Played with Black (over the board)"
 msgstr "Število partij igranih s črnimi figurami (čez tablo)"
 
 #: tournament/tiebreaks/points.h:22 tournament/tiebreaks/points.h:27
-#: tournament/tournament.cpp:484
+#: tournament/tournament.cpp:486
 #, kde-format
 msgctxt "Game points"
 msgid "Points"
 msgstr "Točke"
 
-#: tournament/tiebreaks/won.h:23 tournament/tournament.cpp:498
+#: tournament/tiebreaks/won.h:23 tournament/tournament.cpp:500
 #, kde-format
 msgctxt ""
 "Number of Games Won (over the board) tiebreak. Different from the 'Number of "
@@ -1144,12 +1174,12 @@ msgctxt ""
 msgid "Number of Games Won (over the board)"
 msgstr "Število zmagovalnih partij (čez tablo)"
 
-#: tournament/tournament.cpp:940
+#: tournament/tournament.cpp:943
 #, kde-format
 msgid "An error ocurred while pairing the round: %1"
 msgstr "Pri uparjanju kroga je prišlo do napake: %1"
 
-#: tournament/tournament.cpp:1160
+#: tournament/tournament.cpp:1163
 #, kde-format
 msgid "Couldn't open file"
 msgstr "Datoteke ni bilo mogoče odpreti"
@@ -1164,21 +1194,29 @@ msgstr "Igralca \"%1\" ni mogoče najti."
 msgid "Unknown result on pairing \"%1\" with \"%2\"."
 msgstr "Neznan rezultat pri paru %1 z %2."
 
-#: tournament/trf/reader.cpp:180
+#: tournament/trf/reader.cpp:181
 #, kde-format
 msgctxt "@info"
 msgid "Date \"%1\" is invalid."
 msgstr "Datum \"%1\" je neveljaven."
 
-#: tournament/trf/reader.cpp:254
+#: tournament/trf/reader.cpp:255
 #, kde-format
 msgid "Unknown result \"%1\" on pairing \"%2\"."
 msgstr "Neznan rezultat \"%1\" pri uparjanju \"%2\"."
 
-#: tournament/trf/reader.cpp:257
+#: tournament/trf/reader.cpp:258
 #, kde-format
 msgid "Pairing \"%1\" has no opponent."
 msgstr "Uparjanje \"%1\" nima nasprotnika."
+
+#~ msgctxt "@title:column"
+#~ msgid "Sex"
+#~ msgstr "Spol"
+
+#~ msgctxt "@label:textbox"
+#~ msgid "Sex"
+#~ msgstr "Spol"
 
 #~ msgctxt "@action:button"
 #~ msgid "Connect Account"
