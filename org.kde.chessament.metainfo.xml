@@ -110,14 +110,41 @@
     <screenshot type="default">
       <image width="2260" height="1716">https://cdn.kde.org/screenshots/chessament/chessament.png</image>
       <caption>Players view</caption>
+      <caption xml:lang="ca">Vista dels jugadors</caption>
+      <caption xml:lang="ca-valencia">Vista dels jugadors</caption>
+      <caption xml:lang="he">תצוגת שחקנים</caption>
+      <caption xml:lang="ka">მოთამაშის ფერი</caption>
+      <caption xml:lang="nl">Weergave van spelers</caption>
+      <caption xml:lang="pt-BR">Visão dos jogadores</caption>
+      <caption xml:lang="sk">Pohľad na hráčov</caption>
+      <caption xml:lang="sl">Pogled igralcev</caption>
+      <caption xml:lang="uk">Перегляд гравців</caption>
     </screenshot>
     <screenshot>
       <image width="2260" height="1716">https://cdn.kde.org/screenshots/chessament/chessament-pairings.png</image>
       <caption>Pairings view</caption>
+      <caption xml:lang="ca">Vista dels aparellaments</caption>
+      <caption xml:lang="ca-valencia">Vista dels aparellaments</caption>
+      <caption xml:lang="he">תצוגת שיבוצים</caption>
+      <caption xml:lang="ka">დაწყვილებების ხედი</caption>
+      <caption xml:lang="nl">Weergave van paren</caption>
+      <caption xml:lang="pt-BR">Visão dos pares</caption>
+      <caption xml:lang="sk">Pohľad na párovania</caption>
+      <caption xml:lang="sl">Pogled parov</caption>
+      <caption xml:lang="uk">Перегляд пар</caption>
     </screenshot>
     <screenshot>
       <image width="2260" height="1716">https://cdn.kde.org/screenshots/chessament/chessament-standings.png</image>
       <caption>Standings view</caption>
+      <caption xml:lang="ca">Vista de la classificació</caption>
+      <caption xml:lang="ca-valencia">Vista de la classificació</caption>
+      <caption xml:lang="he">תצוגת עמדות</caption>
+      <caption xml:lang="ka">შედეგების ხედი</caption>
+      <caption xml:lang="nl">Weergave van standen</caption>
+      <caption xml:lang="pt-BR">Visão da pontuação</caption>
+      <caption xml:lang="sk">Pohľad na poradie</caption>
+      <caption xml:lang="sl">Pogled stanj</caption>
+      <caption xml:lang="uk">Перегляд місць</caption>
     </screenshot>
   </screenshots>
   <branding>

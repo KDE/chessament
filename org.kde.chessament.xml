@@ -7,6 +7,9 @@
   <mime-type type="application/vnd.kde.chessament">
     <sub-class-of type="application/vnd.sqlite3"/>
     <comment>Chessament event</comment>
+    <comment xml:lang="he">אירוע תחרות שחמט</comment>
+    <comment xml:lang="nl">Schaaktoernooi-evenement</comment>
+    <comment xml:lang="pt_BR">Evento do Chessament</comment>
     <glob pattern="*.chessament"/>
   </mime-type>
 </mime-info>
