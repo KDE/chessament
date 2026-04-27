@@ -23,6 +23,7 @@ public:
         Rating,
         NationalRating,
         PlayerId,
+        NationalId,
         BirthDate,
         Federation,
         Origin,
@@ -70,5 +71,5 @@ private:
     Tournament *m_tournament;
     QList<Player *> m_players;
 
-    QList<int> m_columns = {StartingRank, Title, Name, Rating, NationalRating, PlayerId, BirthDate, Federation, Origin, Gender};
+    QList<int> m_columns = {StartingRank, Title, Name, Rating, NationalRating, PlayerId, NationalId, BirthDate, Federation, Origin, Gender};
 };

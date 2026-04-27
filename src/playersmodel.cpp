@@ -49,6 +49,8 @@ QVariant PlayersModel::data(const QModelIndex &index, int role) const
             return QLocale::system().toString(player->nationalRating());
         case PlayersModel::Columns::PlayerId:
             return player->playerId();
+        case PlayersModel::Columns::NationalId:
+            return player->nationalId();
         case PlayersModel::Columns::BirthDate:
             return player->birthDate();
         case PlayersModel::Columns::Federation: {
@@ -82,6 +84,8 @@ QVariant PlayersModel::data(const QModelIndex &index, int role) const
             return player->nationalRating();
         case PlayersModel::Columns::PlayerId:
             return player->playerId();
+        case PlayersModel::Columns::NationalId:
+            return player->nationalId();
         case PlayersModel::Columns::BirthDate:
             return player->birthDate();
         case PlayersModel::Columns::Federation:
@@ -97,6 +101,7 @@ QVariant PlayersModel::data(const QModelIndex &index, int role) const
         case PlayersModel::Columns::Rating:
         case PlayersModel::Columns::NationalRating:
         case PlayersModel::Columns::PlayerId:
+        case PlayersModel::Columns::NationalId:
             return Qt::AlignTrailing;
         default:
             return Qt::AlignLeading;
@@ -147,6 +152,9 @@ bool PlayersModel::setData(const QModelIndex &index, const QVariant &value, int 
         break;
     case PlayersModel::Columns::PlayerId:
         player->setPlayerId(value.toString());
+        break;
+    case PlayersModel::Columns::NationalId:
+        player->setNationalId(value.toString());
         break;
     case PlayersModel::Columns::BirthDate:
         player->setBirthDate(value.toString());
@@ -202,6 +210,8 @@ QVariant PlayersModel::headerData(int section, Qt::Orientation orientation, int 
         return i18nc("@title:column Player National Rating", "National Rating");
     case PlayersModel::Columns::PlayerId:
         return i18nc("@title:column", "Player ID");
+    case PlayersModel::Columns::NationalId:
+        return i18nc("@title:column Player National ID", "National ID");
     case PlayersModel::Columns::BirthDate:
         return i18nc("@title:column", "Birth date");
     case PlayersModel::Columns::Federation:

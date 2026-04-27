@@ -23,7 +23,7 @@ TablePage {
 
     Kirigami.ColumnView.fillWidth: true
 
-    columnWidths: [55, 55, 250, 60, 90, 90, 100, 100, 150, 50]
+    columnWidths: [55, 55, 250, 60, 90, 90, 100, 100, 100, 150, 50]
     selectionBehavior: TableView.SelectRows
 
     AddPlayerDialog {

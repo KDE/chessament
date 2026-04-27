@@ -45,6 +45,7 @@ const QString PLAYERS_TABLE_SCHEMA =
     u"rating INTEGER,"_s
     u"nationalRating INTEGER,"_s
     u"playerId TEXT,"_s
+    u"nationalId TEXT,"_s
     u"birthDate TEXT,"_s
     u"federation TEXT,"_s
     u"origin TEXT,"_s
@@ -55,14 +56,14 @@ const QString PLAYERS_TABLE_SCHEMA =
     u");"_s;
 
 const QString ADD_PLAYER_QUERY =
-    u"INSERT INTO players(id, startingRank, title, name, rating, nationalRating, playerId, birthDate, federation, origin, gender, extra, tournament) "_s
-    u"VALUES (:id, :startingRank, :title, :name, :rating, :nationalRating, :playerId, :birthDate, :federation, :origin, :gender, :extra, :tournament);"_s;
+    u"INSERT INTO players(id, startingRank, title, name, rating, nationalRating, playerId, nationalId, birthDate, federation, origin, gender, extra, tournament) "_s
+    u"VALUES (:id, :startingRank, :title, :name, :rating, :nationalRating, :playerId, :nationalId, :birthDate, :federation, :origin, :gender, :extra, :tournament);"_s;
 
 const QString GET_PLAYERS_QUERY = u"SELECT * FROM players WHERE tournament = :tournament;"_s;
 
 const QString UPDATE_PLAYER_QUERY =
-    u"UPDATE players SET (startingRank, title, name, rating, nationalRating, playerId, birthDate, federation, origin, gender, extra, tournament) = "_s
-    u"(:startingRank, :title, :name, :rating, :nationalRating, :playerId, :birthDate, :federation, :origin, :gender, :extra, :tournament) "_s
+    u"UPDATE players SET (startingRank, title, name, rating, nationalRating, playerId, nationalId, birthDate, federation, origin, gender, extra, tournament) = "_s
+    u"(:startingRank, :title, :name, :rating, :nationalRating, :playerId, :nationalId, :birthDate, :federation, :origin, :gender, :extra, :tournament) "_s
     u"WHERE id = :id;"_s;
 
 const QString ROUNDS_TABLE_SCHEMA =

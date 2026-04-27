@@ -4,6 +4,7 @@
 #include "config.h"
 #include "controller.h"
 #include "document.h"
+#include "playersmodel.h"
 #include "tournament/state.h"
 #include "tournament/utils.h"
 
@@ -26,7 +27,7 @@ std::unique_ptr<Document> Controller::playersDocument()
 
     PlayersModel model;
     model.setPlayers(players);
-    model.setColumns({StartingRank, Title, Name, Rating, NationalRating, PlayerId, Federation, Origin});
+    model.setColumns({StartingRank, Title, Name, Rating, NationalRating, PlayerId, NationalId, Federation, Origin});
     doc->addTable(model);
 
     return doc;

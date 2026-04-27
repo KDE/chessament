@@ -28,6 +28,7 @@ class Player : public QObject
     Q_PROPERTY(int rating READ rating WRITE setRating NOTIFY ratingChanged)
     Q_PROPERTY(int nationalRating READ nationalRating WRITE setNationalRating NOTIFY nationalRatingChanged)
     Q_PROPERTY(QString playerId READ playerId WRITE setPlayerId NOTIFY playerIdChanged)
+    Q_PROPERTY(QString nationalId READ nationalId WRITE setNationalId NOTIFY nationalIdChanged)
     Q_PROPERTY(QString birthDate READ birthDate WRITE setBirthDate NOTIFY birthDateChanged)
     Q_PROPERTY(QString federation READ federation WRITE setFederation NOTIFY federationChanged)
     Q_PROPERTY(QString origin READ origin WRITE setOrigin NOTIFY originChanged)
@@ -215,6 +216,8 @@ public:
      */
     [[nodiscard]] QString playerId() const;
 
+    [[nodiscard]] QString nationalId() const;
+
     /*!
      * \property Player::birthDate
      * \brief the birth date of the player
@@ -288,6 +291,7 @@ public Q_SLOTS:
     void setRating(int rating);
     void setNationalRating(int nationalRating);
     void setPlayerId(const QString &playerId);
+    void setNationalId(const QString &nationalId);
     void setBirthDate(const QString &birthDate);
     void setFederation(const QString &federation);
     void setOrigin(const QString &origin);
@@ -302,6 +306,7 @@ Q_SIGNALS:
     void ratingChanged();
     void nationalRatingChanged();
     void playerIdChanged();
+    void nationalIdChanged();
     void birthDateChanged();
     void federationChanged();
     void originChanged();
@@ -315,6 +320,7 @@ private:
     int m_rating = 0;
     int m_nationalRating = 0;
     QString m_playerId;
+    QString m_nationalId;
     QString m_birthDate;
     QString m_federation;
     QString m_origin;

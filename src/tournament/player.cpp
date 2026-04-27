@@ -136,6 +136,20 @@ void Player::setPlayerId(const QString &playerId)
     Q_EMIT playerIdChanged();
 }
 
+QString Player::nationalId() const
+{
+    return m_nationalId;
+}
+
+void Player::setNationalId(const QString &nationalId)
+{
+    if (m_nationalId == nationalId) {
+        return;
+    }
+    m_nationalId = nationalId;
+    Q_EMIT nationalRatingChanged();
+}
+
 QString Player::birthDate() const
 {
     return m_birthDate;

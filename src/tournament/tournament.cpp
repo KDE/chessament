@@ -227,6 +227,7 @@ std::expected<void, QString> Tournament::addPlayer(std::unique_ptr<Player> playe
     query.bindValue(u":rating"_s, player->rating());
     query.bindValue(u":nationalRating"_s, player->nationalRating());
     query.bindValue(u":playerId"_s, player->playerId());
+    query.bindValue(u":nationalId"_s, player->nationalId());
     query.bindValue(u":birthDate"_s, player->birthDate());
     query.bindValue(u":federation"_s, player->federation());
     query.bindValue(u":origin"_s, player->origin());
@@ -280,6 +281,7 @@ void Tournament::savePlayer(Player *player)
     query.bindValue(u":rating"_s, player->rating());
     query.bindValue(u":nationalRating"_s, player->nationalRating());
     query.bindValue(u":playerId"_s, player->playerId());
+    query.bindValue(u":nationalId"_s, player->nationalId());
     query.bindValue(u":birthDate"_s, player->birthDate());
     query.bindValue(u":federation"_s, player->federation());
     query.bindValue(u":origin"_s, player->origin());
@@ -1279,6 +1281,7 @@ std::expected<void, QString> Tournament::loadPlayers()
     const int ratingNo = query.record().indexOf("rating");
     const int nationalRatingNo = query.record().indexOf("nationalRating");
     const int playerIdNo = query.record().indexOf("playerId");
+    const int nationalIdNo = query.record().indexOf("nationalId");
     const int birthDateNo = query.record().indexOf("birthDate");
     const int federationNo = query.record().indexOf("federation");
     const int originNo = query.record().indexOf("origin");
@@ -1297,6 +1300,7 @@ std::expected<void, QString> Tournament::loadPlayers()
                                                query.value(originNo).toString(),
                                                query.value(genderNo).toString());
         player->setId(query.value(idNo).toString());
+        player->setNationalId(query.value(nationalIdNo).toString());
         player->setExtra(query.value(extraNo).toByteArray());
         m_players.push_back(std::move(player));
     }
