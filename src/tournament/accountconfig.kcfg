@@ -11,11 +11,11 @@ SPDX-License-Identifier: LGPL-3.0-or-later
       <parameter name="groupname"/>
     </kcfgfile>
     <group name="$(groupname)">
-        <entry key="AccountId" type="string">
+        <entry key="AccountId" type="String">
         </entry>
-        <entry key="Username" type="string">
+        <entry key="Username" type="String">
         </entry>
-        <entry key="ServerUrl" type="string">
+        <entry key="ServerUrl" type="String">
         </entry>
     </group>
 </kcfg>
