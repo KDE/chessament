@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-26 00:40+0000\n"
-"PO-Revision-Date: 2026-04-20 05:15+0200\n"
+"PO-Revision-Date: 2026-04-26 04:36+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -246,7 +246,7 @@ msgstr "საწყისი"
 #, kde-format
 msgctxt "@title:column Player Gender"
 msgid "Gender"
-msgstr ""
+msgstr "სქესი"
 
 #: qml/AddPlayerDialog.qml:19
 msgctxt "@title:window"
@@ -302,7 +302,7 @@ msgstr "საწყისი"
 #: qml/AddPlayerDialog.qml:123
 msgctxt "@label:textbox"
 msgid "Gender"
-msgstr ""
+msgstr "სქესი"
 
 #: qml/AddTiebreakDialog.qml:20
 msgctxt "@title:window"
@@ -938,17 +938,14 @@ msgid "Name"
 msgstr "სახელი"
 
 #: settings/RatingListsPage.qml:61
-#, fuzzy
-#| msgctxt "@info:label"
-#| msgid "Rating list URL"
 msgctxt "@info:label"
 msgid "Rating list file or URL"
-msgstr "რეიტინგის სიის uRL"
+msgstr "რეიტინგის სიის ფაილი, ან URL"
 
 #: settings/RatingListsPage.qml:66
 msgctxt "@action:button"
 msgid "Select file"
-msgstr ""
+msgstr "აირჩიეთ ფაილი"
 
 #: settings/RatingListsPage.qml:82
 msgctxt "@title:window"
@@ -1043,17 +1040,16 @@ msgstr "არასწორი მოთამაშე \"%1\" დაწყვ
 
 #: tournament/ratinglists/ratinglist.cpp:132
 #: tournament/ratinglists/ratinglist.cpp:149
-#, fuzzy, kde-format
-#| msgid "Couldn't open file"
+#, kde-format
 msgctxt "@info"
 msgid "Could not open file."
-msgstr "ფაილი ვერ გავხსენი"
+msgstr "ფაილის გახსნის შეცდომა."
 
 #: tournament/ratinglists/ratinglist.cpp:144
 #, kde-format
 msgctxt "@info"
 msgid "Could not open file: the file does not exists."
-msgstr ""
+msgstr "ფაილის გახსნა შეუძლებელია: ეს ფაილი არ არსებობს."
 
 #: tournament/ratinglists/ratinglist.cpp:161
 #, kde-format
@@ -1074,12 +1070,10 @@ msgid "Couldn't download rating list: %1"
 msgstr "რეიტინგის სიის გადმოწერა შეუძლებელია: %1"
 
 #: tournament/ratinglists/ratinglist.cpp:189
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Couldn't download rating list: %1"
+#, kde-format
 msgctxt "@info"
 msgid "Could not download rating list from %1 (unsupported protocol)."
-msgstr "რეიტინგის სიის გადმოწერა შეუძლებელია: %1"
+msgstr "%1-დან რეიტინგის სიის გადმოწერა შეუძლებელია (მხარდაუჭერელი პროტოკოლი)."
 
 #: tournament/ratinglists/ratinglist.cpp:202
 #, kde-format

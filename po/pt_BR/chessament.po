@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-26 00:40+0000\n"
-"PO-Revision-Date: 2026-04-20 08:57-0300\n"
+"PO-Revision-Date: 2026-04-26 07:04-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -245,7 +245,7 @@ msgstr "Origem"
 #, kde-format
 msgctxt "@title:column Player Gender"
 msgid "Gender"
-msgstr ""
+msgstr "Gênero"
 
 #: qml/AddPlayerDialog.qml:19
 msgctxt "@title:window"
@@ -301,7 +301,7 @@ msgstr "Origem"
 #: qml/AddPlayerDialog.qml:123
 msgctxt "@label:textbox"
 msgid "Gender"
-msgstr ""
+msgstr "Gênero"
 
 #: qml/AddTiebreakDialog.qml:20
 msgctxt "@title:window"
@@ -937,17 +937,14 @@ msgid "Name"
 msgstr "Nome"
 
 #: settings/RatingListsPage.qml:61
-#, fuzzy
-#| msgctxt "@info:label"
-#| msgid "Rating list URL"
 msgctxt "@info:label"
 msgid "Rating list file or URL"
-msgstr "URL da lista de classificação"
+msgstr "Arquivo de lista de classificação ou URL"
 
 #: settings/RatingListsPage.qml:66
 msgctxt "@action:button"
 msgid "Select file"
-msgstr ""
+msgstr "Selecionar arquivo"
 
 #: settings/RatingListsPage.qml:82
 msgctxt "@title:window"
@@ -1043,17 +1040,16 @@ msgstr "Jogador inválido \"%1\" no pareamento \"%2\"."
 
 #: tournament/ratinglists/ratinglist.cpp:132
 #: tournament/ratinglists/ratinglist.cpp:149
-#, fuzzy, kde-format
-#| msgid "Couldn't open file"
+#, kde-format
 msgctxt "@info"
 msgid "Could not open file."
-msgstr "Não foi possível abrir o arquivo"
+msgstr "Não foi possível abrir o arquivo."
 
 #: tournament/ratinglists/ratinglist.cpp:144
 #, kde-format
 msgctxt "@info"
 msgid "Could not open file: the file does not exists."
-msgstr ""
+msgstr "Não foi possível abrir o arquivo: o arquivo não existe."
 
 #: tournament/ratinglists/ratinglist.cpp:161
 #, kde-format
@@ -1074,12 +1070,12 @@ msgid "Couldn't download rating list: %1"
 msgstr "Não foi possível baixar a lista de classificação: %1"
 
 #: tournament/ratinglists/ratinglist.cpp:189
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Couldn't download rating list: %1"
+#, kde-format
 msgctxt "@info"
 msgid "Could not download rating list from %1 (unsupported protocol)."
-msgstr "Não foi possível baixar a lista de classificação: %1"
+msgstr ""
+"Não foi possível baixar a lista de classificação de %1 (protocolo não "
+"suportado)."
 
 #: tournament/ratinglists/ratinglist.cpp:202
 #, kde-format

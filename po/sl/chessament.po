@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-26 00:40+0000\n"
-"PO-Revision-Date: 2026-04-20 07:54+0200\n"
+"PO-Revision-Date: 2026-04-26 07:40+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -243,7 +243,7 @@ msgstr "Izvor"
 #, kde-format
 msgctxt "@title:column Player Gender"
 msgid "Gender"
-msgstr ""
+msgstr "Spol"
 
 #: qml/AddPlayerDialog.qml:19
 msgctxt "@title:window"
@@ -299,7 +299,7 @@ msgstr "Izvor"
 #: qml/AddPlayerDialog.qml:123
 msgctxt "@label:textbox"
 msgid "Gender"
-msgstr ""
+msgstr "Spol"
 
 #: qml/AddTiebreakDialog.qml:20
 msgctxt "@title:window"
@@ -941,17 +941,14 @@ msgid "Name"
 msgstr "Ime"
 
 #: settings/RatingListsPage.qml:61
-#, fuzzy
-#| msgctxt "@info:label"
-#| msgid "Rating list URL"
 msgctxt "@info:label"
 msgid "Rating list file or URL"
-msgstr "URL seznama ratingov"
+msgstr "Datoteka seznama ratingov ali URL"
 
 #: settings/RatingListsPage.qml:66
 msgctxt "@action:button"
 msgid "Select file"
-msgstr ""
+msgstr "Izberite datoteko"
 
 #: settings/RatingListsPage.qml:82
 msgctxt "@title:window"
@@ -1047,17 +1044,16 @@ msgstr "Neveljaven igralec \"%1\" v paru \"%2\"."
 
 #: tournament/ratinglists/ratinglist.cpp:132
 #: tournament/ratinglists/ratinglist.cpp:149
-#, fuzzy, kde-format
-#| msgid "Couldn't open file"
+#, kde-format
 msgctxt "@info"
 msgid "Could not open file."
-msgstr "Datoteke ni bilo mogoče odpreti"
+msgstr "Datoteke ni bilo mogoče odpreti."
 
 #: tournament/ratinglists/ratinglist.cpp:144
 #, kde-format
 msgctxt "@info"
 msgid "Could not open file: the file does not exists."
-msgstr ""
+msgstr "Datoteke ni bilo mogoče odpreti: datoteka ne obstaja."
 
 #: tournament/ratinglists/ratinglist.cpp:161
 #, kde-format
@@ -1078,12 +1074,10 @@ msgid "Couldn't download rating list: %1"
 msgstr "Ni bilo mogoče prenesti seznama ratingov: %1"
 
 #: tournament/ratinglists/ratinglist.cpp:189
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Couldn't download rating list: %1"
+#, kde-format
 msgctxt "@info"
 msgid "Could not download rating list from %1 (unsupported protocol)."
-msgstr "Ni bilo mogoče prenesti seznama ratingov: %1"
+msgstr "Ni bilo mogoče prenesti seznama ratingov iz %1 (nepodprt protokol)."
 
 #: tournament/ratinglists/ratinglist.cpp:202
 #, kde-format

@@ -245,7 +245,7 @@ msgstr "Pôvod"
 #, kde-format
 msgctxt "@title:column Player Gender"
 msgid "Gender"
-msgstr ""
+msgstr "Pohlavie"
 
 #: qml/AddPlayerDialog.qml:19
 msgctxt "@title:window"
@@ -301,7 +301,7 @@ msgstr "Pôvod"
 #: qml/AddPlayerDialog.qml:123
 msgctxt "@label:textbox"
 msgid "Gender"
-msgstr ""
+msgstr "Pohlavie"
 
 #: qml/AddTiebreakDialog.qml:20
 msgctxt "@title:window"
@@ -940,17 +940,14 @@ msgid "Name"
 msgstr "Názov"
 
 #: settings/RatingListsPage.qml:61
-#, fuzzy
-#| msgctxt "@info:label"
-#| msgid "Rating list URL"
 msgctxt "@info:label"
 msgid "Rating list file or URL"
-msgstr "URL ratingovej listiny"
+msgstr "Súbor alebo URL ratingovej listiny"
 
 #: settings/RatingListsPage.qml:66
 msgctxt "@action:button"
 msgid "Select file"
-msgstr ""
+msgstr "Vybrať súbor"
 
 #: settings/RatingListsPage.qml:82
 msgctxt "@title:window"
@@ -1045,17 +1042,16 @@ msgstr "Neplatný hráč „%1“ v párovaní „%2“."
 
 #: tournament/ratinglists/ratinglist.cpp:132
 #: tournament/ratinglists/ratinglist.cpp:149
-#, fuzzy, kde-format
-#| msgid "Couldn't open file"
+#, kde-format
 msgctxt "@info"
 msgid "Could not open file."
-msgstr "Nepodarilo sa otvoriť súbor"
+msgstr "Nepodarilo sa otvoriť súbor."
 
 #: tournament/ratinglists/ratinglist.cpp:144
 #, kde-format
 msgctxt "@info"
 msgid "Could not open file: the file does not exists."
-msgstr ""
+msgstr "Nepodarilo sa otvoriť súbor: súbor neexistuje."
 
 #: tournament/ratinglists/ratinglist.cpp:161
 #, kde-format
@@ -1076,12 +1072,11 @@ msgid "Couldn't download rating list: %1"
 msgstr "Nepodarilo sa stiahnuť ratingovú listinu: %1"
 
 #: tournament/ratinglists/ratinglist.cpp:189
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Couldn't download rating list: %1"
+#, kde-format
 msgctxt "@info"
 msgid "Could not download rating list from %1 (unsupported protocol)."
-msgstr "Nepodarilo sa stiahnuť ratingovú listinu: %1"
+msgstr ""
+"Nepodarilo sa stiahnuť ratingovú listinu z %1 (nepodporovaný protokol)."
 
 #: tournament/ratinglists/ratinglist.cpp:202
 #, kde-format

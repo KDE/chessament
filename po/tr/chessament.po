@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-26 00:40+0000\n"
-"PO-Revision-Date: 2026-04-20 18:32+0300\n"
+"PO-Revision-Date: 2026-04-26 13:28+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -245,7 +245,7 @@ msgstr "Köken"
 #, kde-format
 msgctxt "@title:column Player Gender"
 msgid "Gender"
-msgstr ""
+msgstr "Cinsiyet"
 
 #: qml/AddPlayerDialog.qml:19
 msgctxt "@title:window"
@@ -301,7 +301,7 @@ msgstr "Köken"
 #: qml/AddPlayerDialog.qml:123
 msgctxt "@label:textbox"
 msgid "Gender"
-msgstr ""
+msgstr "Cinsiyet"
 
 #: qml/AddTiebreakDialog.qml:20
 msgctxt "@title:window"
@@ -937,17 +937,14 @@ msgid "Name"
 msgstr "Ad"
 
 #: settings/RatingListsPage.qml:61
-#, fuzzy
-#| msgctxt "@info:label"
-#| msgid "Rating list URL"
 msgctxt "@info:label"
 msgid "Rating list file or URL"
-msgstr "Derecelendirme Listesi URL’si"
+msgstr "Derecelendirme listesi dosyası veya URL’si"
 
 #: settings/RatingListsPage.qml:66
 msgctxt "@action:button"
 msgid "Select file"
-msgstr ""
+msgstr "Dosya seç…"
 
 #: settings/RatingListsPage.qml:82
 msgctxt "@title:window"
@@ -1042,17 +1039,16 @@ msgstr "“%2” eşleşmesinde geçersiz oyuncu “%1”."
 
 #: tournament/ratinglists/ratinglist.cpp:132
 #: tournament/ratinglists/ratinglist.cpp:149
-#, fuzzy, kde-format
-#| msgid "Couldn't open file"
+#, kde-format
 msgctxt "@info"
 msgid "Could not open file."
-msgstr "Dosya açılamadı"
+msgstr "Dosya açılamadı."
 
 #: tournament/ratinglists/ratinglist.cpp:144
 #, kde-format
 msgctxt "@info"
 msgid "Could not open file: the file does not exists."
-msgstr ""
+msgstr "Dosya açılamadı: Dosya yok."
 
 #: tournament/ratinglists/ratinglist.cpp:161
 #, kde-format
@@ -1073,12 +1069,11 @@ msgid "Couldn't download rating list: %1"
 msgstr "Derecelendirme listesi indirilemedi: %1"
 
 #: tournament/ratinglists/ratinglist.cpp:189
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Couldn't download rating list: %1"
+#, kde-format
 msgctxt "@info"
 msgid "Could not download rating list from %1 (unsupported protocol)."
-msgstr "Derecelendirme listesi indirilemedi: %1"
+msgstr ""
+"%1 konumundan derecelendirme listesi indirilemedi (desteklenmeyen protokol)."
 
 #: tournament/ratinglists/ratinglist.cpp:202
 #, kde-format
