@@ -133,6 +133,8 @@ target_sources(chessament PRIVATE ${CHESSAMENT_ICON})
 
 install(TARGETS chessament ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 
+install(FILES config.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR})
+
 if(BUILD_DOCS)
     include(ECMGenerateQDoc)
     ecm_generate_qdoc(chessament chessament.qdocconf)
