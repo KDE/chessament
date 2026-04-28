@@ -118,6 +118,7 @@
       <caption xml:lang="pt-BR">Visão dos jogadores</caption>
       <caption xml:lang="sk">Pohľad na hráčov</caption>
       <caption xml:lang="sl">Pogled igralcev</caption>
+      <caption xml:lang="tr">Oyuncular görünümü</caption>
       <caption xml:lang="uk">Перегляд гравців</caption>
     </screenshot>
     <screenshot>
@@ -131,6 +132,7 @@
       <caption xml:lang="pt-BR">Visão dos pares</caption>
       <caption xml:lang="sk">Pohľad na párovania</caption>
       <caption xml:lang="sl">Pogled parov</caption>
+      <caption xml:lang="tr">Eşleşmeler görünümü</caption>
       <caption xml:lang="uk">Перегляд пар</caption>
     </screenshot>
     <screenshot>
@@ -144,6 +146,7 @@
       <caption xml:lang="pt-BR">Visão da pontuação</caption>
       <caption xml:lang="sk">Pohľad na poradie</caption>
       <caption xml:lang="sl">Pogled stanj</caption>
+      <caption xml:lang="tr">Dereceler görünümü</caption>
       <caption xml:lang="uk">Перегляд місць</caption>
     </screenshot>
   </screenshots>
