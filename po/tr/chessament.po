@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-26 00:40+0000\n"
+"POT-Creation-Date: 2026-04-28 00:41+0000\n"
 "PO-Revision-Date: 2026-04-26 13:28+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -46,37 +46,37 @@ msgstr "Turnuva Raporunu Dışa Aktar…"
 msgid "Couldn't export tournament."
 msgstr "Turnuva dışa aktarılamadı."
 
-#: documents.cpp:22
+#: documents.cpp:23
 #, kde-format
 msgctxt "@title"
 msgid "Starting Rank"
 msgstr "Başlangıç Derecesi"
 
-#: documents.cpp:61
+#: documents.cpp:62
 #, kde-format
 msgctxt "@title"
 msgid "Round %1 Pairings"
 msgstr "Raunt %1 Eşleşmeleri"
 
-#: documents.cpp:102
+#: documents.cpp:103
 #, kde-format
 msgctxt "@title"
 msgid "Standings After Round %1"
 msgstr "%1 Raunt Sonrası Puan Durumu"
 
-#: documents.cpp:104
+#: documents.cpp:105
 #, kde-format
 msgctxt "@title"
 msgid "Provisional Standings After Round %1"
 msgstr "%1 Raunt Sonrası Nihaî Olmayan Puan Durumu"
 
-#: documents.cpp:108
+#: documents.cpp:109
 #, kde-format
 msgctxt "@title"
 msgid "Final Standings"
 msgstr "Nihaî Puan Durumu"
 
-#: documents.cpp:110
+#: documents.cpp:111
 #, kde-format
 msgctxt "@title"
 msgid "Provisional Final Standings"
@@ -187,61 +187,69 @@ msgctxt "@title:column Black Player Starting Rank Number"
 msgid "№"
 msgstr "№"
 
-#: playersmodel.cpp:194 standingsmodel.cpp:90
+#: playersmodel.cpp:202 standingsmodel.cpp:90
 #, kde-format
 msgctxt "@title:column Player Starting Rank Number"
 msgid "№"
 msgstr "№"
 
-#: playersmodel.cpp:196 standingsmodel.cpp:92
+#: playersmodel.cpp:204 standingsmodel.cpp:92
 #, kde-format
 msgctxt "@title:column Player Title"
 msgid "Title"
 msgstr "Başlık"
 
-#: playersmodel.cpp:198 standingsmodel.cpp:94
+#: playersmodel.cpp:206 standingsmodel.cpp:94
 #, kde-format
 msgctxt "@title:column Player Name"
 msgid "Name"
 msgstr "Ad"
 
-#: playersmodel.cpp:200
+#: playersmodel.cpp:208
 #, kde-format
 msgctxt "@title:column Player Rating"
 msgid "Rating"
 msgstr "Derecelendirme"
 
-#: playersmodel.cpp:202
+#: playersmodel.cpp:210
 #, kde-format
 msgctxt "@title:column Player National Rating"
 msgid "National Rating"
 msgstr "Ulusal Derecelendirme"
 
-#: playersmodel.cpp:204
+#: playersmodel.cpp:212
 #, kde-format
 msgctxt "@title:column"
 msgid "Player ID"
 msgstr "Oyuncu Kimliği"
 
-#: playersmodel.cpp:206
+#: playersmodel.cpp:214
+#, fuzzy, kde-format
+#| msgctxt "@title:column Player National Rating"
+#| msgid "National Rating"
+msgctxt "@title:column Player National ID"
+msgid "National ID"
+msgstr "Ulusal Derecelendirme"
+
+#: playersmodel.cpp:216
 #, kde-format
 msgctxt "@title:column"
 msgid "Birth date"
 msgstr "Doğum Tarihi"
 
-#: playersmodel.cpp:208
+#: playersmodel.cpp:218
 #, kde-format
 msgctxt "@title:column Player Federation"
 msgid "Federation"
 msgstr "Federasyon"
 
-#: playersmodel.cpp:210
+#: playersmodel.cpp:220
 #, kde-format
 msgctxt "@title:column Player Origin"
 msgid "Origin"
 msgstr "Köken"
 
-#: playersmodel.cpp:212
+#: playersmodel.cpp:222
 #, kde-format
 msgctxt "@title:column Player Gender"
 msgid "Gender"
@@ -1103,7 +1111,7 @@ msgid_plural "Saved %1 players."
 msgstr[0] "1 oyuncu kaydedildi."
 msgstr[1] "%1 oyuncu kaydedildi."
 
-#: tournament/tiebreaks/aob.h:23 tournament/tournament.cpp:508
+#: tournament/tiebreaks/aob.h:23 tournament/tournament.cpp:510
 #, kde-format
 msgctxt "Tiebreak"
 msgid "Average Buchholz of Opponents"
@@ -1121,7 +1129,7 @@ msgctxt "@info"
 msgid "Unsupported tiebreak option \"%1\""
 msgstr "Desteklenmeyen beraberlik seçeneği “%1”"
 
-#: tournament/tiebreaks/buchholz.h:25 tournament/tournament.cpp:490
+#: tournament/tiebreaks/buchholz.h:25 tournament/tournament.cpp:492
 #, kde-format
 msgctxt "Buchholz tiebreak"
 msgid "Buchholz"
@@ -1133,26 +1141,26 @@ msgctxt "Buchholz N tiebreak, N is a number < 0"
 msgid "Buchholz %1"
 msgstr "Buchholz %1"
 
-#: tournament/tiebreaks/numberwins.h:22 tournament/tournament.cpp:494
+#: tournament/tiebreaks/numberwins.h:22 tournament/tournament.cpp:496
 #, kde-format
 msgctxt "Number of Wins tiebreak"
 msgid "Number of Wins"
 msgstr "Kazanma Sayısı"
 
-#: tournament/tiebreaks/playedblack.h:22 tournament/tournament.cpp:504
+#: tournament/tiebreaks/playedblack.h:22 tournament/tournament.cpp:506
 #, kde-format
 msgctxt "Number of Games Played with Black (over the board) tiebreak"
 msgid "Number of Games Played with Black (over the board)"
 msgstr "Siyah ile Oynanan Oyunların Sayısı (Yüz Yüze)"
 
 #: tournament/tiebreaks/points.h:22 tournament/tiebreaks/points.h:27
-#: tournament/tournament.cpp:486
+#: tournament/tournament.cpp:488
 #, kde-format
 msgctxt "Game points"
 msgid "Points"
 msgstr "Puanlar"
 
-#: tournament/tiebreaks/won.h:23 tournament/tournament.cpp:500
+#: tournament/tiebreaks/won.h:23 tournament/tournament.cpp:502
 #, kde-format
 msgctxt ""
 "Number of Games Won (over the board) tiebreak. Different from the 'Number of "
@@ -1160,12 +1168,12 @@ msgctxt ""
 msgid "Number of Games Won (over the board)"
 msgstr "Kazanılan Oyunların Sayısı (Yüz Yüze)"
 
-#: tournament/tournament.cpp:943
+#: tournament/tournament.cpp:945
 #, kde-format
 msgid "An error ocurred while pairing the round: %1"
 msgstr "Raunt eşleştirilirken bir hata oluştu: %1"
 
-#: tournament/tournament.cpp:1163
+#: tournament/tournament.cpp:1165
 #, kde-format
 msgid "Couldn't open file"
 msgstr "Dosya açılamadı"

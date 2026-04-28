@@ -1,18 +1,21 @@
+#
+# SPDX-FileCopyrightText: 2026 Xavier Besnard <xavier.besnard@kde.org>
 msgid ""
 msgstr ""
 "Project-Id-Version: chessament_mime\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-25 00:41+0000\n"
-"PO-Revision-Date: 2026-04-26 05:30+0200\n"
-"Last-Translator: KDE Francophone <kde-francophone@kde.org>\n"
-"Language-Team: KDE Francophone <kde-francophone@kde.org>\n"
+"PO-Revision-Date: 2026-04-26 09:04+0200\n"
+"Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
+"Language-Team: fr\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: org.kde.chessament.xml.podir/org.kde.chessament.xml.in.h:1
 msgctxt "comment"
 msgid "Chessament event"
-msgstr ""
+msgstr "Évènement de Chessament"

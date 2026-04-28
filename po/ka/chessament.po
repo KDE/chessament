@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-26 00:40+0000\n"
+"POT-Creation-Date: 2026-04-28 00:41+0000\n"
 "PO-Revision-Date: 2026-04-26 04:36+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -47,37 +47,37 @@ msgstr "ტურნამენტის ანგარიშის გატ�
 msgid "Couldn't export tournament."
 msgstr "ტურნამენტის გატანა შეუძლებელია."
 
-#: documents.cpp:22
+#: documents.cpp:23
 #, kde-format
 msgctxt "@title"
 msgid "Starting Rank"
 msgstr "საწყისი რანგი"
 
-#: documents.cpp:61
+#: documents.cpp:62
 #, kde-format
 msgctxt "@title"
 msgid "Round %1 Pairings"
 msgstr "რაუნდი %1 წყვილები"
 
-#: documents.cpp:102
+#: documents.cpp:103
 #, kde-format
 msgctxt "@title"
 msgid "Standings After Round %1"
 msgstr "რეიტინგი %1 რაუნდის შემდეგ"
 
-#: documents.cpp:104
+#: documents.cpp:105
 #, kde-format
 msgctxt "@title"
 msgid "Provisional Standings After Round %1"
 msgstr "დროებითი რეიტინგი %1 რაუნდის შემდეგ"
 
-#: documents.cpp:108
+#: documents.cpp:109
 #, kde-format
 msgctxt "@title"
 msgid "Final Standings"
 msgstr "საბოლოო შედეგები"
 
-#: documents.cpp:110
+#: documents.cpp:111
 #, kde-format
 msgctxt "@title"
 msgid "Provisional Final Standings"
@@ -188,61 +188,69 @@ msgctxt "@title:column Black Player Starting Rank Number"
 msgid "№"
 msgstr "№"
 
-#: playersmodel.cpp:194 standingsmodel.cpp:90
+#: playersmodel.cpp:202 standingsmodel.cpp:90
 #, kde-format
 msgctxt "@title:column Player Starting Rank Number"
 msgid "№"
 msgstr "№"
 
-#: playersmodel.cpp:196 standingsmodel.cpp:92
+#: playersmodel.cpp:204 standingsmodel.cpp:92
 #, kde-format
 msgctxt "@title:column Player Title"
 msgid "Title"
 msgstr "სახელი"
 
-#: playersmodel.cpp:198 standingsmodel.cpp:94
+#: playersmodel.cpp:206 standingsmodel.cpp:94
 #, kde-format
 msgctxt "@title:column Player Name"
 msgid "Name"
 msgstr "სახელი"
 
-#: playersmodel.cpp:200
+#: playersmodel.cpp:208
 #, kde-format
 msgctxt "@title:column Player Rating"
 msgid "Rating"
 msgstr "რეიტინგი"
 
-#: playersmodel.cpp:202
+#: playersmodel.cpp:210
 #, kde-format
 msgctxt "@title:column Player National Rating"
 msgid "National Rating"
 msgstr "ეროვნული რეიტინგი"
 
-#: playersmodel.cpp:204
+#: playersmodel.cpp:212
 #, kde-format
 msgctxt "@title:column"
 msgid "Player ID"
 msgstr "მოთამაშის ID"
 
-#: playersmodel.cpp:206
+#: playersmodel.cpp:214
+#, fuzzy, kde-format
+#| msgctxt "@title:column Player National Rating"
+#| msgid "National Rating"
+msgctxt "@title:column Player National ID"
+msgid "National ID"
+msgstr "ეროვნული რეიტინგი"
+
+#: playersmodel.cpp:216
 #, kde-format
 msgctxt "@title:column"
 msgid "Birth date"
 msgstr "დაბადების თარიღი"
 
-#: playersmodel.cpp:208
+#: playersmodel.cpp:218
 #, kde-format
 msgctxt "@title:column Player Federation"
 msgid "Federation"
 msgstr "ფედერაცია"
 
-#: playersmodel.cpp:210
+#: playersmodel.cpp:220
 #, kde-format
 msgctxt "@title:column Player Origin"
 msgid "Origin"
 msgstr "საწყისი"
 
-#: playersmodel.cpp:212
+#: playersmodel.cpp:222
 #, kde-format
 msgctxt "@title:column Player Gender"
 msgid "Gender"
@@ -1103,7 +1111,7 @@ msgid_plural "Saved %1 players."
 msgstr[0] "შენახულია 1 მოთამაშე."
 msgstr[1] "შენახულია %1 მოთამაშე."
 
-#: tournament/tiebreaks/aob.h:23 tournament/tournament.cpp:508
+#: tournament/tiebreaks/aob.h:23 tournament/tournament.cpp:510
 #, kde-format
 msgctxt "Tiebreak"
 msgid "Average Buchholz of Opponents"
@@ -1121,7 +1129,7 @@ msgctxt "@info"
 msgid "Unsupported tiebreak option \"%1\""
 msgstr "მხარდაჭერილი ტაიბრეიკის პარამეტრი \"%1\""
 
-#: tournament/tiebreaks/buchholz.h:25 tournament/tournament.cpp:490
+#: tournament/tiebreaks/buchholz.h:25 tournament/tournament.cpp:492
 #, kde-format
 msgctxt "Buchholz tiebreak"
 msgid "Buchholz"
@@ -1133,26 +1141,26 @@ msgctxt "Buchholz N tiebreak, N is a number < 0"
 msgid "Buchholz %1"
 msgstr "ბუხჰოლცი %1"
 
-#: tournament/tiebreaks/numberwins.h:22 tournament/tournament.cpp:494
+#: tournament/tiebreaks/numberwins.h:22 tournament/tournament.cpp:496
 #, kde-format
 msgctxt "Number of Wins tiebreak"
 msgid "Number of Wins"
 msgstr "მოგებების რაოდენობა"
 
-#: tournament/tiebreaks/playedblack.h:22 tournament/tournament.cpp:504
+#: tournament/tiebreaks/playedblack.h:22 tournament/tournament.cpp:506
 #, kde-format
 msgctxt "Number of Games Played with Black (over the board) tiebreak"
 msgid "Number of Games Played with Black (over the board)"
 msgstr "შავით თამაშების რაოდენობა (დაფაზე)"
 
 #: tournament/tiebreaks/points.h:22 tournament/tiebreaks/points.h:27
-#: tournament/tournament.cpp:486
+#: tournament/tournament.cpp:488
 #, kde-format
 msgctxt "Game points"
 msgid "Points"
 msgstr "ქულები"
 
-#: tournament/tiebreaks/won.h:23 tournament/tournament.cpp:500
+#: tournament/tiebreaks/won.h:23 tournament/tournament.cpp:502
 #, kde-format
 msgctxt ""
 "Number of Games Won (over the board) tiebreak. Different from the 'Number of "
@@ -1160,12 +1168,12 @@ msgctxt ""
 msgid "Number of Games Won (over the board)"
 msgstr "მოგებული თამაშების რაოდენობა (დაფაზე)"
 
-#: tournament/tournament.cpp:943
+#: tournament/tournament.cpp:945
 #, kde-format
 msgid "An error ocurred while pairing the round: %1"
 msgstr "შეცდომა რაუნდის წყვილების შერჩევისას: %1"
 
-#: tournament/tournament.cpp:1163
+#: tournament/tournament.cpp:1165
 #, kde-format
 msgid "Couldn't open file"
 msgstr "ფაილი ვერ გავხსენი"

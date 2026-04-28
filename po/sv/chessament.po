@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-26 00:40+0000\n"
+"POT-Creation-Date: 2026-04-28 00:41+0000\n"
 "PO-Revision-Date: 2026-01-27 18:26+0100\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -46,37 +46,37 @@ msgstr "Exportera turneringsrapport…"
 msgid "Couldn't export tournament."
 msgstr "Kunde inte exportera turnering."
 
-#: documents.cpp:22
+#: documents.cpp:23
 #, kde-format
 msgctxt "@title"
 msgid "Starting Rank"
 msgstr "Startrankning"
 
-#: documents.cpp:61
+#: documents.cpp:62
 #, kde-format
 msgctxt "@title"
 msgid "Round %1 Pairings"
 msgstr "Parningar i omgång %1"
 
-#: documents.cpp:102
+#: documents.cpp:103
 #, kde-format
 msgctxt "@title"
 msgid "Standings After Round %1"
 msgstr "Ställning efter omgång %1"
 
-#: documents.cpp:104
+#: documents.cpp:105
 #, kde-format
 msgctxt "@title"
 msgid "Provisional Standings After Round %1"
 msgstr "Preliminär slutställning efter omgång %1"
 
-#: documents.cpp:108
+#: documents.cpp:109
 #, kde-format
 msgctxt "@title"
 msgid "Final Standings"
 msgstr "Slutställning"
 
-#: documents.cpp:110
+#: documents.cpp:111
 #, kde-format
 msgctxt "@title"
 msgid "Provisional Final Standings"
@@ -187,61 +187,69 @@ msgctxt "@title:column Black Player Starting Rank Number"
 msgid "№"
 msgstr "№"
 
-#: playersmodel.cpp:194 standingsmodel.cpp:90
+#: playersmodel.cpp:202 standingsmodel.cpp:90
 #, kde-format
 msgctxt "@title:column Player Starting Rank Number"
 msgid "№"
 msgstr "№"
 
-#: playersmodel.cpp:196 standingsmodel.cpp:92
+#: playersmodel.cpp:204 standingsmodel.cpp:92
 #, kde-format
 msgctxt "@title:column Player Title"
 msgid "Title"
 msgstr "Titel"
 
-#: playersmodel.cpp:198 standingsmodel.cpp:94
+#: playersmodel.cpp:206 standingsmodel.cpp:94
 #, kde-format
 msgctxt "@title:column Player Name"
 msgid "Name"
 msgstr "Namn"
 
-#: playersmodel.cpp:200
+#: playersmodel.cpp:208
 #, kde-format
 msgctxt "@title:column Player Rating"
 msgid "Rating"
 msgstr "Rankning"
 
-#: playersmodel.cpp:202
+#: playersmodel.cpp:210
 #, kde-format
 msgctxt "@title:column Player National Rating"
 msgid "National Rating"
 msgstr "Nationell rankning"
 
-#: playersmodel.cpp:204
+#: playersmodel.cpp:212
 #, kde-format
 msgctxt "@title:column"
 msgid "Player ID"
 msgstr "Spelaridentifierare"
 
-#: playersmodel.cpp:206
+#: playersmodel.cpp:214
+#, fuzzy, kde-format
+#| msgctxt "@title:column Player National Rating"
+#| msgid "National Rating"
+msgctxt "@title:column Player National ID"
+msgid "National ID"
+msgstr "Nationell rankning"
+
+#: playersmodel.cpp:216
 #, kde-format
 msgctxt "@title:column"
 msgid "Birth date"
 msgstr "Födelsedatum"
 
-#: playersmodel.cpp:208
+#: playersmodel.cpp:218
 #, kde-format
 msgctxt "@title:column Player Federation"
 msgid "Federation"
 msgstr "Förbund"
 
-#: playersmodel.cpp:210
+#: playersmodel.cpp:220
 #, kde-format
 msgctxt "@title:column Player Origin"
 msgid "Origin"
 msgstr "Ursprung"
 
-#: playersmodel.cpp:212
+#: playersmodel.cpp:222
 #, kde-format
 msgctxt "@title:column Player Gender"
 msgid "Gender"
@@ -1142,7 +1150,7 @@ msgid_plural "Saved %1 players."
 msgstr[0] "Sparade 1 spelare."
 msgstr[1] "Sparade %1 spelare."
 
-#: tournament/tiebreaks/aob.h:23 tournament/tournament.cpp:508
+#: tournament/tiebreaks/aob.h:23 tournament/tournament.cpp:510
 #, kde-format
 msgctxt "Tiebreak"
 msgid "Average Buchholz of Opponents"
@@ -1160,7 +1168,7 @@ msgctxt "@info"
 msgid "Unsupported tiebreak option \"%1\""
 msgstr "Alternativ för tiebreak som inte stöds \"%1\""
 
-#: tournament/tiebreaks/buchholz.h:25 tournament/tournament.cpp:490
+#: tournament/tiebreaks/buchholz.h:25 tournament/tournament.cpp:492
 #, kde-format
 msgctxt "Buchholz tiebreak"
 msgid "Buchholz"
@@ -1174,26 +1182,26 @@ msgctxt "Buchholz N tiebreak, N is a number < 0"
 msgid "Buchholz %1"
 msgstr "Buchholz"
 
-#: tournament/tiebreaks/numberwins.h:22 tournament/tournament.cpp:494
+#: tournament/tiebreaks/numberwins.h:22 tournament/tournament.cpp:496
 #, kde-format
 msgctxt "Number of Wins tiebreak"
 msgid "Number of Wins"
 msgstr "Antal vinster"
 
-#: tournament/tiebreaks/playedblack.h:22 tournament/tournament.cpp:504
+#: tournament/tiebreaks/playedblack.h:22 tournament/tournament.cpp:506
 #, kde-format
 msgctxt "Number of Games Played with Black (over the board) tiebreak"
 msgid "Number of Games Played with Black (over the board)"
 msgstr ""
 
 #: tournament/tiebreaks/points.h:22 tournament/tiebreaks/points.h:27
-#: tournament/tournament.cpp:486
+#: tournament/tournament.cpp:488
 #, kde-format
 msgctxt "Game points"
 msgid "Points"
 msgstr "Poäng"
 
-#: tournament/tiebreaks/won.h:23 tournament/tournament.cpp:500
+#: tournament/tiebreaks/won.h:23 tournament/tournament.cpp:502
 #, fuzzy, kde-format
 #| msgctxt "Number of Wins tiebreak"
 #| msgid "Number of Wins"
@@ -1203,12 +1211,12 @@ msgctxt ""
 msgid "Number of Games Won (over the board)"
 msgstr "Antal vinster"
 
-#: tournament/tournament.cpp:943
+#: tournament/tournament.cpp:945
 #, kde-format
 msgid "An error ocurred while pairing the round: %1"
 msgstr "Ett fel uppstod när omgången skulle paras: %1"
 
-#: tournament/tournament.cpp:1163
+#: tournament/tournament.cpp:1165
 #, kde-format
 msgid "Couldn't open file"
 msgstr "Kunde inte öppna fil"
