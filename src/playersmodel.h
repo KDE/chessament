@@ -55,6 +55,7 @@ public:
                                int rating,
                                int nationalRating,
                                const QString &playerId,
+                               const QString &nationalId,
                                const QString &birthDate,
                                const QString &federation,
                                const QString &origin,

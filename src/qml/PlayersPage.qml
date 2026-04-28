@@ -29,8 +29,8 @@ TablePage {
     AddPlayerDialog {
         id: addPlayerDialog
 
-        onAddPlayer: function (title: string, name: string, rating: int, nationalRating: int, playerId: string, birthDate: string, federation: string, origin: string, gender: string): void {
-            Controller.playersModel.addPlayer(title, name, rating, nationalRating, playerId, birthDate, federation, origin, gender);
+        onAddPlayer: function (title: string, name: string, rating: int, nationalRating: int, playerId: string, nationalId: string, birthDate: string, federation: string, origin: string, gender: string): void {
+            Controller.playersModel.addPlayer(title, name, rating, nationalRating, playerId, nationalId, birthDate, federation, origin, gender);
         }
     }
 

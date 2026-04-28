@@ -14,7 +14,7 @@ import org.kde.chessament
 QQC2.Dialog {
     id: root
 
-    signal addPlayer(title: string, name: string, rating: int, nationalRating: int, playerId: string, birthDate: string, federation: string, origin: string, gender: string)
+    signal addPlayer(title: string, name: string, rating: int, nationalRating: int, playerId: string, nationalId: string, birthDate: string, federation: string, origin: string, gender: string)
 
     title: KI18n.i18nc("@title:window", "Add player")
     standardButtons: Kirigami.Dialog.Cancel | Kirigami.Dialog.Ok
@@ -29,7 +29,7 @@ QQC2.Dialog {
     bottomPadding: 0
 
     onAccepted: {
-        root.addPlayer(titleField.currentText, nameField.value, ratingField.value, nationalRatingField.value, playerIdField.text, birthDateField.text, federationField.text, originField.text, genderField.text);
+        root.addPlayer(titleField.currentText, nameField.value, ratingField.value, nationalRatingField.value, playerIdField.text, nationalIdField.text, birthDateField.text, federationField.text, originField.text, genderField.text);
     }
 
     header: Kirigami.DialogHeader {
@@ -73,6 +73,7 @@ QQC2.Dialog {
                     ratingField.value = player.standardRating;
                     nationalRatingField.value = player.nationalRating;
                     playerIdField.text = player.id;
+                    nationalIdField.text = player.nationalId;
                     birthDateField.text = player.birthDate;
                     federationField.text = player.federation;
                     originField.text = player.origin;
@@ -97,6 +98,12 @@ QQC2.Dialog {
             FormCard.FormTextFieldDelegate {
                 id: playerIdField
                 label: KI18n.i18nc("@label:textbox", "Player ID")
+                placeholderText: KI18n.i18n("Optional")
+            }
+
+            FormCard.FormTextFieldDelegate {
+                id: nationalIdField
+                label: KI18n.i18nc("@label:textbox", "National ID")
                 placeholderText: KI18n.i18n("Optional")
             }
 

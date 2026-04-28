@@ -246,6 +246,7 @@ void PlayersModel::addPlayer(const QString &title,
                              int rating,
                              int nationalRating,
                              const QString &playerId,
+                             const QString &nationalId,
                              const QString &birthDate,
                              const QString &federation,
                              const QString &origin,
@@ -253,6 +254,7 @@ void PlayersModel::addPlayer(const QString &title,
 {
     const auto startingRank = m_tournament->numberOfPlayers() + 1;
     auto player = std::make_unique<Player>(startingRank, title, name, rating, nationalRating, playerId, birthDate, federation, origin, gender);
+    player->setNationalId(nationalId);
 
     if (auto ok = m_tournament->addPlayer(std::move(player)); !ok) {
         Q_EMIT errorOcurred(ok.error());
