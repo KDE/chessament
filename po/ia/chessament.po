@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-28 00:41+0000\n"
-"PO-Revision-Date: 2026-04-27 17:35+0200\n"
+"POT-Creation-Date: 2026-04-29 00:41+0000\n"
+"PO-Revision-Date: 2026-04-28 16:34+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -224,11 +224,10 @@ msgid "Player ID"
 msgstr "ID de Jocator"
 
 #: playersmodel.cpp:214
-#, fuzzy, kde-format
-#| msgid "Optional"
+#, kde-format
 msgctxt "@title:column Player National ID"
 msgid "National ID"
-msgstr "Optional"
+msgstr "IN National"
 
 #: playersmodel.cpp:216
 #, kde-format
@@ -269,43 +268,51 @@ msgctxt "@label:textbox"
 msgid "Name"
 msgstr "Nomine"
 
-#: qml/AddPlayerDialog.qml:85
+#: qml/AddPlayerDialog.qml:86
 msgctxt "@label:textbox"
 msgid "Rating"
 msgstr "Evalutation"
 
-#: qml/AddPlayerDialog.qml:92
+#: qml/AddPlayerDialog.qml:93
 msgctxt "@label:textbox"
 msgid "National rating"
 msgstr ""
 
-#: qml/AddPlayerDialog.qml:99
+#: qml/AddPlayerDialog.qml:100
 msgctxt "@label:textbox"
 msgid "Player ID"
 msgstr "ID de Jocator"
 
-#: qml/AddPlayerDialog.qml:100 qml/AddPlayerDialog.qml:106
-#: qml/AddPlayerDialog.qml:112 qml/AddPlayerDialog.qml:118
-#: qml/AddPlayerDialog.qml:124
+#: qml/AddPlayerDialog.qml:101 qml/AddPlayerDialog.qml:107
+#: qml/AddPlayerDialog.qml:113 qml/AddPlayerDialog.qml:119
+#: qml/AddPlayerDialog.qml:125 qml/AddPlayerDialog.qml:131
 msgid "Optional"
 msgstr "Optional"
 
-#: qml/AddPlayerDialog.qml:105
+#: qml/AddPlayerDialog.qml:106
+#, fuzzy
+#| msgctxt "@title:column Player National ID"
+#| msgid "National ID"
+msgctxt "@label:textbox"
+msgid "National ID"
+msgstr "IN National"
+
+#: qml/AddPlayerDialog.qml:112
 msgctxt "@label:textbox"
 msgid "Birth date"
 msgstr ""
 
-#: qml/AddPlayerDialog.qml:111 qml/TournamentSettingsInformation.qml:38
+#: qml/AddPlayerDialog.qml:118 qml/TournamentSettingsInformation.qml:38
 msgctxt "@label:textbox"
 msgid "Federation"
 msgstr "Federation"
 
-#: qml/AddPlayerDialog.qml:117
+#: qml/AddPlayerDialog.qml:124
 msgctxt "@label:textbox"
 msgid "Origin"
 msgstr "Origine"
 
-#: qml/AddPlayerDialog.qml:123
+#: qml/AddPlayerDialog.qml:130
 msgctxt "@label:textbox"
 msgid "Gender"
 msgstr "Genere"

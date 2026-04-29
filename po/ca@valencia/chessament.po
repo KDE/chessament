@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-28 00:41+0000\n"
-"PO-Revision-Date: 2026-04-26 08:45+0200\n"
+"POT-Creation-Date: 2026-04-29 00:41+0000\n"
+"PO-Revision-Date: 2026-04-28 08:59+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 26.04.0\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #: byesmodel.cpp:66
 #, kde-format
@@ -227,12 +227,10 @@ msgid "Player ID"
 msgstr "ID de jugador"
 
 #: playersmodel.cpp:214
-#, fuzzy, kde-format
-#| msgctxt "@title:column Player National Rating"
-#| msgid "National Rating"
+#, kde-format
 msgctxt "@title:column Player National ID"
 msgid "National ID"
-msgstr "Puntuació nacional"
+msgstr "ID nacional"
 
 #: playersmodel.cpp:216
 #, kde-format
@@ -273,43 +271,51 @@ msgctxt "@label:textbox"
 msgid "Name"
 msgstr "Nom"
 
-#: qml/AddPlayerDialog.qml:85
+#: qml/AddPlayerDialog.qml:86
 msgctxt "@label:textbox"
 msgid "Rating"
 msgstr "Puntuació"
 
-#: qml/AddPlayerDialog.qml:92
+#: qml/AddPlayerDialog.qml:93
 msgctxt "@label:textbox"
 msgid "National rating"
 msgstr "Puntuació nacional"
 
-#: qml/AddPlayerDialog.qml:99
+#: qml/AddPlayerDialog.qml:100
 msgctxt "@label:textbox"
 msgid "Player ID"
 msgstr "ID de jugador"
 
-#: qml/AddPlayerDialog.qml:100 qml/AddPlayerDialog.qml:106
-#: qml/AddPlayerDialog.qml:112 qml/AddPlayerDialog.qml:118
-#: qml/AddPlayerDialog.qml:124
+#: qml/AddPlayerDialog.qml:101 qml/AddPlayerDialog.qml:107
+#: qml/AddPlayerDialog.qml:113 qml/AddPlayerDialog.qml:119
+#: qml/AddPlayerDialog.qml:125 qml/AddPlayerDialog.qml:131
 msgid "Optional"
 msgstr "Opcional"
 
-#: qml/AddPlayerDialog.qml:105
+#: qml/AddPlayerDialog.qml:106
+#, fuzzy
+#| msgctxt "@title:column Player National ID"
+#| msgid "National ID"
+msgctxt "@label:textbox"
+msgid "National ID"
+msgstr "ID nacional"
+
+#: qml/AddPlayerDialog.qml:112
 msgctxt "@label:textbox"
 msgid "Birth date"
 msgstr "Data de naixement"
 
-#: qml/AddPlayerDialog.qml:111 qml/TournamentSettingsInformation.qml:38
+#: qml/AddPlayerDialog.qml:118 qml/TournamentSettingsInformation.qml:38
 msgctxt "@label:textbox"
 msgid "Federation"
 msgstr "Federació"
 
-#: qml/AddPlayerDialog.qml:117
+#: qml/AddPlayerDialog.qml:124
 msgctxt "@label:textbox"
 msgid "Origin"
 msgstr "Origen"
 
-#: qml/AddPlayerDialog.qml:123
+#: qml/AddPlayerDialog.qml:130
 msgctxt "@label:textbox"
 msgid "Gender"
 msgstr "Gènere"

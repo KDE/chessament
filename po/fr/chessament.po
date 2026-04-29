@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-28 00:41+0000\n"
-"PO-Revision-Date: 2026-04-22 20:50+0200\n"
+"POT-Creation-Date: 2026-04-29 00:41+0000\n"
+"PO-Revision-Date: 2026-04-27 10:15+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: fr\n"
 "Language: fr\n"
@@ -252,7 +252,7 @@ msgstr "Origine"
 #, kde-format
 msgctxt "@title:column Player Gender"
 msgid "Gender"
-msgstr ""
+msgstr "Genre"
 
 #: qml/AddPlayerDialog.qml:19
 msgctxt "@title:window"
@@ -269,46 +269,54 @@ msgctxt "@label:textbox"
 msgid "Name"
 msgstr "Nom"
 
-#: qml/AddPlayerDialog.qml:85
+#: qml/AddPlayerDialog.qml:86
 msgctxt "@label:textbox"
 msgid "Rating"
 msgstr "Classement"
 
-#: qml/AddPlayerDialog.qml:92
+#: qml/AddPlayerDialog.qml:93
 msgctxt "@label:textbox"
 msgid "National rating"
 msgstr "Classement national"
 
-#: qml/AddPlayerDialog.qml:99
+#: qml/AddPlayerDialog.qml:100
 msgctxt "@label:textbox"
 msgid "Player ID"
 msgstr "Identifiant du joueur"
 
-#: qml/AddPlayerDialog.qml:100 qml/AddPlayerDialog.qml:106
-#: qml/AddPlayerDialog.qml:112 qml/AddPlayerDialog.qml:118
-#: qml/AddPlayerDialog.qml:124
+#: qml/AddPlayerDialog.qml:101 qml/AddPlayerDialog.qml:107
+#: qml/AddPlayerDialog.qml:113 qml/AddPlayerDialog.qml:119
+#: qml/AddPlayerDialog.qml:125 qml/AddPlayerDialog.qml:131
 msgid "Optional"
 msgstr "En option"
 
-#: qml/AddPlayerDialog.qml:105
+#: qml/AddPlayerDialog.qml:106
+#, fuzzy
+#| msgctxt "@title:column Player National Rating"
+#| msgid "National Rating"
+msgctxt "@label:textbox"
+msgid "National ID"
+msgstr "Classement national"
+
+#: qml/AddPlayerDialog.qml:112
 msgctxt "@label:textbox"
 msgid "Birth date"
 msgstr "Date de naissance"
 
-#: qml/AddPlayerDialog.qml:111 qml/TournamentSettingsInformation.qml:38
+#: qml/AddPlayerDialog.qml:118 qml/TournamentSettingsInformation.qml:38
 msgctxt "@label:textbox"
 msgid "Federation"
 msgstr "Fédération"
 
-#: qml/AddPlayerDialog.qml:117
+#: qml/AddPlayerDialog.qml:124
 msgctxt "@label:textbox"
 msgid "Origin"
 msgstr "Origine"
 
-#: qml/AddPlayerDialog.qml:123
+#: qml/AddPlayerDialog.qml:130
 msgctxt "@label:textbox"
 msgid "Gender"
-msgstr ""
+msgstr "Genre"
 
 #: qml/AddTiebreakDialog.qml:20
 msgctxt "@title:window"
@@ -944,17 +952,14 @@ msgid "Name"
 msgstr "Nom"
 
 #: settings/RatingListsPage.qml:61
-#, fuzzy
-#| msgctxt "@info:label"
-#| msgid "Rating list URL"
 msgctxt "@info:label"
 msgid "Rating list file or URL"
-msgstr "URL de la liste des notations"
+msgstr "URL ou fichier de la liste des notations"
 
 #: settings/RatingListsPage.qml:66
 msgctxt "@action:button"
 msgid "Select file"
-msgstr ""
+msgstr "Sélectionner un fichier"
 
 #: settings/RatingListsPage.qml:82
 msgctxt "@title:window"
@@ -1051,17 +1056,16 @@ msgstr "Joueur « %1 » non valable pour le couplage « %2 »."
 
 #: tournament/ratinglists/ratinglist.cpp:132
 #: tournament/ratinglists/ratinglist.cpp:149
-#, fuzzy, kde-format
-#| msgid "Couldn't open file"
+#, kde-format
 msgctxt "@info"
 msgid "Could not open file."
-msgstr "Impossible d'ouvrir le fichier"
+msgstr "Impossible d'ouvrir le fichier."
 
 #: tournament/ratinglists/ratinglist.cpp:144
 #, kde-format
 msgctxt "@info"
 msgid "Could not open file: the file does not exists."
-msgstr ""
+msgstr "Impossible d'ouvrir le fichier : le fichier n'existe pas."
 
 #: tournament/ratinglists/ratinglist.cpp:161
 #, kde-format
@@ -1082,12 +1086,12 @@ msgid "Couldn't download rating list: %1"
 msgstr "Impossible de télécharger la liste des notations : %1"
 
 #: tournament/ratinglists/ratinglist.cpp:189
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Couldn't download rating list: %1"
+#, kde-format
 msgctxt "@info"
 msgid "Could not download rating list from %1 (unsupported protocol)."
-msgstr "Impossible de télécharger la liste des notations : %1"
+msgstr ""
+"Impossible de télécharger la liste des notations à partir de %1 (Protocole "
+"non pris en charge)"
 
 #: tournament/ratinglists/ratinglist.cpp:202
 #, kde-format

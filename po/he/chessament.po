@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-28 00:41+0000\n"
-"PO-Revision-Date: 2026-04-20 20:17+0300\n"
+"POT-Creation-Date: 2026-04-29 00:41+0000\n"
+"PO-Revision-Date: 2026-04-28 09:02+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -225,12 +225,10 @@ msgid "Player ID"
 msgstr "מס׳ שחקן"
 
 #: playersmodel.cpp:214
-#, fuzzy, kde-format
-#| msgctxt "@title:column Player National Rating"
-#| msgid "National Rating"
+#, kde-format
 msgctxt "@title:column Player National ID"
 msgid "National ID"
-msgstr "דירוג לאומי"
+msgstr "מזהה לאומי"
 
 #: playersmodel.cpp:216
 #, kde-format
@@ -254,7 +252,7 @@ msgstr "מקור"
 #, kde-format
 msgctxt "@title:column Player Gender"
 msgid "Gender"
-msgstr ""
+msgstr "מגדר"
 
 #: qml/AddPlayerDialog.qml:19
 msgctxt "@title:window"
@@ -271,46 +269,54 @@ msgctxt "@label:textbox"
 msgid "Name"
 msgstr "שם"
 
-#: qml/AddPlayerDialog.qml:85
+#: qml/AddPlayerDialog.qml:86
 msgctxt "@label:textbox"
 msgid "Rating"
 msgstr "דירוג"
 
-#: qml/AddPlayerDialog.qml:92
+#: qml/AddPlayerDialog.qml:93
 msgctxt "@label:textbox"
 msgid "National rating"
 msgstr "דירוג לאומי"
 
-#: qml/AddPlayerDialog.qml:99
+#: qml/AddPlayerDialog.qml:100
 msgctxt "@label:textbox"
 msgid "Player ID"
 msgstr "מס׳ שחקן"
 
-#: qml/AddPlayerDialog.qml:100 qml/AddPlayerDialog.qml:106
-#: qml/AddPlayerDialog.qml:112 qml/AddPlayerDialog.qml:118
-#: qml/AddPlayerDialog.qml:124
+#: qml/AddPlayerDialog.qml:101 qml/AddPlayerDialog.qml:107
+#: qml/AddPlayerDialog.qml:113 qml/AddPlayerDialog.qml:119
+#: qml/AddPlayerDialog.qml:125 qml/AddPlayerDialog.qml:131
 msgid "Optional"
 msgstr "רשות"
 
-#: qml/AddPlayerDialog.qml:105
+#: qml/AddPlayerDialog.qml:106
+#, fuzzy
+#| msgctxt "@title:column Player National ID"
+#| msgid "National ID"
+msgctxt "@label:textbox"
+msgid "National ID"
+msgstr "מזהה לאומי"
+
+#: qml/AddPlayerDialog.qml:112
 msgctxt "@label:textbox"
 msgid "Birth date"
 msgstr "תאריך לידה"
 
-#: qml/AddPlayerDialog.qml:111 qml/TournamentSettingsInformation.qml:38
+#: qml/AddPlayerDialog.qml:118 qml/TournamentSettingsInformation.qml:38
 msgctxt "@label:textbox"
 msgid "Federation"
 msgstr "התאחדות"
 
-#: qml/AddPlayerDialog.qml:117
+#: qml/AddPlayerDialog.qml:124
 msgctxt "@label:textbox"
 msgid "Origin"
 msgstr "מקור"
 
-#: qml/AddPlayerDialog.qml:123
+#: qml/AddPlayerDialog.qml:130
 msgctxt "@label:textbox"
 msgid "Gender"
-msgstr ""
+msgstr "מגדר"
 
 #: qml/AddTiebreakDialog.qml:20
 msgctxt "@title:window"
@@ -951,17 +957,14 @@ msgid "Name"
 msgstr "שם"
 
 #: settings/RatingListsPage.qml:61
-#, fuzzy
-#| msgctxt "@info:label"
-#| msgid "Rating list URL"
 msgctxt "@info:label"
 msgid "Rating list file or URL"
-msgstr "כתובת רשימת דירוג"
+msgstr "כתובת או קובץ רשימת דירוג"
 
 #: settings/RatingListsPage.qml:66
 msgctxt "@action:button"
 msgid "Select file"
-msgstr ""
+msgstr "בחירת קובץ"
 
 #: settings/RatingListsPage.qml:82
 msgctxt "@title:window"
@@ -1056,17 +1059,16 @@ msgstr "שחקן שגוי „%1” לשיבוץ „%2”."
 
 #: tournament/ratinglists/ratinglist.cpp:132
 #: tournament/ratinglists/ratinglist.cpp:149
-#, fuzzy, kde-format
-#| msgid "Couldn't open file"
+#, kde-format
 msgctxt "@info"
 msgid "Could not open file."
-msgstr "לא ניתן לפתוח את הקובץ"
+msgstr "לא ניתן לפתוח את הקובץ."
 
 #: tournament/ratinglists/ratinglist.cpp:144
 #, kde-format
 msgctxt "@info"
 msgid "Could not open file: the file does not exists."
-msgstr ""
+msgstr "לא ניתן לפתוח את הקובץ: הקובץ לא קיים."
 
 #: tournament/ratinglists/ratinglist.cpp:161
 #, kde-format
@@ -1087,12 +1089,10 @@ msgid "Couldn't download rating list: %1"
 msgstr "לא ניתן להוריד את רשימת הדירוג‏: %1"
 
 #: tournament/ratinglists/ratinglist.cpp:189
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Couldn't download rating list: %1"
+#, kde-format
 msgctxt "@info"
 msgid "Could not download rating list from %1 (unsupported protocol)."
-msgstr "לא ניתן להוריד את רשימת הדירוג‏: %1"
+msgstr "לא ניתן להוריד את רשימת הדירוג‏ דרך %1 (הפרוטוקול לא נתמך)."
 
 #: tournament/ratinglists/ratinglist.cpp:202
 #, kde-format
