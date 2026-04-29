@@ -112,6 +112,7 @@
       <caption>Players view</caption>
       <caption xml:lang="ca">Vista dels jugadors</caption>
       <caption xml:lang="ca-valencia">Vista dels jugadors</caption>
+      <caption xml:lang="fr">Affichage des joueurs</caption>
       <caption xml:lang="he">תצוגת שחקנים</caption>
       <caption xml:lang="ka">მოთამაშის ფერი</caption>
       <caption xml:lang="nl">Weergave van spelers</caption>
@@ -126,6 +127,7 @@
       <caption>Pairings view</caption>
       <caption xml:lang="ca">Vista dels aparellaments</caption>
       <caption xml:lang="ca-valencia">Vista dels aparellaments</caption>
+      <caption xml:lang="fr">Affichage des appariements</caption>
       <caption xml:lang="he">תצוגת שיבוצים</caption>
       <caption xml:lang="ka">დაწყვილებების ხედი</caption>
       <caption xml:lang="nl">Weergave van paren</caption>
@@ -140,6 +142,7 @@
       <caption>Standings view</caption>
       <caption xml:lang="ca">Vista de la classificació</caption>
       <caption xml:lang="ca-valencia">Vista de la classificació</caption>
+      <caption xml:lang="fr">Affichage des classements</caption>
       <caption xml:lang="he">תצוגת עמדות</caption>
       <caption xml:lang="ka">შედეგების ხედი</caption>
       <caption xml:lang="nl">Weergave van standen</caption>

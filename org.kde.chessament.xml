@@ -10,10 +10,14 @@
     <comment xml:lang="ca">Esdeveniment del Chessament</comment>
     <comment xml:lang="ca@valencia">Esdeveniment de Chessament</comment>
     <comment xml:lang="es">Evento de Chessament</comment>
+    <comment xml:lang="fr">Évènement de Chessament</comment>
     <comment xml:lang="he">אירוע תחרות שחמט</comment>
+    <comment xml:lang="ia">Evento de Chessament</comment>
     <comment xml:lang="ka">Chessament-ის მოვლენა</comment>
     <comment xml:lang="nl">Schaaktoernooi-evenement</comment>
     <comment xml:lang="pt_BR">Evento do Chessament</comment>
+    <comment xml:lang="sl">Chessament dogodek</comment>
+    <comment xml:lang="tr">Chessament etkinliği</comment>
     <comment xml:lang="uk">подія Chessament</comment>
     <glob pattern="*.chessament"/>
   </mime-type>
