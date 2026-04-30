@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-29 00:41+0000\n"
-"PO-Revision-Date: 2026-04-28 07:26+0200\n"
+"PO-Revision-Date: 2026-04-29 09:37+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -288,12 +288,9 @@ msgid "Optional"
 msgstr "Neobvezno"
 
 #: qml/AddPlayerDialog.qml:106
-#, fuzzy
-#| msgctxt "@title:column Player National ID"
-#| msgid "National ID"
 msgctxt "@label:textbox"
 msgid "National ID"
-msgstr "Nacionalni ID"
+msgstr "Nacionalna ID"
 
 #: qml/AddPlayerDialog.qml:112
 msgctxt "@label:textbox"

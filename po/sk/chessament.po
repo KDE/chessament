@@ -290,9 +290,6 @@ msgid "Optional"
 msgstr "Voliteľné"
 
 #: qml/AddPlayerDialog.qml:106
-#, fuzzy
-#| msgctxt "@title:column Player National ID"
-#| msgid "National ID"
 msgctxt "@label:textbox"
 msgid "National ID"
 msgstr "Národné ID"

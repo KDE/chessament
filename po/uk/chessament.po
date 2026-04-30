@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-29 00:41+0000\n"
-"PO-Revision-Date: 2026-04-28 07:56+0300\n"
+"PO-Revision-Date: 2026-04-29 08:33+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -291,9 +291,6 @@ msgid "Optional"
 msgstr "Необов'язкове"
 
 #: qml/AddPlayerDialog.qml:106
-#, fuzzy
-#| msgctxt "@title:column Player National ID"
-#| msgid "National ID"
 msgctxt "@label:textbox"
 msgid "National ID"
 msgstr "Національний ідентифікатор"
