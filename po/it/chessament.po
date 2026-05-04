@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-29 00:41+0000\n"
-"PO-Revision-Date: 2026-04-01 23:14+0200\n"
+"PO-Revision-Date: 2026-05-03 10:44+0200\n"
 "Last-Translator: Valter Mura <valtermura@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -34,13 +34,13 @@ msgstr "Nuovo torneo…"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Import tournament report…"
-msgstr "Resoconto di importazione del torneo..."
+msgstr "Importa resoconto del torneo..."
 
 #: chessamentapplication.cpp:53
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Export tournament report…"
-msgstr "Resoconto di esportazione del torneo..."
+msgstr "Esporta resoconto del torneo..."
 
 #: controller.cpp:169
 #, kde-format
@@ -132,25 +132,25 @@ msgstr "Motore per l'abbinamento nei tornei di scacchi con sistema svizzero."
 #, kde-format
 msgctxt "Command line option description"
 msgid "Import Tournament Report File."
-msgstr "File del resoconto di importazione del torneo"
+msgstr "Importa il file di resoconto del torneo"
 
 #: main.cpp:87
 #, kde-format
 msgctxt "@info:shell Command line option description"
 msgid "Event to open."
-msgstr ""
+msgstr "Evento da aprire."
 
 #: main.cpp:106
 #, kde-format
 msgctxt "@info:shell"
 msgid "Error: Can't open an event when importing a TRF"
-msgstr ""
+msgstr "Errore: impossibile aprire un evento durante l'importazione di un TRF"
 
 #: main.cpp:115
 #, kde-format
 msgctxt "@info:shell"
 msgid "Error: Can't open more that one event"
-msgstr ""
+msgstr "Errore: impossibile aprire più di un evento"
 
 #: pairingmodel.cpp:99
 #, kde-format
@@ -225,12 +225,10 @@ msgid "Player ID"
 msgstr "ID del giocatore"
 
 #: playersmodel.cpp:214
-#, fuzzy, kde-format
-#| msgctxt "@title:column Player National Rating"
-#| msgid "National Rating"
+#, kde-format
 msgctxt "@title:column Player National ID"
 msgid "National ID"
-msgstr "Valutazione nazionale"
+msgstr "ID della nazione"
 
 #: playersmodel.cpp:216
 #, kde-format
@@ -254,7 +252,7 @@ msgstr "Origine"
 #, kde-format
 msgctxt "@title:column Player Gender"
 msgid "Gender"
-msgstr ""
+msgstr "Genere"
 
 #: qml/AddPlayerDialog.qml:19
 msgctxt "@title:window"
@@ -293,12 +291,9 @@ msgid "Optional"
 msgstr "Facoltativo"
 
 #: qml/AddPlayerDialog.qml:106
-#, fuzzy
-#| msgctxt "@title:column Player National Rating"
-#| msgid "National Rating"
 msgctxt "@label:textbox"
 msgid "National ID"
-msgstr "Valutazione nazionale"
+msgstr "ID della nazione"
 
 #: qml/AddPlayerDialog.qml:112
 msgctxt "@label:textbox"
@@ -318,7 +313,7 @@ msgstr "Origine"
 #: qml/AddPlayerDialog.qml:130
 msgctxt "@label:textbox"
 msgid "Gender"
-msgstr ""
+msgstr "Genere"
 
 #: qml/AddTiebreakDialog.qml:20
 msgctxt "@title:window"
@@ -402,17 +397,14 @@ msgid "Chessament"
 msgstr "Chessament"
 
 #: qml/Main.qml:51 qml/Main.qml:61 qml/NewTournamentDialog.qml:50
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Chessament is a chess tournament manager"
 msgctxt "@label:listbox"
 msgid "Chessament event (*.chessament)"
-msgstr "Chessament è un gestore di tornei di scacchi"
+msgstr "Evento di Chessament (*.chessament)"
 
 #: qml/Main.qml:70 qml/Main.qml:80
 msgctxt "@label:listbox"
 msgid "TRF files (*.trf *.txt)"
-msgstr ""
+msgstr "File TRF (*.trf *.txt)"
 
 #: qml/Main.qml:106
 msgctxt "@title"
@@ -481,7 +473,7 @@ msgstr "Il turno %1 è terminato."
 #: qml/PairingsPage.qml:110
 msgctxt "@action:button"
 msgid "Pair Round %1…"
-msgstr "Abbinamento turno %1…"
+msgstr "Abbina turno %1…"
 
 #: qml/PairingsPage.qml:156
 msgctxt "@info:placeholder"
@@ -496,7 +488,7 @@ msgstr "Tutte le partite del turno %1 sono terminate"
 #: qml/PairRoundDialog.qml:21
 msgctxt "@title %1 is a number >= 1"
 msgid "Pair Round %1"
-msgstr "Abbinamento turno %1"
+msgstr "Abbinamento del turno %1"
 
 #: qml/PairRoundDialog.qml:29
 msgctxt "@info"
@@ -731,7 +723,7 @@ msgstr "Impostazioni"
 #: qml/SortPlayersDialog.qml:18
 msgctxt "@title"
 msgid "Sort Players"
-msgstr "Ordinamento giocatori"
+msgstr "Ordinamento dei giocatori"
 
 #: qml/SortPlayersDialog.qml:27
 msgctxt "@info"
@@ -957,17 +949,14 @@ msgid "Name"
 msgstr "Nome"
 
 #: settings/RatingListsPage.qml:61
-#, fuzzy
-#| msgctxt "@info:label"
-#| msgid "Rating list URL"
 msgctxt "@info:label"
 msgid "Rating list file or URL"
-msgstr "URL della lista di valutazione"
+msgstr "File o URL della lista di valutazione"
 
 #: settings/RatingListsPage.qml:66
 msgctxt "@action:button"
 msgid "Select file"
-msgstr ""
+msgstr "Seleziona file"
 
 #: settings/RatingListsPage.qml:82
 msgctxt "@title:window"
@@ -1014,7 +1003,7 @@ msgstr "Posizione"
 #, kde-kuit-format
 msgctxt "@info"
 msgid "The file is not a <application>Chessament</application> event."
-msgstr ""
+msgstr "Il file non è un evento di <application>Chessament</application>."
 
 #: tournament/federations.h:118
 msgctxt "FIDE Federation"
@@ -1063,17 +1052,16 @@ msgstr "Giocatore «%1» non valido per l'abbinamento «%2»."
 
 #: tournament/ratinglists/ratinglist.cpp:132
 #: tournament/ratinglists/ratinglist.cpp:149
-#, fuzzy, kde-format
-#| msgid "Couldn't open file"
+#, kde-format
 msgctxt "@info"
 msgid "Could not open file."
-msgstr "Impossibile aprire il file"
+msgstr "Impossibile aprire il file."
 
 #: tournament/ratinglists/ratinglist.cpp:144
 #, kde-format
 msgctxt "@info"
 msgid "Could not open file: the file does not exists."
-msgstr ""
+msgstr "Impossibile aprire il file: il file non esiste."
 
 #: tournament/ratinglists/ratinglist.cpp:161
 #, kde-format
@@ -1094,12 +1082,12 @@ msgid "Couldn't download rating list: %1"
 msgstr "Impossibile scaricare la lista di valutazione: %1"
 
 #: tournament/ratinglists/ratinglist.cpp:189
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Couldn't download rating list: %1"
+#, kde-format
 msgctxt "@info"
 msgid "Could not download rating list from %1 (unsupported protocol)."
-msgstr "Impossibile scaricare la lista di valutazione: %1"
+msgstr ""
+"Impossibile scaricare la lista di valutazione da %1 (protocollo non "
+"supportato)."
 
 #: tournament/ratinglists/ratinglist.cpp:202
 #, kde-format
