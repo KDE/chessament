@@ -224,12 +224,10 @@ msgid "Player ID"
 msgstr "玩家 ID"
 
 #: playersmodel.cpp:214
-#, fuzzy, kde-format
-#| msgctxt "@title:column Player National Rating"
-#| msgid "National Rating"
+#, kde-format
 msgctxt "@title:column Player National ID"
 msgid "National ID"
-msgstr "国家级评级"
+msgstr ""
 
 #: playersmodel.cpp:216
 #, kde-format
@@ -292,12 +290,9 @@ msgid "Optional"
 msgstr "可选"
 
 #: qml/AddPlayerDialog.qml:106
-#, fuzzy
-#| msgctxt "@title:column Player National Rating"
-#| msgid "National Rating"
 msgctxt "@label:textbox"
 msgid "National ID"
-msgstr "国家级评级"
+msgstr ""
 
 #: qml/AddPlayerDialog.qml:112
 msgctxt "@label:textbox"
@@ -1050,11 +1045,10 @@ msgstr "对阵“%2”中的无效选手“%1”。"
 
 #: tournament/ratinglists/ratinglist.cpp:132
 #: tournament/ratinglists/ratinglist.cpp:149
-#, fuzzy, kde-format
-#| msgid "Couldn't open file"
+#, kde-format
 msgctxt "@info"
 msgid "Could not open file."
-msgstr "无法打开文件"
+msgstr ""
 
 #: tournament/ratinglists/ratinglist.cpp:144
 #, kde-format
@@ -1204,11 +1198,3 @@ msgstr "对阵“%2”时出现未知结果“%1”。"
 #, kde-format
 msgid "Pairing \"%1\" has no opponent."
 msgstr "对阵“%1”无对手。"
-
-#~ msgctxt "@title:column"
-#~ msgid "Sex"
-#~ msgstr "性别"
-
-#~ msgctxt "@label:textbox"
-#~ msgid "Sex"
-#~ msgstr "性别"
