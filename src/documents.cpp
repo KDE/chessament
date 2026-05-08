@@ -1,7 +1,7 @@
 // SPDX-FileCopyrightText: 2024-2025 Manuel Alcaraz Zambrano <manuel@alcarazzam.dev>
 // SPDX-License-Identifier: GPL-3.0-or-later
 
-#include "config.h"
+#include "chessamentconfig.h"
 #include "controller.h"
 #include "document.h"
 #include "playersmodel.h"

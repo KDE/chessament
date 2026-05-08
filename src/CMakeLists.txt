@@ -106,7 +106,7 @@ target_link_libraries(chessament_static PUBLIC
 target_include_directories(chessament_static PUBLIC ${CMAKE_BINARY_DIR})
 
 kconfig_target_kcfg_file(chessament_static
-    FILE config.kcfg
+    FILE chessamentconfig.kcfg
     CLASS_NAME Config
     MUTATORS
     GENERATE_PROPERTIES
@@ -133,7 +133,7 @@ target_sources(chessament PRIVATE ${CHESSAMENT_ICON})
 
 install(TARGETS chessament ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 
-install(FILES config.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR})
+install(FILES chessamentconfig.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR})
 
 if(BUILD_DOCS)
     include(ECMGenerateQDoc)
