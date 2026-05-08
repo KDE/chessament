@@ -16,7 +16,7 @@ class TrfWriter : public QObject
     Q_OBJECT
 
 private:
-    explicit TrfWriter(Tournament *tournament, Trf::Options options, int maxRound = -1);
+    explicit TrfWriter(Tournament *tournament, Trf::Options options, std::optional<int> maxRound = std::nullopt);
 
     void write(QTextStream &stream);
 

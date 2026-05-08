@@ -13,7 +13,7 @@
 constexpr auto space = " "_L1;
 constexpr auto newLine = '\n'_L1;
 
-TrfWriter::TrfWriter(Tournament *tournament, Trf::Options options, int maxRound)
+TrfWriter::TrfWriter(Tournament *tournament, Trf::Options options, std::optional<int> maxRound)
     : m_tournament(tournament)
     , m_options(options)
     , m_state(m_tournament->state(maxRound))

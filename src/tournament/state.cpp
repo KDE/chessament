@@ -3,13 +3,13 @@
 
 #include "state.h"
 
-State::State(Tournament *tournament, int maxRound)
+State::State(Tournament *tournament, std::optional<int> maxRound)
     : m_tournament(tournament)
 {
-    if (maxRound < 0) {
+    if (!maxRound) {
         m_maxRound = m_tournament->numberOfRounds();
     } else {
-        m_maxRound = maxRound;
+        m_maxRound = *maxRound;
     }
 
     m_pairingsByPlayer = m_tournament->pairingsByPlayer(m_maxRound);

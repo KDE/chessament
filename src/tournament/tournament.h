@@ -177,7 +177,7 @@ public:
      *
      * \a maxRound The number of the highest round to consider. Negative number to use all rounds.
      */
-    QHash<Player *, QList<Pairing *>> pairingsByPlayer(int maxRound = -1);
+    QHash<Player *, QList<Pairing *>> pairingsByPlayer(std::optional<int> maxRound = std::nullopt);
 
     QList<Pairing *> pairingsOfPlayer(Player *player);
 
@@ -246,7 +246,7 @@ public:
      *
      * If \a round is negative, it sorts the pairings of all rounds.
      */
-    std::expected<void, QString> sortPairings(int round = -1);
+    std::expected<void, QString> sortPairings(std::optional<int> round = std::nullopt);
 
     /*!
      * Returns whether \a round has finished.
@@ -302,7 +302,7 @@ public:
      *
      * \a maxRound The number of the highest round to include.
      */
-    State state(int maxRound = -1);
+    State state(std::optional<int> maxRound = std::nullopt);
 
     /*!
      * \property Tournament::numberOfPlayers
@@ -358,7 +358,7 @@ public:
      *
      * \sa exportTrf()
      */
-    QString toTrf(Trf::Options options = {}, int maxRound = -1);
+    QString toTrf(Trf::Options options = {}, std::optional<int> maxRound = std::nullopt);
 
     /*!
      * Imports the tournament from a Tournament Report File (TRF).

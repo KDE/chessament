@@ -359,11 +359,11 @@ QMap<QString, Player *> Tournament::playersById()
     return players;
 }
 
-QHash<Player *, QList<Pairing *>> Tournament::pairingsByPlayer(int maxRound)
+QHash<Player *, QList<Pairing *>> Tournament::pairingsByPlayer(std::optional<int> maxRound)
 {
     QHash<Player *, QList<Pairing *>> result;
 
-    const auto r = maxRound < 0 ? m_rounds.size() : maxRound;
+    const auto r = maxRound ? *maxRound : m_rounds.size();
     for (std::size_t i = 0; i < r; i++) {
         if (i >= m_rounds.size()) {
             break;
@@ -798,12 +798,12 @@ int Tournament::numberOfRatedPlayers()
     });
 }
 
-std::expected<void, QString> Tournament::sortPairings(int round)
+std::expected<void, QString> Tournament::sortPairings(std::optional<int> round)
 {
     Q_ASSERT(round != 0);
 
-    const auto firstRound = round < 0 ? 0 : round - 1;
-    const auto lastRound = round < 0 ? m_rounds.size() : round;
+    const auto firstRound = round ? *round - 1 : 0;
+    const auto lastRound = round ? *round : m_rounds.size();
 
     for (size_t i = firstRound; i < lastRound; i++) {
         auto &pairings = m_rounds[i]->m_pairings;
@@ -1030,7 +1030,7 @@ Tournament::InitialColor Tournament::initialColor()
     return m_initialColor;
 }
 
-State Tournament::state(int maxRound)
+State Tournament::state(std::optional<int> maxRound)
 {
     return State{this, maxRound};
 }
@@ -1146,7 +1146,7 @@ std::expected<void, QString> Tournament::readTrf(QTextStream trf)
     return reader.read(&trf);
 }
 
-QString Tournament::toTrf(Trf::Options options, int maxRound)
+QString Tournament::toTrf(Trf::Options options, std::optional<int> maxRound)
 {
     QString result;
     QTextStream stream(&result);

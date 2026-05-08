@@ -8,7 +8,7 @@
 class State
 {
 public:
-    explicit State(Tournament *tournament, int maxRound = -1);
+    explicit State(Tournament *tournament, std::optional<int> maxRound = std::nullopt);
 
     [[nodiscard]] size_t lastRound() const;
 
