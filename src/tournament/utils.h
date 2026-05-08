@@ -14,4 +14,6 @@ QString normalize(const QString &text);
 QUrl maybeAddExtension(const QUrl &fileUrl, const QString &extension);
 
 QString userAgent();
+
+void updateObject(QJsonObject *destination, const QJsonObject &origin);
 }

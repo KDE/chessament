@@ -17,6 +17,7 @@ ecm_add_qml_module(chessament_static
         qml/components/RatingField.qml
         qml/components/StartingRankField.qml
         qml/components/TiebreakDelegate.qml
+        qml/components/TimeControlDelegate.qml
 
         qml/Main.qml
         qml/TablePage.qml
@@ -63,6 +64,7 @@ ecm_add_qml_module(chessament_static
         searchplayersmodel.cpp
         standingsmodel.cpp
         tiebreakmodel.cpp
+        timecontrolmodel.cpp
     IMPORTS
         org.kde.kirigami
         org.kde.ki18n

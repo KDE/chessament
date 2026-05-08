@@ -24,12 +24,13 @@ enum class Field {
     TournamentType,
     ChiefArbiter,
     DeputyChiefArbiter,
-    TimeControl,
+    TimeControlDescription,
     Calendar,
     NumberOfRounds,
     InitialColor,
     ProgramName,
     Tiebreaks,
+    TimeControl,
     Unknown,
 };
 Q_ENUM_NS(Field)

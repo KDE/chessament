@@ -35,7 +35,7 @@ QString reportFieldString(Trf::Field field)
         return QStringLiteral("102");
     case Trf::Field::DeputyChiefArbiter:
         return QStringLiteral("112");
-    case Trf::Field::TimeControl:
+    case Trf::Field::TimeControlDescription:
         return QStringLiteral("122");
     case Trf::Field::Calendar:
         return QStringLiteral("132");
@@ -47,6 +47,8 @@ QString reportFieldString(Trf::Field field)
         return "182"_L1;
     case Trf::Field::Tiebreaks:
         return "212"_L1;
+    case Trf::Field::TimeControl:
+        return "222"_L1;
     case Trf::Field::Unknown:
         return {};
     }
@@ -80,13 +82,15 @@ Trf::Field reportFieldForString(QStringView number)
     } else if (number == QStringLiteral("112")) {
         return Trf::Field::DeputyChiefArbiter;
     } else if (number == QStringLiteral("122")) {
-        return Trf::Field::TimeControl;
+        return Trf::Field::TimeControlDescription;
     } else if (number == QStringLiteral("132")) {
         return Trf::Field::Calendar;
     } else if (number == "142"_L1) {
         return Trf::Field::NumberOfRounds;
     } else if (number == "212"_L1) {
         return Trf::Field::Tiebreaks;
+    } else if (number == "222"_L1) {
+        return Trf::Field::TimeControl;
     }
     return Trf::Field::Unknown;
 }

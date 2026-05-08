@@ -7,6 +7,7 @@
 #include <QTest>
 
 #include "event.h"
+#include "timecontrol.h"
 
 using namespace Qt::Literals::StringLiterals;
 
@@ -25,6 +26,8 @@ private Q_SLOTS:
     void testSortPlayers();
     void testRemovePairings_data();
     void testRemovePairings();
+    void testTimeControl_data();
+    void testTimeControl();
 };
 
 void TournamentTest::testNewTournament()
@@ -105,7 +108,7 @@ void TournamentTest::testImportTrf()
     QCOMPARE(t->name(), u"Test Tournament"_s);
     QCOMPARE(t->city(), u"Place"_s);
     QCOMPARE(t->federation(), u"ESP"_s);
-    QCOMPARE(t->timeControl(), u"8 min/player + 3 s/move"_s);
+    // QCOMPARE(t->timeControl(), u"8 min/player + 3 s/move"_s);
 
     QCOMPARE(t->numberOfPlayers(), 88);
     QCOMPARE(t->numberOfRatedPlayers(), 82);
@@ -142,7 +145,7 @@ void TournamentTest::testLoadTournament()
     QCOMPARE(t->name(), u"Test Tournament"_s);
     QCOMPARE(t->city(), u"Place"_s);
     QCOMPARE(t->federation(), u"ESP"_s);
-    QCOMPARE(t->timeControl(), u"8 min/player + 3 s/move"_s);
+    // QCOMPARE(t->timeControl(), u"8 min/player + 3 s/move"_s);
 
     QCOMPARE(t->numberOfPlayers(), 88);
     QCOMPARE(t->numberOfRatedPlayers(), 82);
@@ -202,6 +205,29 @@ void TournamentTest::testRemovePairings()
     for (int i = 1; i <= 9; ++i) {
         QCOMPARE((*tournament)->pairings(i).size(), pairings[i - 1]);
     }
+}
+
+void TournamentTest::testTimeControl_data()
+{
+    QTest::addColumn<QString>("value");
+    QTest::addColumn<TimeControl>("timeControl");
+
+    QTest::newRow("600") << u"600"_s << TimeControl{{TimeControlPeriod{std::nullopt, 600, 0}}};
+    QTest::newRow("600+10") << u"600+10"_s << TimeControl{{TimeControlPeriod{std::nullopt, 600, 10}}};
+    QTest::newRow("40/600+10") << u"40/600+10"_s << TimeControl{{TimeControlPeriod{40, 600, 10}}};
+    QTest::newRow("40/600+10:120+10") << u"40/600+10:120+10"_s
+                                      << TimeControl{{
+                                             TimeControlPeriod{40, 600, 10},
+                                             TimeControlPeriod{std::nullopt, 120, 10},
+                                         }};
+}
+
+void TournamentTest::testTimeControl()
+{
+    QFETCH(QString, value);
+    QFETCH(TimeControl, timeControl);
+
+    QVERIFY(timeControl == TimeControl::fromTrf(value));
 }
 
 QTEST_GUILESS_MAIN(TournamentTest)

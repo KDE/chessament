@@ -12,6 +12,7 @@ target_sources(tournament PRIVATE
     round.cpp
     standing.cpp
     state.cpp
+    timecontrol.cpp
     tournament.cpp
     utils.cpp
 )
