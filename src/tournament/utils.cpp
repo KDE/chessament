@@ -4,6 +4,7 @@
 #include "utils.h"
 
 #include <QCoreApplication>
+#include <QJsonObject>
 #include <QRegularExpression>
 
 using namespace Qt::StringLiterals;
@@ -29,5 +30,12 @@ QString userAgent()
 {
     static QString userAgent = u"Chessament/"_s % QCoreApplication::applicationVersion() % u" (+https://apps.kde.org/chessament/;)"_s;
     return userAgent;
+}
+
+void updateObject(QJsonObject *destination, const QJsonObject &origin)
+{
+    for (auto [key, value] : origin.asKeyValueRange()) {
+        (*destination)[key.toString()] = value;
+    }
 }
 }

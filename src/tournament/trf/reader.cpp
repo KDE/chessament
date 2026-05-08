@@ -132,7 +132,7 @@ std::expected<void, QString> TrfReader::readField(QStringView line)
         break;
     }
     case Trf::Field::TimeControl:
-        m_tournament->setTimeControl(value.trimmed().toString());
+        // m_tournament->setTimeControl(value.trimmed().toString());
         break;
     case Trf::Field::Calendar: {
         if (const auto ok = readDates(value); !ok) {

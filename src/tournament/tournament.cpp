@@ -28,6 +28,8 @@ Tournament::Tournament(Event *event)
     : m_event(event)
 {
     m_tiebreaks.push_back(std::make_unique<Points>());
+    m_timeControl = TimeControl::fromJson(
+        QJsonValue::fromJson(R"({"periods": [{"time": 5400, "increment": 30}, {"moves": 40, "time": 900, "increment": 30}]})").toObject());
 }
 
 QString Tournament::id() const
@@ -108,19 +110,18 @@ void Tournament::saveArbiters()
     setOption("arbiters"_L1, text);
 }
 
-QString Tournament::timeControl() const
+TimeControl &Tournament::timeControl()
 {
     return m_timeControl;
 }
 
-void Tournament::setTimeControl(const QString &timeControl)
+void Tournament::saveTimeControl()
 {
-    if (m_timeControl == timeControl) {
-        return;
-    }
-    m_timeControl = timeControl;
-    setOption(u"time_control"_s, timeControl);
-    Q_EMIT timeControlChanged();
+    const auto text = QJsonDocument{m_timeControl.json()}.toJson(QJsonDocument::JsonFormat::Compact);
+
+    qDebug() << m_timeControl.json();
+
+    setOption(u"time_control"_s, text);
 }
 
 std::vector<std::unique_ptr<Tiebreak>> &Tournament::tiebreaks()
@@ -1125,7 +1126,7 @@ QJsonObject Tournament::toJson() const
     tournament["slug"_L1] = Utils::normalize(m_name.toLower()).replace(" "_L1, "-"_L1);
     tournament["federation"_L1] = m_federation;
     tournament["city"_L1] = m_city;
-    tournament["time_control"_L1] = m_timeControl;
+    // tournament["time_control"_L1] = m_timeControl;
     tournament["number_rounds"_L1] = m_numberOfRounds;
 
     QJsonArray players;
@@ -1160,9 +1161,9 @@ void Tournament::read(const QJsonObject &json)
         if (const auto v = tournament[QStringLiteral("federation")]; v.isString()) {
             m_federation = v.toString();
         }
-        if (const auto v = tournament[QStringLiteral("time_control")]; v.isString()) {
+        /*if (const auto v = tournament[QStringLiteral("time_control")]; v.isString()) {
             m_timeControl = v.toString();
-        }
+        }*/
         if (const auto v = tournament[QStringLiteral("number_of_rounds")]; v.isDouble()) {
             m_numberOfRounds = v.toInt();
         }
@@ -1292,7 +1293,7 @@ std::expected<void, QString> Tournament::loadOptions()
     setName(option(u"name"_s).toString());
     setCity(option(u"city"_s).toString());
     setFederation(option(u"federation"_s).toString());
-    setTimeControl(option(u"time_control"_s).toString());
+    // setTimeControl(option(u"time_control"_s).toString());
     setNumberOfRounds(option(u"number_of_rounds"_s).toInt());
     setCurrentRound(option(u"current_round"_s).toInt());
     setInitialColor(Tournament::InitialColor(option(u"initial_color"_s).toInt()));

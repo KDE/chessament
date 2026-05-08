@@ -35,7 +35,7 @@ void TrfWriter::writeTournamentInformation(QTextStream &stream)
     stream << Trf::reportFieldString(Trf::Field::NumberOfPlayers) << space << m_tournament->numberOfPlayers() << newLine;
     stream << Trf::reportFieldString(Trf::Field::NumberOfRatedPlayers) << space << m_tournament->numberOfRatedPlayers() << newLine;
     writeArbiters(stream);
-    stream << Trf::reportFieldString(Trf::Field::TimeControl) << space << m_tournament->timeControl() << newLine;
+    // stream << Trf::reportFieldString(Trf::Field::TimeControl) << space << m_tournament->timeControl() << newLine;
     stream << Trf::reportFieldString(Trf::Field::ProgramName) << space << "Chessament %1"_L1.arg(QCoreApplication::applicationVersion()) << newLine;
     stream << Trf::reportFieldString(Trf::Field::NumberOfRounds) << space << m_tournament->numberOfRounds() << newLine;
     writeTiebreaks(stream);

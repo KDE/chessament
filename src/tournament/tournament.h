@@ -15,6 +15,7 @@
 #include <QTextStream>
 
 #include <expected>
+#include <qjsonobject.h>
 
 #include "arbiter.h"
 #include "pairingengine.h"
@@ -22,6 +23,7 @@
 #include "round.h"
 #include "standing.h"
 #include "tiebreaks/tiebreak.h"
+#include "timecontrol.h"
 #include "trf/trf.h"
 
 class Document;
@@ -44,7 +46,6 @@ class Tournament : public QObject
     Q_PROPERTY(QString name READ name WRITE setName NOTIFY nameChanged)
     Q_PROPERTY(QString city READ city WRITE setCity NOTIFY cityChanged)
     Q_PROPERTY(QString federation READ federation WRITE setFederation NOTIFY federationChanged)
-    Q_PROPERTY(QString timeControl READ timeControl WRITE setTimeControl NOTIFY timeControlChanged)
 
     Q_PROPERTY(int numberOfPlayers READ numberOfPlayers NOTIFY numberOfPlayersChanged)
     Q_PROPERTY(int numberOfRatedPlayers READ numberOfRatedPlayers NOTIFY numberOfRatedPlayersChanged)
@@ -88,13 +89,9 @@ public:
 
     void saveArbiters();
 
-    /*!
-     * \property Tournament::timeControl
-     * \brief the time control of the tournament
-     *
-     * This property holds the time control of the tournament.
-     */
-    [[nodiscard]] QString timeControl() const;
+    TimeControl &timeControl();
+
+    void saveTimeControl();
 
     /*!
      * \property Tournament::tiebreaks
@@ -385,7 +382,6 @@ public Q_SLOTS:
     void setName(const QString &name);
     void setCity(const QString &city);
     void setFederation(const QString &federation);
-    void setTimeControl(const QString &timeControl);
     void setNumberOfRounds(int numberOfRounds);
     void setCurrentRound(int currentRound);
 
@@ -396,7 +392,6 @@ Q_SIGNALS:
     void nameChanged();
     void cityChanged();
     void federationChanged();
-    void timeControlChanged();
     void tiebreaksChanged();
 
     void numberOfPlayersChanged();
@@ -423,7 +418,7 @@ private:
     QString m_city;
     QString m_federation;
     std::vector<std::unique_ptr<Arbiter>> m_arbiters;
-    QString m_timeControl;
+    TimeControl m_timeControl;
     int m_numberOfRounds = 1;
     int m_currentRound = 0;
     QVariantMap m_options;
