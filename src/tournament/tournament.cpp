@@ -800,7 +800,7 @@ int Tournament::numberOfRatedPlayers()
 
 std::expected<void, QString> Tournament::sortPairings(std::optional<int> round)
 {
-    Q_ASSERT(round != 0);
+    Q_ASSERT(!round || *round != 0);
 
     const auto firstRound = round ? *round - 1 : 0;
     const auto lastRound = round ? *round : m_rounds.size();
