@@ -132,7 +132,7 @@ void TournamentTest::testLoadTournament()
     QVERIFY(file.open());
     QVERIFY(!file.fileName().isEmpty());
 
-    event->saveAs(file.fileName());
+    QVERIFY(event->saveAs(file.fileName()));
 
     event = std::make_unique<Event>();
     QVERIFY(event->open(file.fileName()).has_value());
