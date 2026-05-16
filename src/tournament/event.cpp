@@ -139,9 +139,16 @@ std::expected<void, QString> Event::openDatabase(const QString &dbName)
         return std::unexpected(db.lastError().text());
     }
 
+    QSqlQuery query(ENABLE_FOREIGN_KEYS_QUERY, db);
+
+    if (query.lastError().isValid()) {
+        qDebug() << "Error enabling foreign keys" << query.lastError().text();
+        return std::unexpected(query.lastError().text());
+    }
+
     // If the file already exists, check that it's a Chessament event
     if (!m_fileName.isEmpty()) {
-        QSqlQuery query(u"PRAGMA application_id;"_s, db);
+        query = QSqlQuery(u"PRAGMA application_id;"_s, db);
 
         if (query.lastError().isValid()) {
             qDebug() << "error while quering app id" << query.lastError().text() << query.lastError().nativeErrorCode();
@@ -158,11 +165,11 @@ std::expected<void, QString> Event::openDatabase(const QString &dbName)
         if (applicationId != CHESSAMENT_MAGIC_APPLICATION_ID) {
             return std::unexpected(xi18nc("@info", "The file is not a <application>Chessament</application> event."));
         }
-    }
-
-    if (auto ok = createTables(); !ok) {
-        qDebug() << "error creating tables" << ok.error();
-        return ok;
+    } else {
+        if (const auto ok = createTables(); !ok) {
+            qDebug() << "Error creating tables" << ok.error();
+            return ok;
+        }
     }
 
     return {};
@@ -176,13 +183,7 @@ void Event::closeDatabase()
 
 std::expected<void, QString> Event::createTables()
 {
-    QSqlQuery query(ENABLE_FOREIGN_KEYS_QUERY, db());
-
-    if (query.lastError().isValid()) {
-        return std::unexpected(query.lastError().text());
-    }
-
-    query = QSqlQuery(db());
+    QSqlQuery query(db());
     query.prepare(TOURNAMENTS_TABLE_SCHEMA);
 
     if (!query.exec()) {
