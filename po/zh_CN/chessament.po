@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-29 00:41+0000\n"
+"POT-Creation-Date: 2026-05-17 00:40+0000\n"
 "PO-Revision-Date: 2025-05-12 14:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -993,7 +993,7 @@ msgctxt "@title:column Player Ranking"
 msgid "Rank"
 msgstr "排名"
 
-#: tournament/event.cpp:150 tournament/event.cpp:159
+#: tournament/event.cpp:157 tournament/event.cpp:166
 #, kde-kuit-format
 msgctxt "@info"
 msgid "The file is not a <application>Chessament</application> event."

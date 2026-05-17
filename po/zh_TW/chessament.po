@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-29 00:41+0000\n"
+"POT-Creation-Date: 2026-05-17 00:40+0000\n"
 "PO-Revision-Date: 2025-09-29 01:32+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -1023,7 +1023,7 @@ msgctxt "@title:column Player Ranking"
 msgid "Rank"
 msgstr ""
 
-#: tournament/event.cpp:150 tournament/event.cpp:159
+#: tournament/event.cpp:157 tournament/event.cpp:166
 #, kde-kuit-format
 msgctxt "@info"
 msgid "The file is not a <application>Chessament</application> event."
