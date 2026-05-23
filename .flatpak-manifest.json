@@ -31,7 +31,13 @@
                 {
                     "type": "archive",
                     "url": "https://github.com/frankosterfeld/qtkeychain/archive/refs/tags/0.15.0.tar.gz",
-                    "sha256": "f4254dc8f0933b06d90672d683eab08ef770acd8336e44dfa030ce041dc2ca22"
+                    "sha256": "f4254dc8f0933b06d90672d683eab08ef770acd8336e44dfa030ce041dc2ca22",
+                    "x-checker-data": {
+                        "type": "anitya",
+                        "project-id": 4138,
+                        "stable-only": true,
+                        "url-template": "https://github.com/frankosterfeld/qtkeychain/archive/refs/tags/$version.tar.gz"
+                    }
                 }
             ],
             "config-opts": [
@@ -49,7 +55,13 @@
                 {
                     "type": "archive",
                     "url": "https://github.com/BieremaBoyzProgramming/bbpPairings/archive/refs/tags/v6.0.0.tar.gz",
-                    "sha256": "b7f95c0803131e38a56e8829bd062d9ad51908322dd6fef01380b2f612f58227"
+                    "sha256": "b7f95c0803131e38a56e8829bd062d9ad51908322dd6fef01380b2f612f58227",
+                    "x-checker-data": {
+                        "type": "anitya",
+                        "project-id": 389407,
+                        "stable-only": true,
+                        "url-template": "https://github.com/BieremaBoyzProgramming/bbpPairings/archive/refs/tags/v$version.tar.gz"
+                    }
                 },
                 {
                     "type": "patch",
