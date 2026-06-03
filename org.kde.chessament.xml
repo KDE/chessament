@@ -21,6 +21,7 @@
     <comment xml:lang="sk">Podujatie Chessament</comment>
     <comment xml:lang="sl">Chessament dogodek</comment>
     <comment xml:lang="tr">Chessament etkinliği</comment>
+    <comment xml:lang="ug">شاھمات مۇسابىقە پائالىيىتى</comment>
     <comment xml:lang="uk">подія Chessament</comment>
     <glob pattern="*.chessament"/>
   </mime-type>

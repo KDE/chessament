@@ -30,6 +30,7 @@
   <name xml:lang="sl">Chessament</name>
   <name xml:lang="sv">Chessament</name>
   <name xml:lang="tr">Chessament</name>
+  <name xml:lang="ug">شاھمات مۇسابىقىسى</name>
   <name xml:lang="uk">Chessament</name>
   <name xml:lang="zh-CN">Chessament</name>
   <summary>Chess tournament manager</summary>
@@ -55,6 +56,7 @@
   <summary xml:lang="sl">Upravljalnik šahovskih turnirjev</summary>
   <summary xml:lang="sv">Schackturneringshanterare</summary>
   <summary xml:lang="tr">Satranç turnuvası yöneticisi</summary>
+  <summary xml:lang="ug">خەلقئارا شاھمات مۇسابىقە باشقۇرغۇچ</summary>
   <summary xml:lang="uk">Керування шаховим турніром</summary>
   <summary xml:lang="zh-CN">国际象棋赛事管理系统</summary>
   <description>
