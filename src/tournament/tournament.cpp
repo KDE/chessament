@@ -270,6 +270,25 @@ std::expected<void, QString> Tournament::addPlayer(std::unique_ptr<Player> playe
     return {};
 }
 
+std::expected<void, QString> Tournament::deletePlayer(int startingRank)
+{
+    Q_ASSERT(m_currentRound == 0);
+
+    const auto &player = m_players.at(startingRank - 1);
+
+    QSqlQuery query(m_event->db());
+    query.prepare(DELETE_PLAYER_QUERY);
+    query.bindValue(":id"_L1, player->id());
+
+    if (!query.exec()) {
+        return std::unexpected(query.lastError().text());
+    }
+
+    m_players.erase(m_players.begin() + startingRank - 1);
+
+    return {};
+}
+
 void Tournament::savePlayer(Player *player)
 {
     QSqlQuery query(m_event->db());

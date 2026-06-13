@@ -266,6 +266,18 @@ void PlayersModel::addPlayer(const QString &title,
     endInsertRows();
 }
 
+void PlayersModel::deletePlayer(const QModelIndex &index)
+{
+    if (const auto ok = m_tournament->deletePlayer(index.row() + 1); !ok) {
+        Q_EMIT errorOcurred(ok.error());
+        return;
+    }
+
+    beginRemoveRows({}, index.row(), index.row());
+    m_players.erase(m_players.begin() + index.row());
+    endRemoveRows();
+}
+
 void PlayersModel::updatePlayer(Player *player)
 {
     Q_EMIT dataChanged(index(player->startingRank() - 1, 0), index(player->startingRank() - 1, columnCount() - 1), {});

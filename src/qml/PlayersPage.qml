@@ -80,6 +80,18 @@ TablePage {
         dialog.open();
     }
 
+    function deletePlayer(): void {
+        const index = proxyModel.mapToSource(root.tableView.selectionModel.currentIndex);
+        const player = root.model.sourceModel.data(index, PlayersModel.PlayerRole);
+        const dialog = Qt.createComponent("org.kde.chessament", "DeletePlayerDialog").createObject(root.Controls.ApplicationWindow.window, {
+            "player": player
+        }) as DeletePlayerDialog;
+        dialog.accepted.connect(() => {
+            root.model.sourceModel.deletePlayer(index);
+        });
+        dialog.open();
+    }
+
     actions: [
         Kirigami.Action {
             displayComponent: Kirigami.SearchField {
@@ -133,6 +145,13 @@ TablePage {
             icon.name: "documentinfo-symbolic"
             text: KI18n.i18nc("@action:inmenu", "Open Player Details")
             onTriggered: root.openPlayerDetails()
+        }
+
+        Controls.Action {
+            icon.name: "edit-delete-symbolic"
+            text: KI18n.i18nc("@action:inmenu", "Delete Player…")
+            enabled: Controller.tournament.currentRound === 0
+            onTriggered: root.deletePlayer()
         }
     }
 

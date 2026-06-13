@@ -60,6 +60,7 @@ public:
                                const QString &federation,
                                const QString &origin,
                                const QString &gender);
+    Q_INVOKABLE void deletePlayer(const QModelIndex &index);
     void updatePlayer(Player *player);
     void reloadPlayers();
 

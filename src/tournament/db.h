@@ -66,6 +66,8 @@ const QString UPDATE_PLAYER_QUERY =
     u"(:startingRank, :title, :name, :rating, :nationalRating, :playerId, :nationalId, :birthDate, :federation, :origin, :gender, :extra, :tournament) "_s
     u"WHERE id = :id;"_s;
 
+const QString DELETE_PLAYER_QUERY = u"DELETE FROM players WHERE id = :id;"_s;
+
 const QString ROUNDS_TABLE_SCHEMA =
     u"CREATE TABLE IF NOT EXISTS rounds("_s
     u"id INTEGER PRIMARY KEY,"_s

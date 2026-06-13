@@ -145,6 +145,8 @@ public:
      */
     std::expected<void, QString> addPlayer(std::unique_ptr<Player> player);
 
+    std::expected<void, QString> deletePlayer(int startingRank);
+
     /*!
      * Saves \a player to the database.
      */
