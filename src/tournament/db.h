@@ -66,6 +66,8 @@ const QString UPDATE_PLAYER_QUERY =
     u"(:startingRank, :title, :name, :rating, :nationalRating, :playerId, :nationalId, :birthDate, :federation, :origin, :gender, :extra, :tournament) "_s
     u"WHERE id = :id;"_s;
 
+const QString DELETE_PLAYER_QUERY = u"DELETE FROM players WHERE id = :id;"_s;
+
 const QString ROUNDS_TABLE_SCHEMA =
     u"CREATE TABLE IF NOT EXISTS rounds("_s
     u"id INTEGER PRIMARY KEY,"_s
@@ -124,3 +126,5 @@ const QString DELETE_PAIRING_QUERY = u"DELETE FROM pairings WHERE id = :id;"_s;
 const QString DELETE_PAIRINGS_QUERY = u"DELETE FROM pairings WHERE round = :round;"_s;
 
 const QString DELETE_PAIRINGS_KEEP_BYES_QUERY = u"DELETE FROM pairings WHERE round = :round AND whiteResult NOT IN (9, 10, 11);"_s;
+
+const QString DELETE_PAIRINGS_OF_PLAYER_QUERY = u"DELETE FROM pairings WHERE whitePlayer = :id OR blackPlayer = :id;"_s;

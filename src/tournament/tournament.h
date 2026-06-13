@@ -145,6 +145,8 @@ public:
      */
     std::expected<void, QString> addPlayer(std::unique_ptr<Player> player);
 
+    std::expected<void, QString> deletePlayer(int startingRank);
+
     /*!
      * Saves \a player to the database.
      */
@@ -277,6 +279,8 @@ public:
      * \a keepByes Whether to keep byes.
      */
     std::expected<void, QString> removePairings(int round, bool keepByes);
+
+    std::expected<void, QString> deletePairings(Player *player);
 
     /*!
      * \enum Tournament::InitialColor
