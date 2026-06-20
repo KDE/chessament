@@ -5,7 +5,6 @@ qt_add_resources(chessament_static "flags"
     PREFIX "/flags/"
     FILES
         AFG.svg
-        AHO.svg
         ALB.svg
         ALG.svg
         AND.svg
@@ -50,6 +49,7 @@ qt_add_resources(chessament_static "flags"
         CRC.svg
         CRO.svg
         CUB.svg
+        CUR.svg
         CYP.svg
         CZE.svg
         DEN.svg

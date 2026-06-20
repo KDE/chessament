@@ -15,7 +15,6 @@ using namespace Qt::StringLiterals;
 static const QMap<QString, std::variant<QLocale::Territory, KLazyLocalizedString>> FEDERATIONS{
     // clang-format off
     {"AFG"_L1, QLocale::Territory::Afghanistan},
-    {"AHO"_L1, QLocale::Territory::CaribbeanNetherlands},
     {"ALB"_L1, QLocale::Territory::Albania},
     {"ALG"_L1, QLocale::Territory::Algeria},
     {"AND"_L1, QLocale::Territory::Andorra},
@@ -60,6 +59,7 @@ static const QMap<QString, std::variant<QLocale::Territory, KLazyLocalizedString
     {"CRC"_L1, QLocale::Territory::CostaRica},
     {"CRO"_L1, QLocale::Territory::Croatia},
     {"CUB"_L1, QLocale::Territory::Cuba},
+    {"CUR"_L1, QLocale::Territory::Curacao},
     {"CYP"_L1, QLocale::Territory::Cyprus},
     {"CZE"_L1, QLocale::Territory::CzechRepublic},
     {"DEN"_L1, QLocale::Territory::Denmark},
