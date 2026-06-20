@@ -33,6 +33,10 @@ Controls.MenuBar {
             fromQAction: root.application.action("export_trf")
             enabled: Controller.hasOpenTournament
         }
+        Controls.MenuSeparator {}
+        Kirigami.Action {
+            fromQAction: root.application.action("file_quit")
+        }
     }
 
     Controls.Menu {
@@ -58,9 +62,15 @@ Controls.MenuBar {
         title: KI18n.i18nc("@action:menu", "Help")
 
         Kirigami.Action {
+            fromQAction: root.application.action("help_contents")
+        }
+        Kirigami.Action {
+            fromQAction: root.application.action("help_report_bug")
+        }
+        Controls.MenuSeparator {}
+        Kirigami.Action {
             fromQAction: root.application.action("open_about_page")
         }
-
         Kirigami.Action {
             fromQAction: root.application.action("open_about_kde_page")
         }

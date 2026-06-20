@@ -4,6 +4,7 @@
 #include "chessamentapplication.h"
 #include <KAuthorized>
 #include <KLocalizedString>
+#include <KStandardActions>
 
 using namespace Qt::StringLiterals;
 
@@ -17,7 +18,7 @@ void ChessamentApplication::setupActions()
 {
     AbstractKirigamiApplication::setupActions();
 
-    auto actionName = "file_new"_L1;
+    auto actionName = u"file_new"_s;
     if (KAuthorized::authorizeAction(actionName)) {
         auto action = mainCollection()->addAction(actionName, this, &ChessamentApplication::newTournament);
         action->setText(i18nc("@action:inmenu", "New tournament…"));
@@ -26,19 +27,19 @@ void ChessamentApplication::setupActions()
         KirigamiActionCollection::setDefaultShortcut(action, Qt::CTRL | Qt::Key_N);
     }
 
-    actionName = "file_open"_L1;
+    actionName = u"file_open"_s;
     if (KAuthorized::authorizeAction(actionName)) {
         auto action = KStandardActions::open(this, &ChessamentApplication::openTournament, this);
         mainCollection()->addAction(action->objectName(), action);
     }
 
-    actionName = "file_save_as"_L1;
+    actionName = u"file_save_as"_s;
     if (KAuthorized::authorizeAction(actionName)) {
         auto action = KStandardActions::saveAs(this, &ChessamentApplication::saveTournamentAs, this);
         mainCollection()->addAction(action->objectName(), action);
     }
 
-    actionName = "import_trf"_L1;
+    actionName = u"import_trf"_s;
     if (KAuthorized::authorizeAction(actionName)) {
         auto action = mainCollection()->addAction(actionName, this, &ChessamentApplication::importTrf);
         action->setText(i18nc("@action:inmenu", "Import tournament report…"));
@@ -47,12 +48,24 @@ void ChessamentApplication::setupActions()
         KirigamiActionCollection::setDefaultShortcut(action, Qt::CTRL | Qt::Key_I);
     }
 
-    actionName = "export_trf"_L1;
+    actionName = u"export_trf"_s;
     if (KAuthorized::authorizeAction(actionName)) {
         auto action = mainCollection()->addAction(actionName, this, &ChessamentApplication::exportTrf);
         action->setText(i18nc("@action:inmenu", "Export tournament report…"));
         action->setIcon(QIcon::fromTheme(u"document-export-symbolic"_s));
         mainCollection()->addAction(action->objectName(), action);
+    }
+
+    actionName = KStandardActions::name(KStandardActions::HelpContents);
+    if (KAuthorized::authorizeAction(actionName)) {
+        auto action = KStandardActions::helpContents(this, &ChessamentApplication::openHandbook, this);
+        mainCollection()->addAction(actionName, action);
+    }
+
+    actionName = KStandardActions::name(KStandardActions::ReportBug);
+    if (KAuthorized::authorizeAction(actionName)) {
+        auto action = KStandardActions::reportBug(this, &ChessamentApplication::reportBug, this);
+        mainCollection()->addAction(actionName, action);
     }
 
     readSettings();

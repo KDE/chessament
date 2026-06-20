@@ -6,6 +6,7 @@ import QtQuick
 import QtQuick.Controls as QQC2
 import QtQuick.Dialogs as Dialogs
 
+import org.kde.coreaddons as Core
 import org.kde.ki18n
 import org.kde.kirigami as Kirigami
 import org.kde.kirigamiaddons.statefulapp as StatefulApp
@@ -82,6 +83,14 @@ StatefulApp.StatefulWindow {
                 Controller.exportTrf(dialog.selectedFile);
             });
             dialog.open();
+        }
+
+        function onOpenHandbook(): void {
+            Qt.openUrlExternally("help:/");
+        }
+
+        function onReportBug(): void {
+            Qt.openUrlExternally(`https://bugs.kde.org/enter_bug.cgi?format=guided&product=Chessament&version=${Core.AboutData.version}`);
         }
     }
 
