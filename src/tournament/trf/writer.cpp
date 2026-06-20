@@ -57,7 +57,10 @@ void TrfWriter::writeTiebreaks(QTextStream &stream)
 {
     QStringList codes{};
     for (const auto &tiebreak : m_tournament->tiebreaks()) {
-        codes << tiebreak->code();
+        const auto code = tiebreak->code();
+        if (!code.isEmpty()) {
+            codes << code;
+        }
     }
     if (!codes.empty()) {
         stream << Trf::reportFieldString(Trf::Field::Tiebreaks) << space;

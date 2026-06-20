@@ -15,6 +15,7 @@
 #include "state.h"
 #include "tiebreaks/aob.h"
 #include "tiebreaks/buchholz.h"
+#include "tiebreaks/dummy.h"
 #include "tiebreaks/numberwins.h"
 #include "tiebreaks/playedblack.h"
 #include "tiebreaks/points.h"
@@ -1441,17 +1442,19 @@ std::expected<void, QString> Tournament::loadTiebreaks()
 
         const auto values = tbs.toArray();
         for (const auto value : values) {
-            const auto obj = value.toObject();
-            const auto id = obj["id"_L1].toString();
-
-            auto tiebreak = Tournament::tiebreak(id);
-            if (tiebreak == nullptr) {
+            if (!value.isObject()) {
                 continue;
             }
 
-            if (const auto options = obj["options"_L1]; options.isObject()) {
-                tiebreak->setOptions(options.toObject().toVariantMap());
+            const auto options = value.toObject();
+            const auto id = options["id"_L1].toString();
+
+            auto tiebreak = Tournament::tiebreak(id);
+            if (tiebreak == nullptr) {
+                tiebreak = std::make_unique<DummyTiebreak>();
             }
+
+            tiebreak->setOptions(options.toVariantMap());
 
             m_tiebreaks.push_back(std::move(tiebreak));
         }

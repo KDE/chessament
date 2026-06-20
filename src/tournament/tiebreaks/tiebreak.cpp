@@ -54,8 +54,7 @@ std::expected<void, QString> Tiebreak::setTrfOptions(const QList<QString> &optio
 
 QJsonObject Tiebreak::toJson()
 {
-    return {
-        {"id"_L1, id()},
-        {"options"_L1, QJsonObject::fromVariantMap(m_options)},
-    };
+    auto json = QJsonObject::fromVariantMap(m_options);
+    json[u"id"_s] = id();
+    return json;
 }

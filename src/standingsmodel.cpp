@@ -94,7 +94,7 @@ QVariant StandingsModel::headerData(int section, Qt::Orientation orientation, in
         return i18nc("@title:column Player Name", "Name");
     default: {
         const auto tiebreak = m_tournament->tiebreaks().at(section - 4).get();
-        if (!tiebreak->shortName().isEmpty()) {
+        if (!tiebreak->shortName().isNull()) {
             return tiebreak->shortName();
         }
         return tiebreak->code();
