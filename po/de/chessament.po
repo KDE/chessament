@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-17 00:40+0000\n"
+"POT-Creation-Date: 2026-06-20 00:40+0000\n"
 "PO-Revision-Date: 2026-02-15 16:12+0100\n"
 "Last-Translator: Alois Spitzbart <spitz234@hotmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -398,6 +398,30 @@ msgctxt "@action:button Remove pairings"
 msgid "Remove"
 msgstr "Entfernen"
 
+#: qml/DeletePlayerDialog.qml:19
+#, fuzzy
+#| msgctxt "@title:column Name of the White Player"
+#| msgid "White Player"
+msgctxt "@title"
+msgid "Delete Player"
+msgstr "Weißer Spieler"
+
+#: qml/DeletePlayerDialog.qml:20
+#, fuzzy
+#| msgctxt "@title:window"
+#| msgid "Details of player \"%1\""
+msgctxt "@label"
+msgid "Permanently delete player \"%1\"?"
+msgstr "Details des Spielers „%1“"
+
+#: qml/DeletePlayerDialog.qml:26
+#, fuzzy
+#| msgctxt "@action:button Delete Rating List"
+#| msgid "Delete"
+msgctxt "@action:button Delete Player"
+msgid "Delete"
+msgstr "Löschen"
+
 #: qml/Main.qml:21
 msgctxt "@title:window"
 msgid "Chessament"
@@ -451,12 +475,12 @@ msgctxt "@option:check"
 msgid "Hide finished games"
 msgstr "Abgeschlossene Spiele ausblenden"
 
-#: qml/PairingsPage.qml:60 qml/PlayersPage.qml:112 qml/StandingsPage.qml:49
+#: qml/PairingsPage.qml:60 qml/PlayersPage.qml:125 qml/StandingsPage.qml:49
 msgctxt "@action:intoolbar"
 msgid "Print…"
 msgstr "Drucken …"
 
-#: qml/PairingsPage.qml:65 qml/PlayersPage.qml:117 qml/StandingsPage.qml:54
+#: qml/PairingsPage.qml:65 qml/PlayersPage.qml:130 qml/StandingsPage.qml:54
 msgctxt "@action:intoolbar"
 msgid "Export as PDF…"
 msgstr "Als PDF exportieren …"
@@ -579,27 +603,35 @@ msgctxt "@info:label"
 msgid "Round %1"
 msgstr "Runde %1"
 
-#: qml/PlayersPage.qml:96
+#: qml/PlayersPage.qml:109
 msgctxt "@action:intoolbar Open player details"
 msgid "Details…"
 msgstr "Details …"
 
-#: qml/PlayersPage.qml:102
+#: qml/PlayersPage.qml:115
 msgctxt "@action:intoolbar"
 msgid "Sort Players…"
 msgstr "Spieler sortieren …"
 
-#: qml/PlayersPage.qml:123
+#: qml/PlayersPage.qml:136
 msgctxt "@action:intoolbar"
 msgid "Add Player…"
 msgstr "Spieler hinzufügen …"
 
-#: qml/PlayersPage.qml:134
+#: qml/PlayersPage.qml:147
 msgctxt "@action:inmenu"
 msgid "Open Player Details"
 msgstr "Spielerdetails öffnen"
 
-#: qml/PlayersPage.qml:231
+#: qml/PlayersPage.qml:153
+#, fuzzy
+#| msgctxt "@action:intoolbar"
+#| msgid "Sort Players…"
+msgctxt "@action:inmenu"
+msgid "Delete Player…"
+msgstr "Spieler sortieren …"
+
+#: qml/PlayersPage.qml:251
 #, fuzzy
 #| msgctxt "@info:placeholder"
 #| msgid "No players yet"
@@ -607,31 +639,31 @@ msgctxt "@info:placeholder"
 msgid "No players found"
 msgstr "Bisher noch keine Spieler"
 
-#: qml/PlayersPage.qml:231
+#: qml/PlayersPage.qml:251
 msgctxt "@info:placeholder"
 msgid "No players yet"
 msgstr "Bisher noch keine Spieler"
 
-#: qml/PlayersPage.qml:235
+#: qml/PlayersPage.qml:255
 msgctxt "@action:button"
 msgid "Add Player…"
 msgstr "Spieler hinzufügen …"
 
-#: qml/PlayersPage.qml:254
+#: qml/PlayersPage.qml:274
 msgctxt "@info:status Number of players"
 msgid "1 player"
 msgid_plural "%1 players"
 msgstr[0] "1 Spieler"
 msgstr[1] "%1 Spieler"
 
-#: qml/PlayersPage.qml:255
+#: qml/PlayersPage.qml:275
 msgctxt "@info:status Number of rated players"
 msgid "1 rated"
 msgid_plural "%1 rated"
 msgstr[0] "1 bewertet"
 msgstr[1] "%1 bewertet"
 
-#: qml/PlayersPage.qml:257
+#: qml/PlayersPage.qml:277
 msgctxt "@info:status Total number of players (Number of players rated)"
 msgid "%1 (%2)"
 msgstr ""
@@ -1157,7 +1189,7 @@ msgid_plural "Saved %1 players."
 msgstr[0] "1 Spieler gespeichert."
 msgstr[1] "%1 Spieler gespeichert."
 
-#: tournament/tiebreaks/aob.h:23 tournament/tournament.cpp:510
+#: tournament/tiebreaks/aob.h:23 tournament/tournament.cpp:536
 #, kde-format
 msgctxt "Tiebreak"
 msgid "Average Buchholz of Opponents"
@@ -1175,7 +1207,7 @@ msgctxt "@info"
 msgid "Unsupported tiebreak option \"%1\""
 msgstr "Nicht unterstützte Tie-Break-Einstellung „%1“"
 
-#: tournament/tiebreaks/buchholz.h:25 tournament/tournament.cpp:492
+#: tournament/tiebreaks/buchholz.h:25 tournament/tournament.cpp:518
 #, kde-format
 msgctxt "Buchholz tiebreak"
 msgid "Buchholz"
@@ -1187,26 +1219,26 @@ msgctxt "Buchholz N tiebreak, N is a number < 0"
 msgid "Buchholz %1"
 msgstr ""
 
-#: tournament/tiebreaks/numberwins.h:22 tournament/tournament.cpp:496
+#: tournament/tiebreaks/numberwins.h:22 tournament/tournament.cpp:522
 #, kde-format
 msgctxt "Number of Wins tiebreak"
 msgid "Number of Wins"
 msgstr "Anzahl der Siege"
 
-#: tournament/tiebreaks/playedblack.h:22 tournament/tournament.cpp:506
+#: tournament/tiebreaks/playedblack.h:22 tournament/tournament.cpp:532
 #, kde-format
 msgctxt "Number of Games Played with Black (over the board) tiebreak"
 msgid "Number of Games Played with Black (over the board)"
 msgstr ""
 
 #: tournament/tiebreaks/points.h:22 tournament/tiebreaks/points.h:27
-#: tournament/tournament.cpp:488
+#: tournament/tournament.cpp:514
 #, kde-format
 msgctxt "Game points"
 msgid "Points"
 msgstr "Punkte"
 
-#: tournament/tiebreaks/won.h:23 tournament/tournament.cpp:502
+#: tournament/tiebreaks/won.h:23 tournament/tournament.cpp:528
 #, fuzzy, kde-format
 #| msgctxt "@label"
 #| msgid "Number of rounds"
@@ -1216,13 +1248,13 @@ msgctxt ""
 msgid "Number of Games Won (over the board)"
 msgstr "Anzahl der Runden"
 
-#: tournament/tournament.cpp:945
+#: tournament/tournament.cpp:971
 #, kde-format
 msgid "An error ocurred while pairing the round: %1"
 msgstr ""
 "Beim Erstellen der Paarungen für diese Runde ist ein Fehler aufgetreten: %1"
 
-#: tournament/tournament.cpp:1165
+#: tournament/tournament.cpp:1214
 #, kde-format
 msgid "Couldn't open file"
 msgstr "Die Datei kann nicht geöffnet werden"

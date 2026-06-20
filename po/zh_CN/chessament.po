@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-17 00:40+0000\n"
+"POT-Creation-Date: 2026-06-20 00:40+0000\n"
 "PO-Revision-Date: 2025-05-12 14:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -390,6 +390,24 @@ msgctxt "@action:button Remove pairings"
 msgid "Remove"
 msgstr "移除"
 
+#: qml/DeletePlayerDialog.qml:19
+#, fuzzy
+#| msgctxt "@title:column Name of the White Player"
+#| msgid "White Player"
+msgctxt "@title"
+msgid "Delete Player"
+msgstr "执白"
+
+#: qml/DeletePlayerDialog.qml:20
+msgctxt "@label"
+msgid "Permanently delete player \"%1\"?"
+msgstr ""
+
+#: qml/DeletePlayerDialog.qml:26
+msgctxt "@action:button Delete Player"
+msgid "Delete"
+msgstr ""
+
 #: qml/Main.qml:21
 msgctxt "@title:window"
 msgid "Chessament"
@@ -440,12 +458,12 @@ msgctxt "@option:check"
 msgid "Hide finished games"
 msgstr "隐藏已完成的游戏"
 
-#: qml/PairingsPage.qml:60 qml/PlayersPage.qml:112 qml/StandingsPage.qml:49
+#: qml/PairingsPage.qml:60 qml/PlayersPage.qml:125 qml/StandingsPage.qml:49
 msgctxt "@action:intoolbar"
 msgid "Print…"
 msgstr "打印..."
 
-#: qml/PairingsPage.qml:65 qml/PlayersPage.qml:117 qml/StandingsPage.qml:54
+#: qml/PairingsPage.qml:65 qml/PlayersPage.qml:130 qml/StandingsPage.qml:54
 msgctxt "@action:intoolbar"
 msgid "Export as PDF…"
 msgstr "导出为 PDF..."
@@ -562,54 +580,62 @@ msgctxt "@info:label"
 msgid "Round %1"
 msgstr ""
 
-#: qml/PlayersPage.qml:96
+#: qml/PlayersPage.qml:109
 msgctxt "@action:intoolbar Open player details"
 msgid "Details…"
 msgstr ""
 
-#: qml/PlayersPage.qml:102
+#: qml/PlayersPage.qml:115
 msgctxt "@action:intoolbar"
 msgid "Sort Players…"
 msgstr "对玩家排序..."
 
-#: qml/PlayersPage.qml:123
+#: qml/PlayersPage.qml:136
 msgctxt "@action:intoolbar"
 msgid "Add Player…"
 msgstr "添加玩家..."
 
-#: qml/PlayersPage.qml:134
+#: qml/PlayersPage.qml:147
 msgctxt "@action:inmenu"
 msgid "Open Player Details"
 msgstr ""
 
-#: qml/PlayersPage.qml:231
+#: qml/PlayersPage.qml:153
+#, fuzzy
+#| msgctxt "@action:intoolbar"
+#| msgid "Sort Players…"
+msgctxt "@action:inmenu"
+msgid "Delete Player…"
+msgstr "对玩家排序..."
+
+#: qml/PlayersPage.qml:251
 msgctxt "@info:placeholder"
 msgid "No players found"
 msgstr ""
 
-#: qml/PlayersPage.qml:231
+#: qml/PlayersPage.qml:251
 msgctxt "@info:placeholder"
 msgid "No players yet"
 msgstr "暂无玩家"
 
-#: qml/PlayersPage.qml:235
+#: qml/PlayersPage.qml:255
 msgctxt "@action:button"
 msgid "Add Player…"
 msgstr "添加玩家..."
 
-#: qml/PlayersPage.qml:254
+#: qml/PlayersPage.qml:274
 msgctxt "@info:status Number of players"
 msgid "1 player"
 msgid_plural "%1 players"
 msgstr[0] "%1 名玩家"
 
-#: qml/PlayersPage.qml:255
+#: qml/PlayersPage.qml:275
 msgctxt "@info:status Number of rated players"
 msgid "1 rated"
 msgid_plural "%1 rated"
 msgstr[0] "%1 级"
 
-#: qml/PlayersPage.qml:257
+#: qml/PlayersPage.qml:277
 msgctxt "@info:status Total number of players (Number of players rated)"
 msgid "%1 (%2)"
 msgstr ""
@@ -1106,7 +1132,7 @@ msgid "Saved 1 player."
 msgid_plural "Saved %1 players."
 msgstr[0] ""
 
-#: tournament/tiebreaks/aob.h:23 tournament/tournament.cpp:510
+#: tournament/tiebreaks/aob.h:23 tournament/tournament.cpp:536
 #, kde-format
 msgctxt "Tiebreak"
 msgid "Average Buchholz of Opponents"
@@ -1124,7 +1150,7 @@ msgctxt "@info"
 msgid "Unsupported tiebreak option \"%1\""
 msgstr ""
 
-#: tournament/tiebreaks/buchholz.h:25 tournament/tournament.cpp:492
+#: tournament/tiebreaks/buchholz.h:25 tournament/tournament.cpp:518
 #, kde-format
 msgctxt "Buchholz tiebreak"
 msgid "Buchholz"
@@ -1136,26 +1162,26 @@ msgctxt "Buchholz N tiebreak, N is a number < 0"
 msgid "Buchholz %1"
 msgstr ""
 
-#: tournament/tiebreaks/numberwins.h:22 tournament/tournament.cpp:496
+#: tournament/tiebreaks/numberwins.h:22 tournament/tournament.cpp:522
 #, kde-format
 msgctxt "Number of Wins tiebreak"
 msgid "Number of Wins"
 msgstr "获胜次数"
 
-#: tournament/tiebreaks/playedblack.h:22 tournament/tournament.cpp:506
+#: tournament/tiebreaks/playedblack.h:22 tournament/tournament.cpp:532
 #, kde-format
 msgctxt "Number of Games Played with Black (over the board) tiebreak"
 msgid "Number of Games Played with Black (over the board)"
 msgstr ""
 
 #: tournament/tiebreaks/points.h:22 tournament/tiebreaks/points.h:27
-#: tournament/tournament.cpp:488
+#: tournament/tournament.cpp:514
 #, kde-format
 msgctxt "Game points"
 msgid "Points"
 msgstr "点数"
 
-#: tournament/tiebreaks/won.h:23 tournament/tournament.cpp:502
+#: tournament/tiebreaks/won.h:23 tournament/tournament.cpp:528
 #, kde-format
 msgctxt ""
 "Number of Games Won (over the board) tiebreak. Different from the 'Number of "
@@ -1163,12 +1189,12 @@ msgctxt ""
 msgid "Number of Games Won (over the board)"
 msgstr ""
 
-#: tournament/tournament.cpp:945
+#: tournament/tournament.cpp:971
 #, kde-format
 msgid "An error ocurred while pairing the round: %1"
 msgstr "在生成本轮对阵时发生错误：%1"
 
-#: tournament/tournament.cpp:1165
+#: tournament/tournament.cpp:1214
 #, kde-format
 msgid "Couldn't open file"
 msgstr "无法打开文件"
