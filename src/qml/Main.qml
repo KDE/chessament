@@ -18,7 +18,7 @@ StatefulApp.StatefulWindow {
 
     property var pageCache: Object.create(null)
 
-    title: KI18n.i18nc("@title:window", "Chessament")
+    title: Controller.hasOpenTournament ? KI18n.i18nc("@title:window", "%1 — Chessament", Controller.tournament.name) : KI18n.i18nc("@title:window", "Chessament")
     minimumWidth: Kirigami.Units.gridUnit * 30
     minimumHeight: Kirigami.Units.gridUnit * 20
 
