@@ -28,13 +28,13 @@
 
 using namespace Qt::StringLiterals;
 
-std::expected<QSqlDatabase, QString> RatingList::getDB(const QString &connectionName)
+std::expected<QSqlDatabase, QString> RatingList::getDb(const QString &connectionName)
 {
     if (QSqlDatabase::contains(connectionName)) {
         return QSqlDatabase::database(connectionName);
     }
 
-    qDebug() << "opening ratings db";
+    qDebug() << "Opening ratings db" << connectionName;
     const QString dbFolder = QStandardPaths::writableLocation(QStandardPaths::StateLocation);
     QDir().mkpath(dbFolder);
 
@@ -75,41 +75,35 @@ std::vector<std::unique_ptr<RatingList>> RatingList::lists()
 {
     std::vector<std::unique_ptr<RatingList>> result;
 
-    {
-        auto db = RatingList::getDB(RATING_LISTS_DB_CONNECTION_NAME);
-        if (!db) {
-            return {};
-        }
-
-        QSqlQuery query(*db);
-        query.prepare(GET_RATING_LISTS_QUERY);
-
-        if (!query.exec()) {
-            qWarning() << "error getting rating lists" << query.lastError().text();
-            return {};
-        }
-
-        const int idNo = query.record().indexOf("id");
-        const int nameNo = query.record().indexOf("name");
-        const int urlNo = query.record().indexOf("url");
-        const int etagNo = query.record().indexOf("etag");
-        const int lastModifiedNo = query.record().indexOf("lastmodified");
-
-        while (query.next()) {
-            auto list = std::make_unique<RatingList>();
-            list->m_id = query.value(idNo).toInt();
-            list->m_name = query.value(nameNo).toString();
-            list->m_url = query.value(urlNo).toString();
-            list->m_etag = query.value(etagNo).toString();
-            list->m_lastModified = query.value(lastModifiedNo).toString();
-
-            result.push_back(std::move(list));
-        }
-
-        db->close();
+    auto db = RatingList::getDb();
+    if (!db) {
+        return {};
     }
 
-    QSqlDatabase::removeDatabase(RATING_LISTS_DB_CONNECTION_NAME);
+    QSqlQuery query(*db);
+    query.prepare(GET_RATING_LISTS_QUERY);
+
+    if (!query.exec()) {
+        qWarning() << "error getting rating lists" << query.lastError().text();
+        return {};
+    }
+
+    const int idNo = query.record().indexOf("id");
+    const int nameNo = query.record().indexOf("name");
+    const int urlNo = query.record().indexOf("url");
+    const int etagNo = query.record().indexOf("etag");
+    const int lastModifiedNo = query.record().indexOf("lastmodified");
+
+    while (query.next()) {
+        auto list = std::make_unique<RatingList>();
+        list->m_id = query.value(idNo).toInt();
+        list->m_name = query.value(nameNo).toString();
+        list->m_url = query.value(urlNo).toString();
+        list->m_etag = query.value(etagNo).toString();
+        list->m_lastModified = query.value(lastModifiedNo).toString();
+
+        result.push_back(std::move(list));
+    }
 
     return result;
 }
@@ -193,7 +187,7 @@ QCoro::Task<std::expected<void, QString>> RatingList::import(const QString &name
         return processFile(result, mimeType);
     });
 
-    QSqlDatabase::removeDatabase(RATING_LISTS_DB_CONNECTION_NAME);
+    QSqlDatabase::removeDatabase(RATING_LISTS_DB_CONNECTION_NAME_WRITER);
 
     if (!count) {
         co_return std::unexpected(count.error());
@@ -248,7 +242,7 @@ std::expected<uint, QString> RatingList::processFile(QByteArray content, const Q
 
 std::expected<uint, QString> RatingList::readPlayers(QTextStream *stream, std::unique_ptr<RatingListReader> reader)
 {
-    auto db = getDB();
+    auto db = getDb(RATING_LISTS_DB_CONNECTION_NAME_WRITER);
     if (!db) {
         return std::unexpected(db.error());
     }
@@ -291,7 +285,7 @@ std::expected<uint, QString> RatingList::readPlayers(QTextStream *stream, std::u
 void RatingList::remove(int id)
 {
     {
-        auto db = RatingList::getDB(RATING_LISTS_DB_CONNECTION_NAME);
+        auto db = RatingList::getDb(RATING_LISTS_DB_CONNECTION_NAME_WRITER);
         if (!db) {
             return;
         }
@@ -308,12 +302,12 @@ void RatingList::remove(int id)
         db->close();
     }
 
-    QSqlDatabase::removeDatabase(RATING_LISTS_DB_CONNECTION_NAME);
+    QSqlDatabase::removeDatabase(RATING_LISTS_DB_CONNECTION_NAME_WRITER);
 }
 
 std::expected<QList<RatingListPlayer>, QString> RatingList::searchPlayers(const QString &text)
 {
-    auto db = getDB();
+    auto db = getDb();
     if (!db) {
         return std::unexpected(db.error());
     }
@@ -395,7 +389,7 @@ std::expected<void, QString> RatingList::savePlayers(const QList<RatingListPlaye
     QVariantList nationalRatings;
     QVariantList extras;
 
-    auto db = RatingList::getDB();
+    auto db = RatingList::getDb(RATING_LISTS_DB_CONNECTION_NAME_WRITER);
     if (!db) {
         return std::unexpected(db.error());
     }

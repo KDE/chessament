@@ -64,7 +64,7 @@ QCoro::Task<> RatingListModel::importRatingListImpl(const QString &name, const Q
 {
     auto listUrl = QUrl::fromUserInput(url);
 
-    const auto list = std::make_unique<RatingList>();
+    auto list = std::make_unique<RatingList>();
 
     connect(list.get(), &RatingList::statusChanged, this, [this](const QString &status) {
         setStatus(status);
@@ -77,9 +77,9 @@ QCoro::Task<> RatingListModel::importRatingListImpl(const QString &name, const Q
         co_return;
     }
 
-    beginResetModel();
-    m_lists = RatingList::lists();
-    endResetModel();
+    beginInsertRows({}, rowCount(), rowCount());
+    m_lists.push_back(std::move(list));
+    endInsertRows();
 }
 
 QCoro::QmlTask RatingListModel::removeList(int row)

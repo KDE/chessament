@@ -59,6 +59,7 @@ static const auto SEARCH_PLAYERS_QUERY =
     u"SELECT playerid, name, federation, gender, title, birthday, standard, rapid, blitz, nationalid, nationalrating, json(extra) as extra FROM players WHERE name LIKE :search LIMIT 20;"_s;
 
 static constexpr auto RATING_LISTS_DB_CONNECTION_NAME = "rating-lists"_L1;
+static constexpr auto RATING_LISTS_DB_CONNECTION_NAME_WRITER = "rating-lists-writer"_L1;
 
 struct RatingListPlayer {
     Q_GADGET
@@ -118,7 +119,7 @@ Q_SIGNALS:
     void statusChanged(const QString &status);
 
 private:
-    static std::expected<QSqlDatabase, QString> getDB(const QString &connectionName = RATING_LISTS_DB_CONNECTION_NAME);
+    static std::expected<QSqlDatabase, QString> getDb(const QString &connectionName = RATING_LISTS_DB_CONNECTION_NAME);
 
     std::expected<uint, QString> processFile(QByteArray content, const QMimeType &mime);
     std::expected<uint, QString> readPlayers(QTextStream *stream, std::unique_ptr<RatingListReader> reader);
