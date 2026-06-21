@@ -8,11 +8,9 @@ FideRatingListReader::FideRatingListReader(RatingList *list)
 {
 }
 
-std::expected<uint, QString> FideRatingListReader::readPlayers(QTextStream *stream)
+std::expected<void, QString> FideRatingListReader::readPlayers(QTextStream *stream)
 {
     QString line;
-    uint count{0};
-    QList<RatingListPlayer> players{};
 
     stream->readLine(); // Skip header
 
@@ -87,7 +85,7 @@ std::expected<uint, QString> FideRatingListReader::readPlayers(QTextStream *stre
             continue;
         }
 
-        players << RatingListPlayer{
+        const auto player = RatingListPlayer{
             .id = QString::number(playerId),
             .name = name,
             .federation = federation,
@@ -102,20 +100,10 @@ std::expected<uint, QString> FideRatingListReader::readPlayers(QTextStream *stre
             .extra = extra,
         };
 
-        ++count;
-
-        if (count % 100 == 0) {
-            if (const auto ok = list()->savePlayers(players); !ok) {
-                return std::unexpected(ok.error());
-            }
-
-            players.clear();
+        if (const auto ok = addPlayer(player); !ok) {
+            return std::unexpected(ok.error());
         }
     }
 
-    if (const auto ok = list()->savePlayers(players); !ok) {
-        return std::unexpected(ok.error());
-    }
-
-    return count;
+    return {};
 }

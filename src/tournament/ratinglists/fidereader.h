@@ -10,5 +10,5 @@ class FideRatingListReader : public RatingListReader
 public:
     FideRatingListReader(RatingList *list);
 
-    std::expected<uint, QString> readPlayers(QTextStream *stream) override;
+    std::expected<void, QString> readPlayers(QTextStream *stream) override;
 };

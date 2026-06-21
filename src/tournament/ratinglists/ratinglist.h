@@ -114,11 +114,6 @@ public:
 
     static std::expected<QList<RatingListPlayer>, QString> searchPlayers(const QString &text);
 
-    /*!
-     * \internal
-     */
-    std::expected<void, QString> savePlayers(const QList<RatingListPlayer> &players);
-
 Q_SIGNALS:
     void statusChanged(const QString &status);
 
@@ -127,6 +122,7 @@ private:
 
     std::expected<uint, QString> processFile(QByteArray content, const QMimeType &mime);
     std::expected<uint, QString> readPlayers(QTextStream *stream, std::unique_ptr<RatingListReader> reader);
+    std::expected<void, QString> savePlayers(const QList<RatingListPlayer> &players);
 
     int m_id;
     QString m_name;

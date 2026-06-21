@@ -9,10 +9,9 @@ HtmlRatingListReader::HtmlRatingListReader(RatingList *list)
 {
 }
 
-std::expected<uint, QString> HtmlRatingListReader::readPlayers(QTextStream *stream)
+std::expected<void, QString> HtmlRatingListReader::readPlayers(QTextStream *stream)
 {
     uint count{0};
-    QList<RatingListPlayer> players{};
 
     stream->setEncoding(QStringConverter::Latin1);
 
@@ -44,19 +43,13 @@ std::expected<uint, QString> HtmlRatingListReader::readPlayers(QTextStream *stre
                     }
 
                     if (!player->name.isEmpty()) {
-                        players << *player;
+                        if (const auto ok = addPlayer(*player); !ok) {
+                            return std::unexpected(ok.error());
+                        }
                         ++count;
                     }
                 } else {
                     m_xml.skipCurrentElement();
-                }
-
-                if (count % 100 == 0) {
-                    if (const auto ok = list()->savePlayers(players); !ok) {
-                        return std::unexpected(ok.error());
-                    }
-
-                    players.clear();
                 }
             }
         }
@@ -67,11 +60,7 @@ std::expected<uint, QString> HtmlRatingListReader::readPlayers(QTextStream *stre
         return std::unexpected(m_xml.errorString());
     }
 
-    if (const auto ok = list()->savePlayers(players); !ok) {
-        return std::unexpected(ok.error());
-    }
-
-    return count;
+    return {};
 }
 
 std::expected<RatingListPlayer, QString> HtmlRatingListReader::readPlayer()

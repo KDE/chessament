@@ -19,8 +19,19 @@ public:
 
     RatingList *list();
 
-    virtual std::expected<uint, QString> readPlayers(QTextStream *stream) = 0;
+    [[nodiscard]] uint count() const;
+
+    virtual std::expected<void, QString> readPlayers(QTextStream *stream) = 0;
+
+    std::expected<void, QString> addPlayer(const RatingListPlayer &player);
 
 private:
+    std::expected<void, QString> savePlayers();
+
     RatingList *m_list;
+
+    uint m_count = 0;
+    QList<RatingListPlayer> m_players;
+
+    friend class RatingList;
 };

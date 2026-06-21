@@ -271,9 +271,12 @@ std::expected<uint, QString> RatingList::readPlayers(QTextStream *stream, std::u
 
     m_id = query.lastInsertId().toInt();
 
-    const auto count = reader->readPlayers(stream);
-    if (!count) {
-        return std::unexpected(count.error());
+    if (const auto ok = reader->readPlayers(stream); !ok) {
+        return std::unexpected(ok.error());
+    }
+
+    if (const auto ok = reader->savePlayers(); !ok) {
+        return std::unexpected(ok.error());
     }
 
     if (!db->commit()) {
@@ -282,7 +285,7 @@ std::expected<uint, QString> RatingList::readPlayers(QTextStream *stream, std::u
 
     db->close();
 
-    return *count;
+    return reader->count();
 }
 
 void RatingList::remove(int id)

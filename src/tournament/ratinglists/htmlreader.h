@@ -12,7 +12,7 @@ class HtmlRatingListReader : public RatingListReader
 public:
     HtmlRatingListReader(RatingList *list);
 
-    std::expected<uint, QString> readPlayers(QTextStream *stream) override;
+    std::expected<void, QString> readPlayers(QTextStream *stream) override;
 
     std::expected<RatingListPlayer, QString> readPlayer();
 
