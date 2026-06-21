@@ -46,8 +46,6 @@ TablePage {
         id: proxyModel
 
         sourceModel: Controller.playersModel
-        sortColumn: 0
-        sortOrder: Qt.AscendingOrder
         filterRowCallback: function (source_row: int, source_parent): bool {
             const player = sourceModel.data(sourceModel.index(source_row, 0), PlayersModel.PlayerRole) as Player;
             return player.name.toLowerCase().includes(root.filterString);

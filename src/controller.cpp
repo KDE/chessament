@@ -25,11 +25,8 @@ Controller::Controller(QObject *parent)
     , m_accountManager(std::make_unique<AccountManager>())
 {
     connect(m_playersModel, &PlayersModel::playerChanged, this, [this](Player *player, PlayersModel::Columns field) {
-        if (field == PlayersModel::Columns::StartingRank) {
-            m_playersModel->reloadPlayers();
-        } else {
-            m_tournament->savePlayer(player);
-        }
+        Q_UNUSED(field);
+        m_tournament->savePlayer(player);
     });
 
     connect(m_pairingModel, &PairingModel::pairingChanged, this, [this]() {
@@ -240,7 +237,7 @@ QCoro::Task<> Controller::updateStandings(int maxRound)
 void Controller::sortPlayers()
 {
     m_tournament->sortPlayers();
-    m_playersModel->reloadPlayers();
+    m_playersModel->setPlayers(m_tournament->players());
 }
 
 void Controller::newTournament(const QUrl &fileUrl, const QString &name, int numberOfRounds)

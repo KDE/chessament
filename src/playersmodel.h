@@ -62,7 +62,6 @@ public:
                                const QString &gender);
     Q_INVOKABLE void deletePlayer(const QModelIndex &index);
     void updatePlayer(Player *player);
-    void reloadPlayers();
 
 Q_SIGNALS:
     void playerChanged(Player *player, PlayersModel::Columns field);

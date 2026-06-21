@@ -131,12 +131,24 @@ bool PlayersModel::setData(const QModelIndex &index, const QVariant &value, int 
 
     switch (field) {
     case PlayersModel::Columns::StartingRank: {
-        auto rank = value.toInt();
-        if (rank == player->startingRank() || rank <= 0) {
+        const auto oldRank = player->startingRank();
+        const auto rank = value.toInt();
+        if (rank == oldRank || rank < 1) {
             return false;
         }
-        m_tournament->changePlayerStartingRank(player, rank);
-        break;
+
+        const auto newRank = m_tournament->changePlayerStartingRank(player, rank);
+        if (oldRank == newRank) {
+            return false;
+        }
+
+        Q_EMIT dataChanged(this->index(0, index.column()), this->index(rowCount() - 1, index.column()));
+
+        beginMoveRows({}, index.row(), index.row(), {}, newRank - 1);
+        std::ranges::sort(m_players, Player::SortByStartingRank);
+        endMoveRows();
+
+        return true;
     }
     case PlayersModel::Columns::Title:
         player->setTitle(value.toString().trimmed());
@@ -170,7 +182,7 @@ bool PlayersModel::setData(const QModelIndex &index, const QVariant &value, int 
         break;
     }
 
-    Q_EMIT dataChanged(index, index, {});
+    Q_EMIT dataChanged(index, index);
     Q_EMIT playerChanged(player, field);
 
     return true;
@@ -281,11 +293,6 @@ void PlayersModel::deletePlayer(const QModelIndex &index)
 void PlayersModel::updatePlayer(Player *player)
 {
     Q_EMIT dataChanged(index(player->startingRank() - 1, 0), index(player->startingRank() - 1, columnCount() - 1), {});
-}
-
-void PlayersModel::reloadPlayers()
-{
-    Q_EMIT dataChanged(index(0, 0), index(rowCount() - 1, columnCount() - 1), {});
 }
 
 #include "moc_playersmodel.cpp"

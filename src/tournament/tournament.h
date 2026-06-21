@@ -162,7 +162,7 @@ public:
      *
      * It adjusts the starting rank of other players if necessary.
      */
-    void changePlayerStartingRank(Player *player, int startingRank);
+    int changePlayerStartingRank(Player *player, int startingRank);
 
     /*!
      * Returns the players grouped by their starting rank.

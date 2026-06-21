@@ -343,11 +343,15 @@ void Tournament::sortPlayers()
     }
 }
 
-void Tournament::changePlayerStartingRank(Player *player, int startingRank)
+int Tournament::changePlayerStartingRank(Player *player, int startingRank)
 {
     Q_ASSERT(startingRank >= 1);
 
     const auto rank = std::min(startingRank, numberOfPlayers());
+
+    if (rank == player->startingRank()) {
+        return rank;
+    }
 
     const auto &players = m_players;
     for (const auto &p : players) {
@@ -362,6 +366,8 @@ void Tournament::changePlayerStartingRank(Player *player, int startingRank)
 
     player->setStartingRank(rank);
     savePlayer(player);
+
+    return rank;
 }
 
 QMap<uint, Player *> Tournament::playersByStartingRank()
