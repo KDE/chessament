@@ -3,6 +3,8 @@
 
 #pragma once
 
+#include "pairing.h"
+
 #include <QString>
 
 using namespace Qt::StringLiterals;
@@ -124,6 +126,10 @@ const QString UPDATE_PAIRING_QUERY =
 const QString DELETE_PAIRING_QUERY = u"DELETE FROM pairings WHERE id = :id;"_s;
 
 const QString DELETE_PAIRINGS_QUERY = u"DELETE FROM pairings WHERE round = :round;"_s;
+
+static_assert(std::to_underlying(Pairing::PartialResult::HalfBye) == 9);
+static_assert(std::to_underlying(Pairing::PartialResult::FullBye) == 10);
+static_assert(std::to_underlying(Pairing::PartialResult::ZeroBye) == 11);
 
 const QString DELETE_PAIRINGS_KEEP_BYES_QUERY = u"DELETE FROM pairings WHERE round = :round AND whiteResult NOT IN (9, 10, 11);"_s;
 
