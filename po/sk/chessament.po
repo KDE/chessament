@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-20 00:40+0000\n"
+"POT-Creation-Date: 2026-06-21 00:40+0000\n"
 "PO-Revision-Date: 2026-04-05 00:41+0000\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -23,19 +23,19 @@ msgctxt "Pieces Color · Player Name"
 msgid "%1 · %2"
 msgstr "%1 · %2"
 
-#: chessamentapplication.cpp:23
+#: chessamentapplication.cpp:24
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "New tournament…"
 msgstr "Nový turnaj…"
 
-#: chessamentapplication.cpp:44
+#: chessamentapplication.cpp:45
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Import tournament report…"
 msgstr "Importovať správu o turnaji…"
 
-#: chessamentapplication.cpp:53
+#: chessamentapplication.cpp:54
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Export tournament report…"
@@ -324,17 +324,17 @@ msgctxt "@action:menu"
 msgid "File"
 msgstr "Súbor"
 
-#: qml/components/MenuBar.qml:39
+#: qml/components/MenuBar.qml:43
 msgctxt "@action:menu"
 msgid "View"
 msgstr "Zobraziť"
 
-#: qml/components/MenuBar.qml:47
+#: qml/components/MenuBar.qml:51
 msgctxt "@action:menu"
 msgid "Settings"
 msgstr "Nastavenia"
 
-#: qml/components/MenuBar.qml:58
+#: qml/components/MenuBar.qml:62
 msgctxt "@action:menu"
 msgid "Help"
 msgstr "Pomocník"
@@ -414,22 +414,30 @@ msgctxt "@action:button Delete Player"
 msgid "Delete"
 msgstr "Odstrániť"
 
-#: qml/Main.qml:21
+#: qml/Main.qml:22
+#, fuzzy
+#| msgctxt "@title:window"
+#| msgid "Chessament"
+msgctxt "@title:window"
+msgid "%1 — Chessament"
+msgstr "Chessament"
+
+#: qml/Main.qml:22
 msgctxt "@title:window"
 msgid "Chessament"
 msgstr "Chessament"
 
-#: qml/Main.qml:51 qml/Main.qml:61 qml/NewTournamentDialog.qml:50
+#: qml/Main.qml:52 qml/Main.qml:62 qml/NewTournamentDialog.qml:50
 msgctxt "@label:listbox"
 msgid "Chessament event (*.chessament)"
 msgstr "Udalosť Chessament (*.chessament)"
 
-#: qml/Main.qml:70 qml/Main.qml:80
+#: qml/Main.qml:71 qml/Main.qml:81
 msgctxt "@label:listbox"
 msgid "TRF files (*.trf *.txt)"
 msgstr "Súbory TRF (*.trf *.txt)"
 
-#: qml/Main.qml:106
+#: qml/Main.qml:115
 msgctxt "@title"
 msgid "Error"
 msgstr "Chyba"
@@ -1039,17 +1047,17 @@ msgctxt "@info"
 msgid "The file is not a <application>Chessament</application> event."
 msgstr "Súbor nie je udalosťou <application>Chessament</application>."
 
-#: tournament/federations.h:118
-msgctxt "FIDE Federation"
-msgid "Chinese Taipei"
-msgstr "Čínsky Tchaj-pej"
-
-#: tournament/federations.h:211
+#: tournament/federations.h:175
 msgctxt "FIDE Federation"
 msgid "Scotland"
 msgstr "Škótsko"
 
-#: tournament/federations.h:220
+#: tournament/federations.h:203
+msgctxt "FIDE Federation"
+msgid "Chinese Taipei"
+msgstr "Čínsky Tchaj-pej"
+
+#: tournament/federations.h:217
 msgctxt "FIDE Federation"
 msgid "Wales"
 msgstr "Wales"
@@ -1151,7 +1159,7 @@ msgstr[0] "Uložený 1 hráč."
 msgstr[1] "Uložení %1 hráči."
 msgstr[2] "Uložených %1 hráčov."
 
-#: tournament/tiebreaks/aob.h:23 tournament/tournament.cpp:536
+#: tournament/tiebreaks/aob.h:23 tournament/tournament.cpp:537
 #, kde-format
 msgctxt "Tiebreak"
 msgid "Average Buchholz of Opponents"
@@ -1169,7 +1177,7 @@ msgctxt "@info"
 msgid "Unsupported tiebreak option \"%1\""
 msgstr "Nepodporovaná voľba rozstrelu „%1“"
 
-#: tournament/tiebreaks/buchholz.h:25 tournament/tournament.cpp:518
+#: tournament/tiebreaks/buchholz.h:25 tournament/tournament.cpp:519
 #, kde-format
 msgctxt "Buchholz tiebreak"
 msgid "Buchholz"
@@ -1181,26 +1189,34 @@ msgctxt "Buchholz N tiebreak, N is a number < 0"
 msgid "Buchholz %1"
 msgstr "Buchholz %1"
 
-#: tournament/tiebreaks/numberwins.h:22 tournament/tournament.cpp:522
+#: tournament/tiebreaks/dummy.h:23
+#, fuzzy, kde-format
+#| msgctxt "@info"
+#| msgid "Unsupported tiebreak option \"%1\""
+msgctxt "@info"
+msgid "Unsupported tiebreak"
+msgstr "Nepodporovaná voľba rozstrelu „%1“"
+
+#: tournament/tiebreaks/numberwins.h:22 tournament/tournament.cpp:523
 #, kde-format
 msgctxt "Number of Wins tiebreak"
 msgid "Number of Wins"
 msgstr "Počet výhier"
 
-#: tournament/tiebreaks/playedblack.h:22 tournament/tournament.cpp:532
+#: tournament/tiebreaks/playedblack.h:22 tournament/tournament.cpp:533
 #, kde-format
 msgctxt "Number of Games Played with Black (over the board) tiebreak"
 msgid "Number of Games Played with Black (over the board)"
 msgstr "Počet partií hraných čiernym (za doskou)"
 
 #: tournament/tiebreaks/points.h:22 tournament/tiebreaks/points.h:27
-#: tournament/tournament.cpp:514
+#: tournament/tournament.cpp:515
 #, kde-format
 msgctxt "Game points"
 msgid "Points"
 msgstr "Body"
 
-#: tournament/tiebreaks/won.h:23 tournament/tournament.cpp:528
+#: tournament/tiebreaks/won.h:23 tournament/tournament.cpp:529
 #, kde-format
 msgctxt ""
 "Number of Games Won (over the board) tiebreak. Different from the 'Number of "
@@ -1208,12 +1224,12 @@ msgctxt ""
 msgid "Number of Games Won (over the board)"
 msgstr "Počet partií vyhratých (za doskou)"
 
-#: tournament/tournament.cpp:971
+#: tournament/tournament.cpp:972
 #, kde-format
 msgid "An error ocurred while pairing the round: %1"
 msgstr "Pri párovaní kola sa vyskytla chyba: %1"
 
-#: tournament/tournament.cpp:1214
+#: tournament/tournament.cpp:1215
 #, kde-format
 msgid "Couldn't open file"
 msgstr "Nepodarilo sa otvoriť súbor"
