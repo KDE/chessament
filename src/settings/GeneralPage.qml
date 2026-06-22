@@ -11,8 +11,6 @@ import org.kde.chessament
 FormCard.FormCardPage {
     id: root
 
-    required property ChessamentApplication application
-
     title: KI18n.i18nc("@title", "General")
 
     FormCard.FormHeader {

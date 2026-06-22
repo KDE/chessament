@@ -12,6 +12,7 @@ import QtQuick.Layouts as Layouts
 import org.kde.ki18n
 import org.kde.kitemmodels as KItemModels
 import org.kde.kirigami as Kirigami
+import org.kde.kirigami.actioncollection as AC
 import org.kde.kirigamiaddons.components as Components
 
 import org.kde.chessament
@@ -141,9 +142,9 @@ TablePage {
             }
         },
         Kirigami.Action {
-            id: printAction
-            icon.name: "document-print-symbolic"
-            text: KI18n.i18nc("@action:intoolbar", "Print…")
+            AC.ActionCollection.action: "PrintDocument"
+            AC.ActionCollection.collection: "org.kde.chessament.tournament"
+            enabled: root.visible
             onTriggered: Controller.printPlayersDocument()
         },
         Kirigami.Action {
@@ -152,9 +153,8 @@ TablePage {
             onTriggered: saveDialog.open()
         },
         Kirigami.Action {
-            id: addAction
-            icon.name: "list-add-symbolic"
-            text: KI18n.i18nc("@action:intoolbar", "Add Player…")
+            AC.ActionCollection.action: "AddPlayer"
+            AC.ActionCollection.collection: "org.kde.chessament.tournament"
             displayHint: Kirigami.DisplayHint.KeepVisible
             onTriggered: addPlayerDialog.open()
         }

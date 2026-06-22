@@ -111,6 +111,12 @@ set_package_properties(KF6KirigamiAddons PROPERTIES
     PURPOSE "Required application components and runtime dependency"
 )
 
+find_package(KF6KirigamiAppComponents)
+set_package_properties(KF6KirigamiAppComponents PROPERTIES
+    TYPE REQUIRED
+    PURPOSE "Required application components"
+)
+
 if (BUILD_EXPERIMENTAL)
     find_package(Qt6Keychain)
     set_package_properties(Qt6Keychain PROPERTIES
@@ -145,7 +151,9 @@ feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)
 
 qcoro_enable_coroutines()
 
+ecm_find_qmlmodule(org.kde.config REQUIRED)
 ecm_find_qmlmodule(org.kde.ki18n REQUIRED)
+ecm_find_qmlmodule(org.kde.kirigami.actioncollection REQUIRED)
 ecm_find_qmlmodule(org.kde.kirigamiaddons.components REQUIRED)
 ecm_find_qmlmodule(org.kde.kirigamiaddons.delegates REQUIRED)
 ecm_find_qmlmodule(org.kde.kirigamiaddons.formcard REQUIRED)

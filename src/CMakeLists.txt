@@ -22,6 +22,7 @@ ecm_add_qml_module(chessament_static
         qml/components/TimeControlDelegate.qml
 
         qml/Main.qml
+        qml/ActionCollection.qml
         qml/AddPlayerDialog.qml
         qml/DeletePairingsDialog.qml
         qml/DeletePlayerDialog.qml
@@ -64,6 +65,7 @@ ecm_add_qml_module(chessament_static
         timecontrolmodel.cpp
     IMPORTS
         org.kde.kirigami
+        org.kde.kirigami.actioncollection
         org.kde.ki18n
         org.kde.kirigamiaddons.formcard
         org.kde.kirigamiaddons.statefulapp
@@ -75,11 +77,6 @@ kde_source_files_enable_exceptions(
     controller.cpp
     ratinglistmodel.cpp
     searchplayersmodel.cpp
-)
-
-target_sources(chessament_static PUBLIC
-    chessamentapplication.cpp
-    chessamentapplication.h
 )
 
 target_link_libraries(chessament_static PUBLIC
@@ -102,6 +99,7 @@ target_link_libraries(chessament_static PUBLIC
     KF6::IconThemes
     KF6::ItemModels
     KF6::KIOWidgets
+    KF6::KirigamiActionCollection
     KirigamiAddonsStatefulApp
     QCoro6::Core
     QCoro6::Qml

@@ -13,8 +13,7 @@ import org.kde.chessament
 Kirigami.OverlayDrawer {
     id: root
 
-    readonly property StatefulWindow window: root.Controls.ApplicationWindow.window as StatefulWindow
-    readonly property AbstractKirigamiApplication application: root.window.application
+    readonly property ApplicationWindow window: root.Controls.ApplicationWindow.window as Kirigami.ApplicationWindow
 
     modal: false
     edge: Application.layoutDirection === Qt.RightToLeft ? Qt.RightEdge : Qt.LeftEdge

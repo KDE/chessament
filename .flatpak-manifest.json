@@ -34,13 +34,31 @@
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 389407,
-                        "stable-only": true,
                         "url-template": "https://github.com/BieremaBoyzProgramming/bbpPairings/archive/refs/tags/v$version.tar.gz"
                     }
                 },
                 {
                     "type": "patch",
                     "path": "0001-Add-CMake-build.patch"
+                }
+            ]
+        },
+        {
+            "name": "kirigami-app-components",
+            "buildsystem": "cmake-ninja",
+            "config-opts": [
+                "-DBUILD_TESTING=OFF"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://download.kde.org/stable/kirigami-app-components/kirigami-app-components-1.0.2.tar.xz",
+                    "sha256": "6bfd9e0a3a4b7d17505f0c3c0c395628165973b6f4cf1e4a7a1f3342873b44d0",
+                    "x-checker-data": {
+                        "type": "anitya",
+                        "project-id": 391965,
+                        "url-template": "https://download.kde.org/stable/kirigami-app-components/kirigami-app-components-$version.tar.xz"
+                    }
                 }
             ]
         },

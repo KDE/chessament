@@ -11,16 +11,14 @@ import org.kde.chessament
 Kirigami.Page {
     id: root
 
-    required property AbstractKirigamiApplication application
+    required property Kirigami.Action newTournamentAction
 
     Kirigami.PlaceholderMessage {
         spacing: Kirigami.Units.gridUnit
         width: parent.width - (Kirigami.Units.largeSpacing * 4)
         text: KI18n.i18nc("@title", "Welcome to Chessament")
         explanation: KI18n.i18nc("@info", "Chessament is a chess tournament manager")
-        helpfulAction: Kirigami.Action {
-            fromQAction: root.application.action("file_new")
-        }
+        helpfulAction: root.newTournamentAction
         anchors.centerIn: parent
     }
 }

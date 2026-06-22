@@ -11,6 +11,7 @@ import QtQuick.Dialogs as Dialogs
 import org.kde.ki18n
 import org.kde.kitemmodels as KItemModels
 import org.kde.kirigami as Kirigami
+import org.kde.kirigami.actioncollection as AC
 
 import org.kde.chessament
 
@@ -67,10 +68,9 @@ TablePage {
             }
         },
         Kirigami.Action {
-            id: printAction
-            icon.name: "document-print-symbolic"
-            text: KI18n.i18nc("@action:intoolbar", "Print…")
-            enabled: Controller.pairingModel.count !== 0
+            AC.ActionCollection.action: "PrintDocument"
+            AC.ActionCollection.collection: "org.kde.chessament.tournament"
+            enabled: root.visible && Controller.pairingModel.count !== 0
             onTriggered: Controller.printPairingsDocument()
         },
         Kirigami.Action {
