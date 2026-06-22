@@ -88,6 +88,13 @@ set_package_properties(KF6DocTools PROPERTIES
     PURPOSE "User documentation"
 )
 
+find_package(bbpPairings)
+set_package_properties(bbpPairings PROPERTIES
+    TYPE RUNTIME
+    PURPOSE "Pairing engine"
+    URL "https://github.com/BieremaBoyzProgramming/bbpPairings"
+)
+
 feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)
 
 qcoro_enable_coroutines()
