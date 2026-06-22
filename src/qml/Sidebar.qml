@@ -13,8 +13,6 @@ import org.kde.chessament
 Kirigami.OverlayDrawer {
     id: root
 
-    readonly property AbstractKirigamiApplication application: (root.Controls.ApplicationWindow.window as StatefulWindow).application
-
     modal: false
     edge: Application.layoutDirection === Qt.RightToLeft ? Qt.RightEdge : Qt.LeftEdge
     handleVisible: false
@@ -30,7 +28,7 @@ Kirigami.OverlayDrawer {
     contentItem: ColumnLayout {
         Controls.ToolBar {
             Layout.fillWidth: true
-            Layout.preferredHeight: (root.Controls.ApplicationWindow.window as StatefulWindow).pageStack.globalToolBar.preferredHeight
+            Layout.preferredHeight: (root.Controls.ApplicationWindow.window as Kirigami.ApplicationWindow).pageStack.globalToolBar.preferredHeight
 
             leftPadding: 0
             rightPadding: 0

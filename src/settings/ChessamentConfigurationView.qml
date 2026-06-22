@@ -13,19 +13,12 @@ import org.kde.chessament
 KirigamiSettings.ConfigurationView {
     id: root
 
-    required property AbstractKirigamiApplication application
-
     modules: [
         KirigamiSettings.ConfigurationModule {
             moduleId: "general"
             text: KI18n.i18nc("@action:button", "General")
             icon.name: "preferences-system-symbolic"
             page: () => Qt.createComponent("org.kde.chessament.settings", "GeneralPage")
-            initialProperties: () => {
-                return {
-                    application: root.application
-                };
-            }
         },
         KirigamiSettings.ConfigurationModule {
             moduleId: "accounts"
@@ -33,11 +26,6 @@ KirigamiSettings.ConfigurationView {
             icon.name: "system-users-symbolic"
             visible: Config.developer
             page: () => Qt.createComponent("org.kde.chessament.settings", "AccountsPage")
-            initialProperties: () => {
-                return {
-                    application: root.application
-                };
-            }
         },
         KirigamiSettings.ConfigurationModule {
             moduleId: "ratinglists"
@@ -45,11 +33,6 @@ KirigamiSettings.ConfigurationView {
             icon.name: "view-list-details-symbolic"
             visible: Config.developer
             page: () => Qt.createComponent("org.kde.chessament.settings", "RatingListsPage")
-            initialProperties: () => {
-                return {
-                    application: root.application
-                };
-            }
         }
     ]
 }
