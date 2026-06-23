@@ -1,11 +1,11 @@
-# SPDX-FileCopyrightText: 2025, 2026 Xavier Besnard <xavier.besnard@kde.org>
+# SPDX-FileCopyrightText: 2025-2026 Xavier Besnard <xavier.besnard@kde.org>
 # SPDX-FileCopyrightText: 2025 Thomas Vergnaud <thomas.vergnaud@mailo.fr>
 msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-22 00:40+0000\n"
-"PO-Revision-Date: 2026-04-30 07:54+0200\n"
+"PO-Revision-Date: 2026-06-21 09:23+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: fr\n"
 "Language: fr\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.12.3\n"
+"X-Generator: Lokalize 26.04.1\n"
 
 #: byesmodel.cpp:66
 #, kde-format
@@ -390,25 +390,16 @@ msgid "Remove"
 msgstr "Retirer"
 
 #: qml/DeletePlayerDialog.qml:19
-#, fuzzy
-#| msgctxt "@title:column Name of the White Player"
-#| msgid "White Player"
 msgctxt "@title"
 msgid "Delete Player"
-msgstr "Joueur blanc"
+msgstr "Supprimer le joueur"
 
 #: qml/DeletePlayerDialog.qml:20
-#, fuzzy
-#| msgctxt "@title:window"
-#| msgid "Details of player \"%1\""
 msgctxt "@label"
 msgid "Permanently delete player \"%1\"?"
-msgstr "Détails sur le joueur « %1 »"
+msgstr "Supprimer de façon permanente le joueur « %1 » ?"
 
 #: qml/DeletePlayerDialog.qml:26
-#, fuzzy
-#| msgctxt "@action:button Delete Rating List"
-#| msgid "Delete"
 msgctxt "@action:button Delete Player"
 msgid "Delete"
 msgstr "Supprimer"
@@ -615,12 +606,9 @@ msgid "Open Player Details"
 msgstr "Ouvrir les détails du joueur"
 
 #: qml/PlayersPage.qml:151
-#, fuzzy
-#| msgctxt "@action:intoolbar"
-#| msgid "Sort Players…"
 msgctxt "@action:inmenu"
 msgid "Delete Player…"
-msgstr "Trier les joueurs…"
+msgstr "Supprimer le joueur…"
 
 #: qml/PlayersPage.qml:249
 msgctxt "@info:placeholder"
