@@ -36,7 +36,7 @@ TablePage {
     Dialogs.FileDialog {
         id: saveDialog
         fileMode: Dialogs.FileDialog.SaveFile
-        nameFilters: ["PDF Files (*.pdf)"]
+        nameFilters: [KI18n.i18nc("@label:listbox", "PDF document (*.pdf)")]
         currentFolder: StandardPaths.standardLocations(StandardPaths.HomeLocation)[0]
         onAccepted: Controller.savePairingsDocument(selectedFile)
     }
