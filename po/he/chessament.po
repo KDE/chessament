@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-22 00:40+0000\n"
-"PO-Revision-Date: 2026-04-30 13:41+0300\n"
+"PO-Revision-Date: 2026-06-23 08:37+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Lokalize 26.04.0\n"
+"X-Generator: Lokalize 26.04.1\n"
 
 #: byesmodel.cpp:66
 #, kde-format
@@ -392,36 +392,24 @@ msgid "Remove"
 msgstr "הסרה"
 
 #: qml/DeletePlayerDialog.qml:19
-#, fuzzy
-#| msgctxt "@title:column Name of the White Player"
-#| msgid "White Player"
 msgctxt "@title"
 msgid "Delete Player"
-msgstr "שחקן לבן"
+msgstr "מחיקת שחקן/ית"
 
 #: qml/DeletePlayerDialog.qml:20
-#, fuzzy
-#| msgctxt "@title:window"
-#| msgid "Details of player \"%1\""
 msgctxt "@label"
 msgid "Permanently delete player \"%1\"?"
-msgstr "פרטי השחקן/ית „%1”"
+msgstr "למחוק את השחקן/ית „%1” לצמיתות?"
 
 #: qml/DeletePlayerDialog.qml:26
-#, fuzzy
-#| msgctxt "@action:button Delete Rating List"
-#| msgid "Delete"
 msgctxt "@action:button Delete Player"
 msgid "Delete"
-msgstr "מחיקה"
+msgstr "למחוק"
 
 #: qml/Main.qml:22
-#, fuzzy
-#| msgctxt "@title:window"
-#| msgid "Chessament"
 msgctxt "@title:window"
 msgid "%1 — Chessament"
-msgstr "Chessament"
+msgstr "%1 — Chessament"
 
 #: qml/Main.qml:22
 msgctxt "@title:window"
@@ -619,12 +607,9 @@ msgid "Open Player Details"
 msgstr "פתיחת פרטי שחקן/ית"
 
 #: qml/PlayersPage.qml:151
-#, fuzzy
-#| msgctxt "@action:intoolbar"
-#| msgid "Sort Players…"
 msgctxt "@action:inmenu"
 msgid "Delete Player…"
-msgstr "סידור שחקנים…"
+msgstr "מחיקת שחקן/ית…"
 
 #: qml/PlayersPage.qml:249
 msgctxt "@info:placeholder"
@@ -1194,12 +1179,10 @@ msgid "Buchholz %1"
 msgstr "בוכהולץ %1"
 
 #: tournament/tiebreaks/dummy.h:23
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Unsupported tiebreak option \"%1\""
+#, kde-format
 msgctxt "@info"
 msgid "Unsupported tiebreak"
-msgstr "אפשרות שובר שוויון „%1” לא נתמכת"
+msgstr "שובר שוויון לא נתמך"
 
 #: tournament/tiebreaks/numberwins.h:22 tournament/tournament.cpp:529
 #, kde-format

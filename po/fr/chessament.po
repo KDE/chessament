@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-22 00:40+0000\n"
-"PO-Revision-Date: 2026-06-21 09:23+0200\n"
+"PO-Revision-Date: 2026-06-22 11:57+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: fr\n"
 "Language: fr\n"
@@ -405,12 +405,9 @@ msgid "Delete"
 msgstr "Supprimer"
 
 #: qml/Main.qml:22
-#, fuzzy
-#| msgctxt "@title:window"
-#| msgid "Chessament"
 msgctxt "@title:window"
 msgid "%1 — Chessament"
-msgstr "Chessament"
+msgstr "%1 — Chessament"
 
 #: qml/Main.qml:22
 msgctxt "@title:window"
@@ -1175,12 +1172,10 @@ msgid "Buchholz %1"
 msgstr "Buchholz %1"
 
 #: tournament/tiebreaks/dummy.h:23
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Unsupported tiebreak option \"%1\""
+#, kde-format
 msgctxt "@info"
 msgid "Unsupported tiebreak"
-msgstr "Option « %1 » de jeu décisif non prise en charge"
+msgstr "Jeu décisif non pris en charge"
 
 #: tournament/tiebreaks/numberwins.h:22 tournament/tournament.cpp:529
 #, kde-format
