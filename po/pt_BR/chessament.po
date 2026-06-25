@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-22 00:40+0000\n"
+"POT-Creation-Date: 2026-06-25 00:40+0000\n"
 "PO-Revision-Date: 2026-06-21 08:05-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -454,6 +454,11 @@ msgstr "Sistema suíço"
 msgctxt "@label"
 msgid "Number of rounds"
 msgstr "Número de rodadas"
+
+#: qml/PairingsPage.qml:39 qml/PlayersPage.qml:40 qml/StandingsPage.qml:40
+msgctxt "@label:listbox"
+msgid "PDF document (*.pdf)"
+msgstr ""
 
 #: qml/PairingsPage.qml:47
 msgctxt "@option:check"
@@ -952,7 +957,7 @@ msgctxt "@option:check"
 msgid "Automatically open exported PDF files"
 msgstr "Abrir automaticamente arquivos PDF exportados"
 
-#: settings/RatingListsPage.qml:24 settings/RatingListsPage.qml:138
+#: settings/RatingListsPage.qml:24 settings/RatingListsPage.qml:139
 msgctxt "@title"
 msgid "Rating Lists"
 msgstr "Listas de classificação"
@@ -967,52 +972,57 @@ msgctxt "@action:button"
 msgid "Import"
 msgstr "Importar"
 
-#: settings/RatingListsPage.qml:56
+#: settings/RatingListsPage.qml:50
+msgctxt "@label:listbox"
+msgid "All Supported Files (*.zip *.xls)"
+msgstr ""
+
+#: settings/RatingListsPage.qml:57
 msgctxt "@info:label"
 msgid "Name"
 msgstr "Nome"
 
-#: settings/RatingListsPage.qml:61
+#: settings/RatingListsPage.qml:62
 msgctxt "@info:label"
 msgid "Rating list file or URL"
 msgstr "Arquivo de lista de classificação ou URL"
 
-#: settings/RatingListsPage.qml:66
+#: settings/RatingListsPage.qml:67
 msgctxt "@action:button"
 msgid "Select file"
 msgstr "Selecionar arquivo"
 
-#: settings/RatingListsPage.qml:82
+#: settings/RatingListsPage.qml:83
 msgctxt "@title:window"
 msgid "Importing Rating List"
 msgstr "Importando lista de classificação"
 
-#: settings/RatingListsPage.qml:122
+#: settings/RatingListsPage.qml:123
 msgctxt "@title"
 msgid "Delete Rating List"
 msgstr "Excluir lista de classificação"
 
-#: settings/RatingListsPage.qml:130
+#: settings/RatingListsPage.qml:131
 msgctxt "@action:button Delete Rating List"
 msgid "Delete"
 msgstr "Excluir"
 
-#: settings/RatingListsPage.qml:143
+#: settings/RatingListsPage.qml:144
 msgctxt "@info:status"
 msgid "No rating lists yet."
 msgstr "Nenhuma lista classificação ainda."
 
-#: settings/RatingListsPage.qml:163
+#: settings/RatingListsPage.qml:164
 msgctxt "@action:button"
 msgid "Delete Rating List"
 msgstr "Excluir lista de classificação"
 
-#: settings/RatingListsPage.qml:171
+#: settings/RatingListsPage.qml:172
 msgctxt "@action:button"
 msgid "Delete rating list"
 msgstr "Excluir lista de classificação"
 
-#: settings/RatingListsPage.qml:181
+#: settings/RatingListsPage.qml:182
 msgctxt "@action:button"
 msgid "Add rating list"
 msgstr "Adicionar lista de classificação"

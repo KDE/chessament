@@ -4,22 +4,21 @@
 # Automatically generated, 2025.
 #
 # SPDX-FileCopyrightText: 2025 Sofía Priego <spriego@darksylvania.net>
-# SPDX-FileCopyrightText: 2025, 2026 Manuel Alcaraz Zambrano <manuel@alcarazzam.dev>
-# SPDX-FileCopyrightText: 2026 Manuel Alcaraz Zambrano <manuelalcarazzam@gmail.com>
+# SPDX-FileCopyrightText: 2025-2026 Manuel Alcaraz Zambrano <manuel@alcarazzam.dev>
 msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-22 00:40+0000\n"
-"PO-Revision-Date: 2026-02-08 00:23+0100\n"
-"Last-Translator: Manuel Alcaraz Zambrano <manuelalcarazzam@gmail.com>\n"
+"POT-Creation-Date: 2026-06-25 00:40+0000\n"
+"PO-Revision-Date: 2026-06-24 17:12+0100\n"
+"Last-Translator: Manuel Alcaraz Zambrano <manuel@alcarazzam.dev>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.12.1\n"
+"X-Generator: Lokalize 26.04.2\n"
 
 #: byesmodel.cpp:66
 #, kde-format
@@ -129,7 +128,7 @@ msgstr "manuel@alcarazzam.dev,spriego@darksylvania.net"
 #: main.cpp:74
 #, kde-format
 msgid "Swiss-system chess tournament pairing engine."
-msgstr ""
+msgstr "Motor de emparejamientos de torneos de ajedrez con sistema suizo."
 
 #: main.cpp:84
 #, kde-format
@@ -141,19 +140,19 @@ msgstr "Importar informe de torneo."
 #, kde-format
 msgctxt "@info:shell Command line option description"
 msgid "Event to open."
-msgstr ""
+msgstr "Evento a abrir."
 
 #: main.cpp:106
 #, kde-format
 msgctxt "@info:shell"
 msgid "Error: Can't open an event when importing a TRF"
-msgstr ""
+msgstr "Error: no se puede abrir un evento mientras se importa un TRF"
 
 #: main.cpp:115
 #, kde-format
 msgctxt "@info:shell"
 msgid "Error: Can't open more that one event"
-msgstr ""
+msgstr "Error: no se puede abrir más de un evento"
 
 #: pairingmodel.cpp:99
 #, kde-format
@@ -228,12 +227,10 @@ msgid "Player ID"
 msgstr "ID del jugador"
 
 #: playersmodel.cpp:226
-#, fuzzy, kde-format
-#| msgctxt "@title:column Player National Rating"
-#| msgid "National Rating"
+#, kde-format
 msgctxt "@title:column Player National ID"
 msgid "National ID"
-msgstr "Valoración nacional"
+msgstr "ID nacional"
 
 #: playersmodel.cpp:228
 #, kde-format
@@ -257,7 +254,7 @@ msgstr "Origen"
 #, kde-format
 msgctxt "@title:column Player Gender"
 msgid "Gender"
-msgstr ""
+msgstr "Género"
 
 #: qml/AddPlayerDialog.qml:19
 msgctxt "@title:window"
@@ -296,12 +293,9 @@ msgid "Optional"
 msgstr "Opcional"
 
 #: qml/AddPlayerDialog.qml:106
-#, fuzzy
-#| msgctxt "@title:column Player National Rating"
-#| msgid "National Rating"
 msgctxt "@label:textbox"
 msgid "National ID"
-msgstr "Valoración nacional"
+msgstr "ID nacional"
 
 #: qml/AddPlayerDialog.qml:112
 msgctxt "@label:textbox"
@@ -321,7 +315,7 @@ msgstr "Origen"
 #: qml/AddPlayerDialog.qml:130
 msgctxt "@label:textbox"
 msgid "Gender"
-msgstr ""
+msgstr "Género"
 
 #: qml/AddTiebreakDialog.qml:20
 msgctxt "@title:window"
@@ -400,36 +394,24 @@ msgid "Remove"
 msgstr "Eliminar"
 
 #: qml/DeletePlayerDialog.qml:19
-#, fuzzy
-#| msgctxt "@title:column Name of the White Player"
-#| msgid "White Player"
 msgctxt "@title"
 msgid "Delete Player"
-msgstr "Jugador de blancas"
+msgstr "Eliminar jugador"
 
 #: qml/DeletePlayerDialog.qml:20
-#, fuzzy
-#| msgctxt "@title:window"
-#| msgid "Details of player \"%1\""
 msgctxt "@label"
 msgid "Permanently delete player \"%1\"?"
-msgstr "Detalles del jugador «%1»"
+msgstr "¿Eliminar jugador «%1» permanentemente?"
 
 #: qml/DeletePlayerDialog.qml:26
-#, fuzzy
-#| msgctxt "@action:button Delete Rating List"
-#| msgid "Delete"
 msgctxt "@action:button Delete Player"
 msgid "Delete"
 msgstr "Eliminar"
 
 #: qml/Main.qml:22
-#, fuzzy
-#| msgctxt "@title:window"
-#| msgid "Chessament"
 msgctxt "@title:window"
 msgid "%1 — Chessament"
-msgstr "Chessament"
+msgstr "%1 — Chessament"
 
 #: qml/Main.qml:22
 msgctxt "@title:window"
@@ -437,17 +419,14 @@ msgid "Chessament"
 msgstr "Chessament"
 
 #: qml/Main.qml:52 qml/Main.qml:62 qml/NewTournamentDialog.qml:50
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Chessament is a chess tournament manager"
 msgctxt "@label:listbox"
 msgid "Chessament event (*.chessament)"
-msgstr "Chessament es un gestor de torneos de ajedrez"
+msgstr "Evento de Chessament (*.chessament)"
 
 #: qml/Main.qml:71 qml/Main.qml:81
 msgctxt "@label:listbox"
 msgid "TRF files (*.trf *.txt)"
-msgstr ""
+msgstr "Archivos TRF (*.trf *.txt)"
 
 #: qml/Main.qml:115
 msgctxt "@title"
@@ -478,6 +457,11 @@ msgstr "Sistema suizo"
 msgctxt "@label"
 msgid "Number of rounds"
 msgstr "Número de rondas"
+
+#: qml/PairingsPage.qml:39 qml/PlayersPage.qml:40 qml/StandingsPage.qml:40
+msgctxt "@label:listbox"
+msgid "PDF document (*.pdf)"
+msgstr ""
 
 #: qml/PairingsPage.qml:47
 msgctxt "@option:check"
@@ -514,12 +498,9 @@ msgid "Round %1 has finished."
 msgstr "La ronda %1 ha terminado."
 
 #: qml/PairingsPage.qml:110
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Pair Round %1"
 msgctxt "@action:button"
 msgid "Pair Round %1…"
-msgstr "Emparejar ronda %1"
+msgstr "Emparejar ronda %1…"
 
 #: qml/PairingsPage.qml:156
 msgctxt "@info:placeholder"
@@ -539,14 +520,14 @@ msgstr "Emparejar ronda %1"
 #: qml/PairRoundDialog.qml:29
 msgctxt "@info"
 msgid "All players will be paired."
-msgstr ""
+msgstr "Todos los jugadores serán emparejados."
 
 #: qml/PairRoundDialog.qml:29
 msgctxt "@info %1 is a number"
 msgid "The following player won't be paired: %2"
 msgid_plural "The following %1 players won't be paired: %2"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "El siguiente jugador no será emparejado: %2"
+msgstr[1] "Los siguientes %1 jugadores no serán emparejados: %2"
 
 #: qml/PairRoundDialog.qml:39
 msgctxt "@option:check"
@@ -631,20 +612,14 @@ msgid "Open Player Details"
 msgstr "Abrir detalles del jugador"
 
 #: qml/PlayersPage.qml:151
-#, fuzzy
-#| msgctxt "@action:intoolbar"
-#| msgid "Sort Players…"
 msgctxt "@action:inmenu"
 msgid "Delete Player…"
-msgstr "Ordenar jugadores…"
+msgstr "Eliminar jugador…"
 
 #: qml/PlayersPage.qml:249
-#, fuzzy
-#| msgctxt "@info:placeholder"
-#| msgid "No players yet"
 msgctxt "@info:placeholder"
 msgid "No players found"
-msgstr "Todavía no hay jugadores"
+msgstr "No se encontraron jugadores"
 
 #: qml/PlayersPage.qml:249
 msgctxt "@info:placeholder"
@@ -673,7 +648,7 @@ msgstr[1] "%1 valorados"
 #: qml/PlayersPage.qml:275
 msgctxt "@info:status Total number of players (Number of players rated)"
 msgid "%1 (%2)"
-msgstr ""
+msgstr "%1 (%2)"
 
 #: qml/ResultsFooter.qml:43
 msgctxt "@action:intoolbar"
@@ -921,53 +896,39 @@ msgid "Chessament is a chess tournament manager"
 msgstr "Chessament es un gestor de torneos de ajedrez"
 
 #: settings/AccountsPage.qml:21
-#, fuzzy
-#| msgctxt "@title:group"
-#| msgid "Account"
 msgctxt "@title"
 msgid "Accounts"
-msgstr "Cuenta"
+msgstr "Cuentas"
 
 #: settings/AccountsPage.qml:24
-#, fuzzy
-#| msgctxt "@title:group"
-#| msgid "Account"
 msgctxt "@title:group"
 msgid "Accounts"
-msgstr "Cuenta"
+msgstr "Cuentas"
 
 #: settings/AccountsPage.qml:45
-#, fuzzy
-#| msgid "Logout"
 msgctxt "@action:button"
 msgid "Logout"
 msgstr "Cerrar sesión"
 
 #: settings/AccountsPage.qml:56
-#, fuzzy
-#| msgctxt "@title:group"
-#| msgid "Account"
 msgctxt "@action:button"
 msgid "Add Account"
-msgstr "Cuenta"
+msgstr "Añadir cuenta"
 
 #: settings/AddAccountDialog.qml:16
-#, fuzzy
-#| msgctxt "@title:group"
-#| msgid "Account"
 msgctxt "@title"
 msgid "Add Account"
-msgstr "Cuenta"
+msgstr "Añadir cuenta"
 
 #: settings/AddAccountDialog.qml:24
 msgctxt "@label:textbox"
 msgid "Server URL"
-msgstr ""
+msgstr "URL del servidor"
 
 #: settings/AddAccountDialog.qml:35
 msgctxt "@action:button"
 msgid "Continue"
-msgstr ""
+msgstr "Continuar"
 
 #: settings/ChessamentConfigurationView.qml:21
 msgctxt "@action:button"
@@ -975,12 +936,9 @@ msgid "General"
 msgstr "General"
 
 #: settings/ChessamentConfigurationView.qml:32
-#, fuzzy
-#| msgctxt "@title:group"
-#| msgid "Account"
 msgctxt "@action:button"
 msgid "Accounts"
-msgstr "Cuenta"
+msgstr "Cuentas"
 
 #: settings/ChessamentConfigurationView.qml:44
 msgctxt "@action:button"
@@ -993,9 +951,6 @@ msgid "General"
 msgstr "General"
 
 #: settings/GeneralPage.qml:19
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "General"
 msgctxt "@title:group"
 msgid "General"
 msgstr "General"
@@ -1003,9 +958,9 @@ msgstr "General"
 #: settings/GeneralPage.qml:24
 msgctxt "@option:check"
 msgid "Automatically open exported PDF files"
-msgstr ""
+msgstr "Abrir automáticamente archivos PDF exportados"
 
-#: settings/RatingListsPage.qml:24 settings/RatingListsPage.qml:138
+#: settings/RatingListsPage.qml:24 settings/RatingListsPage.qml:139
 msgctxt "@title"
 msgid "Rating Lists"
 msgstr "Listas de valoración"
@@ -1020,55 +975,57 @@ msgctxt "@action:button"
 msgid "Import"
 msgstr "Importar"
 
-#: settings/RatingListsPage.qml:56
+#: settings/RatingListsPage.qml:50
+msgctxt "@label:listbox"
+msgid "All Supported Files (*.zip *.xls)"
+msgstr ""
+
+#: settings/RatingListsPage.qml:57
 msgctxt "@info:label"
 msgid "Name"
 msgstr "Nombre"
 
-#: settings/RatingListsPage.qml:61
-#, fuzzy
-#| msgctxt "@info:label"
-#| msgid "Rating list URL"
+#: settings/RatingListsPage.qml:62
 msgctxt "@info:label"
 msgid "Rating list file or URL"
-msgstr "URL de la lista de valoración"
+msgstr "Archivo o URL de la lista de valoración"
 
-#: settings/RatingListsPage.qml:66
+#: settings/RatingListsPage.qml:67
 msgctxt "@action:button"
 msgid "Select file"
-msgstr ""
+msgstr "Escoger archivo"
 
-#: settings/RatingListsPage.qml:82
+#: settings/RatingListsPage.qml:83
 msgctxt "@title:window"
 msgid "Importing Rating List"
 msgstr "Importando lista de valoración"
 
-#: settings/RatingListsPage.qml:122
+#: settings/RatingListsPage.qml:123
 msgctxt "@title"
 msgid "Delete Rating List"
 msgstr "Eliminar lista de valoración"
 
-#: settings/RatingListsPage.qml:130
+#: settings/RatingListsPage.qml:131
 msgctxt "@action:button Delete Rating List"
 msgid "Delete"
 msgstr "Eliminar"
 
-#: settings/RatingListsPage.qml:143
+#: settings/RatingListsPage.qml:144
 msgctxt "@info:status"
 msgid "No rating lists yet."
 msgstr "No hay listas de valoración todavía."
 
-#: settings/RatingListsPage.qml:163
+#: settings/RatingListsPage.qml:164
 msgctxt "@action:button"
 msgid "Delete Rating List"
 msgstr "Eliminar lista de valoración"
 
-#: settings/RatingListsPage.qml:171
+#: settings/RatingListsPage.qml:172
 msgctxt "@action:button"
 msgid "Delete rating list"
 msgstr "Eliminar lista de valoración"
 
-#: settings/RatingListsPage.qml:181
+#: settings/RatingListsPage.qml:182
 msgctxt "@action:button"
 msgid "Add rating list"
 msgstr "Añadir lista de valoración"
@@ -1083,22 +1040,22 @@ msgstr "Posición"
 #, kde-kuit-format
 msgctxt "@info"
 msgid "The file is not a <application>Chessament</application> event."
-msgstr ""
+msgstr "El archivo no es un evento de <application>Chessament</application>."
 
 #: tournament/federations.h:175
 msgctxt "FIDE Federation"
 msgid "Scotland"
-msgstr ""
+msgstr "Escocia"
 
 #: tournament/federations.h:203
 msgctxt "FIDE Federation"
 msgid "Chinese Taipei"
-msgstr ""
+msgstr "China Taipéi"
 
 #: tournament/federations.h:217
 msgctxt "FIDE Federation"
 msgid "Wales"
-msgstr ""
+msgstr "Gales"
 
 #: tournament/pairingengine.cpp:29
 #, kde-format
@@ -1132,17 +1089,16 @@ msgstr "Jugador «%1» no válido para el emparejamiento «%2»."
 
 #: tournament/ratinglists/ratinglist.cpp:126
 #: tournament/ratinglists/ratinglist.cpp:143
-#, fuzzy, kde-format
-#| msgid "Couldn't open file"
+#, kde-format
 msgctxt "@info"
 msgid "Could not open file."
-msgstr "No se ha podido abrir el archivo"
+msgstr "No se ha podido abrir el archivo."
 
 #: tournament/ratinglists/ratinglist.cpp:138
 #, kde-format
 msgctxt "@info"
 msgid "Could not open file: the file does not exists."
-msgstr ""
+msgstr "No se ha podido abrir el archivo: el archivo no existe."
 
 #: tournament/ratinglists/ratinglist.cpp:155
 #, kde-format
@@ -1163,12 +1119,11 @@ msgid "Couldn't download rating list: %1"
 msgstr "No se pudo descargar la lista de valoración: %1"
 
 #: tournament/ratinglists/ratinglist.cpp:183
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Couldn't download rating list: %1"
+#, kde-format
 msgctxt "@info"
 msgid "Could not download rating list from %1 (unsupported protocol)."
-msgstr "No se pudo descargar la lista de valoración: %1"
+msgstr ""
+"No se pudo descargar la lista de valoración desde %1 (protocolo no admitido)."
 
 #: tournament/ratinglists/ratinglist.cpp:196
 #, kde-format
@@ -1223,20 +1178,16 @@ msgid "Buchholz"
 msgstr "Buchholz"
 
 #: tournament/tiebreaks/buchholz.h:28
-#, fuzzy, kde-format
-#| msgctxt "Buchholz tiebreak"
-#| msgid "Buchholz"
+#, kde-format
 msgctxt "Buchholz N tiebreak, N is a number < 0"
 msgid "Buchholz %1"
-msgstr "Buchholz"
+msgstr "Buchholz %1"
 
 #: tournament/tiebreaks/dummy.h:23
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Unsupported tiebreak option \"%1\""
+#, kde-format
 msgctxt "@info"
 msgid "Unsupported tiebreak"
-msgstr "Opción «%1» del desempate no admitida."
+msgstr "Desempate no admitido."
 
 #: tournament/tiebreaks/numberwins.h:22 tournament/tournament.cpp:529
 #, kde-format
@@ -1245,12 +1196,10 @@ msgid "Number of Wins"
 msgstr "Número de victorias"
 
 #: tournament/tiebreaks/playedblack.h:22 tournament/tournament.cpp:539
-#, fuzzy, kde-format
-#| msgctxt "Number of Games Played with Black tiebreak"
-#| msgid "Number of Games Played with Black"
+#, kde-format
 msgctxt "Number of Games Played with Black (over the board) tiebreak"
 msgid "Number of Games Played with Black (over the board)"
-msgstr "Número de partidas jugadas con negras"
+msgstr "Número de partidas jugadas con negras (sobre el tablero)"
 
 #: tournament/tiebreaks/points.h:22 tournament/tiebreaks/points.h:27
 #: tournament/tournament.cpp:521
@@ -1260,14 +1209,12 @@ msgid "Points"
 msgstr "Puntos"
 
 #: tournament/tiebreaks/won.h:23 tournament/tournament.cpp:535
-#, fuzzy, kde-format
-#| msgctxt "Number of Games Won tiebreak"
-#| msgid "Number of Games Won"
+#, kde-format
 msgctxt ""
 "Number of Games Won (over the board) tiebreak. Different from the 'Number of "
 "Wins' tiebreak, which includes games won by forfeit."
 msgid "Number of Games Won (over the board)"
-msgstr "Número de partidas ganadas"
+msgstr "Número de partidas ganadas (sobre el tablero)"
 
 #: tournament/tournament.cpp:978
 #, kde-format
@@ -1304,22 +1251,3 @@ msgstr "Resultado «%1» desconocido en el emparejamiento «%2»."
 #, kde-format
 msgid "Pairing \"%1\" has no opponent."
 msgstr "El emparejamiento «%1» no tiene oponente."
-
-#~ msgctxt "@title:column"
-#~ msgid "Sex"
-#~ msgstr "Sexo"
-
-#~ msgctxt "@label:textbox"
-#~ msgid "Sex"
-#~ msgstr "Sexo"
-
-#~ msgctxt "@action:button"
-#~ msgid "Connect Account"
-#~ msgstr "Conectar cuenta"
-
-#~ msgid "Logged in as %1"
-#~ msgstr "Sesión iniciada como %1"
-
-#~ msgctxt "@info:status players, rated"
-#~ msgid "%1, %2"
-#~ msgstr "%1, %2"

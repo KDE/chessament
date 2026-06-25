@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-22 00:40+0000\n"
+"POT-Creation-Date: 2026-06-25 00:40+0000\n"
 "PO-Revision-Date: 2026-06-22 11:57+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: fr\n"
@@ -453,6 +453,11 @@ msgstr "Système suisse"
 msgctxt "@label"
 msgid "Number of rounds"
 msgstr "Nombre de tours"
+
+#: qml/PairingsPage.qml:39 qml/PlayersPage.qml:40 qml/StandingsPage.qml:40
+msgctxt "@label:listbox"
+msgid "PDF document (*.pdf)"
+msgstr ""
 
 #: qml/PairingsPage.qml:47
 msgctxt "@option:check"
@@ -951,7 +956,7 @@ msgctxt "@option:check"
 msgid "Automatically open exported PDF files"
 msgstr "Ouvrir automatiquement les fichiers exportés au format « PDF »"
 
-#: settings/RatingListsPage.qml:24 settings/RatingListsPage.qml:138
+#: settings/RatingListsPage.qml:24 settings/RatingListsPage.qml:139
 msgctxt "@title"
 msgid "Rating Lists"
 msgstr "Listes de notation"
@@ -966,52 +971,57 @@ msgctxt "@action:button"
 msgid "Import"
 msgstr "Importer"
 
-#: settings/RatingListsPage.qml:56
+#: settings/RatingListsPage.qml:50
+msgctxt "@label:listbox"
+msgid "All Supported Files (*.zip *.xls)"
+msgstr ""
+
+#: settings/RatingListsPage.qml:57
 msgctxt "@info:label"
 msgid "Name"
 msgstr "Nom"
 
-#: settings/RatingListsPage.qml:61
+#: settings/RatingListsPage.qml:62
 msgctxt "@info:label"
 msgid "Rating list file or URL"
 msgstr "URL ou fichier de la liste des notations"
 
-#: settings/RatingListsPage.qml:66
+#: settings/RatingListsPage.qml:67
 msgctxt "@action:button"
 msgid "Select file"
 msgstr "Sélectionner un fichier"
 
-#: settings/RatingListsPage.qml:82
+#: settings/RatingListsPage.qml:83
 msgctxt "@title:window"
 msgid "Importing Rating List"
 msgstr "Importation d'une liste de notation en cours"
 
-#: settings/RatingListsPage.qml:122
+#: settings/RatingListsPage.qml:123
 msgctxt "@title"
 msgid "Delete Rating List"
 msgstr "Supprimer une liste de notations"
 
-#: settings/RatingListsPage.qml:130
+#: settings/RatingListsPage.qml:131
 msgctxt "@action:button Delete Rating List"
 msgid "Delete"
 msgstr "Supprimer"
 
-#: settings/RatingListsPage.qml:143
+#: settings/RatingListsPage.qml:144
 msgctxt "@info:status"
 msgid "No rating lists yet."
 msgstr "Pas encore de liste de notations."
 
-#: settings/RatingListsPage.qml:163
+#: settings/RatingListsPage.qml:164
 msgctxt "@action:button"
 msgid "Delete Rating List"
 msgstr "Supprimer une liste de notations"
 
-#: settings/RatingListsPage.qml:171
+#: settings/RatingListsPage.qml:172
 msgctxt "@action:button"
 msgid "Delete rating list"
 msgstr "Supprimer une liste de notations"
 
-#: settings/RatingListsPage.qml:181
+#: settings/RatingListsPage.qml:182
 msgctxt "@action:button"
 msgid "Add rating list"
 msgstr "Ajouter une liste de notations"

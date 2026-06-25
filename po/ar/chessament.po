@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-22 00:40+0000\n"
+"POT-Creation-Date: 2026-06-25 00:40+0000\n"
 "PO-Revision-Date: 2026-06-21 20:34+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -455,6 +455,11 @@ msgstr "النظام السويسري"
 msgctxt "@label"
 msgid "Number of rounds"
 msgstr "عدد الجولات"
+
+#: qml/PairingsPage.qml:39 qml/PlayersPage.qml:40 qml/StandingsPage.qml:40
+msgctxt "@label:listbox"
+msgid "PDF document (*.pdf)"
+msgstr ""
 
 #: qml/PairingsPage.qml:47
 msgctxt "@option:check"
@@ -964,7 +969,7 @@ msgctxt "@option:check"
 msgid "Automatically open exported PDF files"
 msgstr "فتح ملفات البدي إف دي المصدرة تلقائيًا"
 
-#: settings/RatingListsPage.qml:24 settings/RatingListsPage.qml:138
+#: settings/RatingListsPage.qml:24 settings/RatingListsPage.qml:139
 msgctxt "@title"
 msgid "Rating Lists"
 msgstr "قائة التقييم"
@@ -979,52 +984,57 @@ msgctxt "@action:button"
 msgid "Import"
 msgstr "استورد"
 
-#: settings/RatingListsPage.qml:56
+#: settings/RatingListsPage.qml:50
+msgctxt "@label:listbox"
+msgid "All Supported Files (*.zip *.xls)"
+msgstr ""
+
+#: settings/RatingListsPage.qml:57
 msgctxt "@info:label"
 msgid "Name"
 msgstr "الاسم"
 
-#: settings/RatingListsPage.qml:61
+#: settings/RatingListsPage.qml:62
 msgctxt "@info:label"
 msgid "Rating list file or URL"
 msgstr "ملف قائمة التقييم أو عنوانه"
 
-#: settings/RatingListsPage.qml:66
+#: settings/RatingListsPage.qml:67
 msgctxt "@action:button"
 msgid "Select file"
 msgstr "اختر ملفًا"
 
-#: settings/RatingListsPage.qml:82
+#: settings/RatingListsPage.qml:83
 msgctxt "@title:window"
 msgid "Importing Rating List"
 msgstr "استيراد قائمة التقييم"
 
-#: settings/RatingListsPage.qml:122
+#: settings/RatingListsPage.qml:123
 msgctxt "@title"
 msgid "Delete Rating List"
 msgstr "احذف قائمة التقييم"
 
-#: settings/RatingListsPage.qml:130
+#: settings/RatingListsPage.qml:131
 msgctxt "@action:button Delete Rating List"
 msgid "Delete"
 msgstr "احذف"
 
-#: settings/RatingListsPage.qml:143
+#: settings/RatingListsPage.qml:144
 msgctxt "@info:status"
 msgid "No rating lists yet."
 msgstr "لا يوجد قائمة تقييم حتى الآن"
 
-#: settings/RatingListsPage.qml:163
+#: settings/RatingListsPage.qml:164
 msgctxt "@action:button"
 msgid "Delete Rating List"
 msgstr "احذف قائمة التقييم"
 
-#: settings/RatingListsPage.qml:171
+#: settings/RatingListsPage.qml:172
 msgctxt "@action:button"
 msgid "Delete rating list"
 msgstr "احذف قائمة التقييم"
 
-#: settings/RatingListsPage.qml:181
+#: settings/RatingListsPage.qml:182
 msgctxt "@action:button"
 msgid "Add rating list"
 msgstr "أضف قائمة التقييم"
