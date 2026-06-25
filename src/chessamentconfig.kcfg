@@ -18,8 +18,4 @@ SPDX-License-Identifier: LGPL-3.0-or-later
             <default>false</default>
         </entry>
     </group>
-    <group name="Account">
-        <entry key="Username" type="String">
-        </entry>
-    </group>
 </kcfg>
