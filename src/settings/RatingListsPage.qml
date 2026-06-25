@@ -39,8 +39,14 @@ FormCard.FormCardPage {
         }
 
         onAccepted: {
+            importingDialog.error = "";
+            importingDialog.finished = false;
             importingDialog.open();
-            listsModel.importRatingList(nameField.text, urlField.editText).then(() => {
+
+            listsModel.importRatingList(nameField.text, urlField.editText).then(error => {
+                if (error) {
+                    importingDialog.error = error;
+                }
                 importingDialog.finished = true;
             });
         }
@@ -77,10 +83,19 @@ FormCard.FormCardPage {
     Kirigami.Dialog {
         id: importingDialog
 
+        property string error
         property bool finished: false
 
         parent: Controls.Overlay.overlay
-        title: finished ? KI18n.i18nc("@title:window", "Rating List Imported") : KI18n.i18nc("@title:window", "Importing Rating List")
+        title: {
+            if (error) {
+                return KI18n.i18nc("@title", "Error");
+            }
+            if (finished) {
+                return KI18n.i18nc("@title:window", "Rating List Imported");
+            }
+            return KI18n.i18nc("@title:window", "Importing Rating List");
+        }
         closePolicy: Controls.Dialog.NoAutoClose
         showCloseButton: false
         padding: Kirigami.Units.largeSpacing
@@ -109,7 +124,7 @@ FormCard.FormCardPage {
                     return Qt.AlignHCenter;
                 }
 
-                text: listsModel.status
+                text: importingDialog.error.length > 0 ? importingDialog.error : listsModel.status
             }
         }
     }

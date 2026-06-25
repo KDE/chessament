@@ -42,7 +42,7 @@ Q_SIGNALS:
     void statusChanged();
 
 private:
-    QCoro::Task<> importRatingListImpl(const QString &name, const QString &url);
+    QCoro::Task<QString> importRatingListImpl(const QString &name, const QString &url);
     QCoro::Task<> remove(int row);
 
     QString m_status;

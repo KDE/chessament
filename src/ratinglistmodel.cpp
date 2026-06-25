@@ -40,7 +40,7 @@ QHash<int, QByteArray> RatingListModel::roleNames() const
 {
     return {
         {Qt::DisplayRole, "name"},
-        {RatingListModel::RatingListRole::ListIDRole, "listid"},
+        {RatingListModel::RatingListRole::ListIDRole, "listId"},
     };
 }
 
@@ -60,7 +60,7 @@ QCoro::QmlTask RatingListModel::importRatingList(const QString &name, const QStr
     return importRatingListImpl(name, url);
 }
 
-QCoro::Task<> RatingListModel::importRatingListImpl(const QString &name, const QString &url)
+QCoro::Task<QString> RatingListModel::importRatingListImpl(const QString &name, const QString &url)
 {
     auto listUrl = QUrl::fromUserInput(url);
 
@@ -73,13 +73,14 @@ QCoro::Task<> RatingListModel::importRatingListImpl(const QString &name, const Q
     const auto result = co_await list->import(name, listUrl);
 
     if (!result) {
-        setStatus(result.error());
-        co_return;
+        co_return result.error();
     }
 
     beginInsertRows({}, rowCount(), rowCount());
     m_lists.push_back(std::move(list));
     endInsertRows();
+
+    co_return {};
 }
 
 QCoro::QmlTask RatingListModel::removeList(int row)
