@@ -80,7 +80,7 @@ FormCard.FormCardPage {
         property bool finished: false
 
         parent: Controls.Overlay.overlay
-        title: KI18n.i18nc("@title:window", "Importing Rating List")
+        title: finished ? KI18n.i18nc("@title:window", "Rating List Imported") : KI18n.i18nc("@title:window", "Importing Rating List")
         closePolicy: Controls.Dialog.NoAutoClose
         showCloseButton: false
         padding: Kirigami.Units.largeSpacing
@@ -117,12 +117,14 @@ FormCard.FormCardPage {
     Kirigami.PromptDialog {
         id: deleteListDialog
 
-        property string listId
+        property int row
+        property string name
 
         parent: Controls.Overlay.overlay
         title: KI18n.i18nc("@title", "Delete Rating List")
+        subtitle: KI18n.i18nc("@label", "Permanently delete rating list \"%1\"?", deleteListDialog.name)
 
-        onAccepted: listsModel.removeList(deleteListDialog.listId)
+        onAccepted: listsModel.removeList(deleteListDialog.row)
 
         footer: Controls.DialogButtonBox {
             standardButtons: Controls.Dialog.Cancel
@@ -166,7 +168,8 @@ FormCard.FormCardPage {
                     flat: true
                     display: Controls.Button.IconOnly
                     onPressed: {
-                        deleteListDialog.listId = listDelegate.row;
+                        deleteListDialog.row = listDelegate.row;
+                        deleteListDialog.name = listDelegate.name;
                         deleteListDialog.open();
                     }
                     Controls.ToolTip.text: KI18n.i18nc("@action:button", "Delete rating list")
