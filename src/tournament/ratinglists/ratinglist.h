@@ -38,7 +38,7 @@ constexpr auto RATING_LIST_PLAYERS_TABLE_SCHEMA =
     "CREATE TABLE IF NOT EXISTS players("
     "list INTEGER NOT NULL,"
     "name TEXT,"
-    "playerid TEXT,"
+    "playerId TEXT,"
     "federation TEXT,"
     "gender TEXT,"
     "title TEXT,"
@@ -46,18 +46,18 @@ constexpr auto RATING_LIST_PLAYERS_TABLE_SCHEMA =
     "standard INTEGER,"
     "rapid INTEGER,"
     "blitz INTEGER,"
-    "nationalid TEXT,"
-    "nationalrating INTEGER,"
+    "nationalId TEXT,"
+    "nationalRating INTEGER,"
     "extra BLOB,"
     "FOREIGN KEY (list) REFERENCES ratinglists(id) ON DELETE CASCADE"
     ");"_L1;
 
 constexpr auto ADD_RATING_LIST_PLAYER_QUERY =
-    "INSERT INTO players(list, name, playerid, federation, gender, title, birthday, standard, rapid, blitz, nationalid, nationalrating, extra) "
+    "INSERT INTO players(list, name, playerId, federation, gender, title, birthday, standard, rapid, blitz, nationalId, nationalRating, extra) "
     "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, jsonb(?));"_L1;
 
 static const auto SEARCH_PLAYERS_QUERY =
-    u"SELECT playerid, name, federation, gender, title, birthday, standard, rapid, blitz, nationalid, nationalrating, json(extra) as extra FROM players WHERE name LIKE :search LIMIT 20;"_s;
+    u"SELECT playerId, name, federation, gender, title, birthday, standard, rapid, blitz, nationalId, nationalRating, json(extra) as extra FROM players WHERE name LIKE :search LIMIT 20;"_s;
 
 static constexpr auto RATING_LISTS_DB_CONNECTION_NAME = "rating-lists"_L1;
 static constexpr auto RATING_LISTS_DB_CONNECTION_NAME_WRITER = "rating-lists-writer"_L1;

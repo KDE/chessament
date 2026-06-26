@@ -341,7 +341,7 @@ std::expected<QList<RatingListPlayer>, QString> RatingList::searchPlayers(const 
         return std::unexpected(query.lastError().text());
     }
 
-    const int idNo = query.record().indexOf("playerid");
+    const int idNo = query.record().indexOf("playerId");
     const int nameNo = query.record().indexOf("name");
     const int federationNo = query.record().indexOf("federation");
     const int genderNo = query.record().indexOf("gender");
@@ -350,8 +350,8 @@ std::expected<QList<RatingListPlayer>, QString> RatingList::searchPlayers(const 
     const int standardNo = query.record().indexOf("standard");
     const int rapidNo = query.record().indexOf("rapid");
     const int blitzNo = query.record().indexOf("blitz");
-    const int nationalIdNo = query.record().indexOf("nationalid");
-    const int nationalRatingNo = query.record().indexOf("nationalrating");
+    const int nationalIdNo = query.record().indexOf("nationalId");
+    const int nationalRatingNo = query.record().indexOf("nationalRating");
     const int extraNo = query.record().indexOf("extra");
 
     while (query.next()) {
