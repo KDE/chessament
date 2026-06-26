@@ -35,11 +35,11 @@ std::expected<QSqlDatabase, QString> RatingList::getDb(const QString &connection
     }
 
     qDebug() << "Opening ratings db" << connectionName;
-    const QString dbFolder = QStandardPaths::writableLocation(QStandardPaths::StateLocation);
+    const QString dbFolder = QStandardPaths::writableLocation(QStandardPaths::AppDataLocation);
     QDir().mkpath(dbFolder);
 
     auto db = QSqlDatabase::addDatabase(u"QSQLITE"_s, connectionName);
-    db.setDatabaseName(dbFolder + "/ratinglists.db"_L1);
+    db.setDatabaseName(dbFolder + "/ratinglists.sqlite3"_L1);
 
     if (!db.open()) {
         return std::unexpected(db.lastError().text());
