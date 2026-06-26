@@ -22,12 +22,13 @@ constexpr auto RATING_LISTS_TABLE_SCHEMA =
     "name TEXT NOT NULL,"
     "url TEXT,"
     "etag TEXT,"
-    "lastmodified TEXT"
+    "lastModified TEXT,"
+    "extra BLOB"
     ");"_L1;
 
 constexpr auto ADD_RATING_LIST_QUERY =
-    "INSERT INTO ratinglists(name, url, etag, lastmodified) "
-    "VALUES (:name, :url, :etag, :lastmodified);"_L1;
+    "INSERT INTO ratinglists(name, url, etag, lastModified, extra) "
+    "VALUES (:name, :url, :etag, :lastModified, :extra);"_L1;
 
 constexpr auto GET_RATING_LISTS_QUERY = "SELECT * FROM ratinglists;"_L1;
 
@@ -108,12 +109,16 @@ public:
 
     [[nodiscard]] int id() const;
     [[nodiscard]] QString name() const;
+    [[nodiscard]] QByteArray extraString() const;
 
     QCoro::Task<std::expected<void, QString>> import(const QString &name, const QUrl &url);
 
     static void remove(int id);
 
     static std::expected<QList<RatingListPlayer>, QString> searchPlayers(const QString &text);
+
+public Q_SLOTS:
+    void setExtra(const QByteArray &extra);
 
 Q_SIGNALS:
     void statusChanged(const QString &status);
@@ -130,6 +135,7 @@ private:
     QString m_url;
     QString m_etag;
     QString m_lastModified;
+    QJsonObject m_extra;
 
     uint m_playerCount{0};
 

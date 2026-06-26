@@ -92,7 +92,8 @@ std::vector<std::unique_ptr<RatingList>> RatingList::lists()
     const int nameNo = query.record().indexOf("name");
     const int urlNo = query.record().indexOf("url");
     const int etagNo = query.record().indexOf("etag");
-    const int lastModifiedNo = query.record().indexOf("lastmodified");
+    const int lastModifiedNo = query.record().indexOf("lastModified");
+    const int extraNo = query.record().indexOf("extra");
 
     while (query.next()) {
         auto list = std::make_unique<RatingList>();
@@ -101,6 +102,7 @@ std::vector<std::unique_ptr<RatingList>> RatingList::lists()
         list->m_url = query.value(urlNo).toString();
         list->m_etag = query.value(etagNo).toString();
         list->m_lastModified = query.value(lastModifiedNo).toString();
+        list->setExtra(query.value(extraNo).toByteArray());
 
         result.push_back(std::move(list));
     }
@@ -116,6 +118,21 @@ int RatingList::id() const
 QString RatingList::name() const
 {
     return m_name;
+}
+
+QByteArray RatingList::extraString() const
+{
+    const auto doc = QJsonDocument{m_extra};
+    return doc.toJson(QJsonDocument::JsonFormat::Compact);
+}
+
+void RatingList::setExtra(const QByteArray &extra)
+{
+    const auto doc = QJsonDocument::fromJson(extra);
+
+    Q_ASSERT(doc.isObject());
+
+    m_extra = doc.object();
 }
 
 QCoro::Task<std::expected<void, QString>> RatingList::import(const QString &name, const QUrl &url)
@@ -256,7 +273,8 @@ std::expected<uint, QString> RatingList::readPlayers(QTextStream *stream, std::u
     query.bindValue(":name"_L1, m_name);
     query.bindValue(":url"_L1, m_url);
     query.bindValue(":etag"_L1, m_etag);
-    query.bindValue(":lastmodified"_L1, m_lastModified);
+    query.bindValue(":lastModified"_L1, m_lastModified);
+    query.bindValue(u":extra"_s, extraString());
 
     if (!query.exec()) {
         qWarning() << "create list" << query.lastError().text();
