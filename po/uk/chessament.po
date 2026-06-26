@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-25 00:40+0000\n"
-"PO-Revision-Date: 2026-06-21 17:33+0300\n"
+"POT-Creation-Date: 2026-06-26 00:41+0000\n"
+"PO-Revision-Date: 2026-06-25 09:20+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -426,7 +426,7 @@ msgctxt "@label:listbox"
 msgid "TRF files (*.trf *.txt)"
 msgstr "файли TRF (*.trf *.txt)"
 
-#: qml/Main.qml:115
+#: qml/Main.qml:115 settings/RatingListsPage.qml:92
 msgctxt "@title"
 msgid "Error"
 msgstr "Помилка"
@@ -459,7 +459,7 @@ msgstr "Кількість раундів"
 #: qml/PairingsPage.qml:39 qml/PlayersPage.qml:40 qml/StandingsPage.qml:40
 msgctxt "@label:listbox"
 msgid "PDF document (*.pdf)"
-msgstr ""
+msgstr "документ PDF (*.pdf)"
 
 #: qml/PairingsPage.qml:47
 msgctxt "@option:check"
@@ -964,7 +964,7 @@ msgctxt "@option:check"
 msgid "Automatically open exported PDF files"
 msgstr "Автоматично відкривати експортовані файли PDF"
 
-#: settings/RatingListsPage.qml:24 settings/RatingListsPage.qml:139
+#: settings/RatingListsPage.qml:24 settings/RatingListsPage.qml:156
 msgctxt "@title"
 msgid "Rating Lists"
 msgstr "Рейтингові списки"
@@ -979,57 +979,73 @@ msgctxt "@action:button"
 msgid "Import"
 msgstr "Імпортувати"
 
-#: settings/RatingListsPage.qml:50
+#: settings/RatingListsPage.qml:56
 msgctxt "@label:listbox"
 msgid "All Supported Files (*.zip *.xls)"
-msgstr ""
+msgstr "усі підтримувані файли (*.zip *.xls)"
 
-#: settings/RatingListsPage.qml:57
+#: settings/RatingListsPage.qml:63
 msgctxt "@info:label"
 msgid "Name"
 msgstr "Ім'я"
 
-#: settings/RatingListsPage.qml:62
+#: settings/RatingListsPage.qml:68
 msgctxt "@info:label"
 msgid "Rating list file or URL"
 msgstr "Файл або адреса рейтингового списку"
 
-#: settings/RatingListsPage.qml:67
+#: settings/RatingListsPage.qml:73
 msgctxt "@action:button"
 msgid "Select file"
 msgstr "Виберіть файл"
 
-#: settings/RatingListsPage.qml:83
+#: settings/RatingListsPage.qml:95
+#, fuzzy
+#| msgctxt "@action:button"
+#| msgid "Rating Lists"
+msgctxt "@title:window"
+msgid "Rating List Imported"
+msgstr "Рейтингові списки"
+
+#: settings/RatingListsPage.qml:97
 msgctxt "@title:window"
 msgid "Importing Rating List"
 msgstr "Імпортування рейтингового списку"
 
-#: settings/RatingListsPage.qml:123
+#: settings/RatingListsPage.qml:139
 msgctxt "@title"
 msgid "Delete Rating List"
 msgstr "Вилучення рейтингового списку"
 
-#: settings/RatingListsPage.qml:131
+#: settings/RatingListsPage.qml:140
+#, fuzzy
+#| msgctxt "@label"
+#| msgid "Permanently delete player \"%1\"?"
+msgctxt "@label"
+msgid "Permanently delete rating list \"%1\"?"
+msgstr "Остаточно вилучити гравця «%1»?"
+
+#: settings/RatingListsPage.qml:148
 msgctxt "@action:button Delete Rating List"
 msgid "Delete"
 msgstr "Вилучити"
 
-#: settings/RatingListsPage.qml:144
+#: settings/RatingListsPage.qml:161
 msgctxt "@info:status"
 msgid "No rating lists yet."
 msgstr "Рейтингових списків ще немає."
 
-#: settings/RatingListsPage.qml:164
+#: settings/RatingListsPage.qml:181
 msgctxt "@action:button"
 msgid "Delete Rating List"
 msgstr "Вилучити рейтинговий список"
 
-#: settings/RatingListsPage.qml:172
+#: settings/RatingListsPage.qml:190
 msgctxt "@action:button"
 msgid "Delete rating list"
 msgstr "Вилучити рейтинговий список"
 
-#: settings/RatingListsPage.qml:182
+#: settings/RatingListsPage.qml:200
 msgctxt "@action:button"
 msgid "Add rating list"
 msgstr "Додати рейтинговий список"

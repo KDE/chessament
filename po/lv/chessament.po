@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-25 00:40+0000\n"
+"POT-Creation-Date: 2026-06-26 00:41+0000\n"
 "PO-Revision-Date: 2025-11-09 11:05+0200\n"
 "Last-Translator: Toms Trasūns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -444,7 +444,7 @@ msgctxt "@label:listbox"
 msgid "TRF files (*.trf *.txt)"
 msgstr ""
 
-#: qml/Main.qml:115
+#: qml/Main.qml:115 settings/RatingListsPage.qml:92
 msgctxt "@title"
 msgid "Error"
 msgstr "Kļūda"
@@ -1027,7 +1027,7 @@ msgctxt "@option:check"
 msgid "Automatically open exported PDF files"
 msgstr ""
 
-#: settings/RatingListsPage.qml:24 settings/RatingListsPage.qml:139
+#: settings/RatingListsPage.qml:24 settings/RatingListsPage.qml:156
 #, fuzzy
 #| msgctxt "@title:column Player Rating"
 #| msgid "Rating"
@@ -1045,12 +1045,12 @@ msgctxt "@action:button"
 msgid "Import"
 msgstr ""
 
-#: settings/RatingListsPage.qml:50
+#: settings/RatingListsPage.qml:56
 msgctxt "@label:listbox"
 msgid "All Supported Files (*.zip *.xls)"
 msgstr ""
 
-#: settings/RatingListsPage.qml:57
+#: settings/RatingListsPage.qml:63
 #, fuzzy
 #| msgctxt "@title:column Player Name"
 #| msgid "Name"
@@ -1058,32 +1058,45 @@ msgctxt "@info:label"
 msgid "Name"
 msgstr "Vārds"
 
-#: settings/RatingListsPage.qml:62
+#: settings/RatingListsPage.qml:68
 msgctxt "@info:label"
 msgid "Rating list file or URL"
 msgstr ""
 
-#: settings/RatingListsPage.qml:67
+#: settings/RatingListsPage.qml:73
 msgctxt "@action:button"
 msgid "Select file"
 msgstr ""
 
-#: settings/RatingListsPage.qml:83
+#: settings/RatingListsPage.qml:95
+#, fuzzy
+#| msgctxt "@title:column Player Rating"
+#| msgid "Rating"
+msgctxt "@title:window"
+msgid "Rating List Imported"
+msgstr "Reitings"
+
+#: settings/RatingListsPage.qml:97
 msgctxt "@title:window"
 msgid "Importing Rating List"
 msgstr ""
 
-#: settings/RatingListsPage.qml:123
+#: settings/RatingListsPage.qml:139
 msgctxt "@title"
 msgid "Delete Rating List"
 msgstr ""
 
-#: settings/RatingListsPage.qml:131
+#: settings/RatingListsPage.qml:140
+msgctxt "@label"
+msgid "Permanently delete rating list \"%1\"?"
+msgstr ""
+
+#: settings/RatingListsPage.qml:148
 msgctxt "@action:button Delete Rating List"
 msgid "Delete"
 msgstr ""
 
-#: settings/RatingListsPage.qml:144
+#: settings/RatingListsPage.qml:161
 #, fuzzy
 #| msgctxt "@info:placeholder"
 #| msgid "No standings yet"
@@ -1091,17 +1104,17 @@ msgctxt "@info:status"
 msgid "No rating lists yet."
 msgstr "Rezultātu vēl nav"
 
-#: settings/RatingListsPage.qml:164
+#: settings/RatingListsPage.qml:181
 msgctxt "@action:button"
 msgid "Delete Rating List"
 msgstr ""
 
-#: settings/RatingListsPage.qml:172
+#: settings/RatingListsPage.qml:190
 msgctxt "@action:button"
 msgid "Delete rating list"
 msgstr ""
 
-#: settings/RatingListsPage.qml:182
+#: settings/RatingListsPage.qml:200
 msgctxt "@action:button"
 msgid "Add rating list"
 msgstr ""

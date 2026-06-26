@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-25 00:40+0000\n"
-"PO-Revision-Date: 2026-06-21 13:56+0200\n"
+"POT-Creation-Date: 2026-06-26 00:41+0000\n"
+"PO-Revision-Date: 2026-06-25 13:34+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -425,7 +425,7 @@ msgctxt "@label:listbox"
 msgid "TRF files (*.trf *.txt)"
 msgstr "TRF-bestanden (*.trf *.txt)"
 
-#: qml/Main.qml:115
+#: qml/Main.qml:115 settings/RatingListsPage.qml:92
 msgctxt "@title"
 msgid "Error"
 msgstr "Fout"
@@ -458,7 +458,7 @@ msgstr "Aantal ronden"
 #: qml/PairingsPage.qml:39 qml/PlayersPage.qml:40 qml/StandingsPage.qml:40
 msgctxt "@label:listbox"
 msgid "PDF document (*.pdf)"
-msgstr ""
+msgstr "PDF document (*.pdf)"
 
 #: qml/PairingsPage.qml:47
 msgctxt "@option:check"
@@ -957,7 +957,7 @@ msgctxt "@option:check"
 msgid "Automatically open exported PDF files"
 msgstr "Automatisch geëxporteerde PDF-bestanden openen"
 
-#: settings/RatingListsPage.qml:24 settings/RatingListsPage.qml:139
+#: settings/RatingListsPage.qml:24 settings/RatingListsPage.qml:156
 msgctxt "@title"
 msgid "Rating Lists"
 msgstr "Ratinglijsten"
@@ -972,57 +972,73 @@ msgctxt "@action:button"
 msgid "Import"
 msgstr "Importeren"
 
-#: settings/RatingListsPage.qml:50
+#: settings/RatingListsPage.qml:56
 msgctxt "@label:listbox"
 msgid "All Supported Files (*.zip *.xls)"
-msgstr ""
+msgstr "Alle ondersteunde bestanden (*.zip *.xls)"
 
-#: settings/RatingListsPage.qml:57
+#: settings/RatingListsPage.qml:63
 msgctxt "@info:label"
 msgid "Name"
 msgstr "Naam"
 
-#: settings/RatingListsPage.qml:62
+#: settings/RatingListsPage.qml:68
 msgctxt "@info:label"
 msgid "Rating list file or URL"
 msgstr "Ratinglijst of URL"
 
-#: settings/RatingListsPage.qml:67
+#: settings/RatingListsPage.qml:73
 msgctxt "@action:button"
 msgid "Select file"
 msgstr "Bestand selecteren"
 
-#: settings/RatingListsPage.qml:83
+#: settings/RatingListsPage.qml:95
+#, fuzzy
+#| msgctxt "@action:button"
+#| msgid "Rating Lists"
+msgctxt "@title:window"
+msgid "Rating List Imported"
+msgstr "Ratinglijsten"
+
+#: settings/RatingListsPage.qml:97
 msgctxt "@title:window"
 msgid "Importing Rating List"
 msgstr "Ratinglijst importeren"
 
-#: settings/RatingListsPage.qml:123
+#: settings/RatingListsPage.qml:139
 msgctxt "@title"
 msgid "Delete Rating List"
 msgstr "Ratinglijst verwijderen"
 
-#: settings/RatingListsPage.qml:131
+#: settings/RatingListsPage.qml:140
+#, fuzzy
+#| msgctxt "@label"
+#| msgid "Permanently delete player \"%1\"?"
+msgctxt "@label"
+msgid "Permanently delete rating list \"%1\"?"
+msgstr "Speler \"%1\" permanent verwijderen?"
+
+#: settings/RatingListsPage.qml:148
 msgctxt "@action:button Delete Rating List"
 msgid "Delete"
 msgstr "Verwijderen"
 
-#: settings/RatingListsPage.qml:144
+#: settings/RatingListsPage.qml:161
 msgctxt "@info:status"
 msgid "No rating lists yet."
 msgstr "Nog geen ratinglijst."
 
-#: settings/RatingListsPage.qml:164
+#: settings/RatingListsPage.qml:181
 msgctxt "@action:button"
 msgid "Delete Rating List"
 msgstr "Ratinglijst verwijderen"
 
-#: settings/RatingListsPage.qml:172
+#: settings/RatingListsPage.qml:190
 msgctxt "@action:button"
 msgid "Delete rating list"
 msgstr "Ratinglijst verwijderen"
 
-#: settings/RatingListsPage.qml:182
+#: settings/RatingListsPage.qml:200
 msgctxt "@action:button"
 msgid "Add rating list"
 msgstr "Ratinglijst toevoegen"
