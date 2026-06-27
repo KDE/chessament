@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-26 00:41+0000\n"
-"PO-Revision-Date: 2026-06-25 09:20+0300\n"
+"POT-Creation-Date: 2026-06-27 00:41+0000\n"
+"PO-Revision-Date: 2026-06-26 11:46+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -1000,12 +1000,9 @@ msgid "Select file"
 msgstr "Виберіть файл"
 
 #: settings/RatingListsPage.qml:95
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Rating Lists"
 msgctxt "@title:window"
 msgid "Rating List Imported"
-msgstr "Рейтингові списки"
+msgstr "Імпортовано рейтингові списки"
 
 #: settings/RatingListsPage.qml:97
 msgctxt "@title:window"
@@ -1018,12 +1015,9 @@ msgid "Delete Rating List"
 msgstr "Вилучення рейтингового списку"
 
 #: settings/RatingListsPage.qml:140
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "Permanently delete player \"%1\"?"
 msgctxt "@label"
 msgid "Permanently delete rating list \"%1\"?"
-msgstr "Остаточно вилучити гравця «%1»?"
+msgstr "Остаточно вилучити рейтинговий список «%1»?"
 
 #: settings/RatingListsPage.qml:148
 msgctxt "@action:button Delete Rating List"
@@ -1107,44 +1101,44 @@ msgstr "Некоректний розподіл на пари «%1»."
 msgid "Invalid player \"%1\" on pairing \"%2\"."
 msgstr "Некоректний гравець «%1» у поділі на пари «%2»."
 
-#: tournament/ratinglists/ratinglist.cpp:126
 #: tournament/ratinglists/ratinglist.cpp:143
+#: tournament/ratinglists/ratinglist.cpp:160
 #, kde-format
 msgctxt "@info"
 msgid "Could not open file."
 msgstr "Не вдалося відкрити файл."
 
-#: tournament/ratinglists/ratinglist.cpp:138
+#: tournament/ratinglists/ratinglist.cpp:155
 #, kde-format
 msgctxt "@info"
 msgid "Could not open file: the file does not exists."
 msgstr "Не вдалося відкрити файл: файла не існує."
 
-#: tournament/ratinglists/ratinglist.cpp:155
+#: tournament/ratinglists/ratinglist.cpp:172
 #, kde-format
 msgctxt "@info:progress"
 msgid "Downloading file"
 msgstr "Отримання файла"
 
-#: tournament/ratinglists/ratinglist.cpp:165
+#: tournament/ratinglists/ratinglist.cpp:182
 #, kde-format
 msgctxt "@info:progress"
 msgid "Downloading file (%1 %)"
 msgstr "Отримання файла (%1 %)"
 
-#: tournament/ratinglists/ratinglist.cpp:171
+#: tournament/ratinglists/ratinglist.cpp:188
 #, kde-format
 msgctxt "@info"
 msgid "Couldn't download rating list: %1"
 msgstr "Не вдалося отримати рейтинговий список: %1"
 
-#: tournament/ratinglists/ratinglist.cpp:183
+#: tournament/ratinglists/ratinglist.cpp:200
 #, kde-format
 msgctxt "@info"
 msgid "Could not download rating list from %1 (unsupported protocol)."
 msgstr "Не вдалося отримати список оцінок з %1 (непідтримуваний протокол)."
 
-#: tournament/ratinglists/ratinglist.cpp:196
+#: tournament/ratinglists/ratinglist.cpp:213
 #, kde-format
 msgctxt "@info:progress"
 msgid "Imported one player."
@@ -1154,19 +1148,19 @@ msgstr[1] "Імпортовано дані %1 гравців."
 msgstr[2] "Імпортовано дані %1 гравців."
 msgstr[3] "Імпортовано дані гравця."
 
-#: tournament/ratinglists/ratinglist.cpp:212
+#: tournament/ratinglists/ratinglist.cpp:229
 #, kde-format
 msgctxt "@info"
 msgid "Couldn't extract file."
 msgstr "Не вдалося видобути файл."
 
-#: tournament/ratinglists/ratinglist.cpp:217
+#: tournament/ratinglists/ratinglist.cpp:234
 #, kde-format
 msgctxt "@info"
 msgid "File format not supported."
 msgstr "Підтримки формату файлів не передбачено."
 
-#: tournament/ratinglists/ratinglist.cpp:439
+#: tournament/ratinglists/ratinglist.cpp:457
 #, kde-format
 msgctxt "@info:progress"
 msgid "Saved 1 player."

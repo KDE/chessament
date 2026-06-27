@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-26 00:41+0000\n"
-"PO-Revision-Date: 2026-05-03 10:44+0200\n"
+"POT-Creation-Date: 2026-06-27 00:41+0000\n"
+"PO-Revision-Date: 2026-06-26 10:41+0200\n"
 "Last-Translator: Valter Mura <valtermura@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -392,36 +392,24 @@ msgid "Remove"
 msgstr "Rimuovi"
 
 #: qml/DeletePlayerDialog.qml:19
-#, fuzzy
-#| msgctxt "@title:column Name of the White Player"
-#| msgid "White Player"
 msgctxt "@title"
 msgid "Delete Player"
-msgstr "Giocatore bianco"
+msgstr "Elimina giocatore"
 
 #: qml/DeletePlayerDialog.qml:20
-#, fuzzy
-#| msgctxt "@title:window"
-#| msgid "Details of player \"%1\""
 msgctxt "@label"
 msgid "Permanently delete player \"%1\"?"
-msgstr "Dettagli del giocatore «%1»"
+msgstr "Eliminare definitivamente il giocatore «%1»?"
 
 #: qml/DeletePlayerDialog.qml:26
-#, fuzzy
-#| msgctxt "@action:button Delete Rating List"
-#| msgid "Delete"
 msgctxt "@action:button Delete Player"
 msgid "Delete"
 msgstr "Elimina"
 
 #: qml/Main.qml:22
-#, fuzzy
-#| msgctxt "@title:window"
-#| msgid "Chessament"
 msgctxt "@title:window"
 msgid "%1 — Chessament"
-msgstr "Chessament"
+msgstr "%1 — Chessament"
 
 #: qml/Main.qml:22
 msgctxt "@title:window"
@@ -471,7 +459,7 @@ msgstr "Numero di turni"
 #: qml/PairingsPage.qml:39 qml/PlayersPage.qml:40 qml/StandingsPage.qml:40
 msgctxt "@label:listbox"
 msgid "PDF document (*.pdf)"
-msgstr ""
+msgstr "Documento PDF (*.pdf)"
 
 #: qml/PairingsPage.qml:47
 msgctxt "@option:check"
@@ -622,12 +610,9 @@ msgid "Open Player Details"
 msgstr "Apri dettagli giocatore"
 
 #: qml/PlayersPage.qml:151
-#, fuzzy
-#| msgctxt "@action:intoolbar"
-#| msgid "Sort Players…"
 msgctxt "@action:inmenu"
 msgid "Delete Player…"
-msgstr "Ordina giocatori…"
+msgstr "Elimina giocatore…"
 
 #: qml/PlayersPage.qml:249
 msgctxt "@info:placeholder"
@@ -991,7 +976,7 @@ msgstr "Importa"
 #: settings/RatingListsPage.qml:56
 msgctxt "@label:listbox"
 msgid "All Supported Files (*.zip *.xls)"
-msgstr ""
+msgstr "Tutti i file supportati (*.zip *.xls)"
 
 #: settings/RatingListsPage.qml:63
 msgctxt "@info:label"
@@ -1009,12 +994,9 @@ msgid "Select file"
 msgstr "Seleziona file"
 
 #: settings/RatingListsPage.qml:95
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Rating Lists"
 msgctxt "@title:window"
 msgid "Rating List Imported"
-msgstr "Liste di valutazione"
+msgstr "Lista di valutazione importata"
 
 #: settings/RatingListsPage.qml:97
 msgctxt "@title:window"
@@ -1027,12 +1009,9 @@ msgid "Delete Rating List"
 msgstr "Elimina lista di valutazione"
 
 #: settings/RatingListsPage.qml:140
-#, fuzzy
-#| msgctxt "@title:window"
-#| msgid "Details of player \"%1\""
 msgctxt "@label"
 msgid "Permanently delete rating list \"%1\"?"
-msgstr "Dettagli del giocatore «%1»"
+msgstr "Eliminare definitivamente la lista di valutazione «%1»?"
 
 #: settings/RatingListsPage.qml:148
 msgctxt "@action:button Delete Rating List"
@@ -1116,38 +1095,38 @@ msgstr "Abbinamento «%1» non valido."
 msgid "Invalid player \"%1\" on pairing \"%2\"."
 msgstr "Giocatore «%1» non valido per l'abbinamento «%2»."
 
-#: tournament/ratinglists/ratinglist.cpp:126
 #: tournament/ratinglists/ratinglist.cpp:143
+#: tournament/ratinglists/ratinglist.cpp:160
 #, kde-format
 msgctxt "@info"
 msgid "Could not open file."
 msgstr "Impossibile aprire il file."
 
-#: tournament/ratinglists/ratinglist.cpp:138
+#: tournament/ratinglists/ratinglist.cpp:155
 #, kde-format
 msgctxt "@info"
 msgid "Could not open file: the file does not exists."
 msgstr "Impossibile aprire il file: il file non esiste."
 
-#: tournament/ratinglists/ratinglist.cpp:155
+#: tournament/ratinglists/ratinglist.cpp:172
 #, kde-format
 msgctxt "@info:progress"
 msgid "Downloading file"
 msgstr "Scaricamento del file"
 
-#: tournament/ratinglists/ratinglist.cpp:165
+#: tournament/ratinglists/ratinglist.cpp:182
 #, kde-format
 msgctxt "@info:progress"
 msgid "Downloading file (%1 %)"
 msgstr "Scaricamento del file (%1 %)"
 
-#: tournament/ratinglists/ratinglist.cpp:171
+#: tournament/ratinglists/ratinglist.cpp:188
 #, kde-format
 msgctxt "@info"
 msgid "Couldn't download rating list: %1"
 msgstr "Impossibile scaricare la lista di valutazione: %1"
 
-#: tournament/ratinglists/ratinglist.cpp:183
+#: tournament/ratinglists/ratinglist.cpp:200
 #, kde-format
 msgctxt "@info"
 msgid "Could not download rating list from %1 (unsupported protocol)."
@@ -1155,7 +1134,7 @@ msgstr ""
 "Impossibile scaricare la lista di valutazione da %1 (protocollo non "
 "supportato)."
 
-#: tournament/ratinglists/ratinglist.cpp:196
+#: tournament/ratinglists/ratinglist.cpp:213
 #, kde-format
 msgctxt "@info:progress"
 msgid "Imported one player."
@@ -1163,19 +1142,19 @@ msgid_plural "Imported %1 players."
 msgstr[0] "Un giocatore importato."
 msgstr[1] "%1 giocatori importati."
 
-#: tournament/ratinglists/ratinglist.cpp:212
+#: tournament/ratinglists/ratinglist.cpp:229
 #, kde-format
 msgctxt "@info"
 msgid "Couldn't extract file."
 msgstr "Impossibile estrarre il file."
 
-#: tournament/ratinglists/ratinglist.cpp:217
+#: tournament/ratinglists/ratinglist.cpp:234
 #, kde-format
 msgctxt "@info"
 msgid "File format not supported."
 msgstr "Formato file non supportato."
 
-#: tournament/ratinglists/ratinglist.cpp:439
+#: tournament/ratinglists/ratinglist.cpp:457
 #, kde-format
 msgctxt "@info:progress"
 msgid "Saved 1 player."
@@ -1214,12 +1193,10 @@ msgid "Buchholz %1"
 msgstr "Buchholz %1"
 
 #: tournament/tiebreaks/dummy.h:23
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Unsupported tiebreak option \"%1\""
+#, kde-format
 msgctxt "@info"
 msgid "Unsupported tiebreak"
-msgstr "Opzione di spareggio «%1» non supportata"
+msgstr "Spareggio non supportato"
 
 #: tournament/tiebreaks/numberwins.h:22 tournament/tournament.cpp:529
 #, kde-format
