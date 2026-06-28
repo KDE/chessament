@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-27 00:41+0000\n"
-"PO-Revision-Date: 2026-06-25 13:34+0200\n"
+"PO-Revision-Date: 2026-06-27 09:23+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -993,12 +993,9 @@ msgid "Select file"
 msgstr "Bestand selecteren"
 
 #: settings/RatingListsPage.qml:95
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Rating Lists"
 msgctxt "@title:window"
 msgid "Rating List Imported"
-msgstr "Ratinglijsten"
+msgstr "Ratinglijst geïmporteerd"
 
 #: settings/RatingListsPage.qml:97
 msgctxt "@title:window"
@@ -1011,12 +1008,9 @@ msgid "Delete Rating List"
 msgstr "Ratinglijst verwijderen"
 
 #: settings/RatingListsPage.qml:140
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "Permanently delete player \"%1\"?"
 msgctxt "@label"
 msgid "Permanently delete rating list \"%1\"?"
-msgstr "Speler \"%1\" permanent verwijderen?"
+msgstr "Ratinglijst \"%1\" permanent verwijderen?"
 
 #: settings/RatingListsPage.qml:148
 msgctxt "@action:button Delete Rating List"

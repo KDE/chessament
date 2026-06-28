@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-27 00:41+0000\n"
-"PO-Revision-Date: 2026-06-22 11:57+0200\n"
+"PO-Revision-Date: 2026-06-26 09:33+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: fr\n"
 "Language: fr\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 26.04.1\n"
+"X-Generator: Lokalize 26.04.2\n"
 
 #: byesmodel.cpp:66
 #, kde-format
@@ -457,7 +457,7 @@ msgstr "Nombre de tours"
 #: qml/PairingsPage.qml:39 qml/PlayersPage.qml:40 qml/StandingsPage.qml:40
 msgctxt "@label:listbox"
 msgid "PDF document (*.pdf)"
-msgstr ""
+msgstr "Document PDF (*.pdf)"
 
 #: qml/PairingsPage.qml:47
 msgctxt "@option:check"
@@ -974,7 +974,7 @@ msgstr "Importer"
 #: settings/RatingListsPage.qml:56
 msgctxt "@label:listbox"
 msgid "All Supported Files (*.zip *.xls)"
-msgstr ""
+msgstr "Tous les fichiers pris en charge (*.zip *.xls)"
 
 #: settings/RatingListsPage.qml:63
 msgctxt "@info:label"
