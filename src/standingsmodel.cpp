@@ -106,9 +106,9 @@ void StandingsModel::setStandings(QList<Standing> standings)
 {
     auto rowDiff = standings.size() - m_standings.size();
 
-    auto newColumns = 4 + (standings.isEmpty() ? 0 : standings[0].values().size());
-    auto prevColumns = 4 + (m_standings.isEmpty() ? 0 : m_standings[0].values().size());
-    auto columnDiff = newColumns - prevColumns;
+    int newColumns = 4 + static_cast<int>(standings.isEmpty() ? 0 : standings[0].values().size());
+    int prevColumns = 4 + static_cast<int>(m_standings.isEmpty() ? 0 : m_standings[0].values().size());
+    int columnDiff = newColumns - prevColumns;
 
     if (rowDiff > 0) {
         beginInsertRows({}, static_cast<int>(m_standings.size()), static_cast<int>(standings.size()) - 1);
@@ -116,9 +116,9 @@ void StandingsModel::setStandings(QList<Standing> standings)
         beginRemoveRows({}, static_cast<int>(standings.size()), static_cast<int>(m_standings.size()) - 1);
     }
     if (columnDiff > 0) {
-        beginInsertColumns({}, static_cast<int>(prevColumns), static_cast<int>(newColumns) - 1);
+        beginInsertColumns({}, prevColumns, newColumns - 1);
     } else if (columnDiff < 0) {
-        beginRemoveColumns({}, static_cast<int>(newColumns), static_cast<int>(prevColumns) - 1);
+        beginRemoveColumns({}, newColumns, prevColumns - 1);
     }
 
     m_standings = std::move(standings);
