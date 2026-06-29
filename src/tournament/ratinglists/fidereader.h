@@ -8,7 +8,7 @@
 class FideRatingListReader : public RatingListReader
 {
 public:
-    FideRatingListReader(RatingList *list);
+    explicit FideRatingListReader(RatingList *list);
 
     std::expected<void, QString> readPlayers(QTextStream *stream) override;
 };
