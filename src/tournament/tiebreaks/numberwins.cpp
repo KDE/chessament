@@ -9,14 +9,11 @@ double NumberOfWins::calculate(Tournament *tournament, State state, QList<Player
     Q_UNUSED(tournament)
     Q_UNUSED(players)
 
-    int result = 0;
-
     const auto pairings = state.pairings(player);
-    for (const auto &pairing : pairings) {
-        if (pairing->pointsOfPlayer(player) == 1.) {
-            ++result;
-        }
-    }
 
-    return result;
+    const auto result = std::ranges::count_if(pairings, [&player](Pairing *pairing) {
+        return pairing->pointsOfPlayer(player) == 1.;
+    });
+
+    return static_cast<double>(result);
 }

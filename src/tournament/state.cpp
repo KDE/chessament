@@ -27,11 +27,12 @@ QList<Pairing *> State::pairings(Player *player) const
 
 double State::points(Player *player) const
 {
-    double points = 0.;
     const auto pairings = m_pairingsByPlayer.value(player);
-    for (const auto &pairing : pairings) {
-        points += pairing->pointsOfPlayer(player);
-    }
+
+    const auto points = std::accumulate(pairings.constBegin(), pairings.constEnd(), 0., [&player](double acc, Pairing *pairing) {
+        return acc + pairing->pointsOfPlayer(player);
+    });
+
     return points;
 }
 

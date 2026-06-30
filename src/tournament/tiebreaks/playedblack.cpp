@@ -9,14 +9,11 @@ double NumberOfGamesPlayedWithBlack::calculate(Tournament *tournament, State sta
     Q_UNUSED(tournament)
     Q_UNUSED(players)
 
-    int result = 0;
-
     const auto pairings = state.pairings(player);
-    for (const auto &pairing : pairings) {
-        if (pairing->colorOfPlayer(player) == Pairing::Color::Black && !Pairing::isUnplayed(pairing->resultOfPlayer(player))) {
-            ++result;
-        }
-    }
 
-    return result;
+    const auto result = std::ranges::count_if(pairings, [&player](Pairing *pairing) {
+        return pairing->colorOfPlayer(player) == Pairing::Color::Black && !Pairing::isUnplayed(pairing->resultOfPlayer(player));
+    });
+
+    return static_cast<double>(result);
 }
