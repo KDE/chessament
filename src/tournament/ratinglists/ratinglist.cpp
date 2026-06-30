@@ -191,7 +191,9 @@ QCoro::Task<std::expected<void, QString>> RatingList::import(const QString &name
 
         co_await qCoro(reply).waitForFinished();
 
-        if (reply->error() != QNetworkReply::NoError) {
+        reply->deleteLater();
+
+        if (reply->error() != QNetworkReply::NetworkError::NoError) {
             co_return std::unexpected(i18nc("@info", "Could not download rating list: %1", reply->errorString()));
         }
 
@@ -202,7 +204,6 @@ QCoro::Task<std::expected<void, QString>> RatingList::import(const QString &name
         m_lastModified = QString::fromLatin1(reply->headers().value(QHttpHeaders::WellKnownHeader::LastModified));
 
         result = reply->readAll();
-        reply->deleteLater();
     } else {
         co_return std::unexpected(i18nc("@info", "Could not download rating list from %1 (unsupported protocol).", url.toString()));
     }
