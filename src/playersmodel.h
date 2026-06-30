@@ -69,7 +69,7 @@ Q_SIGNALS:
     void errorOcurred(const QString &error);
 
 private:
-    Tournament *m_tournament;
+    Tournament *m_tournament = nullptr;
     QList<Player *> m_players;
 
     QList<int> m_columns = {StartingRank, Title, Name, Rating, NationalRating, PlayerId, NationalId, BirthDate, Federation, Origin, Gender};

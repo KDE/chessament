@@ -37,5 +37,5 @@ Q_SIGNALS:
     void tournamentChanged();
 
 private:
-    Tournament *m_tournament;
+    Tournament *m_tournament = nullptr;
 };

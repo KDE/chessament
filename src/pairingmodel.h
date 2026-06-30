@@ -53,7 +53,7 @@ Q_SIGNALS:
     void errorOcurred(const QString &error);
 
 private:
-    Tournament *m_tournament;
+    Tournament *m_tournament = nullptr;
     QList<Pairing *> m_pairings;
 
     QList<int> m_columns = {Board, WhiteStartingRank, WhiteName, Result, BlackName, BlackStartingRank};

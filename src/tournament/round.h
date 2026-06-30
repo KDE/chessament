@@ -44,8 +44,8 @@ Q_SIGNALS:
     void dateTimeChanged();
 
 private:
-    int m_id;
-    int m_number;
+    int m_id{};
+    int m_number{};
     QDateTime m_dateTime;
     QJsonObject m_extra;
 

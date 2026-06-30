@@ -48,6 +48,6 @@ Q_SIGNALS:
     void errorOcurred(const QString &error);
 
 private:
-    Tournament *m_tournament;
-    Player *m_player;
+    Tournament *m_tournament = nullptr;
+    Player *m_player = nullptr;
 };
