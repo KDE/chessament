@@ -116,15 +116,10 @@ FormCard.FormCardPage {
             }
 
             Controls.Label {
-                Layouts.Layout.alignment: {
-                    if (importingDialog.finished) {
-                        return Qt.AlignLeading;
-                    }
-
-                    return Qt.AlignHCenter;
-                }
+                Layouts.Layout.fillWidth: true
 
                 text: importingDialog.error.length > 0 ? importingDialog.error : listsModel.status
+                horizontalAlignment: Text.AlignHCenter
             }
         }
     }

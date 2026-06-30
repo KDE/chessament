@@ -17,6 +17,7 @@
 #include <QTemporaryFile>
 #include <QtConcurrentRun>
 
+#include <KFormat>
 #include <KLocalizedString>
 #include <KZip>
 
@@ -169,23 +170,29 @@ QCoro::Task<std::expected<void, QString>> RatingList::import(const QString &name
         QNetworkRequest request{url};
         request.setHeader(QNetworkRequest::UserAgentHeader, Utils::userAgent());
 
-        Q_EMIT statusChanged(i18nc("@info:progress", "Downloading file"));
+        Q_EMIT statusChanged(i18nc("@info:progress", "Downloading file…"));
 
         auto *reply = manager.get(request);
 
-        connect(reply, &QNetworkReply::downloadProgress, this, [this](qint64 received, qint64 total) {
-            if (total == 0) {
+        connect(reply, &QNetworkReply::downloadProgress, this, [this](qint64 bytesReceived, qint64 bytesTotal) {
+            if (bytesTotal <= 0) {
                 return;
             }
-            const auto progress = 100. * (static_cast<double>(received) / static_cast<double>(total));
-            qDebug() << progress;
-            Q_EMIT statusChanged(i18nc("@info:progress", "Downloading file (%1 %)", progress));
+            KFormat format{};
+            const auto received = format.formatByteSize(static_cast<double>(bytesReceived));
+            const auto total = format.formatByteSize(static_cast<double>(bytesTotal));
+            const auto progress = std::round(100. * (static_cast<double>(bytesReceived) / static_cast<double>(bytesTotal)));
+            Q_EMIT statusChanged(i18nc("@info:progress %1 & %2 are the file download progress (received / total), %3 is the download percentage",
+                                       "Downloading file…\n%1 / %2 (%3%)",
+                                       received,
+                                       total,
+                                       progress));
         });
 
         co_await qCoro(reply).waitForFinished();
 
         if (reply->error() != QNetworkReply::NoError) {
-            co_return std::unexpected(i18nc("@info", "Couldn't download rating list: %1", reply->errorString()));
+            co_return std::unexpected(i18nc("@info", "Could not download rating list: %1", reply->errorString()));
         }
 
         const auto contentType = QString::fromLatin1(reply->headers().value(QHttpHeaders::WellKnownHeader::ContentType));
@@ -226,7 +233,7 @@ std::expected<uint, QString> RatingList::processFile(QByteArray content, const Q
         auto zip = KZip(&buffer);
         if (!zip.open(QIODevice::ReadOnly)) {
             qWarning() << zip.errorString();
-            return std::unexpected(i18nc("@info", "Couldn't extract file."));
+            return std::unexpected(i18nc("@info", "Could not extract file."));
         }
 
         const auto directory = zip.directory();
