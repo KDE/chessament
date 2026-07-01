@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-27 00:41+0000\n"
+"POT-Creation-Date: 2026-07-01 00:42+0000\n"
 "PO-Revision-Date: 2026-06-26 06:34+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -961,7 +961,7 @@ msgctxt "@option:check"
 msgid "Automatically open exported PDF files"
 msgstr "Samodejno odpri izvožene datoteke PDF"
 
-#: settings/RatingListsPage.qml:24 settings/RatingListsPage.qml:156
+#: settings/RatingListsPage.qml:24 settings/RatingListsPage.qml:151
 msgctxt "@title"
 msgid "Rating Lists"
 msgstr "Seznami ratingov"
@@ -1006,37 +1006,37 @@ msgctxt "@title:window"
 msgid "Importing Rating List"
 msgstr "Uvažanje seznama ratingov"
 
-#: settings/RatingListsPage.qml:139
+#: settings/RatingListsPage.qml:134
 msgctxt "@title"
 msgid "Delete Rating List"
 msgstr "Zbriši seznam ratingov"
 
-#: settings/RatingListsPage.qml:140
+#: settings/RatingListsPage.qml:135
 msgctxt "@label"
 msgid "Permanently delete rating list \"%1\"?"
 msgstr "Naj permanentno izbrišem seznam ratingov \"%1\"?"
 
-#: settings/RatingListsPage.qml:148
+#: settings/RatingListsPage.qml:143
 msgctxt "@action:button Delete Rating List"
 msgid "Delete"
 msgstr "Zbriši"
 
-#: settings/RatingListsPage.qml:161
+#: settings/RatingListsPage.qml:156
 msgctxt "@info:status"
 msgid "No rating lists yet."
 msgstr "Še ni seznamov ratingov."
 
-#: settings/RatingListsPage.qml:181
+#: settings/RatingListsPage.qml:176
 msgctxt "@action:button"
 msgid "Delete Rating List"
 msgstr "Zbriši seznam ratingov"
 
-#: settings/RatingListsPage.qml:190
+#: settings/RatingListsPage.qml:185
 msgctxt "@action:button"
 msgid "Delete rating list"
 msgstr "Zbriši seznam ratingov"
 
-#: settings/RatingListsPage.qml:200
+#: settings/RatingListsPage.qml:195
 msgctxt "@action:button"
 msgid "Add rating list"
 msgstr "Dodaj seznam ratingov"
@@ -1098,44 +1098,54 @@ msgstr "Neveljaven par \"%1\"."
 msgid "Invalid player \"%1\" on pairing \"%2\"."
 msgstr "Neveljaven igralec \"%1\" v paru \"%2\"."
 
-#: tournament/ratinglists/ratinglist.cpp:143
-#: tournament/ratinglists/ratinglist.cpp:160
+#: tournament/ratinglists/ratinglist.cpp:144
+#: tournament/ratinglists/ratinglist.cpp:161
 #, kde-format
 msgctxt "@info"
 msgid "Could not open file."
 msgstr "Datoteke ni bilo mogoče odpreti."
 
-#: tournament/ratinglists/ratinglist.cpp:155
+#: tournament/ratinglists/ratinglist.cpp:156
 #, kde-format
 msgctxt "@info"
 msgid "Could not open file: the file does not exists."
 msgstr "Datoteke ni bilo mogoče odpreti: datoteka ne obstaja."
 
-#: tournament/ratinglists/ratinglist.cpp:172
-#, kde-format
+#: tournament/ratinglists/ratinglist.cpp:173
+#, fuzzy, kde-format
+#| msgctxt "@info:progress"
+#| msgid "Downloading file"
 msgctxt "@info:progress"
-msgid "Downloading file"
+msgid "Downloading file…"
 msgstr "Prenašanje datoteke"
 
-#: tournament/ratinglists/ratinglist.cpp:182
-#, kde-format
-msgctxt "@info:progress"
-msgid "Downloading file (%1 %)"
+#: tournament/ratinglists/ratinglist.cpp:186
+#, fuzzy, kde-format
+#| msgctxt "@info:progress"
+#| msgid "Downloading file (%1 %)"
+msgctxt ""
+"@info:progress %1 & %2 are the file download progress (received / total), %3 "
+"is the download percentage"
+msgid ""
+"Downloading file…\n"
+"%1 / %2 (%3%)"
 msgstr "Prenašanje datoteke (%1 %)"
 
-#: tournament/ratinglists/ratinglist.cpp:188
-#, kde-format
+#: tournament/ratinglists/ratinglist.cpp:195
+#, fuzzy, kde-format
+#| msgctxt "@info"
+#| msgid "Couldn't download rating list: %1"
 msgctxt "@info"
-msgid "Couldn't download rating list: %1"
+msgid "Could not download rating list: %1"
 msgstr "Ni bilo mogoče prenesti seznama ratingov: %1"
 
-#: tournament/ratinglists/ratinglist.cpp:200
+#: tournament/ratinglists/ratinglist.cpp:207
 #, kde-format
 msgctxt "@info"
 msgid "Could not download rating list from %1 (unsupported protocol)."
 msgstr "Ni bilo mogoče prenesti seznama ratingov iz %1 (nepodprt protokol)."
 
-#: tournament/ratinglists/ratinglist.cpp:213
+#: tournament/ratinglists/ratinglist.cpp:220
 #, kde-format
 msgctxt "@info:progress"
 msgid "Imported one player."
@@ -1145,19 +1155,21 @@ msgstr[1] "Uvožen %1 igralec."
 msgstr[2] "Uvožena %1 igralca."
 msgstr[3] "Uvoženi %1 igralci."
 
-#: tournament/ratinglists/ratinglist.cpp:229
-#, kde-format
+#: tournament/ratinglists/ratinglist.cpp:236
+#, fuzzy, kde-format
+#| msgctxt "@info"
+#| msgid "Couldn't extract file."
 msgctxt "@info"
-msgid "Couldn't extract file."
+msgid "Could not extract file."
 msgstr "Datoteke ni bilo mogoče izvleči datoteke."
 
-#: tournament/ratinglists/ratinglist.cpp:234
+#: tournament/ratinglists/ratinglist.cpp:241
 #, kde-format
 msgctxt "@info"
 msgid "File format not supported."
 msgstr "Format datoteke ni podprt."
 
-#: tournament/ratinglists/ratinglist.cpp:457
+#: tournament/ratinglists/ratinglist.cpp:464
 #, kde-format
 msgctxt "@info:progress"
 msgid "Saved 1 player."

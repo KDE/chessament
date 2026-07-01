@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-27 00:41+0000\n"
+"POT-Creation-Date: 2026-07-01 00:42+0000\n"
 "PO-Revision-Date: 2026-04-05 00:41+0000\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -975,7 +975,7 @@ msgctxt "@option:check"
 msgid "Automatically open exported PDF files"
 msgstr "Automaticky otvoriť exportované súbory PDF"
 
-#: settings/RatingListsPage.qml:24 settings/RatingListsPage.qml:156
+#: settings/RatingListsPage.qml:24 settings/RatingListsPage.qml:151
 msgctxt "@title"
 msgid "Rating Lists"
 msgstr "Ratingové listiny"
@@ -1023,12 +1023,12 @@ msgctxt "@title:window"
 msgid "Importing Rating List"
 msgstr "Importovanie ratingovej listiny"
 
-#: settings/RatingListsPage.qml:139
+#: settings/RatingListsPage.qml:134
 msgctxt "@title"
 msgid "Delete Rating List"
 msgstr "Odstrániť ratingovú listinu"
 
-#: settings/RatingListsPage.qml:140
+#: settings/RatingListsPage.qml:135
 #, fuzzy
 #| msgctxt "@title:window"
 #| msgid "Details of player \"%1\""
@@ -1036,27 +1036,27 @@ msgctxt "@label"
 msgid "Permanently delete rating list \"%1\"?"
 msgstr "Podrobnosti hráča „%1“"
 
-#: settings/RatingListsPage.qml:148
+#: settings/RatingListsPage.qml:143
 msgctxt "@action:button Delete Rating List"
 msgid "Delete"
 msgstr "Odstrániť"
 
-#: settings/RatingListsPage.qml:161
+#: settings/RatingListsPage.qml:156
 msgctxt "@info:status"
 msgid "No rating lists yet."
 msgstr "Zatiaľ žiadne ratingové listiny."
 
-#: settings/RatingListsPage.qml:181
+#: settings/RatingListsPage.qml:176
 msgctxt "@action:button"
 msgid "Delete Rating List"
 msgstr "Odstrániť ratingovú listinu"
 
-#: settings/RatingListsPage.qml:190
+#: settings/RatingListsPage.qml:185
 msgctxt "@action:button"
 msgid "Delete rating list"
 msgstr "Odstrániť ratingovú listinu"
 
-#: settings/RatingListsPage.qml:200
+#: settings/RatingListsPage.qml:195
 msgctxt "@action:button"
 msgid "Add rating list"
 msgstr "Pridať ratingovú listinu"
@@ -1117,45 +1117,55 @@ msgstr "Neplatné párovanie „%1“."
 msgid "Invalid player \"%1\" on pairing \"%2\"."
 msgstr "Neplatný hráč „%1“ v párovaní „%2“."
 
-#: tournament/ratinglists/ratinglist.cpp:143
-#: tournament/ratinglists/ratinglist.cpp:160
+#: tournament/ratinglists/ratinglist.cpp:144
+#: tournament/ratinglists/ratinglist.cpp:161
 #, kde-format
 msgctxt "@info"
 msgid "Could not open file."
 msgstr "Nepodarilo sa otvoriť súbor."
 
-#: tournament/ratinglists/ratinglist.cpp:155
+#: tournament/ratinglists/ratinglist.cpp:156
 #, kde-format
 msgctxt "@info"
 msgid "Could not open file: the file does not exists."
 msgstr "Nepodarilo sa otvoriť súbor: súbor neexistuje."
 
-#: tournament/ratinglists/ratinglist.cpp:172
-#, kde-format
+#: tournament/ratinglists/ratinglist.cpp:173
+#, fuzzy, kde-format
+#| msgctxt "@info:progress"
+#| msgid "Downloading file"
 msgctxt "@info:progress"
-msgid "Downloading file"
+msgid "Downloading file…"
 msgstr "Sťahovanie súboru"
 
-#: tournament/ratinglists/ratinglist.cpp:182
-#, kde-format
-msgctxt "@info:progress"
-msgid "Downloading file (%1 %)"
+#: tournament/ratinglists/ratinglist.cpp:186
+#, fuzzy, kde-format
+#| msgctxt "@info:progress"
+#| msgid "Downloading file (%1 %)"
+msgctxt ""
+"@info:progress %1 & %2 are the file download progress (received / total), %3 "
+"is the download percentage"
+msgid ""
+"Downloading file…\n"
+"%1 / %2 (%3%)"
 msgstr "Sťahovanie súboru (%1 %)"
 
-#: tournament/ratinglists/ratinglist.cpp:188
-#, kde-format
+#: tournament/ratinglists/ratinglist.cpp:195
+#, fuzzy, kde-format
+#| msgctxt "@info"
+#| msgid "Couldn't download rating list: %1"
 msgctxt "@info"
-msgid "Couldn't download rating list: %1"
+msgid "Could not download rating list: %1"
 msgstr "Nepodarilo sa stiahnuť ratingovú listinu: %1"
 
-#: tournament/ratinglists/ratinglist.cpp:200
+#: tournament/ratinglists/ratinglist.cpp:207
 #, kde-format
 msgctxt "@info"
 msgid "Could not download rating list from %1 (unsupported protocol)."
 msgstr ""
 "Nepodarilo sa stiahnuť ratingovú listinu z %1 (nepodporovaný protokol)."
 
-#: tournament/ratinglists/ratinglist.cpp:213
+#: tournament/ratinglists/ratinglist.cpp:220
 #, kde-format
 msgctxt "@info:progress"
 msgid "Imported one player."
@@ -1164,19 +1174,21 @@ msgstr[0] "Importovaný jeden hráč."
 msgstr[1] "Importovaní %1 hráči."
 msgstr[2] "Importovaných %1 hráčov."
 
-#: tournament/ratinglists/ratinglist.cpp:229
-#, kde-format
+#: tournament/ratinglists/ratinglist.cpp:236
+#, fuzzy, kde-format
+#| msgctxt "@info"
+#| msgid "Couldn't extract file."
 msgctxt "@info"
-msgid "Couldn't extract file."
+msgid "Could not extract file."
 msgstr "Nepodarilo sa extrahovať súbor."
 
-#: tournament/ratinglists/ratinglist.cpp:234
+#: tournament/ratinglists/ratinglist.cpp:241
 #, kde-format
 msgctxt "@info"
 msgid "File format not supported."
 msgstr "Nepodporovaný formát súboru."
 
-#: tournament/ratinglists/ratinglist.cpp:457
+#: tournament/ratinglists/ratinglist.cpp:464
 #, kde-format
 msgctxt "@info:progress"
 msgid "Saved 1 player."
