@@ -34,7 +34,7 @@ void TrfWriter::writeTournamentInformation(QTextStream &stream)
     stream << Trf::reportFieldString(Trf::Field::Federation) << space << m_tournament->federation() << newLine;
     stream << Trf::reportFieldString(Trf::Field::NumberOfPlayers) << space << m_tournament->numberOfPlayers() << newLine;
     stream << Trf::reportFieldString(Trf::Field::NumberOfRatedPlayers) << space << m_tournament->numberOfRatedPlayers() << newLine;
-    stream << Trf::reportFieldString(Trf::Field::ChiefArbiter) << space << m_tournament->chiefArbiter() << newLine;
+    writeArbiters(stream);
     stream << Trf::reportFieldString(Trf::Field::TimeControl) << space << m_tournament->timeControl() << newLine;
     stream << Trf::reportFieldString(Trf::Field::ProgramName) << space << "Chessament %1"_L1.arg(QCoreApplication::applicationVersion()) << newLine;
     stream << Trf::reportFieldString(Trf::Field::NumberOfRounds) << space << m_tournament->numberOfRounds() << newLine;
@@ -51,6 +51,22 @@ void TrfWriter::writeTournamentInformation(QTextStream &stream)
         stream << "  "_L1 << date;
     }
     stream << newLine;
+}
+
+void TrfWriter::writeArbiters(QTextStream &stream)
+{
+    for (const auto &arbiter : m_tournament->arbiters()) {
+        switch (arbiter->role()) {
+        case Arbiter::Role::Chief:
+            stream << Trf::reportFieldString(Trf::Field::ChiefArbiter);
+            break;
+        case Arbiter::Role::Deputy:
+        case Arbiter::Role::Arbiter:
+            stream << Trf::reportFieldString(Trf::Field::DeputyChiefArbiter);
+        }
+
+        stream << space << arbiter->toTrf() << newLine;
+    }
 }
 
 void TrfWriter::writeTiebreaks(QTextStream &stream)

@@ -16,6 +16,7 @@
 
 #include <expected>
 
+#include "arbiter.h"
 #include "pairingengine.h"
 #include "player.h"
 #include "round.h"
@@ -43,8 +44,6 @@ class Tournament : public QObject
     Q_PROPERTY(QString name READ name WRITE setName NOTIFY nameChanged)
     Q_PROPERTY(QString city READ city WRITE setCity NOTIFY cityChanged)
     Q_PROPERTY(QString federation READ federation WRITE setFederation NOTIFY federationChanged)
-    Q_PROPERTY(QString chiefArbiter READ chiefArbiter WRITE setChiefArbiter NOTIFY chiefArbiterChanged)
-    Q_PROPERTY(QString deputyChiefArbiter READ deputyChiefArbiter WRITE setDeputyChiefArbiter NOTIFY deputyChiefArbiterChanged)
     Q_PROPERTY(QString timeControl READ timeControl WRITE setTimeControl NOTIFY timeControlChanged)
 
     Q_PROPERTY(int numberOfPlayers READ numberOfPlayers NOTIFY numberOfPlayersChanged)
@@ -85,21 +84,9 @@ public:
      */
     [[nodiscard]] QString federation() const;
 
-    /*!
-     * \property Tournament::chiefArbiter
-     * \brief the Chief Arbiter of the tournament
-     *
-     * This property holds the Chief Arbiter of the tournament.
-     */
-    [[nodiscard]] QString chiefArbiter() const;
+    [[nodiscard]] std::vector<std::unique_ptr<Arbiter>> &arbiters();
 
-    /*!
-     * \property Tournament::deputyChiefArbiter
-     * \brief the Deputy Chief Arbiter of the tournament
-     *
-     * This property holds the Deputy Chief Arbiter of the tournament.
-     */
-    [[nodiscard]] QString deputyChiefArbiter() const;
+    void saveArbiters();
 
     /*!
      * \property Tournament::timeControl
@@ -398,8 +385,6 @@ public Q_SLOTS:
     void setName(const QString &name);
     void setCity(const QString &city);
     void setFederation(const QString &federation);
-    void setChiefArbiter(const QString &chiefArbiter);
-    void setDeputyChiefArbiter(const QString &deputyChiefArbiter);
     void setTimeControl(const QString &timeControl);
     void setNumberOfRounds(int numberOfRounds);
     void setCurrentRound(int currentRound);
@@ -411,8 +396,6 @@ Q_SIGNALS:
     void nameChanged();
     void cityChanged();
     void federationChanged();
-    void chiefArbiterChanged();
-    void deputyChiefArbiterChanged();
     void timeControlChanged();
     void tiebreaksChanged();
 
@@ -431,6 +414,7 @@ private:
     std::expected<void, QString> loadRounds();
     std::expected<void, QString> loadPairings();
     std::expected<void, QString> loadTiebreaks();
+    std::expected<void, QString> loadArbiters();
 
     Event *m_event;
 
@@ -438,8 +422,7 @@ private:
     QString m_name;
     QString m_city;
     QString m_federation;
-    QString m_chiefArbiter;
-    QString m_deputyChiefArbiter;
+    std::vector<std::unique_ptr<Arbiter>> m_arbiters;
     QString m_timeControl;
     int m_numberOfRounds = 1;
     int m_currentRound = 0;

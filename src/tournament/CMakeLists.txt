@@ -4,6 +4,7 @@
 add_library(tournament STATIC)
 
 target_sources(tournament PRIVATE
+    arbiter.cpp
     event.cpp
     pairing.cpp
     pairingengine.cpp

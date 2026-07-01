@@ -1,7 +1,12 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 // SPDX-FileCopyrightText: 2024 Manuel Alcaraz Zambrano <manuel@alcarazzam.dev>
 
+pragma ComponentBehavior: Bound
+
+import QtQuick
+
 import org.kde.ki18n
+import org.kde.kirigami as Kirigami
 import org.kde.kirigamiaddons.formcard as FormCard
 
 import org.kde.chessament
@@ -41,22 +46,34 @@ FormCard.FormCardPage {
                 Controller.tournament.federation = text;
             }
         }
+    }
 
-        FormCard.FormTextFieldDelegate {
-            id: chiefArbiter
-            label: KI18n.i18nc("@label:textbox", "Chief arbiter")
-            text: Controller.tournament.chiefArbiter
-            onEditingFinished: {
-                Controller.tournament.chiefArbiter = text;
+    FormCard.FormHeader {
+        title: KI18n.i18nc("@title:group", "Arbiters")
+        actions: [
+            Kirigami.Action {
+                icon.name: "list-add-symbolic"
+                text: KI18n.i18nc("@action:button", "Add Arbiter")
+                onTriggered: arbitersModel.addArbiter()
             }
+        ]
+    }
+    FormCard.FormCard {
+        FormCard.FormPlaceholderMessageDelegate {
+            text: KI18n.i18nc("@info:status", "No arbiters yet.")
+            icon.name: "view-list-details-symbolic"
+            visible: repeater.count === 0
         }
 
-        FormCard.FormTextFieldDelegate {
-            id: deputyChiefArbiter
-            label: KI18n.i18nc("@label:textbox", "Deputy chief arbiter")
-            text: Controller.tournament.deputyChiefArbiter
-            onEditingFinished: {
-                Controller.tournament.deputyChiefArbiter = text;
+        Repeater {
+            id: repeater
+            model: ArbitersModel {
+                id: arbitersModel
+                tournament: Controller.tournament
+            }
+            delegateModelAccess: DelegateModel.ReadWrite
+            delegate: ArbiterDelegate {
+                onDeleteArbiter: row => arbitersModel.deleteArbiter(row)
             }
         }
     }

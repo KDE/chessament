@@ -34,6 +34,8 @@ std::expected<void, QString> TrfReader::read(QTextStream *trf)
         }
     }
 
+    m_tournament->saveArbiters();
+
     for (const auto &player : std::as_const(m_players)) {
         if (auto ok = m_tournament->addPlayer(std::unique_ptr<Player>(player)); !ok) {
             return ok;
@@ -117,12 +119,18 @@ std::expected<void, QString> TrfReader::readField(QStringView line)
     case Trf::Field::Federation:
         m_tournament->setFederation(value.trimmed().toString());
         break;
-    case Trf::Field::ChiefArbiter:
-        m_tournament->setChiefArbiter(value.trimmed().toString());
+    case Trf::Field::ChiefArbiter: {
+        auto arbiter = Arbiter::fromTrf(value.toString());
+        arbiter->setRole(Arbiter::Role::Chief);
+        m_tournament->arbiters().push_back(std::move(arbiter));
         break;
-    case Trf::Field::DeputyChiefArbiter:
-        m_tournament->setDeputyChiefArbiter(value.trimmed().toString());
+    }
+    case Trf::Field::DeputyChiefArbiter: {
+        auto arbiter = Arbiter::fromTrf(value.toString());
+        arbiter->setRole(Arbiter::Role::Deputy);
+        m_tournament->arbiters().push_back(std::move(arbiter));
         break;
+    }
     case Trf::Field::TimeControl:
         m_tournament->setTimeControl(value.trimmed().toString());
         break;

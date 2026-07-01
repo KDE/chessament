@@ -89,34 +89,23 @@ void Tournament::setFederation(const QString &federation)
     Q_EMIT federationChanged();
 }
 
-QString Tournament::chiefArbiter() const
+std::vector<std::unique_ptr<Arbiter>> &Tournament::arbiters()
 {
-    return m_chiefArbiter;
+    return m_arbiters;
 }
 
-void Tournament::setChiefArbiter(const QString &chiefArbiter)
+void Tournament::saveArbiters()
 {
-    if (m_chiefArbiter == chiefArbiter) {
-        return;
+    QJsonArray values;
+
+    for (const auto &arbiter : m_arbiters) {
+        values << arbiter->toJson();
     }
-    m_chiefArbiter = chiefArbiter;
-    setOption(u"chief_arbiter"_s, chiefArbiter);
-    Q_EMIT chiefArbiterChanged();
-}
 
-QString Tournament::deputyChiefArbiter() const
-{
-    return m_deputyChiefArbiter;
-}
+    const auto doc = QJsonDocument{QJsonObject{{"arbiters"_L1, values}}};
+    const auto text = doc.toJson(QJsonDocument::Compact);
 
-void Tournament::setDeputyChiefArbiter(const QString &deputyChiefArbiter)
-{
-    if (m_deputyChiefArbiter == deputyChiefArbiter) {
-        return;
-    }
-    m_deputyChiefArbiter = deputyChiefArbiter;
-    setOption(u"deputy_chief_arbiter"_s, deputyChiefArbiter);
-    Q_EMIT deputyChiefArbiterChanged();
+    setOption("arbiters"_L1, text);
 }
 
 QString Tournament::timeControl() const
@@ -859,7 +848,7 @@ std::expected<void, QString> Tournament::sortPairings(std::optional<int> round)
             }
 
             if (aRank == 0 && bRank == 0) {
-                if (std::to_underlying(a->whiteResult()) == std::to_underlying(b->whiteResult())) {
+                if (a->whiteResult() == b->whiteResult()) {
                     return a->whitePlayer()->startingRank() < b->whitePlayer()->startingRank();
                 }
                 return std::to_underlying(a->whiteResult()) > std::to_underlying(b->whiteResult());
@@ -1138,7 +1127,6 @@ QJsonObject Tournament::toJson() const
     tournament["city"_L1] = m_city;
     tournament["time_control"_L1] = m_timeControl;
     tournament["number_rounds"_L1] = m_numberOfRounds;
-    tournament["chief_arbiter"_L1] = m_chiefArbiter;
 
     QJsonArray players;
     for (const auto &player : std::as_const(m_players)) {
@@ -1171,12 +1159,6 @@ void Tournament::read(const QJsonObject &json)
         }
         if (const auto v = tournament[QStringLiteral("federation")]; v.isString()) {
             m_federation = v.toString();
-        }
-        if (const auto v = tournament[QStringLiteral("chief_arbiter")]; v.isString()) {
-            m_chiefArbiter = v.toString();
-        }
-        if (const auto v = tournament[QStringLiteral("deputy_chief_arbiter")]; v.isString()) {
-            m_deputyChiefArbiter = v.toString();
         }
         if (const auto v = tournament[QStringLiteral("time_control")]; v.isString()) {
             m_timeControl = v.toString();
@@ -1280,6 +1262,9 @@ std::expected<void, QString> Tournament::loadTournament(const QString &id)
     if (const auto ok = loadTiebreaks(); !ok) {
         return ok;
     }
+    if (const auto ok = loadArbiters(); !ok) {
+        return ok;
+    }
 
     return {};
 }
@@ -1307,8 +1292,6 @@ std::expected<void, QString> Tournament::loadOptions()
     setName(option(u"name"_s).toString());
     setCity(option(u"city"_s).toString());
     setFederation(option(u"federation"_s).toString());
-    setChiefArbiter(option(u"chief_arbiter"_s).toString());
-    setDeputyChiefArbiter(option(u"deputy_chief_arbiter"_s).toString());
     setTimeControl(option(u"time_control"_s).toString());
     setNumberOfRounds(option(u"number_of_rounds"_s).toInt());
     setCurrentRound(option(u"current_round"_s).toInt());
@@ -1463,6 +1446,28 @@ std::expected<void, QString> Tournament::loadTiebreaks()
             tiebreak->setOptions(options.toVariantMap());
 
             m_tiebreaks.push_back(std::move(tiebreak));
+        }
+    }
+
+    return {};
+}
+
+std::expected<void, QString> Tournament::loadArbiters()
+{
+    const auto json = QJsonDocument::fromJson(option("arbiters"_L1).toByteArray());
+
+    if (const auto arbiters = json["arbiters"_L1]; arbiters.isArray()) {
+        m_arbiters.clear();
+
+        const auto values = arbiters.toArray();
+        for (const auto value : values) {
+            if (!value.isObject()) {
+                continue;
+            }
+
+            auto arbiter = Arbiter::fromJson(value.toObject());
+
+            m_arbiters.push_back(std::move(arbiter));
         }
     }
 

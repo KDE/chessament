@@ -105,8 +105,6 @@ void TournamentTest::testImportTrf()
     QCOMPARE(t->name(), u"Test Tournament"_s);
     QCOMPARE(t->city(), u"Place"_s);
     QCOMPARE(t->federation(), u"ESP"_s);
-    QCOMPARE(t->chiefArbiter(), u"Chief Arbiter"_s);
-    QCOMPARE(t->deputyChiefArbiter(), u"Arbiter"_s);
     QCOMPARE(t->timeControl(), u"8 min/player + 3 s/move"_s);
 
     QCOMPARE(t->numberOfPlayers(), 88);
@@ -144,8 +142,6 @@ void TournamentTest::testLoadTournament()
     QCOMPARE(t->name(), u"Test Tournament"_s);
     QCOMPARE(t->city(), u"Place"_s);
     QCOMPARE(t->federation(), u"ESP"_s);
-    QCOMPARE(t->chiefArbiter(), u"Chief Arbiter"_s);
-    QCOMPARE(t->deputyChiefArbiter(), u"Arbiter"_s);
     QCOMPARE(t->timeControl(), u"8 min/player + 3 s/move"_s);
 
     QCOMPARE(t->numberOfPlayers(), 88);

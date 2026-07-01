@@ -11,6 +11,7 @@ ecm_add_qml_module(chessament_static
     OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/src/org/kde/chessament
     GENERATE_PLUGIN_SOURCE
     QML_FILES
+        qml/components/ArbiterDelegate.qml
         qml/components/FormCardSearchFieldDelegate.qml
         qml/components/MenuBar.qml
         qml/components/RatingField.qml
@@ -49,6 +50,7 @@ ecm_add_qml_module(chessament_static
         QtCore
         QtQuick
     SOURCES
+        arbitersmodel.cpp
         controller.cpp
         byesmodel.cpp
         document.cpp
