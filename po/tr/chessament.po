@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-01 00:42+0000\n"
-"PO-Revision-Date: 2026-06-26 19:06+0300\n"
+"POT-Creation-Date: 2026-07-02 00:41+0000\n"
+"PO-Revision-Date: 2026-07-01 19:41+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -299,7 +299,7 @@ msgctxt "@label:textbox"
 msgid "Birth date"
 msgstr "Doğum tarihi"
 
-#: qml/AddPlayerDialog.qml:118 qml/TournamentSettingsInformation.qml:38
+#: qml/AddPlayerDialog.qml:118 qml/TournamentSettingsInformation.qml:43
 msgctxt "@label:textbox"
 msgid "Federation"
 msgstr "Federasyon"
@@ -318,6 +318,61 @@ msgstr "Cinsiyet"
 msgctxt "@title:window"
 msgid "Add Tiebreak"
 msgstr "Eşitlik Bozma Ekle"
+
+#: qml/components/ArbiterDelegate.qml:34
+msgctxt "@item:inlistbox Chief Arbiter"
+msgid "Chief"
+msgstr ""
+
+#: qml/components/ArbiterDelegate.qml:38
+#, fuzzy
+#| msgctxt "@label:textbox"
+#| msgid "Deputy chief arbiter"
+msgctxt "@item:inlistbox Deputy Chief Arbiter"
+msgid "Deputy Chief"
+msgstr "Yardımcı ana hakem"
+
+#: qml/components/ArbiterDelegate.qml:42
+msgctxt "@item:inlistbox"
+msgid "Arbiter"
+msgstr ""
+
+#: qml/components/ArbiterDelegate.qml:53
+#, fuzzy
+#| msgctxt "@title:column Player Title"
+#| msgid "Title"
+msgctxt "@info:placeholder Arbiter's Title"
+msgid "Title"
+msgstr "Başlık"
+
+#: qml/components/ArbiterDelegate.qml:60
+#, fuzzy
+#| msgctxt "@title:column Player Name"
+#| msgid "Name"
+msgctxt "@info:placeholder Arbiter's Name"
+msgid "Name"
+msgstr "Ad"
+
+#: qml/components/ArbiterDelegate.qml:67
+msgctxt "@info:placeholder Arbiter's ID"
+msgid "ID"
+msgstr ""
+
+#: qml/components/ArbiterDelegate.qml:72
+#, fuzzy
+#| msgctxt "@action:button"
+#| msgid "Delete Tiebreak"
+msgctxt "@action:button"
+msgid "Delete Arbiter"
+msgstr "Eşitlik Bozmayı Sil"
+
+#: qml/components/ArbiterDelegate.qml:78
+#, fuzzy
+#| msgctxt "@title"
+#| msgid "Delete Player"
+msgctxt "@action:button"
+msgid "Delete arbiter"
+msgstr "Oyuncuyu Sil"
 
 #: qml/components/MenuBar.qml:17
 msgctxt "@action:menu"
@@ -852,35 +907,46 @@ msgctxt "@action:button"
 msgid "Add Tiebreak"
 msgstr "Eşitlik Bozma Ekle"
 
-#: qml/TournamentSettingsInformation.qml:12
+#: qml/TournamentSettingsInformation.qml:17
 msgctxt "@title"
 msgid "Information"
 msgstr "Bilgi"
 
-#: qml/TournamentSettingsInformation.qml:15
+#: qml/TournamentSettingsInformation.qml:20
 msgctxt "@title:group"
 msgid "Basic details"
 msgstr "Temel Ayrıntılar"
 
-#: qml/TournamentSettingsInformation.qml:20
+#: qml/TournamentSettingsInformation.qml:25
 msgctxt "@label:textbox"
 msgid "Tournament name"
 msgstr "Turnuva adı"
 
-#: qml/TournamentSettingsInformation.qml:29
+#: qml/TournamentSettingsInformation.qml:34
 msgctxt "@label:textbox"
 msgid "City"
 msgstr "Şehir"
 
-#: qml/TournamentSettingsInformation.qml:47
-msgctxt "@label:textbox"
-msgid "Chief arbiter"
-msgstr "Ana hakem"
+#: qml/TournamentSettingsInformation.qml:52
+msgctxt "@title:group"
+msgid "Arbiters"
+msgstr ""
 
 #: qml/TournamentSettingsInformation.qml:56
-msgctxt "@label:textbox"
-msgid "Deputy chief arbiter"
-msgstr "Yardımcı ana hakem"
+#, fuzzy
+#| msgctxt "@action:button"
+#| msgid "Add Tiebreak"
+msgctxt "@action:button"
+msgid "Add Arbiter"
+msgstr "Eşitlik Bozma Ekle"
+
+#: qml/TournamentSettingsInformation.qml:63
+#, fuzzy
+#| msgctxt "@info:placeholder"
+#| msgid "No players yet"
+msgctxt "@info:status"
+msgid "No arbiters yet."
+msgstr "Henüz oyuncu yok"
 
 #: qml/WelcomePage.qml:21
 msgctxt "@title"
@@ -1081,14 +1147,14 @@ msgctxt "bbpPairings is the name of a program, should not be translated"
 msgid "bbpPairings terminated with a non zero exit code: %1"
 msgstr "bbpPairings, sıfır olmayan bir çıkış koduyla sonlandı: %1"
 
-#: tournament/pairingengine.cpp:79 tournament/trf/reader.cpp:235
+#: tournament/pairingengine.cpp:79 tournament/trf/reader.cpp:243
 #, kde-format
 msgid "Invalid pairing \"%1\"."
 msgstr "Geçersiz eşleşme “%1”."
 
 #: tournament/pairingengine.cpp:85 tournament/pairingengine.cpp:89
 #: tournament/pairingengine.cpp:93 tournament/pairingengine.cpp:97
-#: tournament/trf/reader.cpp:248
+#: tournament/trf/reader.cpp:256
 #, kde-format
 msgid "Invalid player \"%1\" on pairing \"%2\"."
 msgstr "“%2” eşleşmesinde geçersiz oyuncu “%1”."
@@ -1107,41 +1173,37 @@ msgid "Could not open file: the file does not exists."
 msgstr "Dosya açılamadı: Dosya yok."
 
 #: tournament/ratinglists/ratinglist.cpp:173
-#, fuzzy, kde-format
-#| msgctxt "@info:progress"
-#| msgid "Downloading file"
+#, kde-format
 msgctxt "@info:progress"
 msgid "Downloading file…"
-msgstr "Dosya indiriliyor"
+msgstr "Dosya indiriliyor…"
 
 #: tournament/ratinglists/ratinglist.cpp:186
-#, fuzzy, kde-format
-#| msgctxt "@info:progress"
-#| msgid "Downloading file (%1 %)"
+#, kde-format
 msgctxt ""
 "@info:progress %1 & %2 are the file download progress (received / total), %3 "
 "is the download percentage"
 msgid ""
 "Downloading file…\n"
 "%1 / %2 (%3%)"
-msgstr "Dosya indiriliyor (%​%1)"
+msgstr ""
+"Dosya indiriliyor…\n"
+"%1 / %2 (%​%3)"
 
-#: tournament/ratinglists/ratinglist.cpp:195
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Couldn't download rating list: %1"
+#: tournament/ratinglists/ratinglist.cpp:197
+#, kde-format
 msgctxt "@info"
 msgid "Could not download rating list: %1"
 msgstr "Derecelendirme listesi indirilemedi: %1"
 
-#: tournament/ratinglists/ratinglist.cpp:207
+#: tournament/ratinglists/ratinglist.cpp:208
 #, kde-format
 msgctxt "@info"
 msgid "Could not download rating list from %1 (unsupported protocol)."
 msgstr ""
 "%1 konumundan derecelendirme listesi indirilemedi (desteklenmeyen protokol)."
 
-#: tournament/ratinglists/ratinglist.cpp:220
+#: tournament/ratinglists/ratinglist.cpp:221
 #, kde-format
 msgctxt "@info:progress"
 msgid "Imported one player."
@@ -1149,21 +1211,19 @@ msgid_plural "Imported %1 players."
 msgstr[0] "1 oyuncu içe aktarıldı."
 msgstr[1] "%1 oyuncu içe aktarıldı."
 
-#: tournament/ratinglists/ratinglist.cpp:236
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Couldn't extract file."
+#: tournament/ratinglists/ratinglist.cpp:237
+#, kde-format
 msgctxt "@info"
 msgid "Could not extract file."
 msgstr "Dosya çıkarılamadı."
 
-#: tournament/ratinglists/ratinglist.cpp:241
+#: tournament/ratinglists/ratinglist.cpp:242
 #, kde-format
 msgctxt "@info"
 msgid "File format not supported."
 msgstr "Dosya biçimi desteklenmiyor."
 
-#: tournament/ratinglists/ratinglist.cpp:464
+#: tournament/ratinglists/ratinglist.cpp:465
 #, kde-format
 msgctxt "@info:progress"
 msgid "Saved 1 player."
@@ -1171,7 +1231,7 @@ msgid_plural "Saved %1 players."
 msgstr[0] "1 oyuncu kaydedildi."
 msgstr[1] "%1 oyuncu kaydedildi."
 
-#: tournament/tiebreaks/aob.h:23 tournament/tournament.cpp:543
+#: tournament/tiebreaks/aob.h:23 tournament/tournament.cpp:532
 #, kde-format
 msgctxt "Tiebreak"
 msgid "Average Buchholz of Opponents"
@@ -1189,7 +1249,7 @@ msgctxt "@info"
 msgid "Unsupported tiebreak option \"%1\""
 msgstr "Desteklenmeyen beraberlik seçeneği “%1”"
 
-#: tournament/tiebreaks/buchholz.h:25 tournament/tournament.cpp:525
+#: tournament/tiebreaks/buchholz.h:25 tournament/tournament.cpp:514
 #, kde-format
 msgctxt "Buchholz tiebreak"
 msgid "Buchholz"
@@ -1207,26 +1267,26 @@ msgctxt "@info"
 msgid "Unsupported tiebreak"
 msgstr "Desteklenmeyen beraberlik"
 
-#: tournament/tiebreaks/numberwins.h:22 tournament/tournament.cpp:529
+#: tournament/tiebreaks/numberwins.h:22 tournament/tournament.cpp:518
 #, kde-format
 msgctxt "Number of Wins tiebreak"
 msgid "Number of Wins"
 msgstr "Kazanma Sayısı"
 
-#: tournament/tiebreaks/playedblack.h:22 tournament/tournament.cpp:539
+#: tournament/tiebreaks/playedblack.h:22 tournament/tournament.cpp:528
 #, kde-format
 msgctxt "Number of Games Played with Black (over the board) tiebreak"
 msgid "Number of Games Played with Black (over the board)"
 msgstr "Siyah ile Oynanan Oyunların Sayısı (Yüz Yüze)"
 
 #: tournament/tiebreaks/points.h:22 tournament/tiebreaks/points.h:27
-#: tournament/tournament.cpp:521
+#: tournament/tournament.cpp:510
 #, kde-format
 msgctxt "Game points"
 msgid "Points"
 msgstr "Puanlar"
 
-#: tournament/tiebreaks/won.h:23 tournament/tournament.cpp:535
+#: tournament/tiebreaks/won.h:23 tournament/tournament.cpp:524
 #, kde-format
 msgctxt ""
 "Number of Games Won (over the board) tiebreak. Different from the 'Number of "
@@ -1234,41 +1294,45 @@ msgctxt ""
 msgid "Number of Games Won (over the board)"
 msgstr "Kazanılan Oyunların Sayısı (Yüz Yüze)"
 
-#: tournament/tournament.cpp:978
+#: tournament/tournament.cpp:967
 #, kde-format
 msgid "An error ocurred while pairing the round: %1"
 msgstr "Raunt eşleştirilirken bir hata oluştu: %1"
 
-#: tournament/tournament.cpp:1221
+#: tournament/tournament.cpp:1203
 #, kde-format
 msgid "Couldn't open file"
 msgstr "Dosya açılamadı"
 
-#: tournament/trf/reader.cpp:52 tournament/trf/reader.cpp:59
+#: tournament/trf/reader.cpp:54 tournament/trf/reader.cpp:61
 #, kde-format
 msgid "Player \"%1\" not found."
 msgstr "Oyuncu “%1” bulunamadı."
 
-#: tournament/trf/reader.cpp:65
+#: tournament/trf/reader.cpp:67
 #, kde-format
 msgid "Unknown result on pairing \"%1\" with \"%2\"."
 msgstr "“%1” kişisini “%2” ile eşleştirirken bilinmeyen sonuç."
 
-#: tournament/trf/reader.cpp:181
+#: tournament/trf/reader.cpp:189
 #, kde-format
 msgctxt "@info"
 msgid "Date \"%1\" is invalid."
 msgstr "“%1” tarihi geçersiz."
 
-#: tournament/trf/reader.cpp:255
+#: tournament/trf/reader.cpp:263
 #, kde-format
 msgid "Unknown result \"%1\" on pairing \"%2\"."
 msgstr "“%2” eşleşmesinde bilinmeyen sonuç “%1”."
 
-#: tournament/trf/reader.cpp:258
+#: tournament/trf/reader.cpp:266
 #, kde-format
 msgid "Pairing \"%1\" has no opponent."
 msgstr "“%1” eşleşmesinin bir rakibi yok."
+
+#~ msgctxt "@label:textbox"
+#~ msgid "Chief arbiter"
+#~ msgstr "Ana hakem"
 
 #~ msgctxt "@title:column"
 #~ msgid "Sex"

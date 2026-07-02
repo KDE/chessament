@@ -1,5 +1,5 @@
 # Translation of chessament.po to Catalan
-# Copyright (C) 2025 This_file_is_part_of_KDE
+# Copyright (C) 2025-2026 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-01 00:42+0000\n"
-"PO-Revision-Date: 2026-06-26 13:07+0200\n"
+"POT-Creation-Date: 2026-07-02 00:41+0000\n"
+"PO-Revision-Date: 2026-07-01 09:32+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 26.04.2\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #: byesmodel.cpp:66
 #, kde-format
@@ -301,7 +301,7 @@ msgctxt "@label:textbox"
 msgid "Birth date"
 msgstr "Data de naixement"
 
-#: qml/AddPlayerDialog.qml:118 qml/TournamentSettingsInformation.qml:38
+#: qml/AddPlayerDialog.qml:118 qml/TournamentSettingsInformation.qml:43
 msgctxt "@label:textbox"
 msgid "Federation"
 msgstr "Federació"
@@ -320,6 +320,61 @@ msgstr "Gènere"
 msgctxt "@title:window"
 msgid "Add Tiebreak"
 msgstr "Addició de desempat"
+
+#: qml/components/ArbiterDelegate.qml:34
+msgctxt "@item:inlistbox Chief Arbiter"
+msgid "Chief"
+msgstr ""
+
+#: qml/components/ArbiterDelegate.qml:38
+#, fuzzy
+#| msgctxt "@label:textbox"
+#| msgid "Deputy chief arbiter"
+msgctxt "@item:inlistbox Deputy Chief Arbiter"
+msgid "Deputy Chief"
+msgstr "Àrbitre en cap director"
+
+#: qml/components/ArbiterDelegate.qml:42
+msgctxt "@item:inlistbox"
+msgid "Arbiter"
+msgstr ""
+
+#: qml/components/ArbiterDelegate.qml:53
+#, fuzzy
+#| msgctxt "@title:column Player Title"
+#| msgid "Title"
+msgctxt "@info:placeholder Arbiter's Title"
+msgid "Title"
+msgstr "Títol"
+
+#: qml/components/ArbiterDelegate.qml:60
+#, fuzzy
+#| msgctxt "@title:column Player Name"
+#| msgid "Name"
+msgctxt "@info:placeholder Arbiter's Name"
+msgid "Name"
+msgstr "Nom"
+
+#: qml/components/ArbiterDelegate.qml:67
+msgctxt "@info:placeholder Arbiter's ID"
+msgid "ID"
+msgstr ""
+
+#: qml/components/ArbiterDelegate.qml:72
+#, fuzzy
+#| msgctxt "@action:button"
+#| msgid "Delete Tiebreak"
+msgctxt "@action:button"
+msgid "Delete Arbiter"
+msgstr "Suprimeix el desempat"
+
+#: qml/components/ArbiterDelegate.qml:78
+#, fuzzy
+#| msgctxt "@title"
+#| msgid "Delete Player"
+msgctxt "@action:button"
+msgid "Delete arbiter"
+msgstr "Supressió de jugador"
 
 #: qml/components/MenuBar.qml:17
 msgctxt "@action:menu"
@@ -854,35 +909,46 @@ msgctxt "@action:button"
 msgid "Add Tiebreak"
 msgstr "Afegeix un desempat"
 
-#: qml/TournamentSettingsInformation.qml:12
+#: qml/TournamentSettingsInformation.qml:17
 msgctxt "@title"
 msgid "Information"
 msgstr "Informació"
 
-#: qml/TournamentSettingsInformation.qml:15
+#: qml/TournamentSettingsInformation.qml:20
 msgctxt "@title:group"
 msgid "Basic details"
 msgstr "Detalls bàsics"
 
-#: qml/TournamentSettingsInformation.qml:20
+#: qml/TournamentSettingsInformation.qml:25
 msgctxt "@label:textbox"
 msgid "Tournament name"
 msgstr "Nom del torneig"
 
-#: qml/TournamentSettingsInformation.qml:29
+#: qml/TournamentSettingsInformation.qml:34
 msgctxt "@label:textbox"
 msgid "City"
 msgstr "Ciutat"
 
-#: qml/TournamentSettingsInformation.qml:47
-msgctxt "@label:textbox"
-msgid "Chief arbiter"
-msgstr "Àrbitre en cap"
+#: qml/TournamentSettingsInformation.qml:52
+msgctxt "@title:group"
+msgid "Arbiters"
+msgstr ""
 
 #: qml/TournamentSettingsInformation.qml:56
-msgctxt "@label:textbox"
-msgid "Deputy chief arbiter"
-msgstr "Àrbitre en cap director"
+#, fuzzy
+#| msgctxt "@action:button"
+#| msgid "Add Tiebreak"
+msgctxt "@action:button"
+msgid "Add Arbiter"
+msgstr "Afegeix un desempat"
+
+#: qml/TournamentSettingsInformation.qml:63
+#, fuzzy
+#| msgctxt "@info:placeholder"
+#| msgid "No players yet"
+msgctxt "@info:status"
+msgid "No arbiters yet."
+msgstr "Encara no hi ha cap jugador"
 
 #: qml/WelcomePage.qml:21
 msgctxt "@title"
@@ -1085,14 +1151,14 @@ msgctxt "bbpPairings is the name of a program, should not be translated"
 msgid "bbpPairings terminated with a non zero exit code: %1"
 msgstr "bbpPairings ha finalitzat amb un codi de sortida no zero: %1"
 
-#: tournament/pairingengine.cpp:79 tournament/trf/reader.cpp:235
+#: tournament/pairingengine.cpp:79 tournament/trf/reader.cpp:243
 #, kde-format
 msgid "Invalid pairing \"%1\"."
 msgstr "Aparellament no vàlid «%1»."
 
 #: tournament/pairingengine.cpp:85 tournament/pairingengine.cpp:89
 #: tournament/pairingengine.cpp:93 tournament/pairingengine.cpp:97
-#: tournament/trf/reader.cpp:248
+#: tournament/trf/reader.cpp:256
 #, kde-format
 msgid "Invalid player \"%1\" on pairing \"%2\"."
 msgstr "Jugador «%1» no vàlid a l'aparellament «%2»."
@@ -1111,42 +1177,38 @@ msgid "Could not open file: the file does not exists."
 msgstr "No s'ha pogut obrir el fitxer: el fitxer o existeix."
 
 #: tournament/ratinglists/ratinglist.cpp:173
-#, fuzzy, kde-format
-#| msgctxt "@info:progress"
-#| msgid "Downloading file"
+#, kde-format
 msgctxt "@info:progress"
 msgid "Downloading file…"
-msgstr "S'està descarregant el fitxer"
+msgstr "S'està descarregant el fitxer…"
 
 # skip-rule: t-sp_tpc
 #: tournament/ratinglists/ratinglist.cpp:186
-#, fuzzy, kde-format
-#| msgctxt "@info:progress"
-#| msgid "Downloading file (%1 %)"
+#, kde-format
 msgctxt ""
 "@info:progress %1 & %2 are the file download progress (received / total), %3 "
 "is the download percentage"
 msgid ""
 "Downloading file…\n"
 "%1 / %2 (%3%)"
-msgstr "S'està descarregant el fitxer (%1 %)"
+msgstr ""
+"S'està descarregant el fitxer…\n"
+"%1 / %2 (%3%)"
 
-#: tournament/ratinglists/ratinglist.cpp:195
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Couldn't download rating list: %1"
+#: tournament/ratinglists/ratinglist.cpp:197
+#, kde-format
 msgctxt "@info"
 msgid "Could not download rating list: %1"
 msgstr "No s'ha pogut baixar la llista de puntuació: %1"
 
-#: tournament/ratinglists/ratinglist.cpp:207
+#: tournament/ratinglists/ratinglist.cpp:208
 #, kde-format
 msgctxt "@info"
 msgid "Could not download rating list from %1 (unsupported protocol)."
 msgstr ""
 "No s'ha pogut baixar la llista de puntuació des de %1 (protocol no admès)."
 
-#: tournament/ratinglists/ratinglist.cpp:220
+#: tournament/ratinglists/ratinglist.cpp:221
 #, kde-format
 msgctxt "@info:progress"
 msgid "Imported one player."
@@ -1154,21 +1216,19 @@ msgid_plural "Imported %1 players."
 msgstr[0] "S'ha importat un jugador."
 msgstr[1] "S'han importat %1 jugadors."
 
-#: tournament/ratinglists/ratinglist.cpp:236
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Couldn't extract file."
+#: tournament/ratinglists/ratinglist.cpp:237
+#, kde-format
 msgctxt "@info"
 msgid "Could not extract file."
 msgstr "No s'ha pogut extreure el fitxer."
 
-#: tournament/ratinglists/ratinglist.cpp:241
+#: tournament/ratinglists/ratinglist.cpp:242
 #, kde-format
 msgctxt "@info"
 msgid "File format not supported."
 msgstr "El format del fitxer no està admès."
 
-#: tournament/ratinglists/ratinglist.cpp:464
+#: tournament/ratinglists/ratinglist.cpp:465
 #, kde-format
 msgctxt "@info:progress"
 msgid "Saved 1 player."
@@ -1176,7 +1236,7 @@ msgid_plural "Saved %1 players."
 msgstr[0] "S'ha desat 1 jugador."
 msgstr[1] "S'han desat %1 jugadors."
 
-#: tournament/tiebreaks/aob.h:23 tournament/tournament.cpp:543
+#: tournament/tiebreaks/aob.h:23 tournament/tournament.cpp:532
 #, kde-format
 msgctxt "Tiebreak"
 msgid "Average Buchholz of Opponents"
@@ -1194,7 +1254,7 @@ msgctxt "@info"
 msgid "Unsupported tiebreak option \"%1\""
 msgstr "Opció de desempat «%1» no admesa"
 
-#: tournament/tiebreaks/buchholz.h:25 tournament/tournament.cpp:525
+#: tournament/tiebreaks/buchholz.h:25 tournament/tournament.cpp:514
 #, kde-format
 msgctxt "Buchholz tiebreak"
 msgid "Buchholz"
@@ -1212,26 +1272,26 @@ msgctxt "@info"
 msgid "Unsupported tiebreak"
 msgstr "Desempat no admès"
 
-#: tournament/tiebreaks/numberwins.h:22 tournament/tournament.cpp:529
+#: tournament/tiebreaks/numberwins.h:22 tournament/tournament.cpp:518
 #, kde-format
 msgctxt "Number of Wins tiebreak"
 msgid "Number of Wins"
 msgstr "Nombre de partides guanyades"
 
-#: tournament/tiebreaks/playedblack.h:22 tournament/tournament.cpp:539
+#: tournament/tiebreaks/playedblack.h:22 tournament/tournament.cpp:528
 #, kde-format
 msgctxt "Number of Games Played with Black (over the board) tiebreak"
 msgid "Number of Games Played with Black (over the board)"
 msgstr "Nombre de partides jugades amb negres (sobre el tauler)"
 
 #: tournament/tiebreaks/points.h:22 tournament/tiebreaks/points.h:27
-#: tournament/tournament.cpp:521
+#: tournament/tournament.cpp:510
 #, kde-format
 msgctxt "Game points"
 msgid "Points"
 msgstr "Punts"
 
-#: tournament/tiebreaks/won.h:23 tournament/tournament.cpp:535
+#: tournament/tiebreaks/won.h:23 tournament/tournament.cpp:524
 #, kde-format
 msgctxt ""
 "Number of Games Won (over the board) tiebreak. Different from the 'Number of "
@@ -1239,38 +1299,42 @@ msgctxt ""
 msgid "Number of Games Won (over the board)"
 msgstr "Nombre de partides guanyades (sobre el tauler)"
 
-#: tournament/tournament.cpp:978
+#: tournament/tournament.cpp:967
 #, kde-format
 msgid "An error ocurred while pairing the round: %1"
 msgstr "S'ha produït un error en aparellar la ronda: %1"
 
-#: tournament/tournament.cpp:1221
+#: tournament/tournament.cpp:1203
 #, kde-format
 msgid "Couldn't open file"
 msgstr "No s'ha pogut obrir el fitxer"
 
-#: tournament/trf/reader.cpp:52 tournament/trf/reader.cpp:59
+#: tournament/trf/reader.cpp:54 tournament/trf/reader.cpp:61
 #, kde-format
 msgid "Player \"%1\" not found."
 msgstr "No s'ha trobat el jugador «%1»."
 
-#: tournament/trf/reader.cpp:65
+#: tournament/trf/reader.cpp:67
 #, kde-format
 msgid "Unknown result on pairing \"%1\" with \"%2\"."
 msgstr "Resultat desconegut a l'aparellament de «%1» amb «%2»."
 
-#: tournament/trf/reader.cpp:181
+#: tournament/trf/reader.cpp:189
 #, kde-format
 msgctxt "@info"
 msgid "Date \"%1\" is invalid."
 msgstr "La data «%1» no és vàlida."
 
-#: tournament/trf/reader.cpp:255
+#: tournament/trf/reader.cpp:263
 #, kde-format
 msgid "Unknown result \"%1\" on pairing \"%2\"."
 msgstr "Resultat «%1» desconegut a l'aparellament «%2»."
 
-#: tournament/trf/reader.cpp:258
+#: tournament/trf/reader.cpp:266
 #, kde-format
 msgid "Pairing \"%1\" has no opponent."
 msgstr "L'aparellament «%1» no té oponent."
+
+#~ msgctxt "@label:textbox"
+#~ msgid "Chief arbiter"
+#~ msgstr "Àrbitre en cap"

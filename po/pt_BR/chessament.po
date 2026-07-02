@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-01 00:42+0000\n"
-"PO-Revision-Date: 2026-06-26 01:50-0300\n"
-"Last-Translator: Guilherme Marçal Silva <guimarcalsilva@gmail.com>\n"
+"POT-Creation-Date: 2026-07-02 00:41+0000\n"
+"PO-Revision-Date: 2026-07-01 09:28-0300\n"
+"Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
@@ -300,7 +300,7 @@ msgctxt "@label:textbox"
 msgid "Birth date"
 msgstr "Data de nascimento"
 
-#: qml/AddPlayerDialog.qml:118 qml/TournamentSettingsInformation.qml:38
+#: qml/AddPlayerDialog.qml:118 qml/TournamentSettingsInformation.qml:43
 msgctxt "@label:textbox"
 msgid "Federation"
 msgstr "Federação"
@@ -319,6 +319,61 @@ msgstr "Gênero"
 msgctxt "@title:window"
 msgid "Add Tiebreak"
 msgstr "Adicionar desempate"
+
+#: qml/components/ArbiterDelegate.qml:34
+msgctxt "@item:inlistbox Chief Arbiter"
+msgid "Chief"
+msgstr ""
+
+#: qml/components/ArbiterDelegate.qml:38
+#, fuzzy
+#| msgctxt "@label:textbox"
+#| msgid "Deputy chief arbiter"
+msgctxt "@item:inlistbox Deputy Chief Arbiter"
+msgid "Deputy Chief"
+msgstr "Árbitro vice-chefe"
+
+#: qml/components/ArbiterDelegate.qml:42
+msgctxt "@item:inlistbox"
+msgid "Arbiter"
+msgstr ""
+
+#: qml/components/ArbiterDelegate.qml:53
+#, fuzzy
+#| msgctxt "@title:column Player Title"
+#| msgid "Title"
+msgctxt "@info:placeholder Arbiter's Title"
+msgid "Title"
+msgstr "Título"
+
+#: qml/components/ArbiterDelegate.qml:60
+#, fuzzy
+#| msgctxt "@title:column Player Name"
+#| msgid "Name"
+msgctxt "@info:placeholder Arbiter's Name"
+msgid "Name"
+msgstr "Nome"
+
+#: qml/components/ArbiterDelegate.qml:67
+msgctxt "@info:placeholder Arbiter's ID"
+msgid "ID"
+msgstr ""
+
+#: qml/components/ArbiterDelegate.qml:72
+#, fuzzy
+#| msgctxt "@action:button"
+#| msgid "Delete Tiebreak"
+msgctxt "@action:button"
+msgid "Delete Arbiter"
+msgstr "Excluir desempate"
+
+#: qml/components/ArbiterDelegate.qml:78
+#, fuzzy
+#| msgctxt "@title"
+#| msgid "Delete Player"
+msgctxt "@action:button"
+msgid "Delete arbiter"
+msgstr "Excluir jogador"
 
 #: qml/components/MenuBar.qml:17
 msgctxt "@action:menu"
@@ -853,35 +908,46 @@ msgctxt "@action:button"
 msgid "Add Tiebreak"
 msgstr "Adicionar desempate"
 
-#: qml/TournamentSettingsInformation.qml:12
+#: qml/TournamentSettingsInformation.qml:17
 msgctxt "@title"
 msgid "Information"
 msgstr "Informações"
 
-#: qml/TournamentSettingsInformation.qml:15
+#: qml/TournamentSettingsInformation.qml:20
 msgctxt "@title:group"
 msgid "Basic details"
 msgstr "Detalhes básicos"
 
-#: qml/TournamentSettingsInformation.qml:20
+#: qml/TournamentSettingsInformation.qml:25
 msgctxt "@label:textbox"
 msgid "Tournament name"
 msgstr "Nome do torneio"
 
-#: qml/TournamentSettingsInformation.qml:29
+#: qml/TournamentSettingsInformation.qml:34
 msgctxt "@label:textbox"
 msgid "City"
 msgstr "Cidade"
 
-#: qml/TournamentSettingsInformation.qml:47
-msgctxt "@label:textbox"
-msgid "Chief arbiter"
-msgstr "Árbitro chefe"
+#: qml/TournamentSettingsInformation.qml:52
+msgctxt "@title:group"
+msgid "Arbiters"
+msgstr ""
 
 #: qml/TournamentSettingsInformation.qml:56
-msgctxt "@label:textbox"
-msgid "Deputy chief arbiter"
-msgstr "Árbitro vice-chefe"
+#, fuzzy
+#| msgctxt "@action:button"
+#| msgid "Add Tiebreak"
+msgctxt "@action:button"
+msgid "Add Arbiter"
+msgstr "Adicionar desempate"
+
+#: qml/TournamentSettingsInformation.qml:63
+#, fuzzy
+#| msgctxt "@info:placeholder"
+#| msgid "No players yet"
+msgctxt "@info:status"
+msgid "No arbiters yet."
+msgstr "Nenhum jogador ainda"
 
 #: qml/WelcomePage.qml:21
 msgctxt "@title"
@@ -1083,14 +1149,14 @@ msgctxt "bbpPairings is the name of a program, should not be translated"
 msgid "bbpPairings terminated with a non zero exit code: %1"
 msgstr "O bbpPairings encerrado com um código de saída diferente de zero: %1"
 
-#: tournament/pairingengine.cpp:79 tournament/trf/reader.cpp:235
+#: tournament/pairingengine.cpp:79 tournament/trf/reader.cpp:243
 #, kde-format
 msgid "Invalid pairing \"%1\"."
 msgstr "Pareamento inválido \"%1\"."
 
 #: tournament/pairingengine.cpp:85 tournament/pairingengine.cpp:89
 #: tournament/pairingengine.cpp:93 tournament/pairingengine.cpp:97
-#: tournament/trf/reader.cpp:248
+#: tournament/trf/reader.cpp:256
 #, kde-format
 msgid "Invalid player \"%1\" on pairing \"%2\"."
 msgstr "Jogador inválido \"%1\" no pareamento \"%2\"."
@@ -1109,34 +1175,30 @@ msgid "Could not open file: the file does not exists."
 msgstr "Não foi possível abrir o arquivo: o arquivo não existe."
 
 #: tournament/ratinglists/ratinglist.cpp:173
-#, fuzzy, kde-format
-#| msgctxt "@info:progress"
-#| msgid "Downloading file"
+#, kde-format
 msgctxt "@info:progress"
 msgid "Downloading file…"
-msgstr "Baixando arquivo"
+msgstr "Baixando arquivo…"
 
 #: tournament/ratinglists/ratinglist.cpp:186
-#, fuzzy, kde-format
-#| msgctxt "@info:progress"
-#| msgid "Downloading file (%1 %)"
+#, kde-format
 msgctxt ""
 "@info:progress %1 & %2 are the file download progress (received / total), %3 "
 "is the download percentage"
 msgid ""
 "Downloading file…\n"
 "%1 / %2 (%3%)"
-msgstr "Baixando arquivo (%1 %)"
+msgstr ""
+"Baixando arquivo…\n"
+"%1 / %2 (%3%)"
 
-#: tournament/ratinglists/ratinglist.cpp:195
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Couldn't download rating list: %1"
+#: tournament/ratinglists/ratinglist.cpp:197
+#, kde-format
 msgctxt "@info"
 msgid "Could not download rating list: %1"
 msgstr "Não foi possível baixar a lista de classificação: %1"
 
-#: tournament/ratinglists/ratinglist.cpp:207
+#: tournament/ratinglists/ratinglist.cpp:208
 #, kde-format
 msgctxt "@info"
 msgid "Could not download rating list from %1 (unsupported protocol)."
@@ -1144,7 +1206,7 @@ msgstr ""
 "Não foi possível baixar a lista de classificação de %1 (protocolo não "
 "suportado)."
 
-#: tournament/ratinglists/ratinglist.cpp:220
+#: tournament/ratinglists/ratinglist.cpp:221
 #, kde-format
 msgctxt "@info:progress"
 msgid "Imported one player."
@@ -1152,21 +1214,19 @@ msgid_plural "Imported %1 players."
 msgstr[0] "Um jogador importado."
 msgstr[1] "%1 jogadores importados."
 
-#: tournament/ratinglists/ratinglist.cpp:236
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Couldn't extract file."
+#: tournament/ratinglists/ratinglist.cpp:237
+#, kde-format
 msgctxt "@info"
 msgid "Could not extract file."
 msgstr "Não foi possível extrair o arquivo."
 
-#: tournament/ratinglists/ratinglist.cpp:241
+#: tournament/ratinglists/ratinglist.cpp:242
 #, kde-format
 msgctxt "@info"
 msgid "File format not supported."
 msgstr "Formato de arquivo não suportado."
 
-#: tournament/ratinglists/ratinglist.cpp:464
+#: tournament/ratinglists/ratinglist.cpp:465
 #, kde-format
 msgctxt "@info:progress"
 msgid "Saved 1 player."
@@ -1174,7 +1234,7 @@ msgid_plural "Saved %1 players."
 msgstr[0] "1 jogador salvo."
 msgstr[1] "%1 Jogadores salvos."
 
-#: tournament/tiebreaks/aob.h:23 tournament/tournament.cpp:543
+#: tournament/tiebreaks/aob.h:23 tournament/tournament.cpp:532
 #, kde-format
 msgctxt "Tiebreak"
 msgid "Average Buchholz of Opponents"
@@ -1192,7 +1252,7 @@ msgctxt "@info"
 msgid "Unsupported tiebreak option \"%1\""
 msgstr "Opção de desempate não suportada \"%1\""
 
-#: tournament/tiebreaks/buchholz.h:25 tournament/tournament.cpp:525
+#: tournament/tiebreaks/buchholz.h:25 tournament/tournament.cpp:514
 #, kde-format
 msgctxt "Buchholz tiebreak"
 msgid "Buchholz"
@@ -1210,26 +1270,26 @@ msgctxt "@info"
 msgid "Unsupported tiebreak"
 msgstr "Desempate não suportado"
 
-#: tournament/tiebreaks/numberwins.h:22 tournament/tournament.cpp:529
+#: tournament/tiebreaks/numberwins.h:22 tournament/tournament.cpp:518
 #, kde-format
 msgctxt "Number of Wins tiebreak"
 msgid "Number of Wins"
 msgstr "Número de vitórias"
 
-#: tournament/tiebreaks/playedblack.h:22 tournament/tournament.cpp:539
+#: tournament/tiebreaks/playedblack.h:22 tournament/tournament.cpp:528
 #, kde-format
 msgctxt "Number of Games Played with Black (over the board) tiebreak"
 msgid "Number of Games Played with Black (over the board)"
 msgstr "Número de partidas jogadas com as peças pretas (no tabuleiro)"
 
 #: tournament/tiebreaks/points.h:22 tournament/tiebreaks/points.h:27
-#: tournament/tournament.cpp:521
+#: tournament/tournament.cpp:510
 #, kde-format
 msgctxt "Game points"
 msgid "Points"
 msgstr "Pontos"
 
-#: tournament/tiebreaks/won.h:23 tournament/tournament.cpp:535
+#: tournament/tiebreaks/won.h:23 tournament/tournament.cpp:524
 #, kde-format
 msgctxt ""
 "Number of Games Won (over the board) tiebreak. Different from the 'Number of "
@@ -1237,41 +1297,45 @@ msgctxt ""
 msgid "Number of Games Won (over the board)"
 msgstr "Número de jogos vencidos (no tabuleiro)"
 
-#: tournament/tournament.cpp:978
+#: tournament/tournament.cpp:967
 #, kde-format
 msgid "An error ocurred while pairing the round: %1"
 msgstr "Ocorreu um erro ao parear a rodada: %1"
 
-#: tournament/tournament.cpp:1221
+#: tournament/tournament.cpp:1203
 #, kde-format
 msgid "Couldn't open file"
 msgstr "Não foi possível abrir o arquivo"
 
-#: tournament/trf/reader.cpp:52 tournament/trf/reader.cpp:59
+#: tournament/trf/reader.cpp:54 tournament/trf/reader.cpp:61
 #, kde-format
 msgid "Player \"%1\" not found."
 msgstr "Jogador \"%1\" não econtrado."
 
-#: tournament/trf/reader.cpp:65
+#: tournament/trf/reader.cpp:67
 #, kde-format
 msgid "Unknown result on pairing \"%1\" with \"%2\"."
 msgstr "Resultado desconhecido ao parear \"%1\" com \"%2\"."
 
-#: tournament/trf/reader.cpp:181
+#: tournament/trf/reader.cpp:189
 #, kde-format
 msgctxt "@info"
 msgid "Date \"%1\" is invalid."
 msgstr "A data \"%1\" é inválida."
 
-#: tournament/trf/reader.cpp:255
+#: tournament/trf/reader.cpp:263
 #, kde-format
 msgid "Unknown result \"%1\" on pairing \"%2\"."
 msgstr "Resultado desconhecido \"%1\" no pareamento \"%2\"."
 
-#: tournament/trf/reader.cpp:258
+#: tournament/trf/reader.cpp:266
 #, kde-format
 msgid "Pairing \"%1\" has no opponent."
 msgstr "O par \"%1\" não tem oponente."
+
+#~ msgctxt "@label:textbox"
+#~ msgid "Chief arbiter"
+#~ msgstr "Árbitro chefe"
 
 #~ msgctxt "@title:column"
 #~ msgid "Sex"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-01 00:42+0000\n"
+"POT-Creation-Date: 2026-07-02 00:41+0000\n"
 "PO-Revision-Date: 2025-11-09 11:05+0200\n"
 "Last-Translator: Toms Trasūns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -309,7 +309,7 @@ msgctxt "@label:textbox"
 msgid "Birth date"
 msgstr "Dzimšanas datums"
 
-#: qml/AddPlayerDialog.qml:118 qml/TournamentSettingsInformation.qml:38
+#: qml/AddPlayerDialog.qml:118 qml/TournamentSettingsInformation.qml:43
 msgctxt "@label:textbox"
 msgid "Federation"
 msgstr "Federācija"
@@ -328,6 +328,61 @@ msgstr ""
 msgctxt "@title:window"
 msgid "Add Tiebreak"
 msgstr "Pievienot neizšķirta izšķiršanu"
+
+#: qml/components/ArbiterDelegate.qml:34
+msgctxt "@item:inlistbox Chief Arbiter"
+msgid "Chief"
+msgstr ""
+
+#: qml/components/ArbiterDelegate.qml:38
+#, fuzzy
+#| msgctxt "@label:textbox"
+#| msgid "Deputy chief arbiter"
+msgctxt "@item:inlistbox Deputy Chief Arbiter"
+msgid "Deputy Chief"
+msgstr "Galvenā arbitra vietnieks"
+
+#: qml/components/ArbiterDelegate.qml:42
+msgctxt "@item:inlistbox"
+msgid "Arbiter"
+msgstr ""
+
+#: qml/components/ArbiterDelegate.qml:53
+#, fuzzy
+#| msgctxt "@title:column Player Title"
+#| msgid "Title"
+msgctxt "@info:placeholder Arbiter's Title"
+msgid "Title"
+msgstr "Tituls"
+
+#: qml/components/ArbiterDelegate.qml:60
+#, fuzzy
+#| msgctxt "@title:column Player Name"
+#| msgid "Name"
+msgctxt "@info:placeholder Arbiter's Name"
+msgid "Name"
+msgstr "Vārds"
+
+#: qml/components/ArbiterDelegate.qml:67
+msgctxt "@info:placeholder Arbiter's ID"
+msgid "ID"
+msgstr ""
+
+#: qml/components/ArbiterDelegate.qml:72
+#, fuzzy
+#| msgctxt "@action:button"
+#| msgid "Delete Tiebreak"
+msgctxt "@action:button"
+msgid "Delete Arbiter"
+msgstr "Dzēst neizšķirta izšķiršanu"
+
+#: qml/components/ArbiterDelegate.qml:78
+#, fuzzy
+#| msgctxt "@title:column Name of the White Player"
+#| msgid "White Player"
+msgctxt "@action:button"
+msgid "Delete arbiter"
+msgstr "Balto spēlētājs"
 
 #: qml/components/MenuBar.qml:17
 msgctxt "@action:menu"
@@ -899,35 +954,46 @@ msgctxt "@action:button"
 msgid "Add Tiebreak"
 msgstr "Pievienot neizšķirta izšķiršanu"
 
-#: qml/TournamentSettingsInformation.qml:12
+#: qml/TournamentSettingsInformation.qml:17
 msgctxt "@title"
 msgid "Information"
 msgstr "Informācija"
 
-#: qml/TournamentSettingsInformation.qml:15
+#: qml/TournamentSettingsInformation.qml:20
 msgctxt "@title:group"
 msgid "Basic details"
 msgstr "Pamatinformācija"
 
-#: qml/TournamentSettingsInformation.qml:20
+#: qml/TournamentSettingsInformation.qml:25
 msgctxt "@label:textbox"
 msgid "Tournament name"
 msgstr "Turnīra nosaukums"
 
-#: qml/TournamentSettingsInformation.qml:29
+#: qml/TournamentSettingsInformation.qml:34
 msgctxt "@label:textbox"
 msgid "City"
 msgstr "Pilsēta"
 
-#: qml/TournamentSettingsInformation.qml:47
-msgctxt "@label:textbox"
-msgid "Chief arbiter"
-msgstr "Galvenais arbitrs"
+#: qml/TournamentSettingsInformation.qml:52
+msgctxt "@title:group"
+msgid "Arbiters"
+msgstr ""
 
 #: qml/TournamentSettingsInformation.qml:56
-msgctxt "@label:textbox"
-msgid "Deputy chief arbiter"
-msgstr "Galvenā arbitra vietnieks"
+#, fuzzy
+#| msgctxt "@action:button"
+#| msgid "Add Tiebreak"
+msgctxt "@action:button"
+msgid "Add Arbiter"
+msgstr "Pievienot neizšķirta izšķiršanu"
+
+#: qml/TournamentSettingsInformation.qml:63
+#, fuzzy
+#| msgctxt "@info:placeholder"
+#| msgid "No players yet"
+msgctxt "@info:status"
+msgid "No arbiters yet."
+msgstr "Spēlētāju vēl nav"
 
 #: qml/WelcomePage.qml:21
 msgctxt "@title"
@@ -1163,14 +1229,14 @@ msgctxt "bbpPairings is the name of a program, should not be translated"
 msgid "bbpPairings terminated with a non zero exit code: %1"
 msgstr "„bbpPairings“ ir izbeigts ar ne nulles izejas kodu: %1"
 
-#: tournament/pairingengine.cpp:79 tournament/trf/reader.cpp:235
+#: tournament/pairingengine.cpp:79 tournament/trf/reader.cpp:243
 #, kde-format
 msgid "Invalid pairing \"%1\"."
 msgstr "Nederīgs pāris „%1“."
 
 #: tournament/pairingengine.cpp:85 tournament/pairingengine.cpp:89
 #: tournament/pairingengine.cpp:93 tournament/pairingengine.cpp:97
-#: tournament/trf/reader.cpp:248
+#: tournament/trf/reader.cpp:256
 #, kde-format
 msgid "Invalid player \"%1\" on pairing \"%2\"."
 msgstr "Nederīgs spēlētājs „%1“ pāra izveidošanai „%2“."
@@ -1205,19 +1271,19 @@ msgid ""
 "%1 / %2 (%3%)"
 msgstr ""
 
-#: tournament/ratinglists/ratinglist.cpp:195
+#: tournament/ratinglists/ratinglist.cpp:197
 #, kde-format
 msgctxt "@info"
 msgid "Could not download rating list: %1"
 msgstr ""
 
-#: tournament/ratinglists/ratinglist.cpp:207
+#: tournament/ratinglists/ratinglist.cpp:208
 #, kde-format
 msgctxt "@info"
 msgid "Could not download rating list from %1 (unsupported protocol)."
 msgstr ""
 
-#: tournament/ratinglists/ratinglist.cpp:220
+#: tournament/ratinglists/ratinglist.cpp:221
 #, fuzzy, kde-format
 #| msgctxt "@option:check"
 #| msgid "Sort players"
@@ -1228,20 +1294,20 @@ msgstr[0] "Kārtot spēlētājus"
 msgstr[1] "Kārtot spēlētājus"
 msgstr[2] "Kārtot spēlētājus"
 
-#: tournament/ratinglists/ratinglist.cpp:236
+#: tournament/ratinglists/ratinglist.cpp:237
 #, fuzzy, kde-format
 #| msgid "Couldn't open file"
 msgctxt "@info"
 msgid "Could not extract file."
 msgstr "Datni atvērt neizdevās"
 
-#: tournament/ratinglists/ratinglist.cpp:241
+#: tournament/ratinglists/ratinglist.cpp:242
 #, kde-format
 msgctxt "@info"
 msgid "File format not supported."
 msgstr ""
 
-#: tournament/ratinglists/ratinglist.cpp:464
+#: tournament/ratinglists/ratinglist.cpp:465
 #, fuzzy, kde-format
 #| msgctxt "@info:status Number of players"
 #| msgid "1 player"
@@ -1253,7 +1319,7 @@ msgstr[0] "%1 spēlētājs"
 msgstr[1] "%1 spēlētāji"
 msgstr[2] "%1 spēlētāju"
 
-#: tournament/tiebreaks/aob.h:23 tournament/tournament.cpp:543
+#: tournament/tiebreaks/aob.h:23 tournament/tournament.cpp:532
 #, kde-format
 msgctxt "Tiebreak"
 msgid "Average Buchholz of Opponents"
@@ -1271,7 +1337,7 @@ msgctxt "@info"
 msgid "Unsupported tiebreak option \"%1\""
 msgstr ""
 
-#: tournament/tiebreaks/buchholz.h:25 tournament/tournament.cpp:525
+#: tournament/tiebreaks/buchholz.h:25 tournament/tournament.cpp:514
 #, kde-format
 msgctxt "Buchholz tiebreak"
 msgid "Buchholz"
@@ -1293,26 +1359,26 @@ msgctxt "@info"
 msgid "Unsupported tiebreak"
 msgstr "Pielāgot neizšķirta izšķiršanu"
 
-#: tournament/tiebreaks/numberwins.h:22 tournament/tournament.cpp:529
+#: tournament/tiebreaks/numberwins.h:22 tournament/tournament.cpp:518
 #, kde-format
 msgctxt "Number of Wins tiebreak"
 msgid "Number of Wins"
 msgstr "Uzvaru skaits"
 
-#: tournament/tiebreaks/playedblack.h:22 tournament/tournament.cpp:539
+#: tournament/tiebreaks/playedblack.h:22 tournament/tournament.cpp:528
 #, kde-format
 msgctxt "Number of Games Played with Black (over the board) tiebreak"
 msgid "Number of Games Played with Black (over the board)"
 msgstr ""
 
 #: tournament/tiebreaks/points.h:22 tournament/tiebreaks/points.h:27
-#: tournament/tournament.cpp:521
+#: tournament/tournament.cpp:510
 #, kde-format
 msgctxt "Game points"
 msgid "Points"
 msgstr "Punkti"
 
-#: tournament/tiebreaks/won.h:23 tournament/tournament.cpp:535
+#: tournament/tiebreaks/won.h:23 tournament/tournament.cpp:524
 #, fuzzy, kde-format
 #| msgctxt "Number of Wins tiebreak"
 #| msgid "Number of Wins"
@@ -1322,41 +1388,45 @@ msgctxt ""
 msgid "Number of Games Won (over the board)"
 msgstr "Uzvaru skaits"
 
-#: tournament/tournament.cpp:978
+#: tournament/tournament.cpp:967
 #, kde-format
 msgid "An error ocurred while pairing the round: %1"
 msgstr "Pārojot kārtu, notika kļūda: %1"
 
-#: tournament/tournament.cpp:1221
+#: tournament/tournament.cpp:1203
 #, kde-format
 msgid "Couldn't open file"
 msgstr "Datni atvērt neizdevās"
 
-#: tournament/trf/reader.cpp:52 tournament/trf/reader.cpp:59
+#: tournament/trf/reader.cpp:54 tournament/trf/reader.cpp:61
 #, kde-format
 msgid "Player \"%1\" not found."
 msgstr "Spēlētājs „%1“ nav atrasts."
 
-#: tournament/trf/reader.cpp:65
+#: tournament/trf/reader.cpp:67
 #, kde-format
 msgid "Unknown result on pairing \"%1\" with \"%2\"."
 msgstr "Nezināms rezultāts pāra „%1“ izveidošanai ar „%2“."
 
-#: tournament/trf/reader.cpp:181
+#: tournament/trf/reader.cpp:189
 #, kde-format
 msgctxt "@info"
 msgid "Date \"%1\" is invalid."
 msgstr "Datums „%1“ nav derīgs."
 
-#: tournament/trf/reader.cpp:255
+#: tournament/trf/reader.cpp:263
 #, kde-format
 msgid "Unknown result \"%1\" on pairing \"%2\"."
 msgstr "Nezināms rezultāts „%1“, pārojot „%2“."
 
-#: tournament/trf/reader.cpp:258
+#: tournament/trf/reader.cpp:266
 #, kde-format
 msgid "Pairing \"%1\" has no opponent."
 msgstr "Pārim „%1“ nav pretinieka."
+
+#~ msgctxt "@label:textbox"
+#~ msgid "Chief arbiter"
+#~ msgstr "Galvenais arbitrs"
 
 #~ msgctxt "@title:column"
 #~ msgid "Sex"
