@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-02 00:41+0000\n"
-"PO-Revision-Date: 2026-07-01 13:05+0200\n"
+"PO-Revision-Date: 2026-07-02 13:20+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -322,12 +322,9 @@ msgstr "Tiebreak toevoegen"
 #: qml/components/ArbiterDelegate.qml:34
 msgctxt "@item:inlistbox Chief Arbiter"
 msgid "Chief"
-msgstr ""
+msgstr "Hoofdscheidsrechter"
 
 #: qml/components/ArbiterDelegate.qml:38
-#, fuzzy
-#| msgctxt "@label:textbox"
-#| msgid "Deputy chief arbiter"
 msgctxt "@item:inlistbox Deputy Chief Arbiter"
 msgid "Deputy Chief"
 msgstr "Hulphoofdscheidsrechter"
@@ -335,20 +332,14 @@ msgstr "Hulphoofdscheidsrechter"
 #: qml/components/ArbiterDelegate.qml:42
 msgctxt "@item:inlistbox"
 msgid "Arbiter"
-msgstr ""
+msgstr "Scheidsrechter"
 
 #: qml/components/ArbiterDelegate.qml:53
-#, fuzzy
-#| msgctxt "@title:column Player Title"
-#| msgid "Title"
 msgctxt "@info:placeholder Arbiter's Title"
 msgid "Title"
 msgstr "Titel"
 
 #: qml/components/ArbiterDelegate.qml:60
-#, fuzzy
-#| msgctxt "@title:column Player Name"
-#| msgid "Name"
 msgctxt "@info:placeholder Arbiter's Name"
 msgid "Name"
 msgstr "Naam"
@@ -356,23 +347,17 @@ msgstr "Naam"
 #: qml/components/ArbiterDelegate.qml:67
 msgctxt "@info:placeholder Arbiter's ID"
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #: qml/components/ArbiterDelegate.qml:72
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Delete Tiebreak"
 msgctxt "@action:button"
 msgid "Delete Arbiter"
-msgstr "Tiebreak verwijderen"
+msgstr "Scheidsrechter verwijderen"
 
 #: qml/components/ArbiterDelegate.qml:78
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Delete Player"
 msgctxt "@action:button"
 msgid "Delete arbiter"
-msgstr "Speler verwijderen"
+msgstr "Scheidsrechter verwijderen"
 
 #: qml/components/MenuBar.qml:17
 msgctxt "@action:menu"
@@ -930,23 +915,17 @@ msgstr "Plaats"
 #: qml/TournamentSettingsInformation.qml:52
 msgctxt "@title:group"
 msgid "Arbiters"
-msgstr ""
+msgstr "Scheidsrechters"
 
 #: qml/TournamentSettingsInformation.qml:56
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Add Tiebreak"
 msgctxt "@action:button"
 msgid "Add Arbiter"
-msgstr "Tiebreak toevoegen"
+msgstr "Scheidsrechter toevoegen"
 
 #: qml/TournamentSettingsInformation.qml:63
-#, fuzzy
-#| msgctxt "@info:placeholder"
-#| msgid "No players yet"
 msgctxt "@info:status"
 msgid "No arbiters yet."
-msgstr "Nog geen spelers"
+msgstr "Nog geen scheidsrechters."
 
 #: qml/WelcomePage.qml:21
 msgctxt "@title"

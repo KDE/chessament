@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-02 00:41+0000\n"
-"PO-Revision-Date: 2026-06-30 09:09+0300\n"
+"PO-Revision-Date: 2026-07-02 08:39+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -323,33 +323,24 @@ msgstr "הוספת שובר שוויון"
 #: qml/components/ArbiterDelegate.qml:34
 msgctxt "@item:inlistbox Chief Arbiter"
 msgid "Chief"
-msgstr ""
+msgstr "שופט/ת ראשי/ת"
 
 #: qml/components/ArbiterDelegate.qml:38
-#, fuzzy
-#| msgctxt "@label:textbox"
-#| msgid "Deputy chief arbiter"
 msgctxt "@item:inlistbox Deputy Chief Arbiter"
 msgid "Deputy Chief"
-msgstr "סגן שופט ראשי"
+msgstr "סגן/ית שופט/ת ראשי/ת"
 
 #: qml/components/ArbiterDelegate.qml:42
 msgctxt "@item:inlistbox"
 msgid "Arbiter"
-msgstr ""
+msgstr "שופט/ת"
 
 #: qml/components/ArbiterDelegate.qml:53
-#, fuzzy
-#| msgctxt "@title:column Player Title"
-#| msgid "Title"
 msgctxt "@info:placeholder Arbiter's Title"
 msgid "Title"
 msgstr "כותרת"
 
 #: qml/components/ArbiterDelegate.qml:60
-#, fuzzy
-#| msgctxt "@title:column Player Name"
-#| msgid "Name"
 msgctxt "@info:placeholder Arbiter's Name"
 msgid "Name"
 msgstr "שם"
@@ -357,23 +348,17 @@ msgstr "שם"
 #: qml/components/ArbiterDelegate.qml:67
 msgctxt "@info:placeholder Arbiter's ID"
 msgid "ID"
-msgstr ""
+msgstr "מזהה"
 
 #: qml/components/ArbiterDelegate.qml:72
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Delete Tiebreak"
 msgctxt "@action:button"
 msgid "Delete Arbiter"
-msgstr "מחיקת שובר שוויון"
+msgstr "מחיקת שופט/ת"
 
 #: qml/components/ArbiterDelegate.qml:78
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Delete Player"
 msgctxt "@action:button"
 msgid "Delete arbiter"
-msgstr "מחיקת שחקן/ית"
+msgstr "מחיקת שופט/ת"
 
 #: qml/components/MenuBar.qml:17
 msgctxt "@action:menu"
@@ -936,23 +921,17 @@ msgstr "עיר"
 #: qml/TournamentSettingsInformation.qml:52
 msgctxt "@title:group"
 msgid "Arbiters"
-msgstr ""
+msgstr "שופטים/ות"
 
 #: qml/TournamentSettingsInformation.qml:56
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Add Tiebreak"
 msgctxt "@action:button"
 msgid "Add Arbiter"
-msgstr "הוספת שובר שוויון"
+msgstr "הוספת שופט/ת"
 
 #: qml/TournamentSettingsInformation.qml:63
-#, fuzzy
-#| msgctxt "@info:placeholder"
-#| msgid "No players yet"
 msgctxt "@info:status"
 msgid "No arbiters yet."
-msgstr "אין שחקנים עדיין"
+msgstr "אין שופטים/ות עדיין."
 
 #: qml/WelcomePage.qml:21
 msgctxt "@title"
@@ -1179,29 +1158,25 @@ msgid "Could not open file: the file does not exists."
 msgstr "לא ניתן לפתוח את הקובץ: הקובץ לא קיים."
 
 #: tournament/ratinglists/ratinglist.cpp:173
-#, fuzzy, kde-format
-#| msgctxt "@info:progress"
-#| msgid "Downloading file"
+#, kde-format
 msgctxt "@info:progress"
 msgid "Downloading file…"
-msgstr "קובץ יורד"
+msgstr "קובץ יורד…"
 
 #: tournament/ratinglists/ratinglist.cpp:186
-#, fuzzy, kde-format
-#| msgctxt "@info:progress"
-#| msgid "Downloading file (%1 %)"
+#, kde-format
 msgctxt ""
 "@info:progress %1 & %2 are the file download progress (received / total), %3 "
 "is the download percentage"
 msgid ""
 "Downloading file…\n"
 "%1 / %2 (%3%)"
-msgstr "קובץ יורד (%1 %)"
+msgstr ""
+"קובץ יורד…\n"
+"%1 / %2 (%3%)"
 
 #: tournament/ratinglists/ratinglist.cpp:197
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Couldn't download rating list: %1"
+#, kde-format
 msgctxt "@info"
 msgid "Could not download rating list: %1"
 msgstr "לא ניתן להוריד את רשימת הדירוג‏: %1"
@@ -1223,12 +1198,10 @@ msgstr[2] "%1 שחקנים/ות יובאו."
 msgstr[3] "%1 שחקנים/ות יובאו."
 
 #: tournament/ratinglists/ratinglist.cpp:237
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Couldn't extract file."
+#, kde-format
 msgctxt "@info"
 msgid "Could not extract file."
-msgstr "לא ניתן לחלץ את הקובץ."
+msgstr "לא ניתן לחלץ קובץ."
 
 #: tournament/ratinglists/ratinglist.cpp:242
 #, kde-format

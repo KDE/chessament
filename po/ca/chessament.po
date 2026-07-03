@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-02 00:41+0000\n"
-"PO-Revision-Date: 2026-07-01 09:32+0200\n"
+"PO-Revision-Date: 2026-07-02 08:46+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -324,33 +324,24 @@ msgstr "Addició de desempat"
 #: qml/components/ArbiterDelegate.qml:34
 msgctxt "@item:inlistbox Chief Arbiter"
 msgid "Chief"
-msgstr ""
+msgstr "Cap"
 
 #: qml/components/ArbiterDelegate.qml:38
-#, fuzzy
-#| msgctxt "@label:textbox"
-#| msgid "Deputy chief arbiter"
 msgctxt "@item:inlistbox Deputy Chief Arbiter"
 msgid "Deputy Chief"
-msgstr "Àrbitre en cap director"
+msgstr "Cap director"
 
 #: qml/components/ArbiterDelegate.qml:42
 msgctxt "@item:inlistbox"
 msgid "Arbiter"
-msgstr ""
+msgstr "Àrbitre"
 
 #: qml/components/ArbiterDelegate.qml:53
-#, fuzzy
-#| msgctxt "@title:column Player Title"
-#| msgid "Title"
 msgctxt "@info:placeholder Arbiter's Title"
 msgid "Title"
 msgstr "Títol"
 
 #: qml/components/ArbiterDelegate.qml:60
-#, fuzzy
-#| msgctxt "@title:column Player Name"
-#| msgid "Name"
 msgctxt "@info:placeholder Arbiter's Name"
 msgid "Name"
 msgstr "Nom"
@@ -358,23 +349,17 @@ msgstr "Nom"
 #: qml/components/ArbiterDelegate.qml:67
 msgctxt "@info:placeholder Arbiter's ID"
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #: qml/components/ArbiterDelegate.qml:72
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Delete Tiebreak"
 msgctxt "@action:button"
 msgid "Delete Arbiter"
-msgstr "Suprimeix el desempat"
+msgstr "Suprimeix l'àrbitre"
 
 #: qml/components/ArbiterDelegate.qml:78
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Delete Player"
 msgctxt "@action:button"
 msgid "Delete arbiter"
-msgstr "Supressió de jugador"
+msgstr "Suprimeix l'àrbitre"
 
 #: qml/components/MenuBar.qml:17
 msgctxt "@action:menu"
@@ -932,23 +917,17 @@ msgstr "Ciutat"
 #: qml/TournamentSettingsInformation.qml:52
 msgctxt "@title:group"
 msgid "Arbiters"
-msgstr ""
+msgstr "Àrbitres"
 
 #: qml/TournamentSettingsInformation.qml:56
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Add Tiebreak"
 msgctxt "@action:button"
 msgid "Add Arbiter"
-msgstr "Afegeix un desempat"
+msgstr "Afegeix un arbitre"
 
 #: qml/TournamentSettingsInformation.qml:63
-#, fuzzy
-#| msgctxt "@info:placeholder"
-#| msgid "No players yet"
 msgctxt "@info:status"
 msgid "No arbiters yet."
-msgstr "Encara no hi ha cap jugador"
+msgstr "Encara no hi ha cap àrbitre."
 
 #: qml/WelcomePage.qml:21
 msgctxt "@title"

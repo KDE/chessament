@@ -1,5 +1,5 @@
 # Translation of chessament.po to Catalan (Valencian)
-# Copyright (C) 2025 This_file_is_part_of_KDE
+# Copyright (C) 2025-2026 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-02 00:41+0000\n"
-"PO-Revision-Date: 2026-06-26 13:07+0200\n"
+"PO-Revision-Date: 2026-07-02 08:46+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 26.04.2\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #: byesmodel.cpp:66
 #, kde-format
@@ -325,33 +325,24 @@ msgstr "Addició de desempat"
 #: qml/components/ArbiterDelegate.qml:34
 msgctxt "@item:inlistbox Chief Arbiter"
 msgid "Chief"
-msgstr ""
+msgstr "Cap"
 
 #: qml/components/ArbiterDelegate.qml:38
-#, fuzzy
-#| msgctxt "@label:textbox"
-#| msgid "Deputy chief arbiter"
 msgctxt "@item:inlistbox Deputy Chief Arbiter"
 msgid "Deputy Chief"
-msgstr "Àrbitre en cap director"
+msgstr "Cap director"
 
 #: qml/components/ArbiterDelegate.qml:42
 msgctxt "@item:inlistbox"
 msgid "Arbiter"
-msgstr ""
+msgstr "Àrbitre"
 
 #: qml/components/ArbiterDelegate.qml:53
-#, fuzzy
-#| msgctxt "@title:column Player Title"
-#| msgid "Title"
 msgctxt "@info:placeholder Arbiter's Title"
 msgid "Title"
 msgstr "Títol"
 
 #: qml/components/ArbiterDelegate.qml:60
-#, fuzzy
-#| msgctxt "@title:column Player Name"
-#| msgid "Name"
 msgctxt "@info:placeholder Arbiter's Name"
 msgid "Name"
 msgstr "Nom"
@@ -359,23 +350,17 @@ msgstr "Nom"
 #: qml/components/ArbiterDelegate.qml:67
 msgctxt "@info:placeholder Arbiter's ID"
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #: qml/components/ArbiterDelegate.qml:72
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Delete Tiebreak"
 msgctxt "@action:button"
 msgid "Delete Arbiter"
-msgstr "Suprimix el desempat"
+msgstr "Suprimix l'àrbitre"
 
 #: qml/components/ArbiterDelegate.qml:78
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Delete Player"
 msgctxt "@action:button"
 msgid "Delete arbiter"
-msgstr "Suprimiu de jugador"
+msgstr "Suprimix l'àrbitre"
 
 #: qml/components/MenuBar.qml:17
 msgctxt "@action:menu"
@@ -933,23 +918,17 @@ msgstr "Ciutat"
 #: qml/TournamentSettingsInformation.qml:52
 msgctxt "@title:group"
 msgid "Arbiters"
-msgstr ""
+msgstr "Àrbitres"
 
 #: qml/TournamentSettingsInformation.qml:56
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Add Tiebreak"
 msgctxt "@action:button"
 msgid "Add Arbiter"
-msgstr "Afig un desempat"
+msgstr "Afig un arbitre"
 
 #: qml/TournamentSettingsInformation.qml:63
-#, fuzzy
-#| msgctxt "@info:placeholder"
-#| msgid "No players yet"
 msgctxt "@info:status"
 msgid "No arbiters yet."
-msgstr "Encara no hi ha cap jugador"
+msgstr "Encara no hi ha cap àrbitre."
 
 #: qml/WelcomePage.qml:21
 msgctxt "@title"
@@ -1178,30 +1157,26 @@ msgid "Could not open file: the file does not exists."
 msgstr "No s'ha pogut obrir el fitxer: el fitxer o existix."
 
 #: tournament/ratinglists/ratinglist.cpp:173
-#, fuzzy, kde-format
-#| msgctxt "@info:progress"
-#| msgid "Downloading file"
+#, kde-format
 msgctxt "@info:progress"
 msgid "Downloading file…"
-msgstr "S'està descarregant el fitxer"
+msgstr "S'està descarregant el fitxer…"
 
 # skip-rule: t-sp_tpc
 #: tournament/ratinglists/ratinglist.cpp:186
-#, fuzzy, kde-format
-#| msgctxt "@info:progress"
-#| msgid "Downloading file (%1 %)"
+#, kde-format
 msgctxt ""
 "@info:progress %1 & %2 are the file download progress (received / total), %3 "
 "is the download percentage"
 msgid ""
 "Downloading file…\n"
 "%1 / %2 (%3%)"
-msgstr "S'està descarregant el fitxer (%1 %)"
+msgstr ""
+"S'està descarregant el fitxer…\n"
+"%1 / %2 (%3%)"
 
 #: tournament/ratinglists/ratinglist.cpp:197
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Couldn't download rating list: %1"
+#, kde-format
 msgctxt "@info"
 msgid "Could not download rating list: %1"
 msgstr "No s'ha pogut baixar la llista de puntuació: %1"
@@ -1222,9 +1197,7 @@ msgstr[0] "S'ha importat un jugador."
 msgstr[1] "S'han importat %1 jugadors."
 
 #: tournament/ratinglists/ratinglist.cpp:237
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Couldn't extract file."
+#, kde-format
 msgctxt "@info"
 msgid "Could not extract file."
 msgstr "No s'ha pogut extraure el fitxer."
@@ -1341,7 +1314,3 @@ msgstr "Resultat «%1» desconegut a l'aparellament «%2»."
 #, kde-format
 msgid "Pairing \"%1\" has no opponent."
 msgstr "L'aparellament «%1» no té oponent."
-
-#~ msgctxt "@label:textbox"
-#~ msgid "Chief arbiter"
-#~ msgstr "Àrbitre en cap"

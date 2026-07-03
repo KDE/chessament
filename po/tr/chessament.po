@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-02 00:41+0000\n"
-"PO-Revision-Date: 2026-07-01 19:41+0300\n"
+"PO-Revision-Date: 2026-07-02 19:38+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -322,33 +322,24 @@ msgstr "Eşitlik Bozma Ekle"
 #: qml/components/ArbiterDelegate.qml:34
 msgctxt "@item:inlistbox Chief Arbiter"
 msgid "Chief"
-msgstr ""
+msgstr "Başhakem"
 
 #: qml/components/ArbiterDelegate.qml:38
-#, fuzzy
-#| msgctxt "@label:textbox"
-#| msgid "Deputy chief arbiter"
 msgctxt "@item:inlistbox Deputy Chief Arbiter"
 msgid "Deputy Chief"
-msgstr "Yardımcı ana hakem"
+msgstr "Yardımcı Başhakem"
 
 #: qml/components/ArbiterDelegate.qml:42
 msgctxt "@item:inlistbox"
 msgid "Arbiter"
-msgstr ""
+msgstr "Hakem"
 
 #: qml/components/ArbiterDelegate.qml:53
-#, fuzzy
-#| msgctxt "@title:column Player Title"
-#| msgid "Title"
 msgctxt "@info:placeholder Arbiter's Title"
 msgid "Title"
-msgstr "Başlık"
+msgstr "Unvan"
 
 #: qml/components/ArbiterDelegate.qml:60
-#, fuzzy
-#| msgctxt "@title:column Player Name"
-#| msgid "Name"
 msgctxt "@info:placeholder Arbiter's Name"
 msgid "Name"
 msgstr "Ad"
@@ -356,23 +347,17 @@ msgstr "Ad"
 #: qml/components/ArbiterDelegate.qml:67
 msgctxt "@info:placeholder Arbiter's ID"
 msgid "ID"
-msgstr ""
+msgstr "Kimlik"
 
 #: qml/components/ArbiterDelegate.qml:72
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Delete Tiebreak"
 msgctxt "@action:button"
 msgid "Delete Arbiter"
-msgstr "Eşitlik Bozmayı Sil"
+msgstr "Hakemi Sil"
 
 #: qml/components/ArbiterDelegate.qml:78
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Delete Player"
 msgctxt "@action:button"
 msgid "Delete arbiter"
-msgstr "Oyuncuyu Sil"
+msgstr "Hakemi Sil"
 
 #: qml/components/MenuBar.qml:17
 msgctxt "@action:menu"
@@ -930,23 +915,17 @@ msgstr "Şehir"
 #: qml/TournamentSettingsInformation.qml:52
 msgctxt "@title:group"
 msgid "Arbiters"
-msgstr ""
+msgstr "Hakemler"
 
 #: qml/TournamentSettingsInformation.qml:56
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Add Tiebreak"
 msgctxt "@action:button"
 msgid "Add Arbiter"
-msgstr "Eşitlik Bozma Ekle"
+msgstr "Hakem Ekle"
 
 #: qml/TournamentSettingsInformation.qml:63
-#, fuzzy
-#| msgctxt "@info:placeholder"
-#| msgid "No players yet"
 msgctxt "@info:status"
 msgid "No arbiters yet."
-msgstr "Henüz oyuncu yok"
+msgstr "Henüz hakem yok"
 
 #: qml/WelcomePage.qml:21
 msgctxt "@title"

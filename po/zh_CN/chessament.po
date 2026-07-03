@@ -325,12 +325,9 @@ msgid "Chief"
 msgstr ""
 
 #: qml/components/ArbiterDelegate.qml:38
-#, fuzzy
-#| msgctxt "@label:textbox"
-#| msgid "Deputy chief arbiter"
 msgctxt "@item:inlistbox Deputy Chief Arbiter"
 msgid "Deputy Chief"
-msgstr "副裁判长"
+msgstr ""
 
 #: qml/components/ArbiterDelegate.qml:42
 msgctxt "@item:inlistbox"
@@ -338,20 +335,14 @@ msgid "Arbiter"
 msgstr ""
 
 #: qml/components/ArbiterDelegate.qml:53
-#, fuzzy
-#| msgctxt "@title:column Player Title"
-#| msgid "Title"
 msgctxt "@info:placeholder Arbiter's Title"
 msgid "Title"
-msgstr "头衔"
+msgstr ""
 
 #: qml/components/ArbiterDelegate.qml:60
-#, fuzzy
-#| msgctxt "@title:column Player Name"
-#| msgid "Name"
 msgctxt "@info:placeholder Arbiter's Name"
 msgid "Name"
-msgstr "姓名"
+msgstr ""
 
 #: qml/components/ArbiterDelegate.qml:67
 msgctxt "@info:placeholder Arbiter's ID"
@@ -359,20 +350,14 @@ msgid "ID"
 msgstr ""
 
 #: qml/components/ArbiterDelegate.qml:72
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Delete Tiebreak"
 msgctxt "@action:button"
 msgid "Delete Arbiter"
-msgstr "删除决胜局"
+msgstr ""
 
 #: qml/components/ArbiterDelegate.qml:78
-#, fuzzy
-#| msgctxt "@label:textbox"
-#| msgid "Deputy chief arbiter"
 msgctxt "@action:button"
 msgid "Delete arbiter"
-msgstr "副裁判长"
+msgstr ""
 
 #: qml/components/MenuBar.qml:17
 msgctxt "@action:menu"
@@ -928,20 +913,14 @@ msgid "Arbiters"
 msgstr ""
 
 #: qml/TournamentSettingsInformation.qml:56
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Add Tiebreak"
 msgctxt "@action:button"
 msgid "Add Arbiter"
-msgstr "添加决胜局"
+msgstr ""
 
 #: qml/TournamentSettingsInformation.qml:63
-#, fuzzy
-#| msgctxt "@info:placeholder"
-#| msgid "No players yet"
 msgctxt "@info:status"
 msgid "No arbiters yet."
-msgstr "暂无玩家"
+msgstr ""
 
 #: qml/WelcomePage.qml:21
 msgctxt "@title"
@@ -1203,11 +1182,10 @@ msgid_plural "Imported %1 players."
 msgstr[0] ""
 
 #: tournament/ratinglists/ratinglist.cpp:237
-#, fuzzy, kde-format
-#| msgid "Could not create temporary file."
+#, kde-format
 msgctxt "@info"
 msgid "Could not extract file."
-msgstr "无法创建临时文件。"
+msgstr ""
 
 #: tournament/ratinglists/ratinglist.cpp:242
 #, kde-format
@@ -1320,7 +1298,3 @@ msgstr "对阵“%2”时出现未知结果“%1”。"
 #, kde-format
 msgid "Pairing \"%1\" has no opponent."
 msgstr "对阵“%1”无对手。"
-
-#~ msgctxt "@label:textbox"
-#~ msgid "Chief arbiter"
-#~ msgstr "裁判长"
