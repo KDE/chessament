@@ -49,6 +49,8 @@ public:
     bool hasCurrentRoundFinished();
     [[nodiscard]] bool areStandingsValid() const;
 
+    Q_INVOKABLE static QString resultToString(Pairing::PartialResult whiteResult, Pairing::PartialResult blackResult);
+
     void setEvent(std::unique_ptr<Event> event);
     Q_INVOKABLE void sortPlayers();
     Q_INVOKABLE void newTournament(const QUrl &fileUrl, const QString &name, int numberOfRounds);

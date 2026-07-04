@@ -130,6 +130,11 @@ bool Controller::areStandingsValid() const
     return m_areStandingsValid;
 }
 
+QString Controller::resultToString(Pairing::PartialResult whiteResult, Pairing::PartialResult blackResult)
+{
+    return Pairing::resultToString(whiteResult, blackResult);
+}
+
 void Controller::setAreStandingsValid(bool valid)
 {
     if (m_areStandingsValid == valid) {

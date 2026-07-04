@@ -40,7 +40,7 @@ QQC2.ToolBar {
         id: row
 
         QQC2.ToolButton {
-            text: KI18n.i18nc("@action:intoolbar", "*")
+            text: Controller.resultToString(Pairing.PartialResult.Unknown, Pairing.PartialResult.Unknown)
             checkable: true
             enabled: root.pairing !== null && root.pairing.blackPlayer !== null
             checked: root.pairing?.whiteResult === Pairing.PartialResult.Unknown && root.pairing?.blackResult === Pairing.PartialResult.Unknown
@@ -51,7 +51,7 @@ QQC2.ToolBar {
         }
         QQC2.ToolButton {
             id: whiteWins
-            text: KI18n.i18nc("@action:intoolbar", "1-0")
+            text: Controller.resultToString(Pairing.PartialResult.Win, Pairing.PartialResult.Lost)
             checkable: true
             enabled: root.pairing !== null && root.pairing.blackPlayer !== null
             checked: root.pairing?.whiteResult === Pairing.PartialResult.Win && root.pairing?.blackResult === Pairing.PartialResult.Lost
@@ -59,7 +59,7 @@ QQC2.ToolBar {
         }
         QQC2.ToolButton {
             id: draw
-            text: KI18n.i18nc("@action:intoolbar", "½-½")
+            text: Controller.resultToString(Pairing.PartialResult.Draw, Pairing.PartialResult.Draw)
             checkable: true
             enabled: root.pairing !== null && root.pairing.blackPlayer !== null
             checked: root.pairing?.whiteResult === Pairing.PartialResult.Draw && root.pairing?.blackResult === Pairing.PartialResult.Draw
@@ -67,7 +67,7 @@ QQC2.ToolBar {
         }
         QQC2.ToolButton {
             id: blackWins
-            text: KI18n.i18nc("@action:intoolbar", "0-1")
+            text: Controller.resultToString(Pairing.PartialResult.Lost, Pairing.PartialResult.Win)
             checkable: true
             enabled: root.pairing !== null && root.pairing.blackPlayer !== null
             checked: root.pairing?.whiteResult === Pairing.PartialResult.Lost && root.pairing?.blackResult === Pairing.PartialResult.Win
@@ -78,7 +78,7 @@ QQC2.ToolBar {
         }
         QQC2.ToolButton {
             id: whiteWinsForfeit
-            text: KI18n.i18nc("@action:intoolbar", "1F-0F")
+            text: Controller.resultToString(Pairing.PartialResult.WinForfeit, Pairing.PartialResult.LostForfeit)
             checkable: true
             enabled: root.pairing !== null && root.pairing.blackPlayer !== null
             checked: root.pairing?.whiteResult === Pairing.PartialResult.WinForfeit && root.pairing?.blackResult === Pairing.PartialResult.LostForfeit
@@ -86,7 +86,7 @@ QQC2.ToolBar {
         }
         QQC2.ToolButton {
             id: blackWinsForfeit
-            text: KI18n.i18nc("@action:intoolbar", "0F-1F")
+            text: Controller.resultToString(Pairing.PartialResult.LostForfeit, Pairing.PartialResult.WinForfeit)
             checkable: true
             enabled: root.pairing !== null && root.pairing.blackPlayer !== null
             checked: root.pairing?.whiteResult === Pairing.PartialResult.LostForfeit && root.pairing?.blackResult === Pairing.PartialResult.WinForfeit
@@ -94,7 +94,7 @@ QQC2.ToolBar {
         }
         QQC2.ToolButton {
             id: bothForfeit
-            text: KI18n.i18nc("@action:intoolbar", "0F-0F")
+            text: Controller.resultToString(Pairing.PartialResult.LostForfeit, Pairing.PartialResult.LostForfeit)
             checkable: true
             enabled: root.pairing !== null && root.pairing.blackPlayer !== null
             checked: root.pairing?.whiteResult === Pairing.PartialResult.LostForfeit && root.pairing?.blackResult === Pairing.PartialResult.LostForfeit
@@ -116,21 +116,21 @@ QQC2.ToolBar {
                 y: -otherMenu.height
 
                 QQC2.MenuItem {
-                    text: KI18n.i18nc("@action:intoolbar", "1U-0U")
+                    text: Controller.resultToString(Pairing.PartialResult.WinUnrated, Pairing.PartialResult.LostUnrated)
                     checkable: true
                     autoExclusive: true
                     checked: root.pairing?.whiteResult === Pairing.PartialResult.WinUnrated && root.pairing?.blackResult === Pairing.PartialResult.LostUnrated
                     onClicked: root.setResult(Pairing.PartialResult.WinUnrated, Pairing.PartialResult.LostUnrated)
                 }
                 QQC2.MenuItem {
-                    text: KI18n.i18nc("@action:intoolbar", "½U-½U")
+                    text: Controller.resultToString(Pairing.PartialResult.DrawUnrated, Pairing.PartialResult.DrawUnrated)
                     checkable: true
                     autoExclusive: true
                     checked: root.pairing?.whiteResult === Pairing.PartialResult.DrawUnrated && root.pairing?.blackResult === Pairing.PartialResult.DrawUnrated
                     onClicked: root.setResult(Pairing.PartialResult.DrawUnrated, Pairing.PartialResult.DrawUnrated)
                 }
                 QQC2.MenuItem {
-                    text: KI18n.i18nc("@action:intoolbar", "0U-1U")
+                    text: Controller.resultToString(Pairing.PartialResult.LostUnrated, Pairing.PartialResult.WinUnrated)
                     checkable: true
                     autoExclusive: true
                     checked: root.pairing?.whiteResult === Pairing.PartialResult.LostUnrated && root.pairing?.blackResult === Pairing.PartialResult.WinUnrated
@@ -138,21 +138,21 @@ QQC2.ToolBar {
                 }
                 QQC2.MenuSeparator {}
                 QQC2.MenuItem {
-                    text: KI18n.i18nc("@action:intoolbar", "½U-0U")
+                    text: Controller.resultToString(Pairing.PartialResult.DrawUnrated, Pairing.PartialResult.LostUnrated)
                     checkable: true
                     autoExclusive: true
                     checked: root.pairing?.whiteResult === Pairing.PartialResult.DrawUnrated && root.pairing?.blackResult === Pairing.PartialResult.LostUnrated
                     onClicked: root.setResult(Pairing.PartialResult.DrawUnrated, Pairing.PartialResult.LostUnrated)
                 }
                 QQC2.MenuItem {
-                    text: KI18n.i18nc("@action:intoolbar", "0U-½U")
+                    text: Controller.resultToString(Pairing.PartialResult.LostUnrated, Pairing.PartialResult.DrawUnrated)
                     checkable: true
                     autoExclusive: true
                     checked: root.pairing?.whiteResult === Pairing.PartialResult.LostUnrated && root.pairing?.blackResult === Pairing.PartialResult.DrawUnrated
                     onClicked: root.setResult(Pairing.PartialResult.LostUnrated, Pairing.PartialResult.DrawUnrated)
                 }
                 QQC2.MenuItem {
-                    text: KI18n.i18nc("@action:intoolbar", "0U-0U")
+                    text: Controller.resultToString(Pairing.PartialResult.LostUnrated, Pairing.PartialResult.LostUnrated)
                     checkable: true
                     autoExclusive: true
                     checked: root.pairing?.whiteResult === Pairing.PartialResult.LostUnrated && root.pairing?.blackResult === Pairing.PartialResult.LostUnrated
@@ -160,21 +160,21 @@ QQC2.ToolBar {
                 }
                 QQC2.MenuSeparator {}
                 QQC2.MenuItem {
-                    text: KI18n.i18nc("@action:intoolbar", "½-0")
+                    text: Controller.resultToString(Pairing.PartialResult.Draw, Pairing.PartialResult.Lost)
                     checkable: true
                     autoExclusive: true
                     checked: root.pairing?.whiteResult === Pairing.PartialResult.Draw && root.pairing?.blackResult === Pairing.PartialResult.Lost
                     onClicked: root.setResult(Pairing.PartialResult.Draw, Pairing.PartialResult.Lost)
                 }
                 QQC2.MenuItem {
-                    text: KI18n.i18nc("@action:intoolbar", "0-0")
+                    text: Controller.resultToString(Pairing.PartialResult.Lost, Pairing.PartialResult.Lost)
                     checkable: true
                     autoExclusive: true
                     checked: root.pairing?.whiteResult === Pairing.PartialResult.Lost && root.pairing?.blackResult === Pairing.PartialResult.Lost
                     onClicked: root.setResult(Pairing.PartialResult.Lost, Pairing.PartialResult.Lost)
                 }
                 QQC2.MenuItem {
-                    text: KI18n.i18nc("@action:intoolbar", "0-½")
+                    text: Controller.resultToString(Pairing.PartialResult.Lost, Pairing.PartialResult.Draw)
                     checkable: true
                     autoExclusive: true
                     checked: root.pairing?.whiteResult === Pairing.PartialResult.Lost && root.pairing?.blackResult === Pairing.PartialResult.Draw

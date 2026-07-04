@@ -261,33 +261,53 @@ public:
     {
         switch (result) {
         case PartialResult::Win:
-            return QStringLiteral("1");
+            return QLocale().toString(1);
         case PartialResult::Draw:
-            return QStringLiteral("½");
+            return i18nc("@item Game result: draw", "½");
         case PartialResult::Lost:
-            return QStringLiteral("0");
+            return QLocale().toString(0);
         case PartialResult::WinForfeit:
-            return QStringLiteral("+");
+            return i18nc("@item Game result: win by forfeit", "+");
         case PartialResult::LostForfeit:
-            return QStringLiteral("-");
-        case PartialResult::WinUnrated:
-            return QStringLiteral("1U");
-        case PartialResult::LostUnrated:
-            return QStringLiteral("0U");
-        case PartialResult::DrawUnrated:
-            return QStringLiteral("½");
-        case PartialResult::HalfBye:
-            return QStringLiteral("Bye (½)");
-        case PartialResult::FullBye:
-            return QStringLiteral("Bye (1)");
-        case PartialResult::ZeroBye:
-            return QStringLiteral("Bye (0)");
+            return i18nc("@item Game result: lost by forfeit", "-");
+        case PartialResult::WinUnrated: {
+            const auto points = QLocale().toString(1);
+            return i18nc("@item Game result. %1 is the points obtained, but the game is unrated. The 'U' is the initial for 'Unrated'", "%1U", points);
+        }
+        case PartialResult::LostUnrated: {
+            const auto points = QLocale().toString(0);
+            return i18nc("@item Game result: %1 is the points obtained, but the game is unrated. The 'U' is the initial for 'Unrated'", "%1U", points);
+        }
+        case PartialResult::DrawUnrated: {
+            const auto points = i18nc("@item Game result: draw", "½");
+            return i18nc("@item Game result: %1 is the points obtained, but the game is unrated. The 'U' is the initial for 'Unrated'", "%1U", points);
+        }
+        case PartialResult::HalfBye: {
+            const auto points = i18nc("@item Game result: draw", "½");
+            return i18nc("@item Game result, %1 is the points awarded for the bye", "Bye (%1)", points);
+        }
+        case PartialResult::FullBye: {
+            const auto points = QLocale().toString(1);
+            return i18nc("@item Game result, %1 is the points awarded for the bye", "Bye (%1)", points);
+        }
+        case PartialResult::ZeroBye: {
+            const auto points = QLocale().toString(0);
+            return i18nc("@item Game result, %1 is the points awarded for the bye", "Bye (%1)", points);
+        }
         case PartialResult::PairingBye:
-            return QStringLiteral("Bye (Pairing)");
+            return i18nc("@item Game result: pairing-allocated bye. Keep it short", "Bye (Pairing)");
         case PartialResult::Unknown:
-            return QStringLiteral("?");
+            return u"?"_s;
         }
         Q_UNREACHABLE();
+    }
+
+    static QString resultToString(PartialResult whiteResult, PartialResult blackResult)
+    {
+        if (!Pairing::isBye(whiteResult)) {
+            return Pairing::partialResultToString(whiteResult) + u"-"_s + Pairing::partialResultToString(blackResult);
+        }
+        return Pairing::partialResultToString(whiteResult);
     }
 
     static PartialResult partialResultForTRF(const QString &partialResult)
