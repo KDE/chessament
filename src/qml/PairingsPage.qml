@@ -76,7 +76,7 @@ TablePage {
                 delegate: Controls.ItemDelegate {
                     required property int index
 
-                    text: index + 1
+                    text: KI18n.i18n("Round %1", index + 1)
                     highlighted: roundSelector.highlightedIndex === index
                 }
                 onActivated: index => {
