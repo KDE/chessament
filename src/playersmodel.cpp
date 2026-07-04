@@ -44,9 +44,9 @@ QVariant PlayersModel::data(const QModelIndex &index, int role) const
         case PlayersModel::Columns::Name:
             return player->name();
         case PlayersModel::Columns::Rating:
-            return QLocale::system().toString(player->rating());
+            return QLocale().toString(player->rating());
         case PlayersModel::Columns::NationalRating:
-            return QLocale::system().toString(player->nationalRating());
+            return QLocale().toString(player->nationalRating());
         case PlayersModel::Columns::PlayerId:
             return player->playerId();
         case PlayersModel::Columns::NationalId:

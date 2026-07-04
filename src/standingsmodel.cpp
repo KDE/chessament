@@ -48,7 +48,7 @@ QVariant StandingsModel::data(const QModelIndex &index, int role) const
             return standing.player()->name();
         default: {
             const auto value = standing.values().at(index.column() - 4);
-            return QLocale::system().toString(value);
+            return QLocale().toString(value);
         }
         }
     } else if (role == Qt::TextAlignmentRole) {
