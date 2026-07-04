@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-02 00:41+0000\n"
-"PO-Revision-Date: 2026-06-27 14:28+0200\n"
+"PO-Revision-Date: 2026-07-02 08:21+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: fr\n"
 "Language: fr\n"
@@ -1174,29 +1174,25 @@ msgid "Could not open file: the file does not exists."
 msgstr "Impossible d'ouvrir le fichier : le fichier n'existe pas."
 
 #: tournament/ratinglists/ratinglist.cpp:173
-#, fuzzy, kde-format
-#| msgctxt "@info:progress"
-#| msgid "Downloading file"
+#, kde-format
 msgctxt "@info:progress"
 msgid "Downloading file…"
-msgstr "Téléchargement du fichier en cours"
+msgstr "Téléchargement du fichier en cours..."
 
 #: tournament/ratinglists/ratinglist.cpp:186
-#, fuzzy, kde-format
-#| msgctxt "@info:progress"
-#| msgid "Downloading file (%1 %)"
+#, kde-format
 msgctxt ""
 "@info:progress %1 & %2 are the file download progress (received / total), %3 "
 "is the download percentage"
 msgid ""
 "Downloading file…\n"
 "%1 / %2 (%3%)"
-msgstr "Téléchargement du fichier (%1 %) en cours"
+msgstr ""
+"Téléchargement du fichier en cours...\n"
+"%1 / %2 (%3 %)"
 
 #: tournament/ratinglists/ratinglist.cpp:197
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Couldn't download rating list: %1"
+#, kde-format
 msgctxt "@info"
 msgid "Could not download rating list: %1"
 msgstr "Impossible de télécharger la liste des notations : %1"
@@ -1218,9 +1214,7 @@ msgstr[0] "Un joueur a été importé."
 msgstr[1] "%1 joueurs ont été importés."
 
 #: tournament/ratinglists/ratinglist.cpp:237
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Couldn't extract file."
+#, kde-format
 msgctxt "@info"
 msgid "Could not extract file."
 msgstr "Impossible d'extraire le fichier."
