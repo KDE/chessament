@@ -158,10 +158,7 @@ bool Pairing::hasFinished()
 
 QString Pairing::resultString()
 {
-    if (!Pairing::isBye(m_whiteResult)) {
-        return Pairing::partialResultToString(m_whiteResult) + u"-"_s + Pairing::partialResultToString(m_blackResult);
-    }
-    return Pairing::partialResultToString(m_whiteResult);
+    return resultToString(m_whiteResult, m_blackResult);
 }
 
 QString Pairing::toTrf(Player *player)
