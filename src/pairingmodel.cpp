@@ -124,23 +124,9 @@ void PairingModel::setTournament(Tournament *tournament)
 
 void PairingModel::setPairings(const QList<Pairing *> &pairings)
 {
-    const auto rowDiff = static_cast<long int>(pairings.size() - m_pairings.size());
-
-    if (rowDiff > 0) {
-        beginInsertRows({}, static_cast<int>(m_pairings.size()), static_cast<int>(pairings.size() - 1));
-    } else if (rowDiff < 0) {
-        beginRemoveRows({}, static_cast<int>(pairings.size()), static_cast<int>(m_pairings.size() - 1));
-    }
-
+    beginResetModel();
     m_pairings = pairings;
-
-    if (rowDiff > 0) {
-        endInsertRows();
-    } else if (rowDiff < 0) {
-        endRemoveRows();
-    }
-
-    Q_EMIT dataChanged(index(0, 0), index(rowCount() - 1, columnCount() - 1), {});
+    endResetModel();
 }
 
 bool PairingModel::setResult(int board, Qt::Key key)
