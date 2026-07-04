@@ -30,7 +30,7 @@ TablePage {
         if (column >= 4) {
             return 70;
         }
-        const widths = [55, 55, 55, 250];
+        const widths = [55, 55, 55, 300];
         return widths[column];
     }
 

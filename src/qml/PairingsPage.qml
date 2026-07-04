@@ -31,7 +31,7 @@ TablePage {
     }
 
     selectionBehavior: TableView.SelectRows
-    columnWidths: [55, 55, 250, 90, 250, 55]
+    columnWidths: [55, 55, 300, 120, 300, 55]
 
     Dialogs.FileDialog {
         id: saveDialog
