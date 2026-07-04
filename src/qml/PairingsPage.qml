@@ -161,19 +161,19 @@ TablePage {
 
     Keys.onPressed: event => {
         const currentIndex = tableView.selectionModel.currentIndex;
-        if (currentIndex) {
-            const pairing = proxyModel.data(currentIndex, PairingModel.Roles.PairingRole) as Pairing;
+        if (currentIndex.row < 0 || currentIndex.column < 0) {
+            return;
+        }
 
-            if (pairing.blackPlayer === null) {
-                return;
-            }
+        const pairing = proxyModel.data(currentIndex, PairingModel.Roles.PairingRole) as Pairing;
+        if (pairing.blackPlayer === null) {
+            return;
+        }
 
-            const board = pairing.board;
-
-            if (board && Controller.pairingModel.setResult(board, event.key)) {
-                event.accepted = true;
-                root.selectNextBoardAfter(board);
-            }
+        const board = pairing.board;
+        if (board && Controller.pairingModel.setResult(board, event.key)) {
+            event.accepted = true;
+            root.selectNextBoardAfter(board);
         }
     }
 
