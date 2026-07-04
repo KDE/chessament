@@ -77,7 +77,6 @@ TablePage {
                         }
                         return KI18n.i18nc("@item:inlistbox Standings After Round %1", "After Round %1", index + 1);
                     }
-                    width: roundSelector.width
                     highlighted: roundSelector.highlightedIndex === index
                 }
                 onActivated: index => {

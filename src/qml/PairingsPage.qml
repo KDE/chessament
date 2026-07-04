@@ -77,7 +77,6 @@ TablePage {
                     required property int index
 
                     text: index + 1
-                    width: roundSelector.width
                     highlighted: roundSelector.highlightedIndex === index
                 }
                 onActivated: index => {
