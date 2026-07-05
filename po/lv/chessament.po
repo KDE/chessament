@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-02 00:41+0000\n"
+"POT-Creation-Date: 2026-07-05 00:40+0000\n"
 "PO-Revision-Date: 2025-11-09 11:05+0200\n"
 "Last-Translator: Toms Trasūns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -42,7 +42,7 @@ msgctxt "@action:inmenu"
 msgid "Export tournament report…"
 msgstr "Eksportēt turnīra ziņojumu…"
 
-#: controller.cpp:166
+#: controller.cpp:171
 #, kde-format
 msgid "Couldn't export tournament."
 msgstr "Turnīru eksportēt neizdevās."
@@ -192,43 +192,43 @@ msgctxt "@title:column Black Player Starting Rank Number"
 msgid "№"
 msgstr "Nr."
 
-#: playersmodel.cpp:214 standingsmodel.cpp:90
+#: playersmodel.cpp:222 standingsmodel.cpp:90
 #, kde-format
 msgctxt "@title:column Player Starting Rank Number"
 msgid "№"
 msgstr "Nr."
 
-#: playersmodel.cpp:216 standingsmodel.cpp:92
+#: playersmodel.cpp:224 standingsmodel.cpp:92
 #, kde-format
 msgctxt "@title:column Player Title"
 msgid "Title"
 msgstr "Tituls"
 
-#: playersmodel.cpp:218 standingsmodel.cpp:94
+#: playersmodel.cpp:226 standingsmodel.cpp:94
 #, kde-format
 msgctxt "@title:column Player Name"
 msgid "Name"
 msgstr "Vārds"
 
-#: playersmodel.cpp:220
+#: playersmodel.cpp:228
 #, kde-format
 msgctxt "@title:column Player Rating"
 msgid "Rating"
 msgstr "Reitings"
 
-#: playersmodel.cpp:222
+#: playersmodel.cpp:230
 #, kde-format
 msgctxt "@title:column Player National Rating"
 msgid "National Rating"
 msgstr "Nacionālais reitings"
 
-#: playersmodel.cpp:224
+#: playersmodel.cpp:232
 #, kde-format
 msgctxt "@title:column"
 msgid "Player ID"
 msgstr "Spēlētāja ID"
 
-#: playersmodel.cpp:226
+#: playersmodel.cpp:234
 #, fuzzy, kde-format
 #| msgctxt "@title:column Player National Rating"
 #| msgid "National Rating"
@@ -236,25 +236,25 @@ msgctxt "@title:column Player National ID"
 msgid "National ID"
 msgstr "Nacionālais reitings"
 
-#: playersmodel.cpp:228
+#: playersmodel.cpp:236
 #, kde-format
 msgctxt "@title:column"
 msgid "Birth date"
 msgstr "Dzimšanas datums"
 
-#: playersmodel.cpp:230
+#: playersmodel.cpp:238
 #, kde-format
 msgctxt "@title:column Player Federation"
 msgid "Federation"
 msgstr "Federācija"
 
-#: playersmodel.cpp:232
+#: playersmodel.cpp:240
 #, kde-format
 msgctxt "@title:column Player Origin"
 msgid "Origin"
 msgstr "Izcelsme"
 
-#: playersmodel.cpp:234
+#: playersmodel.cpp:242
 #, kde-format
 msgctxt "@title:column Player Gender"
 msgid "Gender"
@@ -549,21 +549,21 @@ msgctxt "@action:intoolbar"
 msgid "Export as PDF…"
 msgstr "Eksportēt kā PDF…"
 
-#: qml/PairingsPage.qml:74
+#: qml/PairingsPage.qml:74 qml/PairingsPage.qml:79
 msgid "Round %1"
 msgstr "%1. kārta"
 
-#: qml/PairingsPage.qml:92
+#: qml/PairingsPage.qml:91
 msgctxt "@action:intoolbar"
 msgid "Remove pairings of this and following rounds…"
 msgstr "Noņemt pārus no šīs un turpmākajām kārtām…"
 
-#: qml/PairingsPage.qml:106
+#: qml/PairingsPage.qml:105
 msgctxt "@info"
 msgid "The tournament hasn't started yet."
 msgstr ""
 
-#: qml/PairingsPage.qml:106
+#: qml/PairingsPage.qml:105
 #, fuzzy
 #| msgctxt "@info:placeholder"
 #| msgid "All games of round %1 have finished"
@@ -571,19 +571,19 @@ msgctxt "@info"
 msgid "Round %1 has finished."
 msgstr "Visas %1. kārtas spēles ir pabeigtas"
 
-#: qml/PairingsPage.qml:110
+#: qml/PairingsPage.qml:109
 #, fuzzy
 #| msgid "Pair Round %1"
 msgctxt "@action:button"
 msgid "Pair Round %1…"
 msgstr "Veidot pārus %1. kārtai"
 
-#: qml/PairingsPage.qml:156
+#: qml/PairingsPage.qml:155
 msgctxt "@info:placeholder"
 msgid "No pairings for round %1 yet"
 msgstr "%1. kārtai vēl nav pāru"
 
-#: qml/PairingsPage.qml:158
+#: qml/PairingsPage.qml:157
 msgctxt "@info:placeholder"
 msgid "All games of round %1 have finished"
 msgstr "Visas %1. kārtas spēles ir pabeigtas"
@@ -745,90 +745,10 @@ msgctxt "@info:status Total number of players (Number of players rated)"
 msgid "%1 (%2)"
 msgstr ""
 
-#: qml/ResultsFooter.qml:43
-msgctxt "@action:intoolbar"
-msgid "*"
-msgstr "*"
-
-#: qml/ResultsFooter.qml:54
-msgctxt "@action:intoolbar"
-msgid "1-0"
-msgstr "1-0"
-
-#: qml/ResultsFooter.qml:62
-msgctxt "@action:intoolbar"
-msgid "½-½"
-msgstr "½-½"
-
-#: qml/ResultsFooter.qml:70
-msgctxt "@action:intoolbar"
-msgid "0-1"
-msgstr "0-1"
-
-#: qml/ResultsFooter.qml:81
-msgctxt "@action:intoolbar"
-msgid "1F-0F"
-msgstr "1F-0F"
-
-#: qml/ResultsFooter.qml:89
-msgctxt "@action:intoolbar"
-msgid "0F-1F"
-msgstr "0F-1F"
-
-#: qml/ResultsFooter.qml:97
-msgctxt "@action:intoolbar"
-msgid "0F-0F"
-msgstr "0F-0F"
-
 #: qml/ResultsFooter.qml:107
 msgctxt "@action:intoolbar Other game results"
 msgid "Other"
 msgstr ""
-
-#: qml/ResultsFooter.qml:119
-msgctxt "@action:intoolbar"
-msgid "1U-0U"
-msgstr "1U-0U"
-
-#: qml/ResultsFooter.qml:126
-msgctxt "@action:intoolbar"
-msgid "½U-½U"
-msgstr "½U-½U"
-
-#: qml/ResultsFooter.qml:133
-msgctxt "@action:intoolbar"
-msgid "0U-1U"
-msgstr "0U-1U"
-
-#: qml/ResultsFooter.qml:141
-msgctxt "@action:intoolbar"
-msgid "½U-0U"
-msgstr "½U-0U"
-
-#: qml/ResultsFooter.qml:148
-msgctxt "@action:intoolbar"
-msgid "0U-½U"
-msgstr "0U-½U"
-
-#: qml/ResultsFooter.qml:155
-msgctxt "@action:intoolbar"
-msgid "0U-0U"
-msgstr "0U-0U"
-
-#: qml/ResultsFooter.qml:163
-msgctxt "@action:intoolbar"
-msgid "½-0"
-msgstr "½-0"
-
-#: qml/ResultsFooter.qml:170
-msgctxt "@action:intoolbar"
-msgid "0-0"
-msgstr "0-0"
-
-#: qml/ResultsFooter.qml:177
-msgctxt "@action:intoolbar"
-msgid "0-½"
-msgstr "0-½"
 
 #: qml/Sidebar.qml:56
 msgid "Players"
@@ -875,7 +795,7 @@ msgctxt "@item:inlistbox Standings After Round %1"
 msgid "After Round %1"
 msgstr "Veidot pārus %1. kārtai"
 
-#: qml/StandingsPage.qml:128
+#: qml/StandingsPage.qml:127
 msgctxt "@info:placeholder"
 msgid "No standings yet"
 msgstr "Rezultātu vēl nav"
@@ -1212,6 +1132,55 @@ msgctxt "FIDE Federation"
 msgid "Wales"
 msgstr ""
 
+#: tournament/pairing.h:266 tournament/pairing.h:282 tournament/pairing.h:286
+#, fuzzy, kde-format
+#| msgctxt "@action:intoolbar"
+#| msgid "½-0"
+msgctxt "@item Game result: draw"
+msgid "½"
+msgstr "½-0"
+
+#: tournament/pairing.h:270
+#, kde-format
+msgctxt "@item Game result: win by forfeit"
+msgid "+"
+msgstr ""
+
+#: tournament/pairing.h:272
+#, kde-format
+msgctxt "@item Game result: lost by forfeit"
+msgid "-"
+msgstr ""
+
+#: tournament/pairing.h:275
+#, kde-format
+msgctxt ""
+"@item Game result. %1 is the points obtained, but the game is unrated. The "
+"'U' is the initial for 'Unrated'"
+msgid "%1U"
+msgstr ""
+
+#: tournament/pairing.h:279 tournament/pairing.h:283
+#, kde-format
+msgctxt ""
+"@item Game result: %1 is the points obtained, but the game is unrated. The "
+"'U' is the initial for 'Unrated'"
+msgid "%1U"
+msgstr ""
+
+#: tournament/pairing.h:287 tournament/pairing.h:291 tournament/pairing.h:295
+#, kde-format
+msgctxt "@item Game result, %1 is the points awarded for the bye"
+msgid "Bye (%1)"
+msgstr ""
+
+#: tournament/pairing.h:298
+#, fuzzy, kde-format
+#| msgid "Pairings"
+msgctxt "@item Game result: pairing-allocated bye. Keep it short"
+msgid "Bye (Pairing)"
+msgstr "Pāri"
+
 #: tournament/pairingengine.cpp:29
 #, kde-format
 msgctxt "bbpPairings is the name of a program, should not be translated"
@@ -1423,6 +1392,66 @@ msgstr "Nezināms rezultāts „%1“, pārojot „%2“."
 #, kde-format
 msgid "Pairing \"%1\" has no opponent."
 msgstr "Pārim „%1“ nav pretinieka."
+
+#~ msgctxt "@action:intoolbar"
+#~ msgid "*"
+#~ msgstr "*"
+
+#~ msgctxt "@action:intoolbar"
+#~ msgid "1-0"
+#~ msgstr "1-0"
+
+#~ msgctxt "@action:intoolbar"
+#~ msgid "½-½"
+#~ msgstr "½-½"
+
+#~ msgctxt "@action:intoolbar"
+#~ msgid "0-1"
+#~ msgstr "0-1"
+
+#~ msgctxt "@action:intoolbar"
+#~ msgid "1F-0F"
+#~ msgstr "1F-0F"
+
+#~ msgctxt "@action:intoolbar"
+#~ msgid "0F-1F"
+#~ msgstr "0F-1F"
+
+#~ msgctxt "@action:intoolbar"
+#~ msgid "0F-0F"
+#~ msgstr "0F-0F"
+
+#~ msgctxt "@action:intoolbar"
+#~ msgid "1U-0U"
+#~ msgstr "1U-0U"
+
+#~ msgctxt "@action:intoolbar"
+#~ msgid "½U-½U"
+#~ msgstr "½U-½U"
+
+#~ msgctxt "@action:intoolbar"
+#~ msgid "0U-1U"
+#~ msgstr "0U-1U"
+
+#~ msgctxt "@action:intoolbar"
+#~ msgid "½U-0U"
+#~ msgstr "½U-0U"
+
+#~ msgctxt "@action:intoolbar"
+#~ msgid "0U-½U"
+#~ msgstr "0U-½U"
+
+#~ msgctxt "@action:intoolbar"
+#~ msgid "0U-0U"
+#~ msgstr "0U-0U"
+
+#~ msgctxt "@action:intoolbar"
+#~ msgid "0-0"
+#~ msgstr "0-0"
+
+#~ msgctxt "@action:intoolbar"
+#~ msgid "0-½"
+#~ msgstr "0-½"
 
 #~ msgctxt "@label:textbox"
 #~ msgid "Chief arbiter"
