@@ -67,7 +67,10 @@ QVariant StandingsModel::data(const QModelIndex &index, int role) const
 
 QHash<int, QByteArray> StandingsModel::roleNames() const
 {
-    return {{Qt::DisplayRole, "display"}, {Qt::TextAlignmentRole, "textAlignment"}};
+    return {
+        {Qt::DisplayRole, "displayText"},
+        {Qt::TextAlignmentRole, "textAlignment"},
+    };
 }
 
 Qt::ItemFlags StandingsModel::flags(const QModelIndex &index) const

@@ -83,7 +83,7 @@ QVariant PairingModel::data(const QModelIndex &index, int role) const
 QHash<int, QByteArray> PairingModel::roleNames() const
 {
     return {
-        {Qt::DisplayRole, "display"},
+        {Qt::DisplayRole, "displayText"},
         {PairingModel::Roles::HasFinishedRole, "hasFinished"},
         {PairingModel::Roles::PairingRole, "pairing"},
         {Qt::TextAlignmentRole, "textAlignment"},

@@ -154,91 +154,13 @@ TablePage {
         }
     }
 
-    delegate: TableDelegate {
+    delegate: PlayersPageTableDelegate {
         id: delegate
-
-        required property int index
-        required property bool editing
-        required property string iconSource
-        required model
-        required selected
-        required current
-        required column
-
-        text: model.display
-        icon.source: iconSource
 
         contextMenu: menu
 
         onDoubleClicked: {
             root.tableView.edit(proxyModel.index(delegate.row, delegate.column));
-        }
-
-        TableView.editDelegate: DelegateChooser {
-            DelegateChoice {
-                column: PlayersModel.StartingRank
-
-                StartingRankField {}
-            }
-
-            DelegateChoice {
-                column: PlayersModel.Rating
-
-                RatingField {}
-            }
-
-            DelegateChoice {
-                column: PlayersModel.NationalRating
-
-                RatingField {}
-            }
-
-            DelegateChoice {
-                column: PlayersModel.Title
-
-                Controls.ComboBox {
-                    id: comboBox
-
-                    anchors.fill: parent
-                    model: [" ", "GM", "IM", "FM", "CM", "WGM", "WIM", "WFM", "WCM"]
-                    editable: true
-
-                    onActivated: index => {
-                        delegate.model.edit = comboBox.currentText;
-                    }
-
-                    TableView.onCommit: {
-                        if (!comboBox.editText.length && !comboBox.currentText.length && comboBox.highlightedIndex >= 0) {
-                            delegate.model.edit = comboBox.textAt(comboBox.highlightedIndex);
-                        } else {
-                            delegate.model.edit = comboBox.editText;
-                        }
-                    }
-
-                    Component.onCompleted: {
-                        comboBox.editText = delegate.model.edit;
-                        // FIXME: This breaks the Enter key
-                        // comboBox.popup.open();
-                    }
-                }
-            }
-
-            DelegateChoice {
-                Controls.TextField {
-                    required property var model
-
-                    anchors.fill: parent
-                    text: model.edit
-                    horizontalAlignment: TextInput.AlignHCenter
-                    verticalAlignment: TextInput.AlignVCenter
-
-                    Component.onCompleted: selectAll()
-
-                    TableView.onCommit: {
-                        model.edit = text;
-                    }
-                }
-            }
         }
     }
 

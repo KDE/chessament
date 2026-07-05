@@ -188,6 +188,8 @@ bool PlayersModel::setData(const QModelIndex &index, const QVariant &value, int 
     case PlayersModel::Columns::Gender:
         player->setGender(value.toString());
         break;
+    default:
+        return false;
     }
 
     Q_EMIT dataChanged(index, index);
@@ -199,7 +201,7 @@ bool PlayersModel::setData(const QModelIndex &index, const QVariant &value, int 
 QHash<int, QByteArray> PlayersModel::roleNames() const
 {
     return {
-        {Qt::DisplayRole, "display"},
+        {Qt::DisplayRole, "displayText"},
         {Qt::EditRole, "edit"},
         {Qt::TextAlignmentRole, "textAlignment"},
         {Roles::PlayerRole, "player"},

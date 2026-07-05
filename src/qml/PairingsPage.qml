@@ -139,11 +139,9 @@ TablePage {
 
         required property int index
         required property bool editing
-        required model
-        required selected
-        required current
+        required property string displayText
 
-        text: model.display
+        text: displayText
     }
 
     Kirigami.PlaceholderMessage {

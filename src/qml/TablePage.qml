@@ -49,6 +49,7 @@ Kirigami.Page {
         Controls.HorizontalHeaderView {
             id: heading
 
+            textRole: "displayText"
             visible: tableView.rows !== 0
             width: scrollView.width
             syncView: tableView
@@ -67,6 +68,7 @@ Kirigami.Page {
                 property int hoveredRow: -1
 
                 model: root.model
+                delegateModelAccess: DelegateModel.ReadWrite
 
                 clip: true
                 pixelAligned: true

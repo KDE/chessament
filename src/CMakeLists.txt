@@ -33,6 +33,7 @@ ecm_add_qml_module(chessament_static
         qml/PairingsPage.qml
         qml/PairRoundDialog.qml
         qml/PlayersPage.qml
+        qml/PlayersPageTableDelegate.qml
         qml/WelcomePage.qml
 
         # Player details
