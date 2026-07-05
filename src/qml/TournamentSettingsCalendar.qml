@@ -15,8 +15,8 @@ FormCard.FormCardPage {
     title: KI18n.i18nc("@title", "Calendar")
 
     Repeater {
+        delegateModelAccess: DelegateModel.ReadWrite
         model: RoundModel {
-            id: roundModel
             tournament: Controller.tournament
         }
 
@@ -24,17 +24,15 @@ FormCard.FormCardPage {
             id: delegate
 
             required property int index
-            required property var model
+            required property date dateTime
 
             FormCard.FormHeader {
                 title: KI18n.i18nc("round number", "Round %1", delegate.index + 1)
             }
             FormCard.FormCard {
                 FormCard.FormDateTimeDelegate {
-                    value: delegate.model.dateTime
-                    onValueChanged: {
-                        delegate.model.dateTime = value;
-                    }
+                    value: delegate.dateTime
+                    onValueChanged: delegate.dateTime = value
                 }
             }
         }

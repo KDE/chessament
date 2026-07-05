@@ -81,6 +81,8 @@ bool RoundModel::setData(const QModelIndex &index, const QVariant &value, int ro
         }
         break;
     }
+    default:
+        return false;
     }
 
     Q_EMIT dataChanged(this->index(index.row()), this->index(index.row()));
