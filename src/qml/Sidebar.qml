@@ -98,11 +98,6 @@ Kirigami.OverlayDrawer {
         }
     }
 
-    // HACK: make the toolbar be at the top even when there's no navigation buttons.
-    ColumnLayout {
-        visible: !Controller.hasOpenTournament
-    }
-
     function goToPage(viewName: string): void {
         Controller.currentView = viewName;
     }
