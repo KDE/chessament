@@ -31,7 +31,7 @@ FormCard.FormTextDelegate {
             text: KI18n.i18nc("@action:button", "Configure tiebreak")
             icon.name: "settings-configure-symbolic"
             flat: true
-            visible: tiebreakDelegate.model.isConfigurable
+            enabled: tiebreakDelegate.model.isConfigurable
             display: Controls.Button.IconOnly
             Controls.ToolTip.text: KI18n.i18nc("@action:button", "Configure tiebreak")
             Controls.ToolTip.visible: hovered
