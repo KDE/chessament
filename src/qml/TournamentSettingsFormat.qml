@@ -63,6 +63,7 @@ FormCard.FormCardPage {
         Repeater {
             id: repeater
 
+            delegateModelAccess: DelegateModel.ReadWrite
             model: TiebreakModel {
                 id: tiebreakModel
                 tournament: Controller.tournament

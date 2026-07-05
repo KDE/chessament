@@ -14,15 +14,17 @@ import org.kde.kirigamiaddons.formcard as FormCard
 import org.kde.chessament
 
 FormCard.FormTextDelegate {
-    id: tiebreakDelegate
+    id: delegate
 
-    required property var model
     required property int row
-
     required property int count
     required property TiebreakModel tiebreakModel
 
-    text: model.display
+    required property string name
+    required property bool isConfigurable
+    required property var options
+
+    text: name
 
     trailing: Layouts.RowLayout {
         spacing: Kirigami.Units.smallSpacing
@@ -31,18 +33,18 @@ FormCard.FormTextDelegate {
             text: KI18n.i18nc("@action:button", "Configure tiebreak")
             icon.name: "settings-configure-symbolic"
             flat: true
-            enabled: tiebreakDelegate.model.isConfigurable
+            enabled: delegate.isConfigurable
             display: Controls.Button.IconOnly
             Controls.ToolTip.text: KI18n.i18nc("@action:button", "Configure tiebreak")
             Controls.ToolTip.visible: hovered
             Controls.ToolTip.delay: Kirigami.Units.toolTipDelay
             onPressed: {
-                const dialog = Qt.createComponent("org.kde.chessament", "TiebreakDialog").createObject(tiebreakDelegate, {
-                    "options": tiebreakDelegate.model.options,
-                    "parent": tiebreakDelegate.Controls.Overlay.overlay
+                const dialog = Qt.createComponent("org.kde.chessament", "TiebreakDialog").createObject(delegate, {
+                    "options": delegate.options,
+                    "parent": delegate.Controls.Overlay.overlay
                 });
                 dialog.accepted.connect(() => {
-                    tiebreakDelegate.model.options = dialog.options;
+                    delegate.options = dialog.options;
                 });
                 dialog.open();
             }
@@ -52,36 +54,36 @@ FormCard.FormTextDelegate {
             text: KI18n.i18nc("@action:button Move tiebreak up", "Move Up")
             icon.name: "go-up-symbolic"
             flat: true
-            enabled: tiebreakDelegate.row > 0
+            enabled: delegate.row > 0
             display: Controls.Button.IconOnly
             Controls.ToolTip.text: KI18n.i18nc("@action:button Move tiebreak up", "Move up")
             Controls.ToolTip.visible: hovered
             Controls.ToolTip.delay: Kirigami.Units.toolTipDelay
-            onPressed: tiebreakDelegate.tiebreakModel.moveUp(tiebreakDelegate.row)
+            onPressed: delegate.tiebreakModel.moveUp(delegate.row)
         }
 
         Controls.Button {
             text: KI18n.i18nc("@action:button Move tiebreak down", "Move Down")
             icon.name: "go-down-symbolic"
             flat: true
-            enabled: tiebreakDelegate.row < tiebreakDelegate.count - 1
+            enabled: delegate.row < delegate.count - 1
             display: Controls.Button.IconOnly
             Controls.ToolTip.text: KI18n.i18nc("@action:button Move tiebreak down", "Move down")
             Controls.ToolTip.visible: hovered
             Controls.ToolTip.delay: Kirigami.Units.toolTipDelay
-            onPressed: tiebreakDelegate.tiebreakModel.moveDown(tiebreakDelegate.row)
+            onPressed: delegate.tiebreakModel.moveDown(delegate.row)
         }
 
         Controls.Button {
             text: KI18n.i18nc("@action:button", "Delete Tiebreak")
             icon.name: "list-remove-symbolic"
             flat: true
-            enabled: tiebreakDelegate.count > 1
+            enabled: delegate.count > 1
             display: Controls.Button.IconOnly
             Controls.ToolTip.text: KI18n.i18nc("@action:button", "Delete tiebreak")
             Controls.ToolTip.visible: hovered
             Controls.ToolTip.delay: Kirigami.Units.toolTipDelay
-            onPressed: tiebreakDelegate.tiebreakModel.remove(tiebreakDelegate.row)
+            onPressed: delegate.tiebreakModel.remove(delegate.row)
         }
     }
 }

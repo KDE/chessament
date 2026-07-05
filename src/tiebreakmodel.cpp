@@ -51,11 +51,17 @@ QVariant TiebreakModel::data(const QModelIndex &index, int role) const
 
 bool TiebreakModel::setData(const QModelIndex &index, const QVariant &value, int role)
 {
-    Q_UNUSED(role);
     Q_ASSERT(checkIndex(index, CheckIndexOption::IndexIsValid | CheckIndexOption::ParentIsInvalid));
 
-    const auto &tiebreak = m_tournament->tiebreaks()[index.row()];
-    tiebreak->setOptions(value.value<QList<QVariantMap>>());
+    switch (role) {
+    case TiebreakModel::TiebreakRole::OptionsRole: {
+        const auto &tiebreak = m_tournament->tiebreaks()[index.row()];
+        tiebreak->setOptions(value.value<QList<QVariantMap>>());
+        break;
+    }
+    default:
+        return false;
+    }
 
     m_tournament->saveTiebreaks();
 
@@ -67,7 +73,7 @@ bool TiebreakModel::setData(const QModelIndex &index, const QVariant &value, int
 QHash<int, QByteArray> TiebreakModel::roleNames() const
 {
     return {
-        {Qt::DisplayRole, "display"},
+        {Qt::DisplayRole, "name"},
         {TiebreakRole::IsConfigurableRole, "isConfigurable"},
         {TiebreakRole::OptionsRole, "options"},
     };
