@@ -13,7 +13,8 @@ import org.kde.chessament
 Kirigami.OverlayDrawer {
     id: root
 
-    readonly property AbstractKirigamiApplication application: (root.Controls.ApplicationWindow.window as StatefulWindow).application
+    readonly property StatefulWindow window: root.Controls.ApplicationWindow.window as StatefulWindow
+    readonly property AbstractKirigamiApplication application: root.window.application
 
     modal: false
     edge: Application.layoutDirection === Qt.RightToLeft ? Qt.RightEdge : Qt.LeftEdge
@@ -28,49 +29,71 @@ Kirigami.OverlayDrawer {
     Kirigami.Theme.colorSet: Kirigami.Theme.Window
 
     contentItem: ColumnLayout {
+        Layout.fillHeight: true
+        Layout.fillWidth: true
+
+        Item {
+            visible: false
+        }
+
         Controls.ToolBar {
             Layout.fillWidth: true
-            Layout.preferredHeight: (root.Controls.ApplicationWindow.window as StatefulWindow).pageStack.globalToolBar.preferredHeight
+            Layout.preferredHeight: root.window.pageStack.globalToolBar.preferredHeight - root.window.pageStack.SafeArea.margins.top
 
             leftPadding: 0
             rightPadding: 0
         }
-    }
 
-    Controls.ScrollView {
-        id: scrollView
+        Kirigami.NavigationTabButton {
+            Layout.fillWidth: true
+            text: KI18n.i18n("Players")
+            icon.name: "user-symbolic"
+            checked: Controller.currentView === "PlayersPage"
+            visible: Controller.hasOpenTournament
+            onClicked: root.goToPage("PlayersPage")
+        }
 
-        visible: Controller.hasOpenTournament
-        Layout.fillHeight: true
-        Layout.fillWidth: true
+        Kirigami.NavigationTabButton {
+            Layout.fillWidth: true
+            text: KI18n.i18n("Pairings")
+            icon.name: "system-users-symbolic"
+            checked: Controller.currentView === "PairingsPage"
+            visible: Controller.hasOpenTournament
+            onClicked: root.goToPage("PairingsPage")
+        }
 
-        Controls.ScrollBar.vertical.policy: Controls.ScrollBar.AlwaysOff
-        Controls.ScrollBar.horizontal.policy: Controls.ScrollBar.AlwaysOff
+        Kirigami.NavigationTabButton {
+            Layout.fillWidth: true
+            text: KI18n.i18n("Standings")
+            icon.name: "games-highscores-symbolic"
+            checked: Controller.currentView === "StandingsPage"
+            visible: Controller.hasOpenTournament
+            onClicked: root.goToPage("StandingsPage")
+        }
 
-        ColumnLayout {
-            width: scrollView.width
-            spacing: 0
+        Item {
+            Layout.fillHeight: true
+        }
 
-            Kirigami.NavigationTabButton {
-                Layout.fillWidth: true
-                text: KI18n.i18n("Players")
-                icon.name: "user-symbolic"
-                checked: Controller.currentView === "PlayersPage"
-                onClicked: root.goToPage("PlayersPage")
-            }
-            Kirigami.NavigationTabButton {
-                Layout.fillWidth: true
-                text: KI18n.i18n("Pairings")
-                icon.name: "system-users-symbolic"
-                checked: Controller.currentView === "PairingsPage"
-                onClicked: root.goToPage("PairingsPage")
-            }
-            Kirigami.NavigationTabButton {
-                Layout.fillWidth: true
-                text: KI18n.i18n("Standings")
-                icon.name: "games-highscores-symbolic"
-                checked: Controller.currentView === "StandingsPage"
-                onClicked: root.goToPage("StandingsPage")
+        Kirigami.Separator {
+            Layout.fillWidth: true
+            Layout.rightMargin: Kirigami.Units.smallSpacing
+            Layout.leftMargin: Kirigami.Units.smallSpacing
+            visible: Controller.hasOpenTournament
+        }
+
+        Kirigami.NavigationTabButton {
+            Layout.fillWidth: true
+            visible: Controller.hasOpenTournament
+            action: Kirigami.Action {
+                text: KI18n.i18nc("@action:button", "Settings")
+                icon.name: "settings-configure"
+                onTriggered: {
+                    const dialog = Qt.createComponent("org.kde.chessament", "TournamentSettings").createObject(root.Controls.Overlay.overlay, {
+                        window: root.Controls.ApplicationWindow.window
+                    }) as TournamentSettings;
+                    dialog.open();
+                }
             }
         }
     }
@@ -78,28 +101,6 @@ Kirigami.OverlayDrawer {
     // HACK: make the toolbar be at the top even when there's no navigation buttons.
     ColumnLayout {
         visible: !Controller.hasOpenTournament
-    }
-
-    Kirigami.Separator {
-        Layout.fillWidth: true
-        Layout.rightMargin: Kirigami.Units.smallSpacing
-        Layout.leftMargin: Kirigami.Units.smallSpacing
-        visible: Controller.hasOpenTournament
-    }
-
-    Kirigami.NavigationTabButton {
-        Layout.fillWidth: true
-        visible: Controller.hasOpenTournament
-        action: Kirigami.Action {
-            text: KI18n.i18nc("@action:button", "Settings")
-            icon.name: "settings-configure"
-            onTriggered: {
-                const dialog = Qt.createComponent("org.kde.chessament", "TournamentSettings").createObject(root.Controls.Overlay.overlay, {
-                    window: root.Controls.ApplicationWindow.window
-                }) as TournamentSettings;
-                dialog.open();
-            }
-        }
     }
 
     function goToPage(viewName: string): void {
