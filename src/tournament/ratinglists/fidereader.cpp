@@ -31,19 +31,19 @@ std::expected<void, QString> FideRatingListReader::readPlayers(QTextStream *stre
         const QString federation = line.sliced(76, 3);
         const QString gender = line.sliced(80, 3).trimmed();
         const QString title = line.sliced(84, 4).trimmed();
-        const auto standardRating = line.sliced(113, 4).toUInt(&ok);
+        const auto standardRating = line.sliced(113, 4).toInt(&ok);
         if (!ok) {
             qWarning() << "invalid standard rating of player" << line;
             continue;
         }
 
-        const auto rapidRating = line.sliced(126, 4).toUInt(&ok);
+        const auto rapidRating = line.sliced(126, 4).toInt(&ok);
         if (!ok) {
             qWarning() << "invalid rapid rating of player" << line;
             continue;
         }
 
-        const auto blitzRating = line.sliced(139, 4).toUInt(&ok);
+        const auto blitzRating = line.sliced(139, 4).toInt(&ok);
         if (!ok) {
             qWarning() << "invalid blitz rating of player" << line;
             continue;
@@ -86,18 +86,18 @@ std::expected<void, QString> FideRatingListReader::readPlayers(QTextStream *stre
         }
 
         const auto player = RatingListPlayer{
-            .id = QString::number(playerId),
-            .name = name,
-            .federation = federation,
-            .gender = gender,
-            .title = title,
-            .birthDate = QString::number(birthdate),
-            .standardRating = standardRating,
-            .rapidRating = rapidRating,
-            .blitzRating = blitzRating,
-            .nationalId = QString(),
-            .nationalRating = 0,
-            .extra = extra,
+            QString::number(playerId),
+            name,
+            federation,
+            gender,
+            title,
+            QString::number(birthdate),
+            standardRating,
+            rapidRating,
+            blitzRating,
+            QString{},
+            0,
+            extra,
         };
 
         if (const auto ok = addPlayer(player); !ok) {

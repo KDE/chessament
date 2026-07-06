@@ -9,6 +9,7 @@
 #include <expected>
 
 #include "ratinglist.h"
+#include "ratinglistplayer.h"
 
 class RatingListReader
 {

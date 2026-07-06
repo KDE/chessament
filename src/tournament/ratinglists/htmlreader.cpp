@@ -42,7 +42,7 @@ std::expected<void, QString> HtmlRatingListReader::readPlayers(QTextStream *stre
                         return std::unexpected(player.error());
                     }
 
-                    if (!player->name.isEmpty()) {
+                    if (!player->name().isEmpty()) {
                         if (const auto ok = addPlayer(*player); !ok) {
                             return std::unexpected(ok.error());
                         }
@@ -76,35 +76,34 @@ std::expected<RatingListPlayer, QString> HtmlRatingListReader::readPlayer()
 
             switch (index) {
             case 0:
-                player.name = value;
+                player.setName(value);
                 break;
             case 1:
-                player.name.append(", "_L1);
-                player.name.append(value);
+                player.setName(player.name() % ", "_L1 % value);
                 break;
             case 2:
-                player.extra["origin"_L1] = value;
+                player.extra()["origin"_L1] = value;
                 break;
             case 3:
-                player.extra["region"_L1] = value;
+                player.extra()["region"_L1] = value;
                 break;
             case 4:
-                player.birthDate = value;
+                player.setBirthDate(value);
                 break;
             case 5:
-                player.nationalRating = value.toInt();
+                player.setNationalRating(value.toInt());
                 break;
             case 7:
-                player.standardRating = value.toInt();
+                player.setStandardRating(value.toInt());
                 break;
             case 8:
-                player.nationalId = value;
+                player.setNationalId(value);
                 break;
             case 10:
-                player.id = value;
+                player.setId(value);
                 break;
             case 11:
-                player.gender = value;
+                player.setGender(value);
                 break;
             }
 

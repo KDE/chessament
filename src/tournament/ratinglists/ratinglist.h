@@ -11,6 +11,8 @@
 #include <QUrl>
 #include <qqmlregistration.h>
 
+#include "ratinglistplayer.h"
+
 class QSqlDatabase;
 class RatingListReader;
 
@@ -61,44 +63,6 @@ static const auto SEARCH_PLAYERS_QUERY =
 
 static constexpr auto RATING_LISTS_DB_CONNECTION_NAME = "rating-lists"_L1;
 static constexpr auto RATING_LISTS_DB_CONNECTION_NAME_WRITER = "rating-lists-writer"_L1;
-
-struct RatingListPlayer {
-    Q_GADGET
-
-    Q_PROPERTY(QString id MEMBER id CONSTANT)
-    Q_PROPERTY(QString name MEMBER name CONSTANT)
-    Q_PROPERTY(QString federation MEMBER federation CONSTANT)
-    Q_PROPERTY(QString gender MEMBER gender CONSTANT)
-    Q_PROPERTY(QString title MEMBER title CONSTANT)
-    Q_PROPERTY(QString birthDate MEMBER birthDate CONSTANT)
-    Q_PROPERTY(uint standardRating MEMBER standardRating CONSTANT)
-    Q_PROPERTY(uint rapidRating MEMBER rapidRating CONSTANT)
-    Q_PROPERTY(uint blitzRating MEMBER blitzRating CONSTANT)
-    Q_PROPERTY(QString nationalId MEMBER nationalId CONSTANT)
-    Q_PROPERTY(uint nationalRating MEMBER nationalRating CONSTANT)
-    Q_PROPERTY(QJsonObject extra MEMBER extra CONSTANT)
-
-    Q_PROPERTY(QString origin READ origin CONSTANT)
-
-public:
-    [[nodiscard]] QString origin() const
-    {
-        return extra.value("origin"_L1).toString();
-    }
-
-    QString id;
-    QString name;
-    QString federation;
-    QString gender;
-    QString title;
-    QString birthDate;
-    uint standardRating;
-    uint rapidRating;
-    uint blitzRating;
-    QString nationalId;
-    uint nationalRating;
-    QJsonObject extra;
-};
 
 class RatingList : public QObject
 {

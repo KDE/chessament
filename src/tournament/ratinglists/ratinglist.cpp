@@ -369,28 +369,28 @@ std::expected<QList<RatingListPlayer>, QString> RatingList::searchPlayers(const 
         const auto gender = query.value(genderNo).toString();
         const auto title = query.value(titleNo).toString();
         const auto birthDate = query.value(birthDayNo).toString();
-        const auto standard = query.value(standardNo).toUInt();
-        const auto rapid = query.value(rapidNo).toUInt();
-        const auto blitz = query.value(blitzNo).toUInt();
+        const auto standardRating = query.value(standardNo).toInt();
+        const auto rapidRating = query.value(rapidNo).toInt();
+        const auto blitzRating = query.value(blitzNo).toInt();
         const auto nationalId = query.value(nationalIdNo).toString();
-        const auto nationalRating = query.value(nationalRatingNo).toUInt();
+        const auto nationalRating = query.value(nationalRatingNo).toInt();
 
         const auto extra = query.value(extraNo).toByteArray();
         const auto extraJson = QJsonDocument::fromJson(extra);
 
         const auto player = RatingListPlayer{
-            .id = id,
-            .name = name,
-            .federation = federation,
-            .gender = gender,
-            .title = title,
-            .birthDate = birthDate,
-            .standardRating = standard,
-            .rapidRating = rapid,
-            .blitzRating = blitz,
-            .nationalId = nationalId,
-            .nationalRating = nationalRating,
-            .extra = extraJson.object(),
+            id,
+            name,
+            federation,
+            gender,
+            title,
+            birthDate,
+            standardRating,
+            rapidRating,
+            blitzRating,
+            nationalId,
+            nationalRating,
+            extraJson.object(),
         };
 
         players << player;
@@ -422,21 +422,18 @@ std::expected<void, QString> RatingList::savePlayers(const QList<RatingListPlaye
 
     for (const auto &player : players) {
         lists << m_id;
-        names << player.name;
-        ids << player.id;
-        federations << player.federation;
-        genders << player.gender;
-        titles << player.title;
-        birthdates << player.birthDate;
-        stdRatings << player.standardRating;
-        rpdRatings << player.rapidRating;
-        btzRatings << player.blitzRating;
-        nationalIds << player.nationalId;
-        nationalRatings << player.nationalRating;
-
-        const auto extra = QJsonDocument{player.extra}.toJson(QJsonDocument::Compact);
-
-        extras << extra;
+        names << player.name();
+        ids << player.id();
+        federations << player.federation();
+        genders << player.gender();
+        titles << player.title();
+        birthdates << player.birthDate();
+        stdRatings << player.standardRating();
+        rpdRatings << player.rapidRating();
+        btzRatings << player.blitzRating();
+        nationalIds << player.nationalId();
+        nationalRatings << player.nationalRating();
+        extras << player.extraString();
     }
 
     QSqlQuery query(*db);

@@ -4,8 +4,9 @@
 target_sources(tournament PRIVATE
     ratinglist.cpp
 
-    reader.cpp
     fidereader.cpp
     htmlreader.cpp
+    ratinglistplayer.cpp
+    reader.cpp
 )
 

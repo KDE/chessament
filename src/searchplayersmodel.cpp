@@ -23,9 +23,9 @@ QVariant SearchPlayersModel::data(const QModelIndex &index, int role) const
 
     switch (role) {
     case SearchPlayersModel::Role::NameRole:
-        return player.name;
+        return player.name();
     case SearchPlayersModel::Role::RatingRole:
-        return player.standardRating;
+        return player.standardRating();
     case SearchPlayersModel::Role::PlayerRole:
         return QVariant::fromValue(player);
     }
