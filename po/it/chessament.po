@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-05 00:40+0000\n"
+"POT-Creation-Date: 2026-07-06 00:41+0000\n"
 "PO-Revision-Date: 2026-06-26 10:41+0200\n"
 "Last-Translator: Valter Mura <valtermura@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -188,67 +188,67 @@ msgctxt "@title:column Black Player Starting Rank Number"
 msgid "№"
 msgstr "№"
 
-#: playersmodel.cpp:222 standingsmodel.cpp:90
+#: playersmodel.cpp:224 standingsmodel.cpp:93
 #, kde-format
 msgctxt "@title:column Player Starting Rank Number"
 msgid "№"
 msgstr "№"
 
-#: playersmodel.cpp:224 standingsmodel.cpp:92
+#: playersmodel.cpp:226 standingsmodel.cpp:95
 #, kde-format
 msgctxt "@title:column Player Title"
 msgid "Title"
 msgstr "Titolo"
 
-#: playersmodel.cpp:226 standingsmodel.cpp:94
+#: playersmodel.cpp:228 standingsmodel.cpp:97
 #, kde-format
 msgctxt "@title:column Player Name"
 msgid "Name"
 msgstr "Nome"
 
-#: playersmodel.cpp:228
+#: playersmodel.cpp:230
 #, kde-format
 msgctxt "@title:column Player Rating"
 msgid "Rating"
 msgstr "Valutazione"
 
-#: playersmodel.cpp:230
+#: playersmodel.cpp:232
 #, kde-format
 msgctxt "@title:column Player National Rating"
 msgid "National Rating"
 msgstr "Valutazione nazionale"
 
-#: playersmodel.cpp:232
+#: playersmodel.cpp:234
 #, kde-format
 msgctxt "@title:column"
 msgid "Player ID"
 msgstr "ID del giocatore"
 
-#: playersmodel.cpp:234
+#: playersmodel.cpp:236
 #, kde-format
 msgctxt "@title:column Player National ID"
 msgid "National ID"
 msgstr "ID della nazione"
 
-#: playersmodel.cpp:236
+#: playersmodel.cpp:238
 #, kde-format
 msgctxt "@title:column"
 msgid "Birth date"
 msgstr "Data di nascita"
 
-#: playersmodel.cpp:238
+#: playersmodel.cpp:240
 #, kde-format
 msgctxt "@title:column Player Federation"
 msgid "Federation"
 msgstr "Federazione"
 
-#: playersmodel.cpp:240
+#: playersmodel.cpp:242
 #, kde-format
 msgctxt "@title:column Player Origin"
 msgid "Origin"
 msgstr "Origine"
 
-#: playersmodel.cpp:242
+#: playersmodel.cpp:244
 #, kde-format
 msgctxt "@title:column Player Gender"
 msgid "Gender"
@@ -395,38 +395,38 @@ msgctxt "@action:menu"
 msgid "Help"
 msgstr "Aiuto"
 
-#: qml/components/TiebreakDelegate.qml:31
-#: qml/components/TiebreakDelegate.qml:36
+#: qml/components/TiebreakDelegate.qml:33
+#: qml/components/TiebreakDelegate.qml:38
 msgctxt "@action:button"
 msgid "Configure tiebreak"
 msgstr "Configura spareggio"
 
-#: qml/components/TiebreakDelegate.qml:52
+#: qml/components/TiebreakDelegate.qml:54
 msgctxt "@action:button Move tiebreak up"
 msgid "Move Up"
 msgstr "Sposta su"
 
-#: qml/components/TiebreakDelegate.qml:57
+#: qml/components/TiebreakDelegate.qml:59
 msgctxt "@action:button Move tiebreak up"
 msgid "Move up"
 msgstr "Sposta su"
 
-#: qml/components/TiebreakDelegate.qml:64
+#: qml/components/TiebreakDelegate.qml:66
 msgctxt "@action:button Move tiebreak down"
 msgid "Move Down"
 msgstr "Sposta giù"
 
-#: qml/components/TiebreakDelegate.qml:69
+#: qml/components/TiebreakDelegate.qml:71
 msgctxt "@action:button Move tiebreak down"
 msgid "Move down"
 msgstr "Sposta giù"
 
-#: qml/components/TiebreakDelegate.qml:76
+#: qml/components/TiebreakDelegate.qml:78
 msgctxt "@action:button"
 msgid "Delete Tiebreak"
 msgstr "Elimina spareggio"
 
-#: qml/components/TiebreakDelegate.qml:81
+#: qml/components/TiebreakDelegate.qml:83
 msgctxt "@action:button"
 msgid "Delete tiebreak"
 msgstr "Elimina spareggio"
@@ -555,12 +555,12 @@ msgctxt "@action:button"
 msgid "Pair Round %1…"
 msgstr "Abbina turno %1…"
 
-#: qml/PairingsPage.qml:155
+#: qml/PairingsPage.qml:153
 msgctxt "@info:placeholder"
 msgid "No pairings for round %1 yet"
 msgstr "Ancora nessun abbinamento per il turno %1"
 
-#: qml/PairingsPage.qml:157
+#: qml/PairingsPage.qml:155
 msgctxt "@info:placeholder"
 msgid "All games of round %1 have finished"
 msgstr "Tutte le partite del turno %1 sono terminate"
@@ -669,36 +669,36 @@ msgctxt "@action:inmenu"
 msgid "Delete Player…"
 msgstr "Elimina giocatore…"
 
-#: qml/PlayersPage.qml:249
+#: qml/PlayersPage.qml:171
 msgctxt "@info:placeholder"
 msgid "No players found"
 msgstr "Non sono presenti giocatori"
 
-#: qml/PlayersPage.qml:249
+#: qml/PlayersPage.qml:171
 msgctxt "@info:placeholder"
 msgid "No players yet"
 msgstr "Ancora nessun giocatore"
 
-#: qml/PlayersPage.qml:253
+#: qml/PlayersPage.qml:175
 msgctxt "@action:button"
 msgid "Add Player…"
 msgstr "Aggiungi giocatore..."
 
-#: qml/PlayersPage.qml:272
+#: qml/PlayersPage.qml:194
 msgctxt "@info:status Number of players"
 msgid "1 player"
 msgid_plural "%1 players"
 msgstr[0] "1 giocatore"
 msgstr[1] "%1 giocatori"
 
-#: qml/PlayersPage.qml:273
+#: qml/PlayersPage.qml:195
 msgctxt "@info:status Number of rated players"
 msgid "1 rated"
 msgid_plural "%1 rated"
 msgstr[0] "1 valutato"
 msgstr[1] "%1 valutati"
 
-#: qml/PlayersPage.qml:275
+#: qml/PlayersPage.qml:197
 msgctxt "@info:status Total number of players (Number of players rated)"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
@@ -708,19 +708,19 @@ msgctxt "@action:intoolbar Other game results"
 msgid "Other"
 msgstr "Altro"
 
-#: qml/Sidebar.qml:56
+#: qml/Sidebar.qml:49
 msgid "Players"
 msgstr "Giocatori"
 
-#: qml/Sidebar.qml:63
+#: qml/Sidebar.qml:58
 msgid "Pairings"
 msgstr "Abbinamenti"
 
-#: qml/Sidebar.qml:70
+#: qml/Sidebar.qml:67
 msgid "Standings"
 msgstr "Posizioni"
 
-#: qml/Sidebar.qml:94
+#: qml/Sidebar.qml:89
 msgctxt "@action:button"
 msgid "Settings"
 msgstr "Impostazioni"
@@ -749,7 +749,7 @@ msgctxt "@item:inlistbox Standings After Round %1"
 msgid "After Round %1"
 msgstr "Dopo il turno %1"
 
-#: qml/StandingsPage.qml:127
+#: qml/StandingsPage.qml:125
 msgctxt "@info:placeholder"
 msgid "No standings yet"
 msgstr "Ancora nessuna classifica"
@@ -823,7 +823,7 @@ msgctxt "@title:group"
 msgid "Tiebreaks"
 msgstr "Spareggi"
 
-#: qml/TournamentSettingsFormat.qml:84
+#: qml/TournamentSettingsFormat.qml:85
 msgctxt "@action:button"
 msgid "Add Tiebreak"
 msgstr "Aggiungi spareggio"
@@ -1024,7 +1024,7 @@ msgctxt "@action:button"
 msgid "Add rating list"
 msgstr "Aggiungi lista di valutazione"
 
-#: standingsmodel.cpp:88
+#: standingsmodel.cpp:91
 #, kde-format
 msgctxt "@title:column Player Ranking"
 msgid "Rank"

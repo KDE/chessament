@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-05 00:40+0000\n"
+"POT-Creation-Date: 2026-07-06 00:41+0000\n"
 "PO-Revision-Date: 2026-03-21 06:45+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
@@ -188,43 +188,43 @@ msgctxt "@title:column Black Player Starting Rank Number"
 msgid "№"
 msgstr "№"
 
-#: playersmodel.cpp:222 standingsmodel.cpp:90
+#: playersmodel.cpp:224 standingsmodel.cpp:93
 #, kde-format
 msgctxt "@title:column Player Starting Rank Number"
 msgid "№"
 msgstr "№"
 
-#: playersmodel.cpp:224 standingsmodel.cpp:92
+#: playersmodel.cpp:226 standingsmodel.cpp:95
 #, kde-format
 msgctxt "@title:column Player Title"
 msgid "Title"
 msgstr "Tytuł"
 
-#: playersmodel.cpp:226 standingsmodel.cpp:94
+#: playersmodel.cpp:228 standingsmodel.cpp:97
 #, kde-format
 msgctxt "@title:column Player Name"
 msgid "Name"
 msgstr "Nazwa"
 
-#: playersmodel.cpp:228
+#: playersmodel.cpp:230
 #, kde-format
 msgctxt "@title:column Player Rating"
 msgid "Rating"
 msgstr "Poziom"
 
-#: playersmodel.cpp:230
+#: playersmodel.cpp:232
 #, kde-format
 msgctxt "@title:column Player National Rating"
 msgid "National Rating"
 msgstr "Narodowy poziom"
 
-#: playersmodel.cpp:232
+#: playersmodel.cpp:234
 #, kde-format
 msgctxt "@title:column"
 msgid "Player ID"
 msgstr "ID gracza"
 
-#: playersmodel.cpp:234
+#: playersmodel.cpp:236
 #, fuzzy, kde-format
 #| msgctxt "@title:column Player National Rating"
 #| msgid "National Rating"
@@ -232,25 +232,25 @@ msgctxt "@title:column Player National ID"
 msgid "National ID"
 msgstr "Narodowy poziom"
 
-#: playersmodel.cpp:236
+#: playersmodel.cpp:238
 #, kde-format
 msgctxt "@title:column"
 msgid "Birth date"
 msgstr "Data urodzenia"
 
-#: playersmodel.cpp:238
+#: playersmodel.cpp:240
 #, kde-format
 msgctxt "@title:column Player Federation"
 msgid "Federation"
 msgstr "Federacja"
 
-#: playersmodel.cpp:240
+#: playersmodel.cpp:242
 #, kde-format
 msgctxt "@title:column Player Origin"
 msgid "Origin"
 msgstr "Pochodzenie"
 
-#: playersmodel.cpp:242
+#: playersmodel.cpp:244
 #, kde-format
 msgctxt "@title:column Player Gender"
 msgid "Gender"
@@ -400,38 +400,38 @@ msgctxt "@action:menu"
 msgid "Help"
 msgstr "Pomoc"
 
-#: qml/components/TiebreakDelegate.qml:31
-#: qml/components/TiebreakDelegate.qml:36
+#: qml/components/TiebreakDelegate.qml:33
+#: qml/components/TiebreakDelegate.qml:38
 msgctxt "@action:button"
 msgid "Configure tiebreak"
 msgstr "Ustawienia przełamania remisu"
 
-#: qml/components/TiebreakDelegate.qml:52
+#: qml/components/TiebreakDelegate.qml:54
 msgctxt "@action:button Move tiebreak up"
 msgid "Move Up"
 msgstr "Przesuń w górę"
 
-#: qml/components/TiebreakDelegate.qml:57
+#: qml/components/TiebreakDelegate.qml:59
 msgctxt "@action:button Move tiebreak up"
 msgid "Move up"
 msgstr "Przesuń w górę"
 
-#: qml/components/TiebreakDelegate.qml:64
+#: qml/components/TiebreakDelegate.qml:66
 msgctxt "@action:button Move tiebreak down"
 msgid "Move Down"
 msgstr "Przesuń w dół"
 
-#: qml/components/TiebreakDelegate.qml:69
+#: qml/components/TiebreakDelegate.qml:71
 msgctxt "@action:button Move tiebreak down"
 msgid "Move down"
 msgstr "Przesuń w dół"
 
-#: qml/components/TiebreakDelegate.qml:76
+#: qml/components/TiebreakDelegate.qml:78
 msgctxt "@action:button"
 msgid "Delete Tiebreak"
 msgstr "Usuń przełamanie remisu"
 
-#: qml/components/TiebreakDelegate.qml:81
+#: qml/components/TiebreakDelegate.qml:83
 msgctxt "@action:button"
 msgid "Delete tiebreak"
 msgstr "Usuń przełamanie remisu"
@@ -575,12 +575,12 @@ msgctxt "@action:button"
 msgid "Pair Round %1…"
 msgstr "Runda pary %1…"
 
-#: qml/PairingsPage.qml:155
+#: qml/PairingsPage.qml:153
 msgctxt "@info:placeholder"
 msgid "No pairings for round %1 yet"
 msgstr "Nie ma jeszcze parowania dla rundy %1"
 
-#: qml/PairingsPage.qml:157
+#: qml/PairingsPage.qml:155
 msgctxt "@info:placeholder"
 msgid "All games of round %1 have finished"
 msgstr "Wszystkie gry z rundy %1 zostały zakończone"
@@ -693,22 +693,22 @@ msgctxt "@action:inmenu"
 msgid "Delete Player…"
 msgstr "Uszereguj graczy…"
 
-#: qml/PlayersPage.qml:249
+#: qml/PlayersPage.qml:171
 msgctxt "@info:placeholder"
 msgid "No players found"
 msgstr "Nie ma znaleziono żadnego gracza"
 
-#: qml/PlayersPage.qml:249
+#: qml/PlayersPage.qml:171
 msgctxt "@info:placeholder"
 msgid "No players yet"
 msgstr "Nie ma jeszcze żadnych graczy"
 
-#: qml/PlayersPage.qml:253
+#: qml/PlayersPage.qml:175
 msgctxt "@action:button"
 msgid "Add Player…"
 msgstr "Dodaj gracza…"
 
-#: qml/PlayersPage.qml:272
+#: qml/PlayersPage.qml:194
 msgctxt "@info:status Number of players"
 msgid "1 player"
 msgid_plural "%1 players"
@@ -716,7 +716,7 @@ msgstr[0] "1 gracz"
 msgstr[1] "%1 graczy"
 msgstr[2] "%1 graczy"
 
-#: qml/PlayersPage.qml:273
+#: qml/PlayersPage.qml:195
 msgctxt "@info:status Number of rated players"
 msgid "1 rated"
 msgid_plural "%1 rated"
@@ -724,7 +724,7 @@ msgstr[0] "1 z poziomem"
 msgstr[1] "%1 z poziomem"
 msgstr[2] "%1 z poziomem"
 
-#: qml/PlayersPage.qml:275
+#: qml/PlayersPage.qml:197
 msgctxt "@info:status Total number of players (Number of players rated)"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
@@ -734,19 +734,19 @@ msgctxt "@action:intoolbar Other game results"
 msgid "Other"
 msgstr "Inne"
 
-#: qml/Sidebar.qml:56
+#: qml/Sidebar.qml:49
 msgid "Players"
 msgstr "Gracze"
 
-#: qml/Sidebar.qml:63
+#: qml/Sidebar.qml:58
 msgid "Pairings"
 msgstr "Parowania"
 
-#: qml/Sidebar.qml:70
+#: qml/Sidebar.qml:67
 msgid "Standings"
 msgstr "Ostateczne wyniki"
 
-#: qml/Sidebar.qml:94
+#: qml/Sidebar.qml:89
 msgctxt "@action:button"
 msgid "Settings"
 msgstr "Ustawienia"
@@ -775,7 +775,7 @@ msgctxt "@item:inlistbox Standings After Round %1"
 msgid "After Round %1"
 msgstr "Po rundzie %1"
 
-#: qml/StandingsPage.qml:127
+#: qml/StandingsPage.qml:125
 msgctxt "@info:placeholder"
 msgid "No standings yet"
 msgstr "Nie ma jeszcze żadnych wyników"
@@ -849,7 +849,7 @@ msgctxt "@title:group"
 msgid "Tiebreaks"
 msgstr "Przełamania remisu"
 
-#: qml/TournamentSettingsFormat.qml:84
+#: qml/TournamentSettingsFormat.qml:85
 msgctxt "@action:button"
 msgid "Add Tiebreak"
 msgstr "Dodaj przełamanie remisu"
@@ -1079,7 +1079,7 @@ msgctxt "@action:button"
 msgid "Add rating list"
 msgstr "Dodaj listę wyników"
 
-#: standingsmodel.cpp:88
+#: standingsmodel.cpp:91
 #, kde-format
 msgctxt "@title:column Player Ranking"
 msgid "Rank"

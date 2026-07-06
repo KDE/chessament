@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-05 00:40+0000\n"
+"POT-Creation-Date: 2026-07-06 00:41+0000\n"
 "PO-Revision-Date: 2026-04-05 00:41+0000\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -187,67 +187,67 @@ msgctxt "@title:column Black Player Starting Rank Number"
 msgid "№"
 msgstr "№"
 
-#: playersmodel.cpp:222 standingsmodel.cpp:90
+#: playersmodel.cpp:224 standingsmodel.cpp:93
 #, kde-format
 msgctxt "@title:column Player Starting Rank Number"
 msgid "№"
 msgstr "№"
 
-#: playersmodel.cpp:224 standingsmodel.cpp:92
+#: playersmodel.cpp:226 standingsmodel.cpp:95
 #, kde-format
 msgctxt "@title:column Player Title"
 msgid "Title"
 msgstr "Titul"
 
-#: playersmodel.cpp:226 standingsmodel.cpp:94
+#: playersmodel.cpp:228 standingsmodel.cpp:97
 #, kde-format
 msgctxt "@title:column Player Name"
 msgid "Name"
 msgstr "Meno"
 
-#: playersmodel.cpp:228
+#: playersmodel.cpp:230
 #, kde-format
 msgctxt "@title:column Player Rating"
 msgid "Rating"
 msgstr "Rating"
 
-#: playersmodel.cpp:230
+#: playersmodel.cpp:232
 #, kde-format
 msgctxt "@title:column Player National Rating"
 msgid "National Rating"
 msgstr "Národný rating"
 
-#: playersmodel.cpp:232
+#: playersmodel.cpp:234
 #, kde-format
 msgctxt "@title:column"
 msgid "Player ID"
 msgstr "ID hráča"
 
-#: playersmodel.cpp:234
+#: playersmodel.cpp:236
 #, kde-format
 msgctxt "@title:column Player National ID"
 msgid "National ID"
 msgstr "Národné ID"
 
-#: playersmodel.cpp:236
+#: playersmodel.cpp:238
 #, kde-format
 msgctxt "@title:column"
 msgid "Birth date"
 msgstr "Dátum narodenia"
 
-#: playersmodel.cpp:238
+#: playersmodel.cpp:240
 #, kde-format
 msgctxt "@title:column Player Federation"
 msgid "Federation"
 msgstr "Voľby:"
 
-#: playersmodel.cpp:240
+#: playersmodel.cpp:242
 #, kde-format
 msgctxt "@title:column Player Origin"
 msgid "Origin"
 msgstr "Pôvod"
 
-#: playersmodel.cpp:242
+#: playersmodel.cpp:244
 #, kde-format
 msgctxt "@title:column Player Gender"
 msgid "Gender"
@@ -394,38 +394,38 @@ msgctxt "@action:menu"
 msgid "Help"
 msgstr "Pomocník"
 
-#: qml/components/TiebreakDelegate.qml:31
-#: qml/components/TiebreakDelegate.qml:36
+#: qml/components/TiebreakDelegate.qml:33
+#: qml/components/TiebreakDelegate.qml:38
 msgctxt "@action:button"
 msgid "Configure tiebreak"
 msgstr "Nastaviť rozstrel"
 
-#: qml/components/TiebreakDelegate.qml:52
+#: qml/components/TiebreakDelegate.qml:54
 msgctxt "@action:button Move tiebreak up"
 msgid "Move Up"
 msgstr "Posunúť nahor"
 
-#: qml/components/TiebreakDelegate.qml:57
+#: qml/components/TiebreakDelegate.qml:59
 msgctxt "@action:button Move tiebreak up"
 msgid "Move up"
 msgstr "Posunúť nahor"
 
-#: qml/components/TiebreakDelegate.qml:64
+#: qml/components/TiebreakDelegate.qml:66
 msgctxt "@action:button Move tiebreak down"
 msgid "Move Down"
 msgstr "Posunúť nadol"
 
-#: qml/components/TiebreakDelegate.qml:69
+#: qml/components/TiebreakDelegate.qml:71
 msgctxt "@action:button Move tiebreak down"
 msgid "Move down"
 msgstr "Posunúť nadol"
 
-#: qml/components/TiebreakDelegate.qml:76
+#: qml/components/TiebreakDelegate.qml:78
 msgctxt "@action:button"
 msgid "Delete Tiebreak"
 msgstr "Odstrániť rozstrel"
 
-#: qml/components/TiebreakDelegate.qml:81
+#: qml/components/TiebreakDelegate.qml:83
 msgctxt "@action:button"
 msgid "Delete tiebreak"
 msgstr "Odstrániť rozstrel"
@@ -566,12 +566,12 @@ msgctxt "@action:button"
 msgid "Pair Round %1…"
 msgstr "Párovať kolo %1…"
 
-#: qml/PairingsPage.qml:155
+#: qml/PairingsPage.qml:153
 msgctxt "@info:placeholder"
 msgid "No pairings for round %1 yet"
 msgstr "Zatiaľ žiadne párovania pre kolo %1"
 
-#: qml/PairingsPage.qml:157
+#: qml/PairingsPage.qml:155
 msgctxt "@info:placeholder"
 msgid "All games of round %1 have finished"
 msgstr "Všetky partie kola %1 sa skončili"
@@ -684,22 +684,22 @@ msgctxt "@action:inmenu"
 msgid "Delete Player…"
 msgstr "Zoradiť hráčov…"
 
-#: qml/PlayersPage.qml:249
+#: qml/PlayersPage.qml:171
 msgctxt "@info:placeholder"
 msgid "No players found"
 msgstr "Nenašli sa žiadni hráči"
 
-#: qml/PlayersPage.qml:249
+#: qml/PlayersPage.qml:171
 msgctxt "@info:placeholder"
 msgid "No players yet"
 msgstr "Zatiaľ žiadni hráči"
 
-#: qml/PlayersPage.qml:253
+#: qml/PlayersPage.qml:175
 msgctxt "@action:button"
 msgid "Add Player…"
 msgstr "Pridať hráča…"
 
-#: qml/PlayersPage.qml:272
+#: qml/PlayersPage.qml:194
 msgctxt "@info:status Number of players"
 msgid "1 player"
 msgid_plural "%1 players"
@@ -707,7 +707,7 @@ msgstr[0] "1 hráč"
 msgstr[1] "%1 hráči"
 msgstr[2] "%1 hráčov"
 
-#: qml/PlayersPage.qml:273
+#: qml/PlayersPage.qml:195
 msgctxt "@info:status Number of rated players"
 msgid "1 rated"
 msgid_plural "%1 rated"
@@ -715,7 +715,7 @@ msgstr[0] "1 hodnotený"
 msgstr[1] "%1 hodnotení"
 msgstr[2] "%1 hodnotených"
 
-#: qml/PlayersPage.qml:275
+#: qml/PlayersPage.qml:197
 msgctxt "@info:status Total number of players (Number of players rated)"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
@@ -725,19 +725,19 @@ msgctxt "@action:intoolbar Other game results"
 msgid "Other"
 msgstr "Iné"
 
-#: qml/Sidebar.qml:56
+#: qml/Sidebar.qml:49
 msgid "Players"
 msgstr "Hráči"
 
-#: qml/Sidebar.qml:63
+#: qml/Sidebar.qml:58
 msgid "Pairings"
 msgstr "Párovania"
 
-#: qml/Sidebar.qml:70
+#: qml/Sidebar.qml:67
 msgid "Standings"
 msgstr "Konečné skóre"
 
-#: qml/Sidebar.qml:94
+#: qml/Sidebar.qml:89
 msgctxt "@action:button"
 msgid "Settings"
 msgstr "Nastavenia"
@@ -766,7 +766,7 @@ msgctxt "@item:inlistbox Standings After Round %1"
 msgid "After Round %1"
 msgstr "Po kole %1"
 
-#: qml/StandingsPage.qml:127
+#: qml/StandingsPage.qml:125
 msgctxt "@info:placeholder"
 msgid "No standings yet"
 msgstr "Zatiaľ žiadne poradie"
@@ -840,7 +840,7 @@ msgctxt "@title:group"
 msgid "Tiebreaks"
 msgstr "Rozstrely"
 
-#: qml/TournamentSettingsFormat.qml:84
+#: qml/TournamentSettingsFormat.qml:85
 msgctxt "@action:button"
 msgid "Add Tiebreak"
 msgstr "Pridať rozstrel"
@@ -1047,7 +1047,7 @@ msgctxt "@action:button"
 msgid "Add rating list"
 msgstr "Pridať ratingovú listinu"
 
-#: standingsmodel.cpp:88
+#: standingsmodel.cpp:91
 #, kde-format
 msgctxt "@title:column Player Ranking"
 msgid "Rank"
