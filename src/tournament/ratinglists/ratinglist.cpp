@@ -29,18 +29,36 @@
 
 using namespace Qt::StringLiterals;
 
+RatingList::RatingList(QString name)
+    : m_name(std::move(name))
+{
+}
+
+QString RatingList::databaseFolder()
+{
+    return QStandardPaths::writableLocation(QStandardPaths::AppDataLocation);
+}
+
+QString RatingList::databasePath()
+{
+    return databaseFolder() % "/ratinglists.sqlite3"_L1;
+}
+
 std::expected<QSqlDatabase, QString> RatingList::getDb(const QString &connectionName)
 {
     if (QSqlDatabase::contains(connectionName)) {
         return QSqlDatabase::database(connectionName);
     }
 
-    qDebug() << "Opening ratings db" << connectionName;
-    const QString dbFolder = QStandardPaths::writableLocation(QStandardPaths::AppDataLocation);
+    qDebug() << "Opening ratings database" << connectionName;
+    const QString dbFolder = RatingList::databaseFolder();
     QDir().mkpath(dbFolder);
 
+    const auto dbPath = databasePath();
+    qDebug() << "Ratings database location is" << dbPath;
+
     auto db = QSqlDatabase::addDatabase(u"QSQLITE"_s, connectionName);
-    db.setDatabaseName(dbFolder + "/ratinglists.sqlite3"_L1);
+    db.setDatabaseName(dbPath);
 
     if (!db.open()) {
         return std::unexpected(db.lastError().text());
@@ -136,7 +154,7 @@ void RatingList::setExtra(const QByteArray &extra)
     m_extra = doc.object();
 }
 
-QCoro::Task<std::expected<void, QString>> RatingList::import(const QString &name, const QUrl &url)
+QCoro::Task<std::expected<void, QString>> RatingList::import(const QUrl &url)
 {
     qDebug() << "Importing rating list from" << url;
 
@@ -144,7 +162,6 @@ QCoro::Task<std::expected<void, QString>> RatingList::import(const QString &name
         co_return std::unexpected(i18nc("@info", "Could not open file."));
     }
 
-    m_name = name;
     m_url = url.toString();
 
     QByteArray result;
@@ -401,6 +418,8 @@ std::expected<QList<RatingListPlayer>, QString> RatingList::searchPlayers(const 
 
 std::expected<void, QString> RatingList::savePlayers(const QList<RatingListPlayer> &players)
 {
+    Q_ASSERT(m_id > 0);
+
     QVariantList lists;
     QVariantList names;
     QVariantList ids;

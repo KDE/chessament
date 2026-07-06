@@ -64,13 +64,13 @@ QCoro::Task<QString> RatingListModel::importRatingListImpl(const QString &name, 
 {
     auto listUrl = QUrl::fromUserInput(url);
 
-    auto list = std::make_unique<RatingList>();
+    auto list = std::make_unique<RatingList>(name);
 
     connect(list.get(), &RatingList::statusChanged, this, [this](const QString &status) {
         setStatus(status);
     });
 
-    const auto result = co_await list->import(name, listUrl);
+    const auto result = co_await list->import(listUrl);
 
     if (!result) {
         co_return result.error();

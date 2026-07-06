@@ -18,6 +18,12 @@ ecm_add_test(
 )
 
 ecm_add_test(
+    ratinglisttest.cpp
+    LINK_LIBRARIES tournament Qt::Test
+    TEST_NAME ratinglisttest
+)
+
+ecm_add_test(
     utilstest.cpp
     LINK_LIBRARIES tournament Qt::Test
     TEST_NAME utilstest

@@ -78,9 +78,14 @@ std::expected<RatingListPlayer, QString> HtmlRatingListReader::readPlayer()
             case 0:
                 player.setName(value);
                 break;
-            case 1:
-                player.setName(player.name() % ", "_L1 % value);
+            case 1: {
+                if (!player.name().isEmpty()) {
+                    player.setName(player.name() % ", "_L1 % value);
+                } else {
+                    player.setName(value);
+                }
                 break;
+            }
             case 2:
                 player.extra()["origin"_L1] = value;
                 break;

@@ -69,13 +69,21 @@ class RatingList : public QObject
     Q_OBJECT
 
 public:
+    explicit RatingList() = default;
+
+    explicit RatingList(QString name);
+
     static std::vector<std::unique_ptr<RatingList>> lists();
 
     [[nodiscard]] int id() const;
     [[nodiscard]] QString name() const;
     [[nodiscard]] QByteArray extraString() const;
 
-    QCoro::Task<std::expected<void, QString>> import(const QString &name, const QUrl &url);
+    QCoro::Task<std::expected<void, QString>> import(const QUrl &url);
+
+    std::expected<uint, QString> readPlayers(QTextStream *stream, std::unique_ptr<RatingListReader> reader);
+
+    static QString databasePath();
 
     static void remove(int id);
 
@@ -88,13 +96,14 @@ Q_SIGNALS:
     void statusChanged(const QString &status);
 
 private:
+    static QString databaseFolder();
+
     static std::expected<QSqlDatabase, QString> getDb(const QString &connectionName = RATING_LISTS_DB_CONNECTION_NAME);
 
     std::expected<uint, QString> processFile(QByteArray content, const QMimeType &mime);
-    std::expected<uint, QString> readPlayers(QTextStream *stream, std::unique_ptr<RatingListReader> reader);
     std::expected<void, QString> savePlayers(const QList<RatingListPlayer> &players);
 
-    int m_id;
+    int m_id{};
     QString m_name;
     QString m_url;
     QString m_etag;
