@@ -12,7 +12,7 @@
 #include "playersmodel.h"
 #include "standingsmodel.h"
 #include "tournament/event.h"
-#include "tournament/sync/account.h"
+#include "tournament/sync/accountmanager.h"
 #include "tournament/tournament.h"
 
 class Controller : public QObject
