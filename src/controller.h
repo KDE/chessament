@@ -35,10 +35,17 @@ class Controller : public QObject
 
     Q_PROPERTY(AccountManager *accounts READ accountManager CONSTANT)
 
-    Q_PROPERTY(QString currentView READ currentView WRITE setCurrentView NOTIFY currentViewChanged)
+    Q_PROPERTY(Controller::View currentView READ currentView WRITE setCurrentView NOTIFY currentViewChanged)
     Q_PROPERTY(QString error READ error WRITE setError NOTIFY errorChanged)
 
 public:
+    enum class View {
+        Players,
+        Pairings,
+        Standings,
+    };
+    Q_ENUM(View);
+
     explicit Controller(QObject *parent = nullptr);
 
     [[nodiscard]] Event *getEvent() const;
@@ -80,7 +87,7 @@ public:
     [[nodiscard]] AccountManager *accountManager() const;
     Q_INVOKABLE void uploadTournament();
 
-    [[nodiscard]] QString currentView() const;
+    [[nodiscard]] Controller::View currentView() const;
     [[nodiscard]] QString error() const;
 
 public Q_SLOTS:
@@ -89,7 +96,7 @@ public Q_SLOTS:
     void setCurrentPlayer(Player *currentPlayer);
     void setCurrentRound(int currentRound);
     void setAreStandingsValid(bool valid);
-    void setCurrentView(const QString &currentView);
+    void setCurrentView(Controller::View currentView);
     void setError(const QString &error);
 
 Q_SIGNALS:
@@ -120,7 +127,7 @@ private:
 
     std::unique_ptr<AccountManager> m_accountManager;
 
-    QString m_currentView;
+    Controller::View m_currentView;
     QString m_error;
 
     std::unique_ptr<QTemporaryFile> m_tempfile;

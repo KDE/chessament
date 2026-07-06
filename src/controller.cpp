@@ -162,7 +162,7 @@ void Controller::importTrf(const QUrl &fileUrl)
 
     setEvent(std::move(event));
     setTournament(*tournament);
-    setCurrentView(u"PlayersPage"_s);
+    setCurrentView(Controller::View::Players);
 }
 
 void Controller::exportTrf(const QUrl &fileUrl)
@@ -266,7 +266,7 @@ void Controller::newTournament(const QUrl &fileUrl, const QString &name, int num
 
     setEvent(std::move(event));
     setTournament(*tournament);
-    setCurrentView(u"PlayersPage"_s);
+    setCurrentView(Controller::View::Players);
 }
 
 void Controller::openEvent(const QUrl &fileUrl)
@@ -280,7 +280,7 @@ void Controller::openEvent(const QUrl &fileUrl)
 
     setEvent(std::move(event));
     setTournament(m_event->tournament(0));
-    setCurrentView(u"PlayersPage"_s);
+    setCurrentView(Controller::View::Players);
 }
 
 void Controller::saveEventAs(const QUrl &fileUrl)
@@ -325,12 +325,12 @@ void Controller::uploadTournament()
     engine->start();
 }
 
-QString Controller::currentView() const
+Controller::View Controller::currentView() const
 {
     return m_currentView;
 }
 
-void Controller::setCurrentView(const QString &currentView)
+void Controller::setCurrentView(Controller::View currentView)
 {
     if (m_currentView == currentView) {
         return;

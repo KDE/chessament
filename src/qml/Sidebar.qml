@@ -48,27 +48,27 @@ Kirigami.OverlayDrawer {
             Layout.fillWidth: true
             text: KI18n.i18n("Players")
             icon.name: "user-symbolic"
-            checked: Controller.currentView === "PlayersPage"
+            checked: Controller.currentView === Controller.View.Players
             visible: Controller.hasOpenTournament
-            onClicked: root.goToPage("PlayersPage")
+            onClicked: root.goToPage(Controller.View.Players)
         }
 
         Kirigami.NavigationTabButton {
             Layout.fillWidth: true
             text: KI18n.i18n("Pairings")
             icon.name: "system-users-symbolic"
-            checked: Controller.currentView === "PairingsPage"
+            checked: Controller.currentView === Controller.View.Pairings
             visible: Controller.hasOpenTournament
-            onClicked: root.goToPage("PairingsPage")
+            onClicked: root.goToPage(Controller.View.Pairings)
         }
 
         Kirigami.NavigationTabButton {
             Layout.fillWidth: true
             text: KI18n.i18n("Standings")
             icon.name: "games-highscores-symbolic"
-            checked: Controller.currentView === "StandingsPage"
+            checked: Controller.currentView === Controller.View.Standings
             visible: Controller.hasOpenTournament
-            onClicked: root.goToPage("StandingsPage")
+            onClicked: root.goToPage(Controller.View.Standings)
         }
 
         Item {
@@ -98,7 +98,7 @@ Kirigami.OverlayDrawer {
         }
     }
 
-    function goToPage(viewName: string): void {
+    function goToPage(viewName: int): void {
         Controller.currentView = viewName;
     }
 }

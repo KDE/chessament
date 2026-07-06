@@ -126,20 +126,28 @@ StatefulApp.StatefulWindow {
         }
     }
 
-    function pageForView(view: string): var {
-        if (!pageCache[view]) {
-            console.log("Creating page", view);
+    function pageForView(view: int): var {
+        let page = pageCache[view];
+        if (!page) {
+            const components = {
+                [Controller.View.Players]: "PlayersPage",
+                [Controller.View.Pairings]: "PairingsPage",
+                [Controller.View.Standings]: "StandingsPage"
+            };
+            const pageName = components[view];
 
-            const component = Qt.createComponent("org.kde.chessament", view);
+            console.log("Creating page", pageName);
+
+            const component = Qt.createComponent("org.kde.chessament", pageName);
             if (component.status === Component.Error) {
                 console.error(component.errorString());
                 return;
             }
 
-            const obj = component.createObject(root);
-            pageCache[view] = obj;
+            page = component.createObject(root);
+            pageCache[view] = page;
         }
-        return pageCache[view];
+        return page;
     }
 
     Component {
