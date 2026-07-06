@@ -10,7 +10,7 @@ class State
 public:
     explicit State(Tournament *tournament, std::optional<int> maxRound = std::nullopt);
 
-    [[nodiscard]] size_t lastRound() const;
+    [[nodiscard]] int lastRound() const;
 
     QList<Pairing *> pairings(Player *player) const;
     double points(Player *player) const;

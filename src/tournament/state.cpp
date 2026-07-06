@@ -15,7 +15,7 @@ State::State(Tournament *tournament, std::optional<int> maxRound)
     m_pairingsByPlayer = m_tournament->pairingsByPlayer(m_maxRound);
 }
 
-size_t State::lastRound() const
+int State::lastRound() const
 {
     return m_maxRound;
 }

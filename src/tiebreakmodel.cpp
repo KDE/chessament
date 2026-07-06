@@ -28,7 +28,7 @@ int TiebreakModel::rowCount(const QModelIndex &parent) const
 {
     Q_UNUSED(parent);
 
-    return m_tournament->tiebreaks().size();
+    return static_cast<int>(m_tournament->tiebreaks().size());
 }
 
 QVariant TiebreakModel::data(const QModelIndex &index, int role) const

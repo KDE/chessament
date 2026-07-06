@@ -41,9 +41,9 @@ void TrfWriter::writeTournamentInformation(QTextStream &stream)
     writeTiebreaks(stream);
 
     stream << Trf::reportFieldString(Trf::Field::Calendar) << QString(space).repeated(86);
-    for (size_t i = 0; i < m_state.lastRound(); ++i) {
+    for (int i = 0; i < m_state.lastRound(); ++i) {
         QString date;
-        if (i < m_tournament->m_rounds.size() && m_tournament->m_rounds[i]->dateTime().isValid()) {
+        if (i < static_cast<int>(m_tournament->m_rounds.size()) && m_tournament->m_rounds[i]->dateTime().isValid()) {
             date = m_tournament->m_rounds[i]->dateTime().toString(Trf::RoundDateFormat);
         } else {
             date = "        "_L1;
@@ -105,7 +105,7 @@ void TrfWriter::writePlayers(QTextStream &stream)
             return s.player() == player;
         });
         const auto rank = std::distance(standings.constBegin(), standing) + 1;
-        const auto result = player->toTrf(m_state.points(player), rank);
+        const auto result = player->toTrf(m_state.points(player), static_cast<int>(rank));
 
         stream << result.c_str();
 

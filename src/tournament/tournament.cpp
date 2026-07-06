@@ -325,7 +325,7 @@ void Tournament::sortPlayers()
         return p1->rating() > p2->rating();
     });
 
-    for (std::size_t i = 0; i < m_players.size(); i++) {
+    for (int i = 0; i < static_cast<int>(m_players.size()); i++) {
         auto *player = m_players.at(i).get();
         player->setStartingRank(i + 1);
         savePlayer(player);
@@ -407,8 +407,8 @@ QList<Pairing *> Tournament::pairingsOfPlayer(Player *player)
 {
     QList<Pairing *> result;
 
-    for (std::size_t i = 0; i < m_numberOfRounds; ++i) {
-        if (i >= m_rounds.size()) {
+    for (int i = 0; i < m_numberOfRounds; ++i) {
+        if (i >= static_cast<int>(m_rounds.size())) {
             result << nullptr;
             continue;
         }
@@ -810,7 +810,7 @@ Pairing *Tournament::pairing(int round, Player *player) const
 
 int Tournament::numberOfPlayers()
 {
-    return m_players.size();
+    return static_cast<int>(m_players.size());
 }
 
 int Tournament::numberOfRatedPlayers()

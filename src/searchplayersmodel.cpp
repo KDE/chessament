@@ -12,7 +12,7 @@ int SearchPlayersModel::rowCount(const QModelIndex &parent) const
 {
     Q_UNUSED(parent);
 
-    return m_players.size();
+    return static_cast<int>(m_players.size());
 }
 
 QVariant SearchPlayersModel::data(const QModelIndex &index, int role) const
