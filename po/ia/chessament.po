@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-06 00:41+0000\n"
+"POT-Creation-Date: 2026-07-07 00:39+0000\n"
 "PO-Revision-Date: 2026-06-26 17:56+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -1182,7 +1182,7 @@ msgctxt "@info"
 msgid "File format not supported."
 msgstr ""
 
-#: tournament/ratinglists/ratinglist.cpp:465
+#: tournament/ratinglists/ratinglist.cpp:462
 #, kde-format
 msgctxt "@info:progress"
 msgid "Saved 1 player."

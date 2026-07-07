@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-06 00:41+0000\n"
-"PO-Revision-Date: 2026-07-04 21:39+0400\n"
+"POT-Creation-Date: 2026-07-07 00:39+0000\n"
+"PO-Revision-Date: 2026-07-06 18:34+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -1042,24 +1042,22 @@ msgid "Wales"
 msgstr "ويلز"
 
 #: tournament/pairing.h:266 tournament/pairing.h:282 tournament/pairing.h:286
-#, fuzzy, kde-format
-#| msgctxt "@action:intoolbar"
-#| msgid "½-0"
+#, kde-format
 msgctxt "@item Game result: draw"
 msgid "½"
-msgstr "½-0"
+msgstr "½"
 
 #: tournament/pairing.h:270
 #, kde-format
 msgctxt "@item Game result: win by forfeit"
 msgid "+"
-msgstr ""
+msgstr "+"
 
 #: tournament/pairing.h:272
 #, kde-format
 msgctxt "@item Game result: lost by forfeit"
 msgid "-"
-msgstr ""
+msgstr "-"
 
 #: tournament/pairing.h:275
 #, kde-format
@@ -1067,7 +1065,7 @@ msgctxt ""
 "@item Game result. %1 is the points obtained, but the game is unrated. The "
 "'U' is the initial for 'Unrated'"
 msgid "%1U"
-msgstr ""
+msgstr "%1U"
 
 #: tournament/pairing.h:279 tournament/pairing.h:283
 #, kde-format
@@ -1075,20 +1073,19 @@ msgctxt ""
 "@item Game result: %1 is the points obtained, but the game is unrated. The "
 "'U' is the initial for 'Unrated'"
 msgid "%1U"
-msgstr ""
+msgstr "%1U"
 
 #: tournament/pairing.h:287 tournament/pairing.h:291 tournament/pairing.h:295
 #, kde-format
 msgctxt "@item Game result, %1 is the points awarded for the bye"
 msgid "Bye (%1)"
-msgstr ""
+msgstr "الإعفاء (%1)"
 
 #: tournament/pairing.h:298
-#, fuzzy, kde-format
-#| msgid "Pairings"
+#, kde-format
 msgctxt "@item Game result: pairing-allocated bye. Keep it short"
 msgid "Bye (Pairing)"
-msgstr "الإقرانات"
+msgstr "الإعفاء (اقتران)"
 
 #: tournament/pairingengine.cpp:29
 #, kde-format
@@ -1186,7 +1183,7 @@ msgctxt "@info"
 msgid "File format not supported."
 msgstr "صيغة الملف غير متاحة."
 
-#: tournament/ratinglists/ratinglist.cpp:465
+#: tournament/ratinglists/ratinglist.cpp:462
 #, kde-format
 msgctxt "@info:progress"
 msgid "Saved 1 player."

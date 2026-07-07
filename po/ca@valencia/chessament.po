@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-06 00:41+0000\n"
-"PO-Revision-Date: 2026-07-02 08:46+0200\n"
+"POT-Creation-Date: 2026-07-07 00:39+0000\n"
+"PO-Revision-Date: 2026-07-05 09:18+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -1034,24 +1034,22 @@ msgid "Wales"
 msgstr "Gal·les"
 
 #: tournament/pairing.h:266 tournament/pairing.h:282 tournament/pairing.h:286
-#, fuzzy, kde-format
-#| msgctxt "@action:intoolbar"
-#| msgid "½-0"
+#, kde-format
 msgctxt "@item Game result: draw"
 msgid "½"
-msgstr "½-0"
+msgstr "½"
 
 #: tournament/pairing.h:270
 #, kde-format
 msgctxt "@item Game result: win by forfeit"
 msgid "+"
-msgstr ""
+msgstr "+"
 
 #: tournament/pairing.h:272
 #, kde-format
 msgctxt "@item Game result: lost by forfeit"
 msgid "-"
-msgstr ""
+msgstr "-"
 
 #: tournament/pairing.h:275
 #, kde-format
@@ -1059,7 +1057,7 @@ msgctxt ""
 "@item Game result. %1 is the points obtained, but the game is unrated. The "
 "'U' is the initial for 'Unrated'"
 msgid "%1U"
-msgstr ""
+msgstr "%1U"
 
 #: tournament/pairing.h:279 tournament/pairing.h:283
 #, kde-format
@@ -1067,20 +1065,19 @@ msgctxt ""
 "@item Game result: %1 is the points obtained, but the game is unrated. The "
 "'U' is the initial for 'Unrated'"
 msgid "%1U"
-msgstr ""
+msgstr "%1U"
 
 #: tournament/pairing.h:287 tournament/pairing.h:291 tournament/pairing.h:295
 #, kde-format
 msgctxt "@item Game result, %1 is the points awarded for the bye"
 msgid "Bye (%1)"
-msgstr ""
+msgstr "Exempt (%1)"
 
 #: tournament/pairing.h:298
-#, fuzzy, kde-format
-#| msgid "Pairings"
+#, kde-format
 msgctxt "@item Game result: pairing-allocated bye. Keep it short"
 msgid "Bye (Pairing)"
-msgstr "Aparellaments"
+msgstr "Exempt (Aparellament)"
 
 #: tournament/pairingengine.cpp:29
 #, kde-format
@@ -1177,7 +1174,7 @@ msgctxt "@info"
 msgid "File format not supported."
 msgstr "El format del fitxer no està admés."
 
-#: tournament/ratinglists/ratinglist.cpp:465
+#: tournament/ratinglists/ratinglist.cpp:462
 #, kde-format
 msgctxt "@info:progress"
 msgid "Saved 1 player."
@@ -1283,63 +1280,3 @@ msgstr "Resultat «%1» desconegut a l'aparellament «%2»."
 #, kde-format
 msgid "Pairing \"%1\" has no opponent."
 msgstr "L'aparellament «%1» no té oponent."
-
-#~ msgctxt "@action:intoolbar"
-#~ msgid "*"
-#~ msgstr "*"
-
-#~ msgctxt "@action:intoolbar"
-#~ msgid "1-0"
-#~ msgstr "1-0"
-
-#~ msgctxt "@action:intoolbar"
-#~ msgid "½-½"
-#~ msgstr "½-½"
-
-#~ msgctxt "@action:intoolbar"
-#~ msgid "0-1"
-#~ msgstr "0-1"
-
-#~ msgctxt "@action:intoolbar"
-#~ msgid "1F-0F"
-#~ msgstr "1F-0F"
-
-#~ msgctxt "@action:intoolbar"
-#~ msgid "0F-1F"
-#~ msgstr "0F-1F"
-
-#~ msgctxt "@action:intoolbar"
-#~ msgid "0F-0F"
-#~ msgstr "0F-0F"
-
-#~ msgctxt "@action:intoolbar"
-#~ msgid "1U-0U"
-#~ msgstr "1U-0U"
-
-#~ msgctxt "@action:intoolbar"
-#~ msgid "½U-½U"
-#~ msgstr "½U-½U"
-
-#~ msgctxt "@action:intoolbar"
-#~ msgid "0U-1U"
-#~ msgstr "0U-1U"
-
-#~ msgctxt "@action:intoolbar"
-#~ msgid "½U-0U"
-#~ msgstr "½U-0U"
-
-#~ msgctxt "@action:intoolbar"
-#~ msgid "0U-½U"
-#~ msgstr "0U-½U"
-
-#~ msgctxt "@action:intoolbar"
-#~ msgid "0U-0U"
-#~ msgstr "0U-0U"
-
-#~ msgctxt "@action:intoolbar"
-#~ msgid "0-0"
-#~ msgstr "0-0"
-
-#~ msgctxt "@action:intoolbar"
-#~ msgid "0-½"
-#~ msgstr "0-½"
