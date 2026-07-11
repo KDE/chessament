@@ -1025,12 +1025,10 @@ msgid "Wales"
 msgstr ""
 
 #: tournament/pairing.h:266 tournament/pairing.h:282 tournament/pairing.h:286
-#, fuzzy, kde-format
-#| msgctxt "@action:intoolbar"
-#| msgid "½-0"
+#, kde-format
 msgctxt "@item Game result: draw"
 msgid "½"
-msgstr "½-0"
+msgstr ""
 
 #: tournament/pairing.h:270
 #, kde-format
@@ -1067,11 +1065,10 @@ msgid "Bye (%1)"
 msgstr ""
 
 #: tournament/pairing.h:298
-#, fuzzy, kde-format
-#| msgid "Pairings"
+#, kde-format
 msgctxt "@item Game result: pairing-allocated bye. Keep it short"
 msgid "Bye (Pairing)"
-msgstr "配对"
+msgstr ""
 
 #: tournament/pairingengine.cpp:29
 #, kde-format
@@ -1267,63 +1264,3 @@ msgstr "对阵“%2”时出现未知结果“%1”。"
 #, kde-format
 msgid "Pairing \"%1\" has no opponent."
 msgstr "对阵“%1”无对手。"
-
-#~ msgctxt "@action:intoolbar"
-#~ msgid "*"
-#~ msgstr "*"
-
-#~ msgctxt "@action:intoolbar"
-#~ msgid "1-0"
-#~ msgstr "1-0"
-
-#~ msgctxt "@action:intoolbar"
-#~ msgid "½-½"
-#~ msgstr "½-½"
-
-#~ msgctxt "@action:intoolbar"
-#~ msgid "0-1"
-#~ msgstr "0-1"
-
-#~ msgctxt "@action:intoolbar"
-#~ msgid "1F-0F"
-#~ msgstr "1F-0F"
-
-#~ msgctxt "@action:intoolbar"
-#~ msgid "0F-1F"
-#~ msgstr "0F-1F"
-
-#~ msgctxt "@action:intoolbar"
-#~ msgid "0F-0F"
-#~ msgstr "0F-0F"
-
-#~ msgctxt "@action:intoolbar"
-#~ msgid "1U-0U"
-#~ msgstr "1U-0U"
-
-#~ msgctxt "@action:intoolbar"
-#~ msgid "½U-½U"
-#~ msgstr "½U-½U"
-
-#~ msgctxt "@action:intoolbar"
-#~ msgid "0U-1U"
-#~ msgstr "0U-1U"
-
-#~ msgctxt "@action:intoolbar"
-#~ msgid "½U-0U"
-#~ msgstr "½U-0U"
-
-#~ msgctxt "@action:intoolbar"
-#~ msgid "0U-½U"
-#~ msgstr "0U-½U"
-
-#~ msgctxt "@action:intoolbar"
-#~ msgid "0U-0U"
-#~ msgstr "0U-0U"
-
-#~ msgctxt "@action:intoolbar"
-#~ msgid "0-0"
-#~ msgstr "0-0"
-
-#~ msgctxt "@action:intoolbar"
-#~ msgid "0-½"
-#~ msgstr "0-½"
