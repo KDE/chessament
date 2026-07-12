@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-07 00:39+0000\n"
-"PO-Revision-Date: 2026-07-10 23:57+0200\n"
+"PO-Revision-Date: 2026-07-11 10:28+0200\n"
 "Last-Translator: Libor Filípek <libor.filipek@gmail.com>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 26.04.3\n"
+"X-Generator: Poedit 3.9\n"
 
 #: byesmodel.cpp:66
 #, kde-format
@@ -57,7 +57,7 @@ msgstr "Počáteční hodnocení"
 #, kde-format
 msgctxt "@title"
 msgid "Round %1 Pairings"
-msgstr "Kolo %1 - párování"
+msgstr "Kolo %1 - páry"
 
 #: documents.cpp:103
 #, kde-format
@@ -139,7 +139,7 @@ msgstr "Importovat soubor s hlášením o turnaji."
 #, kde-format
 msgctxt "@info:shell Command line option description"
 msgid "Event to open."
-msgstr "Událost k otevření"
+msgstr "Událost k otevření."
 
 #: main.cpp:106
 #, kde-format
@@ -169,7 +169,7 @@ msgstr "№"
 #, kde-format
 msgctxt "@title:column Name of the White Player"
 msgid "White Player"
-msgstr "Bílý hráč "
+msgstr "Bílý hráč"
 
 #: pairingmodel.cpp:105
 #, kde-format
@@ -421,7 +421,7 @@ msgstr "Smazat rozhodovací kolo"
 #: qml/DeletePairingsDialog.qml:17
 msgctxt "@title"
 msgid "Remove pairings"
-msgstr "Odstranit párování"
+msgstr "Odstranit páry"
 
 #: qml/DeletePairingsDialog.qml:25
 msgctxt "@action:check"
@@ -525,17 +525,17 @@ msgstr "Kolo %1"
 #: qml/PairingsPage.qml:91
 msgctxt "@action:intoolbar"
 msgid "Remove pairings of this and following rounds…"
-msgstr ""
+msgstr "Odstranit páry z tohoto a následujících kol…"
 
 #: qml/PairingsPage.qml:105
 msgctxt "@info"
 msgid "The tournament hasn't started yet."
-msgstr ""
+msgstr "Turnaj ještě nezačal."
 
 #: qml/PairingsPage.qml:105
 msgctxt "@info"
 msgid "Round %1 has finished."
-msgstr ""
+msgstr "Kolo %1 skončilo."
 
 #: qml/PairingsPage.qml:109
 msgctxt "@action:button"
@@ -545,12 +545,12 @@ msgstr "Dvojice – kolo %1…"
 #: qml/PairingsPage.qml:153
 msgctxt "@info:placeholder"
 msgid "No pairings for round %1 yet"
-msgstr ""
+msgstr "Zatím žádné páry pro %1 kolo"
 
 #: qml/PairingsPage.qml:155
 msgctxt "@info:placeholder"
 msgid "All games of round %1 have finished"
-msgstr ""
+msgstr "Všechny hry %1 kola skončily"
 
 #: qml/PairRoundDialog.qml:21
 msgctxt "@title %1 is a number >= 1"
@@ -560,15 +560,15 @@ msgstr "Dvojice – kolo %1"
 #: qml/PairRoundDialog.qml:29
 msgctxt "@info"
 msgid "All players will be paired."
-msgstr ""
+msgstr "Všichni hráči budou rozděleni do párů."
 
 #: qml/PairRoundDialog.qml:29
 msgctxt "@info %1 is a number"
 msgid "The following player won't be paired: %2"
 msgid_plural "The following %1 players won't be paired: %2"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Následující hráč nebude zařazen do páru: %2"
+msgstr[1] "Následující %1 hráči nebudou zařazeni do páru: %2"
+msgstr[2] "Následujících %1 hráčů nebude zařazeno do páru: %2"
 
 #: qml/PairRoundDialog.qml:39
 msgctxt "@option:check"
@@ -578,7 +578,7 @@ msgstr "Řazení hráčů"
 #: qml/PairRoundDialog.qml:46
 msgctxt "@label:listbox"
 msgid "First player color:"
-msgstr "Barva prvního hráče"
+msgstr "Barva prvního hráče:"
 
 #: qml/PairRoundDialog.qml:54
 msgctxt "@item:inlistbox As in 'Random color'"
@@ -605,12 +605,12 @@ msgstr "Podrobnosti o hráči \"%1\""
 #: qml/player/PlayerDetails.qml:22
 msgctxt "@action:button"
 msgid "Pairings"
-msgstr "Párování"
+msgstr "Páry"
 
 #: qml/player/PlayerPairingsPage.qml:21
 msgctxt "@title"
 msgid "Pairings"
-msgstr "Párování"
+msgstr "Páry"
 
 #: qml/player/PlayerPairingsPage.qml:26
 msgctxt "@action:button"
@@ -625,7 +625,7 @@ msgstr "Dostupné"
 #: qml/player/PlayerPairingsPage.qml:83 qml/TournamentSettingsFormat.qml:42
 msgctxt "@title:group"
 msgid "Pairings"
-msgstr "Párování"
+msgstr "Páry"
 
 #: qml/player/PlayerPairingsPage.qml:108
 msgctxt "@info:label"
@@ -684,8 +684,9 @@ msgstr[2] "%1 hráčů"
 msgctxt "@info:status Number of rated players"
 msgid "1 rated"
 msgid_plural "%1 rated"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "1 hodnocení"
+msgstr[1] "%1 hodnocení"
+msgstr[2] "%1 hodnocení"
 
 #: qml/PlayersPage.qml:197
 msgctxt "@info:status Total number of players (Number of players rated)"
@@ -703,7 +704,7 @@ msgstr "Hráči"
 
 #: qml/Sidebar.qml:58
 msgid "Pairings"
-msgstr "Párování"
+msgstr "Páry"
 
 #: qml/Sidebar.qml:67
 msgid "Standings"
@@ -725,6 +726,8 @@ msgid ""
 "Changing the initial ranking after the fourth round has been paired is not "
 "allowed in official tournaments."
 msgstr ""
+"Změna počátečního pořadí po spárování čtvrtého kola není v oficiálních "
+"turnajích povolena."
 
 #: qml/StandingsPage.qml:66 qml/StandingsPage.qml:76
 msgctxt "@item:inlistbox"
@@ -848,7 +851,7 @@ msgstr "Přidat rozhodčího"
 #: qml/TournamentSettingsInformation.qml:63
 msgctxt "@info:status"
 msgid "No arbiters yet."
-msgstr "Nyní není žádný rozhodčí."
+msgstr "Zatím není žádný rozhodčí."
 
 #: qml/WelcomePage.qml:21
 msgctxt "@title"
@@ -923,7 +926,7 @@ msgstr "Obecné"
 #: settings/GeneralPage.qml:24
 msgctxt "@option:check"
 msgid "Automatically open exported PDF files"
-msgstr ""
+msgstr "Automaticky otevírat exportované soubory PDF"
 
 #: settings/RatingListsPage.qml:24 settings/RatingListsPage.qml:151
 msgctxt "@title"
@@ -943,7 +946,7 @@ msgstr "Importovat"
 #: settings/RatingListsPage.qml:56
 msgctxt "@label:listbox"
 msgid "All Supported Files (*.zip *.xls)"
-msgstr ""
+msgstr "Všechny podporované soubory (*.zip, *.xls)"
 
 #: settings/RatingListsPage.qml:63
 msgctxt "@info:label"
@@ -953,7 +956,7 @@ msgstr "Jméno"
 #: settings/RatingListsPage.qml:68
 msgctxt "@info:label"
 msgid "Rating list file or URL"
-msgstr ""
+msgstr "Soubor se seznamem hodnocení nebo URL"
 
 #: settings/RatingListsPage.qml:73
 msgctxt "@action:button"
@@ -961,27 +964,24 @@ msgid "Select file"
 msgstr "Vyberte soubor"
 
 #: settings/RatingListsPage.qml:95
-#, fuzzy
-#| msgctxt "@title:column Player Rating"
-#| msgid "Rating"
 msgctxt "@title:window"
 msgid "Rating List Imported"
-msgstr "Hodnocení"
+msgstr "Seznam hodnocení byl importován"
 
 #: settings/RatingListsPage.qml:97
 msgctxt "@title:window"
 msgid "Importing Rating List"
-msgstr ""
+msgstr "Import seznamu hodnocení"
 
 #: settings/RatingListsPage.qml:134
 msgctxt "@title"
 msgid "Delete Rating List"
-msgstr ""
+msgstr "Smazat seznam hodnocení"
 
 #: settings/RatingListsPage.qml:135
 msgctxt "@label"
 msgid "Permanently delete rating list \"%1\"?"
-msgstr ""
+msgstr "Chcete trvale smazat seznam hodnocení \"%1\"?"
 
 #: settings/RatingListsPage.qml:143
 msgctxt "@action:button Delete Rating List"
@@ -991,22 +991,22 @@ msgstr "Smazat"
 #: settings/RatingListsPage.qml:156
 msgctxt "@info:status"
 msgid "No rating lists yet."
-msgstr ""
+msgstr "Zatím žádný seznam hodnocení."
 
 #: settings/RatingListsPage.qml:176
 msgctxt "@action:button"
 msgid "Delete Rating List"
-msgstr ""
+msgstr "Smazat seznam hodnocení"
 
 #: settings/RatingListsPage.qml:185
 msgctxt "@action:button"
 msgid "Delete rating list"
-msgstr ""
+msgstr "Smazat seznam hodnocení"
 
 #: settings/RatingListsPage.qml:195
 msgctxt "@action:button"
 msgid "Add rating list"
-msgstr ""
+msgstr "Přidat seznam hodnocení"
 
 #: standingsmodel.cpp:91
 #, kde-format
@@ -1018,7 +1018,7 @@ msgstr "Pořadí"
 #, kde-kuit-format
 msgctxt "@info"
 msgid "The file is not a <application>Chessament</application> event."
-msgstr ""
+msgstr "Tento soubor není událostí <application>Chessament</application>."
 
 #: tournament/federations.h:175
 msgctxt "FIDE Federation"
@@ -1028,7 +1028,7 @@ msgstr "Skotsko"
 #: tournament/federations.h:203
 msgctxt "FIDE Federation"
 msgid "Chinese Taipei"
-msgstr ""
+msgstr "Čínský Tchaj-pej"
 
 #: tournament/federations.h:217
 msgctxt "FIDE Federation"
@@ -1085,7 +1085,7 @@ msgstr "Volný los (párování)"
 #, kde-format
 msgctxt "bbpPairings is the name of a program, should not be translated"
 msgid "The pairing engine bbpPairings could not be found. Is it installed?"
-msgstr ""
+msgstr "Nelze najít nástroj pro párování bbpPairings. Je nainstalován?"
 
 #: tournament/pairingengine.cpp:37
 #, kde-format
@@ -1096,19 +1096,19 @@ msgstr "Nelze vytvořit dočasný soubor."
 #, kde-format
 msgctxt "bbpPairings is the name of a program, should not be translated"
 msgid "bbpPairings terminated with a non zero exit code: %1"
-msgstr ""
+msgstr "bbpPairings skončil s nenulovým výstupním kódem: %1"
 
 #: tournament/pairingengine.cpp:79 tournament/trf/reader.cpp:243
 #, kde-format
 msgid "Invalid pairing \"%1\"."
-msgstr ""
+msgstr "Neplatné párování \"%1\"."
 
 #: tournament/pairingengine.cpp:85 tournament/pairingengine.cpp:89
 #: tournament/pairingengine.cpp:93 tournament/pairingengine.cpp:97
 #: tournament/trf/reader.cpp:256
 #, kde-format
 msgid "Invalid player \"%1\" on pairing \"%2\"."
-msgstr ""
+msgstr "Neplatný hráč \"%1\" v páru \"%2\"."
 
 #: tournament/ratinglists/ratinglist.cpp:144
 #: tournament/ratinglists/ratinglist.cpp:161
@@ -1121,13 +1121,13 @@ msgstr "Nelze otevřít soubor."
 #, kde-format
 msgctxt "@info"
 msgid "Could not open file: the file does not exists."
-msgstr ""
+msgstr "Nelze otevřít soubor: soubor neexistuje."
 
 #: tournament/ratinglists/ratinglist.cpp:173
 #, kde-format
 msgctxt "@info:progress"
 msgid "Downloading file…"
-msgstr ""
+msgstr "Stahování souboru…"
 
 #: tournament/ratinglists/ratinglist.cpp:186
 #, kde-format
@@ -1137,101 +1137,97 @@ msgctxt ""
 msgid ""
 "Downloading file…\n"
 "%1 / %2 (%3%)"
-msgstr ""
+msgstr "Stahování souboru…%1 / %2 (%3%)"
 
 #: tournament/ratinglists/ratinglist.cpp:197
 #, kde-format
 msgctxt "@info"
 msgid "Could not download rating list: %1"
-msgstr ""
+msgstr "Nelze stáhnout seznam hodnocení: %1"
 
 #: tournament/ratinglists/ratinglist.cpp:208
 #, kde-format
 msgctxt "@info"
 msgid "Could not download rating list from %1 (unsupported protocol)."
-msgstr ""
+msgstr "Nepodařilo se stáhnout seznam hodnocení z %1 (nepodporovaný protokol)."
 
 #: tournament/ratinglists/ratinglist.cpp:221
 #, kde-format
 msgctxt "@info:progress"
 msgid "Imported one player."
 msgid_plural "Imported %1 players."
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Importován 1 hráč."
+msgstr[1] "Importováni %1 hráči."
+msgstr[2] "Importováno %1 hráčů."
 
 #: tournament/ratinglists/ratinglist.cpp:237
-#, fuzzy, kde-format
-#| msgid "Couldn't open file"
+#, kde-format
 msgctxt "@info"
 msgid "Could not extract file."
-msgstr "Soubor nelze otevřít"
+msgstr "Soubor se nepodařilo rozbalit."
 
 #: tournament/ratinglists/ratinglist.cpp:242
 #, kde-format
 msgctxt "@info"
 msgid "File format not supported."
-msgstr ""
+msgstr "Tento formát souboru není podporován."
 
 #: tournament/ratinglists/ratinglist.cpp:462
-#, fuzzy, kde-format
-#| msgctxt "@info:status Number of players"
-#| msgid "1 player"
-#| msgid_plural "%1 players"
+#, kde-format
 msgctxt "@info:progress"
 msgid "Saved 1 player."
 msgid_plural "Saved %1 players."
-msgstr[0] "1 hráč"
-msgstr[1] "%1 hráči"
-msgstr[2] "%1 hráčů"
+msgstr[0] "Uložen 1 hráč."
+msgstr[1] "Uloženi %1 hráči."
+msgstr[2] "Uloženo %1 hráčů."
 
 #: tournament/tiebreaks/aob.h:23 tournament/tournament.cpp:532
 #, kde-format
 msgctxt "Tiebreak"
 msgid "Average Buchholz of Opponents"
-msgstr ""
+msgstr "Průměrná hodnota Buchholz soupeřů"
 
 #: tournament/tiebreaks/buchholz.cpp:14
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Exclude the lowest scores:"
-msgstr ""
+msgstr "Vyloučit nejnižší skóre:"
 
 #: tournament/tiebreaks/buchholz.cpp:35
 #, kde-format
 msgctxt "@info"
 msgid "Unsupported tiebreak option \"%1\""
-msgstr ""
+msgstr "Nepodporovaná možnost rozhodovacího kola \"%1\""
 
 #: tournament/tiebreaks/buchholz.h:25 tournament/tournament.cpp:514
 #, kde-format
 msgctxt "Buchholz tiebreak"
 msgid "Buchholz"
-msgstr ""
+msgstr "Buchholz"
 
 #: tournament/tiebreaks/buchholz.h:28
 #, kde-format
 msgctxt "Buchholz N tiebreak, N is a number < 0"
 msgid "Buchholz %1"
-msgstr ""
+msgstr "Buchholz %1"
 
 #: tournament/tiebreaks/dummy.h:23
 #, kde-format
 msgctxt "@info"
 msgid "Unsupported tiebreak"
-msgstr ""
+msgstr "Nepodporované rozhodovací kolo"
 
 #: tournament/tiebreaks/numberwins.h:22 tournament/tournament.cpp:518
 #, kde-format
 msgctxt "Number of Wins tiebreak"
 msgid "Number of Wins"
-msgstr ""
+msgstr "Počet vítězství"
 
 #: tournament/tiebreaks/playedblack.h:22 tournament/tournament.cpp:528
 #, kde-format
 msgctxt "Number of Games Played with Black (over the board) tiebreak"
 msgid "Number of Games Played with Black (over the board)"
-msgstr ""
+msgstr "Počet partií odehraných černými (u šachovnice)"
 
 #: tournament/tiebreaks/points.h:22 tournament/tiebreaks/points.h:27
 #: tournament/tournament.cpp:510
@@ -1246,12 +1242,12 @@ msgctxt ""
 "Number of Games Won (over the board) tiebreak. Different from the 'Number of "
 "Wins' tiebreak, which includes games won by forfeit."
 msgid "Number of Games Won (over the board)"
-msgstr ""
+msgstr "Počet vyhraných partií (u šachovnice)"
 
 #: tournament/tournament.cpp:967
 #, kde-format
 msgid "An error ocurred while pairing the round: %1"
-msgstr ""
+msgstr "Při párování kola došlo k chybě: %1"
 
 #: tournament/tournament.cpp:1203
 #, kde-format
@@ -1261,28 +1257,28 @@ msgstr "Soubor nelze otevřít"
 #: tournament/trf/reader.cpp:54 tournament/trf/reader.cpp:61
 #, kde-format
 msgid "Player \"%1\" not found."
-msgstr ""
+msgstr "Hráč \"%1\" nebyl nalezen."
 
 #: tournament/trf/reader.cpp:67
 #, kde-format
 msgid "Unknown result on pairing \"%1\" with \"%2\"."
-msgstr ""
+msgstr "Neznámý výsledek při párování \"%1\" s \"%2\"."
 
 #: tournament/trf/reader.cpp:189
 #, kde-format
 msgctxt "@info"
 msgid "Date \"%1\" is invalid."
-msgstr ""
+msgstr "Datum \"%1\" je neplatné."
 
 #: tournament/trf/reader.cpp:263
 #, kde-format
 msgid "Unknown result \"%1\" on pairing \"%2\"."
-msgstr ""
+msgstr "Neznámý výsledek \"%1\" při párování \"%2\"."
 
 #: tournament/trf/reader.cpp:266
 #, kde-format
 msgid "Pairing \"%1\" has no opponent."
-msgstr ""
+msgstr "V páru \"%1\" není žádný soupeř."
 
 #~ msgctxt "@title:column"
 #~ msgid "Sex"
