@@ -64,6 +64,7 @@
     <p xml:lang="ar">تطبيق شطرنج هو برنامج لإدارة بطولات الشطرنج. يدعم حاليًا بطولات فردية بنظام سويسري.</p>
     <p xml:lang="ca">El Chessament és un gestor de torneigs d'escacs. Actualment permet torneigs individuals segons el sistema suís.</p>
     <p xml:lang="ca-valencia">Chessament és un gestor de torneigs d'escacs. Actualment permet torneigs individuals segons el sistema suís.</p>
+    <p xml:lang="cs">Chessament je program pro správu šachových turnajů. V současné době podporuje individuální turnaje hrané švýcarským systémem.</p>
     <p xml:lang="de">Chessament ist ein Schachturniermanager. Er unterstützt derzeit individuelle Turniere nach dem Schweizer System.</p>
     <p xml:lang="es">Chessament es un gestor de torneos de ajedrez. Actualmente soporta torneos individuales con sistema suizo.</p>
     <p xml:lang="eu">Chessament xake txapelketa kudeatzaile bat da. Gaur egun, sistema suitzarreko banakako txapelketak onartzen ditu.</p>
@@ -115,6 +116,7 @@
       <caption xml:lang="ar">عرض اللاعبين</caption>
       <caption xml:lang="ca">Vista dels jugadors</caption>
       <caption xml:lang="ca-valencia">Vista dels jugadors</caption>
+      <caption xml:lang="cs">Zobrazení hráčů</caption>
       <caption xml:lang="es">Vista de jugadores</caption>
       <caption xml:lang="fr">Affichage des joueurs</caption>
       <caption xml:lang="he">תצוגת שחקנים</caption>
@@ -134,6 +136,7 @@
       <caption xml:lang="ar">عرض الأزواج</caption>
       <caption xml:lang="ca">Vista dels aparellaments</caption>
       <caption xml:lang="ca-valencia">Vista dels aparellaments</caption>
+      <caption xml:lang="cs">Zobrazení párů</caption>
       <caption xml:lang="es">Vista de emparejamientos</caption>
       <caption xml:lang="fr">Affichage des appariements</caption>
       <caption xml:lang="he">תצוגת שיבוצים</caption>
@@ -153,6 +156,7 @@
       <caption xml:lang="ar">عرض المواقف</caption>
       <caption xml:lang="ca">Vista de la classificació</caption>
       <caption xml:lang="ca-valencia">Vista de la classificació</caption>
+      <caption xml:lang="cs">Zobrazení výsledků</caption>
       <caption xml:lang="es">Vista de la clasificación</caption>
       <caption xml:lang="fr">Affichage des classements</caption>
       <caption xml:lang="he">תצוגת עמדות</caption>
