@@ -342,6 +342,13 @@ void RatingList::remove(int id)
             return;
         }
 
+        query = QSqlQuery(*db);
+        query.prepare(VACUUM_QUERY);
+
+        if (!query.exec()) {
+            qWarning() << "Error vacuuming the ratings database" << query.lastError().text();
+        }
+
         db->close();
     }
 
