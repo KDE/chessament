@@ -54,6 +54,10 @@ constexpr auto RATING_LIST_PLAYERS_TABLE_SCHEMA =
     "FOREIGN KEY (list) REFERENCES ratinglists(id) ON DELETE CASCADE"
     ");"_L1;
 
+const QString RATING_LIST_PLAYERS_ID_INDEX = u"CREATE INDEX IF NOT EXISTS idx_player_id ON players(playerId);"_s;
+
+const QString RATING_LIST_PLAYERS_NATIONAL_ID_INDEX = u"CREATE INDEX IF NOT EXISTS idx_national_id ON players(nationalId);"_s;
+
 constexpr auto ADD_RATING_LIST_PLAYER_QUERY =
     "INSERT INTO players(list, name, playerId, federation, gender, title, birthday, standard, rapid, blitz, nationalId, nationalRating, extra) "
     "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, jsonb(?));"_L1;

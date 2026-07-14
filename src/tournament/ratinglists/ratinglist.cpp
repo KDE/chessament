@@ -87,6 +87,22 @@ std::expected<QSqlDatabase, QString> RatingList::getDb(const QString &connection
         return std::unexpected(query.lastError().text());
     }
 
+    query = QSqlQuery(db);
+    query.prepare(RATING_LIST_PLAYERS_ID_INDEX);
+
+    if (!query.exec()) {
+        qWarning() << "Error creating ratings database idx_player_id" << query.lastError().text();
+        return std::unexpected(query.lastError().text());
+    }
+
+    query = QSqlQuery(db);
+    query.prepare(RATING_LIST_PLAYERS_NATIONAL_ID_INDEX);
+
+    if (!query.exec()) {
+        qWarning() << "Error creating ratings database idx_national_id" << query.lastError().text();
+        return std::unexpected(query.lastError().text());
+    }
+
     return db;
 }
 
