@@ -367,9 +367,8 @@ std::expected<QList<RatingListPlayer>, QString> RatingList::searchPlayers(const 
     QSqlQuery query(*db);
     query.prepare(SEARCH_PLAYERS_QUERY);
     query.bindValue(u":search"_s, u"%%1%"_s.arg(text));
-    query.exec();
 
-    if (query.lastError().isValid()) {
+    if (!query.exec()) {
         return std::unexpected(query.lastError().text());
     }
 
