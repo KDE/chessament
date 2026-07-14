@@ -139,10 +139,19 @@ std::expected<void, QString> Event::openDatabase(const QString &dbName)
         return std::unexpected(db.lastError().text());
     }
 
-    QSqlQuery query(ENABLE_FOREIGN_KEYS_QUERY, db);
+    QSqlQuery query(db);
+    query.prepare(ENABLE_FOREIGN_KEYS_QUERY);
 
-    if (query.lastError().isValid()) {
+    if (!query.exec()) {
         qDebug() << "Error enabling foreign keys" << query.lastError().text();
+        return std::unexpected(query.lastError().text());
+    }
+
+    query = QSqlQuery(db);
+    query.prepare(ENABLE_SECURE_DELETE_QUERY);
+
+    if (!query.exec()) {
+        qWarning() << "Error enabling secure delete" << query.lastError().text();
         return std::unexpected(query.lastError().text());
     }
 
