@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-07 00:39+0000\n"
+"POT-Creation-Date: 2026-07-14 00:40+0000\n"
 "PO-Revision-Date: 2026-03-11 16:01+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -1185,21 +1185,21 @@ msgstr "Virheellinen paritus ”%1”."
 msgid "Invalid player \"%1\" on pairing \"%2\"."
 msgstr "Virheellinen pelaaja ”%1” parissa ”%2”."
 
-#: tournament/ratinglists/ratinglist.cpp:144
-#: tournament/ratinglists/ratinglist.cpp:161
+#: tournament/ratinglists/ratinglist.cpp:162
+#: tournament/ratinglists/ratinglist.cpp:178
 #, fuzzy, kde-format
 #| msgid "Couldn't open file"
 msgctxt "@info"
 msgid "Could not open file."
 msgstr "Tiedostoa ei voitu avata"
 
-#: tournament/ratinglists/ratinglist.cpp:156
+#: tournament/ratinglists/ratinglist.cpp:173
 #, kde-format
 msgctxt "@info"
 msgid "Could not open file: the file does not exists."
 msgstr ""
 
-#: tournament/ratinglists/ratinglist.cpp:173
+#: tournament/ratinglists/ratinglist.cpp:190
 #, fuzzy, kde-format
 #| msgctxt "@info:progress"
 #| msgid "Downloading file"
@@ -1207,7 +1207,7 @@ msgctxt "@info:progress"
 msgid "Downloading file…"
 msgstr "Ladataan tiedostoa"
 
-#: tournament/ratinglists/ratinglist.cpp:186
+#: tournament/ratinglists/ratinglist.cpp:203
 #, fuzzy, kde-format
 #| msgctxt "@info:progress"
 #| msgid "Downloading file (%1 %)"
@@ -1219,7 +1219,7 @@ msgid ""
 "%1 / %2 (%3%)"
 msgstr "Ladataan tiedostoa (%1 %)"
 
-#: tournament/ratinglists/ratinglist.cpp:197
+#: tournament/ratinglists/ratinglist.cpp:214
 #, fuzzy, kde-format
 #| msgctxt "@info"
 #| msgid "Couldn't download rating list: %1"
@@ -1227,7 +1227,7 @@ msgctxt "@info"
 msgid "Could not download rating list: %1"
 msgstr "Vahvuuslukuluetteloa ei voitu ladata: %1"
 
-#: tournament/ratinglists/ratinglist.cpp:208
+#: tournament/ratinglists/ratinglist.cpp:225
 #, fuzzy, kde-format
 #| msgctxt "@info"
 #| msgid "Couldn't download rating list: %1"
@@ -1235,7 +1235,7 @@ msgctxt "@info"
 msgid "Could not download rating list from %1 (unsupported protocol)."
 msgstr "Vahvuuslukuluetteloa ei voitu ladata: %1"
 
-#: tournament/ratinglists/ratinglist.cpp:221
+#: tournament/ratinglists/ratinglist.cpp:238
 #, kde-format
 msgctxt "@info:progress"
 msgid "Imported one player."
@@ -1243,7 +1243,7 @@ msgid_plural "Imported %1 players."
 msgstr[0] "Tuotiin yksi pelaaja."
 msgstr[1] "Tuotiin %1 pelaajaa."
 
-#: tournament/ratinglists/ratinglist.cpp:237
+#: tournament/ratinglists/ratinglist.cpp:254
 #, fuzzy, kde-format
 #| msgctxt "@info"
 #| msgid "Couldn't extract file."
@@ -1251,13 +1251,13 @@ msgctxt "@info"
 msgid "Could not extract file."
 msgstr "Tiedostoa ei voitu purkaa."
 
-#: tournament/ratinglists/ratinglist.cpp:242
+#: tournament/ratinglists/ratinglist.cpp:259
 #, kde-format
 msgctxt "@info"
 msgid "File format not supported."
 msgstr "Tiedostomuotoa ei tueta."
 
-#: tournament/ratinglists/ratinglist.cpp:462
+#: tournament/ratinglists/ratinglist.cpp:481
 #, kde-format
 msgctxt "@info:progress"
 msgid "Saved 1 player."
