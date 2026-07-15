@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-14 00:40+0000\n"
+"POT-Creation-Date: 2026-07-15 00:41+0000\n"
 "PO-Revision-Date: 2026-07-05 19:00+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -1008,7 +1008,7 @@ msgctxt "@title:column Player Ranking"
 msgid "Rank"
 msgstr "Derece"
 
-#: tournament/event.cpp:157 tournament/event.cpp:166
+#: tournament/event.cpp:166 tournament/event.cpp:175
 #, kde-kuit-format
 msgctxt "@info"
 msgid "The file is not a <application>Chessament</application> event."
@@ -1104,26 +1104,26 @@ msgstr "Geçersiz eşleşme “%1”."
 msgid "Invalid player \"%1\" on pairing \"%2\"."
 msgstr "“%2” eşleşmesinde geçersiz oyuncu “%1”."
 
-#: tournament/ratinglists/ratinglist.cpp:162
 #: tournament/ratinglists/ratinglist.cpp:178
+#: tournament/ratinglists/ratinglist.cpp:194
 #, kde-format
 msgctxt "@info"
 msgid "Could not open file."
 msgstr "Dosya açılamadı."
 
-#: tournament/ratinglists/ratinglist.cpp:173
+#: tournament/ratinglists/ratinglist.cpp:189
 #, kde-format
 msgctxt "@info"
 msgid "Could not open file: the file does not exists."
 msgstr "Dosya açılamadı: Dosya yok."
 
-#: tournament/ratinglists/ratinglist.cpp:190
+#: tournament/ratinglists/ratinglist.cpp:206
 #, kde-format
 msgctxt "@info:progress"
 msgid "Downloading file…"
 msgstr "Dosya indiriliyor…"
 
-#: tournament/ratinglists/ratinglist.cpp:203
+#: tournament/ratinglists/ratinglist.cpp:219
 #, kde-format
 msgctxt ""
 "@info:progress %1 & %2 are the file download progress (received / total), %3 "
@@ -1135,20 +1135,20 @@ msgstr ""
 "Dosya indiriliyor…\n"
 "%1 / %2 (%​%3)"
 
-#: tournament/ratinglists/ratinglist.cpp:214
+#: tournament/ratinglists/ratinglist.cpp:230
 #, kde-format
 msgctxt "@info"
 msgid "Could not download rating list: %1"
 msgstr "Derecelendirme listesi indirilemedi: %1"
 
-#: tournament/ratinglists/ratinglist.cpp:225
+#: tournament/ratinglists/ratinglist.cpp:241
 #, kde-format
 msgctxt "@info"
 msgid "Could not download rating list from %1 (unsupported protocol)."
 msgstr ""
 "%1 konumundan derecelendirme listesi indirilemedi (desteklenmeyen protokol)."
 
-#: tournament/ratinglists/ratinglist.cpp:238
+#: tournament/ratinglists/ratinglist.cpp:254
 #, kde-format
 msgctxt "@info:progress"
 msgid "Imported one player."
@@ -1156,19 +1156,19 @@ msgid_plural "Imported %1 players."
 msgstr[0] "1 oyuncu içe aktarıldı."
 msgstr[1] "%1 oyuncu içe aktarıldı."
 
-#: tournament/ratinglists/ratinglist.cpp:254
+#: tournament/ratinglists/ratinglist.cpp:270
 #, kde-format
 msgctxt "@info"
 msgid "Could not extract file."
 msgstr "Dosya çıkarılamadı."
 
-#: tournament/ratinglists/ratinglist.cpp:259
+#: tournament/ratinglists/ratinglist.cpp:275
 #, kde-format
 msgctxt "@info"
 msgid "File format not supported."
 msgstr "Dosya biçimi desteklenmiyor."
 
-#: tournament/ratinglists/ratinglist.cpp:481
+#: tournament/ratinglists/ratinglist.cpp:496
 #, kde-format
 msgctxt "@info:progress"
 msgid "Saved 1 player."
