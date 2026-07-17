@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-15 00:41+0000\n"
-"PO-Revision-Date: 2026-06-26 17:56+0200\n"
+"PO-Revision-Date: 2026-07-16 12:08+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -335,17 +335,11 @@ msgid "Arbiter"
 msgstr ""
 
 #: qml/components/ArbiterDelegate.qml:53
-#, fuzzy
-#| msgctxt "@title:column Player Title"
-#| msgid "Title"
 msgctxt "@info:placeholder Arbiter's Title"
 msgid "Title"
 msgstr "Titulo"
 
 #: qml/components/ArbiterDelegate.qml:60
-#, fuzzy
-#| msgctxt "@title:column Player Name"
-#| msgid "Name"
 msgctxt "@info:placeholder Arbiter's Name"
 msgid "Name"
 msgstr "Nomine"
@@ -353,23 +347,17 @@ msgstr "Nomine"
 #: qml/components/ArbiterDelegate.qml:67
 msgctxt "@info:placeholder Arbiter's ID"
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #: qml/components/ArbiterDelegate.qml:72
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Delete Player"
 msgctxt "@action:button"
 msgid "Delete Arbiter"
-msgstr "Dele Jocator"
+msgstr "Dele Arbitro"
 
 #: qml/components/ArbiterDelegate.qml:78
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Delete Player"
 msgctxt "@action:button"
 msgid "Delete arbiter"
-msgstr "Dele Jocator"
+msgstr "Dele arbitro"
 
 #: qml/components/MenuBar.qml:17
 msgctxt "@action:menu"
@@ -853,12 +841,9 @@ msgid "Add Arbiter"
 msgstr ""
 
 #: qml/TournamentSettingsInformation.qml:63
-#, fuzzy
-#| msgctxt "@info:placeholder"
-#| msgid "No players yet"
 msgctxt "@info:status"
 msgid "No arbiters yet."
-msgstr "Ancora necun Jocatores"
+msgstr "Ancora necun arbitros"
 
 #: qml/WelcomePage.qml:21
 msgctxt "@title"
@@ -1043,12 +1028,10 @@ msgid "Wales"
 msgstr "Galles"
 
 #: tournament/pairing.h:266 tournament/pairing.h:282 tournament/pairing.h:286
-#, fuzzy, kde-format
-#| msgctxt "@action:intoolbar"
-#| msgid "½-0"
+#, kde-format
 msgctxt "@item Game result: draw"
 msgid "½"
-msgstr "½-0"
+msgstr "½"
 
 #: tournament/pairing.h:270
 #, kde-format
@@ -1068,7 +1051,7 @@ msgctxt ""
 "@item Game result. %1 is the points obtained, but the game is unrated. The "
 "'U' is the initial for 'Unrated'"
 msgid "%1U"
-msgstr ""
+msgstr "%1U"
 
 #: tournament/pairing.h:279 tournament/pairing.h:283
 #, kde-format
@@ -1076,13 +1059,13 @@ msgctxt ""
 "@item Game result: %1 is the points obtained, but the game is unrated. The "
 "'U' is the initial for 'Unrated'"
 msgid "%1U"
-msgstr ""
+msgstr "%1U"
 
 #: tournament/pairing.h:287 tournament/pairing.h:291 tournament/pairing.h:295
 #, kde-format
 msgctxt "@item Game result, %1 is the points awarded for the bye"
 msgid "Bye (%1)"
-msgstr ""
+msgstr "A revider (%1)"
 
 #: tournament/pairing.h:298
 #, kde-format
@@ -1169,12 +1152,10 @@ msgstr[0] ""
 msgstr[1] ""
 
 #: tournament/ratinglists/ratinglist.cpp:270
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Could not open file."
+#, kde-format
 msgctxt "@info"
 msgid "Could not extract file."
-msgstr "Non poteva aperir file."
+msgstr "Non poteva extraher file."
 
 #: tournament/ratinglists/ratinglist.cpp:275
 #, kde-format
