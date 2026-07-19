@@ -40,6 +40,7 @@ class Controller : public QObject
 
 public:
     enum class View {
+        None,
         Players,
         Pairings,
         Standings,
@@ -127,7 +128,7 @@ private:
 
     std::unique_ptr<AccountManager> m_accountManager;
 
-    Controller::View m_currentView;
+    Controller::View m_currentView{Controller::View::None};
     QString m_error;
 
     std::unique_ptr<QTemporaryFile> m_tempfile;
