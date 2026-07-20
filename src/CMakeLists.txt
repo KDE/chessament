@@ -131,9 +131,15 @@ target_link_libraries(chessament PRIVATE
     chessament_settingsplugin
 )
 
-ecm_add_app_icon(CHESSAMENT_ICON ICONS ${CMAKE_SOURCE_DIR}/128-logo.png)
+set(ICON_FILES
+    ${CMAKE_SOURCE_DIR}/icons/sc-apps-org.kde.chessament.svg
+    ${CMAKE_SOURCE_DIR}/icons/128-apps-chessament.png
+    ${CMAKE_SOURCE_DIR}/icons/256-apps-chessament.png
+    ${CMAKE_SOURCE_DIR}/icons/512-apps-chessament.png
+)
 
-target_sources(chessament PRIVATE ${CHESSAMENT_ICON})
+ecm_install_icons(ICONS ${ICON_FILES} DESTINATION ${KDE_INSTALL_ICONDIR})
+ecm_add_app_icon(chessament ICONS ${ICON_FILES})
 
 install(TARGETS chessament ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 
