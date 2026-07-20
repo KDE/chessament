@@ -3,7 +3,7 @@
     SPDX-License-Identifier: CC0-1.0
 -->
 
-# <img src="icons/sc-apps-chessament.svg" width="40" alt="" /> Chessament
+# <img src="icons/sc-apps-org.kde.chessament.svg" width="40" alt="" /> Chessament
 
 A chess tournament manager.
 
