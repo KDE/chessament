@@ -17,7 +17,7 @@ set_package_properties(ECM PROPERTIES
     URL "https://api.kde.org/ecm/"
     DESCRIPTION "extra cmake modules")
 
-set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${ECM_MODULE_PATH})
+set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
 
 set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
