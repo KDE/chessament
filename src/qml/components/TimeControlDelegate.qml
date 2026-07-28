@@ -3,6 +3,7 @@
 
 pragma ComponentBehavior: Bound
 
+import Qt.labs.synchronizer
 import QtQuick
 import QtQuick.Controls as Controls
 import QtQuick.Layouts
@@ -39,8 +40,9 @@ FormCard.AbstractFormDelegate {
                 Layout.fillWidth: true
                 from: 0
                 to: 100
-                value: delegate.moves
-                onValueModified: delegate.moves = value
+                Synchronizer on value {
+                    property alias source: delegate.moves
+                }
             }
         }
 

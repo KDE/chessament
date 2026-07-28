@@ -104,6 +104,9 @@ void TimeControlModel::deletePeriod(int row)
     m_tournament->timeControl().removePeriod(row);
     endRemoveRows();
 
+    const int lastRow = rowCount() - 1;
+    Q_EMIT dataChanged(index(lastRow), index(lastRow), {TimeControlModel::Roles::Moves});
+
     m_tournament->saveTimeControl();
 }
 

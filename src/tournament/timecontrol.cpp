@@ -146,7 +146,13 @@ void TimeControl::removePeriod(int index)
     Q_ASSERT(value.isArray());
 
     auto periods = value.toArray();
+    Q_ASSERT(periods.size() > 1);
+
     periods.erase(periods.begin() + index);
+
+    auto lastPeriod = periods.last().toObject();
+    lastPeriod.remove("moves"_L1);
+    periods[periods.size() - 1] = lastPeriod;
 
     value = periods;
 }
