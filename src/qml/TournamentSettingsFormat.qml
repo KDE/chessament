@@ -82,6 +82,12 @@ FormCard.FormCardPage {
                 count: timeControlRepeater.count
             }
         }
+
+        FormCard.FormDelegateSeparator {}
+
+        FormCard.FormTextDelegate {
+            text: timeControlModel.format
+        }
     }
 
     FormCard.FormHeader {

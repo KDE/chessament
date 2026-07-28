@@ -22,6 +22,27 @@ void TimeControlModel::setTournament(Tournament *tournament)
     }
     m_tournament = tournament;
     Q_EMIT tournamentChanged();
+    Q_EMIT formatChanged();
+}
+
+QString TimeControlModel::format() const
+{
+    if (m_tournament == nullptr) {
+        return {};
+    }
+
+    const auto format = m_tournament->timeControl().format();
+
+    switch (format) {
+    case TimeControl::Format::Blitz:
+        return i18nc("@info", "The time control is Blitz.");
+    case TimeControl::Format::Rapid:
+        return i18nc("@info", "The time control is Rapid.");
+    case TimeControl::Format::Classical:
+        return i18nc("@info", "The time control is Classical.");
+    }
+
+    Q_UNREACHABLE();
 }
 
 int TimeControlModel::rowCount(const QModelIndex &parent) const
@@ -76,6 +97,7 @@ bool TimeControlModel::setData(const QModelIndex &index, const QVariant &value, 
     m_tournament->saveTimeControl();
 
     Q_EMIT dataChanged(this->index(index.row()), this->index(index.row()));
+    Q_EMIT formatChanged();
 
     return true;
 }

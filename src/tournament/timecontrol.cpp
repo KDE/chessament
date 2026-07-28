@@ -5,7 +5,9 @@
 #include "utils.h"
 
 #include <QJsonArray>
+#include <chrono>
 
+using namespace std::chrono_literals;
 using namespace Qt::StringLiterals;
 
 TimeControlPeriod::TimeControlPeriod(std::optional<int> moves, int time, int increment)
@@ -155,6 +157,30 @@ void TimeControl::removePeriod(int index)
     periods[periods.size() - 1] = lastPeriod;
 
     value = periods;
+}
+
+std::chrono::seconds TimeControl::durationPerPlayer() const
+{
+    std::chrono::seconds duration{};
+
+    for (const auto period : periods()) {
+        duration += std::chrono::seconds(period.time() + (period.increment() * 60));
+    }
+
+    return duration;
+}
+
+TimeControl::Format TimeControl::format() const
+{
+    const auto duration = durationPerPlayer();
+
+    if (duration <= 10min) {
+        return TimeControl::Format::Blitz;
+    }
+    if (duration < 60min) {
+        return TimeControl::Format::Rapid;
+    }
+    return TimeControl::Format::Classical;
 }
 
 QJsonObject TimeControl::json()

@@ -14,6 +14,7 @@ class TimeControlModel : public QAbstractListModel
     QML_ELEMENT
 
     Q_PROPERTY(Tournament *tournament READ tournament WRITE setTournament NOTIFY tournamentChanged)
+    Q_PROPERTY(QString format READ format NOTIFY formatChanged)
 
 public:
     enum Roles {
@@ -26,6 +27,8 @@ public:
     explicit TimeControlModel(QObject *parent = nullptr);
 
     Tournament *tournament();
+
+    [[nodiscard]] QString format() const;
 
     [[nodiscard]] int rowCount(const QModelIndex &parent = {}) const override;
     [[nodiscard]] QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
@@ -40,8 +43,9 @@ public Q_SLOTS:
 
 Q_SIGNALS:
     void tournamentChanged();
+    void formatChanged();
     void errorOcurred(const QString &error);
 
 private:
-    Tournament *m_tournament;
+    Tournament *m_tournament = nullptr;
 };

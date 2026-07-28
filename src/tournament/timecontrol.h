@@ -32,6 +32,12 @@ private:
 };
 
 struct TimeControl {
+    enum class Format {
+        Blitz,
+        Rapid,
+        Classical,
+    };
+
     explicit TimeControl() = default;
 
     explicit TimeControl(std::initializer_list<TimeControlPeriod> periods);
@@ -45,6 +51,10 @@ struct TimeControl {
     void setPeriod(int index, const TimeControlPeriod &period);
 
     void removePeriod(int index);
+
+    [[nodiscard]] std::chrono::seconds durationPerPlayer() const;
+
+    [[nodiscard]] TimeControl::Format format() const;
 
     QJsonObject json();
 
