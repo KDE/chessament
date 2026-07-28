@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-15 00:41+0000\n"
+"POT-Creation-Date: 2026-07-28 00:41+0000\n"
 "PO-Revision-Date: 2026-03-11 16:01+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -436,6 +436,32 @@ msgctxt "@action:button"
 msgid "Delete tiebreak"
 msgstr "Poista katkaisupeli"
 
+#: qml/components/TimeControlDelegate.qml:36
+#, fuzzy
+#| msgctxt "@action:button Move tiebreak up"
+#| msgid "Move Up"
+msgctxt "@label:textbox Number of moves"
+msgid "Moves"
+msgstr "Siirrä ylemmäs"
+
+#: qml/components/TimeControlDelegate.qml:49
+msgctxt "@label:textbox Time control period time"
+msgid "Time (minutes)"
+msgstr ""
+
+#: qml/components/TimeControlDelegate.qml:63
+msgctxt "@label:textbox Time control period increment (per second)"
+msgid "Increment (seconds)"
+msgstr ""
+
+#: qml/components/TimeControlDelegate.qml:75
+#, fuzzy
+#| msgctxt "@action:button Delete Rating List"
+#| msgid "Delete"
+msgctxt "@action:button Delete time control period"
+msgid "Delete"
+msgstr "Poista"
+
 #: qml/DeletePairingsDialog.qml:17
 msgctxt "@title"
 msgid "Remove pairings"
@@ -654,7 +680,7 @@ msgctxt "@item:inlistbox Available to play"
 msgid "Available"
 msgstr "Käytettävissä"
 
-#: qml/player/PlayerPairingsPage.qml:83 qml/TournamentSettingsFormat.qml:42
+#: qml/player/PlayerPairingsPage.qml:83 qml/TournamentSettingsFormat.qml:43
 msgctxt "@title:group"
 msgid "Pairings"
 msgstr "Paritukset"
@@ -810,46 +836,59 @@ msgctxt "round number"
 msgid "Round %1"
 msgstr "%1. kierros"
 
-#: qml/TournamentSettingsFormat.qml:17
+#: qml/TournamentSettingsFormat.qml:18
 msgctxt "@title"
 msgid "Format"
 msgstr "Muoto"
 
-#: qml/TournamentSettingsFormat.qml:20
+#: qml/TournamentSettingsFormat.qml:21
 msgctxt "@title:group"
 msgid "Format"
 msgstr "Muoto"
 
-#: qml/TournamentSettingsFormat.qml:24
+#: qml/TournamentSettingsFormat.qml:25
 msgid "Swiss system"
 msgstr "Sveitsiläinen järjestelmä"
 
-#: qml/TournamentSettingsFormat.qml:28
+#: qml/TournamentSettingsFormat.qml:29
 msgid "Rounds"
 msgstr "Kierroksia"
 
-#: qml/TournamentSettingsFormat.qml:46
+#: qml/TournamentSettingsFormat.qml:47
 msgid "Pairing engine"
 msgstr "Paritusmoottori"
 
-#: qml/TournamentSettingsFormat.qml:47
+#: qml/TournamentSettingsFormat.qml:48
 msgid "bbpPairings"
 msgstr "bbpPairings"
 
-#: qml/TournamentSettingsFormat.qml:53
+#: qml/TournamentSettingsFormat.qml:54
 msgid "Pairing allocated bye"
 msgstr ""
 
-#: qml/TournamentSettingsFormat.qml:54
+#: qml/TournamentSettingsFormat.qml:55
 msgid "The value of the pairing allocated bye"
 msgstr ""
 
-#: qml/TournamentSettingsFormat.qml:60
+#: qml/TournamentSettingsFormat.qml:61
+msgctxt "@title:group"
+msgid "Time Control"
+msgstr ""
+
+#: qml/TournamentSettingsFormat.qml:65
+#, fuzzy
+#| msgctxt "@action:intoolbar"
+#| msgid "Add Player…"
+msgctxt "@action:button Add time control period"
+msgid "Add Period"
+msgstr "Lisää pelaaja…"
+
+#: qml/TournamentSettingsFormat.qml:88
 msgctxt "@title:group"
 msgid "Tiebreaks"
 msgstr "Katkaisupelit"
 
-#: qml/TournamentSettingsFormat.qml:85
+#: qml/TournamentSettingsFormat.qml:113
 msgctxt "@action:button"
 msgid "Add Tiebreak"
 msgstr "Lisää katkaisupeli"
@@ -1265,7 +1304,7 @@ msgid_plural "Saved %1 players."
 msgstr[0] "Tallennettiin yksi pelaaja."
 msgstr[1] "Tallennettiin %1 pelaajaa."
 
-#: tournament/tiebreaks/aob.h:23 tournament/tournament.cpp:532
+#: tournament/tiebreaks/aob.h:23 tournament/tournament.cpp:533
 #, kde-format
 msgctxt "Tiebreak"
 msgid "Average Buchholz of Opponents"
@@ -1283,7 +1322,7 @@ msgctxt "@info"
 msgid "Unsupported tiebreak option \"%1\""
 msgstr "Ei-tuettu katkaisupelivalinta ”%1”"
 
-#: tournament/tiebreaks/buchholz.h:25 tournament/tournament.cpp:514
+#: tournament/tiebreaks/buchholz.h:25 tournament/tournament.cpp:515
 #, kde-format
 msgctxt "Buchholz tiebreak"
 msgid "Buchholz"
@@ -1303,26 +1342,26 @@ msgctxt "@info"
 msgid "Unsupported tiebreak"
 msgstr "Ei-tuettu katkaisupelivalinta ”%1”"
 
-#: tournament/tiebreaks/numberwins.h:22 tournament/tournament.cpp:518
+#: tournament/tiebreaks/numberwins.h:22 tournament/tournament.cpp:519
 #, kde-format
 msgctxt "Number of Wins tiebreak"
 msgid "Number of Wins"
 msgstr "Voittojen määrä"
 
-#: tournament/tiebreaks/playedblack.h:22 tournament/tournament.cpp:528
+#: tournament/tiebreaks/playedblack.h:22 tournament/tournament.cpp:529
 #, kde-format
 msgctxt "Number of Games Played with Black (over the board) tiebreak"
 msgid "Number of Games Played with Black (over the board)"
 msgstr "Mustalla pelattujen pelien määrä (yleisesti)"
 
 #: tournament/tiebreaks/points.h:22 tournament/tiebreaks/points.h:27
-#: tournament/tournament.cpp:510
+#: tournament/tournament.cpp:511
 #, kde-format
 msgctxt "Game points"
 msgid "Points"
 msgstr "Pisteet"
 
-#: tournament/tiebreaks/won.h:23 tournament/tournament.cpp:524
+#: tournament/tiebreaks/won.h:23 tournament/tournament.cpp:525
 #, kde-format
 msgctxt ""
 "Number of Games Won (over the board) tiebreak. Different from the 'Number of "
@@ -1330,12 +1369,12 @@ msgctxt ""
 msgid "Number of Games Won (over the board)"
 msgstr "Voitettujen pelien määrä (yleisesti)"
 
-#: tournament/tournament.cpp:967
+#: tournament/tournament.cpp:968
 #, kde-format
 msgid "An error ocurred while pairing the round: %1"
 msgstr "Tapahtui virhe paritettaessa kierrosta: %1"
 
-#: tournament/tournament.cpp:1203
+#: tournament/tournament.cpp:1200
 #, kde-format
 msgid "Couldn't open file"
 msgstr "Tiedostoa ei voitu avata"
