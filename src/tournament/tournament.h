@@ -140,6 +140,8 @@ public:
      */
     void sortPlayers();
 
+    void updateRatings(int listId);
+
     /*!
      * Changes the starting rank of \a player to \a startingRank.
      *

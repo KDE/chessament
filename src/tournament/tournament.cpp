@@ -12,6 +12,7 @@
 
 #include "db.h"
 #include "event.h"
+#include "ratinglists/ratinglist.h"
 #include "state.h"
 #include "tiebreaks/aob.h"
 #include "tiebreaks/buchholz.h"
@@ -330,6 +331,27 @@ void Tournament::sortPlayers()
         auto *player = m_players.at(i).get();
         player->setStartingRank(i + 1);
         savePlayer(player);
+    }
+}
+
+void Tournament::updateRatings(int listId)
+{
+    const auto &players = m_players;
+    for (const auto &player : players) {
+        const auto listPlayer = RatingList::searchPlayer(player->playerId(), listId);
+
+        if (!listPlayer) {
+            continue;
+        }
+
+        if (listPlayer->standardRating() == player->rating() && listPlayer->nationalRating() == player->nationalRating()) {
+            continue;
+        }
+
+        player->setRating(listPlayer->standardRating());
+        player->setNationalRating(listPlayer->nationalRating());
+
+        savePlayer(player.get());
     }
 }
 

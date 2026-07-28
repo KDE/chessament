@@ -371,8 +371,6 @@ std::expected<QList<RatingListPlayer>, QString> RatingList::searchPlayers(const 
         return std::unexpected(db.error());
     }
 
-    QList<RatingListPlayer> players{};
-
     QSqlQuery query(*db);
     query.prepare(SEARCH_PLAYERS_QUERY);
     query.bindValue(u":search"_s, u"%%1%"_s.arg(text));
@@ -381,54 +379,32 @@ std::expected<QList<RatingListPlayer>, QString> RatingList::searchPlayers(const 
         return std::unexpected(query.lastError().text());
     }
 
-    const int idNo = query.record().indexOf("playerId");
-    const int nameNo = query.record().indexOf("name");
-    const int federationNo = query.record().indexOf("federation");
-    const int genderNo = query.record().indexOf("gender");
-    const int titleNo = query.record().indexOf("title");
-    const int birthDayNo = query.record().indexOf("birthday");
-    const int standardNo = query.record().indexOf("standard");
-    const int rapidNo = query.record().indexOf("rapid");
-    const int blitzNo = query.record().indexOf("blitz");
-    const int nationalIdNo = query.record().indexOf("nationalId");
-    const int nationalRatingNo = query.record().indexOf("nationalRating");
-    const int extraNo = query.record().indexOf("extra");
+    return loadPlayers(query);
+}
 
-    while (query.next()) {
-        const auto id = query.value(idNo).toString();
-        const auto name = query.value(nameNo).toString();
-        const auto federation = query.value(federationNo).toString();
-        const auto gender = query.value(genderNo).toString();
-        const auto title = query.value(titleNo).toString();
-        const auto birthDate = query.value(birthDayNo).toString();
-        const auto standardRating = query.value(standardNo).toInt();
-        const auto rapidRating = query.value(rapidNo).toInt();
-        const auto blitzRating = query.value(blitzNo).toInt();
-        const auto nationalId = query.value(nationalIdNo).toString();
-        const auto nationalRating = query.value(nationalRatingNo).toInt();
-
-        const auto extra = query.value(extraNo).toByteArray();
-        const auto extraJson = QJsonDocument::fromJson(extra);
-
-        const auto player = RatingListPlayer{
-            id,
-            name,
-            federation,
-            gender,
-            title,
-            birthDate,
-            standardRating,
-            rapidRating,
-            blitzRating,
-            nationalId,
-            nationalRating,
-            extraJson.object(),
-        };
-
-        players << player;
+std::optional<RatingListPlayer> RatingList::searchPlayer(const QString &playerId, int listId)
+{
+    auto db = getDb();
+    if (!db) {
+        return std::nullopt;
     }
 
-    return players;
+    QSqlQuery query(*db);
+    query.prepare(SEARCH_PLAYER_QUERY);
+    query.bindValue(u":playerId"_s, playerId);
+    query.bindValue(u":listId"_s, listId);
+
+    if (!query.exec()) {
+        return std::nullopt;
+    }
+
+    const auto players = loadPlayers(query);
+
+    if (players.isEmpty()) {
+        return std::nullopt;
+    }
+
+    return players.first();
 }
 
 std::expected<void, QString> RatingList::savePlayers(const QList<RatingListPlayer> &players)
@@ -496,6 +472,60 @@ std::expected<void, QString> RatingList::savePlayers(const QList<RatingListPlaye
     Q_EMIT statusChanged(i18ncp("@info:progress", "Saved 1 player.", "Saved %1 players.", m_playerCount));
 
     return {};
+}
+
+QList<RatingListPlayer> RatingList::loadPlayers(QSqlQuery &query)
+{
+    QList<RatingListPlayer> players{};
+
+    const int idNo = query.record().indexOf("playerId");
+    const int nameNo = query.record().indexOf("name");
+    const int federationNo = query.record().indexOf("federation");
+    const int genderNo = query.record().indexOf("gender");
+    const int titleNo = query.record().indexOf("title");
+    const int birthDayNo = query.record().indexOf("birthday");
+    const int standardNo = query.record().indexOf("standard");
+    const int rapidNo = query.record().indexOf("rapid");
+    const int blitzNo = query.record().indexOf("blitz");
+    const int nationalIdNo = query.record().indexOf("nationalId");
+    const int nationalRatingNo = query.record().indexOf("nationalRating");
+    const int extraNo = query.record().indexOf("extra");
+
+    while (query.next()) {
+        const auto id = query.value(idNo).toString();
+        const auto name = query.value(nameNo).toString();
+        const auto federation = query.value(federationNo).toString();
+        const auto gender = query.value(genderNo).toString();
+        const auto title = query.value(titleNo).toString();
+        const auto birthDate = query.value(birthDayNo).toString();
+        const auto standardRating = query.value(standardNo).toInt();
+        const auto rapidRating = query.value(rapidNo).toInt();
+        const auto blitzRating = query.value(blitzNo).toInt();
+        const auto nationalId = query.value(nationalIdNo).toString();
+        const auto nationalRating = query.value(nationalRatingNo).toInt();
+
+        const auto extra = query.value(extraNo).toByteArray();
+        const auto extraJson = QJsonDocument::fromJson(extra);
+
+        const auto player = RatingListPlayer{
+            id,
+            name,
+            federation,
+            gender,
+            title,
+            birthDate,
+            standardRating,
+            rapidRating,
+            blitzRating,
+            nationalId,
+            nationalRating,
+            extraJson.object(),
+        };
+
+        players << player;
+    }
+
+    return players;
 }
 
 #include "moc_ratinglist.cpp"

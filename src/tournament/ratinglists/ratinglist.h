@@ -14,6 +14,7 @@
 #include "ratinglistplayer.h"
 
 class QSqlDatabase;
+class QSqlQuery;
 class RatingListReader;
 
 using namespace Qt::StringLiterals;
@@ -65,6 +66,10 @@ constexpr auto ADD_RATING_LIST_PLAYER_QUERY =
 static const auto SEARCH_PLAYERS_QUERY =
     u"SELECT playerId, name, federation, gender, title, birthday, standard, rapid, blitz, nationalId, nationalRating, json(extra) as extra FROM players WHERE name LIKE :search LIMIT 20;"_s;
 
+static const QString SEARCH_PLAYER_QUERY =
+    u"SELECT playerId, name, federation, gender, title, birthday, standard, rapid, blitz, nationalId, nationalRating, json(extra) as extra "
+    "FROM players WHERE list = :listId AND playerId = :playerId LIMIT 1;"_s;
+
 static constexpr auto RATING_LISTS_DB_CONNECTION_NAME = "rating-lists"_L1;
 static constexpr auto RATING_LISTS_DB_CONNECTION_NAME_WRITER = "rating-lists-writer"_L1;
 
@@ -93,6 +98,8 @@ public:
 
     static std::expected<QList<RatingListPlayer>, QString> searchPlayers(const QString &text);
 
+    static std::optional<RatingListPlayer> searchPlayer(const QString &playerId, int listId);
+
 public Q_SLOTS:
     void setExtra(const QByteArray &extra);
 
@@ -106,6 +113,8 @@ private:
 
     std::expected<uint, QString> processFile(QByteArray content, const QMimeType &mime);
     std::expected<void, QString> savePlayers(const QList<RatingListPlayer> &players);
+
+    static QList<RatingListPlayer> loadPlayers(QSqlQuery &query);
 
     int m_id{};
     QString m_name;

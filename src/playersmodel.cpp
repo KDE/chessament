@@ -300,6 +300,21 @@ void PlayersModel::deletePlayer(const QModelIndex &index)
     endRemoveRows();
 }
 
+void PlayersModel::updateRatings(int listId)
+{
+    m_tournament->updateRatings(listId);
+
+    const int ratingColumn = static_cast<int>(m_columns.indexOf(PlayersModel::Columns::Rating));
+    if (ratingColumn >= 0) {
+        Q_EMIT dataChanged(index(0, ratingColumn), index(rowCount() - 1, ratingColumn));
+    }
+
+    const int nationalRatingColumn = static_cast<int>(m_columns.indexOf(PlayersModel::Columns::NationalRating));
+    if (nationalRatingColumn >= 0) {
+        Q_EMIT dataChanged(index(0, nationalRatingColumn), index(rowCount() - 1, nationalRatingColumn));
+    }
+}
+
 void PlayersModel::updatePlayer(Player *player)
 {
     Q_EMIT dataChanged(index(player->startingRank() - 1, 0), index(player->startingRank() - 1, columnCount() - 1), {});

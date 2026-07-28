@@ -61,6 +61,9 @@ public:
                                const QString &origin,
                                const QString &gender);
     Q_INVOKABLE void deletePlayer(const QModelIndex &index);
+
+    Q_INVOKABLE void updateRatings(int listId);
+
     void updatePlayer(Player *player);
 
 Q_SIGNALS:
