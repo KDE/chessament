@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-28 00:41+0000\n"
+"POT-Creation-Date: 2026-07-29 00:42+0000\n"
 "PO-Revision-Date: 2025-11-09 11:05+0200\n"
 "Last-Translator: Toms Trasūns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -440,7 +440,7 @@ msgctxt "@action:button"
 msgid "Delete tiebreak"
 msgstr "Dzēst neizšķirta izšķiršanu"
 
-#: qml/components/TimeControlDelegate.qml:36
+#: qml/components/TimeControlDelegate.qml:37
 #, fuzzy
 #| msgctxt "@action:button Move tiebreak up"
 #| msgid "Move Up"
@@ -448,17 +448,17 @@ msgctxt "@label:textbox Number of moves"
 msgid "Moves"
 msgstr "Pārvietot augšup"
 
-#: qml/components/TimeControlDelegate.qml:49
+#: qml/components/TimeControlDelegate.qml:51
 msgctxt "@label:textbox Time control period time"
 msgid "Time (minutes)"
 msgstr ""
 
-#: qml/components/TimeControlDelegate.qml:63
+#: qml/components/TimeControlDelegate.qml:65
 msgctxt "@label:textbox Time control period increment (per second)"
 msgid "Increment (seconds)"
 msgstr ""
 
-#: qml/components/TimeControlDelegate.qml:75
+#: qml/components/TimeControlDelegate.qml:77
 #, fuzzy
 #| msgctxt "@title:column Name of the White Player"
 #| msgid "White Player"
@@ -565,12 +565,12 @@ msgctxt "@option:check"
 msgid "Hide finished games"
 msgstr "Slēpt pabeigtās partijas"
 
-#: qml/PairingsPage.qml:60 qml/PlayersPage.qml:123 qml/StandingsPage.qml:49
+#: qml/PairingsPage.qml:60 qml/PlayersPage.qml:132 qml/StandingsPage.qml:49
 msgctxt "@action:intoolbar"
 msgid "Print…"
 msgstr "Drukāt…"
 
-#: qml/PairingsPage.qml:65 qml/PlayersPage.qml:128 qml/StandingsPage.qml:54
+#: qml/PairingsPage.qml:65 qml/PlayersPage.qml:137 qml/StandingsPage.qml:54
 msgctxt "@action:intoolbar"
 msgid "Export as PDF…"
 msgstr "Eksportēt kā PDF…"
@@ -710,21 +710,26 @@ msgid "Details…"
 msgstr ""
 
 #: qml/PlayersPage.qml:113
+msgctxt "@action Update players ratings"
+msgid "Update ratings…"
+msgstr ""
+
+#: qml/PlayersPage.qml:122
 msgctxt "@action:intoolbar"
 msgid "Sort Players…"
 msgstr "Kārtot spēlētājus…"
 
-#: qml/PlayersPage.qml:134
+#: qml/PlayersPage.qml:143
 msgctxt "@action:intoolbar"
 msgid "Add Player…"
 msgstr "Pievienot spēlētāju…"
 
-#: qml/PlayersPage.qml:145
+#: qml/PlayersPage.qml:154
 msgctxt "@action:inmenu"
 msgid "Open Player Details"
 msgstr ""
 
-#: qml/PlayersPage.qml:151
+#: qml/PlayersPage.qml:160
 #, fuzzy
 #| msgctxt "@action:intoolbar"
 #| msgid "Sort Players…"
@@ -732,7 +737,7 @@ msgctxt "@action:inmenu"
 msgid "Delete Player…"
 msgstr "Kārtot spēlētājus…"
 
-#: qml/PlayersPage.qml:171
+#: qml/PlayersPage.qml:180
 #, fuzzy
 #| msgctxt "@info:placeholder"
 #| msgid "No players yet"
@@ -740,17 +745,17 @@ msgctxt "@info:placeholder"
 msgid "No players found"
 msgstr "Spēlētāju vēl nav"
 
-#: qml/PlayersPage.qml:171
+#: qml/PlayersPage.qml:180
 msgctxt "@info:placeholder"
 msgid "No players yet"
 msgstr "Spēlētāju vēl nav"
 
-#: qml/PlayersPage.qml:175
+#: qml/PlayersPage.qml:184
 msgctxt "@action:button"
 msgid "Add Player…"
 msgstr "Pievienot spēlētāju…"
 
-#: qml/PlayersPage.qml:194
+#: qml/PlayersPage.qml:203
 msgctxt "@info:status Number of players"
 msgid "1 player"
 msgid_plural "%1 players"
@@ -758,7 +763,7 @@ msgstr[0] "%1 spēlētājs"
 msgstr[1] "%1 spēlētāji"
 msgstr[2] "%1 spēlētāju"
 
-#: qml/PlayersPage.qml:195
+#: qml/PlayersPage.qml:204
 msgctxt "@info:status Number of rated players"
 msgid "1 rated"
 msgid_plural "%1 rated"
@@ -766,7 +771,7 @@ msgstr[0] "%1 ar reitingu"
 msgstr[1] "%1 ar reitingu"
 msgstr[2] "%1 ar reitingu"
 
-#: qml/PlayersPage.qml:197
+#: qml/PlayersPage.qml:206
 msgctxt "@info:status Total number of players (Number of players rated)"
 msgid "%1 (%2)"
 msgstr ""
@@ -903,12 +908,12 @@ msgctxt "@action:button Add time control period"
 msgid "Add Period"
 msgstr "Pievienot spēlētāju…"
 
-#: qml/TournamentSettingsFormat.qml:88
+#: qml/TournamentSettingsFormat.qml:94
 msgctxt "@title:group"
 msgid "Tiebreaks"
 msgstr "Neizšķirta izšķiršana"
 
-#: qml/TournamentSettingsFormat.qml:113
+#: qml/TournamentSettingsFormat.qml:119
 msgctxt "@action:button"
 msgid "Add Tiebreak"
 msgstr "Pievienot neizšķirta izšķiršanu"
@@ -953,6 +958,27 @@ msgstr "Pievienot neizšķirta izšķiršanu"
 msgctxt "@info:status"
 msgid "No arbiters yet."
 msgstr "Spēlētāju vēl nav"
+
+#: qml/UpdateRatingsDialog.qml:17
+#, fuzzy
+#| msgctxt "@title:column Player National Rating"
+#| msgid "National Rating"
+msgctxt "@title"
+msgid "Update Ratings"
+msgstr "Nacionālais reitings"
+
+#: qml/UpdateRatingsDialog.qml:25
+#, fuzzy
+#| msgctxt "@info:placeholder"
+#| msgid "No standings yet"
+msgctxt "@label:listbox"
+msgid "Choose a rating list:"
+msgstr "Rezultātu vēl nav"
+
+#: qml/UpdateRatingsDialog.qml:35
+msgctxt "@action:button Update players ratings"
+msgid "Update"
+msgstr ""
 
 #: qml/WelcomePage.qml:21
 msgctxt "@title"
@@ -1150,6 +1176,24 @@ msgctxt "@title:column Player Ranking"
 msgid "Rank"
 msgstr "Vieta"
 
+#: timecontrolmodel.cpp:38
+#, kde-format
+msgctxt "@info"
+msgid "The time control is Blitz."
+msgstr ""
+
+#: timecontrolmodel.cpp:40
+#, kde-format
+msgctxt "@info"
+msgid "The time control is Rapid."
+msgstr ""
+
+#: timecontrolmodel.cpp:42
+#, kde-format
+msgctxt "@info"
+msgid "The time control is Classical."
+msgstr ""
+
 #: tournament/event.cpp:166 tournament/event.cpp:175
 #, kde-kuit-format
 msgctxt "@info"
@@ -1315,7 +1359,7 @@ msgctxt "@info"
 msgid "File format not supported."
 msgstr ""
 
-#: tournament/ratinglists/ratinglist.cpp:496
+#: tournament/ratinglists/ratinglist.cpp:472
 #, fuzzy, kde-format
 #| msgctxt "@info:status Number of players"
 #| msgid "1 player"
@@ -1327,7 +1371,7 @@ msgstr[0] "%1 spēlētājs"
 msgstr[1] "%1 spēlētāji"
 msgstr[2] "%1 spēlētāju"
 
-#: tournament/tiebreaks/aob.h:23 tournament/tournament.cpp:533
+#: tournament/tiebreaks/aob.h:23 tournament/tournament.cpp:555
 #, kde-format
 msgctxt "Tiebreak"
 msgid "Average Buchholz of Opponents"
@@ -1345,7 +1389,7 @@ msgctxt "@info"
 msgid "Unsupported tiebreak option \"%1\""
 msgstr ""
 
-#: tournament/tiebreaks/buchholz.h:25 tournament/tournament.cpp:515
+#: tournament/tiebreaks/buchholz.h:25 tournament/tournament.cpp:537
 #, kde-format
 msgctxt "Buchholz tiebreak"
 msgid "Buchholz"
@@ -1367,26 +1411,26 @@ msgctxt "@info"
 msgid "Unsupported tiebreak"
 msgstr "Pielāgot neizšķirta izšķiršanu"
 
-#: tournament/tiebreaks/numberwins.h:22 tournament/tournament.cpp:519
+#: tournament/tiebreaks/numberwins.h:22 tournament/tournament.cpp:541
 #, kde-format
 msgctxt "Number of Wins tiebreak"
 msgid "Number of Wins"
 msgstr "Uzvaru skaits"
 
-#: tournament/tiebreaks/playedblack.h:22 tournament/tournament.cpp:529
+#: tournament/tiebreaks/playedblack.h:22 tournament/tournament.cpp:551
 #, kde-format
 msgctxt "Number of Games Played with Black (over the board) tiebreak"
 msgid "Number of Games Played with Black (over the board)"
 msgstr ""
 
 #: tournament/tiebreaks/points.h:22 tournament/tiebreaks/points.h:27
-#: tournament/tournament.cpp:511
+#: tournament/tournament.cpp:533
 #, kde-format
 msgctxt "Game points"
 msgid "Points"
 msgstr "Punkti"
 
-#: tournament/tiebreaks/won.h:23 tournament/tournament.cpp:525
+#: tournament/tiebreaks/won.h:23 tournament/tournament.cpp:547
 #, fuzzy, kde-format
 #| msgctxt "Number of Wins tiebreak"
 #| msgid "Number of Wins"
@@ -1396,12 +1440,12 @@ msgctxt ""
 msgid "Number of Games Won (over the board)"
 msgstr "Uzvaru skaits"
 
-#: tournament/tournament.cpp:968
+#: tournament/tournament.cpp:990
 #, kde-format
 msgid "An error ocurred while pairing the round: %1"
 msgstr "Pārojot kārtu, notika kļūda: %1"
 
-#: tournament/tournament.cpp:1200
+#: tournament/tournament.cpp:1222
 #, kde-format
 msgid "Couldn't open file"
 msgstr "Datni atvērt neizdevās"

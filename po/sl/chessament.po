@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-28 00:41+0000\n"
-"PO-Revision-Date: 2026-07-05 07:48+0200\n"
+"POT-Creation-Date: 2026-07-29 00:42+0000\n"
+"PO-Revision-Date: 2026-07-28 11:30+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -413,28 +413,22 @@ msgctxt "@action:button"
 msgid "Delete tiebreak"
 msgstr "Zbriši tiebreak"
 
-#: qml/components/TimeControlDelegate.qml:36
-#, fuzzy
-#| msgctxt "@action:button Move tiebreak up"
-#| msgid "Move Up"
+#: qml/components/TimeControlDelegate.qml:37
 msgctxt "@label:textbox Number of moves"
 msgid "Moves"
-msgstr "Pomakni gor"
+msgstr "Poteze"
 
-#: qml/components/TimeControlDelegate.qml:49
+#: qml/components/TimeControlDelegate.qml:51
 msgctxt "@label:textbox Time control period time"
 msgid "Time (minutes)"
-msgstr ""
+msgstr "Čas (minute)"
 
-#: qml/components/TimeControlDelegate.qml:63
+#: qml/components/TimeControlDelegate.qml:65
 msgctxt "@label:textbox Time control period increment (per second)"
 msgid "Increment (seconds)"
-msgstr ""
+msgstr "Časovni korak (sekunde)"
 
-#: qml/components/TimeControlDelegate.qml:75
-#, fuzzy
-#| msgctxt "@action:button Delete Player"
-#| msgid "Delete"
+#: qml/components/TimeControlDelegate.qml:77
 msgctxt "@action:button Delete time control period"
 msgid "Delete"
 msgstr "Zbriši"
@@ -529,12 +523,12 @@ msgctxt "@option:check"
 msgid "Hide finished games"
 msgstr "Skrij končane igre"
 
-#: qml/PairingsPage.qml:60 qml/PlayersPage.qml:123 qml/StandingsPage.qml:49
+#: qml/PairingsPage.qml:60 qml/PlayersPage.qml:132 qml/StandingsPage.qml:49
 msgctxt "@action:intoolbar"
 msgid "Print…"
 msgstr "Natisni…"
 
-#: qml/PairingsPage.qml:65 qml/PlayersPage.qml:128 qml/StandingsPage.qml:54
+#: qml/PairingsPage.qml:65 qml/PlayersPage.qml:137 qml/StandingsPage.qml:54
 msgctxt "@action:intoolbar"
 msgid "Export as PDF…"
 msgstr "Izvozi kot PDF…"
@@ -660,41 +654,46 @@ msgid "Details…"
 msgstr "Podrobnosti…"
 
 #: qml/PlayersPage.qml:113
+msgctxt "@action Update players ratings"
+msgid "Update ratings…"
+msgstr ""
+
+#: qml/PlayersPage.qml:122
 msgctxt "@action:intoolbar"
 msgid "Sort Players…"
 msgstr "Razvrsti igralce…"
 
-#: qml/PlayersPage.qml:134
+#: qml/PlayersPage.qml:143
 msgctxt "@action:intoolbar"
 msgid "Add Player…"
 msgstr "Dodaj igralca…"
 
-#: qml/PlayersPage.qml:145
+#: qml/PlayersPage.qml:154
 msgctxt "@action:inmenu"
 msgid "Open Player Details"
 msgstr "Odpri podrobnosti igralca"
 
-#: qml/PlayersPage.qml:151
+#: qml/PlayersPage.qml:160
 msgctxt "@action:inmenu"
 msgid "Delete Player…"
 msgstr "Izbriši igralca…"
 
-#: qml/PlayersPage.qml:171
+#: qml/PlayersPage.qml:180
 msgctxt "@info:placeholder"
 msgid "No players found"
 msgstr "Ni najdenih igralcev"
 
-#: qml/PlayersPage.qml:171
+#: qml/PlayersPage.qml:180
 msgctxt "@info:placeholder"
 msgid "No players yet"
 msgstr "Še ni igralcev"
 
-#: qml/PlayersPage.qml:175
+#: qml/PlayersPage.qml:184
 msgctxt "@action:button"
 msgid "Add Player…"
 msgstr "Dodaj igralca…"
 
-#: qml/PlayersPage.qml:194
+#: qml/PlayersPage.qml:203
 msgctxt "@info:status Number of players"
 msgid "1 player"
 msgid_plural "%1 players"
@@ -703,7 +702,7 @@ msgstr[1] "%1igralec"
 msgstr[2] "%1 igralca"
 msgstr[3] "%1 igralci"
 
-#: qml/PlayersPage.qml:195
+#: qml/PlayersPage.qml:204
 msgctxt "@info:status Number of rated players"
 msgid "1 rated"
 msgid_plural "%1 rated"
@@ -712,7 +711,7 @@ msgstr[1] "%1 ocenjen"
 msgstr[2] "%1 ocenjena"
 msgstr[3] "%1 ocenjeni"
 
-#: qml/PlayersPage.qml:197
+#: qml/PlayersPage.qml:206
 msgctxt "@info:status Total number of players (Number of players rated)"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
@@ -835,22 +834,19 @@ msgstr "Vrednost bye dodeljenemu paru"
 #: qml/TournamentSettingsFormat.qml:61
 msgctxt "@title:group"
 msgid "Time Control"
-msgstr ""
+msgstr "Kontrola časa"
 
 #: qml/TournamentSettingsFormat.qml:65
-#, fuzzy
-#| msgctxt "@action:intoolbar"
-#| msgid "Add Player…"
 msgctxt "@action:button Add time control period"
 msgid "Add Period"
-msgstr "Dodaj igralca…"
+msgstr "Dodaj obdobje"
 
-#: qml/TournamentSettingsFormat.qml:88
+#: qml/TournamentSettingsFormat.qml:94
 msgctxt "@title:group"
 msgid "Tiebreaks"
 msgstr "Tiebreaki"
 
-#: qml/TournamentSettingsFormat.qml:113
+#: qml/TournamentSettingsFormat.qml:119
 msgctxt "@action:button"
 msgid "Add Tiebreak"
 msgstr "Dodaj Tiebreak"
@@ -889,6 +885,27 @@ msgstr "Dodaj razsodnika"
 msgctxt "@info:status"
 msgid "No arbiters yet."
 msgstr "Še ni razsodnikov."
+
+#: qml/UpdateRatingsDialog.qml:17
+#, fuzzy
+#| msgctxt "@title"
+#| msgid "Delete Rating List"
+msgctxt "@title"
+msgid "Update Ratings"
+msgstr "Zbriši seznam ratingov"
+
+#: qml/UpdateRatingsDialog.qml:25
+#, fuzzy
+#| msgctxt "@action:button"
+#| msgid "Delete rating list"
+msgctxt "@label:listbox"
+msgid "Choose a rating list:"
+msgstr "Zbriši seznam ratingov"
+
+#: qml/UpdateRatingsDialog.qml:35
+msgctxt "@action:button Update players ratings"
+msgid "Update"
+msgstr ""
 
 #: qml/WelcomePage.qml:21
 msgctxt "@title"
@@ -1050,6 +1067,24 @@ msgstr "Dodaj seznam ratingov"
 msgctxt "@title:column Player Ranking"
 msgid "Rank"
 msgstr "Rang"
+
+#: timecontrolmodel.cpp:38
+#, kde-format
+msgctxt "@info"
+msgid "The time control is Blitz."
+msgstr ""
+
+#: timecontrolmodel.cpp:40
+#, kde-format
+msgctxt "@info"
+msgid "The time control is Rapid."
+msgstr ""
+
+#: timecontrolmodel.cpp:42
+#, kde-format
+msgctxt "@info"
+msgid "The time control is Classical."
+msgstr ""
 
 #: tournament/event.cpp:166 tournament/event.cpp:175
 #, kde-kuit-format
@@ -1213,7 +1248,7 @@ msgctxt "@info"
 msgid "File format not supported."
 msgstr "Format datoteke ni podprt."
 
-#: tournament/ratinglists/ratinglist.cpp:496
+#: tournament/ratinglists/ratinglist.cpp:472
 #, kde-format
 msgctxt "@info:progress"
 msgid "Saved 1 player."
@@ -1223,7 +1258,7 @@ msgstr[1] "Shranjen %1 igralec."
 msgstr[2] "Shranjena %1 igralca."
 msgstr[3] "Shranjeni %1 igralci."
 
-#: tournament/tiebreaks/aob.h:23 tournament/tournament.cpp:533
+#: tournament/tiebreaks/aob.h:23 tournament/tournament.cpp:555
 #, kde-format
 msgctxt "Tiebreak"
 msgid "Average Buchholz of Opponents"
@@ -1241,7 +1276,7 @@ msgctxt "@info"
 msgid "Unsupported tiebreak option \"%1\""
 msgstr "Nepodprta možnost tiebreaka \"%1\""
 
-#: tournament/tiebreaks/buchholz.h:25 tournament/tournament.cpp:515
+#: tournament/tiebreaks/buchholz.h:25 tournament/tournament.cpp:537
 #, kde-format
 msgctxt "Buchholz tiebreak"
 msgid "Buchholz"
@@ -1259,26 +1294,26 @@ msgctxt "@info"
 msgid "Unsupported tiebreak"
 msgstr "Nepodprti tiebreak"
 
-#: tournament/tiebreaks/numberwins.h:22 tournament/tournament.cpp:519
+#: tournament/tiebreaks/numberwins.h:22 tournament/tournament.cpp:541
 #, kde-format
 msgctxt "Number of Wins tiebreak"
 msgid "Number of Wins"
 msgstr "Število zmag"
 
-#: tournament/tiebreaks/playedblack.h:22 tournament/tournament.cpp:529
+#: tournament/tiebreaks/playedblack.h:22 tournament/tournament.cpp:551
 #, kde-format
 msgctxt "Number of Games Played with Black (over the board) tiebreak"
 msgid "Number of Games Played with Black (over the board)"
 msgstr "Število partij igranih s črnimi figurami (čez tablo)"
 
 #: tournament/tiebreaks/points.h:22 tournament/tiebreaks/points.h:27
-#: tournament/tournament.cpp:511
+#: tournament/tournament.cpp:533
 #, kde-format
 msgctxt "Game points"
 msgid "Points"
 msgstr "Točke"
 
-#: tournament/tiebreaks/won.h:23 tournament/tournament.cpp:525
+#: tournament/tiebreaks/won.h:23 tournament/tournament.cpp:547
 #, kde-format
 msgctxt ""
 "Number of Games Won (over the board) tiebreak. Different from the 'Number of "
@@ -1286,12 +1321,12 @@ msgctxt ""
 msgid "Number of Games Won (over the board)"
 msgstr "Število zmagovalnih partij (čez tablo)"
 
-#: tournament/tournament.cpp:968
+#: tournament/tournament.cpp:990
 #, kde-format
 msgid "An error ocurred while pairing the round: %1"
 msgstr "Pri uparjanju kroga je prišlo do napake: %1"
 
-#: tournament/tournament.cpp:1200
+#: tournament/tournament.cpp:1222
 #, kde-format
 msgid "Couldn't open file"
 msgstr "Datoteke ni bilo mogoče odpreti"

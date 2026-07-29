@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-28 00:41+0000\n"
-"PO-Revision-Date: 2026-07-07 20:23+0200\n"
+"POT-Creation-Date: 2026-07-29 00:42+0000\n"
+"PO-Revision-Date: 2026-07-28 07:52+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -415,28 +415,22 @@ msgctxt "@action:button"
 msgid "Delete tiebreak"
 msgstr "Ta bort tiebreak"
 
-#: qml/components/TimeControlDelegate.qml:36
-#, fuzzy
-#| msgctxt "@action:button Move tiebreak up"
-#| msgid "Move Up"
+#: qml/components/TimeControlDelegate.qml:37
 msgctxt "@label:textbox Number of moves"
 msgid "Moves"
-msgstr "Flytta upp"
+msgstr "Drag"
 
-#: qml/components/TimeControlDelegate.qml:49
+#: qml/components/TimeControlDelegate.qml:51
 msgctxt "@label:textbox Time control period time"
 msgid "Time (minutes)"
-msgstr ""
+msgstr "Tid (minuter)"
 
-#: qml/components/TimeControlDelegate.qml:63
+#: qml/components/TimeControlDelegate.qml:65
 msgctxt "@label:textbox Time control period increment (per second)"
 msgid "Increment (seconds)"
-msgstr ""
+msgstr "Ökning (sekunder)"
 
-#: qml/components/TimeControlDelegate.qml:75
-#, fuzzy
-#| msgctxt "@action:button Delete Player"
-#| msgid "Delete"
+#: qml/components/TimeControlDelegate.qml:77
 msgctxt "@action:button Delete time control period"
 msgid "Delete"
 msgstr "Ta bort"
@@ -531,12 +525,12 @@ msgctxt "@option:check"
 msgid "Hide finished games"
 msgstr "Dölj färdiga matcher"
 
-#: qml/PairingsPage.qml:60 qml/PlayersPage.qml:123 qml/StandingsPage.qml:49
+#: qml/PairingsPage.qml:60 qml/PlayersPage.qml:132 qml/StandingsPage.qml:49
 msgctxt "@action:intoolbar"
 msgid "Print…"
 msgstr "Skriv ut…"
 
-#: qml/PairingsPage.qml:65 qml/PlayersPage.qml:128 qml/StandingsPage.qml:54
+#: qml/PairingsPage.qml:65 qml/PlayersPage.qml:137 qml/StandingsPage.qml:54
 msgctxt "@action:intoolbar"
 msgid "Export as PDF…"
 msgstr "Exportera som PDF…"
@@ -660,55 +654,60 @@ msgid "Details…"
 msgstr "Information…"
 
 #: qml/PlayersPage.qml:113
+msgctxt "@action Update players ratings"
+msgid "Update ratings…"
+msgstr ""
+
+#: qml/PlayersPage.qml:122
 msgctxt "@action:intoolbar"
 msgid "Sort Players…"
 msgstr "Sortera spelare…"
 
-#: qml/PlayersPage.qml:134
+#: qml/PlayersPage.qml:143
 msgctxt "@action:intoolbar"
 msgid "Add Player…"
 msgstr "Lägg till spelare…"
 
-#: qml/PlayersPage.qml:145
+#: qml/PlayersPage.qml:154
 msgctxt "@action:inmenu"
 msgid "Open Player Details"
 msgstr "Visa spelarinformation"
 
-#: qml/PlayersPage.qml:151
+#: qml/PlayersPage.qml:160
 msgctxt "@action:inmenu"
 msgid "Delete Player…"
 msgstr "Ta bort spelare…"
 
-#: qml/PlayersPage.qml:171
+#: qml/PlayersPage.qml:180
 msgctxt "@info:placeholder"
 msgid "No players found"
 msgstr "Inga spelare hittades"
 
-#: qml/PlayersPage.qml:171
+#: qml/PlayersPage.qml:180
 msgctxt "@info:placeholder"
 msgid "No players yet"
 msgstr "Inga spelare ännu"
 
-#: qml/PlayersPage.qml:175
+#: qml/PlayersPage.qml:184
 msgctxt "@action:button"
 msgid "Add Player…"
 msgstr "Lägg till spelare…"
 
-#: qml/PlayersPage.qml:194
+#: qml/PlayersPage.qml:203
 msgctxt "@info:status Number of players"
 msgid "1 player"
 msgid_plural "%1 players"
 msgstr[0] "1 spelare"
 msgstr[1] "%1 spelare"
 
-#: qml/PlayersPage.qml:195
+#: qml/PlayersPage.qml:204
 msgctxt "@info:status Number of rated players"
 msgid "1 rated"
 msgid_plural "%1 rated"
 msgstr[0] "1 rankad"
 msgstr[1] "%1 rankade"
 
-#: qml/PlayersPage.qml:197
+#: qml/PlayersPage.qml:206
 msgctxt "@info:status Total number of players (Number of players rated)"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
@@ -831,22 +830,19 @@ msgstr "Värdet på lottningens tilldelade frirond"
 #: qml/TournamentSettingsFormat.qml:61
 msgctxt "@title:group"
 msgid "Time Control"
-msgstr ""
+msgstr "Tidstyrning"
 
 #: qml/TournamentSettingsFormat.qml:65
-#, fuzzy
-#| msgctxt "@action:intoolbar"
-#| msgid "Add Player…"
 msgctxt "@action:button Add time control period"
 msgid "Add Period"
-msgstr "Lägg till spelare…"
+msgstr "Lägg till period"
 
-#: qml/TournamentSettingsFormat.qml:88
+#: qml/TournamentSettingsFormat.qml:94
 msgctxt "@title:group"
 msgid "Tiebreaks"
 msgstr "Tiebreak"
 
-#: qml/TournamentSettingsFormat.qml:113
+#: qml/TournamentSettingsFormat.qml:119
 msgctxt "@action:button"
 msgid "Add Tiebreak"
 msgstr "Lägg till tiebreak"
@@ -885,6 +881,27 @@ msgstr "Lägg till tävlingsdomare"
 msgctxt "@info:status"
 msgid "No arbiters yet."
 msgstr "Inga tävlingsdomare ännu."
+
+#: qml/UpdateRatingsDialog.qml:17
+#, fuzzy
+#| msgctxt "@title"
+#| msgid "Delete Rating List"
+msgctxt "@title"
+msgid "Update Ratings"
+msgstr "Ta bort rankningslista"
+
+#: qml/UpdateRatingsDialog.qml:25
+#, fuzzy
+#| msgctxt "@action:button"
+#| msgid "Delete rating list"
+msgctxt "@label:listbox"
+msgid "Choose a rating list:"
+msgstr "Ta bort rankningslista"
+
+#: qml/UpdateRatingsDialog.qml:35
+msgctxt "@action:button Update players ratings"
+msgid "Update"
+msgstr ""
 
 #: qml/WelcomePage.qml:21
 msgctxt "@title"
@@ -1047,6 +1064,24 @@ msgctxt "@title:column Player Ranking"
 msgid "Rank"
 msgstr "Rankning"
 
+#: timecontrolmodel.cpp:38
+#, kde-format
+msgctxt "@info"
+msgid "The time control is Blitz."
+msgstr ""
+
+#: timecontrolmodel.cpp:40
+#, kde-format
+msgctxt "@info"
+msgid "The time control is Rapid."
+msgstr ""
+
+#: timecontrolmodel.cpp:42
+#, kde-format
+msgctxt "@info"
+msgid "The time control is Classical."
+msgstr ""
+
 #: tournament/event.cpp:166 tournament/event.cpp:175
 #, kde-kuit-format
 msgctxt "@info"
@@ -1207,7 +1242,7 @@ msgctxt "@info"
 msgid "File format not supported."
 msgstr "Filformat stöds inte."
 
-#: tournament/ratinglists/ratinglist.cpp:496
+#: tournament/ratinglists/ratinglist.cpp:472
 #, kde-format
 msgctxt "@info:progress"
 msgid "Saved 1 player."
@@ -1215,7 +1250,7 @@ msgid_plural "Saved %1 players."
 msgstr[0] "Sparade 1 spelare."
 msgstr[1] "Sparade %1 spelare."
 
-#: tournament/tiebreaks/aob.h:23 tournament/tournament.cpp:533
+#: tournament/tiebreaks/aob.h:23 tournament/tournament.cpp:555
 #, kde-format
 msgctxt "Tiebreak"
 msgid "Average Buchholz of Opponents"
@@ -1233,7 +1268,7 @@ msgctxt "@info"
 msgid "Unsupported tiebreak option \"%1\""
 msgstr "Alternativ för tiebreak som inte stöds \"%1\""
 
-#: tournament/tiebreaks/buchholz.h:25 tournament/tournament.cpp:515
+#: tournament/tiebreaks/buchholz.h:25 tournament/tournament.cpp:537
 #, kde-format
 msgctxt "Buchholz tiebreak"
 msgid "Buchholz"
@@ -1251,26 +1286,26 @@ msgctxt "@info"
 msgid "Unsupported tiebreak"
 msgstr "Tiebreak stöds inte"
 
-#: tournament/tiebreaks/numberwins.h:22 tournament/tournament.cpp:519
+#: tournament/tiebreaks/numberwins.h:22 tournament/tournament.cpp:541
 #, kde-format
 msgctxt "Number of Wins tiebreak"
 msgid "Number of Wins"
 msgstr "Antal vinster"
 
-#: tournament/tiebreaks/playedblack.h:22 tournament/tournament.cpp:529
+#: tournament/tiebreaks/playedblack.h:22 tournament/tournament.cpp:551
 #, kde-format
 msgctxt "Number of Games Played with Black (over the board) tiebreak"
 msgid "Number of Games Played with Black (over the board)"
 msgstr "Antal matcher spelade med svart (över hela linjen)"
 
 #: tournament/tiebreaks/points.h:22 tournament/tiebreaks/points.h:27
-#: tournament/tournament.cpp:511
+#: tournament/tournament.cpp:533
 #, kde-format
 msgctxt "Game points"
 msgid "Points"
 msgstr "Poäng"
 
-#: tournament/tiebreaks/won.h:23 tournament/tournament.cpp:525
+#: tournament/tiebreaks/won.h:23 tournament/tournament.cpp:547
 #, kde-format
 msgctxt ""
 "Number of Games Won (over the board) tiebreak. Different from the 'Number of "
@@ -1278,12 +1313,12 @@ msgctxt ""
 msgid "Number of Games Won (over the board)"
 msgstr "Antal vunna matcher (över hela linjen)"
 
-#: tournament/tournament.cpp:968
+#: tournament/tournament.cpp:990
 #, kde-format
 msgid "An error ocurred while pairing the round: %1"
 msgstr "Ett fel uppstod när omgången skulle lottas: %1"
 
-#: tournament/tournament.cpp:1200
+#: tournament/tournament.cpp:1222
 #, kde-format
 msgid "Couldn't open file"
 msgstr "Kunde inte öppna fil"
