@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-29 00:42+0000\n"
-"PO-Revision-Date: 2026-07-28 07:52+0200\n"
+"PO-Revision-Date: 2026-07-29 07:26+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -428,7 +428,7 @@ msgstr "Tid (minuter)"
 #: qml/components/TimeControlDelegate.qml:65
 msgctxt "@label:textbox Time control period increment (per second)"
 msgid "Increment (seconds)"
-msgstr "Ökning (sekunder)"
+msgstr "Tillägg (sekunder)"
 
 #: qml/components/TimeControlDelegate.qml:77
 msgctxt "@action:button Delete time control period"
@@ -656,7 +656,7 @@ msgstr "Information…"
 #: qml/PlayersPage.qml:113
 msgctxt "@action Update players ratings"
 msgid "Update ratings…"
-msgstr ""
+msgstr "Uppdatera rankning…"
 
 #: qml/PlayersPage.qml:122
 msgctxt "@action:intoolbar"
@@ -830,7 +830,7 @@ msgstr "Värdet på lottningens tilldelade frirond"
 #: qml/TournamentSettingsFormat.qml:61
 msgctxt "@title:group"
 msgid "Time Control"
-msgstr "Tidstyrning"
+msgstr "Betänketid"
 
 #: qml/TournamentSettingsFormat.qml:65
 msgctxt "@action:button Add time control period"
@@ -883,25 +883,19 @@ msgid "No arbiters yet."
 msgstr "Inga tävlingsdomare ännu."
 
 #: qml/UpdateRatingsDialog.qml:17
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Delete Rating List"
 msgctxt "@title"
 msgid "Update Ratings"
-msgstr "Ta bort rankningslista"
+msgstr "Uppdatera rankningslista"
 
 #: qml/UpdateRatingsDialog.qml:25
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Delete rating list"
 msgctxt "@label:listbox"
 msgid "Choose a rating list:"
-msgstr "Ta bort rankningslista"
+msgstr "Välj en rankningslista:"
 
 #: qml/UpdateRatingsDialog.qml:35
 msgctxt "@action:button Update players ratings"
 msgid "Update"
-msgstr ""
+msgstr "Uppdatera"
 
 #: qml/WelcomePage.qml:21
 msgctxt "@title"
@@ -1068,19 +1062,19 @@ msgstr "Rankning"
 #, kde-format
 msgctxt "@info"
 msgid "The time control is Blitz."
-msgstr ""
+msgstr "Betänketiden är blixt."
 
 #: timecontrolmodel.cpp:40
 #, kde-format
 msgctxt "@info"
 msgid "The time control is Rapid."
-msgstr ""
+msgstr "Betänketiden är snabb."
 
 #: timecontrolmodel.cpp:42
 #, kde-format
 msgctxt "@info"
 msgid "The time control is Classical."
-msgstr ""
+msgstr "Betänketiden är klassisk."
 
 #: tournament/event.cpp:166 tournament/event.cpp:175
 #, kde-kuit-format

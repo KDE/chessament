@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-29 00:42+0000\n"
-"PO-Revision-Date: 2026-07-28 08:42+0300\n"
+"PO-Revision-Date: 2026-07-29 14:22+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -659,7 +659,7 @@ msgstr "Подробиці…"
 #: qml/PlayersPage.qml:113
 msgctxt "@action Update players ratings"
 msgid "Update ratings…"
-msgstr ""
+msgstr "Оновити рейтинги…"
 
 #: qml/PlayersPage.qml:122
 msgctxt "@action:intoolbar"
@@ -890,25 +890,19 @@ msgid "No arbiters yet."
 msgstr "Судей ще немає."
 
 #: qml/UpdateRatingsDialog.qml:17
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Delete Rating List"
 msgctxt "@title"
 msgid "Update Ratings"
-msgstr "Вилучення рейтингового списку"
+msgstr "Оновити рейтинги"
 
 #: qml/UpdateRatingsDialog.qml:25
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Delete rating list"
 msgctxt "@label:listbox"
 msgid "Choose a rating list:"
-msgstr "Вилучити рейтинговий список"
+msgstr "Вибрати рейтинговий список:"
 
 #: qml/UpdateRatingsDialog.qml:35
 msgctxt "@action:button Update players ratings"
 msgid "Update"
-msgstr ""
+msgstr "Оновити"
 
 #: qml/WelcomePage.qml:21
 msgctxt "@title"
@@ -1075,19 +1069,19 @@ msgstr "Ранг"
 #, kde-format
 msgctxt "@info"
 msgid "The time control is Blitz."
-msgstr ""
+msgstr "Часовим регламентом є «Бліц»."
 
 #: timecontrolmodel.cpp:40
 #, kde-format
 msgctxt "@info"
 msgid "The time control is Rapid."
-msgstr ""
+msgstr "Часовим регламентом є «Швидкі»."
 
 #: timecontrolmodel.cpp:42
 #, kde-format
 msgctxt "@info"
 msgid "The time control is Classical."
-msgstr ""
+msgstr "Часовим регламентом є «Класичні»."
 
 #: tournament/event.cpp:166 tournament/event.cpp:175
 #, kde-kuit-format

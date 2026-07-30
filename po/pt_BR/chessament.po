@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-29 00:42+0000\n"
-"PO-Revision-Date: 2026-07-28 07:37-0300\n"
+"PO-Revision-Date: 2026-07-29 05:50-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -657,7 +657,7 @@ msgstr "Detalhes…"
 #: qml/PlayersPage.qml:113
 msgctxt "@action Update players ratings"
 msgid "Update ratings…"
-msgstr ""
+msgstr "Atualizar classificações…"
 
 #: qml/PlayersPage.qml:122
 msgctxt "@action:intoolbar"
@@ -884,25 +884,19 @@ msgid "No arbiters yet."
 msgstr "Nenhum árbitro ainda."
 
 #: qml/UpdateRatingsDialog.qml:17
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Delete Rating List"
 msgctxt "@title"
 msgid "Update Ratings"
-msgstr "Excluir lista de classificação"
+msgstr "Atualizar classificações"
 
 #: qml/UpdateRatingsDialog.qml:25
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Delete rating list"
 msgctxt "@label:listbox"
 msgid "Choose a rating list:"
-msgstr "Excluir lista de classificação"
+msgstr "Selecione uma lista de classificação:"
 
 #: qml/UpdateRatingsDialog.qml:35
 msgctxt "@action:button Update players ratings"
 msgid "Update"
-msgstr ""
+msgstr "Atualizar"
 
 #: qml/WelcomePage.qml:21
 msgctxt "@title"
@@ -1069,19 +1063,19 @@ msgstr "Classificação"
 #, kde-format
 msgctxt "@info"
 msgid "The time control is Blitz."
-msgstr ""
+msgstr "O controle de tempo é Blitz."
 
 #: timecontrolmodel.cpp:40
 #, kde-format
 msgctxt "@info"
 msgid "The time control is Rapid."
-msgstr ""
+msgstr "O controle de tempo é Rápido."
 
 #: timecontrolmodel.cpp:42
 #, kde-format
 msgctxt "@info"
 msgid "The time control is Classical."
-msgstr ""
+msgstr "O controle de tempo é Clássico."
 
 #: tournament/event.cpp:166 tournament/event.cpp:175
 #, kde-kuit-format

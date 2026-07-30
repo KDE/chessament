@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-29 00:42+0000\n"
-"PO-Revision-Date: 2026-07-28 06:19+0200\n"
+"PO-Revision-Date: 2026-07-29 07:01+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -657,7 +657,7 @@ msgstr "დეტალები…"
 #: qml/PlayersPage.qml:113
 msgctxt "@action Update players ratings"
 msgid "Update ratings…"
-msgstr ""
+msgstr "რეიტინგების განახლება…"
 
 #: qml/PlayersPage.qml:122
 msgctxt "@action:intoolbar"
@@ -884,25 +884,19 @@ msgid "No arbiters yet."
 msgstr "ჯერ არბიტრები არაა."
 
 #: qml/UpdateRatingsDialog.qml:17
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Delete Rating List"
 msgctxt "@title"
 msgid "Update Ratings"
-msgstr "რეიტინგის სიის წაშლა"
+msgstr "რეიტინგების განახლება"
 
 #: qml/UpdateRatingsDialog.qml:25
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Delete rating list"
 msgctxt "@label:listbox"
 msgid "Choose a rating list:"
-msgstr "რეიტინგის სიის წაშლა"
+msgstr "აირჩიეთ რეიტინგის სია:"
 
 #: qml/UpdateRatingsDialog.qml:35
 msgctxt "@action:button Update players ratings"
 msgid "Update"
-msgstr ""
+msgstr "განახლება"
 
 #: qml/WelcomePage.qml:21
 msgctxt "@title"
@@ -1069,19 +1063,19 @@ msgstr "რანგი"
 #, kde-format
 msgctxt "@info"
 msgid "The time control is Blitz."
-msgstr ""
+msgstr "დროის კონტროლია ბლიცი."
 
 #: timecontrolmodel.cpp:40
 #, kde-format
 msgctxt "@info"
 msgid "The time control is Rapid."
-msgstr ""
+msgstr "დროის კონტროლია რაპიდი."
 
 #: timecontrolmodel.cpp:42
 #, kde-format
 msgctxt "@info"
 msgid "The time control is Classical."
-msgstr ""
+msgstr "დროის კონტროლია კლასიკური."
 
 #: tournament/event.cpp:166 tournament/event.cpp:175
 #, kde-kuit-format

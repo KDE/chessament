@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-29 00:42+0000\n"
-"PO-Revision-Date: 2026-07-28 12:14+0200\n"
+"PO-Revision-Date: 2026-07-29 11:00+0200\n"
 "Last-Translator: Libor Filípek <libor.filipek@gmail.com>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -660,7 +660,7 @@ msgstr "Podrobnosti…"
 #: qml/PlayersPage.qml:113
 msgctxt "@action Update players ratings"
 msgid "Update ratings…"
-msgstr ""
+msgstr "Aktualizace…"
 
 #: qml/PlayersPage.qml:122
 msgctxt "@action:intoolbar"
@@ -889,25 +889,19 @@ msgid "No arbiters yet."
 msgstr "Zatím není žádný rozhodčí."
 
 #: qml/UpdateRatingsDialog.qml:17
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Delete Rating List"
 msgctxt "@title"
 msgid "Update Ratings"
-msgstr "Smazat seznam hodnocení"
+msgstr "Aktualizovat hodnocení"
 
 #: qml/UpdateRatingsDialog.qml:25
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Delete rating list"
 msgctxt "@label:listbox"
 msgid "Choose a rating list:"
-msgstr "Smazat seznam hodnocení"
+msgstr "Vyberte si seznam s hodnocením:"
 
 #: qml/UpdateRatingsDialog.qml:35
 msgctxt "@action:button Update players ratings"
 msgid "Update"
-msgstr ""
+msgstr "Aktualizovat"
 
 #: qml/WelcomePage.qml:21
 msgctxt "@title"
@@ -1074,19 +1068,19 @@ msgstr "Pořadí"
 #, kde-format
 msgctxt "@info"
 msgid "The time control is Blitz."
-msgstr ""
+msgstr "Časový limit je bleskový."
 
 #: timecontrolmodel.cpp:40
 #, kde-format
 msgctxt "@info"
 msgid "The time control is Rapid."
-msgstr ""
+msgstr "Časový limit je rychlý."
 
 #: timecontrolmodel.cpp:42
 #, kde-format
 msgctxt "@info"
 msgid "The time control is Classical."
-msgstr ""
+msgstr "Časový limit je klasický."
 
 #: tournament/event.cpp:166 tournament/event.cpp:175
 #, kde-kuit-format
