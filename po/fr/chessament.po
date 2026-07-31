@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-29 00:42+0000\n"
-"PO-Revision-Date: 2026-07-06 12:07+0200\n"
+"PO-Revision-Date: 2026-07-29 08:52+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: fr\n"
 "Language: fr\n"
@@ -415,27 +415,21 @@ msgid "Delete tiebreak"
 msgstr "Supprimer la manche décisive"
 
 #: qml/components/TimeControlDelegate.qml:37
-#, fuzzy
-#| msgctxt "@action:button Move tiebreak up"
-#| msgid "Move Up"
 msgctxt "@label:textbox Number of moves"
 msgid "Moves"
-msgstr "Déplacer vers le haut"
+msgstr "Déplacements"
 
 #: qml/components/TimeControlDelegate.qml:51
 msgctxt "@label:textbox Time control period time"
 msgid "Time (minutes)"
-msgstr ""
+msgstr "Temps (Minutes)"
 
 #: qml/components/TimeControlDelegate.qml:65
 msgctxt "@label:textbox Time control period increment (per second)"
 msgid "Increment (seconds)"
-msgstr ""
+msgstr "Incrément (Secondes)"
 
 #: qml/components/TimeControlDelegate.qml:77
-#, fuzzy
-#| msgctxt "@action:button Delete Player"
-#| msgid "Delete"
 msgctxt "@action:button Delete time control period"
 msgid "Delete"
 msgstr "Supprimer"
@@ -835,15 +829,12 @@ msgstr "La valeur du couplage alloué"
 #: qml/TournamentSettingsFormat.qml:61
 msgctxt "@title:group"
 msgid "Time Control"
-msgstr ""
+msgstr "Contrôle du temps"
 
 #: qml/TournamentSettingsFormat.qml:65
-#, fuzzy
-#| msgctxt "@action:intoolbar"
-#| msgid "Add Player…"
 msgctxt "@action:button Add time control period"
 msgid "Add Period"
-msgstr "Ajouter un joueur…"
+msgstr "Ajouter un délai"
 
 #: qml/TournamentSettingsFormat.qml:94
 msgctxt "@title:group"
