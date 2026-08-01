@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-29 00:42+0000\n"
-"PO-Revision-Date: 2026-07-28 08:46+0300\n"
+"PO-Revision-Date: 2026-07-31 12:54+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -659,7 +659,7 @@ msgstr "פרטים…"
 #: qml/PlayersPage.qml:113
 msgctxt "@action Update players ratings"
 msgid "Update ratings…"
-msgstr ""
+msgstr "עדכון דירוגים…"
 
 #: qml/PlayersPage.qml:122
 msgctxt "@action:intoolbar"
@@ -889,25 +889,19 @@ msgid "No arbiters yet."
 msgstr "אין שופטים/ות עדיין."
 
 #: qml/UpdateRatingsDialog.qml:17
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Delete Rating List"
 msgctxt "@title"
 msgid "Update Ratings"
-msgstr "מחיקת רשימות דירוג"
+msgstr "עדכונים דירוגים"
 
 #: qml/UpdateRatingsDialog.qml:25
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Delete rating list"
 msgctxt "@label:listbox"
 msgid "Choose a rating list:"
-msgstr "מחיקת רשימת דירוג"
+msgstr "נא לבחור רשימת דירוג:"
 
 #: qml/UpdateRatingsDialog.qml:35
 msgctxt "@action:button Update players ratings"
 msgid "Update"
-msgstr ""
+msgstr "עדכון"
 
 #: qml/WelcomePage.qml:21
 msgctxt "@title"
@@ -1074,19 +1068,19 @@ msgstr "דירוג"
 #, kde-format
 msgctxt "@info"
 msgid "The time control is Blitz."
-msgstr ""
+msgstr "בקרת הזמן היא בליץ."
 
 #: timecontrolmodel.cpp:40
 #, kde-format
 msgctxt "@info"
 msgid "The time control is Rapid."
-msgstr ""
+msgstr "בקרת הזמן היא מהירה."
 
 #: timecontrolmodel.cpp:42
 #, kde-format
 msgctxt "@info"
 msgid "The time control is Classical."
-msgstr ""
+msgstr "בקרת הזמן היא קלסית."
 
 #: tournament/event.cpp:166 tournament/event.cpp:175
 #, kde-kuit-format
