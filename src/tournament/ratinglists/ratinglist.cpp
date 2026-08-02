@@ -65,9 +65,9 @@ std::expected<QSqlDatabase, QString> RatingList::getDb(const QString &connection
     }
 
     QSqlQuery query(db);
-    query.prepare(ENABLE_FOREIGN_KEYS_QUERY);
+    query.prepare(ENABLE_WAL_QUERY);
     if (!query.exec()) {
-        qWarning() << "enable foreign keys" << query.lastError().text();
+        qWarning() << "enable wal" << query.lastError().text();
         return std::unexpected(query.lastError().text());
     }
 
@@ -92,6 +92,14 @@ std::expected<QSqlDatabase, QString> RatingList::getDb(const QString &connection
 
     if (!query.exec()) {
         qWarning() << "Error creating ratings database idx_player_id" << query.lastError().text();
+        return std::unexpected(query.lastError().text());
+    }
+
+    query = QSqlQuery(db);
+    query.prepare(RATING_LIST_PLAYERS_LIST_INDEX);
+
+    if (!query.exec()) {
+        qWarning() << "Error creating ratings database idx_player_list" << query.lastError().text();
         return std::unexpected(query.lastError().text());
     }
 
@@ -343,18 +351,38 @@ std::expected<uint, QString> RatingList::readPlayers(QTextStream *stream, std::u
 
 void RatingList::remove(int id)
 {
+    qDebug() << "Starting to remove rating list" << id;
     {
         auto db = RatingList::getDb(RATING_LISTS_DB_CONNECTION_NAME_WRITER);
         if (!db) {
             return;
         }
 
+        if (const auto ok = db->transaction(); !ok) {
+            qWarning() << "Error starting transaction" << db->lastError();
+            return;
+        }
+
         QSqlQuery query(*db);
+        query.prepare(DELETE_RATING_LIST_PLAYERS_QUERY);
+        query.bindValue(":list"_L1, id);
+
+        if (!query.exec()) {
+            qWarning() << "Error deleting players from rating list" << query.lastError().text();
+            return;
+        }
+
+        query = QSqlQuery(*db);
         query.prepare(DELETE_RATING_LIST_QUERY);
         query.bindValue(":id"_L1, id);
 
         if (!query.exec()) {
-            qWarning() << "error deleting rating list" << query.lastError().text();
+            qWarning() << "Error deleting rating list" << query.lastError().text();
+            return;
+        }
+
+        if (!db->commit()) {
+            qWarning() << "Error commiting transaction" << db->lastError();
             return;
         }
 
@@ -362,6 +390,7 @@ void RatingList::remove(int id)
     }
 
     QSqlDatabase::removeDatabase(RATING_LISTS_DB_CONNECTION_NAME_WRITER);
+    qDebug() << "Finished removing rating list" << id;
 }
 
 std::expected<QList<RatingListPlayer>, QString> RatingList::searchPlayers(const QString &text)

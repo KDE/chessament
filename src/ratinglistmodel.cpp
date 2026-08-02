@@ -93,13 +93,13 @@ QCoro::Task<> RatingListModel::remove(int row)
     const auto list = m_lists.at(row).get();
     const auto id = list->id();
 
-    beginRemoveRows({}, row, row);
-    m_lists.erase(m_lists.begin() + row);
-    endRemoveRows();
-
     co_await QtConcurrent::run([id]() {
         RatingList::remove(id);
     });
+
+    beginRemoveRows({}, row, row);
+    m_lists.erase(m_lists.begin() + row);
+    endRemoveRows();
 }
 
 bool RatingListModel::isValidUrl(const QString &location)

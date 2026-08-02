@@ -19,6 +19,8 @@ class RatingListReader;
 
 using namespace Qt::StringLiterals;
 
+static const QString ENABLE_WAL_QUERY = u"PRAGMA journal_mode = WAL;"_s;
+
 constexpr auto RATING_LISTS_TABLE_SCHEMA =
     "CREATE TABLE IF NOT EXISTS ratinglists("
     "id INTEGER PRIMARY KEY,"
@@ -59,9 +61,13 @@ const QString RATING_LIST_PLAYERS_ID_INDEX = u"CREATE INDEX IF NOT EXISTS idx_pl
 
 const QString RATING_LIST_PLAYERS_NATIONAL_ID_INDEX = u"CREATE INDEX IF NOT EXISTS idx_national_id ON players(nationalId);"_s;
 
+const QString RATING_LIST_PLAYERS_LIST_INDEX = u"CREATE INDEX IF NOT EXISTS idx_player_list ON players(list);"_s;
+
 constexpr auto ADD_RATING_LIST_PLAYER_QUERY =
     "INSERT INTO players(list, name, playerId, federation, gender, title, birthday, standard, rapid, blitz, nationalId, nationalRating, extra) "
     "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, jsonb(?));"_L1;
+
+constexpr auto DELETE_RATING_LIST_PLAYERS_QUERY = "DELETE FROM players WHERE list = :list;"_L1;
 
 static const auto SEARCH_PLAYERS_QUERY =
     u"SELECT playerId, name, federation, gender, title, birthday, standard, rapid, blitz, nationalId, nationalRating, json(extra) as extra FROM players WHERE name LIKE :search LIMIT 20;"_s;
