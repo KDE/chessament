@@ -3,11 +3,9 @@
 
 pragma ComponentBehavior: Bound
 
-import QtCore
 import QtQml
 import QtQuick
 import QtQuick.Controls as Controls
-import QtQuick.Dialogs as Dialogs
 import QtQuick.Layouts as Layouts
 
 import org.kde.ki18n
@@ -23,126 +21,55 @@ FormCard.FormCardPage {
 
     title: KI18n.i18nc("@title", "Rating Lists")
 
-    FormCard.FormCardDialog {
-        id: addListDialog
-        parent: Controls.Overlay.overlay
-        title: KI18n.i18nc("@title:window", "Add Rating List")
-        footer: Controls.DialogButtonBox {
-            standardButtons: Controls.Dialog.Cancel
-
-            Controls.Button {
-                text: KI18n.i18nc("@action:button", "Import")
-                icon.name: "document-import-symbolic"
-                enabled: nameField.text.trim().length > 0 && listsModel.isValidUrl(urlField.editText)
-                Controls.DialogButtonBox.buttonRole: Controls.DialogButtonBox.AcceptRole
-            }
-        }
-
-        onAccepted: {
-            importingDialog.error = "";
-            importingDialog.finished = false;
-            importingDialog.open();
-
-            listsModel.importRatingList(nameField.text, urlField.editText).then(error => {
-                if (error) {
-                    importingDialog.error = error;
-                }
-                importingDialog.finished = true;
-            });
-        }
-
-        Dialogs.FileDialog {
-            id: fileDialog
-            nameFilters: [KI18n.i18nc("@label:listbox", "All Supported Files (*.zip *.xls)")]
-            currentFolder: StandardPaths.standardLocations(StandardPaths.HomeLocation)[0]
-            onAccepted: urlField.editText = selectedFile.toString().replace("file://", "")
-        }
-
-        FormCard.FormTextFieldDelegate {
-            id: nameField
-            label: KI18n.i18nc("@info:label", "Name")
-        }
-
-        FormCard.FormComboBoxDelegate {
-            id: urlField
-            text: KI18n.i18nc("@info:label", "Rating list file or URL")
-            editable: true
-            model: ["https://ratings.fide.com/download/players_list.zip"]
-            trailing: Controls.Button {
-                icon.name: "document-open-data-symbolic"
-                text: KI18n.i18nc("@action:button", "Select file")
-                display: Controls.AbstractButton.IconOnly
-                onPressed: fileDialog.open()
-                Controls.ToolTip.text: text
-                Controls.ToolTip.visible: hovered
-                Controls.ToolTip.delay: Kirigami.Units.toolTipDelay
-            }
-        }
-    }
-
     Kirigami.Dialog {
-        id: importingDialog
+        id: deleteListDialog
 
-        property string error
+        property int row
+        property string name
+        property bool waiting: false
         property bool finished: false
 
         parent: Controls.Overlay.overlay
-        title: {
-            if (error) {
-                return KI18n.i18nc("@title", "Error");
-            }
-            if (finished) {
-                return KI18n.i18nc("@title:window", "Rating List Imported");
-            }
-            return KI18n.i18nc("@title:window", "Importing Rating List");
-        }
+        title: KI18n.i18nc("@title", "Delete Rating List")
         closePolicy: Controls.Dialog.NoAutoClose
         showCloseButton: false
         padding: Kirigami.Units.largeSpacing
-        standardButtons: {
-            if (importingDialog.finished) {
-                return Controls.Dialog.Close;
-            }
-
-            return Controls.Dialog.NoButton;
-        }
 
         Layouts.ColumnLayout {
             Controls.BusyIndicator {
                 Layouts.Layout.fillWidth: true
                 Layouts.Layout.alignment: Qt.AlignHCenter
 
-                visible: !importingDialog.finished
+                visible: deleteListDialog.waiting
             }
-
             Controls.Label {
-                Layouts.Layout.fillWidth: true
-
-                text: importingDialog.error.length > 0 ? importingDialog.error : listsModel.status
-                horizontalAlignment: Text.AlignHCenter
+                text: KI18n.i18nc("@label", "Permanently delete rating list \"%1\"?", deleteListDialog.name)
+                visible: !(deleteListDialog.finished || deleteListDialog.waiting)
             }
         }
-    }
-
-    Kirigami.PromptDialog {
-        id: deleteListDialog
-
-        property int row
-        property string name
-
-        parent: Controls.Overlay.overlay
-        title: KI18n.i18nc("@title", "Delete Rating List")
-        subtitle: KI18n.i18nc("@label", "Permanently delete rating list \"%1\"?", deleteListDialog.name)
-
-        onAccepted: listsModel.removeList(deleteListDialog.row)
 
         footer: Controls.DialogButtonBox {
-            standardButtons: Controls.Dialog.Cancel
+            visible: !(deleteListDialog.finished || deleteListDialog.waiting)
+
+            standardButtons: if (deleteListDialog.finished && !deleteListDialog.waiting) {
+                return Controls.Dialog.Close;
+            } else if (!deleteListDialog.waiting) {
+                return Controls.Dialog.Cancel;
+            } else {
+                return Controls.Dialog.NoButton;
+            }
 
             Controls.Button {
                 text: KI18n.i18nc("@action:button Delete Rating List", "Delete")
                 icon.name: "delete-symbolic"
-                Controls.DialogButtonBox.buttonRole: Controls.DialogButtonBox.AcceptRole
+                visible: !(deleteListDialog.finished || deleteListDialog.waiting)
+                onClicked: function (): void {
+                    deleteListDialog.waiting = true;
+
+                    listsModel.removeList(deleteListDialog.row).then(() => {
+                        deleteListDialog.close();
+                    });
+                }
             }
         }
     }
@@ -180,6 +107,8 @@ FormCard.FormCardPage {
                     onPressed: {
                         deleteListDialog.row = listDelegate.row;
                         deleteListDialog.name = listDelegate.name;
+                        deleteListDialog.waiting = false;
+                        deleteListDialog.finished = false;
                         deleteListDialog.open();
                     }
                     Controls.ToolTip.text: KI18n.i18nc("@action:button", "Delete rating list")
@@ -193,7 +122,12 @@ FormCard.FormCardPage {
 
         FormCard.FormButtonDelegate {
             text: KI18n.i18nc("@action:button", "Add rating list")
-            onClicked: addListDialog.open()
+            onClicked: {
+                const dialog = Qt.createComponent("org.kde.chessament.settings", "AddRatingListDialog").createObject(root, {
+                    "model": listsModel
+                }) as AddRatingListDialog;
+                dialog.open();
+            }
         }
     }
 }

@@ -9,6 +9,7 @@ ecm_add_qml_module(chessament_settings
     QML_FILES
         AccountsPage.qml
         AddAccountDialog.qml
+        AddRatingListDialog.qml
         ChessamentConfigurationView.qml
         GeneralPage.qml
         RatingListsPage.qml
