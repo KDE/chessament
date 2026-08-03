@@ -79,9 +79,6 @@ QQC2.Dialog {
                         federationField.text = player.federation;
                         originField.text = player.origin;
                         genderField.text = player.gender;
-                        Qt.callLater(function (): void {
-                            nameField.text = player.name;
-                        });
                     }
                 }
             }

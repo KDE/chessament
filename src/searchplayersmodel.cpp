@@ -26,12 +26,8 @@ QVariant SearchPlayersModel::data(const QModelIndex &index, int role) const
     const auto player = m_players[index.row()];
 
     switch (role) {
-    case SearchPlayersModel::Role::NameRole: {
-        if (player.title().isEmpty()) {
-            return player.name();
-        }
-        return i18nc("%1 is the player's title, %2 is the player's name", "%1 %2", player.title(), player.name());
-    }
+    case SearchPlayersModel::Role::NameRole:
+        return player.name();
     case SearchPlayersModel::Role::Description: {
         if (player.standardRating() == 0 && player.origin().isEmpty()) {
             return QString{};
