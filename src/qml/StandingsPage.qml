@@ -96,13 +96,13 @@ TablePage {
         target: Controller
 
         function onAreStandingsValidChanged() {
-            if (!Controller.areStandingsValid && Controller.currentView === "StandingsPage") {
+            if (!Controller.areStandingsValid && Controller.currentView === Controller.View.Standings) {
                 Controller.reloadStandings(root.round);
             }
         }
 
         function onCurrentViewChanged() {
-            if (!Controller.areStandingsValid && Controller.currentView === "StandingsPage") {
+            if (!Controller.areStandingsValid && Controller.currentView === Controller.View.Standings) {
                 Controller.reloadStandings(root.round);
             }
         }
