@@ -40,9 +40,9 @@ QVariant SearchPlayersModel::data(const QModelIndex &index, int role) const
             return player.origin();
         }
         if (player.origin().isEmpty()) {
-            return i18nc("x", "Rating: %1", player.standardRating());
+            return i18nc("%1 is the player's rating", "Rating: %1", player.standardRating());
         }
-        return i18nc("x", "Rating: %1 · %2", player.standardRating(), player.origin());
+        return i18nc("%1 is the player's rating, %2 is the player's origin", "Rating: %1 · %2", player.standardRating(), player.origin());
     }
     case SearchPlayersModel::Role::RatingRole:
         return player.standardRating();
