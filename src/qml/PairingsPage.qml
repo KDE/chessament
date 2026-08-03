@@ -58,11 +58,13 @@ TablePage {
             id: printAction
             icon.name: "document-print-symbolic"
             text: KI18n.i18nc("@action:intoolbar", "Print…")
+            enabled: proxyModel.count !== 0
             onTriggered: Controller.printPairingsDocument()
         },
         Kirigami.Action {
             icon.name: "document-export-symbolic"
             text: KI18n.i18nc("@action:intoolbar", "Export as PDF…")
+            enabled: proxyModel.count !== 0
             onTriggered: saveDialog.open()
         },
         Kirigami.Action {

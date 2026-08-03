@@ -47,18 +47,20 @@ TablePage {
             id: printAction
             icon.name: "document-print-symbolic"
             text: KI18n.i18nc("@action:intoolbar", "Print…")
+            enabled: root.content.visible
             onTriggered: Controller.printStandingsDocument(root.round)
         },
         Kirigami.Action {
             icon.name: "document-export-symbolic"
             text: KI18n.i18nc("@action:intoolbar", "Export as PDF…")
+            enabled: root.content.visible
             onTriggered: saveDialog.open()
         },
         Kirigami.Action {
             displayHint: Kirigami.DisplayHint.KeepVisible
-            visible: root.content.visible
             displayComponent: Controls.ComboBox {
                 id: roundSelector
+                enabled: root.content.visible
                 model: Math.max(1, Controller.tournament.currentRound)
                 currentIndex: root.round - 1
                 displayText: {
