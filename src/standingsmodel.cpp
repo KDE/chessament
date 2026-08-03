@@ -107,38 +107,9 @@ QVariant StandingsModel::headerData(int section, Qt::Orientation orientation, in
 
 void StandingsModel::setStandings(QList<Standing> standings)
 {
-    auto rowDiff = standings.size() - m_standings.size();
-
-    int newColumns = 4 + static_cast<int>(standings.isEmpty() ? 0 : standings[0].values().size());
-    int prevColumns = 4 + static_cast<int>(m_standings.isEmpty() ? 0 : m_standings[0].values().size());
-    int columnDiff = newColumns - prevColumns;
-
-    if (rowDiff > 0) {
-        beginInsertRows({}, static_cast<int>(m_standings.size()), static_cast<int>(standings.size()) - 1);
-    } else if (rowDiff < 0) {
-        beginRemoveRows({}, static_cast<int>(standings.size()), static_cast<int>(m_standings.size()) - 1);
-    }
-    if (columnDiff > 0) {
-        beginInsertColumns({}, prevColumns, newColumns - 1);
-    } else if (columnDiff < 0) {
-        beginRemoveColumns({}, newColumns, prevColumns - 1);
-    }
-
+    beginResetModel();
     m_standings = std::move(standings);
-
-    if (rowDiff > 0) {
-        endInsertRows();
-    } else if (rowDiff < 0) {
-        endRemoveRows();
-    }
-    if (columnDiff > 0) {
-        endInsertColumns();
-    } else if (columnDiff < 0) {
-        endRemoveColumns();
-    }
-
-    Q_EMIT headerDataChanged(Qt::Horizontal, 0, columnCount() - 1);
-    Q_EMIT dataChanged(index(0, 0), index(rowCount() - 1, columnCount() - 1));
+    endResetModel();
 }
 
 void StandingsModel::setTournament(Tournament *tournament)
