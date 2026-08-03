@@ -6,7 +6,7 @@
 #include <QAbstractListModel>
 #include <qqmlregistration.h>
 
-#include "ratinglists/ratinglist.h"
+#include "ratinglists/ratinglistplayer.h"
 
 class Tournament;
 
@@ -18,6 +18,7 @@ class SearchPlayersModel : public QAbstractListModel
 public:
     enum Role {
         NameRole = Qt::UserRole,
+        Description,
         RatingRole,
         PlayerRole,
     };

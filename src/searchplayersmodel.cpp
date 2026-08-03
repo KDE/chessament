@@ -3,6 +3,10 @@
 
 #include "searchplayersmodel.h"
 
+#include <KLocalizedString>
+
+#include "ratinglists/ratinglist.h"
+
 SearchPlayersModel::SearchPlayersModel(QObject *parent)
     : QAbstractListModel(parent)
 {
@@ -22,8 +26,24 @@ QVariant SearchPlayersModel::data(const QModelIndex &index, int role) const
     const auto player = m_players[index.row()];
 
     switch (role) {
-    case SearchPlayersModel::Role::NameRole:
-        return player.name();
+    case SearchPlayersModel::Role::NameRole: {
+        if (player.title().isEmpty()) {
+            return player.name();
+        }
+        return i18nc("%1 is the player's title, %2 is the player's name", "%1 %2", player.title(), player.name());
+    }
+    case SearchPlayersModel::Role::Description: {
+        if (player.standardRating() == 0 && player.origin().isEmpty()) {
+            return QString{};
+        }
+        if (player.standardRating() == 0) {
+            return player.origin();
+        }
+        if (player.origin().isEmpty()) {
+            return i18nc("x", "Rating: %1", player.standardRating());
+        }
+        return i18nc("x", "Rating: %1 · %2", player.standardRating(), player.origin());
+    }
     case SearchPlayersModel::Role::RatingRole:
         return player.standardRating();
     case SearchPlayersModel::Role::PlayerRole:
@@ -37,6 +57,7 @@ QHash<int, QByteArray> SearchPlayersModel::roleNames() const
 {
     return {
         {Role::NameRole, "name"},
+        {Role::Description, "description"},
         {Role::RatingRole, "rating"},
         {Role::PlayerRole, "player"},
     };

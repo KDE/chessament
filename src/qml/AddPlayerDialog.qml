@@ -64,20 +64,25 @@ QQC2.Dialog {
                     id: searchModel
                 }
                 textRole: "name"
-                subtitleRole: "rating"
-                field.onSearchTriggered: searchModel.search(nameField.value)
-                field.onActivated: function (index: int) {
-                    const player = searchModel.data(searchModel.index(index, 0), SearchPlayersModel.PlayerRole);
+                subtitleRole: "description"
+                field {
+                    onSearchTriggered: searchModel.search(nameField.value)
+                    onActivated: function (index: int): void {
+                        const player = searchModel.data(searchModel.index(index, 0), SearchPlayersModel.PlayerRole);
 
-                    titleField.currentValue = player.title;
-                    ratingField.value = player.standardRating;
-                    nationalRatingField.value = player.nationalRating;
-                    playerIdField.text = player.id;
-                    nationalIdField.text = player.nationalId;
-                    birthDateField.text = player.birthDate;
-                    federationField.text = player.federation;
-                    originField.text = player.origin;
-                    genderField.text = player.gender;
+                        titleField.currentValue = player.title;
+                        ratingField.value = player.standardRating;
+                        nationalRatingField.value = player.nationalRating;
+                        playerIdField.text = player.id;
+                        nationalIdField.text = player.nationalId;
+                        birthDateField.text = player.birthDate;
+                        federationField.text = player.federation;
+                        originField.text = player.origin;
+                        genderField.text = player.gender;
+                        Qt.callLater(function (): void {
+                            nameField.text = player.name;
+                        });
+                    }
                 }
             }
 
