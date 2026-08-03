@@ -137,20 +137,4 @@ QQC2.Dialog {
             }
         }
     }
-
-    Kirigami.Separator {
-        anchors {
-            left: root.contentItem.left
-            right: root.contentItem.right
-            top: root.contentItem.top
-        }
-    }
-
-    Kirigami.Separator {
-        anchors {
-            left: root.contentItem.left
-            right: root.contentItem.right
-            bottom: root.contentItem.bottom
-        }
-    }
 }
