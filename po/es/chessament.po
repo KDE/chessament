@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-29 00:42+0000\n"
+"POT-Creation-Date: 2026-08-03 00:39+0000\n"
 "PO-Revision-Date: 2026-06-24 17:12+0100\n"
 "Last-Translator: Manuel Alcaraz Zambrano <manuel@alcarazzam.dev>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -509,7 +509,7 @@ msgctxt "@label:listbox"
 msgid "TRF files (*.trf *.txt)"
 msgstr "Archivos TRF (*.trf *.txt)"
 
-#: qml/Main.qml:115 settings/RatingListsPage.qml:92
+#: qml/Main.qml:115 settings/AddRatingListDialog.qml:31
 msgctxt "@title"
 msgid "Error"
 msgstr "Error"
@@ -981,6 +981,49 @@ msgctxt "@action:button"
 msgid "Continue"
 msgstr "Continuar"
 
+#: settings/AddRatingListDialog.qml:34
+msgctxt "@title:window"
+msgid "Importing Rating List"
+msgstr "Importando lista de valoración"
+
+#: settings/AddRatingListDialog.qml:37
+#, fuzzy
+#| msgctxt "@action:button"
+#| msgid "Rating Lists"
+msgctxt "@title:window"
+msgid "Rating List Imported"
+msgstr "Listas de valoración"
+
+#: settings/AddRatingListDialog.qml:39
+msgctxt "@title:window"
+msgid "Add Rating List"
+msgstr "Añadir lista de valoración"
+
+#: settings/AddRatingListDialog.qml:61
+msgctxt "@label:listbox"
+msgid "All Supported Files (*.zip *.xls)"
+msgstr ""
+
+#: settings/AddRatingListDialog.qml:68
+msgctxt "@info:label"
+msgid "Name"
+msgstr "Nombre"
+
+#: settings/AddRatingListDialog.qml:74
+msgctxt "@info:label"
+msgid "Rating list file or URL"
+msgstr "Archivo o URL de la lista de valoración"
+
+#: settings/AddRatingListDialog.qml:80
+msgctxt "@action:button"
+msgid "Select file"
+msgstr "Escoger archivo"
+
+#: settings/AddRatingListDialog.qml:119
+msgctxt "@action:button"
+msgid "Import"
+msgstr "Importar"
+
 #: settings/ChessamentConfigurationView.qml:21
 msgctxt "@action:button"
 msgid "General"
@@ -1011,60 +1054,17 @@ msgctxt "@option:check"
 msgid "Automatically open exported PDF files"
 msgstr "Abrir automáticamente archivos PDF exportados"
 
-#: settings/RatingListsPage.qml:24 settings/RatingListsPage.qml:151
+#: settings/RatingListsPage.qml:22 settings/RatingListsPage.qml:78
 msgctxt "@title"
 msgid "Rating Lists"
 msgstr "Listas de valoración"
 
-#: settings/RatingListsPage.qml:29
-msgctxt "@title:window"
-msgid "Add Rating List"
-msgstr "Añadir lista de valoración"
-
-#: settings/RatingListsPage.qml:34
-msgctxt "@action:button"
-msgid "Import"
-msgstr "Importar"
-
-#: settings/RatingListsPage.qml:56
-msgctxt "@label:listbox"
-msgid "All Supported Files (*.zip *.xls)"
-msgstr ""
-
-#: settings/RatingListsPage.qml:63
-msgctxt "@info:label"
-msgid "Name"
-msgstr "Nombre"
-
-#: settings/RatingListsPage.qml:68
-msgctxt "@info:label"
-msgid "Rating list file or URL"
-msgstr "Archivo o URL de la lista de valoración"
-
-#: settings/RatingListsPage.qml:73
-msgctxt "@action:button"
-msgid "Select file"
-msgstr "Escoger archivo"
-
-#: settings/RatingListsPage.qml:95
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Rating Lists"
-msgctxt "@title:window"
-msgid "Rating List Imported"
-msgstr "Listas de valoración"
-
-#: settings/RatingListsPage.qml:97
-msgctxt "@title:window"
-msgid "Importing Rating List"
-msgstr "Importando lista de valoración"
-
-#: settings/RatingListsPage.qml:134
+#: settings/RatingListsPage.qml:33
 msgctxt "@title"
 msgid "Delete Rating List"
 msgstr "Eliminar lista de valoración"
 
-#: settings/RatingListsPage.qml:135
+#: settings/RatingListsPage.qml:46
 #, fuzzy
 #| msgctxt "@label"
 #| msgid "Permanently delete player \"%1\"?"
@@ -1072,27 +1072,27 @@ msgctxt "@label"
 msgid "Permanently delete rating list \"%1\"?"
 msgstr "¿Eliminar jugador «%1» permanentemente?"
 
-#: settings/RatingListsPage.qml:143
+#: settings/RatingListsPage.qml:63
 msgctxt "@action:button Delete Rating List"
 msgid "Delete"
 msgstr "Eliminar"
 
-#: settings/RatingListsPage.qml:156
+#: settings/RatingListsPage.qml:83
 msgctxt "@info:status"
 msgid "No rating lists yet."
 msgstr "No hay listas de valoración todavía."
 
-#: settings/RatingListsPage.qml:176
+#: settings/RatingListsPage.qml:103
 msgctxt "@action:button"
 msgid "Delete Rating List"
 msgstr "Eliminar lista de valoración"
 
-#: settings/RatingListsPage.qml:185
+#: settings/RatingListsPage.qml:114
 msgctxt "@action:button"
 msgid "Delete rating list"
 msgstr "Eliminar lista de valoración"
 
-#: settings/RatingListsPage.qml:195
+#: settings/RatingListsPage.qml:124
 msgctxt "@action:button"
 msgid "Add rating list"
 msgstr "Añadir lista de valoración"
@@ -1221,20 +1221,20 @@ msgstr "Emparejamiento «%1» no válido."
 msgid "Invalid player \"%1\" on pairing \"%2\"."
 msgstr "Jugador «%1» no válido para el emparejamiento «%2»."
 
-#: tournament/ratinglists/ratinglist.cpp:178
-#: tournament/ratinglists/ratinglist.cpp:194
+#: tournament/ratinglists/ratinglist.cpp:186
+#: tournament/ratinglists/ratinglist.cpp:202
 #, kde-format
 msgctxt "@info"
 msgid "Could not open file."
 msgstr "No se ha podido abrir el archivo."
 
-#: tournament/ratinglists/ratinglist.cpp:189
+#: tournament/ratinglists/ratinglist.cpp:197
 #, kde-format
 msgctxt "@info"
 msgid "Could not open file: the file does not exists."
 msgstr "No se ha podido abrir el archivo: el archivo no existe."
 
-#: tournament/ratinglists/ratinglist.cpp:206
+#: tournament/ratinglists/ratinglist.cpp:214
 #, fuzzy, kde-format
 #| msgctxt "@info:progress"
 #| msgid "Downloading file"
@@ -1242,7 +1242,7 @@ msgctxt "@info:progress"
 msgid "Downloading file…"
 msgstr "Descargando archivo"
 
-#: tournament/ratinglists/ratinglist.cpp:219
+#: tournament/ratinglists/ratinglist.cpp:227
 #, fuzzy, kde-format
 #| msgctxt "@info:progress"
 #| msgid "Downloading file (%1 %)"
@@ -1254,7 +1254,7 @@ msgid ""
 "%1 / %2 (%3%)"
 msgstr "Descargando archivo (%1 %)"
 
-#: tournament/ratinglists/ratinglist.cpp:230
+#: tournament/ratinglists/ratinglist.cpp:238
 #, fuzzy, kde-format
 #| msgctxt "@info"
 #| msgid "Couldn't download rating list: %1"
@@ -1262,14 +1262,14 @@ msgctxt "@info"
 msgid "Could not download rating list: %1"
 msgstr "No se pudo descargar la lista de valoración: %1"
 
-#: tournament/ratinglists/ratinglist.cpp:241
+#: tournament/ratinglists/ratinglist.cpp:249
 #, kde-format
 msgctxt "@info"
 msgid "Could not download rating list from %1 (unsupported protocol)."
 msgstr ""
 "No se pudo descargar la lista de valoración desde %1 (protocolo no admitido)."
 
-#: tournament/ratinglists/ratinglist.cpp:254
+#: tournament/ratinglists/ratinglist.cpp:262
 #, kde-format
 msgctxt "@info:progress"
 msgid "Imported one player."
@@ -1277,7 +1277,7 @@ msgid_plural "Imported %1 players."
 msgstr[0] "Se importó un jugador."
 msgstr[1] "Se importaron %1 jugadores."
 
-#: tournament/ratinglists/ratinglist.cpp:270
+#: tournament/ratinglists/ratinglist.cpp:278
 #, fuzzy, kde-format
 #| msgctxt "@info"
 #| msgid "Couldn't extract file."
@@ -1285,13 +1285,13 @@ msgctxt "@info"
 msgid "Could not extract file."
 msgstr "No se ha podido extraer el archivo."
 
-#: tournament/ratinglists/ratinglist.cpp:275
+#: tournament/ratinglists/ratinglist.cpp:283
 #, kde-format
 msgctxt "@info"
 msgid "File format not supported."
 msgstr "Formato del archivo no admitido."
 
-#: tournament/ratinglists/ratinglist.cpp:472
+#: tournament/ratinglists/ratinglist.cpp:501
 #, kde-format
 msgctxt "@info:progress"
 msgid "Saved 1 player."

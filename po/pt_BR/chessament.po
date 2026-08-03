@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-29 00:42+0000\n"
+"POT-Creation-Date: 2026-08-03 00:39+0000\n"
 "PO-Revision-Date: 2026-07-29 05:50-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -486,7 +486,7 @@ msgctxt "@label:listbox"
 msgid "TRF files (*.trf *.txt)"
 msgstr "Arquivos TRF (*.trf *.txt)"
 
-#: qml/Main.qml:115 settings/RatingListsPage.qml:92
+#: qml/Main.qml:115 settings/AddRatingListDialog.qml:31
 msgctxt "@title"
 msgid "Error"
 msgstr "Erro"
@@ -943,6 +943,46 @@ msgctxt "@action:button"
 msgid "Continue"
 msgstr "Continuar"
 
+#: settings/AddRatingListDialog.qml:34
+msgctxt "@title:window"
+msgid "Importing Rating List"
+msgstr "Importando lista de classificação"
+
+#: settings/AddRatingListDialog.qml:37
+msgctxt "@title:window"
+msgid "Rating List Imported"
+msgstr "Lista de classificação importada"
+
+#: settings/AddRatingListDialog.qml:39
+msgctxt "@title:window"
+msgid "Add Rating List"
+msgstr "Adicionar lista de classificação"
+
+#: settings/AddRatingListDialog.qml:61
+msgctxt "@label:listbox"
+msgid "All Supported Files (*.zip *.xls)"
+msgstr "Todos os arquivos suportados (*.zip *.xls)"
+
+#: settings/AddRatingListDialog.qml:68
+msgctxt "@info:label"
+msgid "Name"
+msgstr "Nome"
+
+#: settings/AddRatingListDialog.qml:74
+msgctxt "@info:label"
+msgid "Rating list file or URL"
+msgstr "Arquivo de lista de classificação ou URL"
+
+#: settings/AddRatingListDialog.qml:80
+msgctxt "@action:button"
+msgid "Select file"
+msgstr "Selecionar arquivo"
+
+#: settings/AddRatingListDialog.qml:119
+msgctxt "@action:button"
+msgid "Import"
+msgstr "Importar"
+
 #: settings/ChessamentConfigurationView.qml:21
 msgctxt "@action:button"
 msgid "General"
@@ -973,82 +1013,42 @@ msgctxt "@option:check"
 msgid "Automatically open exported PDF files"
 msgstr "Abrir automaticamente arquivos PDF exportados"
 
-#: settings/RatingListsPage.qml:24 settings/RatingListsPage.qml:151
+#: settings/RatingListsPage.qml:22 settings/RatingListsPage.qml:78
 msgctxt "@title"
 msgid "Rating Lists"
 msgstr "Listas de classificação"
 
-#: settings/RatingListsPage.qml:29
-msgctxt "@title:window"
-msgid "Add Rating List"
-msgstr "Adicionar lista de classificação"
-
-#: settings/RatingListsPage.qml:34
-msgctxt "@action:button"
-msgid "Import"
-msgstr "Importar"
-
-#: settings/RatingListsPage.qml:56
-msgctxt "@label:listbox"
-msgid "All Supported Files (*.zip *.xls)"
-msgstr "Todos os arquivos suportados (*.zip *.xls)"
-
-#: settings/RatingListsPage.qml:63
-msgctxt "@info:label"
-msgid "Name"
-msgstr "Nome"
-
-#: settings/RatingListsPage.qml:68
-msgctxt "@info:label"
-msgid "Rating list file or URL"
-msgstr "Arquivo de lista de classificação ou URL"
-
-#: settings/RatingListsPage.qml:73
-msgctxt "@action:button"
-msgid "Select file"
-msgstr "Selecionar arquivo"
-
-#: settings/RatingListsPage.qml:95
-msgctxt "@title:window"
-msgid "Rating List Imported"
-msgstr "Lista de classificação importada"
-
-#: settings/RatingListsPage.qml:97
-msgctxt "@title:window"
-msgid "Importing Rating List"
-msgstr "Importando lista de classificação"
-
-#: settings/RatingListsPage.qml:134
+#: settings/RatingListsPage.qml:33
 msgctxt "@title"
 msgid "Delete Rating List"
 msgstr "Excluir lista de classificação"
 
-#: settings/RatingListsPage.qml:135
+#: settings/RatingListsPage.qml:46
 msgctxt "@label"
 msgid "Permanently delete rating list \"%1\"?"
 msgstr "Excluir permanentemente a lista de classificação \"%1\"?"
 
-#: settings/RatingListsPage.qml:143
+#: settings/RatingListsPage.qml:63
 msgctxt "@action:button Delete Rating List"
 msgid "Delete"
 msgstr "Excluir"
 
-#: settings/RatingListsPage.qml:156
+#: settings/RatingListsPage.qml:83
 msgctxt "@info:status"
 msgid "No rating lists yet."
 msgstr "Nenhuma lista classificação ainda."
 
-#: settings/RatingListsPage.qml:176
+#: settings/RatingListsPage.qml:103
 msgctxt "@action:button"
 msgid "Delete Rating List"
 msgstr "Excluir lista de classificação"
 
-#: settings/RatingListsPage.qml:185
+#: settings/RatingListsPage.qml:114
 msgctxt "@action:button"
 msgid "Delete rating list"
 msgstr "Excluir lista de classificação"
 
-#: settings/RatingListsPage.qml:195
+#: settings/RatingListsPage.qml:124
 msgctxt "@action:button"
 msgid "Add rating list"
 msgstr "Adicionar lista de classificação"
@@ -1174,26 +1174,26 @@ msgstr "Pareamento inválido \"%1\"."
 msgid "Invalid player \"%1\" on pairing \"%2\"."
 msgstr "Jogador inválido \"%1\" no pareamento \"%2\"."
 
-#: tournament/ratinglists/ratinglist.cpp:178
-#: tournament/ratinglists/ratinglist.cpp:194
+#: tournament/ratinglists/ratinglist.cpp:186
+#: tournament/ratinglists/ratinglist.cpp:202
 #, kde-format
 msgctxt "@info"
 msgid "Could not open file."
 msgstr "Não foi possível abrir o arquivo."
 
-#: tournament/ratinglists/ratinglist.cpp:189
+#: tournament/ratinglists/ratinglist.cpp:197
 #, kde-format
 msgctxt "@info"
 msgid "Could not open file: the file does not exists."
 msgstr "Não foi possível abrir o arquivo: o arquivo não existe."
 
-#: tournament/ratinglists/ratinglist.cpp:206
+#: tournament/ratinglists/ratinglist.cpp:214
 #, kde-format
 msgctxt "@info:progress"
 msgid "Downloading file…"
 msgstr "Baixando arquivo…"
 
-#: tournament/ratinglists/ratinglist.cpp:219
+#: tournament/ratinglists/ratinglist.cpp:227
 #, kde-format
 msgctxt ""
 "@info:progress %1 & %2 are the file download progress (received / total), %3 "
@@ -1205,13 +1205,13 @@ msgstr ""
 "Baixando arquivo…\n"
 "%1 / %2 (%3%)"
 
-#: tournament/ratinglists/ratinglist.cpp:230
+#: tournament/ratinglists/ratinglist.cpp:238
 #, kde-format
 msgctxt "@info"
 msgid "Could not download rating list: %1"
 msgstr "Não foi possível baixar a lista de classificação: %1"
 
-#: tournament/ratinglists/ratinglist.cpp:241
+#: tournament/ratinglists/ratinglist.cpp:249
 #, kde-format
 msgctxt "@info"
 msgid "Could not download rating list from %1 (unsupported protocol)."
@@ -1219,7 +1219,7 @@ msgstr ""
 "Não foi possível baixar a lista de classificação de %1 (protocolo não "
 "suportado)."
 
-#: tournament/ratinglists/ratinglist.cpp:254
+#: tournament/ratinglists/ratinglist.cpp:262
 #, kde-format
 msgctxt "@info:progress"
 msgid "Imported one player."
@@ -1227,19 +1227,19 @@ msgid_plural "Imported %1 players."
 msgstr[0] "Um jogador importado."
 msgstr[1] "%1 jogadores importados."
 
-#: tournament/ratinglists/ratinglist.cpp:270
+#: tournament/ratinglists/ratinglist.cpp:278
 #, kde-format
 msgctxt "@info"
 msgid "Could not extract file."
 msgstr "Não foi possível extrair o arquivo."
 
-#: tournament/ratinglists/ratinglist.cpp:275
+#: tournament/ratinglists/ratinglist.cpp:283
 #, kde-format
 msgctxt "@info"
 msgid "File format not supported."
 msgstr "Formato de arquivo não suportado."
 
-#: tournament/ratinglists/ratinglist.cpp:472
+#: tournament/ratinglists/ratinglist.cpp:501
 #, kde-format
 msgctxt "@info:progress"
 msgid "Saved 1 player."
