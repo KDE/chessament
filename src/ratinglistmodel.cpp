@@ -17,7 +17,7 @@ int RatingListModel::rowCount(const QModelIndex &parent) const
 {
     Q_UNUSED(parent);
 
-    return m_lists.size();
+    return static_cast<int>(m_lists.size());
 }
 
 QVariant RatingListModel::data(const QModelIndex &index, int role) const
