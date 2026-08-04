@@ -142,19 +142,9 @@ bool PlayersModel::setData(const QModelIndex &index, const QVariant &value, int 
             return false;
         }
 
-        int destinationRow = newRank;
-        if (destinationRow < oldRank) {
-            --destinationRow;
-        }
-
-        Q_EMIT dataChanged(this->index(0, index.column()), this->index(rowCount() - 1, index.column()));
-
-        if (const auto result = beginMoveRows({}, index.row(), index.row(), {}, destinationRow); !result) {
-            qWarning() << "Invalid beginMoveRows";
-            return false;
-        }
+        beginResetModel();
         std::ranges::sort(m_players, Player::SortByStartingRank);
-        endMoveRows();
+        endResetModel();
 
         return true;
     }
