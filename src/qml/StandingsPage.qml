@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
-// SPDX-FileCopyrightText: 2024-2025 Manuel Alcaraz Zambrano <manuel@alcarazzam.dev>
+// SPDX-FileCopyrightText: 2024-2026 Manuel Alcaraz Zambrano <manuel@alcarazzam.dev>
 
 pragma ComponentBehavior: Bound
 
@@ -10,6 +10,7 @@ import QtQuick.Controls as Controls
 import QtQuick.Dialogs as Dialogs
 
 import org.kde.ki18n
+import org.kde.kitemmodels as KItemModels
 import org.kde.kirigami as Kirigami
 
 import org.kde.chessament
@@ -21,10 +22,23 @@ TablePage {
 
     Kirigami.ColumnView.fillWidth: true
 
-    model: Controller.standingsModel
-    content.visible: Controller.tournament.currentRound > 0
+    onColumnClicked: function (index: int): void {
+        if (root.sortColumn === index) {
+            root.sortOrder = root.sortOrder === Qt.AscendingOrder ? Qt.DescendingOrder : Qt.AscendingOrder;
+        } else {
+            root.sortColumn = index;
+        }
+    }
 
-    selectionBehavior: TableView.SelectRows
+    model: KItemModels.KSortFilterProxyModel {
+        id: proxyModel
+        sourceModel: Controller.standingsModel
+
+        sortColumn: root.sortColumn
+        sortOrder: root.sortOrder
+    }
+
+    content.visible: Controller.tournament.currentRound > 0
 
     function defaultColumnWidth(column: int): int {
         if (column >= 4) {

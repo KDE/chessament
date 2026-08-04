@@ -206,6 +206,7 @@ QHash<int, QByteArray> PlayersModel::roleNames() const
         {Qt::TextAlignmentRole, "textAlignment"},
         {Roles::PlayerRole, "player"},
         {Roles::IconRole, "iconSource"},
+        {Roles::EnableSort, "enableSort"},
     };
 }
 
@@ -218,31 +219,39 @@ Qt::ItemFlags PlayersModel::flags(const QModelIndex &index) const
 QVariant PlayersModel::headerData(int section, Qt::Orientation orientation, int role) const
 {
     Q_UNUSED(orientation)
-    Q_UNUSED(role)
-    switch (m_columns.at(section)) {
-    case PlayersModel::Columns::StartingRank:
-        return i18nc("@title:column Player Starting Rank Number", "№");
-    case PlayersModel::Columns::Title:
-        return i18nc("@title:column Player Title", "Title");
-    case PlayersModel::Columns::Name:
-        return i18nc("@title:column Player Name", "Name");
-    case PlayersModel::Columns::Rating:
-        return i18nc("@title:column Player Rating", "Rating");
-    case PlayersModel::Columns::NationalRating:
-        return i18nc("@title:column Player National Rating", "National Rating");
-    case PlayersModel::Columns::PlayerId:
-        return i18nc("@title:column", "Player ID");
-    case PlayersModel::Columns::NationalId:
-        return i18nc("@title:column Player National ID", "National ID");
-    case PlayersModel::Columns::BirthDate:
-        return i18nc("@title:column", "Birth date");
-    case PlayersModel::Columns::Federation:
-        return i18nc("@title:column Player Federation", "Federation");
-    case PlayersModel::Columns::Origin:
-        return i18nc("@title:column Player Origin", "Origin");
-    case PlayersModel::Columns::Gender:
-        return i18nc("@title:column Player Gender", "Gender");
+
+    const int column = m_columns.at(section);
+
+    if (role == Qt::DisplayRole) {
+        switch (column) {
+        case PlayersModel::Columns::StartingRank:
+            return i18nc("@title:column Player Starting Rank Number", "№");
+        case PlayersModel::Columns::Title:
+            return i18nc("@title:column Player Title", "Title");
+        case PlayersModel::Columns::Name:
+            return i18nc("@title:column Player Name", "Name");
+        case PlayersModel::Columns::Rating:
+            return i18nc("@title:column Player Rating", "Rating");
+        case PlayersModel::Columns::NationalRating:
+            return i18nc("@title:column Player National Rating", "National Rating");
+        case PlayersModel::Columns::PlayerId:
+            return i18nc("@title:column", "Player ID");
+        case PlayersModel::Columns::NationalId:
+            return i18nc("@title:column Player National ID", "National ID");
+        case PlayersModel::Columns::BirthDate:
+            return i18nc("@title:column", "Birth date");
+        case PlayersModel::Columns::Federation:
+            return i18nc("@title:column Player Federation", "Federation");
+        case PlayersModel::Columns::Origin:
+            return i18nc("@title:column Player Origin", "Origin");
+        case PlayersModel::Columns::Gender:
+            return i18nc("@title:column Player Gender", "Gender");
+        }
     }
+    if (role == PlayersModel::Roles::EnableSort) {
+        return true;
+    }
+
     return {};
 }
 

@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 // SPDX-FileCopyrightText: 2024 Manuel Alcaraz Zambrano <manuel@alcarazzam.dev>
+
 pragma ComponentBehavior: Bound
 
 import QtCore
@@ -18,9 +19,22 @@ TablePage {
 
     Kirigami.ColumnView.fillWidth: true
 
+    columnWidths: [55, 55, 300, 120, 300, 55]
+
+    onColumnClicked: function (index: int): void {
+        if (root.sortColumn === index) {
+            root.sortOrder = root.sortOrder === Qt.AscendingOrder ? Qt.DescendingOrder : Qt.AscendingOrder;
+        } else {
+            root.sortColumn = index;
+        }
+    }
+
     model: KItemModels.KSortFilterProxyModel {
         id: proxyModel
         sourceModel: Controller.pairingModel
+
+        sortColumn: root.sortColumn
+        sortOrder: root.sortOrder
         filterRowCallback: function (source_row, source_parent) {
             if (hideFinishedAction.checked) {
                 const hasFinished = sourceModel.data(sourceModel.index(source_row, 0, source_parent), PairingModel.HasFinishedRole);
@@ -29,9 +43,6 @@ TablePage {
             return true;
         }
     }
-
-    selectionBehavior: TableView.SelectRows
-    columnWidths: [55, 55, 300, 120, 300, 55]
 
     Dialogs.FileDialog {
         id: saveDialog

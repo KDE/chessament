@@ -87,26 +87,39 @@ QHash<int, QByteArray> PairingModel::roleNames() const
         {PairingModel::Roles::HasFinishedRole, "hasFinished"},
         {PairingModel::Roles::PairingRole, "pairing"},
         {Qt::TextAlignmentRole, "textAlignment"},
+        {PairingModel::Roles::EnableSort, "enableSort"},
     };
 }
 
 QVariant PairingModel::headerData(int section, Qt::Orientation orientation, int role) const
 {
     Q_UNUSED(orientation)
-    Q_UNUSED(role)
-    switch (m_columns.at(section)) {
-    case Board:
-        return i18nc("@title:column Board Number", "Board");
-    case WhiteStartingRank:
-        return i18nc("@title:column White Player Starting Rank Number", "№");
-    case WhiteName:
-        return i18nc("@title:column Name of the White Player", "White Player");
-    case Result:
-        return i18nc("@title:column Game Result", "Result");
-    case BlackName:
-        return i18nc("@title:column Name of the Black Player", "Black Player");
-    case BlackStartingRank:
-        return i18nc("@title:column Black Player Starting Rank Number", "№");
+
+    const int column = m_columns.at(section);
+
+    if (role == Qt::DisplayRole) {
+        switch (column) {
+        case Board:
+            return i18nc("@title:column Board Number", "Board");
+        case WhiteStartingRank:
+            return i18nc("@title:column White Player Starting Rank Number", "№");
+        case WhiteName:
+            return i18nc("@title:column Name of the White Player", "White Player");
+        case Result:
+            return i18nc("@title:column Game Result", "Result");
+        case BlackName:
+            return i18nc("@title:column Name of the Black Player", "Black Player");
+        case BlackStartingRank:
+            return i18nc("@title:column Black Player Starting Rank Number", "№");
+        }
+    }
+    if (role == PairingModel::Roles::EnableSort) {
+        switch (column) {
+        case Board:
+            return true;
+        default:
+            return false;
+        }
     }
 
     return {};

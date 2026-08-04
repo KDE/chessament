@@ -29,6 +29,7 @@ public:
     enum Roles {
         HasFinishedRole = Qt::UserRole,
         PairingRole,
+        EnableSort,
     };
     Q_ENUM(Roles)
 

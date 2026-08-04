@@ -22,6 +22,7 @@ public:
         StartingRankRole,
         TitleRole,
         NameRole,
+        EnableSort,
     };
     Q_ENUM(StandingRoles)
 

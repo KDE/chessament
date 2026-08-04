@@ -34,6 +34,7 @@ public:
     enum Roles {
         PlayerRole = Qt::UserRole,
         IconRole,
+        EnableSort,
     };
     Q_ENUM(Roles)
 

@@ -70,6 +70,7 @@ QHash<int, QByteArray> StandingsModel::roleNames() const
     return {
         {Qt::DisplayRole, "displayText"},
         {Qt::TextAlignmentRole, "textAlignment"},
+        {StandingsModel::StandingRoles::EnableSort, "enableSort"},
     };
 }
 
@@ -82,27 +83,33 @@ Qt::ItemFlags StandingsModel::flags(const QModelIndex &index) const
 QVariant StandingsModel::headerData(int section, Qt::Orientation orientation, int role) const
 {
     Q_UNUSED(orientation)
-    Q_UNUSED(role)
 
     Q_ASSERT(m_tournament != nullptr);
 
-    switch (section) {
-    case RankRole:
-        return i18nc("@title:column Player Ranking", "Rank");
-    case StartingRankRole:
-        return i18nc("@title:column Player Starting Rank Number", "№");
-    case TitleRole:
-        return i18nc("@title:column Player Title", "Title");
-    case NameRole:
-        return i18nc("@title:column Player Name", "Name");
-    default: {
-        const auto tiebreak = m_tournament->tiebreaks().at(section - 4).get();
-        if (!tiebreak->shortName().isNull()) {
-            return tiebreak->shortName();
+    if (role == Qt::DisplayRole) {
+        switch (section) {
+        case RankRole:
+            return i18nc("@title:column Player Ranking", "Rank");
+        case StartingRankRole:
+            return i18nc("@title:column Player Starting Rank Number", "№");
+        case TitleRole:
+            return i18nc("@title:column Player Title", "Title");
+        case NameRole:
+            return i18nc("@title:column Player Name", "Name");
+        default: {
+            const auto tiebreak = m_tournament->tiebreaks().at(section - 4).get();
+            if (!tiebreak->shortName().isNull()) {
+                return tiebreak->shortName();
+            }
+            return tiebreak->code();
         }
-        return tiebreak->code();
+        }
     }
+    if (role == StandingsModel::StandingRoles::EnableSort) {
+        return true;
     }
+
+    return {};
 }
 
 void StandingsModel::setStandings(QList<Standing> standings)

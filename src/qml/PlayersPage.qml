@@ -24,7 +24,14 @@ TablePage {
     Kirigami.ColumnView.fillWidth: true
 
     columnWidths: [55, 55, 300, 60, 90, 90, 100, 100, 150, 150, 50]
-    selectionBehavior: TableView.SelectRows
+
+    onColumnClicked: function (index: int): void {
+        if (root.sortColumn === index) {
+            root.sortOrder = root.sortOrder === Qt.AscendingOrder ? Qt.DescendingOrder : Qt.AscendingOrder;
+        } else {
+            root.sortColumn = index;
+        }
+    }
 
     AddPlayerDialog {
         id: addPlayerDialog
@@ -44,8 +51,10 @@ TablePage {
 
     model: KItemModels.KSortFilterProxyModel {
         id: proxyModel
-
         sourceModel: Controller.playersModel
+
+        sortColumn: root.sortColumn
+        sortOrder: root.sortOrder
         filterRowCallback: function (source_row: int, source_parent): bool {
             const player = sourceModel.data(sourceModel.index(source_row, 0), PlayersModel.PlayerRole) as Player;
             return player.name.toLowerCase().includes(root.filterString);

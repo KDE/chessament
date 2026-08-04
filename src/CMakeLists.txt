@@ -13,6 +13,7 @@ ecm_add_qml_module(chessament_static
     QML_FILES
         qml/components/ArbiterDelegate.qml
         qml/components/FormCardSearchFieldDelegate.qml
+        qml/components/HeaderDelegate.qml
         qml/components/MenuBar.qml
         qml/components/RatingField.qml
         qml/components/StartingRankField.qml

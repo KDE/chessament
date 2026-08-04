@@ -21,9 +21,14 @@ Kirigami.Page {
     readonly property alias tableView: tableView
     readonly property alias heading: heading
 
-    property var selectionBehavior: TableView.SelectCells
+    property int sortColumn: -1
+    property int sortOrder: Qt.AscendingOrder
+
+    property var selectionBehavior: TableView.SelectRows
 
     property list<int> columnWidths: []
+
+    signal columnClicked(int index)
 
     function defaultColumnWidth(column: int): int {
         const columnWidth = root.tableView.implicitColumnWidth(column);
@@ -54,6 +59,16 @@ Kirigami.Page {
             width: scrollView.width
             syncView: tableView
             clip: true
+
+            delegate: HeaderDelegate {
+                required property int index
+                required property bool enableSort
+
+                sortSupported: enableSort
+                sortEnabled: root.sortColumn === index
+                sortOrder: root.sortOrder
+                onClicked: root.columnClicked(index)
+            }
         }
 
         Controls.ScrollView {
@@ -93,8 +108,7 @@ Kirigami.Page {
                         return w;
                     }
                     if (root.columnWidths[column]) {
-                        const headingWidth = heading.implicitColumnWidth(column);
-                        return Math.max(headingWidth, root.columnWidths[column]);
+                        return root.columnWidths[column];
                     }
                     return root.defaultColumnWidth(column);
                 }
