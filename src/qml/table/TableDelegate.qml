@@ -18,7 +18,7 @@ T.ItemDelegate {
     required property bool selected
     required property bool current
     property Components.ConvergentContextMenu contextMenu: null
-    readonly property bool rowHovered: root.tableView.hoveredRow === row || hovered
+    readonly property bool rowHovered: (root.tableView as TablePageTableView).hoveredRow === row || hovered
     required property TableView tableView
     required property var model
 

@@ -5,7 +5,6 @@
 pragma ComponentBehavior: Bound
 
 import QtQuick
-import QtQml.Models
 import QtQuick.Controls as Controls
 
 import org.kde.kirigami as Kirigami
@@ -77,33 +76,15 @@ Kirigami.Page {
             anchors.fill: parent
             anchors.topMargin: heading.height
 
-            TableView {
+            TablePageTableView {
                 id: tableView
 
-                property int hoveredRow: -1
-
                 model: root.model
-                delegateModelAccess: DelegateModel.ReadWrite
-
-                clip: true
-                pixelAligned: true
-                boundsBehavior: Flickable.StopAtBounds
-
-                selectionBehavior: root.selectionBehavior
-                selectionMode: TableView.SingleSelection
-
-                selectionModel: ItemSelectionModel {
-                    id: selectionModel
-
-                    onCurrentChanged: function (current, previous): void {
-                        tableView.itemAtIndex(current)?.forceActiveFocus();
-                    }
-                }
-
                 delegate: root.delegate
+                selectionBehavior: root.selectionBehavior
 
                 columnWidthProvider: function (column) {
-                    const w = root.tableView.explicitColumnWidth(column);
+                    const w = tableView.explicitColumnWidth(column);
                     if (w >= 0) {
                         return w;
                     }

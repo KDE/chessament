@@ -21,8 +21,6 @@ ecm_add_qml_module(chessament_static
         qml/components/TimeControlDelegate.qml
 
         qml/Main.qml
-        qml/TablePage.qml
-        qml/TableDelegate.qml
         qml/AddPlayerDialog.qml
         qml/AddTiebreakDialog.qml
         qml/DeletePairingsDialog.qml
@@ -38,6 +36,11 @@ ecm_add_qml_module(chessament_static
         qml/PlayersPageTableDelegate.qml
         qml/UpdateRatingsDialog.qml
         qml/WelcomePage.qml
+
+        # Table
+        qml/table/TableDelegate.qml
+        qml/table/TablePage.qml
+        qml/table/TablePageTableView.qml
 
         # Player details
         qml/player/PlayerDetails.qml
