@@ -269,6 +269,10 @@ std::expected<void, QString> Tournament::deletePlayer(int startingRank)
 
     const auto &player = m_players.at(startingRank - 1);
 
+    if (!m_event->db().transaction()) {
+        return std::unexpected(m_event->db().lastError().text());
+    }
+
     if (const auto ok = deletePairings(player.get()); !ok) {
         return ok;
     }
@@ -287,6 +291,10 @@ std::expected<void, QString> Tournament::deletePlayer(int startingRank)
         const auto &player = m_players.at(i);
         player->setStartingRank(i + 1);
         savePlayer(player.get());
+    }
+
+    if (!m_event->db().commit()) {
+        return std::unexpected(m_event->db().lastError().text());
     }
 
     Q_EMIT numberOfPlayersChanged();
