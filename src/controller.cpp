@@ -172,7 +172,12 @@ void Controller::exportTrf(const QUrl &fileUrl)
     }
 }
 
-QCoro::Task<void> Controller::pairRound(bool sort, uint color)
+QCoro::QmlTask Controller::pairRound(bool sort, uint color)
+{
+    return makePairings(sort, color);
+}
+
+QCoro::Task<> Controller::makePairings(bool sort, uint color)
 {
     if (m_tournament->currentRound() == 0 && sort) {
         sortPlayers();
