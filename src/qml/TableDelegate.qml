@@ -89,7 +89,10 @@ T.ItemDelegate {
 
     contentItem: Delegates.DefaultContentItem {
         itemDelegate: root
-        labelItem.horizontalAlignment: root.model.textAlignment ?? Qt.AlignLeading
+        labelItem {
+            horizontalAlignment: root.model.textAlignment ?? Qt.AlignLeading
+            textFormat: Text.PlainText
+        }
     }
 
     Accessible.role: Accessible.Cell
