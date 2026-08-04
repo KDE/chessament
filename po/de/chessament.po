@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-03 00:39+0000\n"
+"POT-Creation-Date: 2026-08-04 00:40+0000\n"
 "PO-Revision-Date: 2026-02-15 16:12+0100\n"
 "Last-Translator: Alois Spitzbart <spitz234@hotmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -273,28 +273,28 @@ msgctxt "@label:textbox"
 msgid "Name"
 msgstr "Name"
 
-#: qml/AddPlayerDialog.qml:86
+#: qml/AddPlayerDialog.qml:88
 msgctxt "@label:textbox"
 msgid "Rating"
 msgstr "Wertung"
 
-#: qml/AddPlayerDialog.qml:93
+#: qml/AddPlayerDialog.qml:95
 msgctxt "@label:textbox"
 msgid "National rating"
 msgstr "Nationale Wertung"
 
-#: qml/AddPlayerDialog.qml:100
+#: qml/AddPlayerDialog.qml:102
 msgctxt "@label:textbox"
 msgid "Player ID"
 msgstr "Spieler-ID"
 
-#: qml/AddPlayerDialog.qml:101 qml/AddPlayerDialog.qml:107
-#: qml/AddPlayerDialog.qml:113 qml/AddPlayerDialog.qml:119
-#: qml/AddPlayerDialog.qml:125 qml/AddPlayerDialog.qml:131
+#: qml/AddPlayerDialog.qml:103 qml/AddPlayerDialog.qml:109
+#: qml/AddPlayerDialog.qml:115 qml/AddPlayerDialog.qml:121
+#: qml/AddPlayerDialog.qml:127 qml/AddPlayerDialog.qml:133
 msgid "Optional"
 msgstr "Optional"
 
-#: qml/AddPlayerDialog.qml:106
+#: qml/AddPlayerDialog.qml:108
 #, fuzzy
 #| msgctxt "@title:column Player National Rating"
 #| msgid "National Rating"
@@ -302,22 +302,22 @@ msgctxt "@label:textbox"
 msgid "National ID"
 msgstr "Nationale Wertung"
 
-#: qml/AddPlayerDialog.qml:112
+#: qml/AddPlayerDialog.qml:114
 msgctxt "@label:textbox"
 msgid "Birth date"
 msgstr "Geburtsdatum"
 
-#: qml/AddPlayerDialog.qml:118 qml/TournamentSettingsInformation.qml:43
+#: qml/AddPlayerDialog.qml:120 qml/TournamentSettingsInformation.qml:43
 msgctxt "@label:textbox"
 msgid "Federation"
 msgstr "Verband"
 
-#: qml/AddPlayerDialog.qml:124
+#: qml/AddPlayerDialog.qml:126
 msgctxt "@label:textbox"
 msgid "Origin"
 msgstr "Herkunft"
 
-#: qml/AddPlayerDialog.qml:130
+#: qml/AddPlayerDialog.qml:132
 msgctxt "@label:textbox"
 msgid "Gender"
 msgstr ""
@@ -574,43 +574,43 @@ msgctxt "@action:intoolbar"
 msgid "Print…"
 msgstr "Drucken …"
 
-#: qml/PairingsPage.qml:65 qml/PlayersPage.qml:137 qml/StandingsPage.qml:54
+#: qml/PairingsPage.qml:66 qml/PlayersPage.qml:137 qml/StandingsPage.qml:55
 msgctxt "@action:intoolbar"
 msgid "Export as PDF…"
 msgstr "Als PDF exportieren …"
 
-#: qml/PairingsPage.qml:74 qml/PairingsPage.qml:79
+#: qml/PairingsPage.qml:76 qml/PairingsPage.qml:81
 msgid "Round %1"
 msgstr "Runde %1"
 
-#: qml/PairingsPage.qml:91
+#: qml/PairingsPage.qml:93
 msgctxt "@action:intoolbar"
 msgid "Remove pairings of this and following rounds…"
 msgstr "Paarungen von dieser und den folgenden Runden entfernen …"
 
-#: qml/PairingsPage.qml:105
+#: qml/PairingsPage.qml:107
 msgctxt "@info"
 msgid "The tournament hasn't started yet."
 msgstr "Das Turnier hat noch nicht begonnen."
 
-#: qml/PairingsPage.qml:105
+#: qml/PairingsPage.qml:107
 msgctxt "@info"
 msgid "Round %1 has finished."
 msgstr "Runde %1 ist beendet."
 
-#: qml/PairingsPage.qml:109
+#: qml/PairingsPage.qml:111
 #, fuzzy
 #| msgid "Pair round %1"
 msgctxt "@action:button"
 msgid "Pair Round %1…"
 msgstr "Runde %1 paaren"
 
-#: qml/PairingsPage.qml:153
+#: qml/PairingsPage.qml:155
 msgctxt "@info:placeholder"
 msgid "No pairings for round %1 yet"
 msgstr "Noch keine Paarungen für Runde %1"
 
-#: qml/PairingsPage.qml:155
+#: qml/PairingsPage.qml:157
 msgctxt "@info:placeholder"
 msgid "All games of round %1 have finished"
 msgstr "Alle Spiele der Runde %1 sind beendet"
@@ -801,17 +801,17 @@ msgid ""
 "allowed in official tournaments."
 msgstr ""
 
-#: qml/StandingsPage.qml:66 qml/StandingsPage.qml:76
+#: qml/StandingsPage.qml:68 qml/StandingsPage.qml:78
 msgctxt "@item:inlistbox"
 msgid "Final Standings"
 msgstr "Endgültiger Spielstand"
 
-#: qml/StandingsPage.qml:68 qml/StandingsPage.qml:78
+#: qml/StandingsPage.qml:70 qml/StandingsPage.qml:80
 msgctxt "@item:inlistbox Standings After Round %1"
 msgid "After Round %1"
 msgstr "Nach Runde %1"
 
-#: qml/StandingsPage.qml:125
+#: qml/StandingsPage.qml:127
 msgctxt "@info:placeholder"
 msgid "No standings yet"
 msgstr "Noch keine Spielstände"
@@ -974,6 +974,22 @@ msgstr "Willkommen bei Chessament"
 msgctxt "@info"
 msgid "Chessament is a chess tournament manager"
 msgstr "Chessament ist ein Schachturniermanager"
+
+#: searchplayersmodel.cpp:39
+#, fuzzy, kde-format
+#| msgctxt "@title:column Player Rating"
+#| msgid "Rating"
+msgctxt "%1 is the player's rating"
+msgid "Rating: %1"
+msgstr "Wertung"
+
+#: searchplayersmodel.cpp:41
+#, fuzzy, kde-format
+#| msgctxt "Pieces Color · Player Name"
+#| msgid "%1 · %2"
+msgctxt "%1 is the player's rating, %2 is the player's origin"
+msgid "Rating: %1 · %2"
+msgstr "%1 · %2"
 
 #: settings/AccountsPage.qml:21
 #, fuzzy

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-03 00:39+0000\n"
+"POT-Creation-Date: 2026-08-04 00:40+0000\n"
 "PO-Revision-Date: 2026-07-31 12:54+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -269,48 +269,48 @@ msgctxt "@label:textbox"
 msgid "Name"
 msgstr "שם"
 
-#: qml/AddPlayerDialog.qml:86
+#: qml/AddPlayerDialog.qml:88
 msgctxt "@label:textbox"
 msgid "Rating"
 msgstr "דירוג"
 
-#: qml/AddPlayerDialog.qml:93
+#: qml/AddPlayerDialog.qml:95
 msgctxt "@label:textbox"
 msgid "National rating"
 msgstr "דירוג לאומי"
 
-#: qml/AddPlayerDialog.qml:100
+#: qml/AddPlayerDialog.qml:102
 msgctxt "@label:textbox"
 msgid "Player ID"
 msgstr "מס׳ שחקן"
 
-#: qml/AddPlayerDialog.qml:101 qml/AddPlayerDialog.qml:107
-#: qml/AddPlayerDialog.qml:113 qml/AddPlayerDialog.qml:119
-#: qml/AddPlayerDialog.qml:125 qml/AddPlayerDialog.qml:131
+#: qml/AddPlayerDialog.qml:103 qml/AddPlayerDialog.qml:109
+#: qml/AddPlayerDialog.qml:115 qml/AddPlayerDialog.qml:121
+#: qml/AddPlayerDialog.qml:127 qml/AddPlayerDialog.qml:133
 msgid "Optional"
 msgstr "רשות"
 
-#: qml/AddPlayerDialog.qml:106
+#: qml/AddPlayerDialog.qml:108
 msgctxt "@label:textbox"
 msgid "National ID"
 msgstr "מזהה לאומי"
 
-#: qml/AddPlayerDialog.qml:112
+#: qml/AddPlayerDialog.qml:114
 msgctxt "@label:textbox"
 msgid "Birth date"
 msgstr "תאריך לידה"
 
-#: qml/AddPlayerDialog.qml:118 qml/TournamentSettingsInformation.qml:43
+#: qml/AddPlayerDialog.qml:120 qml/TournamentSettingsInformation.qml:43
 msgctxt "@label:textbox"
 msgid "Federation"
 msgstr "התאחדות"
 
-#: qml/AddPlayerDialog.qml:124
+#: qml/AddPlayerDialog.qml:126
 msgctxt "@label:textbox"
 msgid "Origin"
 msgstr "מקור"
 
-#: qml/AddPlayerDialog.qml:130
+#: qml/AddPlayerDialog.qml:132
 msgctxt "@label:textbox"
 msgid "Gender"
 msgstr "מגדר"
@@ -531,41 +531,41 @@ msgctxt "@action:intoolbar"
 msgid "Print…"
 msgstr "הדפסה…"
 
-#: qml/PairingsPage.qml:65 qml/PlayersPage.qml:137 qml/StandingsPage.qml:54
+#: qml/PairingsPage.qml:66 qml/PlayersPage.qml:137 qml/StandingsPage.qml:55
 msgctxt "@action:intoolbar"
 msgid "Export as PDF…"
 msgstr "ייצוא כ־PDF…"
 
-#: qml/PairingsPage.qml:74 qml/PairingsPage.qml:79
+#: qml/PairingsPage.qml:76 qml/PairingsPage.qml:81
 msgid "Round %1"
 msgstr "סיבוב %1"
 
-#: qml/PairingsPage.qml:91
+#: qml/PairingsPage.qml:93
 msgctxt "@action:intoolbar"
 msgid "Remove pairings of this and following rounds…"
 msgstr "הסרת שיבוצים בסיבוב הזה ובבאים אחריו…"
 
-#: qml/PairingsPage.qml:105
+#: qml/PairingsPage.qml:107
 msgctxt "@info"
 msgid "The tournament hasn't started yet."
 msgstr "התחרות לא התחילה עדיין."
 
-#: qml/PairingsPage.qml:105
+#: qml/PairingsPage.qml:107
 msgctxt "@info"
 msgid "Round %1 has finished."
 msgstr "סיבוב %1 הושלם."
 
-#: qml/PairingsPage.qml:109
+#: qml/PairingsPage.qml:111
 msgctxt "@action:button"
 msgid "Pair Round %1…"
 msgstr "סיבוב שיבוץ %1…"
 
-#: qml/PairingsPage.qml:153
+#: qml/PairingsPage.qml:155
 msgctxt "@info:placeholder"
 msgid "No pairings for round %1 yet"
 msgstr "אין עדיין שיבוצים לסיבוב %1"
 
-#: qml/PairingsPage.qml:155
+#: qml/PairingsPage.qml:157
 msgctxt "@info:placeholder"
 msgid "All games of round %1 have finished"
 msgstr "כל המשחקים בסיבוב %1 הושלמו"
@@ -754,17 +754,17 @@ msgid ""
 msgstr ""
 "החלפת הדירוג הראשון אחרי שהסיבוב הרביעי שובץ אינה מורשית בתחרויות רשמיות."
 
-#: qml/StandingsPage.qml:66 qml/StandingsPage.qml:76
+#: qml/StandingsPage.qml:68 qml/StandingsPage.qml:78
 msgctxt "@item:inlistbox"
 msgid "Final Standings"
 msgstr "עמדות סופיות"
 
-#: qml/StandingsPage.qml:68 qml/StandingsPage.qml:78
+#: qml/StandingsPage.qml:70 qml/StandingsPage.qml:80
 msgctxt "@item:inlistbox Standings After Round %1"
 msgid "After Round %1"
 msgstr "אחרי שיבוץ %1"
 
-#: qml/StandingsPage.qml:125
+#: qml/StandingsPage.qml:127
 msgctxt "@info:placeholder"
 msgid "No standings yet"
 msgstr "אין עמדות עדיין"
@@ -912,6 +912,22 @@ msgstr "ברוך בואך ל־Chessament"
 msgctxt "@info"
 msgid "Chessament is a chess tournament manager"
 msgstr "Chessament הוא מנהל תחרויות שחמט"
+
+#: searchplayersmodel.cpp:39
+#, fuzzy, kde-format
+#| msgctxt "@title:column Player Rating"
+#| msgid "Rating"
+msgctxt "%1 is the player's rating"
+msgid "Rating: %1"
+msgstr "דירוג"
+
+#: searchplayersmodel.cpp:41
+#, fuzzy, kde-format
+#| msgctxt "Pieces Color · Player Name"
+#| msgid "%1 · %2"
+msgctxt "%1 is the player's rating, %2 is the player's origin"
+msgid "Rating: %1 · %2"
+msgstr "%1 · %2"
 
 #: settings/AccountsPage.qml:21
 msgctxt "@title"
