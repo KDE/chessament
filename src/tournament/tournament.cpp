@@ -265,6 +265,7 @@ std::expected<void, QString> Tournament::addPlayer(std::unique_ptr<Player> playe
 std::expected<void, QString> Tournament::deletePlayer(int startingRank)
 {
     Q_ASSERT(m_currentRound == 0);
+    Q_ASSERT(startingRank >= 1);
 
     const auto &player = m_players.at(startingRank - 1);
 
@@ -281,6 +282,12 @@ std::expected<void, QString> Tournament::deletePlayer(int startingRank)
     }
 
     m_players.erase(m_players.begin() + startingRank - 1);
+
+    for (int i = startingRank - 1; i < static_cast<int>(m_players.size()); ++i) {
+        const auto &player = m_players.at(i);
+        player->setStartingRank(i + 1);
+        savePlayer(player.get());
+    }
 
     Q_EMIT numberOfPlayersChanged();
     Q_EMIT numberOfRatedPlayersChanged();

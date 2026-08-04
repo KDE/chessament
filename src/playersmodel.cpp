@@ -304,9 +304,9 @@ void PlayersModel::deletePlayer(const QModelIndex &index)
         return;
     }
 
-    beginRemoveRows({}, index.row(), index.row());
+    beginResetModel();
     m_players.erase(m_players.begin() + index.row());
-    endRemoveRows();
+    endResetModel();
 }
 
 void PlayersModel::updateRatings(int listId)
