@@ -23,7 +23,7 @@ Kirigami.Page {
     property int sortColumn: -1
     property int sortOrder: Qt.AscendingOrder
 
-    property var selectionBehavior: TableView.SelectRows
+    property int selectionBehavior: TableView.SelectRows
 
     property list<int> columnWidths: []
 
