@@ -5,7 +5,9 @@
 
 #include <QCoreApplication>
 #include <QJsonObject>
+#include <QNetworkAccessManager>
 #include <QRegularExpression>
+#include <QStandardPaths>
 
 using namespace Qt::StringLiterals;
 
@@ -37,5 +39,15 @@ void updateObject(QJsonObject *destination, const QJsonObject &origin)
     for (auto [key, value] : origin.asKeyValueRange()) {
         (*destination)[key.toString()] = value;
     }
+}
+
+std::unique_ptr<QNetworkAccessManager> networkAccessManager()
+{
+    auto nam = std::make_unique<QNetworkAccessManager>();
+
+    nam->enableStrictTransportSecurityStore(true, QStandardPaths::writableLocation(QStandardPaths::CacheLocation) % u"/hsts/"_s);
+    nam->setStrictTransportSecurityEnabled(true);
+
+    return nam;
 }
 }

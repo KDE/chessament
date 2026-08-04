@@ -21,7 +21,6 @@
 #include <KLocalizedString>
 #include <KZip>
 
-#include "db.h"
 #include "fidereader.h"
 #include "htmlreader.h"
 #include "reader.h"
@@ -206,14 +205,14 @@ QCoro::Task<std::expected<void, QString>> RatingList::import(const QUrl &url)
         mimeType = mimeDb.mimeTypeForFile(url.toLocalFile());
         file.close();
     } else if (url.scheme() == u"https"_s) {
-        QNetworkAccessManager manager;
+        auto manager = Utils::networkAccessManager();
 
         QNetworkRequest request{url};
         request.setHeader(QNetworkRequest::UserAgentHeader, Utils::userAgent());
 
         Q_EMIT statusChanged(i18nc("@info:progress", "Downloading file…"));
 
-        auto *reply = manager.get(request);
+        auto *reply = manager->get(request);
 
         connect(reply, &QNetworkReply::downloadProgress, this, [this](qint64 bytesReceived, qint64 bytesTotal) {
             if (bytesTotal <= 0) {
