@@ -435,6 +435,20 @@ std::optional<RatingListPlayer> RatingList::searchPlayer(const QString &playerId
     return players.first();
 }
 
+bool RatingList::isSupportedUrl(const QString &location)
+{
+    const auto url = QUrl::fromUserInput(location);
+
+    if (!url.isValid()) {
+        return false;
+    }
+    if (url.scheme() != u"file"_s && url.scheme() != u"https"_s) {
+        return false;
+    }
+
+    return true;
+}
+
 std::expected<void, QString> RatingList::savePlayers(const QList<RatingListPlayer> &players)
 {
     Q_ASSERT(m_id > 0);

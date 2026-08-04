@@ -118,7 +118,8 @@ FormCard.FormCardDialog {
         Controls.Button {
             text: KI18n.i18nc("@action:button", "Import")
             icon.name: "document-import-symbolic"
-            visible: dialog.waiting && nameField.text.trim().length > 0 && dialog.model.isValidUrl(urlField.editText)
+            visible: dialog.waiting
+            enabled: nameField.text.trim().length > 0 && dialog.model.isSupportedUrl(urlField.editText)
             onClicked: dialog.importList()
             Controls.DialogButtonBox.buttonRole: Controls.DialogButtonBox.ActionRole
         }

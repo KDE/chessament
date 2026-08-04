@@ -106,6 +106,8 @@ public:
 
     static std::optional<RatingListPlayer> searchPlayer(const QString &playerId, int listId);
 
+    static bool isSupportedUrl(const QString &location);
+
 public Q_SLOTS:
     void setExtra(const QByteArray &extra);
 
