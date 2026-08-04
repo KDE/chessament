@@ -56,6 +56,9 @@ TablePage {
         sortColumn: root.sortColumn
         sortOrder: root.sortOrder
         filterRowCallback: function (source_row: int, source_parent): bool {
+            if (root.filterString.length === 0) {
+                return true;
+            }
             const player = sourceModel.data(sourceModel.index(source_row, 0), PlayersModel.PlayerRole) as Player;
             return player.name.toLowerCase().includes(root.filterString);
         }
