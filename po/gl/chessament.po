@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-04 00:40+0000\n"
+"POT-Creation-Date: 2026-08-05 00:41+0000\n"
 "PO-Revision-Date: 2025-06-22 16:06+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.gal>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -158,7 +158,7 @@ msgctxt "@info:shell"
 msgid "Error: Can't open more that one event"
 msgstr ""
 
-#: pairingmodel.cpp:99
+#: pairingmodel.cpp:103
 #, fuzzy, kde-format
 #| msgctxt "@title:column"
 #| msgid "Board"
@@ -166,13 +166,13 @@ msgctxt "@title:column Board Number"
 msgid "Board"
 msgstr "Taboleiro"
 
-#: pairingmodel.cpp:101
+#: pairingmodel.cpp:105
 #, kde-format
 msgctxt "@title:column White Player Starting Rank Number"
 msgid "№"
 msgstr ""
 
-#: pairingmodel.cpp:103
+#: pairingmodel.cpp:107
 #, fuzzy, kde-format
 #| msgctxt "@title:column"
 #| msgid "White player"
@@ -180,7 +180,7 @@ msgctxt "@title:column Name of the White Player"
 msgid "White Player"
 msgstr "Brancas"
 
-#: pairingmodel.cpp:105
+#: pairingmodel.cpp:109
 #, fuzzy, kde-format
 #| msgctxt "@title:column"
 #| msgid "Result"
@@ -188,7 +188,7 @@ msgctxt "@title:column Game Result"
 msgid "Result"
 msgstr "Resultado"
 
-#: pairingmodel.cpp:107
+#: pairingmodel.cpp:111
 #, fuzzy, kde-format
 #| msgctxt "@title:column"
 #| msgid "Black Player"
@@ -196,19 +196,19 @@ msgctxt "@title:column Name of the Black Player"
 msgid "Black Player"
 msgstr "Negras"
 
-#: pairingmodel.cpp:109
+#: pairingmodel.cpp:113
 #, kde-format
 msgctxt "@title:column Black Player Starting Rank Number"
 msgid "№"
 msgstr ""
 
-#: playersmodel.cpp:224 standingsmodel.cpp:93
+#: playersmodel.cpp:218 standingsmodel.cpp:94
 #, kde-format
 msgctxt "@title:column Player Starting Rank Number"
 msgid "№"
 msgstr ""
 
-#: playersmodel.cpp:226 standingsmodel.cpp:95
+#: playersmodel.cpp:220 standingsmodel.cpp:96
 #, fuzzy, kde-format
 #| msgctxt "@title:column"
 #| msgid "Title"
@@ -216,7 +216,7 @@ msgctxt "@title:column Player Title"
 msgid "Title"
 msgstr "Título"
 
-#: playersmodel.cpp:228 standingsmodel.cpp:97
+#: playersmodel.cpp:222 standingsmodel.cpp:98
 #, fuzzy, kde-format
 #| msgctxt "@title:column"
 #| msgid "Name"
@@ -224,7 +224,7 @@ msgctxt "@title:column Player Name"
 msgid "Name"
 msgstr "Nome"
 
-#: playersmodel.cpp:230
+#: playersmodel.cpp:224
 #, fuzzy, kde-format
 #| msgctxt "@title:column"
 #| msgid "Rating"
@@ -232,7 +232,7 @@ msgctxt "@title:column Player Rating"
 msgid "Rating"
 msgstr "Puntuación"
 
-#: playersmodel.cpp:232
+#: playersmodel.cpp:226
 #, fuzzy, kde-format
 #| msgctxt "@title:column"
 #| msgid "National rating"
@@ -240,13 +240,13 @@ msgctxt "@title:column Player National Rating"
 msgid "National Rating"
 msgstr "Puntuación nacional"
 
-#: playersmodel.cpp:234
+#: playersmodel.cpp:228
 #, kde-format
 msgctxt "@title:column"
 msgid "Player ID"
 msgstr "Identificador de participante"
 
-#: playersmodel.cpp:236
+#: playersmodel.cpp:230
 #, fuzzy, kde-format
 #| msgctxt "@title:column"
 #| msgid "National rating"
@@ -254,13 +254,13 @@ msgctxt "@title:column Player National ID"
 msgid "National ID"
 msgstr "Puntuación nacional"
 
-#: playersmodel.cpp:238
+#: playersmodel.cpp:232
 #, kde-format
 msgctxt "@title:column"
 msgid "Birth date"
 msgstr "Data de nacemento"
 
-#: playersmodel.cpp:240
+#: playersmodel.cpp:234
 #, fuzzy, kde-format
 #| msgctxt "@title:column"
 #| msgid "Federation"
@@ -268,7 +268,7 @@ msgctxt "@title:column Player Federation"
 msgid "Federation"
 msgstr "Federación"
 
-#: playersmodel.cpp:242
+#: playersmodel.cpp:236
 #, fuzzy, kde-format
 #| msgctxt "@title:column"
 #| msgid "Origin"
@@ -276,7 +276,7 @@ msgctxt "@title:column Player Origin"
 msgid "Origin"
 msgstr "Orixe"
 
-#: playersmodel.cpp:244
+#: playersmodel.cpp:238
 #, kde-format
 msgctxt "@title:column Player Gender"
 msgid "Gender"
@@ -577,17 +577,17 @@ msgctxt "@label"
 msgid "Number of rounds"
 msgstr "Número de roldas"
 
-#: qml/PairingsPage.qml:39 qml/PlayersPage.qml:40 qml/StandingsPage.qml:40
+#: qml/PairingsPage.qml:50 qml/PlayersPage.qml:47 qml/StandingsPage.qml:54
 msgctxt "@label:listbox"
 msgid "PDF document (*.pdf)"
 msgstr ""
 
-#: qml/PairingsPage.qml:47
+#: qml/PairingsPage.qml:58
 msgctxt "@option:check"
 msgid "Hide finished games"
 msgstr ""
 
-#: qml/PairingsPage.qml:60 qml/PlayersPage.qml:132 qml/StandingsPage.qml:49
+#: qml/PairingsPage.qml:71 qml/PlayersPage.qml:144 qml/StandingsPage.qml:63
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "Print"
@@ -595,16 +595,16 @@ msgctxt "@action:intoolbar"
 msgid "Print…"
 msgstr "Imprimir"
 
-#: qml/PairingsPage.qml:66 qml/PlayersPage.qml:137 qml/StandingsPage.qml:55
+#: qml/PairingsPage.qml:77 qml/PlayersPage.qml:149 qml/StandingsPage.qml:69
 msgctxt "@action:intoolbar"
 msgid "Export as PDF…"
 msgstr ""
 
-#: qml/PairingsPage.qml:76 qml/PairingsPage.qml:81
+#: qml/PairingsPage.qml:87 qml/PairingsPage.qml:92
 msgid "Round %1"
 msgstr "Rolda %1"
 
-#: qml/PairingsPage.qml:93
+#: qml/PairingsPage.qml:104
 #, fuzzy
 #| msgctxt "@action:inmenu"
 #| msgid "Remove pairings of this and following rounds…"
@@ -612,31 +612,31 @@ msgctxt "@action:intoolbar"
 msgid "Remove pairings of this and following rounds…"
 msgstr "Retirar os emparellamentos desta e de futuras roldas…"
 
-#: qml/PairingsPage.qml:107
+#: qml/PairingsPage.qml:118
 msgctxt "@info"
 msgid "The tournament hasn't started yet."
 msgstr ""
 
-#: qml/PairingsPage.qml:107
+#: qml/PairingsPage.qml:118
 #, fuzzy
 #| msgid "Pairings"
 msgctxt "@info"
 msgid "Round %1 has finished."
 msgstr "Emparellamentos"
 
-#: qml/PairingsPage.qml:111
+#: qml/PairingsPage.qml:122
 #, fuzzy
 #| msgid "Pair round %1"
 msgctxt "@action:button"
 msgid "Pair Round %1…"
 msgstr "Rolda de parellas %1"
 
-#: qml/PairingsPage.qml:155
+#: qml/PairingsPage.qml:166
 msgctxt "@info:placeholder"
 msgid "No pairings for round %1 yet"
 msgstr "Aínda non hai emparellamentos para a rolda %1"
 
-#: qml/PairingsPage.qml:157
+#: qml/PairingsPage.qml:168
 msgctxt "@info:placeholder"
 msgid "All games of round %1 have finished"
 msgstr ""
@@ -734,24 +734,24 @@ msgctxt "@info:label"
 msgid "Round %1"
 msgstr "Rolda %1"
 
-#: qml/PlayersPage.qml:107
+#: qml/PlayersPage.qml:119
 msgctxt "@action:intoolbar Open player details"
 msgid "Details…"
 msgstr ""
 
-#: qml/PlayersPage.qml:113
+#: qml/PlayersPage.qml:125
 msgctxt "@action Update players ratings"
 msgid "Update ratings…"
 msgstr ""
 
-#: qml/PlayersPage.qml:122
+#: qml/PlayersPage.qml:134
 #, fuzzy
 #| msgid "Players"
 msgctxt "@action:intoolbar"
 msgid "Sort Players…"
 msgstr "Xogadores"
 
-#: qml/PlayersPage.qml:143
+#: qml/PlayersPage.qml:155
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "Add player"
@@ -759,19 +759,19 @@ msgctxt "@action:intoolbar"
 msgid "Add Player…"
 msgstr "Engadir unha participante"
 
-#: qml/PlayersPage.qml:154
+#: qml/PlayersPage.qml:166
 msgctxt "@action:inmenu"
 msgid "Open Player Details"
 msgstr ""
 
-#: qml/PlayersPage.qml:160
+#: qml/PlayersPage.qml:172
 #, fuzzy
 #| msgid "Players"
 msgctxt "@action:inmenu"
 msgid "Delete Player…"
 msgstr "Xogadores"
 
-#: qml/PlayersPage.qml:180
+#: qml/PlayersPage.qml:192
 #, fuzzy
 #| msgctxt "@info:placeholder"
 #| msgid "No players yet"
@@ -779,12 +779,12 @@ msgctxt "@info:placeholder"
 msgid "No players found"
 msgstr "Aínda non hai participantes"
 
-#: qml/PlayersPage.qml:180
+#: qml/PlayersPage.qml:192
 msgctxt "@info:placeholder"
 msgid "No players yet"
 msgstr "Aínda non hai participantes"
 
-#: qml/PlayersPage.qml:184
+#: qml/PlayersPage.qml:196
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "Add player"
@@ -792,7 +792,7 @@ msgctxt "@action:button"
 msgid "Add Player…"
 msgstr "Engadir unha participante"
 
-#: qml/PlayersPage.qml:203
+#: qml/PlayersPage.qml:215
 #, fuzzy
 #| msgctxt "@title:window"
 #| msgid "Add player"
@@ -802,14 +802,14 @@ msgid_plural "%1 players"
 msgstr[0] "Engadir unha participante"
 msgstr[1] "Engadir unha participante"
 
-#: qml/PlayersPage.qml:204
+#: qml/PlayersPage.qml:216
 msgctxt "@info:status Number of rated players"
 msgid "1 rated"
 msgid_plural "%1 rated"
 msgstr[0] ""
 msgstr[1] ""
 
-#: qml/PlayersPage.qml:206
+#: qml/PlayersPage.qml:218
 msgctxt "@info:status Total number of players (Number of players rated)"
 msgid "%1 (%2)"
 msgstr ""
@@ -850,21 +850,21 @@ msgid ""
 "allowed in official tournaments."
 msgstr ""
 
-#: qml/StandingsPage.qml:68 qml/StandingsPage.qml:78
+#: qml/StandingsPage.qml:82 qml/StandingsPage.qml:92
 #, fuzzy
 #| msgid "Standings"
 msgctxt "@item:inlistbox"
 msgid "Final Standings"
 msgstr "Situación"
 
-#: qml/StandingsPage.qml:70 qml/StandingsPage.qml:80
+#: qml/StandingsPage.qml:84 qml/StandingsPage.qml:94
 #, fuzzy
 #| msgid "Pair round %1"
 msgctxt "@item:inlistbox Standings After Round %1"
 msgid "After Round %1"
 msgstr "Rolda de parellas %1"
 
-#: qml/StandingsPage.qml:127
+#: qml/StandingsPage.qml:141
 msgctxt "@info:placeholder"
 msgid "No standings yet"
 msgstr "Aínda non hai situacións"
@@ -1219,7 +1219,7 @@ msgctxt "@action:button"
 msgid "Add rating list"
 msgstr ""
 
-#: standingsmodel.cpp:91
+#: standingsmodel.cpp:92
 #, fuzzy, kde-format
 #| msgctxt "@title:colunm"
 #| msgid "Rank"
@@ -1345,27 +1345,27 @@ msgstr "O emparellamento «%1» é incorrecto."
 msgid "Invalid player \"%1\" on pairing \"%2\"."
 msgstr "A participante «%1» do emparellamento «%2» non é válida."
 
-#: tournament/ratinglists/ratinglist.cpp:186
-#: tournament/ratinglists/ratinglist.cpp:202
+#: tournament/ratinglists/ratinglist.cpp:185
+#: tournament/ratinglists/ratinglist.cpp:201
 #, fuzzy, kde-format
 #| msgid "Couldn't open file"
 msgctxt "@info"
 msgid "Could not open file."
 msgstr "Non foi posíbel abrir o ficheiro"
 
-#: tournament/ratinglists/ratinglist.cpp:197
+#: tournament/ratinglists/ratinglist.cpp:196
 #, kde-format
 msgctxt "@info"
 msgid "Could not open file: the file does not exists."
 msgstr ""
 
-#: tournament/ratinglists/ratinglist.cpp:214
+#: tournament/ratinglists/ratinglist.cpp:213
 #, kde-format
 msgctxt "@info:progress"
 msgid "Downloading file…"
 msgstr ""
 
-#: tournament/ratinglists/ratinglist.cpp:227
+#: tournament/ratinglists/ratinglist.cpp:226
 #, kde-format
 msgctxt ""
 "@info:progress %1 & %2 are the file download progress (received / total), %3 "
@@ -1375,19 +1375,19 @@ msgid ""
 "%1 / %2 (%3%)"
 msgstr ""
 
-#: tournament/ratinglists/ratinglist.cpp:238
+#: tournament/ratinglists/ratinglist.cpp:237
 #, kde-format
 msgctxt "@info"
 msgid "Could not download rating list: %1"
 msgstr ""
 
-#: tournament/ratinglists/ratinglist.cpp:249
+#: tournament/ratinglists/ratinglist.cpp:248
 #, kde-format
 msgctxt "@info"
 msgid "Could not download rating list from %1 (unsupported protocol)."
 msgstr ""
 
-#: tournament/ratinglists/ratinglist.cpp:262
+#: tournament/ratinglists/ratinglist.cpp:261
 #, fuzzy, kde-format
 #| msgctxt "@info:placeholder"
 #| msgid "No players yet"
@@ -1397,20 +1397,20 @@ msgid_plural "Imported %1 players."
 msgstr[0] "Aínda non hai participantes"
 msgstr[1] "Aínda non hai participantes"
 
-#: tournament/ratinglists/ratinglist.cpp:278
+#: tournament/ratinglists/ratinglist.cpp:277
 #, fuzzy, kde-format
 #| msgid "Couldn't open file"
 msgctxt "@info"
 msgid "Could not extract file."
 msgstr "Non foi posíbel abrir o ficheiro"
 
-#: tournament/ratinglists/ratinglist.cpp:283
+#: tournament/ratinglists/ratinglist.cpp:282
 #, kde-format
 msgctxt "@info"
 msgid "File format not supported."
 msgstr ""
 
-#: tournament/ratinglists/ratinglist.cpp:501
+#: tournament/ratinglists/ratinglist.cpp:514
 #, fuzzy, kde-format
 #| msgctxt "@title:window"
 #| msgid "Add player"
@@ -1420,7 +1420,7 @@ msgid_plural "Saved %1 players."
 msgstr[0] "Engadir unha participante"
 msgstr[1] "Engadir unha participante"
 
-#: tournament/tiebreaks/aob.h:23 tournament/tournament.cpp:555
+#: tournament/tiebreaks/aob.h:23 tournament/tournament.cpp:570
 #, kde-format
 msgctxt "Tiebreak"
 msgid "Average Buchholz of Opponents"
@@ -1438,7 +1438,7 @@ msgctxt "@info"
 msgid "Unsupported tiebreak option \"%1\""
 msgstr ""
 
-#: tournament/tiebreaks/buchholz.h:25 tournament/tournament.cpp:537
+#: tournament/tiebreaks/buchholz.h:25 tournament/tournament.cpp:552
 #, kde-format
 msgctxt "Buchholz tiebreak"
 msgid "Buchholz"
@@ -1456,7 +1456,7 @@ msgctxt "@info"
 msgid "Unsupported tiebreak"
 msgstr ""
 
-#: tournament/tiebreaks/numberwins.h:22 tournament/tournament.cpp:541
+#: tournament/tiebreaks/numberwins.h:22 tournament/tournament.cpp:556
 #, fuzzy, kde-format
 #| msgctxt "@label"
 #| msgid "Number of rounds"
@@ -1464,20 +1464,20 @@ msgctxt "Number of Wins tiebreak"
 msgid "Number of Wins"
 msgstr "Número de roldas"
 
-#: tournament/tiebreaks/playedblack.h:22 tournament/tournament.cpp:551
+#: tournament/tiebreaks/playedblack.h:22 tournament/tournament.cpp:566
 #, kde-format
 msgctxt "Number of Games Played with Black (over the board) tiebreak"
 msgid "Number of Games Played with Black (over the board)"
 msgstr ""
 
 #: tournament/tiebreaks/points.h:22 tournament/tiebreaks/points.h:27
-#: tournament/tournament.cpp:533
+#: tournament/tournament.cpp:548
 #, kde-format
 msgctxt "Game points"
 msgid "Points"
 msgstr ""
 
-#: tournament/tiebreaks/won.h:23 tournament/tournament.cpp:547
+#: tournament/tiebreaks/won.h:23 tournament/tournament.cpp:562
 #, fuzzy, kde-format
 #| msgctxt "@label"
 #| msgid "Number of rounds"
@@ -1487,12 +1487,12 @@ msgctxt ""
 msgid "Number of Games Won (over the board)"
 msgstr "Número de roldas"
 
-#: tournament/tournament.cpp:990
+#: tournament/tournament.cpp:1005
 #, kde-format
 msgid "An error ocurred while pairing the round: %1"
 msgstr "Produciuse un erro ao emparellar a rolda: %1"
 
-#: tournament/tournament.cpp:1222
+#: tournament/tournament.cpp:1237
 #, kde-format
 msgid "Couldn't open file"
 msgstr "Non foi posíbel abrir o ficheiro"

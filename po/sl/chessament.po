@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-04 00:40+0000\n"
-"PO-Revision-Date: 2026-07-29 07:17+0200\n"
+"POT-Creation-Date: 2026-08-05 00:41+0000\n"
+"PO-Revision-Date: 2026-08-04 07:09+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -149,103 +149,103 @@ msgctxt "@info:shell"
 msgid "Error: Can't open more that one event"
 msgstr "Napaka: Ni mogoče odpreti več kot enega dogodka"
 
-#: pairingmodel.cpp:99
+#: pairingmodel.cpp:103
 #, kde-format
 msgctxt "@title:column Board Number"
 msgid "Board"
 msgstr "Deska"
 
-#: pairingmodel.cpp:101
+#: pairingmodel.cpp:105
 #, kde-format
 msgctxt "@title:column White Player Starting Rank Number"
 msgid "№"
 msgstr "Št."
 
-#: pairingmodel.cpp:103
+#: pairingmodel.cpp:107
 #, kde-format
 msgctxt "@title:column Name of the White Player"
 msgid "White Player"
 msgstr "Beli igralec"
 
-#: pairingmodel.cpp:105
+#: pairingmodel.cpp:109
 #, kde-format
 msgctxt "@title:column Game Result"
 msgid "Result"
 msgstr "Rezultat"
 
-#: pairingmodel.cpp:107
+#: pairingmodel.cpp:111
 #, kde-format
 msgctxt "@title:column Name of the Black Player"
 msgid "Black Player"
 msgstr "Črni igralec"
 
-#: pairingmodel.cpp:109
+#: pairingmodel.cpp:113
 #, kde-format
 msgctxt "@title:column Black Player Starting Rank Number"
 msgid "№"
 msgstr "Št."
 
-#: playersmodel.cpp:224 standingsmodel.cpp:93
+#: playersmodel.cpp:218 standingsmodel.cpp:94
 #, kde-format
 msgctxt "@title:column Player Starting Rank Number"
 msgid "№"
 msgstr "Št."
 
-#: playersmodel.cpp:226 standingsmodel.cpp:95
+#: playersmodel.cpp:220 standingsmodel.cpp:96
 #, kde-format
 msgctxt "@title:column Player Title"
 msgid "Title"
 msgstr "Naziv"
 
-#: playersmodel.cpp:228 standingsmodel.cpp:97
+#: playersmodel.cpp:222 standingsmodel.cpp:98
 #, kde-format
 msgctxt "@title:column Player Name"
 msgid "Name"
 msgstr "Ime"
 
-#: playersmodel.cpp:230
+#: playersmodel.cpp:224
 #, kde-format
 msgctxt "@title:column Player Rating"
 msgid "Rating"
 msgstr "Rating"
 
-#: playersmodel.cpp:232
+#: playersmodel.cpp:226
 #, kde-format
 msgctxt "@title:column Player National Rating"
 msgid "National Rating"
 msgstr "Nacionalni rating"
 
-#: playersmodel.cpp:234
+#: playersmodel.cpp:228
 #, kde-format
 msgctxt "@title:column"
 msgid "Player ID"
 msgstr "ID igralca"
 
-#: playersmodel.cpp:236
+#: playersmodel.cpp:230
 #, kde-format
 msgctxt "@title:column Player National ID"
 msgid "National ID"
 msgstr "Nacionalni ID"
 
-#: playersmodel.cpp:238
+#: playersmodel.cpp:232
 #, kde-format
 msgctxt "@title:column"
 msgid "Birth date"
 msgstr "Datum rojstva"
 
-#: playersmodel.cpp:240
+#: playersmodel.cpp:234
 #, kde-format
 msgctxt "@title:column Player Federation"
 msgid "Federation"
 msgstr "Zveza"
 
-#: playersmodel.cpp:242
+#: playersmodel.cpp:236
 #, kde-format
 msgctxt "@title:column Player Origin"
 msgid "Origin"
 msgstr "Izvor"
 
-#: playersmodel.cpp:244
+#: playersmodel.cpp:238
 #, kde-format
 msgctxt "@title:column Player Gender"
 msgid "Gender"
@@ -513,56 +513,56 @@ msgctxt "@label"
 msgid "Number of rounds"
 msgstr "Število krogov"
 
-#: qml/PairingsPage.qml:39 qml/PlayersPage.qml:40 qml/StandingsPage.qml:40
+#: qml/PairingsPage.qml:50 qml/PlayersPage.qml:47 qml/StandingsPage.qml:54
 msgctxt "@label:listbox"
 msgid "PDF document (*.pdf)"
 msgstr "PDF dokument (*.pdf)"
 
-#: qml/PairingsPage.qml:47
+#: qml/PairingsPage.qml:58
 msgctxt "@option:check"
 msgid "Hide finished games"
 msgstr "Skrij končane igre"
 
-#: qml/PairingsPage.qml:60 qml/PlayersPage.qml:132 qml/StandingsPage.qml:49
+#: qml/PairingsPage.qml:71 qml/PlayersPage.qml:144 qml/StandingsPage.qml:63
 msgctxt "@action:intoolbar"
 msgid "Print…"
 msgstr "Natisni…"
 
-#: qml/PairingsPage.qml:66 qml/PlayersPage.qml:137 qml/StandingsPage.qml:55
+#: qml/PairingsPage.qml:77 qml/PlayersPage.qml:149 qml/StandingsPage.qml:69
 msgctxt "@action:intoolbar"
 msgid "Export as PDF…"
 msgstr "Izvozi kot PDF…"
 
-#: qml/PairingsPage.qml:76 qml/PairingsPage.qml:81
+#: qml/PairingsPage.qml:87 qml/PairingsPage.qml:92
 msgid "Round %1"
 msgstr "Krog %1"
 
-#: qml/PairingsPage.qml:93
+#: qml/PairingsPage.qml:104
 msgctxt "@action:intoolbar"
 msgid "Remove pairings of this and following rounds…"
 msgstr "Odstrani pare tega in naslednjih krogov…"
 
-#: qml/PairingsPage.qml:107
+#: qml/PairingsPage.qml:118
 msgctxt "@info"
 msgid "The tournament hasn't started yet."
 msgstr "Turnir se še ni začel."
 
-#: qml/PairingsPage.qml:107
+#: qml/PairingsPage.qml:118
 msgctxt "@info"
 msgid "Round %1 has finished."
 msgstr "Krog %1 se je končal."
 
-#: qml/PairingsPage.qml:111
+#: qml/PairingsPage.qml:122
 msgctxt "@action:button"
 msgid "Pair Round %1…"
 msgstr "Par kroga %1…"
 
-#: qml/PairingsPage.qml:155
+#: qml/PairingsPage.qml:166
 msgctxt "@info:placeholder"
 msgid "No pairings for round %1 yet"
 msgstr "Še ni parov za krog %1"
 
-#: qml/PairingsPage.qml:157
+#: qml/PairingsPage.qml:168
 msgctxt "@info:placeholder"
 msgid "All games of round %1 have finished"
 msgstr "Vse igre kroga %1 so končane"
@@ -648,52 +648,52 @@ msgctxt "@info:label"
 msgid "Round %1"
 msgstr "Krog %1"
 
-#: qml/PlayersPage.qml:107
+#: qml/PlayersPage.qml:119
 msgctxt "@action:intoolbar Open player details"
 msgid "Details…"
 msgstr "Podrobnosti…"
 
-#: qml/PlayersPage.qml:113
+#: qml/PlayersPage.qml:125
 msgctxt "@action Update players ratings"
 msgid "Update ratings…"
 msgstr "Posodobi ocene…"
 
-#: qml/PlayersPage.qml:122
+#: qml/PlayersPage.qml:134
 msgctxt "@action:intoolbar"
 msgid "Sort Players…"
 msgstr "Razvrsti igralce…"
 
-#: qml/PlayersPage.qml:143
+#: qml/PlayersPage.qml:155
 msgctxt "@action:intoolbar"
 msgid "Add Player…"
 msgstr "Dodaj igralca…"
 
-#: qml/PlayersPage.qml:154
+#: qml/PlayersPage.qml:166
 msgctxt "@action:inmenu"
 msgid "Open Player Details"
 msgstr "Odpri podrobnosti igralca"
 
-#: qml/PlayersPage.qml:160
+#: qml/PlayersPage.qml:172
 msgctxt "@action:inmenu"
 msgid "Delete Player…"
 msgstr "Izbriši igralca…"
 
-#: qml/PlayersPage.qml:180
+#: qml/PlayersPage.qml:192
 msgctxt "@info:placeholder"
 msgid "No players found"
 msgstr "Ni najdenih igralcev"
 
-#: qml/PlayersPage.qml:180
+#: qml/PlayersPage.qml:192
 msgctxt "@info:placeholder"
 msgid "No players yet"
 msgstr "Še ni igralcev"
 
-#: qml/PlayersPage.qml:184
+#: qml/PlayersPage.qml:196
 msgctxt "@action:button"
 msgid "Add Player…"
 msgstr "Dodaj igralca…"
 
-#: qml/PlayersPage.qml:203
+#: qml/PlayersPage.qml:215
 msgctxt "@info:status Number of players"
 msgid "1 player"
 msgid_plural "%1 players"
@@ -702,7 +702,7 @@ msgstr[1] "%1igralec"
 msgstr[2] "%1 igralca"
 msgstr[3] "%1 igralci"
 
-#: qml/PlayersPage.qml:204
+#: qml/PlayersPage.qml:216
 msgctxt "@info:status Number of rated players"
 msgid "1 rated"
 msgid_plural "%1 rated"
@@ -711,7 +711,7 @@ msgstr[1] "%1 ocenjen"
 msgstr[2] "%1 ocenjena"
 msgstr[3] "%1 ocenjeni"
 
-#: qml/PlayersPage.qml:206
+#: qml/PlayersPage.qml:218
 msgctxt "@info:status Total number of players (Number of players rated)"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
@@ -752,17 +752,17 @@ msgstr ""
 "Spreminjanje začetne lestvice po tem, ko je bil par v četrtem krogu že "
 "določen, na uradnih turnirjih ni dovoljeno."
 
-#: qml/StandingsPage.qml:68 qml/StandingsPage.qml:78
+#: qml/StandingsPage.qml:82 qml/StandingsPage.qml:92
 msgctxt "@item:inlistbox"
 msgid "Final Standings"
 msgstr "Končni vrstni red"
 
-#: qml/StandingsPage.qml:70 qml/StandingsPage.qml:80
+#: qml/StandingsPage.qml:84 qml/StandingsPage.qml:94
 msgctxt "@item:inlistbox Standings After Round %1"
 msgid "After Round %1"
 msgstr "Po krogu %1"
 
-#: qml/StandingsPage.qml:127
+#: qml/StandingsPage.qml:141
 msgctxt "@info:placeholder"
 msgid "No standings yet"
 msgstr "Še ni lestvice"
@@ -912,20 +912,16 @@ msgid "Chessament is a chess tournament manager"
 msgstr "Chessament je upravljalnik šahovskih turnirjev"
 
 #: searchplayersmodel.cpp:39
-#, fuzzy, kde-format
-#| msgctxt "@title:column Player Rating"
-#| msgid "Rating"
+#, kde-format
 msgctxt "%1 is the player's rating"
 msgid "Rating: %1"
-msgstr "Rating"
+msgstr "Rating: %1"
 
 #: searchplayersmodel.cpp:41
-#, fuzzy, kde-format
-#| msgctxt "Pieces Color · Player Name"
-#| msgid "%1 · %2"
+#, kde-format
 msgctxt "%1 is the player's rating, %2 is the player's origin"
 msgid "Rating: %1 · %2"
-msgstr "%1 · %2"
+msgstr "Rating: %1 · %2"
 
 #: settings/AccountsPage.qml:21
 msgctxt "@title"
@@ -1072,7 +1068,7 @@ msgctxt "@action:button"
 msgid "Add rating list"
 msgstr "Dodaj seznam ratingov"
 
-#: standingsmodel.cpp:91
+#: standingsmodel.cpp:92
 #, kde-format
 msgctxt "@title:column Player Ranking"
 msgid "Rank"
@@ -1193,26 +1189,26 @@ msgstr "Neveljaven par \"%1\"."
 msgid "Invalid player \"%1\" on pairing \"%2\"."
 msgstr "Neveljaven igralec \"%1\" v paru \"%2\"."
 
-#: tournament/ratinglists/ratinglist.cpp:186
-#: tournament/ratinglists/ratinglist.cpp:202
+#: tournament/ratinglists/ratinglist.cpp:185
+#: tournament/ratinglists/ratinglist.cpp:201
 #, kde-format
 msgctxt "@info"
 msgid "Could not open file."
 msgstr "Datoteke ni bilo mogoče odpreti."
 
-#: tournament/ratinglists/ratinglist.cpp:197
+#: tournament/ratinglists/ratinglist.cpp:196
 #, kde-format
 msgctxt "@info"
 msgid "Could not open file: the file does not exists."
 msgstr "Datoteke ni bilo mogoče odpreti: datoteka ne obstaja."
 
-#: tournament/ratinglists/ratinglist.cpp:214
+#: tournament/ratinglists/ratinglist.cpp:213
 #, kde-format
 msgctxt "@info:progress"
 msgid "Downloading file…"
 msgstr "Prenašanje datoteke…"
 
-#: tournament/ratinglists/ratinglist.cpp:227
+#: tournament/ratinglists/ratinglist.cpp:226
 #, kde-format
 msgctxt ""
 "@info:progress %1 & %2 are the file download progress (received / total), %3 "
@@ -1224,19 +1220,19 @@ msgstr ""
 "Prenašanje datoteke…\n"
 "%1 / %2 (%3%)"
 
-#: tournament/ratinglists/ratinglist.cpp:238
+#: tournament/ratinglists/ratinglist.cpp:237
 #, kde-format
 msgctxt "@info"
 msgid "Could not download rating list: %1"
 msgstr "Ni bilo mogoče prenesti seznama ratingov: %1"
 
-#: tournament/ratinglists/ratinglist.cpp:249
+#: tournament/ratinglists/ratinglist.cpp:248
 #, kde-format
 msgctxt "@info"
 msgid "Could not download rating list from %1 (unsupported protocol)."
 msgstr "Ni bilo mogoče prenesti seznama ratingov iz %1 (nepodprt protokol)."
 
-#: tournament/ratinglists/ratinglist.cpp:262
+#: tournament/ratinglists/ratinglist.cpp:261
 #, kde-format
 msgctxt "@info:progress"
 msgid "Imported one player."
@@ -1246,19 +1242,19 @@ msgstr[1] "Uvožen %1 igralec."
 msgstr[2] "Uvožena %1 igralca."
 msgstr[3] "Uvoženi %1 igralci."
 
-#: tournament/ratinglists/ratinglist.cpp:278
+#: tournament/ratinglists/ratinglist.cpp:277
 #, kde-format
 msgctxt "@info"
 msgid "Could not extract file."
 msgstr "Datoteke ni bilo mogoče izvleči datoteke."
 
-#: tournament/ratinglists/ratinglist.cpp:283
+#: tournament/ratinglists/ratinglist.cpp:282
 #, kde-format
 msgctxt "@info"
 msgid "File format not supported."
 msgstr "Format datoteke ni podprt."
 
-#: tournament/ratinglists/ratinglist.cpp:501
+#: tournament/ratinglists/ratinglist.cpp:514
 #, kde-format
 msgctxt "@info:progress"
 msgid "Saved 1 player."
@@ -1268,7 +1264,7 @@ msgstr[1] "Shranjen %1 igralec."
 msgstr[2] "Shranjena %1 igralca."
 msgstr[3] "Shranjeni %1 igralci."
 
-#: tournament/tiebreaks/aob.h:23 tournament/tournament.cpp:555
+#: tournament/tiebreaks/aob.h:23 tournament/tournament.cpp:570
 #, kde-format
 msgctxt "Tiebreak"
 msgid "Average Buchholz of Opponents"
@@ -1286,7 +1282,7 @@ msgctxt "@info"
 msgid "Unsupported tiebreak option \"%1\""
 msgstr "Nepodprta možnost tiebreaka \"%1\""
 
-#: tournament/tiebreaks/buchholz.h:25 tournament/tournament.cpp:537
+#: tournament/tiebreaks/buchholz.h:25 tournament/tournament.cpp:552
 #, kde-format
 msgctxt "Buchholz tiebreak"
 msgid "Buchholz"
@@ -1304,26 +1300,26 @@ msgctxt "@info"
 msgid "Unsupported tiebreak"
 msgstr "Nepodprti tiebreak"
 
-#: tournament/tiebreaks/numberwins.h:22 tournament/tournament.cpp:541
+#: tournament/tiebreaks/numberwins.h:22 tournament/tournament.cpp:556
 #, kde-format
 msgctxt "Number of Wins tiebreak"
 msgid "Number of Wins"
 msgstr "Število zmag"
 
-#: tournament/tiebreaks/playedblack.h:22 tournament/tournament.cpp:551
+#: tournament/tiebreaks/playedblack.h:22 tournament/tournament.cpp:566
 #, kde-format
 msgctxt "Number of Games Played with Black (over the board) tiebreak"
 msgid "Number of Games Played with Black (over the board)"
 msgstr "Število partij igranih s črnimi figurami (čez tablo)"
 
 #: tournament/tiebreaks/points.h:22 tournament/tiebreaks/points.h:27
-#: tournament/tournament.cpp:533
+#: tournament/tournament.cpp:548
 #, kde-format
 msgctxt "Game points"
 msgid "Points"
 msgstr "Točke"
 
-#: tournament/tiebreaks/won.h:23 tournament/tournament.cpp:547
+#: tournament/tiebreaks/won.h:23 tournament/tournament.cpp:562
 #, kde-format
 msgctxt ""
 "Number of Games Won (over the board) tiebreak. Different from the 'Number of "
@@ -1331,12 +1327,12 @@ msgctxt ""
 msgid "Number of Games Won (over the board)"
 msgstr "Število zmagovalnih partij (čez tablo)"
 
-#: tournament/tournament.cpp:990
+#: tournament/tournament.cpp:1005
 #, kde-format
 msgid "An error ocurred while pairing the round: %1"
 msgstr "Pri uparjanju kroga je prišlo do napake: %1"
 
-#: tournament/tournament.cpp:1222
+#: tournament/tournament.cpp:1237
 #, kde-format
 msgid "Couldn't open file"
 msgstr "Datoteke ni bilo mogoče odpreti"

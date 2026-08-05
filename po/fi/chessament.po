@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-04 00:40+0000\n"
+"POT-Creation-Date: 2026-08-05 00:41+0000\n"
 "PO-Revision-Date: 2026-03-11 16:01+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -151,79 +151,79 @@ msgctxt "@info:shell"
 msgid "Error: Can't open more that one event"
 msgstr ""
 
-#: pairingmodel.cpp:99
+#: pairingmodel.cpp:103
 #, kde-format
 msgctxt "@title:column Board Number"
 msgid "Board"
 msgstr "Lauta"
 
-#: pairingmodel.cpp:101
+#: pairingmodel.cpp:105
 #, kde-format
 msgctxt "@title:column White Player Starting Rank Number"
 msgid "№"
 msgstr "№"
 
-#: pairingmodel.cpp:103
+#: pairingmodel.cpp:107
 #, kde-format
 msgctxt "@title:column Name of the White Player"
 msgid "White Player"
 msgstr "Valkoinen pelaaja"
 
-#: pairingmodel.cpp:105
+#: pairingmodel.cpp:109
 #, kde-format
 msgctxt "@title:column Game Result"
 msgid "Result"
 msgstr "Tulos"
 
-#: pairingmodel.cpp:107
+#: pairingmodel.cpp:111
 #, kde-format
 msgctxt "@title:column Name of the Black Player"
 msgid "Black Player"
 msgstr "Musta pelaaja"
 
-#: pairingmodel.cpp:109
+#: pairingmodel.cpp:113
 #, kde-format
 msgctxt "@title:column Black Player Starting Rank Number"
 msgid "№"
 msgstr "№"
 
-#: playersmodel.cpp:224 standingsmodel.cpp:93
+#: playersmodel.cpp:218 standingsmodel.cpp:94
 #, kde-format
 msgctxt "@title:column Player Starting Rank Number"
 msgid "№"
 msgstr "№"
 
-#: playersmodel.cpp:226 standingsmodel.cpp:95
+#: playersmodel.cpp:220 standingsmodel.cpp:96
 #, kde-format
 msgctxt "@title:column Player Title"
 msgid "Title"
 msgstr "Otsikko"
 
-#: playersmodel.cpp:228 standingsmodel.cpp:97
+#: playersmodel.cpp:222 standingsmodel.cpp:98
 #, kde-format
 msgctxt "@title:column Player Name"
 msgid "Name"
 msgstr "Nimi"
 
-#: playersmodel.cpp:230
+#: playersmodel.cpp:224
 #, kde-format
 msgctxt "@title:column Player Rating"
 msgid "Rating"
 msgstr "Vahvuusluku"
 
-#: playersmodel.cpp:232
+#: playersmodel.cpp:226
 #, kde-format
 msgctxt "@title:column Player National Rating"
 msgid "National Rating"
 msgstr "Kansallinen vahvuusluku"
 
-#: playersmodel.cpp:234
+#: playersmodel.cpp:228
 #, kde-format
 msgctxt "@title:column"
 msgid "Player ID"
 msgstr "Pelaajatunniste"
 
-#: playersmodel.cpp:236
+#: playersmodel.cpp:230
 #, fuzzy, kde-format
 #| msgctxt "@title:column Player National Rating"
 #| msgid "National Rating"
@@ -231,26 +231,26 @@ msgctxt "@title:column Player National ID"
 msgid "National ID"
 msgstr "Kansallinen vahvuusluku"
 
-#: playersmodel.cpp:238
+#: playersmodel.cpp:232
 #, kde-format
 msgctxt "@title:column"
 msgid "Birth date"
 msgstr "Syntymäaika"
 
 # Tämä on puhdas arvaus! En tiedä, mitä sanaa šakkipiireissä käytetään. Kansallinen yhteisö on kuitenkin ”Suomen shakkiliitto”.
-#: playersmodel.cpp:240
+#: playersmodel.cpp:234
 #, kde-format
 msgctxt "@title:column Player Federation"
 msgid "Federation"
 msgstr "Liitto"
 
-#: playersmodel.cpp:242
+#: playersmodel.cpp:236
 #, kde-format
 msgctxt "@title:column Player Origin"
 msgid "Origin"
 msgstr "Alkuperä"
 
-#: playersmodel.cpp:244
+#: playersmodel.cpp:238
 #, kde-format
 msgctxt "@title:column Player Gender"
 msgid "Gender"
@@ -557,56 +557,56 @@ msgctxt "@label"
 msgid "Number of rounds"
 msgstr "Kierrosten määrä"
 
-#: qml/PairingsPage.qml:39 qml/PlayersPage.qml:40 qml/StandingsPage.qml:40
+#: qml/PairingsPage.qml:50 qml/PlayersPage.qml:47 qml/StandingsPage.qml:54
 msgctxt "@label:listbox"
 msgid "PDF document (*.pdf)"
 msgstr ""
 
-#: qml/PairingsPage.qml:47
+#: qml/PairingsPage.qml:58
 msgctxt "@option:check"
 msgid "Hide finished games"
 msgstr "Piilota päättyneet pelit"
 
-#: qml/PairingsPage.qml:60 qml/PlayersPage.qml:132 qml/StandingsPage.qml:49
+#: qml/PairingsPage.qml:71 qml/PlayersPage.qml:144 qml/StandingsPage.qml:63
 msgctxt "@action:intoolbar"
 msgid "Print…"
 msgstr "Tulosta…"
 
-#: qml/PairingsPage.qml:66 qml/PlayersPage.qml:137 qml/StandingsPage.qml:55
+#: qml/PairingsPage.qml:77 qml/PlayersPage.qml:149 qml/StandingsPage.qml:69
 msgctxt "@action:intoolbar"
 msgid "Export as PDF…"
 msgstr "Vie PDF:ksi…"
 
-#: qml/PairingsPage.qml:76 qml/PairingsPage.qml:81
+#: qml/PairingsPage.qml:87 qml/PairingsPage.qml:92
 msgid "Round %1"
 msgstr "%1. kierros"
 
-#: qml/PairingsPage.qml:93
+#: qml/PairingsPage.qml:104
 msgctxt "@action:intoolbar"
 msgid "Remove pairings of this and following rounds…"
 msgstr "Poista tämän ja seuraavien kierrosten paritukset…"
 
-#: qml/PairingsPage.qml:107
+#: qml/PairingsPage.qml:118
 msgctxt "@info"
 msgid "The tournament hasn't started yet."
 msgstr "Turnaus ei ole vielä alkanut."
 
-#: qml/PairingsPage.qml:107
+#: qml/PairingsPage.qml:118
 msgctxt "@info"
 msgid "Round %1 has finished."
 msgstr "%1. kierros on päättynyt."
 
-#: qml/PairingsPage.qml:111
+#: qml/PairingsPage.qml:122
 msgctxt "@action:button"
 msgid "Pair Round %1…"
 msgstr "Parita %1. kierros…"
 
-#: qml/PairingsPage.qml:155
+#: qml/PairingsPage.qml:166
 msgctxt "@info:placeholder"
 msgid "No pairings for round %1 yet"
 msgstr "Kierrokselle %1 ei vielä parituksia"
 
-#: qml/PairingsPage.qml:157
+#: qml/PairingsPage.qml:168
 msgctxt "@info:placeholder"
 msgid "All games of round %1 have finished"
 msgstr "Kaikki %1. kierroksen pelit ovat päättyneet"
@@ -690,32 +690,32 @@ msgctxt "@info:label"
 msgid "Round %1"
 msgstr "%1. kierros"
 
-#: qml/PlayersPage.qml:107
+#: qml/PlayersPage.qml:119
 msgctxt "@action:intoolbar Open player details"
 msgid "Details…"
 msgstr "Tiedot…"
 
-#: qml/PlayersPage.qml:113
+#: qml/PlayersPage.qml:125
 msgctxt "@action Update players ratings"
 msgid "Update ratings…"
 msgstr ""
 
-#: qml/PlayersPage.qml:122
+#: qml/PlayersPage.qml:134
 msgctxt "@action:intoolbar"
 msgid "Sort Players…"
 msgstr "Lajittele pelaajat…"
 
-#: qml/PlayersPage.qml:143
+#: qml/PlayersPage.qml:155
 msgctxt "@action:intoolbar"
 msgid "Add Player…"
 msgstr "Lisää pelaaja…"
 
-#: qml/PlayersPage.qml:154
+#: qml/PlayersPage.qml:166
 msgctxt "@action:inmenu"
 msgid "Open Player Details"
 msgstr "Avaa pelaajan tiedot"
 
-#: qml/PlayersPage.qml:160
+#: qml/PlayersPage.qml:172
 #, fuzzy
 #| msgctxt "@action:intoolbar"
 #| msgid "Sort Players…"
@@ -723,7 +723,7 @@ msgctxt "@action:inmenu"
 msgid "Delete Player…"
 msgstr "Lajittele pelaajat…"
 
-#: qml/PlayersPage.qml:180
+#: qml/PlayersPage.qml:192
 #, fuzzy
 #| msgctxt "@info:placeholder"
 #| msgid "No players yet"
@@ -731,31 +731,31 @@ msgctxt "@info:placeholder"
 msgid "No players found"
 msgstr "Ei vielä pelaajia"
 
-#: qml/PlayersPage.qml:180
+#: qml/PlayersPage.qml:192
 msgctxt "@info:placeholder"
 msgid "No players yet"
 msgstr "Ei vielä pelaajia"
 
-#: qml/PlayersPage.qml:184
+#: qml/PlayersPage.qml:196
 msgctxt "@action:button"
 msgid "Add Player…"
 msgstr "Lisää pelaaja…"
 
-#: qml/PlayersPage.qml:203
+#: qml/PlayersPage.qml:215
 msgctxt "@info:status Number of players"
 msgid "1 player"
 msgid_plural "%1 players"
 msgstr[0] "1 pelaaja"
 msgstr[1] "%1 pelaajaa"
 
-#: qml/PlayersPage.qml:204
+#: qml/PlayersPage.qml:216
 msgctxt "@info:status Number of rated players"
 msgid "1 rated"
 msgid_plural "%1 rated"
 msgstr[0] "1 sijoitettu"
 msgstr[1] "%1 sijoitettua"
 
-#: qml/PlayersPage.qml:206
+#: qml/PlayersPage.qml:218
 msgctxt "@info:status Total number of players (Number of players rated)"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
@@ -796,17 +796,17 @@ msgstr ""
 "Alkusijoituksen muuttamista neljännen kierroksen parituksen jälkeen ei "
 "sallita virallisissa turnauksissa."
 
-#: qml/StandingsPage.qml:68 qml/StandingsPage.qml:78
+#: qml/StandingsPage.qml:82 qml/StandingsPage.qml:92
 msgctxt "@item:inlistbox"
 msgid "Final Standings"
 msgstr "Loppusijoitukset"
 
-#: qml/StandingsPage.qml:70 qml/StandingsPage.qml:80
+#: qml/StandingsPage.qml:84 qml/StandingsPage.qml:94
 msgctxt "@item:inlistbox Standings After Round %1"
 msgid "After Round %1"
 msgstr "%1. kierroksen jälkeen"
 
-#: qml/StandingsPage.qml:127
+#: qml/StandingsPage.qml:141
 msgctxt "@info:placeholder"
 msgid "No standings yet"
 msgstr "Ei vielä sijoituksia"
@@ -1160,7 +1160,7 @@ msgctxt "@action:button"
 msgid "Add rating list"
 msgstr "Lisää vahvuuslukuluettelo"
 
-#: standingsmodel.cpp:91
+#: standingsmodel.cpp:92
 #, kde-format
 msgctxt "@title:column Player Ranking"
 msgid "Rank"
@@ -1284,21 +1284,21 @@ msgstr "Virheellinen paritus ”%1”."
 msgid "Invalid player \"%1\" on pairing \"%2\"."
 msgstr "Virheellinen pelaaja ”%1” parissa ”%2”."
 
-#: tournament/ratinglists/ratinglist.cpp:186
-#: tournament/ratinglists/ratinglist.cpp:202
+#: tournament/ratinglists/ratinglist.cpp:185
+#: tournament/ratinglists/ratinglist.cpp:201
 #, fuzzy, kde-format
 #| msgid "Couldn't open file"
 msgctxt "@info"
 msgid "Could not open file."
 msgstr "Tiedostoa ei voitu avata"
 
-#: tournament/ratinglists/ratinglist.cpp:197
+#: tournament/ratinglists/ratinglist.cpp:196
 #, kde-format
 msgctxt "@info"
 msgid "Could not open file: the file does not exists."
 msgstr ""
 
-#: tournament/ratinglists/ratinglist.cpp:214
+#: tournament/ratinglists/ratinglist.cpp:213
 #, fuzzy, kde-format
 #| msgctxt "@info:progress"
 #| msgid "Downloading file"
@@ -1306,7 +1306,7 @@ msgctxt "@info:progress"
 msgid "Downloading file…"
 msgstr "Ladataan tiedostoa"
 
-#: tournament/ratinglists/ratinglist.cpp:227
+#: tournament/ratinglists/ratinglist.cpp:226
 #, fuzzy, kde-format
 #| msgctxt "@info:progress"
 #| msgid "Downloading file (%1 %)"
@@ -1318,7 +1318,7 @@ msgid ""
 "%1 / %2 (%3%)"
 msgstr "Ladataan tiedostoa (%1 %)"
 
-#: tournament/ratinglists/ratinglist.cpp:238
+#: tournament/ratinglists/ratinglist.cpp:237
 #, fuzzy, kde-format
 #| msgctxt "@info"
 #| msgid "Couldn't download rating list: %1"
@@ -1326,7 +1326,7 @@ msgctxt "@info"
 msgid "Could not download rating list: %1"
 msgstr "Vahvuuslukuluetteloa ei voitu ladata: %1"
 
-#: tournament/ratinglists/ratinglist.cpp:249
+#: tournament/ratinglists/ratinglist.cpp:248
 #, fuzzy, kde-format
 #| msgctxt "@info"
 #| msgid "Couldn't download rating list: %1"
@@ -1334,7 +1334,7 @@ msgctxt "@info"
 msgid "Could not download rating list from %1 (unsupported protocol)."
 msgstr "Vahvuuslukuluetteloa ei voitu ladata: %1"
 
-#: tournament/ratinglists/ratinglist.cpp:262
+#: tournament/ratinglists/ratinglist.cpp:261
 #, kde-format
 msgctxt "@info:progress"
 msgid "Imported one player."
@@ -1342,7 +1342,7 @@ msgid_plural "Imported %1 players."
 msgstr[0] "Tuotiin yksi pelaaja."
 msgstr[1] "Tuotiin %1 pelaajaa."
 
-#: tournament/ratinglists/ratinglist.cpp:278
+#: tournament/ratinglists/ratinglist.cpp:277
 #, fuzzy, kde-format
 #| msgctxt "@info"
 #| msgid "Couldn't extract file."
@@ -1350,13 +1350,13 @@ msgctxt "@info"
 msgid "Could not extract file."
 msgstr "Tiedostoa ei voitu purkaa."
 
-#: tournament/ratinglists/ratinglist.cpp:283
+#: tournament/ratinglists/ratinglist.cpp:282
 #, kde-format
 msgctxt "@info"
 msgid "File format not supported."
 msgstr "Tiedostomuotoa ei tueta."
 
-#: tournament/ratinglists/ratinglist.cpp:501
+#: tournament/ratinglists/ratinglist.cpp:514
 #, kde-format
 msgctxt "@info:progress"
 msgid "Saved 1 player."
@@ -1364,7 +1364,7 @@ msgid_plural "Saved %1 players."
 msgstr[0] "Tallennettiin yksi pelaaja."
 msgstr[1] "Tallennettiin %1 pelaajaa."
 
-#: tournament/tiebreaks/aob.h:23 tournament/tournament.cpp:555
+#: tournament/tiebreaks/aob.h:23 tournament/tournament.cpp:570
 #, kde-format
 msgctxt "Tiebreak"
 msgid "Average Buchholz of Opponents"
@@ -1382,7 +1382,7 @@ msgctxt "@info"
 msgid "Unsupported tiebreak option \"%1\""
 msgstr "Ei-tuettu katkaisupelivalinta ”%1”"
 
-#: tournament/tiebreaks/buchholz.h:25 tournament/tournament.cpp:537
+#: tournament/tiebreaks/buchholz.h:25 tournament/tournament.cpp:552
 #, kde-format
 msgctxt "Buchholz tiebreak"
 msgid "Buchholz"
@@ -1402,26 +1402,26 @@ msgctxt "@info"
 msgid "Unsupported tiebreak"
 msgstr "Ei-tuettu katkaisupelivalinta ”%1”"
 
-#: tournament/tiebreaks/numberwins.h:22 tournament/tournament.cpp:541
+#: tournament/tiebreaks/numberwins.h:22 tournament/tournament.cpp:556
 #, kde-format
 msgctxt "Number of Wins tiebreak"
 msgid "Number of Wins"
 msgstr "Voittojen määrä"
 
-#: tournament/tiebreaks/playedblack.h:22 tournament/tournament.cpp:551
+#: tournament/tiebreaks/playedblack.h:22 tournament/tournament.cpp:566
 #, kde-format
 msgctxt "Number of Games Played with Black (over the board) tiebreak"
 msgid "Number of Games Played with Black (over the board)"
 msgstr "Mustalla pelattujen pelien määrä (yleisesti)"
 
 #: tournament/tiebreaks/points.h:22 tournament/tiebreaks/points.h:27
-#: tournament/tournament.cpp:533
+#: tournament/tournament.cpp:548
 #, kde-format
 msgctxt "Game points"
 msgid "Points"
 msgstr "Pisteet"
 
-#: tournament/tiebreaks/won.h:23 tournament/tournament.cpp:547
+#: tournament/tiebreaks/won.h:23 tournament/tournament.cpp:562
 #, kde-format
 msgctxt ""
 "Number of Games Won (over the board) tiebreak. Different from the 'Number of "
@@ -1429,12 +1429,12 @@ msgctxt ""
 msgid "Number of Games Won (over the board)"
 msgstr "Voitettujen pelien määrä (yleisesti)"
 
-#: tournament/tournament.cpp:990
+#: tournament/tournament.cpp:1005
 #, kde-format
 msgid "An error ocurred while pairing the round: %1"
 msgstr "Tapahtui virhe paritettaessa kierrosta: %1"
 
-#: tournament/tournament.cpp:1222
+#: tournament/tournament.cpp:1237
 #, kde-format
 msgid "Couldn't open file"
 msgstr "Tiedostoa ei voitu avata"
