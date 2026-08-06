@@ -35,6 +35,7 @@ TablePage {
 
         sortColumn: root.sortColumn
         sortOrder: root.sortOrder
+        sortRoleName: "sortValue"
         filterRowCallback: function (source_row, source_parent) {
             if (hideFinishedAction.checked) {
                 const hasFinished = sourceModel.data(sourceModel.index(source_row, 0, source_parent), PairingModel.HasFinishedRole);

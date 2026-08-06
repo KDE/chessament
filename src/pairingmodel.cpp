@@ -75,6 +75,9 @@ QVariant PairingModel::data(const QModelIndex &index, int role) const
         default:
             return Qt::AlignTrailing;
         }
+    } else if (role == PairingModel::Roles::SortValue) {
+        Q_ASSERT(column == PairingModel::Columns::Board);
+        return pairing->board();
     }
 
     return {};
@@ -88,6 +91,7 @@ QHash<int, QByteArray> PairingModel::roleNames() const
         {PairingModel::Roles::PairingRole, "pairing"},
         {Qt::TextAlignmentRole, "textAlignment"},
         {PairingModel::Roles::EnableSort, "enableSort"},
+        {PairingModel::Roles::SortValue, "sortValue"},
     };
 }
 
