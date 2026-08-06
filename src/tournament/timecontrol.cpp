@@ -10,73 +10,72 @@
 using namespace std::chrono_literals;
 using namespace Qt::StringLiterals;
 
-TimeControlPeriod::TimeControlPeriod(std::optional<int> moves, int time, int increment)
-    : m_moves(moves)
-    , m_time(time)
-    , m_increment(increment)
+TimeControlPeriod::TimeControlPeriod()
+    : m_json{
+          {"time"_L1, 1},
+          {"increment"_L1, 0},
+      }
 {
+}
+
+TimeControlPeriod::TimeControlPeriod(std::optional<int> moves, int time, int increment)
+    : m_json{
+          {"time"_L1, time},
+          {"increment"_L1, increment},
+      }
+{
+    if (moves) {
+        m_json["moves"_L1] = moves.value();
+    }
 }
 
 std::optional<int> TimeControlPeriod::moves() const
 {
-    return m_moves;
+    if (m_json.contains("moves"_L1)) {
+        return m_json["moves"_L1].toInt();
+    }
+
+    return std::nullopt;
 }
 
 int TimeControlPeriod::time() const
 {
-    return m_time;
+    return m_json["time"_L1].toInt();
 }
 
 int TimeControlPeriod::increment() const
 {
-    return m_increment;
+    return m_json["increment"_L1].toInt();
 }
 
 QJsonObject TimeControlPeriod::toJson() const
 {
-    auto result = QJsonObject{{
-        {u"time"_s, m_time},
-        {u"increment"_s, m_increment},
-    }};
-
-    if (m_moves) {
-        result[u"moves"_s] = m_moves.value();
-    }
-
-    return result;
+    return m_json;
 }
 
 QString TimeControlPeriod::toTrf() const
 {
     QString result;
 
-    if (m_moves) {
-        result += QString::number(m_moves.value()) % u'/';
+    const auto periodMoves = moves();
+    if (moves()) {
+        result += QString::number(periodMoves.value()) % u'/';
     }
 
-    result += QString::number(m_time);
+    result += QString::number(time());
 
-    if (m_increment != 0) {
-        result += u'+' % QString::number(m_increment);
+    const auto periodIncrement = increment();
+    if (periodIncrement != 0) {
+        result += u'+' % QString::number(periodIncrement);
     }
 
     return result;
 }
 
-TimeControlPeriod TimeControlPeriod::fromJson(QJsonObject json)
+TimeControlPeriod TimeControlPeriod::fromJson(const QJsonObject &json)
 {
     TimeControlPeriod period{};
-
-    if (const auto value = json["moves"_L1]; value.isDouble()) {
-        period.m_moves = value.toInt();
-    }
-    if (const auto value = json["time"_L1]; value.isDouble()) {
-        period.m_time = value.toInt();
-    }
-    if (const auto value = json["increment"_L1]; value.isDouble()) {
-        period.m_increment = value.toInt();
-    }
-
+    period.m_json = json;
     return period;
 }
 

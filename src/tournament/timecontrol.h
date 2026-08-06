@@ -9,7 +9,7 @@
 #include <vector>
 
 struct TimeControlPeriod {
-    explicit TimeControlPeriod() = default;
+    explicit TimeControlPeriod();
 
     explicit TimeControlPeriod(std::optional<int> moves, int time, int increment);
 
@@ -23,12 +23,10 @@ struct TimeControlPeriod {
 
     [[nodiscard]] QString toTrf() const;
 
-    static TimeControlPeriod fromJson(QJsonObject json);
+    static TimeControlPeriod fromJson(const QJsonObject &json);
 
 private:
-    std::optional<int> m_moves{std::nullopt};
-    int m_time{};
-    int m_increment{};
+    QJsonObject m_json;
 };
 
 struct TimeControl {
