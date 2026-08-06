@@ -14,13 +14,7 @@
 #include "event.h"
 #include "ratinglists/ratinglist.h"
 #include "state.h"
-#include "tiebreaks/aob.h"
-#include "tiebreaks/buchholz.h"
-#include "tiebreaks/dummy.h"
-#include "tiebreaks/numberwins.h"
-#include "tiebreaks/playedblack.h"
 #include "tiebreaks/points.h"
-#include "tiebreaks/won.h"
 #include "timecontrol.h"
 #include "trf/reader.h"
 #include "trf/writer.h"
@@ -30,7 +24,7 @@ Tournament::Tournament(Event *event)
     : m_event(event)
     , m_timeControl({TimeControlPeriod{std::nullopt, 5400, 30}})
 {
-    m_tiebreaks.push_back(std::make_unique<Points>());
+    m_tiebreaks.addTiebreak(std::make_unique<Points>());
 }
 
 QString Tournament::id() const
@@ -120,38 +114,29 @@ void Tournament::saveTimeControl()
     setOption(u"time_control"_s, text);
 }
 
-std::vector<std::unique_ptr<Tiebreak>> &Tournament::tiebreaks()
+Tiebreaks &Tournament::tiebreaks()
 {
     return m_tiebreaks;
 }
 
-void Tournament::setTiebreaks(std::vector<std::unique_ptr<Tiebreak>> tiebreaks)
-{
-    if (m_tiebreaks == tiebreaks) {
-        return;
-    }
-    m_tiebreaks = std::move(tiebreaks);
-    saveTiebreaks();
-}
-
 std::expected<void, QString> Tournament::setTiebreaksFromTrf(const QString &line)
 {
-    std::vector<std::unique_ptr<Tiebreak>> tiebreaks;
+    auto tiebreaks = Tiebreaks{};
 
     const auto codes = line.split(u',', Qt::SkipEmptyParts);
 
     for (const auto &code : codes) {
-        auto tiebreak = tiebreakFromTrf(code);
+        auto tiebreak = Tiebreaks::tiebreakFromTrf(code);
         if (!tiebreak) {
             return std::unexpected(tiebreak.error());
         }
         if (tiebreak == nullptr) {
             continue;
         }
-        tiebreaks.push_back(std::move(*tiebreak));
+        tiebreaks.addTiebreak(std::move(*tiebreak));
     }
 
-    setTiebreaks(std::move(tiebreaks));
+    m_tiebreaks = tiebreaks;
 
     return {};
 }
@@ -483,7 +468,7 @@ QList<Standing> Tournament::standings(const State &state)
 
     // Calculate tiebreaks
     QList<Player *> players;
-    for (const auto &tiebreak : std::as_const(m_tiebreaks)) {
+    for (const auto &tiebreak : m_tiebreaks.all()) {
         uint i = 0;
         players.clear();
         while (i < m_players.size()) {
@@ -565,51 +550,6 @@ QList<QVariantMap> Tournament::availableTiebreaks()
             {"name"_L1, i18nc("Tiebreak", "Average Buchholz of Opponents")},
         },
     };
-}
-
-std::unique_ptr<Tiebreak> Tournament::tiebreak(const QString &id)
-{
-    if (id == "pts"_L1) {
-        return std::make_unique<Points>();
-    }
-    if (id == "bh"_L1) {
-        return std::make_unique<Buchholz>();
-    }
-    if (id == "win"_L1) {
-        return std::make_unique<NumberOfWins>();
-    }
-    if (id == "won"_L1) {
-        return std::make_unique<NumberOfGamesWon>();
-    }
-    if (id == "bpg"_L1) {
-        return std::make_unique<NumberOfGamesPlayedWithBlack>();
-    }
-    if (id == "aob"_L1) {
-        return std::make_unique<AverageBuchholzOfOpponents>();
-    }
-    return nullptr;
-}
-
-std::expected<std::unique_ptr<Tiebreak>, QString> Tournament::tiebreakFromTrf(const QString &code)
-{
-    if (code.startsWith("OTHER_"_L1, Qt::CaseSensitivity::CaseInsensitive)) {
-        qWarning() << "Unsupported tiebreak" << code;
-        return nullptr;
-    }
-
-    const auto options = code.split(u'/', Qt::SkipEmptyParts);
-
-    auto tiebreak = Tournament::tiebreak(options[0].toLower());
-    if (tiebreak == nullptr) {
-        qWarning() << "Unsupported tiebreak" << code;
-        return nullptr;
-    }
-
-    if (const auto ok = tiebreak->setTrfOptions(options.mid(1)); !ok) {
-        return std::unexpected(ok.error());
-    }
-
-    return tiebreak;
 }
 
 void Tournament::setInitialColor(Tournament::InitialColor color)
@@ -1115,18 +1055,11 @@ State Tournament::state(std::optional<int> maxRound)
 
 void Tournament::saveTiebreaks()
 {
-    QJsonArray values;
+    const auto text = QJsonDocument{m_tiebreaks.toJson()}.toJson(QJsonDocument::JsonFormat::Compact);
 
-    for (const auto &tiebreak : tiebreaks()) {
-        values << tiebreak->toJson();
-    }
-
-    const auto doc = QJsonDocument{QJsonObject{{"tiebreaks"_L1, values}}};
-    const auto text = doc.toJson(QJsonDocument::Compact);
+    qDebug() << m_tiebreaks.toJson();
 
     setOption("tiebreaks"_L1, text);
-
-    Q_EMIT tiebreaksChanged();
 }
 
 QVariant Tournament::option(const QString &name)
@@ -1456,29 +1389,7 @@ std::expected<void, QString> Tournament::loadPairings()
 std::expected<void, QString> Tournament::loadTiebreaks()
 {
     const auto json = QJsonDocument::fromJson(option("tiebreaks"_L1).toByteArray());
-
-    if (const auto tbs = json["tiebreaks"_L1]; tbs.isArray()) {
-        m_tiebreaks.clear();
-
-        const auto values = tbs.toArray();
-        for (const auto value : values) {
-            if (!value.isObject()) {
-                continue;
-            }
-
-            const auto options = value.toObject();
-            const auto id = options["id"_L1].toString();
-
-            auto tiebreak = Tournament::tiebreak(id);
-            if (tiebreak == nullptr) {
-                tiebreak = std::make_unique<DummyTiebreak>();
-            }
-
-            tiebreak->setOptions(options.toVariantMap());
-
-            m_tiebreaks.push_back(std::move(tiebreak));
-        }
-    }
+    m_tiebreaks = Tiebreaks::fromJson(json.object());
 
     return {};
 }

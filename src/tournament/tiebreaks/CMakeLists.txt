@@ -3,6 +3,7 @@
 
 target_sources(tournament PRIVATE
     tiebreak.cpp
+    tiebreaks.cpp
 
     aob.cpp
     buchholz.cpp

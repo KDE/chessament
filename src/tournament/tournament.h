@@ -22,6 +22,7 @@
 #include "round.h"
 #include "standing.h"
 #include "tiebreaks/tiebreak.h"
+#include "tiebreaks/tiebreaks.h"
 #include "timecontrol.h"
 #include "trf/trf.h"
 
@@ -98,7 +99,7 @@ public:
      *
      * This property holds the list of tiebreaks of the tournament.
      */
-    [[nodiscard]] std::vector<std::unique_ptr<Tiebreak>> &tiebreaks();
+    [[nodiscard]] Tiebreaks &tiebreaks();
 
     /*!
      * \property Tournament::numberOfRounds
@@ -176,12 +177,6 @@ public:
     QList<Standing> standings(const State &state);
 
     Q_INVOKABLE QList<QVariantMap> availableTiebreaks();
-
-    static std::unique_ptr<Tiebreak> tiebreak(const QString &id);
-
-    static std::expected<std::unique_ptr<Tiebreak>, QString> tiebreakFromTrf(const QString &code);
-
-    void setTiebreaks(std::vector<std::unique_ptr<Tiebreak>> tiebreaks);
 
     std::expected<void, QString> setTiebreaksFromTrf(const QString &line);
 
@@ -393,7 +388,6 @@ Q_SIGNALS:
     void nameChanged();
     void cityChanged();
     void federationChanged();
-    void tiebreaksChanged();
 
     void numberOfPlayersChanged();
     void numberOfRatedPlayersChanged();
@@ -424,7 +418,7 @@ private:
     int m_numberOfRounds = 1;
     int m_currentRound = 0;
     QVariantMap m_options;
-    std::vector<std::unique_ptr<Tiebreak>> m_tiebreaks;
+    Tiebreaks m_tiebreaks;
 
     std::vector<std::unique_ptr<Player>> m_players;
     std::vector<std::unique_ptr<Round>> m_rounds;

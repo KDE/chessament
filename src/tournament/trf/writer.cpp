@@ -75,7 +75,7 @@ void TrfWriter::writeArbiters(QTextStream &stream)
 void TrfWriter::writeTiebreaks(QTextStream &stream)
 {
     QStringList codes{};
-    for (const auto &tiebreak : m_tournament->tiebreaks()) {
+    for (const auto &tiebreak : m_tournament->tiebreaks().all()) {
         const auto code = tiebreak->code();
         if (!code.isEmpty()) {
             codes << code;
