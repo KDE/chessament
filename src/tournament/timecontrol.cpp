@@ -162,7 +162,7 @@ std::chrono::seconds TimeControl::durationPerPlayer() const
 {
     std::chrono::seconds duration{};
 
-    for (const auto period : periods()) {
+    for (const auto &period : periods()) {
         duration += std::chrono::seconds(period.time() + (period.increment() * 60));
     }
 
@@ -182,7 +182,7 @@ TimeControl::Format TimeControl::format() const
     return TimeControl::Format::Classical;
 }
 
-QJsonObject TimeControl::json()
+QJsonObject TimeControl::toJson() const
 {
     return m_json;
 }
@@ -191,7 +191,7 @@ QString TimeControl::toTrf() const
 {
     QStringList values;
 
-    for (const auto period : periods()) {
+    for (const auto &period : periods()) {
         values << period.toTrf();
     }
 

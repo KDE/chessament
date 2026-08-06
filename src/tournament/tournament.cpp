@@ -118,9 +118,9 @@ TimeControl &Tournament::timeControl()
 
 void Tournament::saveTimeControl()
 {
-    const auto text = QJsonDocument{m_timeControl.json()}.toJson(QJsonDocument::JsonFormat::Compact);
+    const auto text = QJsonDocument{m_timeControl.toJson()}.toJson(QJsonDocument::JsonFormat::Compact);
 
-    qDebug() << m_timeControl.json();
+    qDebug() << m_timeControl.toJson();
 
     setOption(u"time_control"_s, text);
 }

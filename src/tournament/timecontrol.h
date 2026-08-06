@@ -54,7 +54,7 @@ struct TimeControl {
 
     [[nodiscard]] TimeControl::Format format() const;
 
-    QJsonObject json();
+    [[nodiscard]] QJsonObject toJson() const;
 
     [[nodiscard]] QString toTrf() const;
 
