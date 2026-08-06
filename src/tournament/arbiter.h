@@ -13,6 +13,7 @@ class Arbiter : public QObject
     QML_ELEMENT
     QML_UNCREATABLE("")
 
+    Q_PROPERTY(Arbiter::Role role READ role WRITE setRole NOTIFY roleChanged)
     Q_PROPERTY(QString title READ title WRITE setTitle NOTIFY titleChanged)
     Q_PROPERTY(QString name READ name WRITE setName NOTIFY nameChanged)
     Q_PROPERTY(QString arbiterId READ arbiterId WRITE setArbiterId NOTIFY arbiterIdChanged)
@@ -29,11 +30,10 @@ public:
 
     explicit Arbiter(const QString &name);
 
-    Arbiter::Role role();
+    [[nodiscard]] Arbiter::Role role() const;
     [[nodiscard]] QString title() const;
     [[nodiscard]] QString name() const;
     [[nodiscard]] QString arbiterId() const;
-    [[nodiscard]] QByteArray extraString() const;
 
     [[nodiscard]] QJsonObject toJson() const;
     [[nodiscard]] QString toTrf() const;
@@ -46,17 +46,13 @@ public Q_SLOTS:
     void setTitle(const QString &title);
     void setName(const QString &name);
     void setArbiterId(const QString &arbiterId);
-    void setExtra(const QByteArray &extra);
 
 Q_SIGNALS:
+    void roleChanged();
     void titleChanged();
     void nameChanged();
     void arbiterIdChanged();
 
 private:
-    Arbiter::Role m_role{};
-    QString m_title;
-    QString m_name;
-    QString m_id;
-    QJsonObject m_extra;
+    QJsonObject m_json;
 };

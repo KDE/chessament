@@ -9,102 +9,85 @@
 using namespace Qt::StringLiterals;
 
 Arbiter::Arbiter(const QString &name)
-    : m_name(name)
 {
+    setName(name);
 }
 
-Arbiter::Role Arbiter::role()
+Arbiter::Role Arbiter::role() const
 {
-    return m_role;
+    return Arbiter::Role(m_json["role"_L1].toInt());
 }
 
 void Arbiter::setRole(Arbiter::Role role)
 {
-    if (m_role == role) {
+    if (this->role() == role) {
         return;
     }
-    m_role = role;
+    m_json["role"_L1] = std::to_underlying(role);
+    Q_EMIT roleChanged();
 }
 
 QString Arbiter::title() const
 {
-    return m_title;
+    return m_json["title"_L1].toString();
 }
 
 void Arbiter::setTitle(const QString &title)
 {
-    if (m_title == title) {
+    if (this->title() == title) {
         return;
     }
-    m_title = title;
+    m_json["title"_L1] = title;
     Q_EMIT titleChanged();
 }
 
 QString Arbiter::name() const
 {
-    return m_name;
+    return m_json["name"_L1].toString();
 }
 
 void Arbiter::setName(const QString &name)
 {
-    if (m_name == name) {
+    if (this->name() == name) {
         return;
     }
-    m_name = name;
+    m_json["name"_L1] = name;
     Q_EMIT nameChanged();
 }
 
 QString Arbiter::arbiterId() const
 {
-    return m_id;
+    return m_json["id"_L1].toString();
 }
 
 void Arbiter::setArbiterId(const QString &arbiterId)
 {
-    if (m_id == arbiterId) {
+    if (this->arbiterId() == arbiterId) {
         return;
     }
-    m_id = arbiterId;
+    m_json["id"_L1] = arbiterId;
     Q_EMIT arbiterIdChanged();
-}
-
-QByteArray Arbiter::extraString() const
-{
-    const auto doc = QJsonDocument{m_extra};
-    return doc.toJson(QJsonDocument::JsonFormat::Compact);
-}
-
-void Arbiter::setExtra(const QByteArray &extra)
-{
-    const auto doc = QJsonDocument::fromJson(extra);
-
-    Q_ASSERT(doc.isObject());
-
-    m_extra = doc.object();
 }
 
 QJsonObject Arbiter::toJson() const
 {
-    return {
-        {u"role"_s, std::to_underlying(m_role)},
-        {u"title"_s, m_title},
-        {u"name"_s, m_name},
-        {u"id"_s, m_id},
-    };
+    return m_json;
 }
 
 QString Arbiter::toTrf() const
 {
     QString result;
 
-    if (!m_title.isEmpty()) {
-        result += m_title % u' ';
+    const auto arbiterTitle = title();
+    if (!arbiterTitle.isEmpty()) {
+        result += arbiterTitle % u' ';
     }
 
-    result.append(m_name);
+    result.append(name());
 
-    if (!m_id.isEmpty()) {
-        result += " ("_L1 % m_id % u')';
+    const auto id = arbiterId();
+    if (!id.isEmpty()) {
+        result += " ("_L1 % id % u')';
     }
 
     return result;
@@ -113,11 +96,7 @@ QString Arbiter::toTrf() const
 std::unique_ptr<Arbiter> Arbiter::fromJson(const QJsonObject &obj)
 {
     auto arbiter = std::make_unique<Arbiter>();
-    arbiter->setRole(Arbiter::Role(obj.value("role"_L1).toInt()));
-    arbiter->setName(obj.value("name"_L1).toString());
-    arbiter->setTitle(obj.value("title"_L1).toString());
-    arbiter->setArbiterId(obj.value("id"_L1).toString());
-
+    arbiter->m_json = obj;
     return arbiter;
 }
 
@@ -125,7 +104,7 @@ std::unique_ptr<Arbiter> Arbiter::fromTrf(const QString &text)
 {
     auto arbiter = std::make_unique<Arbiter>();
 
-    static QRegularExpression re{R"(^([A-Z]{2} )?([^\(\n]+)(\((\d+)\))?$)"_L1};
+    static const QRegularExpression re{R"(^([A-Z]{2} )?([^\(\n]+)(\((\d+)\))?$)"_L1};
 
     const auto match = re.match(text);
     if (match.hasMatch()) {
