@@ -56,3 +56,24 @@ Q_SIGNALS:
 private:
     QJsonObject m_json;
 };
+
+struct Arbiters {
+    [[nodiscard]] int size() const;
+
+    [[nodiscard]] std::vector<std::unique_ptr<Arbiter>> all() const;
+
+    [[nodiscard]] std::unique_ptr<Arbiter> at(int index) const;
+
+    void addArbiter(std::unique_ptr<Arbiter> arbiter);
+
+    void setArbiter(int index, std::unique_ptr<Arbiter> arbiter);
+
+    void removeArbiter(int index);
+
+    [[nodiscard]] QJsonObject toJson() const;
+
+    static Arbiters fromJson(const QJsonObject &json);
+
+private:
+    QJsonObject m_json;
+};

@@ -122,13 +122,13 @@ std::expected<void, QString> TrfReader::readField(QStringView line)
     case Trf::Field::ChiefArbiter: {
         auto arbiter = Arbiter::fromTrf(value.toString());
         arbiter->setRole(Arbiter::Role::Chief);
-        m_tournament->arbiters().push_back(std::move(arbiter));
+        m_tournament->arbiters().addArbiter(std::move(arbiter));
         break;
     }
     case Trf::Field::DeputyChiefArbiter: {
         auto arbiter = Arbiter::fromTrf(value.toString());
         arbiter->setRole(Arbiter::Role::Deputy);
-        m_tournament->arbiters().push_back(std::move(arbiter));
+        m_tournament->arbiters().addArbiter(std::move(arbiter));
         break;
     }
     case Trf::Field::TimeControl:

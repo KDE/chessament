@@ -84,7 +84,7 @@ public:
      */
     [[nodiscard]] QString federation() const;
 
-    [[nodiscard]] std::vector<std::unique_ptr<Arbiter>> &arbiters();
+    [[nodiscard]] Arbiters &arbiters();
 
     void saveArbiters();
 
@@ -418,7 +418,7 @@ private:
     QString m_name;
     QString m_city;
     QString m_federation;
-    std::vector<std::unique_ptr<Arbiter>> m_arbiters;
+    Arbiters m_arbiters;
     TimeControl m_timeControl;
     int m_numberOfRounds = 1;
     int m_currentRound = 0;

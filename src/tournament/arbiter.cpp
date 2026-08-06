@@ -6,6 +6,8 @@
 #include <KLocalizedString>
 #include <QJsonArray>
 
+#include "utils.h"
+
 using namespace Qt::StringLiterals;
 
 Arbiter::Arbiter(const QString &name)
@@ -120,6 +122,97 @@ std::unique_ptr<Arbiter> Arbiter::fromTrf(const QString &text)
     }
 
     return arbiter;
+}
+
+int Arbiters::size() const
+{
+    const auto value = m_json["arbiters"_L1];
+    if (!value.isArray()) {
+        return 0;
+    }
+
+    return static_cast<int>(value.toArray().size());
+}
+
+std::vector<std::unique_ptr<Arbiter>> Arbiters::all() const
+{
+    std::vector<std::unique_ptr<Arbiter>> result;
+
+    const auto arbiters = m_json["arbiters"_L1].toArray();
+    result.reserve(arbiters.size());
+
+    for (const auto arbiter : arbiters) {
+        result.push_back(Arbiter::fromJson(arbiter.toObject()));
+    }
+
+    return result;
+}
+
+std::unique_ptr<Arbiter> Arbiters::at(int index) const
+{
+    Q_ASSERT(index >= 0);
+
+    const auto arbiters = m_json["arbiters"_L1].toArray();
+    Q_ASSERT(index < arbiters.size());
+
+    return Arbiter::fromJson(arbiters[index].toObject());
+}
+
+void Arbiters::addArbiter(std::unique_ptr<Arbiter> arbiter)
+{
+    auto value = m_json["arbiters"_L1];
+    QJsonArray arbiters;
+
+    if (value.isArray()) {
+        arbiters = value.toArray();
+    }
+
+    arbiters << arbiter->toJson();
+    value = arbiters;
+}
+
+void Arbiters::setArbiter(int index, std::unique_ptr<Arbiter> arbiter)
+{
+    Q_ASSERT(index >= 0);
+
+    auto value = m_json["arbiters"_L1];
+    Q_ASSERT(value.isArray());
+
+    auto arbiters = value.toArray();
+    Q_ASSERT(index < arbiters.size());
+
+    auto json = arbiters[index].toObject();
+    Utils::updateObject(&json, arbiter->toJson());
+    arbiters[index] = json;
+
+    value = arbiters;
+}
+
+void Arbiters::removeArbiter(int index)
+{
+    Q_ASSERT(index >= 0);
+
+    auto value = m_json["arbiters"_L1];
+    Q_ASSERT(value.isArray());
+
+    auto arbiters = value.toArray();
+    Q_ASSERT(index < arbiters.size());
+
+    arbiters.erase(arbiters.begin() + index);
+
+    value = arbiters;
+}
+
+QJsonObject Arbiters::toJson() const
+{
+    return m_json;
+}
+
+Arbiters Arbiters::fromJson(const QJsonObject &json)
+{
+    Arbiters arbiters;
+    arbiters.m_json = json;
+    return arbiters;
 }
 
 #include "moc_arbiter.cpp"

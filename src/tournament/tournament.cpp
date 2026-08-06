@@ -92,21 +92,16 @@ void Tournament::setFederation(const QString &federation)
     Q_EMIT federationChanged();
 }
 
-std::vector<std::unique_ptr<Arbiter>> &Tournament::arbiters()
+Arbiters &Tournament::arbiters()
 {
     return m_arbiters;
 }
 
 void Tournament::saveArbiters()
 {
-    QJsonArray values;
+    const auto text = QJsonDocument{m_arbiters.toJson()}.toJson(QJsonDocument::JsonFormat::Compact);
 
-    for (const auto &arbiter : m_arbiters) {
-        values << arbiter->toJson();
-    }
-
-    const auto doc = QJsonDocument{QJsonObject{{"arbiters"_L1, values}}};
-    const auto text = doc.toJson(QJsonDocument::Compact);
+    qDebug() << m_arbiters.toJson();
 
     setOption("arbiters"_L1, text);
 }
@@ -1488,21 +1483,7 @@ std::expected<void, QString> Tournament::loadTiebreaks()
 std::expected<void, QString> Tournament::loadArbiters()
 {
     const auto json = QJsonDocument::fromJson(option("arbiters"_L1).toByteArray());
-
-    if (const auto arbiters = json["arbiters"_L1]; arbiters.isArray()) {
-        m_arbiters.clear();
-
-        const auto values = arbiters.toArray();
-        for (const auto value : values) {
-            if (!value.isObject()) {
-                continue;
-            }
-
-            auto arbiter = Arbiter::fromJson(value.toObject());
-
-            m_arbiters.push_back(std::move(arbiter));
-        }
-    }
+    m_arbiters = Arbiters::fromJson(json.object());
 
     return {};
 }

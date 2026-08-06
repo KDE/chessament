@@ -58,7 +58,7 @@ void TrfWriter::writeTournamentInformation(QTextStream &stream)
 
 void TrfWriter::writeArbiters(QTextStream &stream)
 {
-    for (const auto &arbiter : m_tournament->arbiters()) {
+    for (const auto &arbiter : m_tournament->arbiters().all()) {
         switch (arbiter->role()) {
         case Arbiter::Role::Chief:
             stream << Trf::reportFieldString(Trf::Field::ChiefArbiter);

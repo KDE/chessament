@@ -32,7 +32,7 @@ int ArbitersModel::rowCount(const QModelIndex &parent) const
 {
     Q_UNUSED(parent);
 
-    return static_cast<int>(m_tournament->arbiters().size());
+    return m_tournament->arbiters().size();
 }
 
 QVariant ArbitersModel::data(const QModelIndex &index, int role) const
@@ -59,7 +59,7 @@ bool ArbitersModel::setData(const QModelIndex &index, const QVariant &value, int
 {
     Q_ASSERT(checkIndex(index, CheckIndexOption::IndexIsValid | CheckIndexOption::ParentIsInvalid));
 
-    const auto &arbiter = m_tournament->arbiters().at(index.row());
+    auto arbiter = m_tournament->arbiters().at(index.row());
 
     switch (role) {
     case ArbitersModel::Roles::Role: {
@@ -82,6 +82,7 @@ bool ArbitersModel::setData(const QModelIndex &index, const QVariant &value, int
         return false;
     }
 
+    m_tournament->arbiters().setArbiter(index.row(), std::move(arbiter));
     m_tournament->saveArbiters();
 
     Q_EMIT dataChanged(this->index(index.row()), this->index(index.row()));
@@ -102,8 +103,7 @@ QHash<int, QByteArray> ArbitersModel::roleNames() const
 void ArbitersModel::addArbiter()
 {
     beginInsertRows({}, rowCount(), rowCount());
-    auto arbiter = std::make_unique<Arbiter>();
-    m_tournament->arbiters().push_back(std::move(arbiter));
+    m_tournament->arbiters().addArbiter(std::make_unique<Arbiter>());
     endInsertRows();
 
     m_tournament->saveArbiters();
@@ -112,12 +112,10 @@ void ArbitersModel::addArbiter()
 void ArbitersModel::deleteArbiter(int row)
 {
     beginRemoveRows({}, row, row);
-
-    auto &arbiters = m_tournament->arbiters();
-    arbiters.erase(arbiters.begin() + row);
-    m_tournament->saveArbiters();
-
+    m_tournament->arbiters().removeArbiter(row);
     endRemoveRows();
+
+    m_tournament->saveArbiters();
 }
 
 #include "moc_arbitersmodel.cpp"
