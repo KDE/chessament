@@ -1294,6 +1294,9 @@ std::expected<void, QString> Tournament::loadTournament(const QString &id)
     if (const auto ok = loadArbiters(); !ok) {
         return ok;
     }
+    if (const auto ok = loadTimeControl(); !ok) {
+        return ok;
+    }
 
     return {};
 }
@@ -1484,6 +1487,14 @@ std::expected<void, QString> Tournament::loadArbiters()
 {
     const auto json = QJsonDocument::fromJson(option("arbiters"_L1).toByteArray());
     m_arbiters = Arbiters::fromJson(json.object());
+
+    return {};
+}
+
+std::expected<void, QString> Tournament::loadTimeControl()
+{
+    const auto json = QJsonDocument::fromJson(option("time_control"_L1).toByteArray());
+    m_timeControl = TimeControl::fromJson(json.object());
 
     return {};
 }

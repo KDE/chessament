@@ -411,6 +411,7 @@ private:
     std::expected<void, QString> loadPairings();
     std::expected<void, QString> loadTiebreaks();
     std::expected<void, QString> loadArbiters();
+    std::expected<void, QString> loadTimeControl();
 
     Event *m_event;
 
