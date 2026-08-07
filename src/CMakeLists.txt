@@ -16,6 +16,7 @@ ecm_add_qml_module(chessament_static
         qml/components/HeaderDelegate.qml
         qml/components/MenuBar.qml
         qml/components/RatingField.qml
+        qml/components/ResultButton.qml
         qml/components/StartingRankField.qml
         qml/components/TiebreakDelegate.qml
         qml/components/TimeControlDelegate.qml

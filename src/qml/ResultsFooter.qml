@@ -33,81 +33,76 @@ QQC2.ToolBar {
 
     QQC2.ButtonGroup {
         id: results
-        buttons: row.children.filter(item => item instanceof QQC2.ToolButton)
+        buttons: row.children.filter(item => item instanceof QQC2.ToolButton && item !== otherResults)
     }
 
     Layouts.RowLayout {
         id: row
+        enabled: root.pairing?.blackPlayer ?? false
 
-        QQC2.ToolButton {
-            text: Controller.resultToString(Pairing.PartialResult.Unknown, Pairing.PartialResult.Unknown)
-            checkable: true
-            enabled: root.pairing !== null && root.pairing.blackPlayer !== null
-            checked: root.pairing?.whiteResult === Pairing.PartialResult.Unknown && root.pairing?.blackResult === Pairing.PartialResult.Unknown
-            onClicked: root.setResult(Pairing.PartialResult.Unknown, Pairing.PartialResult.Unknown)
+        ResultButton {
+            id: unknown
+            whiteResult: Pairing.PartialResult.Unknown
+            blackResult: Pairing.PartialResult.Unknown
+            pairing: root.pairing
+            onSetResult: root.setResult(whiteResult, blackResult)
         }
         Kirigami.Separator {
             Layouts.Layout.fillHeight: true
         }
-        QQC2.ToolButton {
+        ResultButton {
             id: whiteWins
-            text: Controller.resultToString(Pairing.PartialResult.Win, Pairing.PartialResult.Lost)
-            checkable: true
-            enabled: root.pairing !== null && root.pairing.blackPlayer !== null
-            checked: root.pairing?.whiteResult === Pairing.PartialResult.Win && root.pairing?.blackResult === Pairing.PartialResult.Lost
-            onClicked: root.setResult(Pairing.PartialResult.Win, Pairing.PartialResult.Lost)
+            whiteResult: Pairing.PartialResult.Win
+            blackResult: Pairing.PartialResult.Lost
+            pairing: root.pairing
+            onSetResult: root.setResult(whiteResult, blackResult)
         }
-        QQC2.ToolButton {
+        ResultButton {
             id: draw
-            text: Controller.resultToString(Pairing.PartialResult.Draw, Pairing.PartialResult.Draw)
-            checkable: true
-            enabled: root.pairing !== null && root.pairing.blackPlayer !== null
-            checked: root.pairing?.whiteResult === Pairing.PartialResult.Draw && root.pairing?.blackResult === Pairing.PartialResult.Draw
-            onClicked: root.setResult(Pairing.PartialResult.Draw, Pairing.PartialResult.Draw)
+            whiteResult: Pairing.PartialResult.Draw
+            blackResult: Pairing.PartialResult.Draw
+            pairing: root.pairing
+            onSetResult: root.setResult(whiteResult, blackResult)
         }
-        QQC2.ToolButton {
+        ResultButton {
             id: blackWins
-            text: Controller.resultToString(Pairing.PartialResult.Lost, Pairing.PartialResult.Win)
-            checkable: true
-            enabled: root.pairing !== null && root.pairing.blackPlayer !== null
-            checked: root.pairing?.whiteResult === Pairing.PartialResult.Lost && root.pairing?.blackResult === Pairing.PartialResult.Win
-            onClicked: root.setResult(Pairing.PartialResult.Lost, Pairing.PartialResult.Win)
+            whiteResult: Pairing.PartialResult.Lost
+            blackResult: Pairing.PartialResult.Win
+            pairing: root.pairing
+            onSetResult: root.setResult(whiteResult, blackResult)
         }
         Kirigami.Separator {
             Layouts.Layout.fillHeight: true
         }
-        QQC2.ToolButton {
+        ResultButton {
             id: whiteWinsForfeit
-            text: Controller.resultToString(Pairing.PartialResult.WinForfeit, Pairing.PartialResult.LostForfeit)
-            checkable: true
-            enabled: root.pairing !== null && root.pairing.blackPlayer !== null
-            checked: root.pairing?.whiteResult === Pairing.PartialResult.WinForfeit && root.pairing?.blackResult === Pairing.PartialResult.LostForfeit
-            onClicked: root.setResult(Pairing.PartialResult.WinForfeit, Pairing.PartialResult.LostForfeit)
+            whiteResult: Pairing.PartialResult.WinForfeit
+            blackResult: Pairing.PartialResult.LostForfeit
+            pairing: root.pairing
+            onSetResult: root.setResult(whiteResult, blackResult)
         }
-        QQC2.ToolButton {
+        ResultButton {
             id: blackWinsForfeit
-            text: Controller.resultToString(Pairing.PartialResult.LostForfeit, Pairing.PartialResult.WinForfeit)
-            checkable: true
-            enabled: root.pairing !== null && root.pairing.blackPlayer !== null
-            checked: root.pairing?.whiteResult === Pairing.PartialResult.LostForfeit && root.pairing?.blackResult === Pairing.PartialResult.WinForfeit
-            onClicked: root.setResult(Pairing.PartialResult.LostForfeit, Pairing.PartialResult.WinForfeit)
+            whiteResult: Pairing.PartialResult.LostForfeit
+            blackResult: Pairing.PartialResult.WinForfeit
+            pairing: root.pairing
+            onSetResult: root.setResult(whiteResult, blackResult)
         }
-        QQC2.ToolButton {
+        ResultButton {
             id: bothForfeit
-            text: Controller.resultToString(Pairing.PartialResult.LostForfeit, Pairing.PartialResult.LostForfeit)
-            checkable: true
-            enabled: root.pairing !== null && root.pairing.blackPlayer !== null
-            checked: root.pairing?.whiteResult === Pairing.PartialResult.LostForfeit && root.pairing?.blackResult === Pairing.PartialResult.LostForfeit
-            onClicked: root.setResult(Pairing.PartialResult.LostForfeit, Pairing.PartialResult.LostForfeit)
+            whiteResult: Pairing.PartialResult.LostForfeit
+            blackResult: Pairing.PartialResult.LostForfeit
+            pairing: root.pairing
+            onSetResult: root.setResult(whiteResult, blackResult)
         }
         Kirigami.Separator {
             Layouts.Layout.fillHeight: true
         }
         QQC2.ToolButton {
+            id: otherResults
             text: KI18n.i18nc("@action:intoolbar Other game results", "Other")
-            enabled: root.pairing !== null && root.pairing.blackPlayer !== null
-            checkable: true
-            checked: root.pairing && !whiteWins.checked && !draw.checked && !blackWins.checked && !whiteWinsForfeit.checked && !blackWinsForfeit.checked && !bothForfeit.checked
+            checkable: checked
+            checked: root.pairing && root.pairing.blackPlayer !== null && !(unknown.checked || whiteWins.checked || draw.checked || blackWins.checked || whiteWinsForfeit.checked || blackWinsForfeit.checked || bothForfeit.checked)
             down: pressed || otherMenu.opened
             onClicked: otherMenu.open()
 
