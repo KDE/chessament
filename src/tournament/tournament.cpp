@@ -12,6 +12,7 @@
 
 #include "db.h"
 #include "event.h"
+#include "pairing.h"
 #include "ratinglists/ratinglist.h"
 #include "state.h"
 #include "tiebreaks/points.h"
@@ -824,7 +825,21 @@ std::expected<void, QString> Tournament::sortPairings(std::optional<int> round)
                 if (a->whiteResult() == b->whiteResult()) {
                     return a->whitePlayer()->startingRank() < b->whitePlayer()->startingRank();
                 }
-                return std::to_underlying(a->whiteResult()) > std::to_underlying(b->whiteResult());
+
+                static const QList<Pairing::PartialResult> byesOrder{
+                    Pairing::PartialResult::PairingBye,
+                    Pairing::PartialResult::FullBye,
+                    Pairing::PartialResult::HalfBye,
+                    Pairing::PartialResult::ZeroBye,
+                };
+
+                const auto aOrder = byesOrder.indexOf(a->whiteResult());
+                Q_ASSERT(aOrder >= 0);
+
+                const auto bOrder = byesOrder.indexOf(b->whiteResult());
+                Q_ASSERT(bOrder >= 0);
+
+                return aOrder < bOrder;
             }
             if (aRank == 0) {
                 return false;
