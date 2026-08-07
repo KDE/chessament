@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-05 00:41+0000\n"
-"PO-Revision-Date: 2026-08-04 19:06+0300\n"
+"POT-Creation-Date: 2026-08-07 00:41+0000\n"
+"PO-Revision-Date: 2026-08-06 20:24+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -68,19 +68,19 @@ msgstr "%1 Raunt Sonrası Puan Durumu"
 #, kde-format
 msgctxt "@title"
 msgid "Provisional Standings After Round %1"
-msgstr "%1 Raunt Sonrası Nihaî Olmayan Puan Durumu"
+msgstr "%1 Raunt Sonrası Nihâî Olmayan Puan Durumu"
 
 #: documents.cpp:109
 #, kde-format
 msgctxt "@title"
 msgid "Final Standings"
-msgstr "Nihaî Puan Durumu"
+msgstr "Nihâî Puan Durumu"
 
 #: documents.cpp:111
 #, kde-format
 msgctxt "@title"
 msgid "Provisional Final Standings"
-msgstr "Nihaî Olmayan Puan Durumu"
+msgstr "Nihâî Olmayan Puan Durumu"
 
 #: main.cpp:59 qml/WelcomePage.qml:16
 #, kde-format
@@ -151,37 +151,37 @@ msgctxt "@info:shell"
 msgid "Error: Can't open more that one event"
 msgstr "Hata: Birden çok etkinlik açılamaz"
 
-#: pairingmodel.cpp:103
+#: pairingmodel.cpp:107
 #, kde-format
 msgctxt "@title:column Board Number"
 msgid "Board"
 msgstr "Tahta"
 
-#: pairingmodel.cpp:105
+#: pairingmodel.cpp:109
 #, kde-format
 msgctxt "@title:column White Player Starting Rank Number"
 msgid "№"
 msgstr "№"
 
-#: pairingmodel.cpp:107
+#: pairingmodel.cpp:111
 #, kde-format
 msgctxt "@title:column Name of the White Player"
 msgid "White Player"
 msgstr "Beyaz Oyuncu"
 
-#: pairingmodel.cpp:109
+#: pairingmodel.cpp:113
 #, kde-format
 msgctxt "@title:column Game Result"
 msgid "Result"
 msgstr "Sonuç"
 
-#: pairingmodel.cpp:111
+#: pairingmodel.cpp:115
 #, kde-format
 msgctxt "@title:column Name of the Black Player"
 msgid "Black Player"
 msgstr "Siyah Oyuncu"
 
-#: pairingmodel.cpp:113
+#: pairingmodel.cpp:117
 #, kde-format
 msgctxt "@title:column Black Player Starting Rank Number"
 msgid "№"
@@ -515,56 +515,56 @@ msgctxt "@label"
 msgid "Number of rounds"
 msgstr "Raunt sayısı"
 
-#: qml/PairingsPage.qml:50 qml/PlayersPage.qml:47 qml/StandingsPage.qml:54
+#: qml/PairingsPage.qml:51 qml/PlayersPage.qml:47 qml/StandingsPage.qml:54
 msgctxt "@label:listbox"
 msgid "PDF document (*.pdf)"
 msgstr "PDF belgesi (*.pdf)"
 
-#: qml/PairingsPage.qml:58
+#: qml/PairingsPage.qml:59
 msgctxt "@option:check"
 msgid "Hide finished games"
 msgstr "Biten oyunları gizle"
 
-#: qml/PairingsPage.qml:71 qml/PlayersPage.qml:144 qml/StandingsPage.qml:63
+#: qml/PairingsPage.qml:72 qml/PlayersPage.qml:144 qml/StandingsPage.qml:63
 msgctxt "@action:intoolbar"
 msgid "Print…"
 msgstr "Yazdır…"
 
-#: qml/PairingsPage.qml:77 qml/PlayersPage.qml:149 qml/StandingsPage.qml:69
+#: qml/PairingsPage.qml:78 qml/PlayersPage.qml:149 qml/StandingsPage.qml:69
 msgctxt "@action:intoolbar"
 msgid "Export as PDF…"
 msgstr "PDF Olarak Dışa Aktar…"
 
-#: qml/PairingsPage.qml:87 qml/PairingsPage.qml:92
+#: qml/PairingsPage.qml:88 qml/PairingsPage.qml:93
 msgid "Round %1"
 msgstr "Raunt %1"
 
-#: qml/PairingsPage.qml:104
+#: qml/PairingsPage.qml:105
 msgctxt "@action:intoolbar"
 msgid "Remove pairings of this and following rounds…"
 msgstr "Bu ve Sonraki Rauntların Eşleşmelerini Kaldır…"
 
-#: qml/PairingsPage.qml:118
+#: qml/PairingsPage.qml:119
 msgctxt "@info"
 msgid "The tournament hasn't started yet."
 msgstr "Turnuva henüz başlamadı."
 
-#: qml/PairingsPage.qml:118
+#: qml/PairingsPage.qml:119
 msgctxt "@info"
 msgid "Round %1 has finished."
 msgstr "%1. raunt bitti."
 
-#: qml/PairingsPage.qml:122
+#: qml/PairingsPage.qml:123
 msgctxt "@action:button"
 msgid "Pair Round %1…"
 msgstr "Eşleştir: %1. Raunt…"
 
-#: qml/PairingsPage.qml:166
+#: qml/PairingsPage.qml:167
 msgctxt "@info:placeholder"
 msgid "No pairings for round %1 yet"
 msgstr "Raunt %1 için henüz bir eşleşme yok"
 
-#: qml/PairingsPage.qml:168
+#: qml/PairingsPage.qml:169
 msgctxt "@info:placeholder"
 msgid "All games of round %1 have finished"
 msgstr "%1. raundun tüm oyunları bitti"
@@ -1256,7 +1256,7 @@ msgid_plural "Saved %1 players."
 msgstr[0] "1 oyuncu kaydedildi."
 msgstr[1] "%1 oyuncu kaydedildi."
 
-#: tournament/tiebreaks/aob.h:23 tournament/tournament.cpp:570
+#: tournament/tiebreaks/aob.h:23 tournament/tournament.cpp:550
 #, kde-format
 msgctxt "Tiebreak"
 msgid "Average Buchholz of Opponents"
@@ -1274,7 +1274,7 @@ msgctxt "@info"
 msgid "Unsupported tiebreak option \"%1\""
 msgstr "Desteklenmeyen beraberlik seçeneği “%1”"
 
-#: tournament/tiebreaks/buchholz.h:25 tournament/tournament.cpp:552
+#: tournament/tiebreaks/buchholz.h:25 tournament/tournament.cpp:532
 #, kde-format
 msgctxt "Buchholz tiebreak"
 msgid "Buchholz"
@@ -1292,26 +1292,26 @@ msgctxt "@info"
 msgid "Unsupported tiebreak"
 msgstr "Desteklenmeyen beraberlik"
 
-#: tournament/tiebreaks/numberwins.h:22 tournament/tournament.cpp:556
+#: tournament/tiebreaks/numberwins.h:22 tournament/tournament.cpp:536
 #, kde-format
 msgctxt "Number of Wins tiebreak"
 msgid "Number of Wins"
 msgstr "Kazanma Sayısı"
 
-#: tournament/tiebreaks/playedblack.h:22 tournament/tournament.cpp:566
+#: tournament/tiebreaks/playedblack.h:22 tournament/tournament.cpp:546
 #, kde-format
 msgctxt "Number of Games Played with Black (over the board) tiebreak"
 msgid "Number of Games Played with Black (over the board)"
 msgstr "Siyah ile Oynanan Oyunların Sayısı (Yüz Yüze)"
 
 #: tournament/tiebreaks/points.h:22 tournament/tiebreaks/points.h:27
-#: tournament/tournament.cpp:548
+#: tournament/tournament.cpp:528
 #, kde-format
 msgctxt "Game points"
 msgid "Points"
 msgstr "Puanlar"
 
-#: tournament/tiebreaks/won.h:23 tournament/tournament.cpp:562
+#: tournament/tiebreaks/won.h:23 tournament/tournament.cpp:542
 #, kde-format
 msgctxt ""
 "Number of Games Won (over the board) tiebreak. Different from the 'Number of "
@@ -1319,12 +1319,12 @@ msgctxt ""
 msgid "Number of Games Won (over the board)"
 msgstr "Kazanılan Oyunların Sayısı (Yüz Yüze)"
 
-#: tournament/tournament.cpp:1005
+#: tournament/tournament.cpp:940
 #, kde-format
 msgid "An error ocurred while pairing the round: %1"
 msgstr "Raunt eşleştirilirken bir hata oluştu: %1"
 
-#: tournament/tournament.cpp:1237
+#: tournament/tournament.cpp:1165
 #, kde-format
 msgid "Couldn't open file"
 msgstr "Dosya açılamadı"
