@@ -41,36 +41,6 @@ TableDelegate {
         }
 
         DelegateChoice {
-            column: PlayersModel.Title
-
-            Controls.ComboBox {
-                id: comboBox
-
-                anchors.fill: parent
-                model: ["", "GM", "IM", "FM", "CM", "WGM", "WIM", "WFM", "WCM"]
-                editable: true
-
-                onActivated: index => {
-                    delegate.edit = comboBox.currentText;
-                }
-
-                TableView.onCommit: {
-                    if (!comboBox.editText.length && !comboBox.currentText.length && comboBox.highlightedIndex >= 0) {
-                        delegate.edit = comboBox.textAt(comboBox.highlightedIndex);
-                    } else {
-                        delegate.edit = comboBox.editText;
-                    }
-                }
-
-                Component.onCompleted: {
-                    comboBox.editText = delegate.edit;
-                    // FIXME: This breaks the Enter key
-                    // comboBox.popup.open();
-                }
-            }
-        }
-
-        DelegateChoice {
             Controls.TextField {
                 anchors.fill: parent
                 text: delegate.edit
