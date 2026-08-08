@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-07 00:41+0000\n"
+"POT-Creation-Date: 2026-08-08 00:41+0000\n"
 "PO-Revision-Date: 2026-08-04 08:56+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -719,7 +719,7 @@ msgctxt "@info:status Total number of players (Number of players rated)"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: qml/ResultsFooter.qml:107
+#: qml/ResultsFooter.qml:103
 msgctxt "@action:intoolbar Other game results"
 msgid "Other"
 msgstr "אחר"
@@ -1265,7 +1265,7 @@ msgstr[1] "שני/שתי שחקנים/ות נשמרו."
 msgstr[2] "%1 שחקנים/ות נשמרו."
 msgstr[3] "%1 שחקנים/ות נשמרו."
 
-#: tournament/tiebreaks/aob.h:23 tournament/tournament.cpp:550
+#: tournament/tiebreaks/aob.h:23 tournament/tournament.cpp:551
 #, kde-format
 msgctxt "Tiebreak"
 msgid "Average Buchholz of Opponents"
@@ -1283,7 +1283,7 @@ msgctxt "@info"
 msgid "Unsupported tiebreak option \"%1\""
 msgstr "אפשרות שובר שוויון „%1” לא נתמכת"
 
-#: tournament/tiebreaks/buchholz.h:25 tournament/tournament.cpp:532
+#: tournament/tiebreaks/buchholz.h:25 tournament/tournament.cpp:533
 #, kde-format
 msgctxt "Buchholz tiebreak"
 msgid "Buchholz"
@@ -1301,26 +1301,26 @@ msgctxt "@info"
 msgid "Unsupported tiebreak"
 msgstr "שובר שוויון לא נתמך"
 
-#: tournament/tiebreaks/numberwins.h:22 tournament/tournament.cpp:536
+#: tournament/tiebreaks/numberwins.h:22 tournament/tournament.cpp:537
 #, kde-format
 msgctxt "Number of Wins tiebreak"
 msgid "Number of Wins"
 msgstr "מספר הנצחונות"
 
-#: tournament/tiebreaks/playedblack.h:22 tournament/tournament.cpp:546
+#: tournament/tiebreaks/playedblack.h:22 tournament/tournament.cpp:547
 #, kde-format
 msgctxt "Number of Games Played with Black (over the board) tiebreak"
 msgid "Number of Games Played with Black (over the board)"
 msgstr "מספר המשחקים עם השחור (על גבי הלוח)"
 
 #: tournament/tiebreaks/points.h:22 tournament/tiebreaks/points.h:27
-#: tournament/tournament.cpp:528
+#: tournament/tournament.cpp:529
 #, kde-format
 msgctxt "Game points"
 msgid "Points"
 msgstr "נקודות"
 
-#: tournament/tiebreaks/won.h:23 tournament/tournament.cpp:542
+#: tournament/tiebreaks/won.h:23 tournament/tournament.cpp:543
 #, kde-format
 msgctxt ""
 "Number of Games Won (over the board) tiebreak. Different from the 'Number of "
@@ -1328,12 +1328,12 @@ msgctxt ""
 msgid "Number of Games Won (over the board)"
 msgstr "מספר המשחקים עם ניצחון (על גבי הלוח)"
 
-#: tournament/tournament.cpp:940
+#: tournament/tournament.cpp:955
 #, kde-format
 msgid "An error ocurred while pairing the round: %1"
 msgstr "אירעה שגיאה בעת השיבוץ לסיבוב: %1"
 
-#: tournament/tournament.cpp:1165
+#: tournament/tournament.cpp:1180
 #, kde-format
 msgid "Couldn't open file"
 msgstr "לא ניתן לפתוח את הקובץ"
