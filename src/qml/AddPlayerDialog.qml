@@ -32,14 +32,6 @@ QQC2.Dialog {
         root.addPlayer(titleField.currentText, nameField.value, ratingField.value, nationalRatingField.value, playerIdField.text, nationalIdField.text, birthDateField.text, federationField.text, originField.text, genderField.text);
     }
 
-    header: Kirigami.DialogHeader {
-        dialog: root
-
-        contentItem: Kirigami.DialogHeaderTopContent {
-            dialog: root
-        }
-    }
-
     contentItem: Kirigami.ScrollablePage {
         background: null
 
