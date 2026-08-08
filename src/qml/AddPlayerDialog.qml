@@ -55,6 +55,7 @@ QQC2.Dialog {
                 id: titleField
                 text: KI18n.i18nc("@label:textbox", "Title")
                 model: ["", "GM", "IM", "FM", "WGM", "CM", "WIM", "WFM", "WCM"]
+                editable: true
             }
 
             FormCardSearchFieldDelegate {
