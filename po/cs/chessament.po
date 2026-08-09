@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-08 00:41+0000\n"
+"POT-Creation-Date: 2026-08-09 00:41+0000\n"
 "PO-Revision-Date: 2026-08-04 10:15+0200\n"
 "Last-Translator: Libor Filípek <libor.filipek@gmail.com>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -265,53 +265,53 @@ msgctxt "@label:textbox"
 msgid "Title"
 msgstr "Název"
 
-#: qml/AddPlayerDialog.qml:62
+#: qml/AddPlayerDialog.qml:63
 msgctxt "@label:textbox"
 msgid "Name"
 msgstr "Jméno"
 
-#: qml/AddPlayerDialog.qml:88
+#: qml/AddPlayerDialog.qml:89
 msgctxt "@label:textbox"
 msgid "Rating"
 msgstr "Hodnocení"
 
-#: qml/AddPlayerDialog.qml:95
+#: qml/AddPlayerDialog.qml:96
 msgctxt "@label:textbox"
 msgid "National rating"
 msgstr "Národní hodnocení"
 
-#: qml/AddPlayerDialog.qml:102
+#: qml/AddPlayerDialog.qml:103
 msgctxt "@label:textbox"
 msgid "Player ID"
 msgstr "ID hráče"
 
-#: qml/AddPlayerDialog.qml:103 qml/AddPlayerDialog.qml:109
-#: qml/AddPlayerDialog.qml:115 qml/AddPlayerDialog.qml:121
-#: qml/AddPlayerDialog.qml:127 qml/AddPlayerDialog.qml:133
+#: qml/AddPlayerDialog.qml:104 qml/AddPlayerDialog.qml:110
+#: qml/AddPlayerDialog.qml:116 qml/AddPlayerDialog.qml:122
+#: qml/AddPlayerDialog.qml:128 qml/AddPlayerDialog.qml:134
 msgid "Optional"
 msgstr "Volitelné"
 
-#: qml/AddPlayerDialog.qml:108
+#: qml/AddPlayerDialog.qml:109
 msgctxt "@label:textbox"
 msgid "National ID"
 msgstr "Národní ID"
 
-#: qml/AddPlayerDialog.qml:114
+#: qml/AddPlayerDialog.qml:115
 msgctxt "@label:textbox"
 msgid "Birth date"
 msgstr "Datum narození"
 
-#: qml/AddPlayerDialog.qml:120 qml/TournamentSettingsInformation.qml:43
+#: qml/AddPlayerDialog.qml:121 qml/TournamentSettingsInformation.qml:43
 msgctxt "@label:textbox"
 msgid "Federation"
 msgstr "Federace"
 
-#: qml/AddPlayerDialog.qml:126
+#: qml/AddPlayerDialog.qml:127
 msgctxt "@label:textbox"
 msgid "Origin"
 msgstr "Původ"
 
-#: qml/AddPlayerDialog.qml:132
+#: qml/AddPlayerDialog.qml:133
 msgctxt "@label:textbox"
 msgid "Gender"
 msgstr "Pohlaví"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-08 00:41+0000\n"
+"POT-Creation-Date: 2026-08-09 00:41+0000\n"
 "PO-Revision-Date: 2026-01-06 11:22+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -268,33 +268,33 @@ msgctxt "@label:textbox"
 msgid "Title"
 msgstr "Titulua"
 
-#: qml/AddPlayerDialog.qml:62
+#: qml/AddPlayerDialog.qml:63
 msgctxt "@label:textbox"
 msgid "Name"
 msgstr "Izena"
 
-#: qml/AddPlayerDialog.qml:88
+#: qml/AddPlayerDialog.qml:89
 msgctxt "@label:textbox"
 msgid "Rating"
 msgstr "Balorazioa"
 
-#: qml/AddPlayerDialog.qml:95
+#: qml/AddPlayerDialog.qml:96
 msgctxt "@label:textbox"
 msgid "National rating"
 msgstr "Balorazio nazionala"
 
-#: qml/AddPlayerDialog.qml:102
+#: qml/AddPlayerDialog.qml:103
 msgctxt "@label:textbox"
 msgid "Player ID"
 msgstr "Jokalariaren ID"
 
-#: qml/AddPlayerDialog.qml:103 qml/AddPlayerDialog.qml:109
-#: qml/AddPlayerDialog.qml:115 qml/AddPlayerDialog.qml:121
-#: qml/AddPlayerDialog.qml:127 qml/AddPlayerDialog.qml:133
+#: qml/AddPlayerDialog.qml:104 qml/AddPlayerDialog.qml:110
+#: qml/AddPlayerDialog.qml:116 qml/AddPlayerDialog.qml:122
+#: qml/AddPlayerDialog.qml:128 qml/AddPlayerDialog.qml:134
 msgid "Optional"
 msgstr "Aukerakoa"
 
-#: qml/AddPlayerDialog.qml:108
+#: qml/AddPlayerDialog.qml:109
 #, fuzzy
 #| msgctxt "@title:column Player National Rating"
 #| msgid "National Rating"
@@ -302,22 +302,22 @@ msgctxt "@label:textbox"
 msgid "National ID"
 msgstr "Balorazio nazionala"
 
-#: qml/AddPlayerDialog.qml:114
+#: qml/AddPlayerDialog.qml:115
 msgctxt "@label:textbox"
 msgid "Birth date"
 msgstr "Jaioteguna"
 
-#: qml/AddPlayerDialog.qml:120 qml/TournamentSettingsInformation.qml:43
+#: qml/AddPlayerDialog.qml:121 qml/TournamentSettingsInformation.qml:43
 msgctxt "@label:textbox"
 msgid "Federation"
 msgstr "Federazioa"
 
-#: qml/AddPlayerDialog.qml:126
+#: qml/AddPlayerDialog.qml:127
 msgctxt "@label:textbox"
 msgid "Origin"
 msgstr "Jatorria"
 
-#: qml/AddPlayerDialog.qml:132
+#: qml/AddPlayerDialog.qml:133
 msgctxt "@label:textbox"
 msgid "Gender"
 msgstr ""

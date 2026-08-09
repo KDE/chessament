@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-08 00:41+0000\n"
+"POT-Creation-Date: 2026-08-09 00:41+0000\n"
 "PO-Revision-Date: 2025-07-21 00:46+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -278,53 +278,53 @@ msgctxt "@label:textbox"
 msgid "Title"
 msgstr ""
 
-#: qml/AddPlayerDialog.qml:62
+#: qml/AddPlayerDialog.qml:63
 msgctxt "@label:textbox"
 msgid "Name"
 msgstr ""
 
-#: qml/AddPlayerDialog.qml:88
+#: qml/AddPlayerDialog.qml:89
 msgctxt "@label:textbox"
 msgid "Rating"
 msgstr ""
 
-#: qml/AddPlayerDialog.qml:95
+#: qml/AddPlayerDialog.qml:96
 msgctxt "@label:textbox"
 msgid "National rating"
 msgstr ""
 
-#: qml/AddPlayerDialog.qml:102
+#: qml/AddPlayerDialog.qml:103
 msgctxt "@label:textbox"
 msgid "Player ID"
 msgstr "플레이어 ID"
 
-#: qml/AddPlayerDialog.qml:103 qml/AddPlayerDialog.qml:109
-#: qml/AddPlayerDialog.qml:115 qml/AddPlayerDialog.qml:121
-#: qml/AddPlayerDialog.qml:127 qml/AddPlayerDialog.qml:133
+#: qml/AddPlayerDialog.qml:104 qml/AddPlayerDialog.qml:110
+#: qml/AddPlayerDialog.qml:116 qml/AddPlayerDialog.qml:122
+#: qml/AddPlayerDialog.qml:128 qml/AddPlayerDialog.qml:134
 msgid "Optional"
 msgstr ""
 
-#: qml/AddPlayerDialog.qml:108
+#: qml/AddPlayerDialog.qml:109
 msgctxt "@label:textbox"
 msgid "National ID"
 msgstr ""
 
-#: qml/AddPlayerDialog.qml:114
+#: qml/AddPlayerDialog.qml:115
 msgctxt "@label:textbox"
 msgid "Birth date"
 msgstr ""
 
-#: qml/AddPlayerDialog.qml:120 qml/TournamentSettingsInformation.qml:43
+#: qml/AddPlayerDialog.qml:121 qml/TournamentSettingsInformation.qml:43
 msgctxt "@label:textbox"
 msgid "Federation"
 msgstr "연합"
 
-#: qml/AddPlayerDialog.qml:126
+#: qml/AddPlayerDialog.qml:127
 msgctxt "@label:textbox"
 msgid "Origin"
 msgstr ""
 
-#: qml/AddPlayerDialog.qml:132
+#: qml/AddPlayerDialog.qml:133
 msgctxt "@label:textbox"
 msgid "Gender"
 msgstr ""
