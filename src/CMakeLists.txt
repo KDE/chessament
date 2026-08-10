@@ -83,6 +83,7 @@ ecm_add_qml_module(chessament_static
 kde_source_files_enable_exceptions(
     controller.cpp
     ratinglistmodel.cpp
+    searchplayersmodel.cpp
 )
 
 target_sources(chessament_static PUBLIC

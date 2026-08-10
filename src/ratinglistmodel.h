@@ -24,14 +24,15 @@ public:
 
     explicit RatingListModel(QObject *parent = nullptr);
 
+    [[nodiscard]] QString status() const;
+
     [[nodiscard]] int rowCount(const QModelIndex &parent = {}) const override;
     [[nodiscard]] QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
     [[nodiscard]] QHash<int, QByteArray> roleNames() const override;
 
-    [[nodiscard]] QString status() const;
-
     Q_INVOKABLE QCoro::QmlTask importRatingList(const QString &name, const QString &url);
-    Q_INVOKABLE QCoro::QmlTask removeList(int row);
+
+    Q_INVOKABLE QCoro::QmlTask deleteList(int row);
 
     Q_INVOKABLE static bool isSupportedUrl(const QString &location);
 

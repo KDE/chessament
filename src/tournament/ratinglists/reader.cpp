@@ -7,6 +7,8 @@
 #include <QSqlError>
 #include <QSqlQuery>
 
+#include "ratinglistsmanager.h"
+
 RatingListReader::RatingListReader(RatingList *list)
     : m_list(list)
 {
@@ -36,8 +38,8 @@ std::expected<void, QString> RatingListReader::addPlayer(const RatingListPlayer 
 
 std::expected<void, QString> RatingListReader::savePlayers()
 {
-    if (const auto ok = m_list->savePlayers(m_players); !ok) {
-        return ok;
+    if (const auto ok = RatingListsManager::instance().savePlayers(m_list, m_players); !ok) {
+        return std::unexpected(ok.error());
     }
 
     m_players.clear();

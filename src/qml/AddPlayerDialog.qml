@@ -58,8 +58,17 @@ QQC2.Dialog {
                 }
                 textRole: "name"
                 subtitleRole: "description"
+
+                Timer {
+                    id: searchTimer
+                    interval: 200
+                    onTriggered: searchModel.search(nameField.value).then(() => {
+                        nameField.field.popup.visible = true;
+                    })
+                }
+
                 field {
-                    onSearchTriggered: searchModel.search(nameField.value)
+                    onSearchTriggered: searchTimer.restart()
                     onActivated: function (index: int): void {
                         const player = searchModel.data(searchModel.index(index, 0), SearchPlayersModel.PlayerRole);
 

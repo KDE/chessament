@@ -34,5 +34,5 @@ private:
     uint m_count = 0;
     QList<RatingListPlayer> m_players;
 
-    friend class RatingList;
+    friend class RatingListManager;
 };

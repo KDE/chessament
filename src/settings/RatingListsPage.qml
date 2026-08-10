@@ -66,7 +66,7 @@ FormCard.FormCardPage {
                 onClicked: function (): void {
                     deleteListDialog.waiting = true;
 
-                    listsModel.removeList(deleteListDialog.row).then(() => {
+                    listsModel.deleteList(deleteListDialog.row).then(() => {
                         deleteListDialog.close();
                     });
                 }
