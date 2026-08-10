@@ -14,6 +14,7 @@
 #include "event.h"
 #include "pairing.h"
 #include "ratinglists/ratinglist.h"
+#include "ratinglists/ratinglistsmanager.h"
 #include "state.h"
 #include "tiebreaks/points.h"
 #include "timecontrol.h"
@@ -334,7 +335,7 @@ void Tournament::updateRatings(int listId)
 {
     const auto &players = m_players;
     for (const auto &player : players) {
-        const auto listPlayer = RatingList::searchPlayer(player->playerId(), listId);
+        const auto listPlayer = RatingListsManager::instance().searchPlayer(player->playerId(), listId);
 
         if (!listPlayer) {
             continue;

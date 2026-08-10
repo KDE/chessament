@@ -4,8 +4,10 @@
 #include "searchplayersmodel.h"
 
 #include <KLocalizedString>
+#include <QCoroFuture>
+#include <QtConcurrentRun>
 
-#include "ratinglists/ratinglist.h"
+#include "ratinglists/ratinglistsmanager.h"
 
 SearchPlayersModel::SearchPlayersModel(QObject *parent)
     : QAbstractListModel(parent)
@@ -59,18 +61,34 @@ QHash<int, QByteArray> SearchPlayersModel::roleNames() const
     };
 }
 
-void SearchPlayersModel::search(const QString &text)
+QCoro::QmlTask SearchPlayersModel::search(const QString &text)
 {
-    const auto players = RatingList::searchPlayers(text);
+    return searchPlayers(text);
+}
+
+QCoro::Task<int> SearchPlayersModel::searchPlayers(const QString &text)
+{
+    if (text.isEmpty()) {
+        beginResetModel();
+        m_players.clear();
+        endResetModel();
+        co_return 0;
+    }
+
+    const auto players = co_await QtConcurrent::run([text]() {
+        return RatingListsManager::searchPlayers(text);
+    });
 
     if (!players) {
         qWarning() << players.error();
-        return;
+        co_return 0;
     }
 
     beginResetModel();
     m_players = (*players).mid(0, 10);
     endResetModel();
+
+    co_return m_players.size();
 }
 
 #include "moc_searchplayersmodel.cpp"

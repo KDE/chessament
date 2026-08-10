@@ -7,10 +7,12 @@
 #include <QCoroFuture>
 #include <QtConcurrentRun>
 
+#include "ratinglists/ratinglistsmanager.h"
+
 RatingListModel::RatingListModel(QObject *parent)
     : QAbstractListModel(parent)
 {
-    m_lists = RatingList::lists();
+    m_lists = RatingListsManager::lists();
 }
 
 int RatingListModel::rowCount(const QModelIndex &parent) const
@@ -62,28 +64,26 @@ QCoro::QmlTask RatingListModel::importRatingList(const QString &name, const QStr
 
 QCoro::Task<QString> RatingListModel::importRatingListImpl(const QString &name, const QString &url)
 {
-    auto listUrl = QUrl::fromUserInput(url);
+    const auto listUrl = QUrl::fromUserInput(url);
 
-    auto list = std::make_unique<RatingList>(name);
-
-    connect(list.get(), &RatingList::statusChanged, this, [this](const QString &status) {
+    connect(&RatingListsManager::instance(), &RatingListsManager::statusChanged, this, [this](const QString &status) {
         setStatus(status);
     });
 
-    const auto result = co_await list->import(listUrl);
+    const auto list = co_await RatingListsManager::instance().import(name, listUrl);
 
-    if (!result) {
-        co_return result.error();
+    if (!list) {
+        co_return list.error();
     }
 
     beginInsertRows({}, rowCount(), rowCount());
-    m_lists.push_back(std::move(list));
+    m_lists.push_back(std::unique_ptr<RatingList>(list.value()));
     endInsertRows();
 
     co_return {};
 }
 
-QCoro::QmlTask RatingListModel::removeList(int row)
+QCoro::QmlTask RatingListModel::deleteList(int row)
 {
     return remove(row);
 }
@@ -94,7 +94,7 @@ QCoro::Task<> RatingListModel::remove(int row)
     const auto id = list->id();
 
     co_await QtConcurrent::run([id]() {
-        RatingList::remove(id);
+        RatingListsManager::remove(id);
     });
 
     beginRemoveRows({}, row, row);

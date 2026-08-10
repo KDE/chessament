@@ -4,6 +4,8 @@
 #pragma once
 
 #include <QAbstractListModel>
+#include <QCoroQmlTask>
+#include <QCoroTask>
 #include <qqmlregistration.h>
 
 #include "ratinglists/ratinglistplayer.h"
@@ -30,12 +32,14 @@ public:
     [[nodiscard]] QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
     [[nodiscard]] QHash<int, QByteArray> roleNames() const override;
 
-    Q_INVOKABLE void search(const QString &text);
+    Q_INVOKABLE QCoro::QmlTask search(const QString &text);
 
 public Q_SLOTS:
 
 Q_SIGNALS:
 
 private:
+    QCoro::Task<int> searchPlayers(const QString &text);
+
     QList<RatingListPlayer> m_players;
 };

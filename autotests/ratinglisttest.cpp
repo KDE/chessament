@@ -8,6 +8,7 @@
 
 #include "ratinglists/htmlreader.h"
 #include "ratinglists/ratinglist.h"
+#include "ratinglists/ratinglistsmanager.h"
 
 using namespace Qt::StringLiterals;
 
@@ -32,9 +33,9 @@ void RatingListTest::testHtmlRatingList()
 
     QTextStream stream{&file};
 
-    QVERIFY(list->readPlayers(&stream, std::move(reader)));
+    QVERIFY(RatingListsManager::instance().readPlayers(list.get(), &stream, std::move(reader)));
 
-    const auto players = RatingList::searchPlayers(u"K"_s);
+    const auto players = RatingListsManager::searchPlayers(u"K"_s);
 
     QVERIFY(players);
     QCOMPARE(players->size(), 2);
@@ -67,7 +68,7 @@ void RatingListTest::testHtmlRatingList()
 
 void RatingListTest::cleanupTestCase()
 {
-    QDir().remove(RatingList::databasePath());
+    QDir().remove(RatingListsManager::databasePath());
 }
 
 QTEST_GUILESS_MAIN(RatingListTest)
