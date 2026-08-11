@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-09 00:41+0000\n"
+"POT-Creation-Date: 2026-08-11 00:41+0000\n"
 "PO-Revision-Date: 2025-09-29 01:32+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -259,58 +259,58 @@ msgctxt "@title:window"
 msgid "Add player"
 msgstr "新增玩家"
 
-#: qml/AddPlayerDialog.qml:56
+#: qml/AddPlayerDialog.qml:48
 msgctxt "@label:textbox"
 msgid "Title"
 msgstr "標題"
 
-#: qml/AddPlayerDialog.qml:63
+#: qml/AddPlayerDialog.qml:55
 msgctxt "@label:textbox"
 msgid "Name"
 msgstr "名稱"
 
-#: qml/AddPlayerDialog.qml:89
+#: qml/AddPlayerDialog.qml:81
 msgctxt "@label:textbox"
 msgid "Rating"
 msgstr ""
 
-#: qml/AddPlayerDialog.qml:96
+#: qml/AddPlayerDialog.qml:88
 msgctxt "@label:textbox"
 msgid "National rating"
 msgstr ""
 
-#: qml/AddPlayerDialog.qml:103
+#: qml/AddPlayerDialog.qml:95
 msgctxt "@label:textbox"
 msgid "Player ID"
 msgstr "玩家 ID"
 
-#: qml/AddPlayerDialog.qml:104 qml/AddPlayerDialog.qml:110
-#: qml/AddPlayerDialog.qml:116 qml/AddPlayerDialog.qml:122
-#: qml/AddPlayerDialog.qml:128 qml/AddPlayerDialog.qml:134
+#: qml/AddPlayerDialog.qml:96 qml/AddPlayerDialog.qml:102
+#: qml/AddPlayerDialog.qml:108 qml/AddPlayerDialog.qml:114
+#: qml/AddPlayerDialog.qml:120 qml/AddPlayerDialog.qml:126
 msgid "Optional"
 msgstr ""
 
-#: qml/AddPlayerDialog.qml:109
+#: qml/AddPlayerDialog.qml:101
 msgctxt "@label:textbox"
 msgid "National ID"
 msgstr ""
 
-#: qml/AddPlayerDialog.qml:115
+#: qml/AddPlayerDialog.qml:107
 msgctxt "@label:textbox"
 msgid "Birth date"
 msgstr "出生日期"
 
-#: qml/AddPlayerDialog.qml:121 qml/TournamentSettingsInformation.qml:43
+#: qml/AddPlayerDialog.qml:113 qml/TournamentSettingsInformation.qml:43
 msgctxt "@label:textbox"
 msgid "Federation"
 msgstr ""
 
-#: qml/AddPlayerDialog.qml:127
+#: qml/AddPlayerDialog.qml:119
 msgctxt "@label:textbox"
 msgid "Origin"
 msgstr ""
 
-#: qml/AddPlayerDialog.qml:133
+#: qml/AddPlayerDialog.qml:125
 msgctxt "@label:textbox"
 msgid "Gender"
 msgstr ""
