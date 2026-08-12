@@ -11,6 +11,7 @@ ecm_add_qml_module(chessament_settings
         AddAccountDialog.qml
         AddRatingListDialog.qml
         ChessamentConfigurationView.qml
+        DeleteRatingListDialog.qml
         GeneralPage.qml
         RatingListsPage.qml
 )

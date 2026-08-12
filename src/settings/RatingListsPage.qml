@@ -6,7 +6,6 @@ pragma ComponentBehavior: Bound
 import QtQml
 import QtQuick
 import QtQuick.Controls as Controls
-import QtQuick.Layouts as Layouts
 
 import org.kde.ki18n
 import org.kde.kirigami as Kirigami
@@ -20,59 +19,6 @@ FormCard.FormCardPage {
     required property ChessamentApplication application
 
     title: KI18n.i18nc("@title", "Rating Lists")
-
-    Kirigami.Dialog {
-        id: deleteListDialog
-
-        property int row
-        property string name
-        property bool waiting: false
-        property bool finished: false
-
-        parent: Controls.Overlay.overlay
-        title: KI18n.i18nc("@title", "Delete Rating List")
-        closePolicy: Controls.Dialog.NoAutoClose
-        showCloseButton: false
-        padding: Kirigami.Units.largeSpacing
-
-        Layouts.ColumnLayout {
-            Controls.BusyIndicator {
-                Layouts.Layout.fillWidth: true
-                Layouts.Layout.alignment: Qt.AlignHCenter
-
-                visible: deleteListDialog.waiting
-            }
-            Controls.Label {
-                text: KI18n.i18nc("@label", "Permanently delete rating list \"%1\"?", deleteListDialog.name)
-                visible: !(deleteListDialog.finished || deleteListDialog.waiting)
-            }
-        }
-
-        footer: Controls.DialogButtonBox {
-            visible: !(deleteListDialog.finished || deleteListDialog.waiting)
-
-            standardButtons: if (deleteListDialog.finished && !deleteListDialog.waiting) {
-                return Controls.Dialog.Close;
-            } else if (!deleteListDialog.waiting) {
-                return Controls.Dialog.Cancel;
-            } else {
-                return Controls.Dialog.NoButton;
-            }
-
-            Controls.Button {
-                text: KI18n.i18nc("@action:button Delete Rating List", "Delete")
-                icon.name: "delete-symbolic"
-                visible: !(deleteListDialog.finished || deleteListDialog.waiting)
-                onClicked: function (): void {
-                    deleteListDialog.waiting = true;
-
-                    listsModel.deleteList(deleteListDialog.row).then(() => {
-                        deleteListDialog.close();
-                    });
-                }
-            }
-        }
-    }
 
     FormCard.FormHeader {
         title: KI18n.i18nc("@title", "Rating Lists")
@@ -104,12 +50,13 @@ FormCard.FormCardPage {
                     icon.name: "list-remove-symbolic"
                     flat: true
                     display: Controls.Button.IconOnly
-                    onPressed: {
-                        deleteListDialog.row = listDelegate.row;
-                        deleteListDialog.name = listDelegate.name;
-                        deleteListDialog.waiting = false;
-                        deleteListDialog.finished = false;
-                        deleteListDialog.open();
+                    onPressed: function (): void {
+                        const dialog = Qt.createComponent("org.kde.chessament.settings", "DeleteRatingListDialog").createObject(root, {
+                            "model": listsModel,
+                            "row": listDelegate.row,
+                            "name": listDelegate.name
+                        }) as DeleteRatingListDialog;
+                        dialog.open();
                     }
                     Controls.ToolTip.text: KI18n.i18nc("@action:button", "Delete rating list")
                     Controls.ToolTip.visible: hovered
