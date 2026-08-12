@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-11 00:41+0000\n"
-"PO-Revision-Date: 2026-08-01 20:08+0200\n"
+"PO-Revision-Date: 2026-08-04 17:23+0200\n"
 "Last-Translator: Valter Mura <valtermura@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -909,20 +909,16 @@ msgid "Chessament is a chess tournament manager"
 msgstr "Chessament è un gestore di tornei di scacchi"
 
 #: searchplayersmodel.cpp:39
-#, fuzzy, kde-format
-#| msgctxt "@title:column Player Rating"
-#| msgid "Rating"
+#, kde-format
 msgctxt "%1 is the player's rating"
 msgid "Rating: %1"
-msgstr "Valutazione"
+msgstr "Valutazione: %1"
 
 #: searchplayersmodel.cpp:41
-#, fuzzy, kde-format
-#| msgctxt "Pieces Color · Player Name"
-#| msgid "%1 · %2"
+#, kde-format
 msgctxt "%1 is the player's rating, %2 is the player's origin"
 msgid "Rating: %1 · %2"
-msgstr "%1 · %2"
+msgstr "Valutazione: %1 · %2"
 
 #: settings/AccountsPage.qml:21
 msgctxt "@title"

@@ -459,7 +459,7 @@ msgstr "احذف لاعب"
 #: qml/DeletePlayerDialog.qml:20
 msgctxt "@label"
 msgid "Permanently delete player \"%1\"?"
-msgstr "هل تريد حذف اللاعب \"%1\" نهائياً؟"
+msgstr "هل تريد حذف اللاعب \"%1\" نهائيًا؟"
 
 #: qml/DeletePlayerDialog.qml:26
 msgctxt "@action:button Delete Player"
@@ -1049,7 +1049,7 @@ msgstr "احذف قائمة التقييم"
 #: settings/RatingListsPage.qml:46
 msgctxt "@label"
 msgid "Permanently delete rating list \"%1\"?"
-msgstr "هل تريد حذف قائمة التقييم \"%1\" نهائياً؟"
+msgstr "هل تريد حذف قائمة التقييم \"%1\" نهائيًا؟"
 
 #: settings/RatingListsPage.qml:63
 msgctxt "@action:button Delete Rating List"
