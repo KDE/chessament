@@ -20,8 +20,7 @@
     "cleanup": [
         "/include",
         "/lib/cmake",
-        "/mkspecs",
-        "/share/doc"
+        "/mkspecs"
     ],
     "modules": [
         {
@@ -83,7 +82,8 @@
                 }
             ],
             "config-opts": [
-                "-DBUILD_TESTING=OFF"
+                "-DBUILD_TESTING=OFF",
+                "-DBUILD_DOCS=OFF"
             ]
         }
     ]

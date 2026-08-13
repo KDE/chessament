@@ -65,6 +65,7 @@ set_package_properties(Qt6 PROPERTIES
     TYPE REQUIRED
     PURPOSE "Required application components"
 )
+
 find_package(KF6 ${KF6_MIN_VERSION} COMPONENTS
     Archive
     Config
@@ -107,18 +108,22 @@ set_package_properties(SharedMimeInfo PROPERTIES
     TYPE REQUIRED
 )
 
-find_package(KF6DocTools ${KF6_MIN_VERSION})
-set_package_properties(KF6DocTools PROPERTIES
-    TYPE OPTIONAL
-    PURPOSE "User documentation"
-)
-
 find_package(bbpPairings)
 set_package_properties(bbpPairings PROPERTIES
     TYPE RUNTIME
     PURPOSE "Pairing engine"
     URL "https://github.com/BieremaBoyzProgramming/bbpPairings"
 )
+
+option(BUILD_DOCS "Build user documentation" ON)
+
+if (BUILD_DOCS)
+    find_package(KF6DocTools ${KF6_MIN_VERSION})
+    set_package_properties(KF6DocTools PROPERTIES
+        TYPE REQUIRED
+        PURPOSE "User documentation"
+    )
+endif()
 
 feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)
 
@@ -146,7 +151,7 @@ install(FILES org.kde.chessament.xml DESTINATION ${KDE_INSTALL_MIMEDIR})
 update_xdg_mimetypes(${KDE_INSTALL_MIMEDIR})
 ki18n_install(po)
 
-if (KF6DocTools_FOUND)
+if (BUILD_DOCS)
     add_subdirectory(doc)
     kdoctools_install(po)
 endif()
