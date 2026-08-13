@@ -64,6 +64,8 @@ QCoro::QmlTask RatingListModel::importRatingList(const QString &name, const QStr
 
 QCoro::Task<QString> RatingListModel::importRatingListImpl(const QString &name, const QString &url)
 {
+    setStatus({});
+
     const auto listUrl = QUrl::fromUserInput(url);
 
     connect(&RatingListsManager::instance(), &RatingListsManager::statusChanged, this, [this](const QString &status) {
