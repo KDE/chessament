@@ -5,28 +5,28 @@ cmake_minimum_required(VERSION 3.16)
 
 project(chessament VERSION 0.1)
 
-include(FeatureSummary)
-
 set(QT6_MIN_VERSION 6.10.0)
 set(KF6_MIN_VERSION 6.23.0)
 set(KIRIGAMI_ADDONS_MIN_VERSION 1.6.0)
+set(QCORO_MIN_VERSION 0.11)
+
+include(FeatureSummary)
 
 find_package(ECM ${KF6_MIN_VERSION} REQUIRED NO_MODULE)
 set_package_properties(ECM PROPERTIES
     TYPE REQUIRED
     URL "https://api.kde.org/ecm/"
-    DESCRIPTION "extra cmake modules")
+    DESCRIPTION "Extra CMake Modules")
 
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
 
 set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-include(FeatureSummary)
-
 include(KDEInstallDirs)
 include(KDECMakeSettings NO_POLICY_SCOPE)
 include(KDECompilerSettings NO_POLICY_SCOPE)
+
 include(ECMAddTests)
 include(ECMAddAppIcon)
 include(ECMInstallIcons)
@@ -48,18 +48,43 @@ ecm_set_disabled_deprecation_versions(
     KF ${KF6_MIN_VERSION}
 )
 
-find_package(Qt6 ${QT6_MIN_VERSION} COMPONENTS Concurrent Core Gui Qml QuickControls2 Sql Svg Network NetworkAuth PrintSupport WebSockets)
+find_package(Qt6 ${QT6_MIN_VERSION} COMPONENTS
+    Concurrent
+    Core
+    Gui
+    Network
+    NetworkAuth
+    PrintSupport
+    Qml
+    QuickControls2
+    Sql
+    Svg
+    WebSockets
+)
 set_package_properties(Qt6 PROPERTIES
     TYPE REQUIRED
     PURPOSE "Required application components"
 )
-find_package(KF6 ${KF6_MIN_VERSION} COMPONENTS Archive KIO Kirigami CoreAddons Config IconThemes I18n ItemModels)
+find_package(KF6 ${KF6_MIN_VERSION} COMPONENTS
+    Archive
+    Config
+    CoreAddons
+    I18n
+    IconThemes
+    ItemModels
+    KIO
+    Kirigami
+)
 set_package_properties(KF6 PROPERTIES
     TYPE REQUIRED
     PURPOSE "Required application components"
 )
 
-find_package(QCoro6 0.11 COMPONENTS Core Network Qml)
+find_package(QCoro6 ${QCORO_MIN_VERSION} COMPONENTS
+    Core
+    Network
+    Qml
+)
 set_package_properties(QCoro6 PROPERTIES
     TYPE REQUIRED
     PURPOSE "Required application components"
@@ -110,7 +135,7 @@ ecm_find_qmlmodule(org.kde.kitemmodels REQUIRED)
 
 add_subdirectory(src)
 
-if(BUILD_TESTING)
+if (BUILD_TESTING)
     find_package(Qt6 ${QT_MIN_VERSION} NO_MODULE COMPONENTS Test)
     add_subdirectory(autotests)
 endif()
@@ -121,7 +146,7 @@ install(FILES org.kde.chessament.xml DESTINATION ${KDE_INSTALL_MIMEDIR})
 update_xdg_mimetypes(${KDE_INSTALL_MIMEDIR})
 ki18n_install(po)
 
-if(KF6DocTools_FOUND)
+if (KF6DocTools_FOUND)
     add_subdirectory(doc)
     kdoctools_install(po)
 endif()

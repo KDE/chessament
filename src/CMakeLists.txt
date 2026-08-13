@@ -154,7 +154,7 @@ install(TARGETS chessament ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 
 install(FILES chessamentconfig.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR})
 
-if(BUILD_DOCS)
+if (BUILD_DOCS)
     include(ECMGenerateQDoc)
     ecm_generate_qdoc(chessament chessament.qdocconf)
 endif()
