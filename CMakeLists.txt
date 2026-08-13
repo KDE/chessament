@@ -66,6 +66,9 @@ set_package_properties(Qt6 PROPERTIES
     PURPOSE "Required application components"
 )
 
+qt_policy(SET QTP0001 NEW)
+qt_policy(SET QTP0004 NEW)
+
 find_package(KF6 ${KF6_MIN_VERSION} COMPONENTS
     Archive
     Config
@@ -128,7 +131,6 @@ endif()
 feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)
 
 qcoro_enable_coroutines()
-qt_policy(SET QTP0001 NEW)
 
 ecm_find_qmlmodule(org.kde.ki18n REQUIRED)
 ecm_find_qmlmodule(org.kde.kirigamiaddons.components REQUIRED)
