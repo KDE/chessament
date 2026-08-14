@@ -150,7 +150,7 @@ std::vector<std::unique_ptr<RatingList>> RatingListsManager::lists()
         list->setId(query.value(idNo).toInt());
         list->setName(query.value(nameNo).toString());
         list->setUrl(query.value(urlNo).toString());
-        list->setLastModified(query.value(lastModifiedNo).toString());
+        list->setLastModified(QDateTime::fromSecsSinceEpoch(query.value(lastModifiedNo).toLongLong()));
         list->setExtra(query.value(extraNo).toByteArray());
 
         result.push_back(std::move(list));
@@ -170,6 +170,7 @@ QCoro::Task<std::expected<RatingList *, QString>> RatingListsManager::import(con
     auto list = new RatingList();
     list->setName(name);
     list->setUrl(url.toString());
+    list->setLastModified(QDateTime::currentDateTimeUtc());
 
     QByteArray result;
     QMimeDatabase mimeDb;
@@ -302,7 +303,7 @@ std::expected<uint, QString> RatingListsManager::readPlayers(RatingList *list, Q
     query.prepare(ADD_RATING_LIST_QUERY);
     query.bindValue(":name"_L1, list->name());
     query.bindValue(":url"_L1, list->url());
-    query.bindValue(":lastModified"_L1, list->lastModified());
+    query.bindValue(":lastModified"_L1, list->lastModified().toSecsSinceEpoch());
     query.bindValue(u":extra"_s, list->extraString());
 
     if (!query.exec()) {

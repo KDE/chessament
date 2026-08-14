@@ -22,7 +22,7 @@ constexpr auto RATING_LISTS_TABLE_SCHEMA =
     "id INTEGER PRIMARY KEY,"
     "name TEXT NOT NULL,"
     "url TEXT,"
-    "lastModified TEXT,"
+    "lastModified INTEGER,"
     "extra BLOB"
     ");"_L1;
 

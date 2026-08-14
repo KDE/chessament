@@ -40,12 +40,12 @@ void RatingList::setUrl(const QString &url)
     m_url = url;
 }
 
-QString RatingList::lastModified() const
+QDateTime RatingList::lastModified() const
 {
     return m_lastModified;
 }
 
-void RatingList::setLastModified(const QString &lastModified)
+void RatingList::setLastModified(const QDateTime &lastModified)
 {
     m_lastModified = lastModified;
 }

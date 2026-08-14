@@ -23,7 +23,7 @@ public:
 
     [[nodiscard]] QString url() const;
 
-    [[nodiscard]] QString lastModified() const;
+    [[nodiscard]] QDateTime lastModified() const;
 
     QJsonObject &extra();
 
@@ -38,7 +38,7 @@ public Q_SLOTS:
 
     void setUrl(const QString &url);
 
-    void setLastModified(const QString &lastModified);
+    void setLastModified(const QDateTime &lastModified);
 
     void setExtra(const QByteArray &extra);
 
@@ -46,6 +46,6 @@ private:
     int m_id{};
     QString m_name;
     QString m_url;
-    QString m_lastModified;
+    QDateTime m_lastModified;
     QJsonObject m_extra;
 };
