@@ -335,7 +335,7 @@ void Tournament::updateRatings(int listId)
 {
     const auto &players = m_players;
     for (const auto &player : players) {
-        const auto listPlayer = RatingListsManager::instance().searchPlayer(player->playerId(), listId);
+        const auto listPlayer = RatingListsManager::searchPlayer(player->playerId(), listId);
 
         if (!listPlayer) {
             continue;
