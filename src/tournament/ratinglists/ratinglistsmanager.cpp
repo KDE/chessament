@@ -172,18 +172,41 @@ QCoro::Task<std::expected<RatingList *, QString>> RatingListsManager::import(con
     list->setUrl(url.toString());
     list->setLastModified(QDateTime::currentDateTimeUtc());
 
-    QByteArray result;
-    QMimeDatabase mimeDb;
+    const auto count = co_await QtConcurrent::run([this, list, url]() -> std::expected<uint, QString> {
+        const auto result = readFile(list, url);
+        if (!result) {
+            return std::unexpected(result.error());
+        }
+
+        const auto [mimeType, content] = result.value();
+
+        return processFile(list, content, mimeType);
+    });
+
+    if (!count) {
+        co_return std::unexpected(count.error());
+    }
+
+    Q_EMIT statusChanged(i18ncp("@info:progress", "Imported one player.", "Imported %1 players.", *count));
+
+    co_return list;
+}
+
+std::expected<std::pair<QMimeType, QByteArray>, QString> RatingListsManager::readFile(RatingList *list, const QUrl &url)
+{
     QMimeType mimeType;
+    QByteArray result;
+
+    QMimeDatabase mimeDb;
 
     if (url.scheme() == u"file"_s) {
         if (!QFile::exists(url.toLocalFile())) {
-            co_return std::unexpected(i18nc("@info", "Could not open file: the file does not exists."));
+            return std::unexpected(i18nc("@info", "Could not open file: the file does not exists."));
         }
 
         QFile file{url.toLocalFile()};
         if (!file.open(QIODeviceBase::ReadOnly)) {
-            co_return std::unexpected(i18nc("@info", "Could not open file."));
+            return std::unexpected(i18nc("@info", "Could not open file."));
         }
 
         result = file.readAll();
@@ -196,6 +219,9 @@ QCoro::Task<std::expected<RatingList *, QString>> RatingListsManager::import(con
         request.setHeader(QNetworkRequest::UserAgentHeader, Utils::userAgent());
 
         Q_EMIT statusChanged(i18nc("@info:progress", "Downloading file…"));
+
+        QEventLoop loop;
+        connect(manager.get(), &QNetworkAccessManager::finished, &loop, &QEventLoop::quit);
 
         auto *reply = manager->get(request);
 
@@ -214,12 +240,13 @@ QCoro::Task<std::expected<RatingList *, QString>> RatingListsManager::import(con
                                        progress));
         });
 
-        co_await qCoro(reply).waitForFinished();
+        // Wait for finished
+        loop.exec();
 
         reply->deleteLater();
 
         if (reply->error() != QNetworkReply::NetworkError::NoError) {
-            co_return std::unexpected(i18nc("@info", "Could not download rating list: %1", reply->errorString()));
+            return std::unexpected(i18nc("@info", "Could not download rating list: %1", reply->errorString()));
         }
 
         const auto contentType = QString::fromLatin1(reply->headers().value(QHttpHeaders::WellKnownHeader::ContentType));
@@ -230,20 +257,10 @@ QCoro::Task<std::expected<RatingList *, QString>> RatingListsManager::import(con
 
         result = reply->readAll();
     } else {
-        co_return std::unexpected(i18nc("@info", "Could not download rating list from %1 (unsupported protocol).", url.toString()));
+        return std::unexpected(i18nc("@info", "Could not download rating list from %1 (unsupported protocol).", url.toString()));
     }
 
-    const auto count = co_await QtConcurrent::run([list, &result, mimeType]() -> std::expected<uint, QString> {
-        return processFile(list, result, mimeType);
-    });
-
-    if (!count) {
-        co_return std::unexpected(count.error());
-    }
-
-    Q_EMIT statusChanged(i18ncp("@info:progress", "Imported one player.", "Imported %1 players.", *count));
-
-    co_return list;
+    return std::make_pair(mimeType, result);
 }
 
 std::expected<uint, QString> RatingListsManager::processFile(RatingList *list, QByteArray content, const QMimeType &mime)
