@@ -268,7 +268,6 @@ std::expected<uint, QString> RatingListsManager::processFile(RatingList *list, Q
         const auto archiveFile = directory->file(directory->entries().constFirst());
         const auto device = archiveFile->createDevice();
         QTextStream stream{device};
-        stream.setDevice(device);
         device->deleteLater();
 
         reader = std::make_unique<FideRatingListReader>(list);
