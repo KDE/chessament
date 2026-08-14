@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-13 00:42+0000\n"
+"POT-Creation-Date: 2026-08-14 00:41+0000\n"
 "PO-Revision-Date: 2025-05-12 14:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -485,7 +485,7 @@ msgctxt "@label:listbox"
 msgid "TRF files (*.trf *.txt)"
 msgstr ""
 
-#: qml/Main.qml:115 settings/AddRatingListDialog.qml:31
+#: qml/Main.qml:115 settings/AddRatingListDialog.qml:59
 msgctxt "@title"
 msgid "Error"
 msgstr "错误"
@@ -951,42 +951,42 @@ msgctxt "@action:button"
 msgid "Continue"
 msgstr ""
 
-#: settings/AddRatingListDialog.qml:34
+#: settings/AddRatingListDialog.qml:62
 msgctxt "@title:window"
 msgid "Importing Rating List"
 msgstr ""
 
-#: settings/AddRatingListDialog.qml:37
+#: settings/AddRatingListDialog.qml:65
 msgctxt "@title:window"
 msgid "Rating List Imported"
 msgstr ""
 
-#: settings/AddRatingListDialog.qml:39
+#: settings/AddRatingListDialog.qml:67
 msgctxt "@title:window"
 msgid "Add Rating List"
 msgstr ""
 
-#: settings/AddRatingListDialog.qml:61
+#: settings/AddRatingListDialog.qml:86
 msgctxt "@label:listbox"
 msgid "All Supported Files (*.zip *.xls)"
 msgstr ""
 
-#: settings/AddRatingListDialog.qml:68
+#: settings/AddRatingListDialog.qml:93
 msgctxt "@info:label"
 msgid "Name"
 msgstr ""
 
-#: settings/AddRatingListDialog.qml:74
+#: settings/AddRatingListDialog.qml:98
 msgctxt "@info:label"
 msgid "Rating list file or URL"
 msgstr ""
 
-#: settings/AddRatingListDialog.qml:80
+#: settings/AddRatingListDialog.qml:103
 msgctxt "@action:button"
 msgid "Select file"
 msgstr ""
 
-#: settings/AddRatingListDialog.qml:119
+#: settings/AddRatingListDialog.qml:141
 msgctxt "@action:button"
 msgid "Import"
 msgstr ""

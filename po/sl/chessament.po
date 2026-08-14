@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-13 00:42+0000\n"
+"POT-Creation-Date: 2026-08-14 00:41+0000\n"
 "PO-Revision-Date: 2026-08-04 07:09+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -483,7 +483,7 @@ msgctxt "@label:listbox"
 msgid "TRF files (*.trf *.txt)"
 msgstr "Datoteke TRF (*.trf *.txt)"
 
-#: qml/Main.qml:115 settings/AddRatingListDialog.qml:31
+#: qml/Main.qml:115 settings/AddRatingListDialog.qml:59
 msgctxt "@title"
 msgid "Error"
 msgstr "Napaka"
@@ -958,42 +958,42 @@ msgctxt "@action:button"
 msgid "Continue"
 msgstr "Nadaljuj"
 
-#: settings/AddRatingListDialog.qml:34
+#: settings/AddRatingListDialog.qml:62
 msgctxt "@title:window"
 msgid "Importing Rating List"
 msgstr "Uvažanje seznama ratingov"
 
-#: settings/AddRatingListDialog.qml:37
+#: settings/AddRatingListDialog.qml:65
 msgctxt "@title:window"
 msgid "Rating List Imported"
 msgstr "Seznam ratingov uvožen"
 
-#: settings/AddRatingListDialog.qml:39
+#: settings/AddRatingListDialog.qml:67
 msgctxt "@title:window"
 msgid "Add Rating List"
 msgstr "Dodaj seznam ratingov"
 
-#: settings/AddRatingListDialog.qml:61
+#: settings/AddRatingListDialog.qml:86
 msgctxt "@label:listbox"
 msgid "All Supported Files (*.zip *.xls)"
 msgstr "Vse podprte datoteke (*.zip *.xls)"
 
-#: settings/AddRatingListDialog.qml:68
+#: settings/AddRatingListDialog.qml:93
 msgctxt "@info:label"
 msgid "Name"
 msgstr "Ime"
 
-#: settings/AddRatingListDialog.qml:74
+#: settings/AddRatingListDialog.qml:98
 msgctxt "@info:label"
 msgid "Rating list file or URL"
 msgstr "Datoteka seznama ratingov ali URL"
 
-#: settings/AddRatingListDialog.qml:80
+#: settings/AddRatingListDialog.qml:103
 msgctxt "@action:button"
 msgid "Select file"
 msgstr "Izberite datoteko"
 
-#: settings/AddRatingListDialog.qml:119
+#: settings/AddRatingListDialog.qml:141
 msgctxt "@action:button"
 msgid "Import"
 msgstr "Uvozi"

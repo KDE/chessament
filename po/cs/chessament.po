@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-13 00:42+0000\n"
+"POT-Creation-Date: 2026-08-14 00:41+0000\n"
 "PO-Revision-Date: 2026-08-04 10:15+0200\n"
 "Last-Translator: Libor Filípek <libor.filipek@gmail.com>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -488,7 +488,7 @@ msgctxt "@label:listbox"
 msgid "TRF files (*.trf *.txt)"
 msgstr "Soubory TRF (*.trf *.txt)"
 
-#: qml/Main.qml:115 settings/AddRatingListDialog.qml:31
+#: qml/Main.qml:115 settings/AddRatingListDialog.qml:59
 msgctxt "@title"
 msgid "Error"
 msgstr "Chyba"
@@ -960,42 +960,42 @@ msgctxt "@action:button"
 msgid "Continue"
 msgstr "Pokračovat"
 
-#: settings/AddRatingListDialog.qml:34
+#: settings/AddRatingListDialog.qml:62
 msgctxt "@title:window"
 msgid "Importing Rating List"
 msgstr "Import seznamu hodnocení"
 
-#: settings/AddRatingListDialog.qml:37
+#: settings/AddRatingListDialog.qml:65
 msgctxt "@title:window"
 msgid "Rating List Imported"
 msgstr "Seznam hodnocení byl importován"
 
-#: settings/AddRatingListDialog.qml:39
+#: settings/AddRatingListDialog.qml:67
 msgctxt "@title:window"
 msgid "Add Rating List"
 msgstr "Přidat seznam hodnocení"
 
-#: settings/AddRatingListDialog.qml:61
+#: settings/AddRatingListDialog.qml:86
 msgctxt "@label:listbox"
 msgid "All Supported Files (*.zip *.xls)"
 msgstr "Všechny podporované soubory (*.zip, *.xls)"
 
-#: settings/AddRatingListDialog.qml:68
+#: settings/AddRatingListDialog.qml:93
 msgctxt "@info:label"
 msgid "Name"
 msgstr "Jméno"
 
-#: settings/AddRatingListDialog.qml:74
+#: settings/AddRatingListDialog.qml:98
 msgctxt "@info:label"
 msgid "Rating list file or URL"
 msgstr "Soubor se seznamem hodnocení nebo URL"
 
-#: settings/AddRatingListDialog.qml:80
+#: settings/AddRatingListDialog.qml:103
 msgctxt "@action:button"
 msgid "Select file"
 msgstr "Vyberte soubor"
 
-#: settings/AddRatingListDialog.qml:119
+#: settings/AddRatingListDialog.qml:141
 msgctxt "@action:button"
 msgid "Import"
 msgstr "Importovat"

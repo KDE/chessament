@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-13 00:42+0000\n"
+"POT-Creation-Date: 2026-08-14 00:41+0000\n"
 "PO-Revision-Date: 2026-08-06 20:24+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -485,7 +485,7 @@ msgctxt "@label:listbox"
 msgid "TRF files (*.trf *.txt)"
 msgstr "TRF dosyaları (*.trf, *.txt)"
 
-#: qml/Main.qml:115 settings/AddRatingListDialog.qml:31
+#: qml/Main.qml:115 settings/AddRatingListDialog.qml:59
 msgctxt "@title"
 msgid "Error"
 msgstr "Hata"
@@ -954,42 +954,42 @@ msgctxt "@action:button"
 msgid "Continue"
 msgstr "Sürdür"
 
-#: settings/AddRatingListDialog.qml:34
+#: settings/AddRatingListDialog.qml:62
 msgctxt "@title:window"
 msgid "Importing Rating List"
 msgstr "Derecelendirme Listesi İçe Aktar"
 
-#: settings/AddRatingListDialog.qml:37
+#: settings/AddRatingListDialog.qml:65
 msgctxt "@title:window"
 msgid "Rating List Imported"
 msgstr "Derecelendirme Listesi İçe Aktarıldı"
 
-#: settings/AddRatingListDialog.qml:39
+#: settings/AddRatingListDialog.qml:67
 msgctxt "@title:window"
 msgid "Add Rating List"
 msgstr "Derecelendirme Listesi Ekle"
 
-#: settings/AddRatingListDialog.qml:61
+#: settings/AddRatingListDialog.qml:86
 msgctxt "@label:listbox"
 msgid "All Supported Files (*.zip *.xls)"
 msgstr "Tüm desteklenen dosyalar (*.zip, *.xls)"
 
-#: settings/AddRatingListDialog.qml:68
+#: settings/AddRatingListDialog.qml:93
 msgctxt "@info:label"
 msgid "Name"
 msgstr "Ad"
 
-#: settings/AddRatingListDialog.qml:74
+#: settings/AddRatingListDialog.qml:98
 msgctxt "@info:label"
 msgid "Rating list file or URL"
 msgstr "Derecelendirme listesi dosyası veya URL’si"
 
-#: settings/AddRatingListDialog.qml:80
+#: settings/AddRatingListDialog.qml:103
 msgctxt "@action:button"
 msgid "Select file"
 msgstr "Dosya seç…"
 
-#: settings/AddRatingListDialog.qml:119
+#: settings/AddRatingListDialog.qml:141
 msgctxt "@action:button"
 msgid "Import"
 msgstr "İçe Aktar"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-13 00:42+0000\n"
+"POT-Creation-Date: 2026-08-14 00:41+0000\n"
 "PO-Revision-Date: 2026-01-06 11:22+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -529,7 +529,7 @@ msgctxt "@label:listbox"
 msgid "TRF files (*.trf *.txt)"
 msgstr ""
 
-#: qml/Main.qml:115 settings/AddRatingListDialog.qml:31
+#: qml/Main.qml:115 settings/AddRatingListDialog.qml:59
 msgctxt "@title"
 msgid "Error"
 msgstr "Errorea"
@@ -1046,12 +1046,12 @@ msgctxt "@action:button"
 msgid "Continue"
 msgstr ""
 
-#: settings/AddRatingListDialog.qml:34
+#: settings/AddRatingListDialog.qml:62
 msgctxt "@title:window"
 msgid "Importing Rating List"
 msgstr "Balorazio-zerrenda inportatzea"
 
-#: settings/AddRatingListDialog.qml:37
+#: settings/AddRatingListDialog.qml:65
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "Rating Lists"
@@ -1059,22 +1059,22 @@ msgctxt "@title:window"
 msgid "Rating List Imported"
 msgstr "Balorazio-zerrendak"
 
-#: settings/AddRatingListDialog.qml:39
+#: settings/AddRatingListDialog.qml:67
 msgctxt "@title:window"
 msgid "Add Rating List"
 msgstr "Gehitu balorazio-zerrenda"
 
-#: settings/AddRatingListDialog.qml:61
+#: settings/AddRatingListDialog.qml:86
 msgctxt "@label:listbox"
 msgid "All Supported Files (*.zip *.xls)"
 msgstr ""
 
-#: settings/AddRatingListDialog.qml:68
+#: settings/AddRatingListDialog.qml:93
 msgctxt "@info:label"
 msgid "Name"
 msgstr "Izena"
 
-#: settings/AddRatingListDialog.qml:74
+#: settings/AddRatingListDialog.qml:98
 #, fuzzy
 #| msgctxt "@info:label"
 #| msgid "Rating list URL"
@@ -1082,12 +1082,12 @@ msgctxt "@info:label"
 msgid "Rating list file or URL"
 msgstr "Balorazio-zerrendaren URLa"
 
-#: settings/AddRatingListDialog.qml:80
+#: settings/AddRatingListDialog.qml:103
 msgctxt "@action:button"
 msgid "Select file"
 msgstr ""
 
-#: settings/AddRatingListDialog.qml:119
+#: settings/AddRatingListDialog.qml:141
 msgctxt "@action:button"
 msgid "Import"
 msgstr "Inportatu"
