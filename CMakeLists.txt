@@ -44,7 +44,7 @@ if (BUILD_EXPERIMENTAL)
     add_compile_definitions(BUILD_EXPERIMENTAL)
 endif()
 
-ecm_setup_version(${PROJECT_VERSION}
+ecm_setup_version(PROJECT
     VARIABLE_PREFIX CHESSAMENT
     VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/src/version-chessament.h"
 )
