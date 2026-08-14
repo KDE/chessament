@@ -7,13 +7,16 @@
 #include <QObject>
 #include <QTemporaryFile>
 
-#include "accountmanager.h"
 #include "pairingmodel.h"
 #include "playersmodel.h"
 #include "standingsmodel.h"
 #include "tournament/event.h"
-#include "tournament/sync/accountmanager.h"
 #include "tournament/tournament.h"
+
+#ifdef BUILD_EXPERIMENTAL
+#include "accountmanager.h"
+#include "tournament/sync/accountmanager.h"
+#endif
 
 class Controller : public QObject
 {
@@ -33,7 +36,9 @@ class Controller : public QObject
     Q_PROPERTY(PairingModel *pairingModel READ pairingModel CONSTANT)
     Q_PROPERTY(StandingsModel *standingsModel READ standingsModel CONSTANT)
 
+#ifdef BUILD_EXPERIMENTAL
     Q_PROPERTY(AccountManager *accounts READ accountManager CONSTANT)
+#endif
 
     Q_PROPERTY(Controller::View currentView READ currentView WRITE setCurrentView NOTIFY currentViewChanged)
     Q_PROPERTY(QString error READ error WRITE setError NOTIFY errorChanged)
@@ -85,8 +90,10 @@ public:
     [[nodiscard]] PairingModel *pairingModel() const;
     [[nodiscard]] StandingsModel *standingsModel() const;
 
+#ifdef BUILD_EXPERIMENTAL
     [[nodiscard]] AccountManager *accountManager() const;
     Q_INVOKABLE void uploadTournament();
+#endif
 
     [[nodiscard]] Controller::View currentView() const;
     [[nodiscard]] QString error() const;
@@ -128,7 +135,9 @@ private:
     PairingModel *m_pairingModel;
     StandingsModel *m_standingsModel;
 
+#ifdef BUILD_EXPERIMENTAL
     std::unique_ptr<AccountManager> m_accountManager;
+#endif
 
     Controller::View m_currentView{Controller::View::None};
     QString m_error;

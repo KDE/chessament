@@ -114,7 +114,6 @@ target_link_libraries(chessament_static PUBLIC
     KirigamiAddonsStatefulApp
     QCoro6::Core
     QCoro6::Qml
-    ${QTKEYCHAIN_LIBRARIES}
 )
 target_include_directories(chessament_static PUBLIC ${CMAKE_BINARY_DIR})
 

@@ -2,11 +2,9 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 
 #include "controller.h"
-#include "accountmanager.h"
 #include "standing.h"
 #include "tournament/pairing.h"
 #include "tournament/state.h"
-#include "tournament/sync/syncengine.h"
 #include "utils.h"
 
 #include <KSandbox>
@@ -15,6 +13,11 @@
 #include <QRandomGenerator>
 #include <QtConcurrentRun>
 
+#ifdef BUILD_EXPERIMENTAL
+#include "accountmanager.h"
+#include "tournament/sync/syncengine.h"
+#endif
+
 using namespace Qt::Literals::StringLiterals;
 
 Controller::Controller(QObject *parent)
@@ -22,7 +25,9 @@ Controller::Controller(QObject *parent)
     , m_playersModel(new PlayersModel(this))
     , m_pairingModel(new PairingModel(this))
     , m_standingsModel(new StandingsModel(this))
+#ifdef BUILD_EXPERIMENTAL
     , m_accountManager(std::make_unique<AccountManager>())
+#endif
 {
     connect(m_playersModel, &PlayersModel::playerChanged, this, [this](Player *player, PlayersModel::Columns field) {
         Q_UNUSED(field);
@@ -34,9 +39,11 @@ Controller::Controller(QObject *parent)
         Q_EMIT hasCurrentRoundFinishedChanged();
     });
 
+#ifdef BUILD_EXPERIMENTAL
     connect(m_accountManager.get(), &AccountManager::openUrl, this, [](const QUrl &url) {
         QDesktopServices::openUrl(url);
     });
+#endif
 }
 
 Event *Controller::getEvent() const
@@ -315,6 +322,7 @@ StandingsModel *Controller::standingsModel() const
     return m_standingsModel;
 }
 
+#ifdef BUILD_EXPERIMENTAL
 AccountManager *Controller::accountManager() const
 {
     return m_accountManager.get();
@@ -329,6 +337,7 @@ void Controller::uploadTournament()
     auto engine = new SyncEngine{account, m_tournament};
     engine->start();
 }
+#endif
 
 Controller::View Controller::currentView() const
 {

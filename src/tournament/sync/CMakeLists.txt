@@ -9,3 +9,9 @@ target_sources(tournament PRIVATE
     syncengine.cpp
 )
 
+target_link_libraries(tournament PUBLIC
+    Qt6::NetworkAuth
+    Qt6::WebSockets
+    ${QTKEYCHAIN_LIBRARIES}
+)
+

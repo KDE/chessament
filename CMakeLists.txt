@@ -38,6 +38,12 @@ include(ECMDeprecationSettings)
 include(KDEGitCommitHooks)
 include(KDEClangFormat)
 
+option(BUILD_EXPERIMENTAL "Build experimental features" OFF)
+
+if (BUILD_EXPERIMENTAL)
+    add_compile_definitions(BUILD_EXPERIMENTAL)
+endif()
+
 ecm_setup_version(${PROJECT_VERSION}
     VARIABLE_PREFIX CHESSAMENT
     VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/src/version-chessament.h"
@@ -53,18 +59,23 @@ find_package(Qt6 ${QT6_MIN_VERSION} COMPONENTS
     Core
     Gui
     Network
-    NetworkAuth
     PrintSupport
     Qml
     QuickControls2
     Sql
     Svg
-    WebSockets
 )
 set_package_properties(Qt6 PROPERTIES
     TYPE REQUIRED
     PURPOSE "Required application components"
 )
+
+if (BUILD_EXPERIMENTAL)
+    find_package(Qt6 ${QT6_MIN_VERSION} COMPONENTS
+        NetworkAuth
+        WebSockets
+    )
+endif()
 
 qt_policy(SET QTP0001 NEW)
 qt_policy(SET QTP0004 NEW)
@@ -100,11 +111,13 @@ set_package_properties(KF6KirigamiAddons PROPERTIES
     PURPOSE "Required application components and runtime dependency"
 )
 
-find_package(Qt6Keychain)
-set_package_properties(Qt6Keychain PROPERTIES
-    TYPE REQUIRED
-    PURPOSE "Store authentication credentials"
-)
+if (BUILD_EXPERIMENTAL)
+    find_package(Qt6Keychain)
+    set_package_properties(Qt6Keychain PROPERTIES
+        TYPE REQUIRED
+        PURPOSE "Store authentication credentials"
+    )
+endif()
 
 find_package(SharedMimeInfo 1.3)
 set_package_properties(SharedMimeInfo PROPERTIES
