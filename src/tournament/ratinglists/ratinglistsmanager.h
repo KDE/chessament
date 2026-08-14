@@ -22,14 +22,13 @@ constexpr auto RATING_LISTS_TABLE_SCHEMA =
     "id INTEGER PRIMARY KEY,"
     "name TEXT NOT NULL,"
     "url TEXT,"
-    "etag TEXT,"
     "lastModified TEXT,"
     "extra BLOB"
     ");"_L1;
 
 constexpr auto ADD_RATING_LIST_QUERY =
-    "INSERT INTO ratinglists(name, url, etag, lastModified, extra) "
-    "VALUES (:name, :url, :etag, :lastModified, :extra);"_L1;
+    "INSERT INTO ratinglists(name, url, lastModified, extra) "
+    "VALUES (:name, :url, :lastModified, :extra);"_L1;
 
 constexpr auto GET_RATING_LISTS_QUERY = "SELECT * FROM ratinglists;"_L1;
 

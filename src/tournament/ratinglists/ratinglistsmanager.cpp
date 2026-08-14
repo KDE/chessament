@@ -142,7 +142,6 @@ std::vector<std::unique_ptr<RatingList>> RatingListsManager::lists()
     const int idNo = query.record().indexOf("id");
     const int nameNo = query.record().indexOf("name");
     const int urlNo = query.record().indexOf("url");
-    const int etagNo = query.record().indexOf("etag");
     const int lastModifiedNo = query.record().indexOf("lastModified");
     const int extraNo = query.record().indexOf("extra");
 
@@ -151,7 +150,6 @@ std::vector<std::unique_ptr<RatingList>> RatingListsManager::lists()
         list->setId(query.value(idNo).toInt());
         list->setName(query.value(nameNo).toString());
         list->setUrl(query.value(urlNo).toString());
-        list->setEtag(query.value(etagNo).toString());
         list->setLastModified(query.value(lastModifiedNo).toString());
         list->setExtra(query.value(extraNo).toByteArray());
 
@@ -226,8 +224,8 @@ QCoro::Task<std::expected<RatingList *, QString>> RatingListsManager::import(con
         const auto contentType = QString::fromLatin1(reply->headers().value(QHttpHeaders::WellKnownHeader::ContentType));
         mimeType = mimeDb.mimeTypeForName(contentType);
 
-        list->setEtag(QString::fromLatin1(reply->headers().value(QHttpHeaders::WellKnownHeader::ETag)));
-        list->setLastModified(QString::fromLatin1(reply->headers().value(QHttpHeaders::WellKnownHeader::LastModified)));
+        list->extra()["http_etag"_L1] = QString::fromLatin1(reply->headers().value(QHttpHeaders::WellKnownHeader::ETag));
+        list->extra()["http_last_modified"_L1] = QString::fromLatin1(reply->headers().value(QHttpHeaders::WellKnownHeader::LastModified));
 
         result = reply->readAll();
     } else {
@@ -304,7 +302,6 @@ std::expected<uint, QString> RatingListsManager::readPlayers(RatingList *list, Q
     query.prepare(ADD_RATING_LIST_QUERY);
     query.bindValue(":name"_L1, list->name());
     query.bindValue(":url"_L1, list->url());
-    query.bindValue(":etag"_L1, list->etag());
     query.bindValue(":lastModified"_L1, list->lastModified());
     query.bindValue(u":extra"_s, list->extraString());
 

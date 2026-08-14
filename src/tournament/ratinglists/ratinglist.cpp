@@ -40,16 +40,6 @@ void RatingList::setUrl(const QString &url)
     m_url = url;
 }
 
-QString RatingList::etag() const
-{
-    return m_etag;
-}
-
-void RatingList::setEtag(const QString &etag)
-{
-    m_etag = etag;
-}
-
 QString RatingList::lastModified() const
 {
     return m_lastModified;
@@ -58,6 +48,11 @@ QString RatingList::lastModified() const
 void RatingList::setLastModified(const QString &lastModified)
 {
     m_lastModified = lastModified;
+}
+
+QJsonObject &RatingList::extra()
+{
+    return m_extra;
 }
 
 QByteArray RatingList::extraString() const
