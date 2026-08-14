@@ -124,6 +124,10 @@ FormCard.FormCardDialog {
     FormCard.FormTextDelegate {
         id: label
         text: dialog.error.length > 0 ? dialog.error : dialog.model.status
+        textItem {
+            elide: Text.ElideNone
+            wrapMode: Text.Wrap
+        }
         visible: false
     }
 
