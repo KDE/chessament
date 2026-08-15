@@ -4,6 +4,7 @@
 #pragma once
 
 #include <KSandbox>
+#include <QNetworkRequest>
 #include <QString>
 #include <QUrl>
 
@@ -20,4 +21,6 @@ QString userAgent();
 void updateObject(QJsonObject *destination, const QJsonObject &origin);
 
 std::unique_ptr<QNetworkAccessManager> networkAccessManager();
+
+QNetworkRequest createRequest(const QUrl &url);
 }

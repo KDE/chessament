@@ -50,4 +50,13 @@ std::unique_ptr<QNetworkAccessManager> networkAccessManager()
 
     return nam;
 }
+
+QNetworkRequest createRequest(const QUrl &url)
+{
+    QNetworkRequest request{url};
+
+    request.setHeader(QNetworkRequest::UserAgentHeader, Utils::userAgent());
+
+    return request;
+}
 }

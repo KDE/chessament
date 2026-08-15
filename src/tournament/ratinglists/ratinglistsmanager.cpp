@@ -211,9 +211,7 @@ std::expected<uint, QString> RatingListsManager::readFile(RatingList *list, cons
 
     if (url.scheme() == u"https"_s) {
         auto manager = Utils::networkAccessManager();
-
-        QNetworkRequest request{url};
-        request.setHeader(QNetworkRequest::UserAgentHeader, Utils::userAgent());
+        auto request = Utils::createRequest(url);
 
         Q_EMIT statusChanged(i18nc("@info:progress", "Downloading file…"));
 
