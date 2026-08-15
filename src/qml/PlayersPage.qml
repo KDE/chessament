@@ -84,6 +84,7 @@ TablePage {
         const index = proxyModel.mapToSource(root.tableView.selectionModel.currentIndex);
         const player = root.model.sourceModel.data(index, PlayersModel.PlayerRole);
         const dialog = Qt.createComponent("org.kde.chessament", "PlayerDetails").createObject(root.Controls.ApplicationWindow.window, {
+            "window": root.Controls.ApplicationWindow.window,
             "tournament": Controller.tournament,
             "player": player
         }) as PlayerDetails;
