@@ -117,7 +117,9 @@ StatefulApp.StatefulWindow {
         standardButtons: Kirigami.Dialog.Ok
     }
 
-    globalDrawer: Sidebar {}
+    globalDrawer: Sidebar {
+        drawerOpen: Controller.hasOpenTournament
+    }
 
     pageStack {
         defaultColumnWidth: root.width

@@ -13,8 +13,6 @@ Kirigami.Page {
 
     required property AbstractKirigamiApplication application
 
-    title: KI18n.i18nc("@title", "Chessament")
-
     Kirigami.PlaceholderMessage {
         spacing: Kirigami.Units.gridUnit
         width: parent.width - (Kirigami.Units.largeSpacing * 4)

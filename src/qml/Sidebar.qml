@@ -19,7 +19,8 @@ Kirigami.OverlayDrawer {
     modal: false
     edge: Application.layoutDirection === Qt.RightToLeft ? Qt.RightEdge : Qt.LeftEdge
     handleVisible: false
-    drawerOpen: true
+    enter: Transition {}
+    exit: null
     width: 120
     leftPadding: 0
     rightPadding: 0
@@ -49,7 +50,6 @@ Kirigami.OverlayDrawer {
             text: KI18n.i18n("Players")
             icon.name: "user-symbolic"
             checked: Controller.currentView === Controller.View.Players
-            visible: Controller.hasOpenTournament
             onClicked: root.goToPage(Controller.View.Players)
         }
 
@@ -58,7 +58,6 @@ Kirigami.OverlayDrawer {
             text: KI18n.i18n("Pairings")
             icon.name: "system-users-symbolic"
             checked: Controller.currentView === Controller.View.Pairings
-            visible: Controller.hasOpenTournament
             onClicked: root.goToPage(Controller.View.Pairings)
         }
 
@@ -67,7 +66,6 @@ Kirigami.OverlayDrawer {
             text: KI18n.i18n("Standings")
             icon.name: "games-highscores-symbolic"
             checked: Controller.currentView === Controller.View.Standings
-            visible: Controller.hasOpenTournament
             onClicked: root.goToPage(Controller.View.Standings)
         }
 
@@ -79,12 +77,10 @@ Kirigami.OverlayDrawer {
             Layout.fillWidth: true
             Layout.rightMargin: Kirigami.Units.smallSpacing
             Layout.leftMargin: Kirigami.Units.smallSpacing
-            visible: Controller.hasOpenTournament
         }
 
         Kirigami.NavigationTabButton {
             Layout.fillWidth: true
-            visible: Controller.hasOpenTournament
             action: Kirigami.Action {
                 text: KI18n.i18nc("@action:button", "Settings")
                 icon.name: "settings-configure"
