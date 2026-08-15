@@ -83,7 +83,7 @@ Kirigami.OverlayDrawer {
             Layout.fillWidth: true
             action: Kirigami.Action {
                 text: KI18n.i18nc("@action:button", "Settings")
-                icon.name: "settings-configure"
+                icon.name: "settings-configure-symbolic"
                 onTriggered: {
                     const dialog = Qt.createComponent("org.kde.chessament.tournament", "SettingsDialog").createObject(root.Controls.Overlay.overlay, {
                         window: root.Controls.ApplicationWindow.window,
