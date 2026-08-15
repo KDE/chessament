@@ -56,7 +56,13 @@ QCoro::Task<std::expected<QList<std::pair<uint, uint>>, QString>> PairingEngine:
     co_await proc.start(u"bbpPairings"_s, {u"--dutch"_s, file.fileName(), u"-p"_s});
     co_await proc.waitForFinished(std::chrono::milliseconds(3s));
 
-    if (process.exitCode() != 0) {
+    switch (process.exitCode()) {
+    case 0:
+        // All good
+        break;
+    case 1:
+        co_return std::unexpected(i18nc("@info", "No valid pairing exists."));
+    default:
         co_return std::unexpected(i18nc("bbpPairings is the name of a program, should not be translated",
                                         "bbpPairings terminated with a non zero exit code: %1",
                                         QString::number(process.exitCode())));
