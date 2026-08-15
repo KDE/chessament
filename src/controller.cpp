@@ -46,6 +46,15 @@ Controller::Controller(QObject *parent)
 #endif
 }
 
+constexpr bool Controller::experimental()
+{
+#ifdef BUILD_EXPERIMENTAL
+    return true;
+#else
+    return false;
+#endif
+}
+
 Event *Controller::getEvent() const
 {
     return m_event.get();

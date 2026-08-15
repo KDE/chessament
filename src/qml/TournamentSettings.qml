@@ -34,7 +34,7 @@ KirigamiSettings.ConfigurationView {
             moduleId: "cloud"
             text: "Cloud"
             icon.name: "cloudstatus-symbolic"
-            visible: Config.developer
+            visible: Controller.experimental
             page: () => Qt.createComponent("org.kde.chessament", "TournamentSettingsCloud")
         }
     ]

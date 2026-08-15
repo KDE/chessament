@@ -31,7 +31,7 @@ KirigamiSettings.ConfigurationView {
             moduleId: "accounts"
             text: KI18n.i18nc("@action:button", "Accounts")
             icon.name: "system-users-symbolic"
-            visible: Config.developer
+            visible: Controller.experimental
             page: () => Qt.createComponent("org.kde.chessament.settings", "AccountsPage")
             initialProperties: () => {
                 return {

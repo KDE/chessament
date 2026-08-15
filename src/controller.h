@@ -36,6 +36,8 @@ class Controller : public QObject
     Q_PROPERTY(PairingModel *pairingModel READ pairingModel CONSTANT)
     Q_PROPERTY(StandingsModel *standingsModel READ standingsModel CONSTANT)
 
+    Q_PROPERTY(bool experimental READ experimental CONSTANT)
+
 #ifdef BUILD_EXPERIMENTAL
     Q_PROPERTY(AccountManager *accounts READ accountManager CONSTANT)
 #endif
@@ -89,6 +91,8 @@ public:
     [[nodiscard]] PlayersModel *playersModel() const;
     [[nodiscard]] PairingModel *pairingModel() const;
     [[nodiscard]] StandingsModel *standingsModel() const;
+
+    [[nodiscard]] constexpr static bool experimental();
 
 #ifdef BUILD_EXPERIMENTAL
     [[nodiscard]] AccountManager *accountManager() const;

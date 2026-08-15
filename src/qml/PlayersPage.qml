@@ -123,7 +123,8 @@ TablePage {
         Kirigami.Action {
             icon.name: "view-refresh-symbolic"
             text: KI18n.i18nc("@action Update players ratings", "Update ratings…")
-            enabled: Config.developer && root.tableView.rows > 0
+            visible: Config.developer
+            enabled: root.tableView.rows > 0
             onTriggered: {
                 const dialog = Qt.createComponent("org.kde.chessament", "UpdateRatingsDialog").createObject(root.Controls.ApplicationWindow.window, {}) as UpdateRatingsDialog;
                 dialog.open();
