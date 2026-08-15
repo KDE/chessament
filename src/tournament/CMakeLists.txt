@@ -29,6 +29,25 @@ ecm_add_qml_module(tournament
     URI org.kde.chessament.tournament
     OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/src/org/kde/chessament/tournament
     GENERATE_PLUGIN_SOURCE
+    QML_FILES
+        qml/SettingsDialog.qml
+        qml/SettingsCalendarPage.qml
+        qml/SettingsCloudPage.qml
+        qml/SettingsInformationPage.qml
+        qml/SettingsFormatPage.qml
+
+        qml/AddTiebreakDialog.qml
+        qml/TiebreakDialog.qml
+    IMPORTS
+        QtCore
+        QtQml.Models
+        QtQuick
+        QtQuick.Controls
+        QtQuick.Layouts
+        org.kde.ki18n
+        org.kde.kirigami
+        org.kde.kirigamiaddons.formcard
+        org.kde.kirigamiaddons.settings
 )
 
 target_link_libraries(tournament PUBLIC
@@ -36,6 +55,8 @@ target_link_libraries(tournament PUBLIC
     Qt6::Core
     Qt6::Network
     Qt6::Qml
+    Qt6::Quick
+    Qt6::QuickControls2
     Qt6::Sql
     KF6::Archive
     KF6::ConfigCore

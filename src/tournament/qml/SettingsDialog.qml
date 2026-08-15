@@ -16,26 +16,26 @@ KirigamiSettings.ConfigurationView {
             moduleId: "information"
             text: KI18n.i18nc("@action:button", "Information")
             icon.name: "documentinfo-symbolic"
-            page: () => Qt.createComponent("org.kde.chessament", "TournamentSettingsInformation")
+            page: () => Qt.createComponent("org.kde.chessament.tournament", "SettingsInformationPage")
         },
         KirigamiSettings.ConfigurationModule {
             moduleId: "format"
             text: KI18n.i18nc("@action:button", "Format")
             icon.name: "user-symbolic"
-            page: () => Qt.createComponent("org.kde.chessament", "TournamentSettingsFormat")
+            page: () => Qt.createComponent("org.kde.chessament.tournament", "SettingsFormatPage")
         },
         KirigamiSettings.ConfigurationModule {
             moduleId: "calendar"
             text: KI18n.i18nc("@action:button", "Calendar")
             icon.name: "view-calendar-symbolic"
-            page: () => Qt.createComponent("org.kde.chessament", "TournamentSettingsCalendar")
+            page: () => Qt.createComponent("org.kde.chessament.tournament", "SettingsCalendarPage")
         },
         KirigamiSettings.ConfigurationModule {
             moduleId: "cloud"
             text: "Cloud"
             icon.name: "cloudstatus-symbolic"
             visible: Controller.experimental
-            page: () => Qt.createComponent("org.kde.chessament", "TournamentSettingsCloud")
+            page: () => Qt.createComponent("org.kde.chessament.tournament", "SettingsCloudPage")
         }
     ]
 }

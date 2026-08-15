@@ -23,7 +23,6 @@ ecm_add_qml_module(chessament_static
 
         qml/Main.qml
         qml/AddPlayerDialog.qml
-        qml/AddTiebreakDialog.qml
         qml/DeletePairingsDialog.qml
         qml/DeletePlayerDialog.qml
         qml/NewTournamentDialog.qml
@@ -46,14 +45,6 @@ ecm_add_qml_module(chessament_static
         # Player details
         qml/player/PlayerDetails.qml
         qml/player/PlayerPairingsPage.qml
-
-        # Tournament settings
-        qml/TournamentSettings.qml
-        qml/TournamentSettingsCalendar.qml
-        qml/TournamentSettingsCloud.qml
-        qml/TournamentSettingsInformation.qml
-        qml/TournamentSettingsFormat.qml
-        qml/TiebreakDialog.qml
     DEPENDENCIES
         QtCore
         QtQuick

@@ -112,10 +112,10 @@ FormCard.FormCardPage {
             text: KI18n.i18nc("@action:button", "Add Tiebreak")
             icon.name: "list-add-symbolic"
             onPressed: {
-                const dialog = Qt.createComponent("org.kde.chessament", "AddTiebreakDialog").createObject(root, {
+                const dialog = Qt.createComponent("org.kde.chessament.tournament", "AddTiebreakDialog").createObject(root, {
                     "parent": root.Controls.Overlay.overlay,
                     "tournament": Controller.tournament
-                });
+                }) as AddTiebreakDialog;
                 dialog.accepted.connect(() => {
                     tiebreakModel.addTiebreak(dialog.tiebreak);
                 });
