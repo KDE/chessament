@@ -144,6 +144,8 @@ void PairingModel::setPairings(const QList<Pairing *> &pairings)
     beginResetModel();
     m_pairings = pairings;
     endResetModel();
+
+    Q_EMIT countChanged();
 }
 
 bool PairingModel::setResult(int board, Qt::Key key)

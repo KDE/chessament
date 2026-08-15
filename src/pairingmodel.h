@@ -15,6 +15,8 @@ class PairingModel : public QAbstractTableModel
     QML_ELEMENT
     QML_UNCREATABLE("")
 
+    Q_PROPERTY(int count READ rowCount NOTIFY countChanged)
+
 public:
     enum Columns {
         Board = 0,
@@ -50,6 +52,8 @@ public:
     Q_INVOKABLE QVariant nextPendingBoardAfter(int board);
 
 Q_SIGNALS:
+    void countChanged();
+
     void pairingChanged();
 
     void errorOcurred(const QString &error);
