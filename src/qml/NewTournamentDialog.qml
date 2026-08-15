@@ -40,6 +40,7 @@ FormCard.FormCardDialog {
         label: KI18n.i18nc("@label", "Number of rounds")
         from: 1
         to: 99
+        value: 8
     }
 
     Component {
