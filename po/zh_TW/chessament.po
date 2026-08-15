@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-14 00:41+0000\n"
+"POT-Creation-Date: 2026-08-15 00:41+0000\n"
 "PO-Revision-Date: 2025-09-29 01:32+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -41,7 +41,7 @@ msgctxt "@action:inmenu"
 msgid "Export tournament report…"
 msgstr ""
 
-#: controller.cpp:171
+#: controller.cpp:178
 #, kde-format
 msgid "Couldn't export tournament."
 msgstr ""
@@ -1029,7 +1029,7 @@ msgctxt "@action:button"
 msgid "Select file"
 msgstr ""
 
-#: settings/AddRatingListDialog.qml:141
+#: settings/AddRatingListDialog.qml:145
 msgctxt "@action:button"
 msgid "Import"
 msgstr ""
@@ -1230,26 +1230,33 @@ msgstr ""
 msgid "Invalid player \"%1\" on pairing \"%2\"."
 msgstr ""
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:169
-#: tournament/ratinglists/ratinglistsmanager.cpp:187
+#: tournament/ratinglists/ratinglistsmanager.cpp:167
+#: tournament/ratinglists/ratinglistsmanager.cpp:209
 #, kde-format
 msgctxt "@info"
 msgid "Could not open file."
 msgstr ""
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:182
+#: tournament/ratinglists/ratinglistsmanager.cpp:190
+#, kde-format
+msgctxt "@info:progress"
+msgid "Imported one player."
+msgid_plural "Imported %1 players."
+msgstr[0] ""
+
+#: tournament/ratinglists/ratinglistsmanager.cpp:204
 #, kde-format
 msgctxt "@info"
 msgid "Could not open file: the file does not exists."
 msgstr ""
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:199
+#: tournament/ratinglists/ratinglistsmanager.cpp:221
 #, kde-format
 msgctxt "@info:progress"
 msgid "Downloading file…"
 msgstr ""
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:212
+#: tournament/ratinglists/ratinglistsmanager.cpp:237
 #, kde-format
 msgctxt ""
 "@info:progress %1 & %2 are the file download progress (received / total), %3 "
@@ -1259,38 +1266,31 @@ msgid ""
 "%1 / %2 (%3%)"
 msgstr ""
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:223
+#: tournament/ratinglists/ratinglistsmanager.cpp:249
 #, kde-format
 msgctxt "@info"
 msgid "Could not download rating list: %1"
 msgstr ""
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:234
+#: tournament/ratinglists/ratinglistsmanager.cpp:260
 #, kde-format
 msgctxt "@info"
 msgid "Could not download rating list from %1 (unsupported protocol)."
 msgstr ""
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:245
-#, kde-format
-msgctxt "@info:progress"
-msgid "Imported one player."
-msgid_plural "Imported %1 players."
-msgstr[0] ""
-
-#: tournament/ratinglists/ratinglistsmanager.cpp:261
+#: tournament/ratinglists/ratinglistsmanager.cpp:277
 #, kde-format
 msgctxt "@info"
 msgid "Could not extract file."
 msgstr ""
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:266
+#: tournament/ratinglists/ratinglistsmanager.cpp:282
 #, kde-format
 msgctxt "@info"
 msgid "File format not supported."
 msgstr ""
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:479
+#: tournament/ratinglists/ratinglistsmanager.cpp:493
 #, fuzzy, kde-format
 #| msgctxt "@title:window"
 #| msgid "Add player"

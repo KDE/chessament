@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-14 00:41+0000\n"
+"POT-Creation-Date: 2026-08-15 00:41+0000\n"
 "PO-Revision-Date: 2026-08-04 06:00-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -42,7 +42,7 @@ msgctxt "@action:inmenu"
 msgid "Export tournament report…"
 msgstr "Exportar relatório de torneio…"
 
-#: controller.cpp:171
+#: controller.cpp:178
 #, kde-format
 msgid "Couldn't export tournament."
 msgstr "Não foi possível exportar o torneio."
@@ -990,7 +990,7 @@ msgctxt "@action:button"
 msgid "Select file"
 msgstr "Selecionar arquivo"
 
-#: settings/AddRatingListDialog.qml:141
+#: settings/AddRatingListDialog.qml:145
 msgctxt "@action:button"
 msgid "Import"
 msgstr "Importar"
@@ -1186,26 +1186,34 @@ msgstr "Pareamento inválido \"%1\"."
 msgid "Invalid player \"%1\" on pairing \"%2\"."
 msgstr "Jogador inválido \"%1\" no pareamento \"%2\"."
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:169
-#: tournament/ratinglists/ratinglistsmanager.cpp:187
+#: tournament/ratinglists/ratinglistsmanager.cpp:167
+#: tournament/ratinglists/ratinglistsmanager.cpp:209
 #, kde-format
 msgctxt "@info"
 msgid "Could not open file."
 msgstr "Não foi possível abrir o arquivo."
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:182
+#: tournament/ratinglists/ratinglistsmanager.cpp:190
+#, kde-format
+msgctxt "@info:progress"
+msgid "Imported one player."
+msgid_plural "Imported %1 players."
+msgstr[0] "Um jogador importado."
+msgstr[1] "%1 jogadores importados."
+
+#: tournament/ratinglists/ratinglistsmanager.cpp:204
 #, kde-format
 msgctxt "@info"
 msgid "Could not open file: the file does not exists."
 msgstr "Não foi possível abrir o arquivo: o arquivo não existe."
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:199
+#: tournament/ratinglists/ratinglistsmanager.cpp:221
 #, kde-format
 msgctxt "@info:progress"
 msgid "Downloading file…"
 msgstr "Baixando arquivo…"
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:212
+#: tournament/ratinglists/ratinglistsmanager.cpp:237
 #, kde-format
 msgctxt ""
 "@info:progress %1 & %2 are the file download progress (received / total), %3 "
@@ -1217,13 +1225,13 @@ msgstr ""
 "Baixando arquivo…\n"
 "%1 / %2 (%3%)"
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:223
+#: tournament/ratinglists/ratinglistsmanager.cpp:249
 #, kde-format
 msgctxt "@info"
 msgid "Could not download rating list: %1"
 msgstr "Não foi possível baixar a lista de classificação: %1"
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:234
+#: tournament/ratinglists/ratinglistsmanager.cpp:260
 #, kde-format
 msgctxt "@info"
 msgid "Could not download rating list from %1 (unsupported protocol)."
@@ -1231,27 +1239,19 @@ msgstr ""
 "Não foi possível baixar a lista de classificação de %1 (protocolo não "
 "suportado)."
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:245
-#, kde-format
-msgctxt "@info:progress"
-msgid "Imported one player."
-msgid_plural "Imported %1 players."
-msgstr[0] "Um jogador importado."
-msgstr[1] "%1 jogadores importados."
-
-#: tournament/ratinglists/ratinglistsmanager.cpp:261
+#: tournament/ratinglists/ratinglistsmanager.cpp:277
 #, kde-format
 msgctxt "@info"
 msgid "Could not extract file."
 msgstr "Não foi possível extrair o arquivo."
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:266
+#: tournament/ratinglists/ratinglistsmanager.cpp:282
 #, kde-format
 msgctxt "@info"
 msgid "File format not supported."
 msgstr "Formato de arquivo não suportado."
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:479
+#: tournament/ratinglists/ratinglistsmanager.cpp:493
 #, kde-format
 msgctxt "@info:progress"
 msgid "Saved 1 player."

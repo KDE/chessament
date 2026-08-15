@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-14 00:41+0000\n"
+"POT-Creation-Date: 2026-08-15 00:41+0000\n"
 "PO-Revision-Date: 2026-08-04 08:56+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -42,7 +42,7 @@ msgctxt "@action:inmenu"
 msgid "Export tournament report…"
 msgstr "ייצוא דוח תחרות…"
 
-#: controller.cpp:171
+#: controller.cpp:178
 #, kde-format
 msgid "Couldn't export tournament."
 msgstr "לא ניתן לייצא תחרות."
@@ -995,7 +995,7 @@ msgctxt "@action:button"
 msgid "Select file"
 msgstr "בחירת קובץ"
 
-#: settings/AddRatingListDialog.qml:141
+#: settings/AddRatingListDialog.qml:145
 msgctxt "@action:button"
 msgid "Import"
 msgstr "ייבוא"
@@ -1190,26 +1190,36 @@ msgstr "השיבוץ „%1” שגוי."
 msgid "Invalid player \"%1\" on pairing \"%2\"."
 msgstr "שחקן שגוי „%1” לשיבוץ „%2”."
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:169
-#: tournament/ratinglists/ratinglistsmanager.cpp:187
+#: tournament/ratinglists/ratinglistsmanager.cpp:167
+#: tournament/ratinglists/ratinglistsmanager.cpp:209
 #, kde-format
 msgctxt "@info"
 msgid "Could not open file."
 msgstr "לא ניתן לפתוח את הקובץ."
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:182
+#: tournament/ratinglists/ratinglistsmanager.cpp:190
+#, kde-format
+msgctxt "@info:progress"
+msgid "Imported one player."
+msgid_plural "Imported %1 players."
+msgstr[0] "שחקן/ית יובא/ה."
+msgstr[1] "שני/שתי שחקנים/ות יובאו."
+msgstr[2] "%1 שחקנים/ות יובאו."
+msgstr[3] "%1 שחקנים/ות יובאו."
+
+#: tournament/ratinglists/ratinglistsmanager.cpp:204
 #, kde-format
 msgctxt "@info"
 msgid "Could not open file: the file does not exists."
 msgstr "לא ניתן לפתוח את הקובץ: הקובץ לא קיים."
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:199
+#: tournament/ratinglists/ratinglistsmanager.cpp:221
 #, kde-format
 msgctxt "@info:progress"
 msgid "Downloading file…"
 msgstr "קובץ יורד…"
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:212
+#: tournament/ratinglists/ratinglistsmanager.cpp:237
 #, kde-format
 msgctxt ""
 "@info:progress %1 & %2 are the file download progress (received / total), %3 "
@@ -1221,41 +1231,31 @@ msgstr ""
 "קובץ יורד…\n"
 "%1 / %2 (%3%)"
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:223
+#: tournament/ratinglists/ratinglistsmanager.cpp:249
 #, kde-format
 msgctxt "@info"
 msgid "Could not download rating list: %1"
 msgstr "לא ניתן להוריד את רשימת הדירוג‏: %1"
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:234
+#: tournament/ratinglists/ratinglistsmanager.cpp:260
 #, kde-format
 msgctxt "@info"
 msgid "Could not download rating list from %1 (unsupported protocol)."
 msgstr "לא ניתן להוריד את רשימת הדירוג‏ דרך %1 (הפרוטוקול לא נתמך)."
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:245
-#, kde-format
-msgctxt "@info:progress"
-msgid "Imported one player."
-msgid_plural "Imported %1 players."
-msgstr[0] "שחקן/ית יובא/ה."
-msgstr[1] "שני/שתי שחקנים/ות יובאו."
-msgstr[2] "%1 שחקנים/ות יובאו."
-msgstr[3] "%1 שחקנים/ות יובאו."
-
-#: tournament/ratinglists/ratinglistsmanager.cpp:261
+#: tournament/ratinglists/ratinglistsmanager.cpp:277
 #, kde-format
 msgctxt "@info"
 msgid "Could not extract file."
 msgstr "לא ניתן לחלץ קובץ."
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:266
+#: tournament/ratinglists/ratinglistsmanager.cpp:282
 #, kde-format
 msgctxt "@info"
 msgid "File format not supported."
 msgstr "תבנית הקובץ אינה נתמכת."
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:479
+#: tournament/ratinglists/ratinglistsmanager.cpp:493
 #, kde-format
 msgctxt "@info:progress"
 msgid "Saved 1 player."

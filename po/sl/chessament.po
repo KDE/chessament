@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-14 00:41+0000\n"
+"POT-Creation-Date: 2026-08-15 00:41+0000\n"
 "PO-Revision-Date: 2026-08-04 07:09+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -39,7 +39,7 @@ msgctxt "@action:inmenu"
 msgid "Export tournament report…"
 msgstr "Izvozi poročilo o turnirju…"
 
-#: controller.cpp:171
+#: controller.cpp:178
 #, kde-format
 msgid "Couldn't export tournament."
 msgstr "Turnirja ni bilo mogoče izvoziti."
@@ -993,7 +993,7 @@ msgctxt "@action:button"
 msgid "Select file"
 msgstr "Izberite datoteko"
 
-#: settings/AddRatingListDialog.qml:141
+#: settings/AddRatingListDialog.qml:145
 msgctxt "@action:button"
 msgid "Import"
 msgstr "Uvozi"
@@ -1189,26 +1189,36 @@ msgstr "Neveljaven par \"%1\"."
 msgid "Invalid player \"%1\" on pairing \"%2\"."
 msgstr "Neveljaven igralec \"%1\" v paru \"%2\"."
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:169
-#: tournament/ratinglists/ratinglistsmanager.cpp:187
+#: tournament/ratinglists/ratinglistsmanager.cpp:167
+#: tournament/ratinglists/ratinglistsmanager.cpp:209
 #, kde-format
 msgctxt "@info"
 msgid "Could not open file."
 msgstr "Datoteke ni bilo mogoče odpreti."
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:182
+#: tournament/ratinglists/ratinglistsmanager.cpp:190
+#, kde-format
+msgctxt "@info:progress"
+msgid "Imported one player."
+msgid_plural "Imported %1 players."
+msgstr[0] "Uvoženo %1 igralcev."
+msgstr[1] "Uvožen %1 igralec."
+msgstr[2] "Uvožena %1 igralca."
+msgstr[3] "Uvoženi %1 igralci."
+
+#: tournament/ratinglists/ratinglistsmanager.cpp:204
 #, kde-format
 msgctxt "@info"
 msgid "Could not open file: the file does not exists."
 msgstr "Datoteke ni bilo mogoče odpreti: datoteka ne obstaja."
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:199
+#: tournament/ratinglists/ratinglistsmanager.cpp:221
 #, kde-format
 msgctxt "@info:progress"
 msgid "Downloading file…"
 msgstr "Prenašanje datoteke…"
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:212
+#: tournament/ratinglists/ratinglistsmanager.cpp:237
 #, kde-format
 msgctxt ""
 "@info:progress %1 & %2 are the file download progress (received / total), %3 "
@@ -1220,41 +1230,31 @@ msgstr ""
 "Prenašanje datoteke…\n"
 "%1 / %2 (%3%)"
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:223
+#: tournament/ratinglists/ratinglistsmanager.cpp:249
 #, kde-format
 msgctxt "@info"
 msgid "Could not download rating list: %1"
 msgstr "Ni bilo mogoče prenesti seznama ratingov: %1"
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:234
+#: tournament/ratinglists/ratinglistsmanager.cpp:260
 #, kde-format
 msgctxt "@info"
 msgid "Could not download rating list from %1 (unsupported protocol)."
 msgstr "Ni bilo mogoče prenesti seznama ratingov iz %1 (nepodprt protokol)."
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:245
-#, kde-format
-msgctxt "@info:progress"
-msgid "Imported one player."
-msgid_plural "Imported %1 players."
-msgstr[0] "Uvoženo %1 igralcev."
-msgstr[1] "Uvožen %1 igralec."
-msgstr[2] "Uvožena %1 igralca."
-msgstr[3] "Uvoženi %1 igralci."
-
-#: tournament/ratinglists/ratinglistsmanager.cpp:261
+#: tournament/ratinglists/ratinglistsmanager.cpp:277
 #, kde-format
 msgctxt "@info"
 msgid "Could not extract file."
 msgstr "Datoteke ni bilo mogoče izvleči datoteke."
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:266
+#: tournament/ratinglists/ratinglistsmanager.cpp:282
 #, kde-format
 msgctxt "@info"
 msgid "File format not supported."
 msgstr "Format datoteke ni podprt."
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:479
+#: tournament/ratinglists/ratinglistsmanager.cpp:493
 #, kde-format
 msgctxt "@info:progress"
 msgid "Saved 1 player."

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-14 00:41+0000\n"
+"POT-Creation-Date: 2026-08-15 00:41+0000\n"
 "PO-Revision-Date: 2026-04-05 00:41+0000\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -41,7 +41,7 @@ msgctxt "@action:inmenu"
 msgid "Export tournament report…"
 msgstr "Exportovať správu o turnaji…"
 
-#: controller.cpp:171
+#: controller.cpp:178
 #, kde-format
 msgid "Couldn't export tournament."
 msgstr "Nepodarilo sa exportovať turnaj."
@@ -322,33 +322,24 @@ msgstr "Pridať rozstrel"
 #: qml/components/ArbiterDelegate.qml:34
 msgctxt "@item:inlistbox Chief Arbiter"
 msgid "Chief"
-msgstr ""
+msgstr "Hlavný"
 
 #: qml/components/ArbiterDelegate.qml:38
-#, fuzzy
-#| msgctxt "@label:textbox"
-#| msgid "Deputy chief arbiter"
 msgctxt "@item:inlistbox Deputy Chief Arbiter"
 msgid "Deputy Chief"
-msgstr "Zástupca hlavného rozhodcu"
+msgstr "Zástupca hlavného"
 
 #: qml/components/ArbiterDelegate.qml:42
 msgctxt "@item:inlistbox"
 msgid "Arbiter"
-msgstr ""
+msgstr "Rozhodca"
 
 #: qml/components/ArbiterDelegate.qml:53
-#, fuzzy
-#| msgctxt "@title:column Player Title"
-#| msgid "Title"
 msgctxt "@info:placeholder Arbiter's Title"
 msgid "Title"
 msgstr "Titul"
 
 #: qml/components/ArbiterDelegate.qml:60
-#, fuzzy
-#| msgctxt "@title:column Player Name"
-#| msgid "Name"
 msgctxt "@info:placeholder Arbiter's Name"
 msgid "Name"
 msgstr "Meno"
@@ -356,23 +347,17 @@ msgstr "Meno"
 #: qml/components/ArbiterDelegate.qml:67
 msgctxt "@info:placeholder Arbiter's ID"
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #: qml/components/ArbiterDelegate.qml:72
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Delete Tiebreak"
 msgctxt "@action:button"
 msgid "Delete Arbiter"
-msgstr "Odstrániť rozstrel"
+msgstr "Odstrániť rozhodcu"
 
 #: qml/components/ArbiterDelegate.qml:78
-#, fuzzy
-#| msgctxt "@title:column Name of the White Player"
-#| msgid "White Player"
 msgctxt "@action:button"
 msgid "Delete arbiter"
-msgstr "Biely hráč"
+msgstr "Odstrániť rozhodcu"
 
 #: qml/components/MenuBar.qml:17
 msgctxt "@action:menu"
@@ -431,27 +416,21 @@ msgid "Delete tiebreak"
 msgstr "Odstrániť rozstrel"
 
 #: qml/components/TimeControlDelegate.qml:37
-#, fuzzy
-#| msgctxt "@action:button Move tiebreak up"
-#| msgid "Move Up"
 msgctxt "@label:textbox Number of moves"
 msgid "Moves"
-msgstr "Posunúť nahor"
+msgstr "Ťahy"
 
 #: qml/components/TimeControlDelegate.qml:51
 msgctxt "@label:textbox Time control period time"
 msgid "Time (minutes)"
-msgstr ""
+msgstr "Čas (minúty)"
 
 #: qml/components/TimeControlDelegate.qml:65
 msgctxt "@label:textbox Time control period increment (per second)"
 msgid "Increment (seconds)"
-msgstr ""
+msgstr "Prídavok (sekundy)"
 
 #: qml/components/TimeControlDelegate.qml:77
-#, fuzzy
-#| msgctxt "@action:button Delete Rating List"
-#| msgid "Delete"
 msgctxt "@action:button Delete time control period"
 msgid "Delete"
 msgstr "Odstrániť"
@@ -472,36 +451,24 @@ msgid "Remove"
 msgstr "Odstrániť"
 
 #: qml/DeletePlayerDialog.qml:19
-#, fuzzy
-#| msgctxt "@title:column Name of the White Player"
-#| msgid "White Player"
 msgctxt "@title"
 msgid "Delete Player"
-msgstr "Biely hráč"
+msgstr "Odstrániť hráča"
 
 #: qml/DeletePlayerDialog.qml:20
-#, fuzzy
-#| msgctxt "@title:window"
-#| msgid "Details of player \"%1\""
 msgctxt "@label"
 msgid "Permanently delete player \"%1\"?"
-msgstr "Podrobnosti hráča „%1“"
+msgstr "Natrvalo odstrániť hráča „%1“?"
 
 #: qml/DeletePlayerDialog.qml:26
-#, fuzzy
-#| msgctxt "@action:button Delete Rating List"
-#| msgid "Delete"
 msgctxt "@action:button Delete Player"
 msgid "Delete"
 msgstr "Odstrániť"
 
 #: qml/Main.qml:22
-#, fuzzy
-#| msgctxt "@title:window"
-#| msgid "Chessament"
 msgctxt "@title:window"
 msgid "%1 — Chessament"
-msgstr "Chessament"
+msgstr "%1 — Chessament"
 
 #: qml/Main.qml:22
 msgctxt "@title:window"
@@ -551,7 +518,7 @@ msgstr "Počet kôl"
 #: qml/PairingsPage.qml:51 qml/PlayersPage.qml:47 qml/StandingsPage.qml:54
 msgctxt "@label:listbox"
 msgid "PDF document (*.pdf)"
-msgstr ""
+msgstr "Dokument PDF (*.pdf)"
 
 #: qml/PairingsPage.qml:59
 msgctxt "@option:check"
@@ -690,7 +657,7 @@ msgstr "Podrobnosti..."
 #: qml/PlayersPage.qml:125
 msgctxt "@action Update players ratings"
 msgid "Update ratings…"
-msgstr ""
+msgstr "Aktualizovať ratingy…"
 
 #: qml/PlayersPage.qml:134
 msgctxt "@action:intoolbar"
@@ -708,12 +675,9 @@ msgid "Open Player Details"
 msgstr "Otvoriť podrobnosti hráča"
 
 #: qml/PlayersPage.qml:172
-#, fuzzy
-#| msgctxt "@action:intoolbar"
-#| msgid "Sort Players…"
 msgctxt "@action:inmenu"
 msgid "Delete Player…"
-msgstr "Zoradiť hráčov…"
+msgstr "Odstrániť hráča…"
 
 #: qml/PlayersPage.qml:192
 msgctxt "@info:placeholder"
@@ -869,15 +833,12 @@ msgstr "Hodnota pridelených voľných kôl pri párovaní"
 #: qml/TournamentSettingsFormat.qml:61
 msgctxt "@title:group"
 msgid "Time Control"
-msgstr ""
+msgstr "Časová kontrola"
 
 #: qml/TournamentSettingsFormat.qml:65
-#, fuzzy
-#| msgctxt "@action:intoolbar"
-#| msgid "Add Player…"
 msgctxt "@action:button Add time control period"
 msgid "Add Period"
-msgstr "Pridať hráča…"
+msgstr "Pridať periódu"
 
 #: qml/TournamentSettingsFormat.qml:94
 msgctxt "@title:group"
@@ -912,44 +873,32 @@ msgstr "Mesto"
 #: qml/TournamentSettingsInformation.qml:52
 msgctxt "@title:group"
 msgid "Arbiters"
-msgstr ""
+msgstr "Rozhodcovia"
 
 #: qml/TournamentSettingsInformation.qml:56
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Add Tiebreak"
 msgctxt "@action:button"
 msgid "Add Arbiter"
-msgstr "Pridať rozstrel"
+msgstr "Pridať rozhodcu"
 
 #: qml/TournamentSettingsInformation.qml:63
-#, fuzzy
-#| msgctxt "@info:placeholder"
-#| msgid "No players yet"
 msgctxt "@info:status"
 msgid "No arbiters yet."
-msgstr "Zatiaľ žiadni hráči"
+msgstr "Zatiaľ žiadni rozhodcovia."
 
 #: qml/UpdateRatingsDialog.qml:17
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Delete Rating List"
 msgctxt "@title"
 msgid "Update Ratings"
-msgstr "Odstrániť ratingovú listinu"
+msgstr "Aktualizovať ratingy"
 
 #: qml/UpdateRatingsDialog.qml:25
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Delete rating list"
 msgctxt "@label:listbox"
 msgid "Choose a rating list:"
-msgstr "Odstrániť ratingovú listinu"
+msgstr "Vyberte ratingovú listinu:"
 
 #: qml/UpdateRatingsDialog.qml:35
 msgctxt "@action:button Update players ratings"
 msgid "Update"
-msgstr ""
+msgstr "Aktualizovať"
 
 #: qml/WelcomePage.qml:21
 msgctxt "@title"
@@ -962,20 +911,16 @@ msgid "Chessament is a chess tournament manager"
 msgstr "Chessament je správca šachových turnajov"
 
 #: searchplayersmodel.cpp:41
-#, fuzzy, kde-format
-#| msgctxt "@title:column Player Rating"
-#| msgid "Rating"
+#, kde-format
 msgctxt "%1 is the player's rating"
 msgid "Rating: %1"
-msgstr "Rating"
+msgstr "Rating: %1"
 
 #: searchplayersmodel.cpp:43
-#, fuzzy, kde-format
-#| msgctxt "Pieces Color · Player Name"
-#| msgid "%1 · %2"
+#, kde-format
 msgctxt "%1 is the player's rating, %2 is the player's origin"
 msgid "Rating: %1 · %2"
-msgstr "%1 · %2"
+msgstr "Rating: %1 · %2"
 
 #: settings/AccountsPage.qml:21
 msgctxt "@title"
@@ -1018,12 +963,9 @@ msgid "Importing Rating List"
 msgstr "Importovanie ratingovej listiny"
 
 #: settings/AddRatingListDialog.qml:65
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Rating Lists"
 msgctxt "@title:window"
 msgid "Rating List Imported"
-msgstr "Ratingové listiny"
+msgstr "Ratingová listina importovaná"
 
 #: settings/AddRatingListDialog.qml:67
 msgctxt "@title:window"
@@ -1033,7 +975,7 @@ msgstr "Pridať ratingovú listinu"
 #: settings/AddRatingListDialog.qml:86
 msgctxt "@label:listbox"
 msgid "All Supported Files (*.zip *.xls)"
-msgstr ""
+msgstr "Všetky podporované súbory (*.zip *.xls)"
 
 #: settings/AddRatingListDialog.qml:93
 msgctxt "@info:label"
@@ -1050,7 +992,7 @@ msgctxt "@action:button"
 msgid "Select file"
 msgstr "Vybrať súbor"
 
-#: settings/AddRatingListDialog.qml:141
+#: settings/AddRatingListDialog.qml:145
 msgctxt "@action:button"
 msgid "Import"
 msgstr "Importovať"
@@ -1076,12 +1018,9 @@ msgid "Delete Rating List"
 msgstr "Odstrániť ratingovú listinu"
 
 #: settings/DeleteRatingListDialog.qml:53
-#, fuzzy
-#| msgctxt "@title:window"
-#| msgid "Details of player \"%1\""
 msgctxt "@label"
 msgid "Permanently delete rating list \"%1\"?"
-msgstr "Podrobnosti hráča „%1“"
+msgstr "Natrvalo odstrániť ratingovú listinu „%1“?"
 
 #: settings/DeleteRatingListDialog.qml:62
 msgctxt "@action:button Delete Rating List"
@@ -1138,19 +1077,19 @@ msgstr "Poradie"
 #, kde-format
 msgctxt "@info"
 msgid "The time control is Blitz."
-msgstr ""
+msgstr "Časová kontrola je bleskový šach."
 
 #: timecontrolmodel.cpp:40
 #, kde-format
 msgctxt "@info"
 msgid "The time control is Rapid."
-msgstr ""
+msgstr "Časová kontrola je rapid šach."
 
 #: timecontrolmodel.cpp:42
 #, kde-format
 msgctxt "@info"
 msgid "The time control is Classical."
-msgstr ""
+msgstr "Časová kontrola je klasický šach."
 
 #: tournament/event.cpp:166 tournament/event.cpp:175
 #, kde-kuit-format
@@ -1174,24 +1113,22 @@ msgid "Wales"
 msgstr "Wales"
 
 #: tournament/pairing.h:266 tournament/pairing.h:282 tournament/pairing.h:286
-#, fuzzy, kde-format
-#| msgctxt "@action:intoolbar"
-#| msgid "½-0"
+#, kde-format
 msgctxt "@item Game result: draw"
 msgid "½"
-msgstr "½-0"
+msgstr "½"
 
 #: tournament/pairing.h:270
 #, kde-format
 msgctxt "@item Game result: win by forfeit"
 msgid "+"
-msgstr ""
+msgstr "+"
 
 #: tournament/pairing.h:272
 #, kde-format
 msgctxt "@item Game result: lost by forfeit"
 msgid "-"
-msgstr ""
+msgstr "-"
 
 #: tournament/pairing.h:275
 #, kde-format
@@ -1199,7 +1136,7 @@ msgctxt ""
 "@item Game result. %1 is the points obtained, but the game is unrated. The "
 "'U' is the initial for 'Unrated'"
 msgid "%1U"
-msgstr ""
+msgstr "%1U"
 
 #: tournament/pairing.h:279 tournament/pairing.h:283
 #, kde-format
@@ -1207,20 +1144,19 @@ msgctxt ""
 "@item Game result: %1 is the points obtained, but the game is unrated. The "
 "'U' is the initial for 'Unrated'"
 msgid "%1U"
-msgstr ""
+msgstr "%1U"
 
 #: tournament/pairing.h:287 tournament/pairing.h:291 tournament/pairing.h:295
 #, kde-format
 msgctxt "@item Game result, %1 is the points awarded for the bye"
 msgid "Bye (%1)"
-msgstr ""
+msgstr "Voľno (%1)"
 
 #: tournament/pairing.h:298
-#, fuzzy, kde-format
-#| msgid "Pairings"
+#, kde-format
 msgctxt "@item Game result: pairing-allocated bye. Keep it short"
 msgid "Bye (Pairing)"
-msgstr "Párovania"
+msgstr "Voľno (párovanie)"
 
 #: tournament/pairingengine.cpp:29
 #, kde-format
@@ -1251,55 +1187,14 @@ msgstr "Neplatné párovanie „%1“."
 msgid "Invalid player \"%1\" on pairing \"%2\"."
 msgstr "Neplatný hráč „%1“ v párovaní „%2“."
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:169
-#: tournament/ratinglists/ratinglistsmanager.cpp:187
+#: tournament/ratinglists/ratinglistsmanager.cpp:167
+#: tournament/ratinglists/ratinglistsmanager.cpp:209
 #, kde-format
 msgctxt "@info"
 msgid "Could not open file."
 msgstr "Nepodarilo sa otvoriť súbor."
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:182
-#, kde-format
-msgctxt "@info"
-msgid "Could not open file: the file does not exists."
-msgstr "Nepodarilo sa otvoriť súbor: súbor neexistuje."
-
-#: tournament/ratinglists/ratinglistsmanager.cpp:199
-#, fuzzy, kde-format
-#| msgctxt "@info:progress"
-#| msgid "Downloading file"
-msgctxt "@info:progress"
-msgid "Downloading file…"
-msgstr "Sťahovanie súboru"
-
-#: tournament/ratinglists/ratinglistsmanager.cpp:212
-#, fuzzy, kde-format
-#| msgctxt "@info:progress"
-#| msgid "Downloading file (%1 %)"
-msgctxt ""
-"@info:progress %1 & %2 are the file download progress (received / total), %3 "
-"is the download percentage"
-msgid ""
-"Downloading file…\n"
-"%1 / %2 (%3%)"
-msgstr "Sťahovanie súboru (%1 %)"
-
-#: tournament/ratinglists/ratinglistsmanager.cpp:223
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Couldn't download rating list: %1"
-msgctxt "@info"
-msgid "Could not download rating list: %1"
-msgstr "Nepodarilo sa stiahnuť ratingovú listinu: %1"
-
-#: tournament/ratinglists/ratinglistsmanager.cpp:234
-#, kde-format
-msgctxt "@info"
-msgid "Could not download rating list from %1 (unsupported protocol)."
-msgstr ""
-"Nepodarilo sa stiahnuť ratingovú listinu z %1 (nepodporovaný protokol)."
-
-#: tournament/ratinglists/ratinglistsmanager.cpp:245
+#: tournament/ratinglists/ratinglistsmanager.cpp:190
 #, kde-format
 msgctxt "@info:progress"
 msgid "Imported one player."
@@ -1308,21 +1203,56 @@ msgstr[0] "Importovaný jeden hráč."
 msgstr[1] "Importovaní %1 hráči."
 msgstr[2] "Importovaných %1 hráčov."
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:261
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Couldn't extract file."
+#: tournament/ratinglists/ratinglistsmanager.cpp:204
+#, kde-format
+msgctxt "@info"
+msgid "Could not open file: the file does not exists."
+msgstr "Nepodarilo sa otvoriť súbor: súbor neexistuje."
+
+#: tournament/ratinglists/ratinglistsmanager.cpp:221
+#, kde-format
+msgctxt "@info:progress"
+msgid "Downloading file…"
+msgstr "Sťahovanie súboru…"
+
+#: tournament/ratinglists/ratinglistsmanager.cpp:237
+#, kde-format
+msgctxt ""
+"@info:progress %1 & %2 are the file download progress (received / total), %3 "
+"is the download percentage"
+msgid ""
+"Downloading file…\n"
+"%1 / %2 (%3%)"
+msgstr ""
+"Sťahovanie súboru…\n"
+"%1 / %2 (%3 %)"
+
+#: tournament/ratinglists/ratinglistsmanager.cpp:249
+#, kde-format
+msgctxt "@info"
+msgid "Could not download rating list: %1"
+msgstr "Nepodarilo sa stiahnuť ratingovú listinu: %1"
+
+#: tournament/ratinglists/ratinglistsmanager.cpp:260
+#, kde-format
+msgctxt "@info"
+msgid "Could not download rating list from %1 (unsupported protocol)."
+msgstr ""
+"Nepodarilo sa stiahnuť ratingovú listinu z %1 (nepodporovaný protokol)."
+
+#: tournament/ratinglists/ratinglistsmanager.cpp:277
+#, kde-format
 msgctxt "@info"
 msgid "Could not extract file."
 msgstr "Nepodarilo sa extrahovať súbor."
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:266
+#: tournament/ratinglists/ratinglistsmanager.cpp:282
 #, kde-format
 msgctxt "@info"
 msgid "File format not supported."
 msgstr "Nepodporovaný formát súboru."
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:479
+#: tournament/ratinglists/ratinglistsmanager.cpp:493
 #, kde-format
 msgctxt "@info:progress"
 msgid "Saved 1 player."
@@ -1362,12 +1292,10 @@ msgid "Buchholz %1"
 msgstr "Buchholz %1"
 
 #: tournament/tiebreaks/dummy.h:23
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Unsupported tiebreak option \"%1\""
+#, kde-format
 msgctxt "@info"
 msgid "Unsupported tiebreak"
-msgstr "Nepodporovaná voľba rozstrelu „%1“"
+msgstr "Nepodporovaný rozstrel"
 
 #: tournament/tiebreaks/numberwins.h:22 tournament/tournament.cpp:538
 #, kde-format

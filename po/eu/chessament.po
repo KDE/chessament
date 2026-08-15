@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-14 00:41+0000\n"
+"POT-Creation-Date: 2026-08-15 00:41+0000\n"
 "PO-Revision-Date: 2026-01-06 11:22+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -44,7 +44,7 @@ msgctxt "@action:inmenu"
 msgid "Export tournament report…"
 msgstr "Esportatu txapelketaren txostena…"
 
-#: controller.cpp:171
+#: controller.cpp:178
 #, kde-format
 msgid "Couldn't export tournament."
 msgstr "Ezin izan du txapelketa esportatu."
@@ -1087,7 +1087,7 @@ msgctxt "@action:button"
 msgid "Select file"
 msgstr ""
 
-#: settings/AddRatingListDialog.qml:141
+#: settings/AddRatingListDialog.qml:145
 msgctxt "@action:button"
 msgid "Import"
 msgstr "Inportatu"
@@ -1295,21 +1295,29 @@ msgstr "Parekatze baliogabea \"%1\"."
 msgid "Invalid player \"%1\" on pairing \"%2\"."
 msgstr "\"%1\" jokalari baliogabea \"%2\" parekatzean."
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:169
-#: tournament/ratinglists/ratinglistsmanager.cpp:187
+#: tournament/ratinglists/ratinglistsmanager.cpp:167
+#: tournament/ratinglists/ratinglistsmanager.cpp:209
 #, fuzzy, kde-format
 #| msgid "Couldn't open file"
 msgctxt "@info"
 msgid "Could not open file."
 msgstr "Ezin izan du fitxategia ireki"
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:182
+#: tournament/ratinglists/ratinglistsmanager.cpp:190
+#, kde-format
+msgctxt "@info:progress"
+msgid "Imported one player."
+msgid_plural "Imported %1 players."
+msgstr[0] "Jokalari bat inportatu da."
+msgstr[1] "%1 jokalari inportatu dira."
+
+#: tournament/ratinglists/ratinglistsmanager.cpp:204
 #, kde-format
 msgctxt "@info"
 msgid "Could not open file: the file does not exists."
 msgstr ""
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:199
+#: tournament/ratinglists/ratinglistsmanager.cpp:221
 #, fuzzy, kde-format
 #| msgctxt "@info:progress"
 #| msgid "Downloading file"
@@ -1317,7 +1325,7 @@ msgctxt "@info:progress"
 msgid "Downloading file…"
 msgstr "Fitxategia zama-jaisten"
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:212
+#: tournament/ratinglists/ratinglistsmanager.cpp:237
 #, fuzzy, kde-format
 #| msgctxt "@info:progress"
 #| msgid "Downloading file (%1 %)"
@@ -1329,7 +1337,7 @@ msgid ""
 "%1 / %2 (%3%)"
 msgstr "Fitxategia zama-jaisten (%%1)"
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:223
+#: tournament/ratinglists/ratinglistsmanager.cpp:249
 #, fuzzy, kde-format
 #| msgctxt "@info"
 #| msgid "Couldn't download rating list: %1"
@@ -1337,7 +1345,7 @@ msgctxt "@info"
 msgid "Could not download rating list: %1"
 msgstr "Ezin izan du balorazio-zerrena zama-jaitsi: %1"
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:234
+#: tournament/ratinglists/ratinglistsmanager.cpp:260
 #, fuzzy, kde-format
 #| msgctxt "@info"
 #| msgid "Couldn't download rating list: %1"
@@ -1345,15 +1353,7 @@ msgctxt "@info"
 msgid "Could not download rating list from %1 (unsupported protocol)."
 msgstr "Ezin izan du balorazio-zerrena zama-jaitsi: %1"
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:245
-#, kde-format
-msgctxt "@info:progress"
-msgid "Imported one player."
-msgid_plural "Imported %1 players."
-msgstr[0] "Jokalari bat inportatu da."
-msgstr[1] "%1 jokalari inportatu dira."
-
-#: tournament/ratinglists/ratinglistsmanager.cpp:261
+#: tournament/ratinglists/ratinglistsmanager.cpp:277
 #, fuzzy, kde-format
 #| msgctxt "@info"
 #| msgid "Couldn't extract file."
@@ -1361,13 +1361,13 @@ msgctxt "@info"
 msgid "Could not extract file."
 msgstr "Ezin izan du fitxategia atera."
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:266
+#: tournament/ratinglists/ratinglistsmanager.cpp:282
 #, kde-format
 msgctxt "@info"
 msgid "File format not supported."
 msgstr "Fitxategi-formatua ez da onartzen."
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:479
+#: tournament/ratinglists/ratinglistsmanager.cpp:493
 #, kde-format
 msgctxt "@info:progress"
 msgid "Saved 1 player."
