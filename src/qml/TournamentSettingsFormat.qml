@@ -48,13 +48,6 @@ FormCard.FormCardPage {
             description: KI18n.i18n("bbpPairings")
             url: "https://github.com/BieremaBoyzProgramming/bbpPairings"
         }
-        FormCard.FormComboBoxDelegate {
-            id: pairingBye
-            visible: Config.developer
-            text: KI18n.i18n("Pairing allocated bye")
-            description: KI18n.i18n("The value of the pairing allocated bye")
-            model: ["1 point", "0.5 points", "0 points"]
-        }
     }
 
     FormCard.FormHeader {
