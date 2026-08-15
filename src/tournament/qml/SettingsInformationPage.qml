@@ -14,6 +14,8 @@ import org.kde.chessament
 FormCard.FormCardPage {
     id: root
 
+    required property Tournament tournament
+
     title: KI18n.i18nc("@title", "Information")
 
     FormCard.FormHeader {
@@ -23,27 +25,27 @@ FormCard.FormCardPage {
         FormCard.FormTextFieldDelegate {
             id: name
             label: KI18n.i18nc("@label:textbox", "Tournament name")
-            text: Controller.tournament.name
+            text: root.tournament.name
             onEditingFinished: {
-                Controller.tournament.name = text;
+                root.tournament.name = text;
             }
         }
 
         FormCard.FormTextFieldDelegate {
             id: city
             label: KI18n.i18nc("@label:textbox", "City")
-            text: Controller.tournament.city
+            text: root.tournament.city
             onEditingFinished: {
-                Controller.tournament.city = text;
+                root.tournament.city = text;
             }
         }
 
         FormCard.FormTextFieldDelegate {
             id: federation
             label: KI18n.i18nc("@label:textbox", "Federation")
-            text: Controller.tournament.federation
+            text: root.tournament.federation
             onEditingFinished: {
-                Controller.tournament.federation = text;
+                root.tournament.federation = text;
             }
         }
     }
@@ -69,7 +71,7 @@ FormCard.FormCardPage {
             id: repeater
             model: ArbitersModel {
                 id: arbitersModel
-                tournament: Controller.tournament
+                tournament: root.tournament
             }
             delegateModelAccess: DelegateModel.ReadWrite
             delegate: ArbiterDelegate {

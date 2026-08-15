@@ -90,7 +90,8 @@ Kirigami.OverlayDrawer {
                 icon.name: "settings-configure"
                 onTriggered: {
                     const dialog = Qt.createComponent("org.kde.chessament.tournament", "SettingsDialog").createObject(root.Controls.Overlay.overlay, {
-                        window: root.Controls.ApplicationWindow.window
+                        window: root.Controls.ApplicationWindow.window,
+                        tournament: Controller.tournament
                     }) as SettingsDialog;
                     dialog.open();
                 }

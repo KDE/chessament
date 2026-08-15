@@ -12,12 +12,14 @@ import org.kde.chessament
 FormCard.FormCardPage {
     id: root
 
+    required property Tournament tournament
+
     title: KI18n.i18nc("@title", "Calendar")
 
     Repeater {
         delegateModelAccess: DelegateModel.ReadWrite
         model: RoundModel {
-            tournament: Controller.tournament
+            tournament: root.tournament
         }
 
         ColumnLayout {

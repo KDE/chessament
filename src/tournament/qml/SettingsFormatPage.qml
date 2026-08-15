@@ -15,6 +15,8 @@ import org.kde.chessament
 FormCard.FormCardPage {
     id: root
 
+    required property Tournament tournament
+
     title: KI18n.i18nc("@title", "Format")
 
     FormCard.FormHeader {
@@ -29,12 +31,12 @@ FormCard.FormCardPage {
             label: KI18n.i18n("Rounds")
             from: 1
             to: 99
-            value: Controller.tournament.numberOfRounds
+            value: root.tournament.numberOfRounds
             onValueChanged: {
-                if (Controller.tournament.numberOfRounds === value) {
+                if (root.tournament.numberOfRounds === value) {
                     return;
                 }
-                Controller.tournament.numberOfRounds = value;
+                root.tournament.numberOfRounds = value;
             }
         }
     }
@@ -67,7 +69,7 @@ FormCard.FormCardPage {
             delegateModelAccess: DelegateModel.ReadWrite
             model: TimeControlModel {
                 id: timeControlModel
-                tournament: Controller.tournament
+                tournament: root.tournament
             }
 
             TimeControlDelegate {
@@ -93,7 +95,7 @@ FormCard.FormCardPage {
             delegateModelAccess: DelegateModel.ReadWrite
             model: TiebreakModel {
                 id: tiebreakModel
-                tournament: Controller.tournament
+                tournament: root.tournament
 
                 onDataChanged: Controller.areStandingsValid = false
                 onRowsInserted: Controller.areStandingsValid = false
@@ -114,7 +116,7 @@ FormCard.FormCardPage {
             onPressed: {
                 const dialog = Qt.createComponent("org.kde.chessament.tournament", "AddTiebreakDialog").createObject(root, {
                     "parent": root.Controls.Overlay.overlay,
-                    "tournament": Controller.tournament
+                    "tournament": root.tournament
                 }) as AddTiebreakDialog;
                 dialog.accepted.connect(() => {
                     tiebreakModel.addTiebreak(dialog.tiebreak);
