@@ -108,9 +108,9 @@ private:
 
     static std::expected<QSqlDatabase, QString> openDatabase(const QString &connectionName);
 
-    std::expected<std::pair<QMimeType, QByteArray>, QString> readFile(RatingList *list, const QUrl &url);
+    std::expected<uint, QString> readFile(RatingList *list, const QUrl &url);
 
-    static std::expected<uint, QString> processFile(RatingList *list, QByteArray content, const QMimeType &mime);
+    static std::expected<uint, QString> processFile(RatingList *list, QIODevice *device, const QMimeType &mimeType);
 
     std::expected<void, QString> savePlayers(RatingList *list, const QList<RatingListPlayer> &players);
 

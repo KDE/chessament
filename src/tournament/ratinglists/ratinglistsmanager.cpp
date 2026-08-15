@@ -173,14 +173,7 @@ QCoro::Task<std::expected<RatingList *, QString>> RatingListsManager::import(con
     list->setLastModified(QDateTime::currentDateTimeUtc());
 
     const auto count = co_await QtConcurrent::run([this, list, url]() -> std::expected<uint, QString> {
-        const auto result = readFile(list, url);
-        if (!result) {
-            return std::unexpected(result.error());
-        }
-
-        const auto [mimeType, content] = result.value();
-
-        return processFile(list, content, mimeType);
+        return readFile(list, url);
     });
 
     if (!count) {
@@ -192,11 +185,9 @@ QCoro::Task<std::expected<RatingList *, QString>> RatingListsManager::import(con
     co_return list;
 }
 
-std::expected<std::pair<QMimeType, QByteArray>, QString> RatingListsManager::readFile(RatingList *list, const QUrl &url)
+std::expected<uint, QString> RatingListsManager::readFile(RatingList *list, const QUrl &url)
 {
     QMimeType mimeType;
-    QByteArray result;
-
     QMimeDatabase mimeDb;
 
     if (url.scheme() == u"file"_s) {
@@ -209,10 +200,16 @@ std::expected<std::pair<QMimeType, QByteArray>, QString> RatingListsManager::rea
             return std::unexpected(i18nc("@info", "Could not open file."));
         }
 
-        result = file.readAll();
         mimeType = mimeDb.mimeTypeForFile(url.toLocalFile());
+
+        const auto result = processFile(list, &file, mimeType);
+
         file.close();
-    } else if (url.scheme() == u"https"_s) {
+
+        return result;
+    }
+
+    if (url.scheme() == u"https"_s) {
         auto manager = Utils::networkAccessManager();
 
         QNetworkRequest request{url};
@@ -255,22 +252,19 @@ std::expected<std::pair<QMimeType, QByteArray>, QString> RatingListsManager::rea
         list->extra()["http_etag"_L1] = QString::fromLatin1(reply->headers().value(QHttpHeaders::WellKnownHeader::ETag));
         list->extra()["http_last_modified"_L1] = QString::fromLatin1(reply->headers().value(QHttpHeaders::WellKnownHeader::LastModified));
 
-        result = reply->readAll();
-    } else {
-        return std::unexpected(i18nc("@info", "Could not download rating list from %1 (unsupported protocol).", url.toString()));
+        return processFile(list, reply, mimeType);
     }
 
-    return std::make_pair(mimeType, result);
+    return std::unexpected(i18nc("@info", "Could not download rating list from %1 (unsupported protocol).", url.toString()));
 }
 
-std::expected<uint, QString> RatingListsManager::processFile(RatingList *list, QByteArray content, const QMimeType &mime)
+std::expected<uint, QString> RatingListsManager::processFile(RatingList *list, QIODevice *device, const QMimeType &mimeType)
 {
-    std::expected<uint, QString> count;
+    if (mimeType.inherits(u"application/zip"_s)) {
+        // QNetworkReply is sequential-access, but KZip needs random access
+        auto data = device->readAll();
+        auto buffer = QBuffer{&data};
 
-    QBuffer buffer(&content);
-    std::unique_ptr<RatingListReader> reader;
-
-    if (mime.inherits(u"application/zip"_s)) {
         auto zip = KZip(&buffer);
         if (!zip.open(QIODevice::ReadOnly)) {
             qWarning() << zip.errorString();
@@ -287,21 +281,18 @@ std::expected<uint, QString> RatingListsManager::processFile(RatingList *list, Q
         QTextStream stream{device};
         device->deleteLater();
 
-        reader = std::make_unique<FideRatingListReader>(list);
-        count = readPlayers(list, &stream, std::move(reader));
-    } else if (mime.inherits(u"application/vnd.ms-excel"_s)) {
-        buffer.open(QBuffer::ReadOnly);
-        QTextStream stream{&buffer};
-
-        reader = std::make_unique<HtmlRatingListReader>(list);
-        count = readPlayers(list, &stream, std::move(reader));
+        auto reader = std::make_unique<FideRatingListReader>(list);
+        return readPlayers(list, &stream, std::move(reader));
     }
 
-    if (!count) {
-        return std::unexpected(count.error());
+    if (mimeType.inherits(u"application/vnd.ms-excel"_s)) {
+        QTextStream stream{device};
+
+        auto reader = std::make_unique<HtmlRatingListReader>(list);
+        return readPlayers(list, &stream, std::move(reader));
     }
 
-    return *count;
+    return std::unexpected(i18nc("@info", "File format not supported."));
 }
 
 std::expected<uint, QString> RatingListsManager::readPlayers(RatingList *list, QTextStream *stream, std::unique_ptr<RatingListReader> reader)
