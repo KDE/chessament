@@ -47,15 +47,15 @@ FormCard.FormCardPage {
                     result: Pairing.PartialResult.Unknown
                 },
                 {
-                    text: "Bye (1)",
+                    text: Controller.resultToString(Pairing.PartialResult.FullBye),
                     result: Pairing.PartialResult.FullBye
                 },
                 {
-                    text: "Bye (½)",
+                    text: Controller.resultToString(Pairing.PartialResult.HalfBye),
                     result: Pairing.PartialResult.HalfBye
                 },
                 {
-                    text: "Bye (0)",
+                    text: Controller.resultToString(Pairing.PartialResult.ZeroBye),
                     result: Pairing.PartialResult.ZeroBye
                 }
             ]

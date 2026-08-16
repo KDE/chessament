@@ -64,7 +64,7 @@ public:
     bool hasCurrentRoundFinished();
     [[nodiscard]] bool areStandingsValid() const;
 
-    Q_INVOKABLE static QString resultToString(Pairing::PartialResult whiteResult, Pairing::PartialResult blackResult);
+    Q_INVOKABLE static QString resultToString(Pairing::PartialResult whiteResult, Pairing::PartialResult blackResult = Pairing::PartialResult::Unknown);
 
     void setEvent(std::unique_ptr<Event> event);
     Q_INVOKABLE void sortPlayers();
