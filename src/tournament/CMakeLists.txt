@@ -30,6 +30,8 @@ ecm_add_qml_module(tournament
     OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/src/org/kde/chessament/tournament
     GENERATE_PLUGIN_SOURCE
     QML_FILES
+        qml/FieldSaverHack.qml
+
         qml/SettingsDialog.qml
         qml/SettingsCalendarPage.qml
         qml/SettingsCloudPage.qml

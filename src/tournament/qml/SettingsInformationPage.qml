@@ -79,4 +79,6 @@ FormCard.FormCardPage {
             }
         }
     }
+
+    FieldSaverHack {}
 }

@@ -51,21 +51,21 @@ FormCard.AbstractFormDelegate {
             Layout.preferredWidth: Kirigami.Units.gridUnit * 3
             text: delegate.title
             placeholderText: KI18n.i18nc("@info:placeholder Arbiter's Title", "Title")
-            onTextEdited: delegate.title = text
+            onEditingFinished: delegate.title = text
         }
 
         Controls.TextField {
             Layout.fillWidth: true
             text: delegate.name
             placeholderText: KI18n.i18nc("@info:placeholder Arbiter's Name", "Name")
-            onTextEdited: delegate.name = text
+            onEditingFinished: delegate.name = text
         }
 
         Controls.TextField {
             Layout.preferredWidth: Kirigami.Units.gridUnit * 5
             text: delegate.arbiterId
             placeholderText: KI18n.i18nc("@info:placeholder Arbiter's ID", "ID")
-            onTextEdited: delegate.arbiterId = text
+            onEditingFinished: delegate.arbiterId = text
         }
 
         Controls.Button {
