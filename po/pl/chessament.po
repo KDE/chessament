@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-15 00:41+0000\n"
+"POT-Creation-Date: 2026-08-16 00:40+0000\n"
 "PO-Revision-Date: 2026-03-21 06:45+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
@@ -42,7 +42,7 @@ msgctxt "@action:inmenu"
 msgid "Export tournament report…"
 msgstr "Wyeksportuj sprawozdanie z turnieju…"
 
-#: controller.cpp:178
+#: controller.cpp:187
 #, kde-format
 msgid "Couldn't export tournament."
 msgstr "Nie można wyeksportować turnieju."
@@ -83,7 +83,7 @@ msgctxt "@title"
 msgid "Provisional Final Standings"
 msgstr "Ostateczne wstępne wyniki"
 
-#: main.cpp:59 qml/WelcomePage.qml:16
+#: main.cpp:59
 #, kde-format
 msgctxt "@title"
 msgid "Chessament"
@@ -305,7 +305,7 @@ msgctxt "@label:textbox"
 msgid "Birth date"
 msgstr "Data urodzenia"
 
-#: qml/AddPlayerDialog.qml:128 qml/TournamentSettingsInformation.qml:43
+#: qml/AddPlayerDialog.qml:128 tournament/qml/SettingsInformationPage.qml:45
 msgctxt "@label:textbox"
 msgid "Federation"
 msgstr "Federacja"
@@ -319,11 +319,6 @@ msgstr "Pochodzenie"
 msgctxt "@label:textbox"
 msgid "Gender"
 msgstr ""
-
-#: qml/AddTiebreakDialog.qml:20
-msgctxt "@title:window"
-msgid "Add Tiebreak"
-msgstr "Dodaj przełamanie remisu"
 
 #: qml/components/ArbiterDelegate.qml:34
 msgctxt "@item:inlistbox Chief Arbiter"
@@ -514,7 +509,7 @@ msgctxt "@title:window"
 msgid "Chessament"
 msgstr "Chessament"
 
-#: qml/Main.qml:52 qml/Main.qml:62 qml/NewTournamentDialog.qml:50
+#: qml/Main.qml:52 qml/Main.qml:62 qml/NewTournamentDialog.qml:51
 #, fuzzy
 #| msgctxt "@info"
 #| msgid "Chessament is a chess tournament manager"
@@ -567,12 +562,12 @@ msgctxt "@option:check"
 msgid "Hide finished games"
 msgstr "Ukryj ukończone gry"
 
-#: qml/PairingsPage.qml:72 qml/PlayersPage.qml:144 qml/StandingsPage.qml:63
+#: qml/PairingsPage.qml:72 qml/PlayersPage.qml:146 qml/StandingsPage.qml:63
 msgctxt "@action:intoolbar"
 msgid "Print…"
 msgstr "Wydrukuj…"
 
-#: qml/PairingsPage.qml:78 qml/PlayersPage.qml:149 qml/StandingsPage.qml:69
+#: qml/PairingsPage.qml:78 qml/PlayersPage.qml:151 qml/StandingsPage.qml:69
 msgctxt "@action:intoolbar"
 msgid "Export as PDF…"
 msgstr "Wyeksportuj jako PDF…"
@@ -681,7 +676,8 @@ msgctxt "@item:inlistbox Available to play"
 msgid "Available"
 msgstr "Dostępny"
 
-#: qml/player/PlayerPairingsPage.qml:83 qml/TournamentSettingsFormat.qml:43
+#: qml/player/PlayerPairingsPage.qml:83
+#: tournament/qml/SettingsFormatPage.qml:45
 msgctxt "@title:group"
 msgid "Pairings"
 msgstr "Parowania"
@@ -691,32 +687,32 @@ msgctxt "@info:label"
 msgid "Round %1"
 msgstr "Runda %1"
 
-#: qml/PlayersPage.qml:119
+#: qml/PlayersPage.qml:120
 msgctxt "@action:intoolbar Open player details"
 msgid "Details…"
 msgstr "Szczegóły…"
 
-#: qml/PlayersPage.qml:125
+#: qml/PlayersPage.qml:126
 msgctxt "@action Update players ratings"
 msgid "Update ratings…"
 msgstr ""
 
-#: qml/PlayersPage.qml:134
+#: qml/PlayersPage.qml:136
 msgctxt "@action:intoolbar"
 msgid "Sort Players…"
 msgstr "Uszereguj graczy…"
 
-#: qml/PlayersPage.qml:155
+#: qml/PlayersPage.qml:157
 msgctxt "@action:intoolbar"
 msgid "Add Player…"
 msgstr "Dodaj gracza…"
 
-#: qml/PlayersPage.qml:166
+#: qml/PlayersPage.qml:168
 msgctxt "@action:inmenu"
 msgid "Open Player Details"
 msgstr "Otwórz szczegóły gracza"
 
-#: qml/PlayersPage.qml:172
+#: qml/PlayersPage.qml:174
 #, fuzzy
 #| msgctxt "@action:intoolbar"
 #| msgid "Sort Players…"
@@ -724,22 +720,22 @@ msgctxt "@action:inmenu"
 msgid "Delete Player…"
 msgstr "Uszereguj graczy…"
 
-#: qml/PlayersPage.qml:192
+#: qml/PlayersPage.qml:194
 msgctxt "@info:placeholder"
 msgid "No players found"
 msgstr "Nie ma znaleziono żadnego gracza"
 
-#: qml/PlayersPage.qml:192
+#: qml/PlayersPage.qml:194
 msgctxt "@info:placeholder"
 msgid "No players yet"
 msgstr "Nie ma jeszcze żadnych graczy"
 
-#: qml/PlayersPage.qml:196
+#: qml/PlayersPage.qml:198
 msgctxt "@action:button"
 msgid "Add Player…"
 msgstr "Dodaj gracza…"
 
-#: qml/PlayersPage.qml:215
+#: qml/PlayersPage.qml:217
 msgctxt "@info:status Number of players"
 msgid "1 player"
 msgid_plural "%1 players"
@@ -747,7 +743,7 @@ msgstr[0] "1 gracz"
 msgstr[1] "%1 graczy"
 msgstr[2] "%1 graczy"
 
-#: qml/PlayersPage.qml:216
+#: qml/PlayersPage.qml:218
 msgctxt "@info:status Number of rated players"
 msgid "1 rated"
 msgid_plural "%1 rated"
@@ -755,7 +751,7 @@ msgstr[0] "1 z poziomem"
 msgstr[1] "%1 z poziomem"
 msgstr[2] "%1 z poziomem"
 
-#: qml/PlayersPage.qml:218
+#: qml/PlayersPage.qml:220
 msgctxt "@info:status Total number of players (Number of players rated)"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
@@ -765,7 +761,7 @@ msgctxt "@action:intoolbar Other game results"
 msgid "Other"
 msgstr "Inne"
 
-#: qml/Sidebar.qml:49
+#: qml/Sidebar.qml:50
 msgid "Players"
 msgstr "Gracze"
 
@@ -773,11 +769,11 @@ msgstr "Gracze"
 msgid "Pairings"
 msgstr "Parowania"
 
-#: qml/Sidebar.qml:67
+#: qml/Sidebar.qml:66
 msgid "Standings"
 msgstr "Ostateczne wyniki"
 
-#: qml/Sidebar.qml:89
+#: qml/Sidebar.qml:85
 msgctxt "@action:button"
 msgid "Settings"
 msgstr "Ustawienia"
@@ -811,134 +807,6 @@ msgctxt "@info:placeholder"
 msgid "No standings yet"
 msgstr "Nie ma jeszcze żadnych wyników"
 
-#: qml/TiebreakDialog.qml:18
-msgctxt "@title:window"
-msgid "Edit Tiebreak"
-msgstr "Zmień przełamanie remisu"
-
-#: qml/TournamentSettings.qml:17
-msgctxt "@action:button"
-msgid "Information"
-msgstr "Informacje"
-
-#: qml/TournamentSettings.qml:23
-msgctxt "@action:button"
-msgid "Format"
-msgstr "Format"
-
-#: qml/TournamentSettings.qml:29
-msgctxt "@action:button"
-msgid "Calendar"
-msgstr "Kalendarz"
-
-#: qml/TournamentSettingsCalendar.qml:15
-msgctxt "@title"
-msgid "Calendar"
-msgstr "Kalendarz"
-
-#: qml/TournamentSettingsCalendar.qml:30
-msgctxt "round number"
-msgid "Round %1"
-msgstr "Runda %1"
-
-#: qml/TournamentSettingsFormat.qml:18
-msgctxt "@title"
-msgid "Format"
-msgstr "Format"
-
-#: qml/TournamentSettingsFormat.qml:21
-msgctxt "@title:group"
-msgid "Format"
-msgstr "Format"
-
-#: qml/TournamentSettingsFormat.qml:25
-msgid "Swiss system"
-msgstr "System szwajcarski"
-
-#: qml/TournamentSettingsFormat.qml:29
-msgid "Rounds"
-msgstr "Rundy"
-
-#: qml/TournamentSettingsFormat.qml:47
-msgid "Pairing engine"
-msgstr "Silnik parujący"
-
-#: qml/TournamentSettingsFormat.qml:48
-msgid "bbpPairings"
-msgstr "bbpPairings"
-
-#: qml/TournamentSettingsFormat.qml:54
-msgid "Pairing allocated bye"
-msgstr "Bye przypisane podczas parowania"
-
-#: qml/TournamentSettingsFormat.qml:55
-msgid "The value of the pairing allocated bye"
-msgstr "Wartość bye przypisanych podczas parowania"
-
-#: qml/TournamentSettingsFormat.qml:61
-msgctxt "@title:group"
-msgid "Time Control"
-msgstr ""
-
-#: qml/TournamentSettingsFormat.qml:65
-#, fuzzy
-#| msgctxt "@action:intoolbar"
-#| msgid "Add Player…"
-msgctxt "@action:button Add time control period"
-msgid "Add Period"
-msgstr "Dodaj gracza…"
-
-#: qml/TournamentSettingsFormat.qml:94
-msgctxt "@title:group"
-msgid "Tiebreaks"
-msgstr "Przełamania remisu"
-
-#: qml/TournamentSettingsFormat.qml:119
-msgctxt "@action:button"
-msgid "Add Tiebreak"
-msgstr "Dodaj przełamanie remisu"
-
-#: qml/TournamentSettingsInformation.qml:17
-msgctxt "@title"
-msgid "Information"
-msgstr "Informacje"
-
-#: qml/TournamentSettingsInformation.qml:20
-msgctxt "@title:group"
-msgid "Basic details"
-msgstr "Podstawowe szczegóły"
-
-#: qml/TournamentSettingsInformation.qml:25
-msgctxt "@label:textbox"
-msgid "Tournament name"
-msgstr "Nazwa turnieju"
-
-#: qml/TournamentSettingsInformation.qml:34
-msgctxt "@label:textbox"
-msgid "City"
-msgstr "Miasto"
-
-#: qml/TournamentSettingsInformation.qml:52
-msgctxt "@title:group"
-msgid "Arbiters"
-msgstr ""
-
-#: qml/TournamentSettingsInformation.qml:56
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Add Tiebreak"
-msgctxt "@action:button"
-msgid "Add Arbiter"
-msgstr "Dodaj przełamanie remisu"
-
-#: qml/TournamentSettingsInformation.qml:63
-#, fuzzy
-#| msgctxt "@info:placeholder"
-#| msgid "No players yet"
-msgctxt "@info:status"
-msgid "No arbiters yet."
-msgstr "Nie ma jeszcze żadnych graczy"
-
 #: qml/UpdateRatingsDialog.qml:17
 #, fuzzy
 #| msgctxt "@title"
@@ -960,12 +828,12 @@ msgctxt "@action:button Update players ratings"
 msgid "Update"
 msgstr ""
 
-#: qml/WelcomePage.qml:21
+#: qml/WelcomePage.qml:19
 msgctxt "@title"
 msgid "Welcome to Chessament"
 msgstr "Witaj w Chessament"
 
-#: qml/WelcomePage.qml:22
+#: qml/WelcomePage.qml:20
 msgctxt "@info"
 msgid "Chessament is a chess tournament manager"
 msgstr "Chessament jest programem do zarządzania turniejami szachowymi"
@@ -1266,33 +1134,165 @@ msgstr ""
 msgid "Could not create temporary file."
 msgstr "Nie można utworzyć pliku tymczasowego."
 
-#: tournament/pairingengine.cpp:61
+#: tournament/pairingengine.cpp:64
+#, fuzzy, kde-format
+#| msgid "Invalid pairing \"%1\"."
+msgctxt "@info"
+msgid "No valid pairing exists."
+msgstr "Nieprawidłowe parowanie \"%1\"."
+
+#: tournament/pairingengine.cpp:67
 #, kde-format
 msgctxt "bbpPairings is the name of a program, should not be translated"
 msgid "bbpPairings terminated with a non zero exit code: %1"
 msgstr "bbpPairings zakończyło z niezerowym kodem wyjścia: %1"
 
-#: tournament/pairingengine.cpp:79 tournament/trf/reader.cpp:243
+#: tournament/pairingengine.cpp:85 tournament/trf/reader.cpp:243
 #, kde-format
 msgid "Invalid pairing \"%1\"."
 msgstr "Nieprawidłowe parowanie \"%1\"."
 
-#: tournament/pairingengine.cpp:85 tournament/pairingengine.cpp:89
-#: tournament/pairingengine.cpp:93 tournament/pairingengine.cpp:97
+#: tournament/pairingengine.cpp:91 tournament/pairingengine.cpp:95
+#: tournament/pairingengine.cpp:99 tournament/pairingengine.cpp:103
 #: tournament/trf/reader.cpp:256
 #, kde-format
 msgid "Invalid player \"%1\" on pairing \"%2\"."
 msgstr "Nieprawidłowy gracz \"%1\" w parowaniu\"%2\"."
 
+#: tournament/qml/AddTiebreakDialog.qml:20
+msgctxt "@title:window"
+msgid "Add Tiebreak"
+msgstr "Dodaj przełamanie remisu"
+
+#: tournament/qml/SettingsCalendarPage.qml:17
+msgctxt "@title"
+msgid "Calendar"
+msgstr "Kalendarz"
+
+#: tournament/qml/SettingsCalendarPage.qml:32
+msgctxt "round number"
+msgid "Round %1"
+msgstr "Runda %1"
+
+#: tournament/qml/SettingsDialog.qml:19
+msgctxt "@action:button"
+msgid "Information"
+msgstr "Informacje"
+
+#: tournament/qml/SettingsDialog.qml:30
+msgctxt "@action:button"
+msgid "Format"
+msgstr "Format"
+
+#: tournament/qml/SettingsDialog.qml:41
+msgctxt "@action:button"
+msgid "Calendar"
+msgstr "Kalendarz"
+
+#: tournament/qml/SettingsFormatPage.qml:20
+msgctxt "@title"
+msgid "Format"
+msgstr "Format"
+
+#: tournament/qml/SettingsFormatPage.qml:23
+msgctxt "@title:group"
+msgid "Format"
+msgstr "Format"
+
+#: tournament/qml/SettingsFormatPage.qml:27
+msgid "Swiss system"
+msgstr "System szwajcarski"
+
+#: tournament/qml/SettingsFormatPage.qml:31
+msgid "Rounds"
+msgstr "Rundy"
+
+#: tournament/qml/SettingsFormatPage.qml:49
+msgid "Pairing engine"
+msgstr "Silnik parujący"
+
+#: tournament/qml/SettingsFormatPage.qml:50
+msgid "bbpPairings"
+msgstr "bbpPairings"
+
+#: tournament/qml/SettingsFormatPage.qml:56
+msgctxt "@title:group"
+msgid "Time Control"
+msgstr ""
+
+#: tournament/qml/SettingsFormatPage.qml:60
+#, fuzzy
+#| msgctxt "@action:intoolbar"
+#| msgid "Add Player…"
+msgctxt "@action:button Add time control period"
+msgid "Add Period"
+msgstr "Dodaj gracza…"
+
+#: tournament/qml/SettingsFormatPage.qml:89
+msgctxt "@title:group"
+msgid "Tiebreaks"
+msgstr "Przełamania remisu"
+
+#: tournament/qml/SettingsFormatPage.qml:114
+msgctxt "@action:button"
+msgid "Add Tiebreak"
+msgstr "Dodaj przełamanie remisu"
+
+#: tournament/qml/SettingsInformationPage.qml:19
+msgctxt "@title"
+msgid "Information"
+msgstr "Informacje"
+
+#: tournament/qml/SettingsInformationPage.qml:22
+msgctxt "@title:group"
+msgid "Basic details"
+msgstr "Podstawowe szczegóły"
+
+#: tournament/qml/SettingsInformationPage.qml:27
+msgctxt "@label:textbox"
+msgid "Tournament name"
+msgstr "Nazwa turnieju"
+
+#: tournament/qml/SettingsInformationPage.qml:36
+msgctxt "@label:textbox"
+msgid "City"
+msgstr "Miasto"
+
+#: tournament/qml/SettingsInformationPage.qml:54
+msgctxt "@title:group"
+msgid "Arbiters"
+msgstr ""
+
+#: tournament/qml/SettingsInformationPage.qml:58
+#, fuzzy
+#| msgctxt "@action:button"
+#| msgid "Add Tiebreak"
+msgctxt "@action:button"
+msgid "Add Arbiter"
+msgstr "Dodaj przełamanie remisu"
+
+#: tournament/qml/SettingsInformationPage.qml:65
+#, fuzzy
+#| msgctxt "@info:placeholder"
+#| msgid "No players yet"
+msgctxt "@info:status"
+msgid "No arbiters yet."
+msgstr "Nie ma jeszcze żadnych graczy"
+
+#: tournament/qml/TiebreakDialog.qml:18
+msgctxt "@title:window"
+msgid "Edit Tiebreak"
+msgstr "Zmień przełamanie remisu"
+
 #: tournament/ratinglists/ratinglistsmanager.cpp:167
-#: tournament/ratinglists/ratinglistsmanager.cpp:209
+#: tournament/ratinglists/ratinglistsmanager.cpp:200
 #, fuzzy, kde-format
 #| msgid "Couldn't open file"
 msgctxt "@info"
 msgid "Could not open file."
 msgstr "Nie udało się otworzyć pliku"
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:190
+#: tournament/ratinglists/ratinglistsmanager.cpp:183
 #, kde-format
 msgctxt "@info:progress"
 msgid "Imported one player."
@@ -1301,13 +1301,13 @@ msgstr[0] "Zaimportowano jednego gracza."
 msgstr[1] "Zaimportowano %1 graczy."
 msgstr[2] "Zaimportowano %1 graczy."
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:204
+#: tournament/ratinglists/ratinglistsmanager.cpp:195
 #, kde-format
 msgctxt "@info"
 msgid "Could not open file: the file does not exists."
 msgstr ""
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:221
+#: tournament/ratinglists/ratinglistsmanager.cpp:216
 #, fuzzy, kde-format
 #| msgctxt "@info:progress"
 #| msgid "Downloading file"
@@ -1315,7 +1315,7 @@ msgctxt "@info:progress"
 msgid "Downloading file…"
 msgstr "Pobieranie pliku"
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:237
+#: tournament/ratinglists/ratinglistsmanager.cpp:232
 #, fuzzy, kde-format
 #| msgctxt "@info:progress"
 #| msgid "Downloading file (%1 %)"
@@ -1327,7 +1327,7 @@ msgid ""
 "%1 / %2 (%3%)"
 msgstr "Pobieranie pliku (%1 %)"
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:249
+#: tournament/ratinglists/ratinglistsmanager.cpp:244
 #, fuzzy, kde-format
 #| msgctxt "@info"
 #| msgid "Couldn't download rating list: %1"
@@ -1335,7 +1335,7 @@ msgctxt "@info"
 msgid "Could not download rating list: %1"
 msgstr "Nie można pobrać listy wyników: %1"
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:260
+#: tournament/ratinglists/ratinglistsmanager.cpp:256
 #, fuzzy, kde-format
 #| msgctxt "@info"
 #| msgid "Couldn't download rating list: %1"
@@ -1343,7 +1343,7 @@ msgctxt "@info"
 msgid "Could not download rating list from %1 (unsupported protocol)."
 msgstr "Nie można pobrać listy wyników: %1"
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:277
+#: tournament/ratinglists/ratinglistsmanager.cpp:269
 #, fuzzy, kde-format
 #| msgctxt "@info"
 #| msgid "Couldn't extract file."
@@ -1351,13 +1351,14 @@ msgctxt "@info"
 msgid "Could not extract file."
 msgstr "Nie udało się wypakować pliku"
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:282
+#: tournament/ratinglists/ratinglistsmanager.cpp:274
+#: tournament/ratinglists/ratinglistsmanager.cpp:293
 #, kde-format
 msgctxt "@info"
 msgid "File format not supported."
 msgstr "Nieobsługiwany format pliku."
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:493
+#: tournament/ratinglists/ratinglistsmanager.cpp:482
 #, kde-format
 msgctxt "@info:progress"
 msgid "Saved 1 player."
@@ -1466,6 +1467,12 @@ msgstr "Nieznany wynik \"%1\" przy parowaniu \"%2\"."
 #, kde-format
 msgid "Pairing \"%1\" has no opponent."
 msgstr "Parowanie \"%1\" nie ma przeciwnika."
+
+#~ msgid "Pairing allocated bye"
+#~ msgstr "Bye przypisane podczas parowania"
+
+#~ msgid "The value of the pairing allocated bye"
+#~ msgstr "Wartość bye przypisanych podczas parowania"
 
 #~ msgctxt "@action:intoolbar"
 #~ msgid "*"

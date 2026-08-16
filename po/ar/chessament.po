@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-15 00:41+0000\n"
+"POT-Creation-Date: 2026-08-16 00:40+0000\n"
 "PO-Revision-Date: 2026-08-10 15:40+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -42,7 +42,7 @@ msgctxt "@action:inmenu"
 msgid "Export tournament report…"
 msgstr "صدر دليل بطولة…"
 
-#: controller.cpp:178
+#: controller.cpp:187
 #, kde-format
 msgid "Couldn't export tournament."
 msgstr "تعذر تصدير البطولة."
@@ -83,7 +83,7 @@ msgctxt "@title"
 msgid "Provisional Final Standings"
 msgstr "الترتيب النهائي المؤقت"
 
-#: main.cpp:59 qml/WelcomePage.qml:16
+#: main.cpp:59
 #, kde-format
 msgctxt "@title"
 msgid "Chessament"
@@ -300,7 +300,7 @@ msgctxt "@label:textbox"
 msgid "Birth date"
 msgstr "تاريخ الميلاد"
 
-#: qml/AddPlayerDialog.qml:128 qml/TournamentSettingsInformation.qml:43
+#: qml/AddPlayerDialog.qml:128 tournament/qml/SettingsInformationPage.qml:45
 msgctxt "@label:textbox"
 msgid "Federation"
 msgstr "اتحاد"
@@ -314,11 +314,6 @@ msgstr "الأصل"
 msgctxt "@label:textbox"
 msgid "Gender"
 msgstr "الجنس"
-
-#: qml/AddTiebreakDialog.qml:20
-msgctxt "@title:window"
-msgid "Add Tiebreak"
-msgstr "أضف كسر التعادل"
 
 #: qml/components/ArbiterDelegate.qml:34
 msgctxt "@item:inlistbox Chief Arbiter"
@@ -476,7 +471,7 @@ msgctxt "@title:window"
 msgid "Chessament"
 msgstr "شطرنج"
 
-#: qml/Main.qml:52 qml/Main.qml:62 qml/NewTournamentDialog.qml:50
+#: qml/Main.qml:52 qml/Main.qml:62 qml/NewTournamentDialog.qml:51
 msgctxt "@label:listbox"
 msgid "Chessament event (*.chessament)"
 msgstr "حدث شطرنج (*.chessament)"
@@ -526,12 +521,12 @@ msgctxt "@option:check"
 msgid "Hide finished games"
 msgstr "أخفِ الألعاب المنتهية"
 
-#: qml/PairingsPage.qml:72 qml/PlayersPage.qml:144 qml/StandingsPage.qml:63
+#: qml/PairingsPage.qml:72 qml/PlayersPage.qml:146 qml/StandingsPage.qml:63
 msgctxt "@action:intoolbar"
 msgid "Print…"
 msgstr "اطبع…"
 
-#: qml/PairingsPage.qml:78 qml/PlayersPage.qml:149 qml/StandingsPage.qml:69
+#: qml/PairingsPage.qml:78 qml/PlayersPage.qml:151 qml/StandingsPage.qml:69
 msgctxt "@action:intoolbar"
 msgid "Export as PDF…"
 msgstr "صدر إلى بي دي اف…"
@@ -643,7 +638,8 @@ msgctxt "@item:inlistbox Available to play"
 msgid "Available"
 msgstr "متوفّرة"
 
-#: qml/player/PlayerPairingsPage.qml:83 qml/TournamentSettingsFormat.qml:43
+#: qml/player/PlayerPairingsPage.qml:83
+#: tournament/qml/SettingsFormatPage.qml:45
 msgctxt "@title:group"
 msgid "Pairings"
 msgstr "الإقرانات"
@@ -653,52 +649,52 @@ msgctxt "@info:label"
 msgid "Round %1"
 msgstr "الجولة %1"
 
-#: qml/PlayersPage.qml:119
+#: qml/PlayersPage.qml:120
 msgctxt "@action:intoolbar Open player details"
 msgid "Details…"
 msgstr "التفاصيل…"
 
-#: qml/PlayersPage.qml:125
+#: qml/PlayersPage.qml:126
 msgctxt "@action Update players ratings"
 msgid "Update ratings…"
 msgstr "حدّث التقييمات…"
 
-#: qml/PlayersPage.qml:134
+#: qml/PlayersPage.qml:136
 msgctxt "@action:intoolbar"
 msgid "Sort Players…"
 msgstr "افرز اللاعبين…"
 
-#: qml/PlayersPage.qml:155
+#: qml/PlayersPage.qml:157
 msgctxt "@action:intoolbar"
 msgid "Add Player…"
 msgstr "أضف لاعبًا…"
 
-#: qml/PlayersPage.qml:166
+#: qml/PlayersPage.qml:168
 msgctxt "@action:inmenu"
 msgid "Open Player Details"
 msgstr "افتح تفاصيل اللاعب"
 
-#: qml/PlayersPage.qml:172
+#: qml/PlayersPage.qml:174
 msgctxt "@action:inmenu"
 msgid "Delete Player…"
 msgstr "احذف لاعب…"
 
-#: qml/PlayersPage.qml:192
+#: qml/PlayersPage.qml:194
 msgctxt "@info:placeholder"
 msgid "No players found"
 msgstr "لم يُعثر على لاعبين"
 
-#: qml/PlayersPage.qml:192
+#: qml/PlayersPage.qml:194
 msgctxt "@info:placeholder"
 msgid "No players yet"
 msgstr "لا يوجد لاعبون بعد"
 
-#: qml/PlayersPage.qml:196
+#: qml/PlayersPage.qml:198
 msgctxt "@action:button"
 msgid "Add Player…"
 msgstr "أضف لاعبًا…"
 
-#: qml/PlayersPage.qml:215
+#: qml/PlayersPage.qml:217
 msgctxt "@info:status Number of players"
 msgid "1 player"
 msgid_plural "%1 players"
@@ -709,7 +705,7 @@ msgstr[3] "%1 لاعبين"
 msgstr[4] "%1 لاعبًا"
 msgstr[5] "%1 لاعب"
 
-#: qml/PlayersPage.qml:216
+#: qml/PlayersPage.qml:218
 msgctxt "@info:status Number of rated players"
 msgid "1 rated"
 msgid_plural "%1 rated"
@@ -720,7 +716,7 @@ msgstr[3] "%1 مقيَّمين"
 msgstr[4] "%1 مقيَّمًا"
 msgstr[5] "%1 مقيَّم"
 
-#: qml/PlayersPage.qml:218
+#: qml/PlayersPage.qml:220
 msgctxt "@info:status Total number of players (Number of players rated)"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
@@ -730,7 +726,7 @@ msgctxt "@action:intoolbar Other game results"
 msgid "Other"
 msgstr "أخرى"
 
-#: qml/Sidebar.qml:49
+#: qml/Sidebar.qml:50
 msgid "Players"
 msgstr "اللاعبون"
 
@@ -738,11 +734,11 @@ msgstr "اللاعبون"
 msgid "Pairings"
 msgstr "الإقرانات"
 
-#: qml/Sidebar.qml:67
+#: qml/Sidebar.qml:66
 msgid "Standings"
 msgstr "المواقف"
 
-#: qml/Sidebar.qml:89
+#: qml/Sidebar.qml:85
 msgctxt "@action:button"
 msgid "Settings"
 msgstr "الإعدادات"
@@ -775,125 +771,6 @@ msgctxt "@info:placeholder"
 msgid "No standings yet"
 msgstr "لا يوجد ترتيب حتى الآن"
 
-#: qml/TiebreakDialog.qml:18
-msgctxt "@title:window"
-msgid "Edit Tiebreak"
-msgstr "عدّل كسر التعادل"
-
-#: qml/TournamentSettings.qml:17
-msgctxt "@action:button"
-msgid "Information"
-msgstr "معلومات"
-
-#: qml/TournamentSettings.qml:23
-msgctxt "@action:button"
-msgid "Format"
-msgstr "التنسيق"
-
-#: qml/TournamentSettings.qml:29
-msgctxt "@action:button"
-msgid "Calendar"
-msgstr "التقويم"
-
-#: qml/TournamentSettingsCalendar.qml:15
-msgctxt "@title"
-msgid "Calendar"
-msgstr "التقويم"
-
-#: qml/TournamentSettingsCalendar.qml:30
-msgctxt "round number"
-msgid "Round %1"
-msgstr "الجولة %1"
-
-#: qml/TournamentSettingsFormat.qml:18
-msgctxt "@title"
-msgid "Format"
-msgstr "التنسيق"
-
-#: qml/TournamentSettingsFormat.qml:21
-msgctxt "@title:group"
-msgid "Format"
-msgstr "التّنسيق"
-
-#: qml/TournamentSettingsFormat.qml:25
-msgid "Swiss system"
-msgstr "النظام السويسري"
-
-#: qml/TournamentSettingsFormat.qml:29
-msgid "Rounds"
-msgstr "الجولات"
-
-#: qml/TournamentSettingsFormat.qml:47
-msgid "Pairing engine"
-msgstr "محرّك الإقران"
-
-#: qml/TournamentSettingsFormat.qml:48
-msgid "bbpPairings"
-msgstr "bbpPairings"
-
-#: qml/TournamentSettingsFormat.qml:54
-msgid "Pairing allocated bye"
-msgstr "الاقتران المخصص إعفاء"
-
-#: qml/TournamentSettingsFormat.qml:55
-msgid "The value of the pairing allocated bye"
-msgstr "قيمة الاقتران المخصص إعفاء"
-
-#: qml/TournamentSettingsFormat.qml:61
-msgctxt "@title:group"
-msgid "Time Control"
-msgstr "ضبط الوقت"
-
-#: qml/TournamentSettingsFormat.qml:65
-msgctxt "@action:button Add time control period"
-msgid "Add Period"
-msgstr "أضف فترة"
-
-#: qml/TournamentSettingsFormat.qml:94
-msgctxt "@title:group"
-msgid "Tiebreaks"
-msgstr "كسور التعادل"
-
-#: qml/TournamentSettingsFormat.qml:119
-msgctxt "@action:button"
-msgid "Add Tiebreak"
-msgstr "أضف كسر التعادل"
-
-#: qml/TournamentSettingsInformation.qml:17
-msgctxt "@title"
-msgid "Information"
-msgstr "معلومات"
-
-#: qml/TournamentSettingsInformation.qml:20
-msgctxt "@title:group"
-msgid "Basic details"
-msgstr "تفاصيل أساسية"
-
-#: qml/TournamentSettingsInformation.qml:25
-msgctxt "@label:textbox"
-msgid "Tournament name"
-msgstr "اسم البطولة"
-
-#: qml/TournamentSettingsInformation.qml:34
-msgctxt "@label:textbox"
-msgid "City"
-msgstr "المدينة"
-
-#: qml/TournamentSettingsInformation.qml:52
-msgctxt "@title:group"
-msgid "Arbiters"
-msgstr "المحكمون"
-
-#: qml/TournamentSettingsInformation.qml:56
-msgctxt "@action:button"
-msgid "Add Arbiter"
-msgstr "أضف محكم"
-
-#: qml/TournamentSettingsInformation.qml:63
-msgctxt "@info:status"
-msgid "No arbiters yet."
-msgstr "لا يوجد محكمون بعد."
-
 #: qml/UpdateRatingsDialog.qml:17
 msgctxt "@title"
 msgid "Update Ratings"
@@ -909,12 +786,12 @@ msgctxt "@action:button Update players ratings"
 msgid "Update"
 msgstr "حدّث"
 
-#: qml/WelcomePage.qml:21
+#: qml/WelcomePage.qml:19
 msgctxt "@title"
 msgid "Welcome to Chessament"
 msgstr "مرحبًا بك في شطرنج"
 
-#: qml/WelcomePage.qml:22
+#: qml/WelcomePage.qml:20
 msgctxt "@info"
 msgid "Chessament is a chess tournament manager"
 msgstr "تطبيق شطرنج هو مدير بطولة شطرنج"
@@ -1178,32 +1055,155 @@ msgstr "تعذر العثور على محرك الإقران bbppPairings. هل 
 msgid "Could not create temporary file."
 msgstr "لا يمكن إنشاء الملف المؤقت."
 
-#: tournament/pairingengine.cpp:61
+#: tournament/pairingengine.cpp:64
+#, fuzzy, kde-format
+#| msgid "Invalid pairing \"%1\"."
+msgctxt "@info"
+msgid "No valid pairing exists."
+msgstr "الإقران ”%1“ غير صالح."
+
+#: tournament/pairingengine.cpp:67
 #, kde-format
 msgctxt "bbpPairings is the name of a program, should not be translated"
 msgid "bbpPairings terminated with a non zero exit code: %1"
 msgstr "انتهى bbpPairings برمز خروج غير صفري: %1"
 
-#: tournament/pairingengine.cpp:79 tournament/trf/reader.cpp:243
+#: tournament/pairingengine.cpp:85 tournament/trf/reader.cpp:243
 #, kde-format
 msgid "Invalid pairing \"%1\"."
 msgstr "الإقران ”%1“ غير صالح."
 
-#: tournament/pairingengine.cpp:85 tournament/pairingengine.cpp:89
-#: tournament/pairingengine.cpp:93 tournament/pairingengine.cpp:97
+#: tournament/pairingengine.cpp:91 tournament/pairingengine.cpp:95
+#: tournament/pairingengine.cpp:99 tournament/pairingengine.cpp:103
 #: tournament/trf/reader.cpp:256
 #, kde-format
 msgid "Invalid player \"%1\" on pairing \"%2\"."
 msgstr "اللاعب ”%1“ غير صالح على الإقران ”%2“."
 
+#: tournament/qml/AddTiebreakDialog.qml:20
+msgctxt "@title:window"
+msgid "Add Tiebreak"
+msgstr "أضف كسر التعادل"
+
+#: tournament/qml/SettingsCalendarPage.qml:17
+msgctxt "@title"
+msgid "Calendar"
+msgstr "التقويم"
+
+#: tournament/qml/SettingsCalendarPage.qml:32
+msgctxt "round number"
+msgid "Round %1"
+msgstr "الجولة %1"
+
+#: tournament/qml/SettingsDialog.qml:19
+msgctxt "@action:button"
+msgid "Information"
+msgstr "معلومات"
+
+#: tournament/qml/SettingsDialog.qml:30
+msgctxt "@action:button"
+msgid "Format"
+msgstr "التنسيق"
+
+#: tournament/qml/SettingsDialog.qml:41
+msgctxt "@action:button"
+msgid "Calendar"
+msgstr "التقويم"
+
+#: tournament/qml/SettingsFormatPage.qml:20
+msgctxt "@title"
+msgid "Format"
+msgstr "التنسيق"
+
+#: tournament/qml/SettingsFormatPage.qml:23
+msgctxt "@title:group"
+msgid "Format"
+msgstr "التّنسيق"
+
+#: tournament/qml/SettingsFormatPage.qml:27
+msgid "Swiss system"
+msgstr "النظام السويسري"
+
+#: tournament/qml/SettingsFormatPage.qml:31
+msgid "Rounds"
+msgstr "الجولات"
+
+#: tournament/qml/SettingsFormatPage.qml:49
+msgid "Pairing engine"
+msgstr "محرّك الإقران"
+
+#: tournament/qml/SettingsFormatPage.qml:50
+msgid "bbpPairings"
+msgstr "bbpPairings"
+
+#: tournament/qml/SettingsFormatPage.qml:56
+msgctxt "@title:group"
+msgid "Time Control"
+msgstr "ضبط الوقت"
+
+#: tournament/qml/SettingsFormatPage.qml:60
+msgctxt "@action:button Add time control period"
+msgid "Add Period"
+msgstr "أضف فترة"
+
+#: tournament/qml/SettingsFormatPage.qml:89
+msgctxt "@title:group"
+msgid "Tiebreaks"
+msgstr "كسور التعادل"
+
+#: tournament/qml/SettingsFormatPage.qml:114
+msgctxt "@action:button"
+msgid "Add Tiebreak"
+msgstr "أضف كسر التعادل"
+
+#: tournament/qml/SettingsInformationPage.qml:19
+msgctxt "@title"
+msgid "Information"
+msgstr "معلومات"
+
+#: tournament/qml/SettingsInformationPage.qml:22
+msgctxt "@title:group"
+msgid "Basic details"
+msgstr "تفاصيل أساسية"
+
+#: tournament/qml/SettingsInformationPage.qml:27
+msgctxt "@label:textbox"
+msgid "Tournament name"
+msgstr "اسم البطولة"
+
+#: tournament/qml/SettingsInformationPage.qml:36
+msgctxt "@label:textbox"
+msgid "City"
+msgstr "المدينة"
+
+#: tournament/qml/SettingsInformationPage.qml:54
+msgctxt "@title:group"
+msgid "Arbiters"
+msgstr "المحكمون"
+
+#: tournament/qml/SettingsInformationPage.qml:58
+msgctxt "@action:button"
+msgid "Add Arbiter"
+msgstr "أضف محكم"
+
+#: tournament/qml/SettingsInformationPage.qml:65
+msgctxt "@info:status"
+msgid "No arbiters yet."
+msgstr "لا يوجد محكمون بعد."
+
+#: tournament/qml/TiebreakDialog.qml:18
+msgctxt "@title:window"
+msgid "Edit Tiebreak"
+msgstr "عدّل كسر التعادل"
+
 #: tournament/ratinglists/ratinglistsmanager.cpp:167
-#: tournament/ratinglists/ratinglistsmanager.cpp:209
+#: tournament/ratinglists/ratinglistsmanager.cpp:200
 #, kde-format
 msgctxt "@info"
 msgid "Could not open file."
 msgstr "تعذر فتح الملف."
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:190
+#: tournament/ratinglists/ratinglistsmanager.cpp:183
 #, kde-format
 msgctxt "@info:progress"
 msgid "Imported one player."
@@ -1215,19 +1215,19 @@ msgstr[3] "استُورد %1 لاعبين."
 msgstr[4] "استُورد %1 لاعبًا."
 msgstr[5] "استُورد %1 لاعب."
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:204
+#: tournament/ratinglists/ratinglistsmanager.cpp:195
 #, kde-format
 msgctxt "@info"
 msgid "Could not open file: the file does not exists."
 msgstr "تعذر فتح الملف: الملف غير موجود."
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:221
+#: tournament/ratinglists/ratinglistsmanager.cpp:216
 #, kde-format
 msgctxt "@info:progress"
 msgid "Downloading file…"
 msgstr "ينزل ملف…"
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:237
+#: tournament/ratinglists/ratinglistsmanager.cpp:232
 #, kde-format
 msgctxt ""
 "@info:progress %1 & %2 are the file download progress (received / total), %3 "
@@ -1239,31 +1239,32 @@ msgstr ""
 "ينزل ملف…\n"
 "%1 / %2 (%3%)"
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:249
+#: tournament/ratinglists/ratinglistsmanager.cpp:244
 #, kde-format
 msgctxt "@info"
 msgid "Could not download rating list: %1"
 msgstr "تعذر تنزيل قائمة التقييم: %1"
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:260
+#: tournament/ratinglists/ratinglistsmanager.cpp:256
 #, kde-format
 msgctxt "@info"
 msgid "Could not download rating list from %1 (unsupported protocol)."
 msgstr "تعذر تنزيل قائمة التقييم من %1 (ميفاق غير مدعوم)."
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:277
+#: tournament/ratinglists/ratinglistsmanager.cpp:269
 #, kde-format
 msgctxt "@info"
 msgid "Could not extract file."
 msgstr "لا يمكن استخراج الملف. "
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:282
+#: tournament/ratinglists/ratinglistsmanager.cpp:274
+#: tournament/ratinglists/ratinglistsmanager.cpp:293
 #, kde-format
 msgctxt "@info"
 msgid "File format not supported."
 msgstr "صيغة الملف غير متاحة."
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:493
+#: tournament/ratinglists/ratinglistsmanager.cpp:482
 #, kde-format
 msgctxt "@info:progress"
 msgid "Saved 1 player."
@@ -1373,6 +1374,12 @@ msgstr "نتيجة غير معروفة ”%1“ على الإقران ”%2“."
 #, kde-format
 msgid "Pairing \"%1\" has no opponent."
 msgstr "الإقران ”%1“ ليس له خصم."
+
+#~ msgid "Pairing allocated bye"
+#~ msgstr "الاقتران المخصص إعفاء"
+
+#~ msgid "The value of the pairing allocated bye"
+#~ msgstr "قيمة الاقتران المخصص إعفاء"
 
 #~ msgctxt "@action:intoolbar"
 #~ msgid "*"
