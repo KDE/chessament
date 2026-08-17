@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-16 00:40+0000\n"
-"PO-Revision-Date: 2026-08-04 10:15+0200\n"
+"PO-Revision-Date: 2026-08-16 11:50+0200\n"
 "Last-Translator: Libor Filípek <libor.filipek@gmail.com>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -1050,11 +1050,10 @@ msgid "Could not create temporary file."
 msgstr "Nelze vytvořit dočasný soubor."
 
 #: tournament/pairingengine.cpp:64
-#, fuzzy, kde-format
-#| msgid "Invalid pairing \"%1\"."
+#, kde-format
 msgctxt "@info"
 msgid "No valid pairing exists."
-msgstr "Neplatné párování \"%1\"."
+msgstr "Neexistují žádné platné páry."
 
 #: tournament/pairingengine.cpp:67
 #, kde-format
