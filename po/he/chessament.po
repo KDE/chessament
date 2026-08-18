@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-16 00:40+0000\n"
-"PO-Revision-Date: 2026-08-04 08:56+0300\n"
+"PO-Revision-Date: 2026-08-16 08:02+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -1050,11 +1050,10 @@ msgid "Could not create temporary file."
 msgstr "לא ניתן ליצור קובץ זמני"
 
 #: tournament/pairingengine.cpp:64
-#, fuzzy, kde-format
-#| msgid "Invalid pairing \"%1\"."
+#, kde-format
 msgctxt "@info"
 msgid "No valid pairing exists."
-msgstr "השיבוץ „%1” שגוי."
+msgstr "אין שיבוצים תקפים."
 
 #: tournament/pairingengine.cpp:67
 #, kde-format
