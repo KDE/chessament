@@ -780,12 +780,10 @@ msgid "Chessament is a chess tournament manager"
 msgstr "Chessament 是一款国际象棋赛事管理器"
 
 #: searchplayersmodel.cpp:41
-#, fuzzy, kde-format
-#| msgctxt "@title:column Player Rating"
-#| msgid "Rating"
+#, kde-format
 msgctxt "%1 is the player's rating"
 msgid "Rating: %1"
-msgstr "等级"
+msgstr ""
 
 #: searchplayersmodel.cpp:43
 #, kde-format
@@ -1041,11 +1039,10 @@ msgid "Could not create temporary file."
 msgstr "无法创建临时文件。"
 
 #: tournament/pairingengine.cpp:64
-#, fuzzy, kde-format
-#| msgid "Invalid pairing \"%1\"."
+#, kde-format
 msgctxt "@info"
 msgid "No valid pairing exists."
-msgstr "无效对阵“%1”。"
+msgstr ""
 
 #: tournament/pairingengine.cpp:67
 #, kde-format
@@ -1347,9 +1344,3 @@ msgstr "对阵“%2”时出现未知结果“%1”。"
 #, kde-format
 msgid "Pairing \"%1\" has no opponent."
 msgstr "对阵“%1”无对手。"
-
-#~ msgid "Pairing allocated bye"
-#~ msgstr "已分配轮空对阵"
-
-#~ msgid "The value of the pairing allocated bye"
-#~ msgstr "轮空对阵的积分权重"
