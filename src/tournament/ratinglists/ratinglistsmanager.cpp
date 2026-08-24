@@ -299,6 +299,10 @@ std::expected<uint, QString> RatingListsManager::processFile(RatingList *list, Q
         }
 
         const auto archiveFile = directory->file(directory->entries().constFirst());
+        if (!archiveFile->isFile() || archiveFile->name() != u"players_list_foa.txt"_s) {
+            return std::unexpected(i18nc("@info", "File format not supported."));
+        }
+
         const auto device = archiveFile->createDevice();
         QTextStream stream{device};
         device->deleteLater();
