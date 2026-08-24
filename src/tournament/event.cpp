@@ -243,7 +243,7 @@ std::expected<void, QString> Event::createTables()
 
 std::expected<int, QString> Event::dbVersion()
 {
-    QSqlQuery query(u"PRAGMA user_version;"_s, db());
+    QSqlQuery query(GET_USER_VERSION_QUERY, db());
 
     if (query.lastError().isValid()) {
         return std::unexpected(query.lastError().text());
@@ -255,7 +255,7 @@ std::expected<int, QString> Event::dbVersion()
 std::expected<void, QString> Event::setDbVersion(int version)
 {
     QSqlQuery query(db());
-    query.prepare(u"PRAGMA user_version = %1;"_s.arg(version)); // Can't bind in a PRAGMA statement
+    query.prepare(SET_USER_VERSION_QUERY.arg(version));
 
     if (!query.exec()) {
         return std::unexpected(query.lastError().text());

@@ -21,6 +21,7 @@
 #include <KLocalizedString>
 #include <KZip>
 
+#include "db.h"
 #include "fidereader.h"
 #include "htmlreader.h"
 #include "reader.h"
@@ -72,7 +73,22 @@ std::expected<QSqlDatabase, QString> RatingListsManager::openDatabase(const QStr
     }
 
     QSqlQuery query(db);
+    query.prepare(GET_USER_VERSION_QUERY);
+
+    if (!query.exec()) {
+        qWarning() << "get user version" << query.lastError().text();
+        return std::unexpected(query.lastError().text());
+    }
+
+    query.next();
+    if (query.value(0).toInt() >= 1) {
+        qDebug() << "Ratings database already migrated";
+        return db;
+    }
+
+    query = QSqlQuery(db);
     query.prepare(ENABLE_WAL_QUERY);
+
     if (!query.exec()) {
         qWarning() << "enable wal" << query.lastError().text();
         return std::unexpected(query.lastError().text());
@@ -115,6 +131,14 @@ std::expected<QSqlDatabase, QString> RatingListsManager::openDatabase(const QStr
 
     if (!query.exec()) {
         qWarning() << "Error creating ratings database idx_national_id" << query.lastError().text();
+        return std::unexpected(query.lastError().text());
+    }
+
+    query = QSqlQuery(db);
+    query.prepare(SET_USER_VERSION_QUERY.arg(1));
+
+    if (!query.exec()) {
+        qWarning() << "Error setting ratings database version" << query.lastError().text();
         return std::unexpected(query.lastError().text());
     }
 

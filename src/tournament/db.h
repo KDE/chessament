@@ -18,6 +18,10 @@ constexpr auto ENABLE_FOREIGN_KEYS_QUERY = "PRAGMA foreign_keys = ON;"_L1;
 
 const QString ENABLE_SECURE_DELETE_QUERY = u"PRAGMA secure_delete = ON;"_s;
 
+const QString GET_USER_VERSION_QUERY = u"PRAGMA user_version;"_s;
+
+const QString SET_USER_VERSION_QUERY = u"PRAGMA user_version = %1;"_s;
+
 const QString TOURNAMENTS_TABLE_SCHEMA =
     u"CREATE TABLE IF NOT EXISTS tournaments("_s
     u"id TEXT PRIMARY KEY"_s
