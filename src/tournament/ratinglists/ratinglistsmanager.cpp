@@ -42,7 +42,7 @@ QString RatingListsManager::databaseFolder()
 
 QString RatingListsManager::databasePath()
 {
-    return databaseFolder() % "/ratinglists.sqlite3"_L1;
+    return databaseFolder() % "/ratings.sqlite3"_L1;
 }
 
 std::expected<QSqlDatabase, QString> RatingListsManager::database(const QString &connectionName)
