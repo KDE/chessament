@@ -26,7 +26,7 @@ FormCard.FormCardDialog {
         type: Kirigami.MessageType.Warning
         text: KI18n.i18nc("@info", "Changing the initial ranking after the fourth round has been paired is not allowed in official tournaments.")
         visible: Controller.tournament.currentRound >= 4
-        implicitWidth: root.width
-        position: Kirigami.InlineMessage.Position.Header
+        Layout.fillWidth: true
+        Layout.margins: Kirigami.Units.largeSpacing
     }
 }
