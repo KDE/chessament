@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-16 00:40+0000\n"
+"POT-Creation-Date: 2026-08-25 00:41+0000\n"
 "PO-Revision-Date: 2026-03-11 16:01+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -807,7 +807,7 @@ msgctxt "@info:placeholder"
 msgid "No standings yet"
 msgstr "Ei vielä sijoituksia"
 
-#: qml/UpdateRatingsDialog.qml:17
+#: qml/UpdateRatingsDialog.qml:18
 #, fuzzy
 #| msgctxt "@title"
 #| msgid "Delete Rating List"
@@ -815,7 +815,15 @@ msgctxt "@title"
 msgid "Update Ratings"
 msgstr "Poista vahvuuslukuluettelo"
 
-#: qml/UpdateRatingsDialog.qml:25
+#: qml/UpdateRatingsDialog.qml:26
+#, fuzzy
+#| msgctxt "@info:status"
+#| msgid "No rating lists yet."
+msgctxt "@info"
+msgid "No rating lists available."
+msgstr "Ei vielä vahvuuslukuluetteloja."
+
+#: qml/UpdateRatingsDialog.qml:34
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "Delete rating list"
@@ -823,7 +831,7 @@ msgctxt "@label:listbox"
 msgid "Choose a rating list:"
 msgstr "Poista vahvuuslukuluettelo"
 
-#: qml/UpdateRatingsDialog.qml:35
+#: qml/UpdateRatingsDialog.qml:45
 msgctxt "@action:button Update players ratings"
 msgid "Update"
 msgstr ""
@@ -1284,15 +1292,15 @@ msgctxt "@title:window"
 msgid "Edit Tiebreak"
 msgstr "Muokkaa katkaisupeliä"
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:167
-#: tournament/ratinglists/ratinglistsmanager.cpp:200
+#: tournament/ratinglists/ratinglistsmanager.cpp:191
+#: tournament/ratinglists/ratinglistsmanager.cpp:224
 #, fuzzy, kde-format
 #| msgid "Couldn't open file"
 msgctxt "@info"
 msgid "Could not open file."
 msgstr "Tiedostoa ei voitu avata"
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:183
+#: tournament/ratinglists/ratinglistsmanager.cpp:207
 #, kde-format
 msgctxt "@info:progress"
 msgid "Imported one player."
@@ -1300,13 +1308,13 @@ msgid_plural "Imported %1 players."
 msgstr[0] "Tuotiin yksi pelaaja."
 msgstr[1] "Tuotiin %1 pelaajaa."
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:195
+#: tournament/ratinglists/ratinglistsmanager.cpp:219
 #, kde-format
 msgctxt "@info"
 msgid "Could not open file: the file does not exists."
 msgstr ""
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:216
+#: tournament/ratinglists/ratinglistsmanager.cpp:240
 #, fuzzy, kde-format
 #| msgctxt "@info:progress"
 #| msgid "Downloading file"
@@ -1314,7 +1322,7 @@ msgctxt "@info:progress"
 msgid "Downloading file…"
 msgstr "Ladataan tiedostoa"
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:232
+#: tournament/ratinglists/ratinglistsmanager.cpp:256
 #, fuzzy, kde-format
 #| msgctxt "@info:progress"
 #| msgid "Downloading file (%1 %)"
@@ -1326,7 +1334,7 @@ msgid ""
 "%1 / %2 (%3%)"
 msgstr "Ladataan tiedostoa (%1 %)"
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:244
+#: tournament/ratinglists/ratinglistsmanager.cpp:268
 #, fuzzy, kde-format
 #| msgctxt "@info"
 #| msgid "Couldn't download rating list: %1"
@@ -1334,7 +1342,7 @@ msgctxt "@info"
 msgid "Could not download rating list: %1"
 msgstr "Vahvuuslukuluetteloa ei voitu ladata: %1"
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:256
+#: tournament/ratinglists/ratinglistsmanager.cpp:280
 #, fuzzy, kde-format
 #| msgctxt "@info"
 #| msgid "Couldn't download rating list: %1"
@@ -1342,7 +1350,7 @@ msgctxt "@info"
 msgid "Could not download rating list from %1 (unsupported protocol)."
 msgstr "Vahvuuslukuluetteloa ei voitu ladata: %1"
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:269
+#: tournament/ratinglists/ratinglistsmanager.cpp:293
 #, fuzzy, kde-format
 #| msgctxt "@info"
 #| msgid "Couldn't extract file."
@@ -1350,14 +1358,15 @@ msgctxt "@info"
 msgid "Could not extract file."
 msgstr "Tiedostoa ei voitu purkaa."
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:274
-#: tournament/ratinglists/ratinglistsmanager.cpp:293
+#: tournament/ratinglists/ratinglistsmanager.cpp:298
+#: tournament/ratinglists/ratinglistsmanager.cpp:303
+#: tournament/ratinglists/ratinglistsmanager.cpp:321
 #, kde-format
 msgctxt "@info"
 msgid "File format not supported."
 msgstr "Tiedostomuotoa ei tueta."
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:482
+#: tournament/ratinglists/ratinglistsmanager.cpp:510
 #, kde-format
 msgctxt "@info:progress"
 msgid "Saved 1 player."
