@@ -108,6 +108,10 @@ Controls.MenuBar {
     }
 
     Controls.Menu {
+        title: KI18n.i18nc("@action:menu", "View")
+    }
+
+    Controls.Menu {
         title: KI18n.i18nc("@action:menu", "Tournament")
 
         Kirigami.Action {
