@@ -32,7 +32,7 @@ FormCard.FormCardPage {
         },
         Kirigami.Action {
             icon.name: "im-kick-user-symbolic"
-            text: KI18n.i18nc("@action:button", "Retire player")
+            text: KI18n.i18nc("@action:button Sets a zero-point bye for all remaining rounds for the player", "Retire Player")
             enabled: root.tournament.currentRound < root.tournament.numberOfRounds && !byesModel.hasRetired
             onTriggered: function (): void {
                 byesModel.retire();
