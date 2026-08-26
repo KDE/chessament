@@ -61,6 +61,12 @@ AC.ActionCollectionManager {
             text: KI18n.i18nc("@action:intoolbar", "Print…")
             defaultShortcut: "Ctrl+P"
         }
+
+        AC.ActionData {
+            name: "UpdatePlayers"
+            icon.name: "view-refresh-symbolic"
+            text: KI18n.i18nc("@action Update players ratings", "Update ratings…")
+        }
     }
 
     AC.ActionCollection {

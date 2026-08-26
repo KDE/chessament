@@ -123,16 +123,6 @@ TablePage {
             onTriggered: root.openPlayerDetails()
         },
         Kirigami.Action {
-            icon.name: "view-refresh-symbolic"
-            text: KI18n.i18nc("@action Update players ratings", "Update ratings…")
-            visible: Config.developer
-            enabled: root.tableView.rows > 0
-            onTriggered: {
-                const dialog = Qt.createComponent("org.kde.chessament", "UpdateRatingsDialog").createObject(root.Controls.ApplicationWindow.window, {}) as UpdateRatingsDialog;
-                dialog.open();
-            }
-        },
-        Kirigami.Action {
             icon.name: "view-sort-symbolic"
             text: KI18n.i18nc("@action:intoolbar", "Sort Players…")
             enabled: Controller.tournament.numberOfPlayers > 1
