@@ -38,6 +38,25 @@ void ByesModel::setPlayer(Player *player)
     Q_EMIT playerChanged();
 }
 
+bool ByesModel::hasRetired() const
+{
+    return m_tournament->hasRetired(m_player);
+}
+
+bool ByesModel::hasBye() const
+{
+    const auto pairings = m_tournament->pairingsOfPlayer(m_player);
+
+    bool result{false};
+
+    for (int i = m_tournament->currentRound(); i < m_tournament->numberOfRounds(); ++i) {
+        const auto pairing = pairings.at(i);
+        result |= pairing != nullptr && Pairing::isVoluntaryBye(pairing->whiteResult());
+    }
+
+    return result;
+}
+
 int ByesModel::rowCount(const QModelIndex &parent) const
 {
     Q_UNUSED(parent);
@@ -97,6 +116,9 @@ void ByesModel::setBye(int round, Pairing::PartialResult result)
         Q_EMIT errorOcurred(ok.error());
     }
 
+    Q_EMIT hasRetiredChanged();
+    Q_EMIT hasByeChanged();
+
     Q_EMIT dataChanged(index(0), index(rowCount() - 1));
 }
 
@@ -105,6 +127,21 @@ void ByesModel::retire()
     if (const auto ok = m_tournament->retire(m_player); !ok) {
         Q_EMIT errorOcurred(ok.error());
     }
+
+    Q_EMIT hasRetiredChanged();
+    Q_EMIT hasByeChanged();
+
+    Q_EMIT dataChanged(index(0), index(rowCount() - 1));
+}
+
+void ByesModel::incorpore()
+{
+    if (const auto ok = m_tournament->incorpore(m_player); !ok) {
+        Q_EMIT errorOcurred(ok.error());
+    }
+
+    Q_EMIT hasRetiredChanged();
+    Q_EMIT hasByeChanged();
 
     Q_EMIT dataChanged(index(0), index(rowCount() - 1));
 }

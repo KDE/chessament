@@ -18,6 +18,8 @@ class ByesModel : public QAbstractListModel
 
     Q_PROPERTY(Tournament *tournament READ tournament WRITE setTournament NOTIFY tournamentChanged)
     Q_PROPERTY(Player *player READ player WRITE setPlayer NOTIFY playerChanged)
+    Q_PROPERTY(bool hasRetired READ hasRetired NOTIFY hasRetiredChanged)
+    Q_PROPERTY(bool hasBye READ hasBye NOTIFY hasByeChanged)
 
 public:
     enum Roles {
@@ -31,12 +33,17 @@ public:
     Tournament *tournament();
     Player *player();
 
+    [[nodiscard]] bool hasRetired() const;
+
+    [[nodiscard]] bool hasBye() const;
+
     [[nodiscard]] int rowCount(const QModelIndex &parent = {}) const override;
     [[nodiscard]] QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
     [[nodiscard]] QHash<int, QByteArray> roleNames() const override;
 
     Q_INVOKABLE void setBye(int round, Pairing::PartialResult result);
     Q_INVOKABLE void retire();
+    Q_INVOKABLE void incorpore();
 
 public Q_SLOTS:
     void setTournament(Tournament *tournament);
@@ -45,6 +52,8 @@ public Q_SLOTS:
 Q_SIGNALS:
     void tournamentChanged();
     void playerChanged();
+    void hasRetiredChanged();
+    void hasByeChanged();
     void errorOcurred(const QString &error);
 
 private:

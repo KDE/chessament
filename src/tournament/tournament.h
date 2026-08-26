@@ -207,7 +207,11 @@ public:
 
     std::expected<void, QString> setBye(Player *player, int round, Pairing::PartialResult result);
 
+    bool hasRetired(Player *player);
+
     std::expected<void, QString> retire(Player *player);
+
+    std::expected<void, QString> incorpore(Player *player);
 
     Q_INVOKABLE [[nodiscard]] QList<Player *> voluntaryByes(int round) const;
 

@@ -725,10 +725,35 @@ std::expected<void, QString> Tournament::setBye(Player *player, int round, Pairi
     return savePairing(pairing);
 }
 
+bool Tournament::hasRetired(Player *player)
+{
+    const auto pairings = pairingsOfPlayer(player);
+
+    bool retired{true};
+
+    for (int i = m_currentRound; i < m_numberOfRounds; ++i) {
+        const auto pairing = pairings.at(i);
+        retired &= pairing != nullptr && Pairing::isVoluntaryBye(pairing->whiteResult());
+    }
+
+    return retired;
+}
+
 std::expected<void, QString> Tournament::retire(Player *player)
 {
     for (int i = m_currentRound + 1; i <= m_numberOfRounds; ++i) {
         if (const auto ok = setBye(player, i, Pairing::PartialResult::ZeroBye); !ok) {
+            return ok;
+        }
+    }
+
+    return {};
+}
+
+std::expected<void, QString> Tournament::incorpore(Player *player)
+{
+    for (int i = m_currentRound + 1; i <= m_numberOfRounds; ++i) {
+        if (const auto ok = setBye(player, i, Pairing::PartialResult::Unknown); !ok) {
             return ok;
         }
     }

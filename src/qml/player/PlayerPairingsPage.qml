@@ -22,10 +22,19 @@ FormCard.FormCardPage {
 
     actions: [
         Kirigami.Action {
+            icon.name: "user-available-symbolic"
+            text: KI18n.i18nc("@action:button Removes all the voluntary byes of the player for the upcoming rounds", "Reinstate Player")
+            enabled: root.tournament.currentRound < root.tournament.numberOfRounds && byesModel.hasBye
+            onTriggered: function (): void {
+                byesModel.incorpore();
+                Controller.reloadPairings(Controller.currentRound);
+            }
+        },
+        Kirigami.Action {
             icon.name: "im-kick-user-symbolic"
             text: KI18n.i18nc("@action:button", "Retire player")
-            enabled: root.tournament.currentRound < root.tournament.numberOfRounds
-            onTriggered: {
+            enabled: root.tournament.currentRound < root.tournament.numberOfRounds && !byesModel.hasRetired
+            onTriggered: function (): void {
                 byesModel.retire();
                 Controller.reloadPairings(Controller.currentRound);
             }
