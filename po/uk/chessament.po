@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-25 00:41+0000\n"
-"PO-Revision-Date: 2026-08-16 14:18+0300\n"
+"PO-Revision-Date: 2026-08-25 08:43+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -772,12 +772,9 @@ msgid "Update Ratings"
 msgstr "Оновити рейтинги"
 
 #: qml/UpdateRatingsDialog.qml:26
-#, fuzzy
-#| msgctxt "@info:status"
-#| msgid "No rating lists yet."
 msgctxt "@info"
 msgid "No rating lists available."
-msgstr "Рейтингових списків ще немає."
+msgstr "Немає доступних рейтингових списків."
 
 #: qml/UpdateRatingsDialog.qml:34
 msgctxt "@label:listbox"

@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-25 00:41+0000\n"
-"PO-Revision-Date: 2026-08-16 18:16+0300\n"
+"PO-Revision-Date: 2026-08-25 19:48+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -765,12 +765,9 @@ msgid "Update Ratings"
 msgstr "Derecelendirmeleri Güncelle"
 
 #: qml/UpdateRatingsDialog.qml:26
-#, fuzzy
-#| msgctxt "@info:status"
-#| msgid "No rating lists yet."
 msgctxt "@info"
 msgid "No rating lists available."
-msgstr "Henüz derecelendirme listesi yok."
+msgstr "Kullanılabilir derecelendirme listesi yok."
 
 #: qml/UpdateRatingsDialog.qml:34
 msgctxt "@label:listbox"
