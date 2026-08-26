@@ -68,7 +68,6 @@ ecm_add_qml_module(chessament_static
         org.kde.kirigami.actioncollection
         org.kde.ki18n
         org.kde.kirigamiaddons.formcard
-        org.kde.kirigamiaddons.statefulapp
         org.kde.chessament.tournament
         org.kde.chessament.settings
 )
@@ -100,7 +99,6 @@ target_link_libraries(chessament_static PUBLIC
     KF6::ItemModels
     KF6::KIOWidgets
     KF6::KirigamiActionCollection
-    KirigamiAddonsStatefulApp
     QCoro6::Core
     QCoro6::Qml
 )

@@ -158,7 +158,6 @@ ecm_find_qmlmodule(org.kde.kirigamiaddons.components REQUIRED)
 ecm_find_qmlmodule(org.kde.kirigamiaddons.delegates REQUIRED)
 ecm_find_qmlmodule(org.kde.kirigamiaddons.formcard REQUIRED)
 ecm_find_qmlmodule(org.kde.kirigamiaddons.settings REQUIRED)
-ecm_find_qmlmodule(org.kde.kirigamiaddons.statefulapp REQUIRED)
 ecm_find_qmlmodule(org.kde.kitemmodels REQUIRED)
 
 add_subdirectory(src)
