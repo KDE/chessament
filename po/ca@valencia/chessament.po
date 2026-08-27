@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-25 00:41+0000\n"
+"POT-Creation-Date: 2026-08-27 00:41+0000\n"
 "PO-Revision-Date: 2026-08-25 08:27+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -19,29 +19,11 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 26.08.0\n"
 
-#: byesmodel.cpp:66
+#: byesmodel.cpp:85
 #, kde-format
 msgctxt "Pieces Color · Player Name"
 msgid "%1 · %2"
 msgstr "%1 · %2"
-
-#: chessamentapplication.cpp:24
-#, kde-format
-msgctxt "@action:inmenu"
-msgid "New tournament…"
-msgstr "Torneig nou…"
-
-#: chessamentapplication.cpp:45
-#, kde-format
-msgctxt "@action:inmenu"
-msgid "Import tournament report…"
-msgstr "Importa un informe de torneig…"
-
-#: chessamentapplication.cpp:54
-#, kde-format
-msgctxt "@action:inmenu"
-msgid "Export tournament report…"
-msgstr "Exporta un informe de torneig…"
 
 #: controller.cpp:187
 #, kde-format
@@ -256,6 +238,54 @@ msgctxt "@title:column Player Gender"
 msgid "Gender"
 msgstr "Gènere"
 
+#: qml/ActionCollection.qml:12 qml/components/MenuBar.qml:30
+msgctxt "@action:menu"
+msgid "File"
+msgstr "Fitxer"
+
+#: qml/ActionCollection.qml:17
+msgctxt "@action:inmenu"
+msgid "New tournament…"
+msgstr "Torneig nou…"
+
+#: qml/ActionCollection.qml:32
+msgctxt "@action:inmenu"
+msgid "Import tournament report…"
+msgstr "Importa un informe de torneig…"
+
+#: qml/ActionCollection.qml:39
+msgctxt "@action:inmenu"
+msgid "Export tournament report…"
+msgstr "Exporta un informe de torneig…"
+
+#: qml/ActionCollection.qml:49 qml/components/MenuBar.qml:115
+#, fuzzy
+#| msgctxt "@label:textbox"
+#| msgid "Tournament name"
+msgctxt "@action:menu"
+msgid "Tournament"
+msgstr "Nom del torneig"
+
+#: qml/ActionCollection.qml:54
+msgctxt "@action:intoolbar"
+msgid "Add Player…"
+msgstr "Afig un jugador…"
+
+#: qml/ActionCollection.qml:61
+msgctxt "@action:intoolbar"
+msgid "Print…"
+msgstr "Imprimix…"
+
+#: qml/ActionCollection.qml:68
+msgctxt "@action Update players ratings"
+msgid "Update ratings…"
+msgstr "Actualitza les puntuacions…"
+
+#: qml/ActionCollection.qml:74 qml/components/MenuBar.qml:149
+msgctxt "@action:menu"
+msgid "Help"
+msgstr "Ajuda"
+
 #: qml/AddPlayerDialog.qml:19
 msgctxt "@title:window"
 msgid "Add player"
@@ -357,25 +387,26 @@ msgctxt "@action:button"
 msgid "Delete arbiter"
 msgstr "Suprimix l'àrbitre"
 
-#: qml/components/MenuBar.qml:17
-msgctxt "@action:menu"
-msgid "File"
-msgstr "Fitxer"
+#: qml/components/MenuBar.qml:50 qml/components/MenuBar.qml:65
+#: qml/NewTournamentDialog.qml:51
+msgctxt "@label:listbox"
+msgid "Chessament event (*.chessament)"
+msgstr "Esdeveniment de Chessament (*chessament)"
 
-#: qml/components/MenuBar.qml:43
+#: qml/components/MenuBar.qml:78 qml/components/MenuBar.qml:93
+msgctxt "@label:listbox"
+msgid "TRF files (*.trf *.txt)"
+msgstr "Fitxers TRF (*.trf *.txt)"
+
+#: qml/components/MenuBar.qml:111
 msgctxt "@action:menu"
 msgid "View"
 msgstr "Vista"
 
-#: qml/components/MenuBar.qml:51
+#: qml/components/MenuBar.qml:129
 msgctxt "@action:menu"
 msgid "Settings"
 msgstr "Configuració"
-
-#: qml/components/MenuBar.qml:62
-msgctxt "@action:menu"
-msgid "Help"
-msgstr "Ajuda"
 
 #: qml/components/TiebreakDelegate.qml:33
 #: qml/components/TiebreakDelegate.qml:38
@@ -463,27 +494,17 @@ msgctxt "@action:button Delete Player"
 msgid "Delete"
 msgstr "Suprimix"
 
-#: qml/Main.qml:22
+#: qml/Main.qml:17
 msgctxt "@title:window"
 msgid "%1 — Chessament"
 msgstr "%1 — Chessament"
 
-#: qml/Main.qml:22
+#: qml/Main.qml:17
 msgctxt "@title:window"
 msgid "Chessament"
 msgstr "Chessament"
 
-#: qml/Main.qml:52 qml/Main.qml:62 qml/NewTournamentDialog.qml:51
-msgctxt "@label:listbox"
-msgid "Chessament event (*.chessament)"
-msgstr "Esdeveniment de Chessament (*chessament)"
-
-#: qml/Main.qml:71 qml/Main.qml:81
-msgctxt "@label:listbox"
-msgid "TRF files (*.trf *.txt)"
-msgstr "Fitxers TRF (*.trf *.txt)"
-
-#: qml/Main.qml:115 settings/AddRatingListDialog.qml:59
+#: qml/Main.qml:51 settings/AddRatingListDialog.qml:59
 msgctxt "@title"
 msgid "Error"
 msgstr "S'ha produït un error"
@@ -513,22 +534,17 @@ msgctxt "@label"
 msgid "Number of rounds"
 msgstr "Nombre de rondes"
 
-#: qml/PairingsPage.qml:51 qml/PlayersPage.qml:47 qml/StandingsPage.qml:54
+#: qml/PairingsPage.qml:52 qml/PlayersPage.qml:48 qml/StandingsPage.qml:55
 msgctxt "@label:listbox"
 msgid "PDF document (*.pdf)"
 msgstr "Document PDF (*.pdf)"
 
-#: qml/PairingsPage.qml:59
+#: qml/PairingsPage.qml:60
 msgctxt "@option:check"
 msgid "Hide finished games"
 msgstr "Oculta les partides finalitzades"
 
-#: qml/PairingsPage.qml:72 qml/PlayersPage.qml:146 qml/StandingsPage.qml:63
-msgctxt "@action:intoolbar"
-msgid "Print…"
-msgstr "Imprimix…"
-
-#: qml/PairingsPage.qml:78 qml/PlayersPage.qml:151 qml/StandingsPage.qml:69
+#: qml/PairingsPage.qml:78 qml/PlayersPage.qml:142 qml/StandingsPage.qml:70
 msgctxt "@action:intoolbar"
 msgid "Export as PDF…"
 msgstr "Exporta com a PDF…"
@@ -627,86 +643,90 @@ msgid "Pairings"
 msgstr "Aparellaments"
 
 #: qml/player/PlayerPairingsPage.qml:26
-msgctxt "@action:button"
-msgid "Retire player"
+#, fuzzy
+#| msgctxt "@title:column Name of the White Player"
+#| msgid "White Player"
+msgctxt ""
+"@action:button Removes all the voluntary byes of the player for the upcoming "
+"rounds"
+msgid "Reinstate Player"
+msgstr "Jugador de blanques"
+
+#: qml/player/PlayerPairingsPage.qml:35
+#, fuzzy
+#| msgctxt "@action:button"
+#| msgid "Retire player"
+msgctxt ""
+"@action:button Sets a zero-point bye for all remaining rounds for the player"
+msgid "Retire Player"
 msgstr "Retira el jugador"
 
-#: qml/player/PlayerPairingsPage.qml:46
+#: qml/player/PlayerPairingsPage.qml:55
 msgctxt "@item:inlistbox Available to play"
 msgid "Available"
 msgstr "Disponible"
 
-#: qml/player/PlayerPairingsPage.qml:83
+#: qml/player/PlayerPairingsPage.qml:92
 #: tournament/qml/SettingsFormatPage.qml:45
 msgctxt "@title:group"
 msgid "Pairings"
 msgstr "Aparellaments"
 
-#: qml/player/PlayerPairingsPage.qml:108
+#: qml/player/PlayerPairingsPage.qml:117
 msgctxt "@info:label"
 msgid "Round %1"
 msgstr "Ronda %1"
 
-#: qml/PlayersPage.qml:120
+#: qml/PlayersPage.qml:121
 msgctxt "@action:intoolbar Open player details"
 msgid "Details…"
 msgstr "Detalls…"
 
-#: qml/PlayersPage.qml:126
-msgctxt "@action Update players ratings"
-msgid "Update ratings…"
-msgstr "Actualitza les puntuacions…"
-
-#: qml/PlayersPage.qml:136
+#: qml/PlayersPage.qml:127
 msgctxt "@action:intoolbar"
 msgid "Sort Players…"
 msgstr "Ordena els jugadors…"
 
-#: qml/PlayersPage.qml:157
-msgctxt "@action:intoolbar"
-msgid "Add Player…"
-msgstr "Afig un jugador…"
-
-#: qml/PlayersPage.qml:168
+#: qml/PlayersPage.qml:158
 msgctxt "@action:inmenu"
 msgid "Open Player Details"
 msgstr "Obri els detalls del jugador"
 
-#: qml/PlayersPage.qml:174
+#: qml/PlayersPage.qml:164
 msgctxt "@action:inmenu"
 msgid "Delete Player…"
 msgstr "Suprimix un jugador…"
 
-#: qml/PlayersPage.qml:194
+#: qml/PlayersPage.qml:184
 msgctxt "@info:placeholder"
 msgid "No players found"
 msgstr "No s'ha trobat cap jugador"
 
-#: qml/PlayersPage.qml:194
+#: qml/PlayersPage.qml:184
 msgctxt "@info:placeholder"
 msgid "No players yet"
 msgstr "Encara no hi ha cap jugador"
 
-#: qml/PlayersPage.qml:198
+#: qml/PlayersPage.qml:188
 msgctxt "@action:button"
 msgid "Add Player…"
 msgstr "Afig un jugador…"
 
-#: qml/PlayersPage.qml:217
+#: qml/PlayersPage.qml:207
 msgctxt "@info:status Number of players"
 msgid "1 player"
 msgid_plural "%1 players"
 msgstr[0] "1 jugador"
 msgstr[1] "%1 jugadors"
 
-#: qml/PlayersPage.qml:218
+#: qml/PlayersPage.qml:208
 msgctxt "@info:status Number of rated players"
 msgid "1 rated"
 msgid_plural "%1 rated"
 msgstr[0] "1 avaluat"
 msgstr[1] "%1 avaluats"
 
-#: qml/PlayersPage.qml:220
+#: qml/PlayersPage.qml:210
 msgctxt "@info:status Total number of players (Number of players rated)"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
@@ -716,19 +736,19 @@ msgctxt "@action:intoolbar Other game results"
 msgid "Other"
 msgstr "Altres"
 
-#: qml/Sidebar.qml:50
+#: qml/Sidebar.qml:49
 msgid "Players"
 msgstr "Jugadors"
 
-#: qml/Sidebar.qml:58
+#: qml/Sidebar.qml:57
 msgid "Pairings"
 msgstr "Aparellaments"
 
-#: qml/Sidebar.qml:66
+#: qml/Sidebar.qml:65
 msgid "Standings"
 msgstr "Classificació"
 
-#: qml/Sidebar.qml:85
+#: qml/Sidebar.qml:84
 msgctxt "@action:button"
 msgid "Settings"
 msgstr "Configuració"
@@ -747,17 +767,17 @@ msgstr ""
 "No està permés canviar el rànquing inicial després que s'haja aparellat la "
 "quarta ronda en tornejos oficials."
 
-#: qml/StandingsPage.qml:82 qml/StandingsPage.qml:92
+#: qml/StandingsPage.qml:83 qml/StandingsPage.qml:93
 msgctxt "@item:inlistbox"
 msgid "Final Standings"
 msgstr "Classificació final"
 
-#: qml/StandingsPage.qml:84 qml/StandingsPage.qml:94
+#: qml/StandingsPage.qml:85 qml/StandingsPage.qml:95
 msgctxt "@item:inlistbox Standings After Round %1"
 msgid "After Round %1"
 msgstr "Després de la ronda %1"
 
-#: qml/StandingsPage.qml:141
+#: qml/StandingsPage.qml:142
 msgctxt "@info:placeholder"
 msgid "No standings yet"
 msgstr "Encara no hi ha cap classificació"
@@ -804,22 +824,22 @@ msgctxt "%1 is the player's rating, %2 is the player's origin"
 msgid "Rating: %1 · %2"
 msgstr "Puntuació: %1 · %2"
 
-#: settings/AccountsPage.qml:21
+#: settings/AccountsPage.qml:19
 msgctxt "@title"
 msgid "Accounts"
 msgstr "Comptes"
 
-#: settings/AccountsPage.qml:24
+#: settings/AccountsPage.qml:22
 msgctxt "@title:group"
 msgid "Accounts"
 msgstr "Comptes"
 
-#: settings/AccountsPage.qml:45
+#: settings/AccountsPage.qml:43
 msgctxt "@action:button"
 msgid "Logout"
 msgstr "Eixida"
 
-#: settings/AccountsPage.qml:56
+#: settings/AccountsPage.qml:54
 msgctxt "@action:button"
 msgid "Add Account"
 msgstr "Afig un compte"
@@ -879,17 +899,17 @@ msgctxt "@action:button"
 msgid "Import"
 msgstr "Importa"
 
-#: settings/ChessamentConfigurationView.qml:21
+#: settings/ChessamentConfigurationView.qml:19
 msgctxt "@action:button"
 msgid "General"
 msgstr "General"
 
-#: settings/ChessamentConfigurationView.qml:32
+#: settings/ChessamentConfigurationView.qml:25
 msgctxt "@action:button"
 msgid "Accounts"
 msgstr "Comptes"
 
-#: settings/ChessamentConfigurationView.qml:44
+#: settings/ChessamentConfigurationView.qml:32
 msgctxt "@action:button"
 msgid "Rating Lists"
 msgstr "Llistes de puntuació"
@@ -909,42 +929,42 @@ msgctxt "@action:button Delete Rating List"
 msgid "Delete"
 msgstr "Suprimix"
 
-#: settings/GeneralPage.qml:16
+#: settings/GeneralPage.qml:14
 msgctxt "@title"
 msgid "General"
 msgstr "General"
 
-#: settings/GeneralPage.qml:19
+#: settings/GeneralPage.qml:17
 msgctxt "@title:group"
 msgid "General"
 msgstr "General"
 
-#: settings/GeneralPage.qml:24
+#: settings/GeneralPage.qml:22
 msgctxt "@option:check"
 msgid "Automatically open exported PDF files"
 msgstr "Obri automàticament els fitxers PDF exportats"
 
-#: settings/RatingListsPage.qml:21 settings/RatingListsPage.qml:24
+#: settings/RatingListsPage.qml:19 settings/RatingListsPage.qml:22
 msgctxt "@title"
 msgid "Rating Lists"
 msgstr "Llistes de puntuació"
 
-#: settings/RatingListsPage.qml:29
+#: settings/RatingListsPage.qml:27
 msgctxt "@info:status"
 msgid "No rating lists yet."
 msgstr "Encara no hi ha cap llista de puntuació."
 
-#: settings/RatingListsPage.qml:49
+#: settings/RatingListsPage.qml:47
 msgctxt "@action:button"
 msgid "Delete Rating List"
 msgstr "Suprimix la llista de puntuació"
 
-#: settings/RatingListsPage.qml:61
+#: settings/RatingListsPage.qml:59
 msgctxt "@action:button"
 msgid "Delete rating list"
 msgstr "Suprimix la llista de puntuació"
 
-#: settings/RatingListsPage.qml:71
+#: settings/RatingListsPage.qml:69
 msgctxt "@action:button"
 msgid "Add rating list"
 msgstr "Afig una llista de puntuació"
@@ -1331,12 +1351,12 @@ msgctxt ""
 msgid "Number of Games Won (over the board)"
 msgstr "Nombre de partides guanyades (sobre el tauler)"
 
-#: tournament/tournament.cpp:956
+#: tournament/tournament.cpp:981
 #, kde-format
 msgid "An error ocurred while pairing the round: %1"
 msgstr "S'ha produït un error en aparellar la ronda: %1"
 
-#: tournament/tournament.cpp:1181
+#: tournament/tournament.cpp:1206
 #, kde-format
 msgid "Couldn't open file"
 msgstr "No s'ha pogut obrir el fitxer"
