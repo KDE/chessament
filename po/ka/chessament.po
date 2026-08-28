@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-27 00:41+0000\n"
-"PO-Revision-Date: 2026-08-25 06:25+0200\n"
+"PO-Revision-Date: 2026-08-27 04:03+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -27,7 +27,7 @@ msgstr "%1 · %2"
 #: controller.cpp:187
 #, kde-format
 msgid "Couldn't export tournament."
-msgstr "ტურნამენტის გატანა შეუძლებელია."
+msgstr "ტურნირის გატანა შეუძლებელია."
 
 #: documents.cpp:23
 #, kde-format
@@ -114,7 +114,7 @@ msgstr "შვეიცარიული სისტემის საჭა�
 #, kde-format
 msgctxt "Command line option description"
 msgid "Import Tournament Report File."
-msgstr "ტურნამენტის ანგარიშის ფაილის შემოტანა."
+msgstr "ტურნირის ანგარიშის ფაილის შემოტანა."
 
 #: main.cpp:87
 #, kde-format
@@ -249,20 +249,17 @@ msgstr "ახალი ტურნირი…"
 #: qml/ActionCollection.qml:32
 msgctxt "@action:inmenu"
 msgid "Import tournament report…"
-msgstr "ტურნამენტის ანგარიშის შემოტანა…"
+msgstr "ტურნირის ანგარიშის შემოტანა…"
 
 #: qml/ActionCollection.qml:39
 msgctxt "@action:inmenu"
 msgid "Export tournament report…"
-msgstr "ტურნამენტის ანგარიშის გატანა…"
+msgstr "ტურნირის ანგარიშის გატანა…"
 
 #: qml/ActionCollection.qml:49 qml/components/MenuBar.qml:115
-#, fuzzy
-#| msgctxt "@label:textbox"
-#| msgid "Tournament name"
 msgctxt "@action:menu"
 msgid "Tournament"
-msgstr "ტურნამენტის სახელი"
+msgstr "ტურნირი"
 
 #: qml/ActionCollection.qml:54
 msgctxt "@action:intoolbar"
@@ -641,19 +638,13 @@ msgid "Pairings"
 msgstr "წყვილები"
 
 #: qml/player/PlayerPairingsPage.qml:26
-#, fuzzy
-#| msgctxt "@title:column Name of the White Player"
-#| msgid "White Player"
 msgctxt ""
 "@action:button Removes all the voluntary byes of the player for the upcoming "
 "rounds"
 msgid "Reinstate Player"
-msgstr "თეთრი მოთამაშე"
+msgstr "მოთამაშის აღდგენა"
 
 #: qml/player/PlayerPairingsPage.qml:35
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Retire player"
 msgctxt ""
 "@action:button Sets a zero-point bye for all remaining rounds for the player"
 msgid "Retire Player"
@@ -1182,7 +1173,7 @@ msgstr "ძირითადი დეტალები"
 #: tournament/qml/SettingsInformationPage.qml:27
 msgctxt "@label:textbox"
 msgid "Tournament name"
-msgstr "ტურნამენტის სახელი"
+msgstr "ტურნირის სახელი"
 
 #: tournament/qml/SettingsInformationPage.qml:36
 msgctxt "@label:textbox"
