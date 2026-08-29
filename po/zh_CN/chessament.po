@@ -256,12 +256,9 @@ msgid "Export tournament report…"
 msgstr "导出比赛报告..."
 
 #: qml/ActionCollection.qml:49 qml/components/MenuBar.qml:115
-#, fuzzy
-#| msgctxt "@label:textbox"
-#| msgid "Tournament name"
 msgctxt "@action:menu"
 msgid "Tournament"
-msgstr "比赛名称"
+msgstr ""
 
 #: qml/ActionCollection.qml:54
 msgctxt "@action:intoolbar"
@@ -639,23 +636,17 @@ msgid "Pairings"
 msgstr ""
 
 #: qml/player/PlayerPairingsPage.qml:26
-#, fuzzy
-#| msgctxt "@title:column Name of the White Player"
-#| msgid "White Player"
 msgctxt ""
 "@action:button Removes all the voluntary byes of the player for the upcoming "
 "rounds"
 msgid "Reinstate Player"
-msgstr "执白"
+msgstr ""
 
 #: qml/player/PlayerPairingsPage.qml:35
-#, fuzzy
-#| msgctxt "@title:column Name of the White Player"
-#| msgid "White Player"
 msgctxt ""
 "@action:button Sets a zero-point bye for all remaining rounds for the player"
 msgid "Retire Player"
-msgstr "执白"
+msgstr ""
 
 #: qml/player/PlayerPairingsPage.qml:55
 msgctxt "@item:inlistbox Available to play"
