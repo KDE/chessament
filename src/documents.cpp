@@ -59,7 +59,7 @@ std::unique_ptr<Document> Controller::pairingsDocument()
     auto doc = std::make_unique<Document>();
 
     doc->addTitle(1, m_tournament->name());
-    doc->addTitle(2, i18nc("@title", "Round %1 Pairings", m_currentRound));
+    doc->addTitle(2, i18ncp("@title %1 is a number", "Round %1 Pairings", "Round %1 Pairings", m_currentRound));
 
     PairingModel model;
     model.setPairings(m_tournament->pairings(m_currentRound));
@@ -100,9 +100,9 @@ std::unique_ptr<Document> Controller::standingsDocument(int round)
     QString title;
     if (round < m_tournament->numberOfRounds()) {
         if (m_tournament->isRoundFinished(round)) {
-            title = i18nc("@title", "Standings After Round %1", round);
+            title = i18ncp("@title", "Standings After Round %1", "Standings After Round %1", round);
         } else {
-            title = i18nc("@title", "Provisional Standings After Round %1", round);
+            title = i18ncp("@title", "Provisional Standings After Round %1", "Provisional Standings After Round %1", round);
         }
     } else {
         if (m_tournament->isRoundFinished(round)) {

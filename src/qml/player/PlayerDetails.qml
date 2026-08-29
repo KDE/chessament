@@ -14,7 +14,7 @@ KirigamiSettings.ConfigurationView {
     required property Tournament tournament
     required property Player player
 
-    title: KI18n.i18nc("@title:window", "Details of player \"%1\"", player.name)
+    title: KI18n.i18nc("@title:window", "Details of player “%1”", player.name)
 
     modules: [
         KirigamiSettings.ConfigurationModule {

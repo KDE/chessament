@@ -82,7 +82,7 @@ TablePage {
                     if (currentIndex === roundSelector.count - 1) {
                         return KI18n.i18nc("@item:inlistbox", "Final Standings");
                     }
-                    return KI18n.i18nc("@item:inlistbox Standings After Round %1", "After Round %1", currentIndex + 1);
+                    return KI18n.i18ncp("@item:inlistbox Standings After Round %1", "After Round %1", "After Round %1", currentIndex + 1);
                 }
                 flat: true
                 delegate: Controls.ItemDelegate {
@@ -92,7 +92,7 @@ TablePage {
                         if (index === roundSelector.count - 1) {
                             return KI18n.i18nc("@item:inlistbox", "Final Standings");
                         }
-                        return KI18n.i18nc("@item:inlistbox Standings After Round %1", "After Round %1", index + 1);
+                        return KI18n.i18ncp("@item:inlistbox Standings After Round %1", "After Round %1", "After Round %1", index + 1);
                     }
                     highlighted: roundSelector.highlightedIndex === index
                 }

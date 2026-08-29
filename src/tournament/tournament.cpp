@@ -1203,7 +1203,7 @@ std::expected<void, QString> Tournament::loadTrf(const QString &fileName)
     QFile file(fileName);
 
     if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
-        return std::unexpected(i18n("Couldn't open file"));
+        return std::unexpected(i18n("Couldn’t open file"));
     }
 
     return readTrf(QTextStream(&file));

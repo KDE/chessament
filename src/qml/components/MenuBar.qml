@@ -75,7 +75,7 @@ Controls.MenuBar {
             AC.ActionCollection.collection: "org.kde.chessament.file"
             onTriggered: {
                 const dialog = fileDialog.createObject(Controls.Overlay.overlay);
-                dialog.nameFilters = [KI18n.i18nc("@label:listbox", "TRF files (*.trf *.txt)")];
+                dialog.nameFilters = [KI18n.i18nc("@label:listbox", "TRF files (*.trf, *.txt)")];
                 dialog.accepted.connect(() => {
                     Controller.importTrf(dialog.selectedFile);
                 });
@@ -90,7 +90,7 @@ Controls.MenuBar {
             onTriggered: {
                 const dialog = fileDialog.createObject(Controls.Overlay.overlay);
                 dialog.fileMode = Dialogs.FileDialog.SaveFile;
-                dialog.nameFilters = [KI18n.i18nc("@label:listbox", "TRF files (*.trf *.txt)")];
+                dialog.nameFilters = [KI18n.i18nc("@label:listbox", "TRF files (*.trf, *.txt)")];
                 dialog.accepted.connect(() => {
                     Controller.exportTrf(dialog.selectedFile);
                 });

@@ -85,12 +85,12 @@ TablePage {
                 id: roundSelector
                 model: Controller.tournament.numberOfRounds
                 currentIndex: Controller.currentRound - 1
-                displayText: KI18n.i18n("Round %1", currentIndex + 1)
+                displayText: KI18n.i18np("Round %1", "Round %1", currentIndex + 1)
                 flat: true
                 delegate: Controls.ItemDelegate {
                     required property int index
 
-                    text: KI18n.i18n("Round %1", index + 1)
+                    text: KI18n.i18np("Round %1", "Round %1", index + 1)
                     highlighted: roundSelector.highlightedIndex === index
                 }
                 onActivated: index => {
@@ -116,11 +116,11 @@ TablePage {
 
     header: Kirigami.InlineMessage {
         position: Kirigami.InlineMessage.Position.Header
-        text: Controller.tournament.currentRound === 0 ? KI18n.i18nc("@info", "The tournament hasn't started yet.") : KI18n.i18nc("@info", "Round %1 has finished.", Controller.tournament.currentRound)
+        text: Controller.tournament.currentRound === 0 ? KI18n.i18nc("@info", "The tournament hasn’t started yet.") : KI18n.i18ncp("@info", "Round %1 has finished.", "Round %1 has finished.", Controller.tournament.currentRound)
         visible: Controller.tournament.numberOfPlayers > 0 && (Controller.tournament.currentRound + 1 <= Controller.tournament.numberOfRounds) && Controller.hasCurrentRoundFinished
         actions: [
             Kirigami.Action {
-                text: KI18n.i18nc("@action:button", "Pair Round %1…", Controller.tournament.currentRound + 1)
+                text: KI18n.i18ncp("@action:button", "Pair Round %1…", "Pair Round %1…", Controller.tournament.currentRound + 1)
                 onTriggered: {
                     const dialog = Qt.createComponent("org.kde.chessament", "PairRoundDialog").createObject(root.Controls.ApplicationWindow.window, {}) as PairRoundDialog;
                     dialog.open();
@@ -164,9 +164,9 @@ TablePage {
         width: parent.width - Kirigami.Units.gridUnit * 4
         text: {
             if (proxyModel.sourceModel.rowCount() === 0) {
-                return KI18n.i18nc("@info:placeholder", "No pairings for round %1 yet", Controller.currentRound);
+                return KI18n.i18ncp("@info:placeholder", "No pairings for Round %1 yet", "No pairings for Round %1 yet", Controller.currentRound);
             }
-            return KI18n.i18nc("@info:placeholder", "All games of round %1 have finished", Controller.currentRound);
+            return KI18n.i18ncp("@info:placeholder", "All games of Round %1 have finished", "All games of Round %1 have finished", Controller.currentRound);
         }
         visible: proxyModel.count === 0
     }

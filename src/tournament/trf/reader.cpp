@@ -51,20 +51,20 @@ std::expected<void, QString> TrfReader::read(QTextStream *trf)
         const auto result = pairing.value();
 
         if (!m_players.contains(key.white)) {
-            return std::unexpected(i18n("Player \"%1\" not found.", key.white));
+            return std::unexpected(i18n("Player “%1” not found.", key.white));
         }
         const auto whitePlayer = m_players.value(key.white);
 
         Player *blackPlayer = nullptr;
         if (key.black != 0) {
             if (!m_players.contains(key.black)) {
-                return std::unexpected(i18n("Player \"%1\" not found.", key.black));
+                return std::unexpected(i18n("Player “%1” not found.", key.black));
             }
             blackPlayer = m_players.value(key.black);
         }
 
         if (result.first == Pairing::PartialResult::Unknown && result.second == Pairing::PartialResult::Unknown) {
-            return std::unexpected(i18n("Unknown result on pairing \"%1\" with \"%2\".", QString::number(key.white), QString::number(key.black)));
+            return std::unexpected(i18n("Unknown result on pairing “%1” with “%2”.", QString::number(key.white), QString::number(key.black)));
         }
         auto par = std::make_unique<Pairing>(1, whitePlayer, blackPlayer, pairing.value().first, pairing.value().second);
 
@@ -186,7 +186,7 @@ std::expected<void, QString> TrfReader::readDates(QStringView line)
 
         const auto date = QDateTime::fromString(dateString.trimmed(), Trf::RoundDateFormat, 2000);
         if (!date.isValid()) {
-            return std::unexpected(i18nc("@info", "Date \"%1\" is invalid.", dateString.toString()));
+            return std::unexpected(i18nc("@info", "Date “%1” is invalid.", dateString.toString()));
         }
 
         if (const auto ok = m_tournament->ensureRoundExists(i + 1); !ok) {
@@ -240,7 +240,7 @@ std::expected<void, QString> TrfReader::readPlayer(QStringView line)
 std::expected<void, QString> TrfReader::readPairing(int startingRank, int round, QStringView text)
 {
     if (text.size() != 8) {
-        return std::unexpected(i18n("Invalid pairing \"%1\".", text.toString()));
+        return std::unexpected(i18n("Invalid pairing “%1”.", text.toString()));
     }
 
     TrfReader::pairing pairing;
@@ -253,17 +253,17 @@ std::expected<void, QString> TrfReader::readPairing(int startingRank, int round,
         bool ok;
         opponentId = opponent.toInt(&ok);
         if (!ok || opponentId <= 0) {
-            return std::unexpected(i18n("Invalid player \"%1\" on pairing \"%2\".", QString::number(opponentId), text.toString()));
+            return std::unexpected(i18n("Invalid player “%1” on pairing “%2”.", QString::number(opponentId), text.toString()));
         }
     }
 
     auto color = Pairing::colorForString(text.at(5));
     auto result = Pairing::partialResultForTRF(text.at(7));
     if (result == Pairing::PartialResult::Unknown) {
-        return std::unexpected(i18n("Unknown result \"%1\" on pairing \"%2\".", text.at(7), text.toString()));
+        return std::unexpected(i18n("Unknown result “%1” on pairing “%2”.", text.at(7), text.toString()));
     }
     if (!hasOpponent && !Pairing::isBye(result)) {
-        return std::unexpected(i18n("Pairing \"%1\" has no opponent.", text.toString()));
+        return std::unexpected(i18n("Pairing “%1” has no opponent.", text.toString()));
     }
 
     if (color == Pairing::Color::White || !hasOpponent) {

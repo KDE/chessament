@@ -83,7 +83,7 @@ FormCard.FormCardDialog {
 
     Dialogs.FileDialog {
         id: fileDialog
-        nameFilters: [KI18n.i18nc("@label:listbox", "All Supported Files (*.zip *.xls)")]
+        nameFilters: [KI18n.i18nc("@label:listbox", "All Supported Files (*.zip, *.xls)")]
         currentFolder: StandardPaths.standardLocations(StandardPaths.HomeLocation)[0]
         onAccepted: urlField.editText = selectedFile.toString().replace("file://", "")
     }

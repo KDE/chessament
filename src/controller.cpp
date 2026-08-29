@@ -184,7 +184,7 @@ void Controller::importTrf(const QUrl &fileUrl)
 void Controller::exportTrf(const QUrl &fileUrl)
 {
     if (!m_tournament->exportTrf(fileUrl.toLocalFile())) {
-        setError(i18n("Couldn't export tournament."));
+        setError(i18n("Couldn’t export tournament."));
     }
 }
 

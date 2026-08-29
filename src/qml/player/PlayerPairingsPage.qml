@@ -114,7 +114,7 @@ FormCard.FormCardPage {
                 required property int result
                 required property string resultString
 
-                text: KI18n.i18nc("@info:label", "Round %1", pairing.row + 1)
+                text: KI18n.i18ncp("@info:label", "Round %1", "Round %1", pairing.row + 1)
                 description: {
                     if (pairing.row >= repeater.model.tournament.currentRound) {
                         return "";
