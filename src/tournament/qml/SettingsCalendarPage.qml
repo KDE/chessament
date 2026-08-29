@@ -29,7 +29,7 @@ FormCard.FormCardPage {
             required property date dateTime
 
             FormCard.FormHeader {
-                title: KI18n.i18nc("round number", "Round %1", delegate.index + 1)
+                title: KI18n.i18ncp("round number", "Round %1", "Round %1", delegate.index + 1)
             }
             FormCard.FormCard {
                 FormCard.FormDateTimeDelegate {

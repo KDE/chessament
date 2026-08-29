@@ -103,7 +103,7 @@ int main(int argc, char *argv[])
     if (parser.isSet(trfFile)) {
         if (!positionalArguments.isEmpty()) {
             QTextStream stream{stderr};
-            stream << i18nc("@info:shell", "Error: Can't open an event when importing a TRF") << '\n';
+            stream << i18nc("@info:shell", "Error: Can’t open an event when importing a TRF") << '\n';
             return 1;
         }
         const auto fileName = parser.value(trfFile);
@@ -112,7 +112,7 @@ int main(int argc, char *argv[])
     if (!positionalArguments.isEmpty()) {
         if (positionalArguments.size() > 1) {
             QTextStream stream{stderr};
-            stream << i18nc("@info:shell", "Error: Can't open more that one event") << '\n';
+            stream << i18nc("@info:shell", "Error: Can’t open more than one event") << '\n';
             return 1;
         }
         const auto fileName = parser.positionalArguments().at(0);

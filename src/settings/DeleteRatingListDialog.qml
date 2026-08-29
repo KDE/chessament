@@ -50,7 +50,7 @@ Kirigami.Dialog {
         }
         Controls.Label {
             id: label
-            text: KI18n.i18nc("@label", "Permanently delete rating list \"%1\"?", dialog.name)
+            text: KI18n.i18nc("@label", "Permanently delete rating list “%1”?", dialog.name)
         }
     }
 

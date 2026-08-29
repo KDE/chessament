@@ -75,7 +75,7 @@ FormCard.AbstractFormDelegate {
             display: Controls.Button.IconOnly
             onPressed: delegate.deleteArbiter(delegate.row)
 
-            Controls.ToolTip.text: KI18n.i18nc("@action:button", "Delete arbiter")
+            Controls.ToolTip.text: KI18n.i18nc("@action:button", "Delete Arbiter")
             Controls.ToolTip.visible: hovered
             Controls.ToolTip.delay: Kirigami.Units.toolTipDelay
         }

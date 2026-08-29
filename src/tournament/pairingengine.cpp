@@ -82,25 +82,25 @@ QCoro::Task<std::expected<QList<std::pair<uint, uint>>, QString>> PairingEngine:
         const auto playerIds = line.split(u' ', Qt::SkipEmptyParts);
 
         if (playerIds.size() != 2) {
-            co_return std::unexpected(i18n("Invalid pairing \"%1\".", line));
+            co_return std::unexpected(i18n("Invalid pairing “%1”.", line));
         }
 
         bool ok;
         const auto whiteId = playerIds[0].toUInt(&ok);
         if (!ok) {
-            co_return std::unexpected(i18n("Invalid player \"%1\" on pairing \"%2\".", playerIds[0], line));
+            co_return std::unexpected(i18n("Invalid player “%1” on pairing “%2”.", playerIds[0], line));
         }
         const auto blackId = playerIds[1].toUInt(&ok);
         if (!ok) {
-            co_return std::unexpected(i18n("Invalid player \"%1\" on pairing \"%2\".", playerIds[1], line));
+            co_return std::unexpected(i18n("Invalid player “%1” on pairing “%2”.", playerIds[1], line));
         }
 
         if (!players.contains(whiteId)) {
-            co_return std::unexpected(i18n("Invalid player \"%1\" on pairing \"%2\".", QString::number(whiteId), line));
+            co_return std::unexpected(i18n("Invalid player “%1” on pairing “%2”.", QString::number(whiteId), line));
         }
 
         if (blackId != 0 && !players.contains(blackId)) {
-            co_return std::unexpected(i18n("Invalid player \"%1\" on pairing \"%2\".", QString::number(blackId), line));
+            co_return std::unexpected(i18n("Invalid player “%1” on pairing “%2”.", QString::number(blackId), line));
         }
 
         pairings.append({whiteId, blackId});

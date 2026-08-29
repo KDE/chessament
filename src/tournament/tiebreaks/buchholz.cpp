@@ -32,7 +32,7 @@ std::expected<void, QString> Buchholz::setTrfOptions(const QList<QString> &optio
             bool ok;
             const int cutLowest = option.mid(1).toInt(&ok);
             if (!ok || cutLowest <= 0) {
-                return std::unexpected(i18nc("@info", "Unsupported tiebreak option \"%1\"", option));
+                return std::unexpected(i18nc("@info", "Unsupported tiebreak option “%1”", option));
             }
             setOption("cut_lowest"_L1, cutLowest);
         }

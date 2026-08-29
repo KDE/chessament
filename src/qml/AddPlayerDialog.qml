@@ -113,7 +113,7 @@ QQC2.Dialog {
 
             FormCard.FormTextFieldDelegate {
                 id: nationalIdField
-                label: KI18n.i18nc("@label:textbox", "National ID")
+                label: KI18n.i18nc("@label:textbox Player National ID", "National ID")
                 placeholderText: KI18n.i18n("Optional")
             }
 
@@ -137,7 +137,7 @@ QQC2.Dialog {
 
             FormCard.FormTextFieldDelegate {
                 id: genderField
-                label: KI18n.i18nc("@label:textbox", "Gender")
+                label: KI18n.i18nc("@label:textbox Player Gender", "Gender")
                 placeholderText: KI18n.i18n("Optional")
             }
         }

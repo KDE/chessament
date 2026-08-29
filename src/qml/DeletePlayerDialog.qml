@@ -17,7 +17,7 @@ Kirigami.PromptDialog {
     required property Player player
 
     title: KI18n.i18nc("@title", "Delete Player")
-    subtitle: KI18n.i18nc("@label", "Permanently delete player \"%1\"?", root.player.name)
+    subtitle: KI18n.i18nc("@label", "Permanently delete player “%1”?", root.player.name)
 
     footer: Controls.DialogButtonBox {
         standardButtons: Controls.Dialog.Cancel

@@ -216,7 +216,7 @@ std::expected<uint, QString> RatingListsManager::readFile(RatingList *list, cons
 
     if (url.scheme() == u"file"_s) {
         if (!QFile::exists(url.toLocalFile())) {
-            return std::unexpected(i18nc("@info", "Could not open file: the file does not exists."));
+            return std::unexpected(i18nc("@info", "Could not open file: the file does not exist."));
         }
 
         QFile file{url.toLocalFile()};
