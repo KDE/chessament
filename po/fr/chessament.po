@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-27 00:41+0000\n"
-"PO-Revision-Date: 2026-08-26 10:03+0200\n"
+"PO-Revision-Date: 2026-08-28 11:57+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: fr\n"
 "Language: fr\n"
@@ -255,12 +255,9 @@ msgid "Export tournament report…"
 msgstr "Exporter le rapport de tournoi…"
 
 #: qml/ActionCollection.qml:49 qml/components/MenuBar.qml:115
-#, fuzzy
-#| msgctxt "@label:textbox"
-#| msgid "Tournament name"
 msgctxt "@action:menu"
 msgid "Tournament"
-msgstr "Nom du tournoi"
+msgstr "Tournament"
 
 #: qml/ActionCollection.qml:54
 msgctxt "@action:intoolbar"
@@ -639,19 +636,13 @@ msgid "Pairings"
 msgstr "Couplages"
 
 #: qml/player/PlayerPairingsPage.qml:26
-#, fuzzy
-#| msgctxt "@title:column Name of the White Player"
-#| msgid "White Player"
 msgctxt ""
 "@action:button Removes all the voluntary byes of the player for the upcoming "
 "rounds"
 msgid "Reinstate Player"
-msgstr "Joueur blanc"
+msgstr "Rétablir le joueur"
 
 #: qml/player/PlayerPairingsPage.qml:35
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Retire player"
 msgctxt ""
 "@action:button Sets a zero-point bye for all remaining rounds for the player"
 msgid "Retire Player"

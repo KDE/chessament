@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-27 00:41+0000\n"
-"PO-Revision-Date: 2026-08-17 20:07+0400\n"
+"PO-Revision-Date: 2026-08-29 17:28+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -257,12 +257,9 @@ msgid "Export tournament report…"
 msgstr "صدر دليل بطولة…"
 
 #: qml/ActionCollection.qml:49 qml/components/MenuBar.qml:115
-#, fuzzy
-#| msgctxt "@label:textbox"
-#| msgid "Tournament name"
 msgctxt "@action:menu"
 msgid "Tournament"
-msgstr "اسم البطولة"
+msgstr "البطولة"
 
 #: qml/ActionCollection.qml:54
 msgctxt "@action:intoolbar"
@@ -645,19 +642,13 @@ msgid "Pairings"
 msgstr "الإقرانات"
 
 #: qml/player/PlayerPairingsPage.qml:26
-#, fuzzy
-#| msgctxt "@title:column Name of the White Player"
-#| msgid "White Player"
 msgctxt ""
 "@action:button Removes all the voluntary byes of the player for the upcoming "
 "rounds"
 msgid "Reinstate Player"
-msgstr "اللاعب الأبيض"
+msgstr "إعادة تفعيل حساب اللاعب"
 
 #: qml/player/PlayerPairingsPage.qml:35
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Retire player"
 msgctxt ""
 "@action:button Sets a zero-point bye for all remaining rounds for the player"
 msgid "Retire Player"
@@ -797,12 +788,9 @@ msgid "Update Ratings"
 msgstr "حدّث التقييمات"
 
 #: qml/UpdateRatingsDialog.qml:26
-#, fuzzy
-#| msgctxt "@info:status"
-#| msgid "No rating lists yet."
 msgctxt "@info"
 msgid "No rating lists available."
-msgstr "لا يوجد قائمة تقييم حتى الآن"
+msgstr "لا توجد قوائم تقييم متاحة."
 
 #: qml/UpdateRatingsDialog.qml:34
 msgctxt "@label:listbox"
