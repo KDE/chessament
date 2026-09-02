@@ -117,6 +117,7 @@
       <caption xml:lang="ca">Vista dels jugadors</caption>
       <caption xml:lang="ca-valencia">Vista dels jugadors</caption>
       <caption xml:lang="cs">Zobrazení hráčů</caption>
+      <caption xml:lang="de">Spieleransicht</caption>
       <caption xml:lang="es">Vista de jugadores</caption>
       <caption xml:lang="fr">Affichage des joueurs</caption>
       <caption xml:lang="he">תצוגת שחקנים</caption>
@@ -137,6 +138,7 @@
       <caption xml:lang="ca">Vista dels aparellaments</caption>
       <caption xml:lang="ca-valencia">Vista dels aparellaments</caption>
       <caption xml:lang="cs">Zobrazení párů</caption>
+      <caption xml:lang="de">Paarungsansicht</caption>
       <caption xml:lang="es">Vista de emparejamientos</caption>
       <caption xml:lang="fr">Affichage des associations</caption>
       <caption xml:lang="he">תצוגת שיבוצים</caption>
@@ -157,6 +159,7 @@
       <caption xml:lang="ca">Vista de la classificació</caption>
       <caption xml:lang="ca-valencia">Vista de la classificació</caption>
       <caption xml:lang="cs">Zobrazení výsledků</caption>
+      <caption xml:lang="de">Spielstandansicht</caption>
       <caption xml:lang="es">Vista de la clasificación</caption>
       <caption xml:lang="fr">Affichage des classements</caption>
       <caption xml:lang="he">תצוגת עמדות</caption>
