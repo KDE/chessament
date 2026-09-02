@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-27 00:41+0000\n"
-"PO-Revision-Date: 2026-07-28 10:48+0200\n"
+"PO-Revision-Date: 2026-09-01 12:12+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -256,12 +256,9 @@ msgid "Export tournament report…"
 msgstr ""
 
 #: qml/ActionCollection.qml:49 qml/components/MenuBar.qml:115
-#, fuzzy
-#| msgctxt "NAME OF TRANSLATORS"
-#| msgid "Your names"
 msgctxt "@action:menu"
 msgid "Tournament"
-msgstr "Giovanni Sora"
+msgstr "Torneo"
 
 #: qml/ActionCollection.qml:54
 msgctxt "@action:intoolbar"
@@ -640,23 +637,17 @@ msgid "Pairings"
 msgstr ""
 
 #: qml/player/PlayerPairingsPage.qml:26
-#, fuzzy
-#| msgctxt "@title:column Name of the White Player"
-#| msgid "White Player"
 msgctxt ""
 "@action:button Removes all the voluntary byes of the player for the upcoming "
 "rounds"
 msgid "Reinstate Player"
-msgstr "Jocator Blanc"
+msgstr "Reinstala jocator"
 
 #: qml/player/PlayerPairingsPage.qml:35
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Retire player"
 msgctxt ""
 "@action:button Sets a zero-point bye for all remaining rounds for the player"
 msgid "Retire Player"
-msgstr "Jocator se retira"
+msgstr "Retira Jocator "
 
 #: qml/player/PlayerPairingsPage.qml:55
 msgctxt "@item:inlistbox Available to play"
@@ -795,7 +786,7 @@ msgstr ""
 #: qml/UpdateRatingsDialog.qml:45
 msgctxt "@action:button Update players ratings"
 msgid "Update"
-msgstr ""
+msgstr "Actualisa"
 
 #: qml/WelcomePage.qml:19
 msgctxt "@title"
@@ -808,20 +799,16 @@ msgid "Chessament is a chess tournament manager"
 msgstr ""
 
 #: searchplayersmodel.cpp:41
-#, fuzzy, kde-format
-#| msgctxt "@title:column Player Rating"
-#| msgid "Rating"
+#, kde-format
 msgctxt "%1 is the player's rating"
 msgid "Rating: %1"
-msgstr "Evalutation"
+msgstr "Punctage: %1"
 
 #: searchplayersmodel.cpp:43
-#, fuzzy, kde-format
-#| msgctxt "Pieces Color · Player Name"
-#| msgid "%1 · %2"
+#, kde-format
 msgctxt "%1 is the player's rating, %2 is the player's origin"
 msgid "Rating: %1 · %2"
-msgstr "%1 · %2"
+msgstr "Evalutation: %1 · %2"
 
 #: settings/AccountsPage.qml:19
 msgctxt "@title"
@@ -1357,7 +1344,7 @@ msgstr "Non poteva aperir file"
 #: tournament/trf/reader.cpp:54 tournament/trf/reader.cpp:61
 #, kde-format
 msgid "Player \"%1\" not found."
-msgstr ""
+msgstr "Jocator \"%1\" non trovate."
 
 #: tournament/trf/reader.cpp:67
 #, kde-format
@@ -1368,7 +1355,7 @@ msgstr ""
 #, kde-format
 msgctxt "@info"
 msgid "Date \"%1\" is invalid."
-msgstr ""
+msgstr "Data \"%1\" es invalide."
 
 #: tournament/trf/reader.cpp:263
 #, kde-format
