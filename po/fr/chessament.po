@@ -105,7 +105,7 @@ msgstr "thomas.vergnaud@mailo.eu"
 #: main.cpp:74
 #, kde-format
 msgid "Swiss-system chess tournament pairing engine."
-msgstr "Moteur d’associations pour tournoi d’échecs selon le système suisse."
+msgstr "Moteur d'associations pour tournoi d'échecs selon le système suisse."
 
 #: main.cpp:84
 #, kde-format
