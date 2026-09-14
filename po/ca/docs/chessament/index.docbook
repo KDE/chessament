@@ -243,7 +243,7 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 							<para
 ><action
 >Crea</action
-> un torneig nou. Si ja hi un torneig obert, es tancarà. </para>
+> un torneig nou. Si ja hi ha un torneig obert, es tancarà. </para>
 						</listitem>
 					</varlistentry>
 					<varlistentry id="menu-file-open">
@@ -311,7 +311,7 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 >Importa</action
 > un Fitxer d'informe de torneig (<acronym
 >TRF</acronym
->). Si ja hi un torneig obert, es tancarà. </para>
+>). Si ja hi ha un torneig obert, es tancarà. </para>
 						</listitem>
 					</varlistentry>
 					<varlistentry id="menu-file-export-trf">
