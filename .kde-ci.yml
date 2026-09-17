@@ -16,7 +16,6 @@ Dependencies:
       "frameworks/kitemmodels": "@latest-kf6"
       "frameworks/qqc2-desktop-style": "@latest-kf6"
       "libraries/kirigami-addons": "@latest-kf6"
-      "libraries/kirigami-app-components": "@latest-kf6"
       "third-party/qcoro": "@latest"
 
 Options:

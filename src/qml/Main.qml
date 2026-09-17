@@ -1,15 +1,18 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 // SPDX-FileCopyrightText: 2024 Manuel Alcaraz Zambrano <manuel@alcarazzam.dev>
 
+pragma ComponentBehavior: Bound
+
 import QtQuick
 
 import org.kde.ki18n
 import org.kde.kirigami as Kirigami
-import org.kde.config as KConfig
+import org.kde.kirigamiaddons.actions as Actions
 
 import org.kde.chessament
+import org.kde.chessament.settings as Settings
 
-Kirigami.ApplicationWindow {
+Actions.StatefulWindow {
     id: root
 
     property var pageCache: Object.create(null)
@@ -18,12 +21,14 @@ Kirigami.ApplicationWindow {
     minimumWidth: Kirigami.Units.gridUnit * 30
     minimumHeight: Kirigami.Units.gridUnit * 20
 
-    KConfig.WindowStateSaver {
-        configGroupName: "Main"
+    windowName: "Main"
+
+    application: Actions.Application {
+        configurationView: Settings.ChessamentConfigurationView {}
     }
 
-    ActionCollection {
-        pageRow: root.pageStack
+    ChessamentActions {
+        application: root.application as Actions.Application
     }
 
     menuBar: MenuBar {

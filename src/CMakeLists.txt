@@ -22,7 +22,7 @@ ecm_add_qml_module(chessament_static
         qml/components/TimeControlDelegate.qml
 
         qml/Main.qml
-        qml/ActionCollection.qml
+        qml/ChessamentActions.qml
         qml/AddPlayerDialog.qml
         qml/DeletePairingsDialog.qml
         qml/DeletePlayerDialog.qml
@@ -65,9 +65,9 @@ ecm_add_qml_module(chessament_static
         timecontrolmodel.cpp
     IMPORTS
         org.kde.kirigami
-        org.kde.kirigami.actioncollection
         org.kde.ki18n
         org.kde.kirigamiaddons.formcard
+        org.kde.kirigamiaddons.actions
         org.kde.chessament.tournament
         org.kde.chessament.settings
 )
@@ -98,7 +98,6 @@ target_link_libraries(chessament_static PUBLIC
     KF6::IconThemes
     KF6::ItemModels
     KF6::KIOWidgets
-    KF6::KirigamiActionCollection
     QCoro6::Core
     QCoro6::Qml
 )

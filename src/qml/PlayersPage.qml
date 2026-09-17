@@ -12,7 +12,6 @@ import QtQuick.Layouts as Layouts
 import org.kde.ki18n
 import org.kde.kitemmodels as KItemModels
 import org.kde.kirigami as Kirigami
-import org.kde.kirigami.actioncollection as AC
 import org.kde.kirigamiaddons.components as Components
 
 import org.kde.chessament
@@ -132,8 +131,8 @@ TablePage {
             }
         },
         Kirigami.Action {
-            AC.ActionCollection.action: "PrintDocument"
-            AC.ActionCollection.collection: "org.kde.chessament.tournament"
+            ActionCollection.action: "print_document"
+            ActionCollection.collection: "org.kde.chessament.tournament"
             enabled: root.visible
             onTriggered: Controller.printPlayersDocument()
         },
@@ -143,8 +142,8 @@ TablePage {
             onTriggered: saveDialog.open()
         },
         Kirigami.Action {
-            AC.ActionCollection.action: "AddPlayer"
-            AC.ActionCollection.collection: "org.kde.chessament.tournament"
+            ActionCollection.action: "add_player"
+            ActionCollection.collection: "org.kde.chessament.tournament"
             displayHint: Kirigami.DisplayHint.KeepVisible
             onTriggered: addPlayerDialog.open()
         }

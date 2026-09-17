@@ -44,25 +44,6 @@
             ]
         },
         {
-            "name": "kirigami-app-components",
-            "buildsystem": "cmake-ninja",
-            "config-opts": [
-                "-DBUILD_TESTING=OFF"
-            ],
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://download.kde.org/stable/kirigami-app-components/kirigami-app-components-1.1.1.tar.xz",
-                    "sha256": "f68f4d082933213d82b805217f2fa0690f51df7d00214ddb873812a60a6b830b",
-                    "x-checker-data": {
-                        "type": "anitya",
-                        "project-id": 391965,
-                        "url-template": "https://download.kde.org/stable/kirigami-app-components/kirigami-app-components-$version.tar.xz"
-                    }
-                }
-            ]
-        },
-        {
             "name": "chessament",
             "buildsystem": "cmake-ninja",
             "builddir": true,
