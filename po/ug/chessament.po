@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-27 00:41+0000\n"
-"PO-Revision-Date: 2026-05-29 17:16-0400\n"
+"PO-Revision-Date: 2026-09-22 18:03+0900\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
 "Language: ug\n"
@@ -22,7 +22,7 @@ msgstr ""
 #, kde-format
 msgctxt "Pieces Color · Player Name"
 msgid "%1 · %2"
-msgstr "%1 · %2"
+msgstr ""
 
 #: controller.cpp:187
 #, kde-format
@@ -257,12 +257,9 @@ msgid "Export tournament report…"
 msgstr ""
 
 #: qml/ActionCollection.qml:49 qml/components/MenuBar.qml:115
-#, fuzzy
-#| msgctxt "NAME OF TRANSLATORS"
-#| msgid "Your names"
 msgctxt "@action:menu"
 msgid "Tournament"
-msgstr "ئابدۇقادىر ئابلىز، غەيرەت كەنجى"
+msgstr ""
 
 #: qml/ActionCollection.qml:54
 msgctxt "@action:intoolbar"
@@ -361,17 +358,11 @@ msgid "Arbiter"
 msgstr ""
 
 #: qml/components/ArbiterDelegate.qml:53
-#, fuzzy
-#| msgctxt "@title:column Player Title"
-#| msgid "Title"
 msgctxt "@info:placeholder Arbiter's Title"
 msgid "Title"
 msgstr "ماۋزۇ"
 
 #: qml/components/ArbiterDelegate.qml:60
-#, fuzzy
-#| msgctxt "@title:column Player Name"
-#| msgid "Name"
 msgctxt "@info:placeholder Arbiter's Name"
 msgid "Name"
 msgstr "ئاتى"
@@ -379,23 +370,17 @@ msgstr "ئاتى"
 #: qml/components/ArbiterDelegate.qml:67
 msgctxt "@info:placeholder Arbiter's ID"
 msgid "ID"
-msgstr ""
+msgstr "كىملىك"
 
 #: qml/components/ArbiterDelegate.qml:72
-#, fuzzy
-#| msgctxt "@action:button Delete Rating List"
-#| msgid "Delete"
 msgctxt "@action:button"
 msgid "Delete Arbiter"
-msgstr "ئۆچۈر"
+msgstr ""
 
 #: qml/components/ArbiterDelegate.qml:78
-#, fuzzy
-#| msgctxt "@action:button Delete Rating List"
-#| msgid "Delete"
 msgctxt "@action:button"
 msgid "Delete arbiter"
-msgstr "ئۆچۈر"
+msgstr ""
 
 #: qml/components/MenuBar.qml:50 qml/components/MenuBar.qml:65
 #: qml/NewTournamentDialog.qml:51
@@ -455,12 +440,9 @@ msgid "Delete tiebreak"
 msgstr ""
 
 #: qml/components/TimeControlDelegate.qml:37
-#, fuzzy
-#| msgctxt "@action:button Move tiebreak up"
-#| msgid "Move Up"
 msgctxt "@label:textbox Number of moves"
 msgid "Moves"
-msgstr "ئۈستىگە"
+msgstr "يوللار"
 
 #: qml/components/TimeControlDelegate.qml:51
 msgctxt "@label:textbox Time control period time"
@@ -473,9 +455,6 @@ msgid "Increment (seconds)"
 msgstr ""
 
 #: qml/components/TimeControlDelegate.qml:77
-#, fuzzy
-#| msgctxt "@action:button Delete Rating List"
-#| msgid "Delete"
 msgctxt "@action:button Delete time control period"
 msgid "Delete"
 msgstr "ئۆچۈر"
@@ -496,12 +475,9 @@ msgid "Remove"
 msgstr "چىقىرىۋەت"
 
 #: qml/DeletePlayerDialog.qml:19
-#, fuzzy
-#| msgctxt "@action:button Delete Rating List"
-#| msgid "Delete"
 msgctxt "@title"
 msgid "Delete Player"
-msgstr "ئۆچۈر"
+msgstr ""
 
 #: qml/DeletePlayerDialog.qml:20
 msgctxt "@label"
@@ -509,20 +485,14 @@ msgid "Permanently delete player \"%1\"?"
 msgstr ""
 
 #: qml/DeletePlayerDialog.qml:26
-#, fuzzy
-#| msgctxt "@action:button Delete Rating List"
-#| msgid "Delete"
 msgctxt "@action:button Delete Player"
 msgid "Delete"
 msgstr "ئۆچۈر"
 
 #: qml/Main.qml:17
-#, fuzzy
-#| msgctxt "@title:window"
-#| msgid "Chessament"
 msgctxt "@title:window"
 msgid "%1 — Chessament"
-msgstr "شاھمات مۇسابىقىسى"
+msgstr ""
 
 #: qml/Main.qml:17
 msgctxt "@title:window"
@@ -667,23 +637,17 @@ msgid "Pairings"
 msgstr ""
 
 #: qml/player/PlayerPairingsPage.qml:26
-#, fuzzy
-#| msgctxt "@action:button Delete Rating List"
-#| msgid "Delete"
 msgctxt ""
 "@action:button Removes all the voluntary byes of the player for the upcoming "
 "rounds"
 msgid "Reinstate Player"
-msgstr "ئۆچۈر"
+msgstr ""
 
 #: qml/player/PlayerPairingsPage.qml:35
-#, fuzzy
-#| msgctxt "@action:button Delete Rating List"
-#| msgid "Delete"
 msgctxt ""
 "@action:button Sets a zero-point bye for all remaining rounds for the player"
 msgid "Retire Player"
-msgstr "ئۆچۈر"
+msgstr ""
 
 #: qml/player/PlayerPairingsPage.qml:55
 msgctxt "@item:inlistbox Available to play"
@@ -751,7 +715,7 @@ msgstr[0] ""
 #: qml/PlayersPage.qml:210
 msgctxt "@info:status Total number of players (Number of players rated)"
 msgid "%1 (%2)"
-msgstr "%1 (%2)"
+msgstr ""
 
 #: qml/ResultsFooter.qml:103
 msgctxt "@action:intoolbar Other game results"
@@ -820,7 +784,7 @@ msgstr ""
 #: qml/UpdateRatingsDialog.qml:45
 msgctxt "@action:button Update players ratings"
 msgid "Update"
-msgstr ""
+msgstr "يېڭىلا"
 
 #: qml/WelcomePage.qml:19
 msgctxt "@title"
@@ -833,20 +797,16 @@ msgid "Chessament is a chess tournament manager"
 msgstr ""
 
 #: searchplayersmodel.cpp:41
-#, fuzzy, kde-format
-#| msgctxt "@title:column Player Rating"
-#| msgid "Rating"
+#, kde-format
 msgctxt "%1 is the player's rating"
 msgid "Rating: %1"
-msgstr "باھالاش"
+msgstr "باھا: %1"
 
 #: searchplayersmodel.cpp:43
-#, fuzzy, kde-format
-#| msgctxt "Pieces Color · Player Name"
-#| msgid "%1 · %2"
+#, kde-format
 msgctxt "%1 is the player's rating, %2 is the player's origin"
 msgid "Rating: %1 · %2"
-msgstr "%1 · %2"
+msgstr ""
 
 #: settings/AccountsPage.qml:19
 msgctxt "@title"
@@ -1284,12 +1244,10 @@ msgid "Could not download rating list from %1 (unsupported protocol)."
 msgstr ""
 
 #: tournament/ratinglists/ratinglistsmanager.cpp:293
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Could not open file."
+#, kde-format
 msgctxt "@info"
 msgid "Could not extract file."
-msgstr "ھۆججەتنى ئاچقىلى بولمىدى."
+msgstr ""
 
 #: tournament/ratinglists/ratinglistsmanager.cpp:298
 #: tournament/ratinglists/ratinglistsmanager.cpp:303
