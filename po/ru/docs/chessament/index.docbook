@@ -1,0 +1,473 @@
+<?xml version="1.0" ?>
+<!--
+SPDX-FileCopyrightText: 2026 Manuel Alcaraz Zambrano <manuel@alcarazzam.dev>
+SPDX-License-Identifier: CC-BY-SA-4.0
+-->
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+    <!ENTITY chessament "<application
+>Chessament</application
+>">
+    <!ENTITY % addindex "IGNORE">
+    <!ENTITY % Russian "INCLUDE">
+    <!ENTITY Manuel.Alcaraz.Zambrano "<personname
+><firstname
+>Manuel</firstname
+><surname
+>Alcaraz Zambrano</surname
+></personname
+>">
+    <!ENTITY Manuel.Alcaraz.Zambrano.mail "<email
+>manuel@alcarazzam.dev</email
+>">
+]>
+<book id="chessament" lang="&language;">
+  <bookinfo>
+    <title
+>Руководство пользователя &chessament;</title>
+    <authorgroup>
+      <author
+>&Manuel.Alcaraz.Zambrano; &Manuel.Alcaraz.Zambrano.mail;</author>
+      <othercredit role="translator"
+><firstname
+>Александр</firstname
+><surname
+>Яворский</surname
+><affiliation
+><address
+><email
+>kekcuha@gmail.com</email
+></address
+></affiliation
+><contrib
+>Перевод на русский</contrib
+></othercredit
+> 
+    </authorgroup>
+    <copyright>
+      <year
+>2026</year>
+      <holder
+>&Manuel.Alcaraz.Zambrano;</holder>
+    </copyright>
+    <legalnotice
+>&CCBYSA4Notice;</legalnotice>
+    <date
+>17 апреля 2026 г.</date>
+    <releaseinfo
+>0.1</releaseinfo>
+      <abstract>
+        <para
+>&chessament; — приложение для управления шахматными турнирами. </para>
+      </abstract>
+    <keywordset>
+      <keyword
+>KDE</keyword>
+      <keyword
+>Chessament</keyword>
+			<keyword
+>шахматы</keyword>
+			<keyword
+>турнир</keyword>
+    </keywordset>
+  </bookinfo>
+
+	<chapter id="introduction">
+		<title
+>Введение</title>
+		<para
+>&chessament; — приложение для управления шахматными турнирами. Поддерживает индивидуальные турниры по швейцарской системе. </para>
+		<para
+>Основные возможности &chessament;: </para>
+		<itemizedlist>
+			<listitem>
+				<para
+>Регистрация игроков.</para>
+			</listitem>
+			<listitem>
+				<para
+>Жеребьёвка туров.</para>
+			</listitem>
+			<listitem>
+				<para
+>Расчёт турнирной таблицы.</para>
+			</listitem>
+		</itemizedlist>
+	</chapter>
+
+	<chapter id="basic-usage">
+		<title
+>Основы использования</title>
+		<sect1 id="opening">
+			<title
+>Создание нового турнира</title>
+			<para
+>Чтобы создать новый турнир &chessament;, выберите <menuchoice
+><guimenu
+>Файл</guimenu
+><guimenuitem
+>Создать…</guimenuitem
+></menuchoice
+>, введите название, укажите число туров и нажмите кнопку <guibutton
+>Сохранить</guibutton
+>. Далее потребуется выбрать папку для сохранения турнира. </para>
+		</sect1>
+
+		<sect1 id="registering-players">
+			<title
+>Регистрация игроков</title>
+			<para
+>Чтобы добавить нового игрока в турнир, нажмите кнопку <guibutton
+>Добавить игрока…</guibutton
+> на панели инструментов. </para>
+		</sect1>
+
+		<sect1 id="making-pairings">
+			<title
+>Пары &amp; результаты</title>
+			<para
+>После завершения регистрации всех игроков турнира можно составить пары для первого тура. Перейдите в представление <guibutton
+>Пары</guibutton
+> и нажмите кнопку <guibutton
+>Составить пары для тура 1…</guibutton
+>. Откроется диалоговое окно, в котором можно настроить некоторые параметры первого тура. Рекомендуется оставить включённым параметр <guibutton
+>Сортировать игроков</guibutton
+>. Можно выбрать цвет фигур игрока с наивысшим рейтингом или предоставить &chessament; выбрать цвет случайным образом. </para>
+			<para
+>Чтобы ввести результаты, щёлкните по паре и выберите один из поддерживаемых результатов внизу. Результаты можно также ввести с клавиатуры. Нажатие <keycap
+>1</keycap
+> устанавливает результат «победа белых», <keycap
+>0</keycap
+> — «победа чёрных», <keycap
+>5</keycap
+> — «ничья». После ввода результата автоматически выбирается следующая пара без результата. </para>
+		</sect1>
+
+		<sect1 id="viewing-standings">
+			<title
+>Просмотр турнирной таблицы</title>
+			<para
+>Чтобы просмотреть турнирную таблицу, перейдите в представление <guibutton
+>Турнирная таблица</guibutton
+>. Там можно выбрать итоговую таблицу или таблицу предыдущего тура. </para>
+		</sect1>
+	</chapter>
+
+	<chapter id="tournaments">
+		<title
+>Турниры</title>
+		<sect1 id="tournament-settings">
+			<title
+>Параметры</title>
+			<para
+>Чтобы открыть окно параметров турнира, нажмите кнопку <guibutton
+>Настройка</guibutton
+> в нижней части окна &chessament;. В этом разделе подробно описаны доступные параметры. </para>
+			<sect2 id="tournament-settings-information">
+				<title
+>Сведения</title>
+				<para
+>В этом разделе задаются основные сведения: название турнира, место проведения и арбитры. </para>
+			</sect2>
+			<sect2 id="tournament-settings-format">
+				<title
+>Формат</title>
+				<para
+>В этом разделе можно указать число туров турнира и дополнительные показатели, используемые для расчёта турнирной таблицы. Подробнее о дополнительных показателях рассказано в разделе <link linkend="tournament-tiebreaks"
+>Дополнительные показатели</link
+>. </para>
+			</sect2>
+			<sect2 id="tournament-settings-calendar">
+				<title
+>Календарь</title>
+				<para
+>В этом разделе настраивается расписание турнира. </para>
+			</sect2>
+		</sect1>
+		<sect1 id="tournament-tiebreaks">
+			<title
+>Дополнительные показатели</title>
+			<para
+>&chessament; поддерживает следующие дополнительные показатели, как описано в <ulink url="https://handbook.fide.com/"
+>Справочнике <acronym
+>ФИДЕ</acronym
+></ulink
+>: </para>
+			<itemizedlist>
+				<listitem>
+					<para
+>Средний коэффициент Бухгольца соперников (<acronym
+>AOB</acronym
+>)</para>
+				</listitem>
+				<listitem>
+					<para
+>Бухгольц (<acronym
+>BH</acronym
+>)</para>
+				</listitem>
+				<listitem>
+					<para
+>Количество партий, сыгранных чёрными (<acronym
+>BPG</acronym
+>)</para>
+				</listitem>
+				<listitem>
+					<para
+>Количество выигранных партий (за доской) (<acronym
+>WON</acronym
+>)</para>
+				</listitem>
+				<listitem>
+					<para
+>Количество побед (<acronym
+>WIN</acronym
+>)</para>
+				</listitem>
+				<listitem>
+					<para
+>Очки (<acronym
+>PTS</acronym
+>)</para>
+				</listitem>
+			</itemizedlist>
+		</sect1>
+	</chapter>
+
+	<chapter id="reference">
+		<title
+>Справочник</title>
+
+		<sect1 id="reference-menus">
+			<title
+>Строка меню</title>
+			<sect2 id="reference-menus-file">
+				<title
+>Меню «Файл»</title>
+				<variablelist>
+					<varlistentry id="menu-file-new">
+						<term>
+							<menuchoice
+><guimenu
+>Файл</guimenu
+> <guimenuitem
+>Новый турнир…</guimenuitem
+> </menuchoice>
+						</term>
+						<listitem>
+							<para
+><action
+>Создать</action
+> новый турнир. Если уже есть открытый турнир, он будет закрыт. </para>
+						</listitem>
+					</varlistentry>
+					<varlistentry id="menu-file-open">
+						<term>
+							<menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;<keycap
+>O</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Файл</guimenu
+> <guimenuitem
+>Открыть…</guimenuitem
+> </menuchoice>
+						</term>
+						<listitem>
+							<para
+><action
+>Открыть</action
+> файл &chessament;. </para>
+						</listitem>
+					</varlistentry>
+					<varlistentry id="menu-file-save-as">
+						<term>
+							<menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;&Shift;<keycap
+>S</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Файл</guimenu
+> <guimenuitem
+>Сохранить как…</guimenuitem
+> </menuchoice>
+						</term>
+						<listitem>
+							<para
+><action
+>Сохранить</action
+> турнир под новым именем. </para>
+						</listitem>
+					</varlistentry>
+					<varlistentry id="menu-file-import-trf">
+						<term>
+							<menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;<keycap
+>I</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Файл</guimenu
+> <guimenuitem
+>Импорт отчёта о турнире…</guimenuitem
+> </menuchoice>
+						</term>
+						<listitem>
+							<para
+><action
+>Импортировать</action
+> файл отчёта о турнире (<acronym
+>TRF</acronym
+>). Если турнир уже открыт, он будет закрыт. </para>
+						</listitem>
+					</varlistentry>
+					<varlistentry id="menu-file-export-trf">
+						<term>
+							<menuchoice
+><guimenu
+>Файл</guimenu
+> <guimenuitem
+>Экспортировать отчёт о турнире…</guimenuitem
+> </menuchoice>
+						</term>
+						<listitem>
+							<para
+><action
+>Экспортировать</action
+> текущий турнир в файл отчёта о турнире (<acronym
+>TRF</acronym
+>). </para>
+						</listitem>
+					</varlistentry>
+				</variablelist>
+			</sect2>
+			<sect2 id="reference-menus-view">
+				<title
+>Меню «Вид»</title>
+				<variablelist>
+					<varlistentry id="menu-view-commandbar">
+						<term>
+							<menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;&Alt;<keycap
+>I</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Вид</guimenu
+> <guimenuitem
+>Открыть панель команд</guimenuitem
+> </menuchoice>
+						</term>
+						<listitem>
+							<para
+><action
+>Открывает</action
+> панель команд. </para>
+						</listitem>
+					</varlistentry>
+				</variablelist>
+			</sect2>
+			<sect2 id="reference-menus-settings">
+				<title
+>Меню «Настройка»</title>
+				<variablelist>
+					<varlistentry id="menu-settings-keyboard-shortcuts">
+						<term>
+							<menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;&Alt;<keycap
+>,</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Настройка</guimenu
+> <guimenuitem
+>Настроить комбинации клавиш…</guimenuitem
+> </menuchoice>
+						</term>
+						<listitem>
+							<para
+><action
+>Открывает</action
+> окно «Комбинации клавиш». </para>
+						</listitem>
+					</varlistentry>
+					<varlistentry id="menu-settings-chessament">
+						<term>
+							<menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;&Shift;<keycap
+>,</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Настройка</guimenu
+> <guimenuitem
+>Настроить Chessament…</guimenuitem
+> </menuchoice>
+						</term>
+						<listitem>
+							<para
+><action
+>Открывает</action
+> окно параметров &chessament;. </para>
+						</listitem>
+					</varlistentry>
+				</variablelist>
+			</sect2>
+		</sect1>
+
+		<sect1 id="reference-command-line-options">
+			<title
+>Параметры командной строки</title>
+			<variablelist>
+			  <varlistentry>
+					<term>
+						<userinput
+><command
+>chessament</command
+> <option
+>--import-trf <replaceable
+>файл</replaceable
+></option
+> </userinput>
+					</term>
+					<listitem>
+						<para
+>Импорт файла отчёта о турнире (<acronym
+>TRF</acronym
+>) в качестве нового турнира. </para>
+					</listitem>
+			  </varlistentry>
+			</variablelist>
+		</sect1>
+	</chapter>
+
+	<chapter id="credits">
+		<title
+>Авторские права и лицензия</title>
+		<para
+>Авторские права на документацию &copy; &Manuel.Alcaraz.Zambrano; &Manuel.Alcaraz.Zambrano.mail;</para>
+		<para
+>Перевод на русский — Александр Яворский<email
+>kekcuha@gmail.com</email
+></para
+> &underCCBYSA4; &underGPL; </chapter>
+
+	&documentation.index;
+
+</book>
+<!--
+// vim:ts=2:sw=2:tw=78:noet
+-->
