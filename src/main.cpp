@@ -52,19 +52,13 @@ int main(int argc, char *argv[])
 
     KLocalizedString::setApplicationDomain("chessament");
 
-    KAboutData aboutData(
-        // The program name used internally.
-        u"chessament"_s,
-        // A displayable program name string.
-        i18nc("@title", "Chessament"),
-        // The program version string.
-        QStringLiteral(CHESSAMENT_VERSION_STRING),
-        // Short description of what the app does.
-        i18n("Chess Tournament Manager"),
-        // The license this code is released under.
-        KAboutLicense::GPL_V3,
-        // Copyright Statement.
-        i18n("© 2024–2026 Manuel Alcaraz Zambrano"));
+    QGuiApplication::setOrganizationName(u"KDE"_s);
+    QGuiApplication::setDesktopFileName(u"org.kde.chessament"_s);
+
+    auto aboutData = KAboutData::fromAppStreamForApplication();
+    aboutData.setVersion(QByteArrayLiteral(CHESSAMENT_VERSION_STRING));
+    aboutData.setCopyrightStatement(i18n("© 2024–2026 Manuel Alcaraz Zambrano"));
+
     aboutData.addAuthor(i18nc("@info:credit", "Manuel Alcaraz Zambrano"),
                         i18nc("@info:credit", "Author & Maintainer"),
                         u"manuel@alcarazzam.dev"_s,
@@ -75,6 +69,7 @@ int main(int argc, char *argv[])
                            QString(),
                            u"https://github.com/BieremaBoyzProgramming/bbpPairings"_s,
                            KAboutLicense::LicenseKey::Apache_V2);
+
     KAboutData::setApplicationData(aboutData);
     QGuiApplication::setWindowIcon(QIcon::fromTheme(u"org.kde.chessament"_s));
 

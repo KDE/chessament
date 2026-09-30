@@ -6,7 +6,7 @@ cmake_minimum_required(VERSION 3.16)
 project(chessament VERSION 0.1)
 
 set(QT6_MIN_VERSION 6.10.0)
-set(KF6_MIN_VERSION 6.23.0)
+set(KF6_MIN_VERSION 6.28.0)
 set(KIRIGAMI_ADDONS_MIN_VERSION 1.6.0)
 set(QCORO_MIN_VERSION 0.11)
 
