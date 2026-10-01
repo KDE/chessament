@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-27 00:41+0000\n"
+"POT-Creation-Date: 2026-10-01 00:41+0000\n"
 "PO-Revision-Date: 2025-05-12 14:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -24,8 +24,9 @@ msgid "%1 · %2"
 msgstr ""
 
 #: controller.cpp:187
-#, kde-format
-msgid "Couldn't export tournament."
+#, fuzzy, kde-format
+#| msgid "Couldn't export tournament."
+msgid "Couldn’t export tournament."
 msgstr "无法导出比赛。"
 
 #: documents.cpp:23
@@ -35,22 +36,27 @@ msgid "Starting Rank"
 msgstr "初始排名"
 
 #: documents.cpp:62
-#, kde-format
-msgctxt "@title"
+#, fuzzy, kde-format
+#| msgctxt "@title"
+#| msgid "Round %1 Pairings"
+msgctxt "@title %1 is a number"
 msgid "Round %1 Pairings"
-msgstr "第 %1 轮对阵"
+msgid_plural "Round %1 Pairings"
+msgstr[0] "第 %1 轮对阵"
 
 #: documents.cpp:103
 #, kde-format
 msgctxt "@title"
 msgid "Standings After Round %1"
-msgstr ""
+msgid_plural "Standings After Round %1"
+msgstr[0] ""
 
 #: documents.cpp:105
 #, kde-format
 msgctxt "@title"
 msgid "Provisional Standings After Round %1"
-msgstr ""
+msgid_plural "Provisional Standings After Round %1"
+msgstr[0] ""
 
 #: documents.cpp:109
 #, kde-format
@@ -64,73 +70,62 @@ msgctxt "@title"
 msgid "Provisional Final Standings"
 msgstr ""
 
-#: main.cpp:59
-#, kde-format
-msgctxt "@title"
-msgid "Chessament"
-msgstr "Chessament"
-
-#: main.cpp:63
-#, kde-format
-msgid "Chess Tournament Manager"
-msgstr "国际象棋赛事管理系统"
-
-#: main.cpp:67
+#: main.cpp:60
 #, kde-format
 msgid "© 2024–2026 Manuel Alcaraz Zambrano"
 msgstr ""
 
-#: main.cpp:68
+#: main.cpp:62
 #, kde-format
 msgctxt "@info:credit"
 msgid "Manuel Alcaraz Zambrano"
 msgstr "Manuel Alcaraz Zambrano"
 
-#: main.cpp:69
+#: main.cpp:63
 #, kde-format
 msgctxt "@info:credit"
 msgid "Author & Maintainer"
 msgstr "作者和维护者"
 
-#: main.cpp:72
+#: main.cpp:66
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "KDE 中国, Eric Zhao"
 
-#: main.cpp:72
+#: main.cpp:66
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "kde-china@kde.org, zhaojiale20060708@outlook.com"
 
-#: main.cpp:74
+#: main.cpp:68
 #, kde-format
 msgid "Swiss-system chess tournament pairing engine."
 msgstr ""
 
-#: main.cpp:84
+#: main.cpp:79
 #, kde-format
 msgctxt "Command line option description"
 msgid "Import Tournament Report File."
 msgstr "导入比赛报告文件。"
 
-#: main.cpp:87
+#: main.cpp:82
 #, kde-format
 msgctxt "@info:shell Command line option description"
 msgid "Event to open."
 msgstr ""
 
-#: main.cpp:106
+#: main.cpp:101
 #, kde-format
 msgctxt "@info:shell"
-msgid "Error: Can't open an event when importing a TRF"
+msgid "Error: Can’t open an event when importing a TRF"
 msgstr ""
 
-#: main.cpp:115
+#: main.cpp:110
 #, kde-format
 msgctxt "@info:shell"
-msgid "Error: Can't open more that one event"
+msgid "Error: Can’t open more than one event"
 msgstr ""
 
 #: pairingmodel.cpp:107
@@ -317,9 +312,12 @@ msgid "Optional"
 msgstr "可选"
 
 #: qml/AddPlayerDialog.qml:116
-msgctxt "@label:textbox"
+#, fuzzy
+#| msgctxt "@title:column Player National Rating"
+#| msgid "National Rating"
+msgctxt "@label:textbox Player National ID"
 msgid "National ID"
-msgstr ""
+msgstr "国家级评级"
 
 #: qml/AddPlayerDialog.qml:122
 msgctxt "@label:textbox"
@@ -337,7 +335,7 @@ msgid "Origin"
 msgstr "来源"
 
 #: qml/AddPlayerDialog.qml:140
-msgctxt "@label:textbox"
+msgctxt "@label:textbox Player Gender"
 msgid "Gender"
 msgstr ""
 
@@ -371,14 +369,9 @@ msgctxt "@info:placeholder Arbiter's ID"
 msgid "ID"
 msgstr ""
 
-#: qml/components/ArbiterDelegate.qml:72
+#: qml/components/ArbiterDelegate.qml:72 qml/components/ArbiterDelegate.qml:78
 msgctxt "@action:button"
 msgid "Delete Arbiter"
-msgstr ""
-
-#: qml/components/ArbiterDelegate.qml:78
-msgctxt "@action:button"
-msgid "Delete arbiter"
 msgstr ""
 
 #: qml/components/MenuBar.qml:50 qml/components/MenuBar.qml:65
@@ -480,7 +473,7 @@ msgstr ""
 
 #: qml/DeletePlayerDialog.qml:20
 msgctxt "@label"
-msgid "Permanently delete player \"%1\"?"
+msgid "Permanently delete player “%1”?"
 msgstr ""
 
 #: qml/DeletePlayerDialog.qml:26
@@ -544,8 +537,11 @@ msgid "Export as PDF…"
 msgstr "导出为 PDF..."
 
 #: qml/PairingsPage.qml:88 qml/PairingsPage.qml:93
+#, fuzzy
+#| msgid "Round %1"
 msgid "Round %1"
-msgstr "第 %1 轮"
+msgid_plural "Round %1"
+msgstr[0] "第 %1 轮"
 
 #: qml/PairingsPage.qml:105
 msgctxt "@action:intoolbar"
@@ -554,33 +550,47 @@ msgstr "删除当前及后续轮次的配对..."
 
 #: qml/PairingsPage.qml:119
 msgctxt "@info"
-msgid "The tournament hasn't started yet."
+msgid "The tournament hasn’t started yet."
 msgstr ""
 
 #: qml/PairingsPage.qml:119
 msgctxt "@info"
 msgid "Round %1 has finished."
-msgstr ""
+msgid_plural "Round %1 has finished."
+msgstr[0] ""
 
 #: qml/PairingsPage.qml:123
 msgctxt "@action:button"
 msgid "Pair Round %1…"
-msgstr ""
+msgid_plural "Pair Round %1…"
+msgstr[0] ""
 
 #: qml/PairingsPage.qml:167
+#, fuzzy
+#| msgctxt "@info:placeholder"
+#| msgid "No pairings for round %1 yet"
 msgctxt "@info:placeholder"
-msgid "No pairings for round %1 yet"
-msgstr "第 %1 轮暂无对手"
+msgid "No pairings for Round %1 yet"
+msgid_plural "No pairings for Round %1 yet"
+msgstr[0] "第 %1 轮暂无对手"
 
 #: qml/PairingsPage.qml:169
+#, fuzzy
+#| msgctxt "@info:placeholder"
+#| msgid "All games of round %1 have finished"
 msgctxt "@info:placeholder"
-msgid "All games of round %1 have finished"
-msgstr "第 %1 轮的所有比赛已经结束"
+msgid "All games of Round %1 have finished"
+msgid_plural "All games of Round %1 have finished"
+msgstr[0] "第 %1 轮的所有比赛已经结束"
 
 #: qml/PairRoundDialog.qml:21
+#, fuzzy
+#| msgctxt "@title %1 is a number >= 1"
+#| msgid "Pair Round %1"
 msgctxt "@title %1 is a number >= 1"
 msgid "Pair Round %1"
-msgstr "配对轮次 %1"
+msgid_plural "Pair Round %1"
+msgstr[0] "配对轮次 %1"
 
 #: qml/PairRoundDialog.qml:29
 msgctxt "@info"
@@ -589,8 +599,8 @@ msgstr ""
 
 #: qml/PairRoundDialog.qml:29
 msgctxt "@info %1 is a number"
-msgid "The following player won't be paired: %2"
-msgid_plural "The following %1 players won't be paired: %2"
+msgid "The following player won’t be paired: %2"
+msgid_plural "The following %1 players won’t be paired: %2"
 msgstr[0] ""
 
 #: qml/PairRoundDialog.qml:39
@@ -622,7 +632,7 @@ msgstr "黑色"
 
 #: qml/player/PlayerDetails.qml:17
 msgctxt "@title:window"
-msgid "Details of player \"%1\""
+msgid "Details of player “%1”"
 msgstr ""
 
 #: qml/player/PlayerDetails.qml:22
@@ -662,7 +672,8 @@ msgstr "配对"
 #: qml/player/PlayerPairingsPage.qml:117
 msgctxt "@info:label"
 msgid "Round %1"
-msgstr ""
+msgid_plural "Round %1"
+msgstr[0] ""
 
 #: qml/PlayersPage.qml:121
 msgctxt "@action:intoolbar Open player details"
@@ -758,7 +769,8 @@ msgstr ""
 #: qml/StandingsPage.qml:85 qml/StandingsPage.qml:95
 msgctxt "@item:inlistbox Standings After Round %1"
 msgid "After Round %1"
-msgstr ""
+msgid_plural "After Round %1"
+msgstr[0] ""
 
 #: qml/StandingsPage.qml:142
 msgctxt "@info:placeholder"
@@ -904,7 +916,7 @@ msgstr ""
 
 #: settings/DeleteRatingListDialog.qml:53
 msgctxt "@label"
-msgid "Permanently delete rating list \"%1\"?"
+msgid "Permanently delete rating list “%1”?"
 msgstr ""
 
 #: settings/DeleteRatingListDialog.qml:62
@@ -1067,15 +1079,17 @@ msgid "bbpPairings terminated with a non zero exit code: %1"
 msgstr "对阵引擎 bbpPairings 已终止，非零退出代码：%1"
 
 #: tournament/pairingengine.cpp:85 tournament/trf/reader.cpp:243
-#, kde-format
-msgid "Invalid pairing \"%1\"."
+#, fuzzy, kde-format
+#| msgid "Invalid pairing \"%1\"."
+msgid "Invalid pairing “%1”."
 msgstr "无效对阵“%1”。"
 
 #: tournament/pairingengine.cpp:91 tournament/pairingengine.cpp:95
 #: tournament/pairingengine.cpp:99 tournament/pairingengine.cpp:103
 #: tournament/trf/reader.cpp:256
-#, kde-format
-msgid "Invalid player \"%1\" on pairing \"%2\"."
+#, fuzzy, kde-format
+#| msgid "Invalid player \"%1\" on pairing \"%2\"."
+msgid "Invalid player “%1” on pairing “%2”."
 msgstr "对阵“%2”中的无效选手“%1”。"
 
 #: tournament/qml/AddTiebreakDialog.qml:20
@@ -1089,9 +1103,13 @@ msgid "Calendar"
 msgstr "日历"
 
 #: tournament/qml/SettingsCalendarPage.qml:32
+#, fuzzy
+#| msgctxt "round number"
+#| msgid "Round %1"
 msgctxt "round number"
 msgid "Round %1"
-msgstr "第 %1 轮"
+msgid_plural "Round %1"
+msgstr[0] "第 %1 轮"
 
 #: tournament/qml/SettingsDialog.qml:19
 msgctxt "@action:button"
@@ -1211,7 +1229,7 @@ msgstr[0] ""
 #: tournament/ratinglists/ratinglistsmanager.cpp:219
 #, kde-format
 msgctxt "@info"
-msgid "Could not open file: the file does not exists."
+msgid "Could not open file: the file does not exist."
 msgstr ""
 
 #: tournament/ratinglists/ratinglistsmanager.cpp:240
@@ -1278,7 +1296,7 @@ msgstr "排除最低得分："
 #: tournament/tiebreaks/buchholz.cpp:35
 #, kde-format
 msgctxt "@info"
-msgid "Unsupported tiebreak option \"%1\""
+msgid "Unsupported tiebreak option “%1”"
 msgstr ""
 
 #: tournament/tiebreaks/buchholz.h:25 tournament/tournament.cpp:534
@@ -1291,7 +1309,8 @@ msgstr "Buchholz"
 #, kde-format
 msgctxt "Buchholz N tiebreak, N is a number < 0"
 msgid "Buchholz %1"
-msgstr ""
+msgid_plural "Buchholz %1"
+msgstr[0] ""
 
 #: tournament/tiebreaks/dummy.h:23
 #, kde-format
@@ -1332,32 +1351,46 @@ msgid "An error ocurred while pairing the round: %1"
 msgstr "在生成本轮对阵时发生错误：%1"
 
 #: tournament/tournament.cpp:1206
-#, kde-format
-msgid "Couldn't open file"
+#, fuzzy, kde-format
+#| msgid "Couldn't open file"
+msgid "Couldn’t open file"
 msgstr "无法打开文件"
 
 #: tournament/trf/reader.cpp:54 tournament/trf/reader.cpp:61
-#, kde-format
-msgid "Player \"%1\" not found."
+#, fuzzy, kde-format
+#| msgid "Player \"%1\" not found."
+msgid "Player “%1” not found."
 msgstr "无法找到玩家“%1”。"
 
 #: tournament/trf/reader.cpp:67
-#, kde-format
-msgid "Unknown result on pairing \"%1\" with \"%2\"."
+#, fuzzy, kde-format
+#| msgid "Unknown result on pairing \"%1\" with \"%2\"."
+msgid "Unknown result on pairing “%1” with “%2”."
 msgstr "配对“%1”和“%2”时出现未知结果。"
 
 #: tournament/trf/reader.cpp:189
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@info"
+#| msgid "Date \"%1\" is invalid."
 msgctxt "@info"
-msgid "Date \"%1\" is invalid."
+msgid "Date “%1” is invalid."
 msgstr "日期“%1”无效。"
 
 #: tournament/trf/reader.cpp:263
-#, kde-format
-msgid "Unknown result \"%1\" on pairing \"%2\"."
+#, fuzzy, kde-format
+#| msgid "Unknown result \"%1\" on pairing \"%2\"."
+msgid "Unknown result “%1” on pairing “%2”."
 msgstr "对阵“%2”时出现未知结果“%1”。"
 
 #: tournament/trf/reader.cpp:266
-#, kde-format
-msgid "Pairing \"%1\" has no opponent."
+#, fuzzy, kde-format
+#| msgid "Pairing \"%1\" has no opponent."
+msgid "Pairing “%1” has no opponent."
 msgstr "对阵“%1”无对手。"
+
+#~ msgctxt "@title"
+#~ msgid "Chessament"
+#~ msgstr "Chessament"
+
+#~ msgid "Chess Tournament Manager"
+#~ msgstr "国际象棋赛事管理系统"

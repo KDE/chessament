@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-27 00:41+0000\n"
+"POT-Creation-Date: 2026-10-01 00:41+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Irish Gaelic <kde-i18n-doc@kde.org>\n"
@@ -26,7 +26,7 @@ msgstr ""
 
 #: controller.cpp:187
 #, kde-format
-msgid "Couldn't export tournament."
+msgid "Couldn’t export tournament."
 msgstr ""
 
 #: documents.cpp:23
@@ -37,21 +37,36 @@ msgstr ""
 
 #: documents.cpp:62
 #, kde-format
-msgctxt "@title"
+msgctxt "@title %1 is a number"
 msgid "Round %1 Pairings"
-msgstr ""
+msgid_plural "Round %1 Pairings"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+msgstr[4] ""
 
 #: documents.cpp:103
 #, kde-format
 msgctxt "@title"
 msgid "Standings After Round %1"
-msgstr ""
+msgid_plural "Standings After Round %1"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+msgstr[4] ""
 
 #: documents.cpp:105
 #, kde-format
 msgctxt "@title"
 msgid "Provisional Standings After Round %1"
-msgstr ""
+msgid_plural "Provisional Standings After Round %1"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+msgstr[4] ""
 
 #: documents.cpp:109
 #, kde-format
@@ -65,73 +80,62 @@ msgctxt "@title"
 msgid "Provisional Final Standings"
 msgstr ""
 
-#: main.cpp:59
-#, kde-format
-msgctxt "@title"
-msgid "Chessament"
-msgstr ""
-
-#: main.cpp:63
-#, kde-format
-msgid "Chess Tournament Manager"
-msgstr ""
-
-#: main.cpp:67
+#: main.cpp:60
 #, kde-format
 msgid "© 2024–2026 Manuel Alcaraz Zambrano"
 msgstr ""
 
-#: main.cpp:68
+#: main.cpp:62
 #, kde-format
 msgctxt "@info:credit"
 msgid "Manuel Alcaraz Zambrano"
 msgstr ""
 
-#: main.cpp:69
+#: main.cpp:63
 #, kde-format
 msgctxt "@info:credit"
 msgid "Author & Maintainer"
 msgstr ""
 
-#: main.cpp:72
+#: main.cpp:66
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr ""
 
-#: main.cpp:72
+#: main.cpp:66
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr ""
 
-#: main.cpp:74
+#: main.cpp:68
 #, kde-format
 msgid "Swiss-system chess tournament pairing engine."
 msgstr ""
 
-#: main.cpp:84
+#: main.cpp:79
 #, kde-format
 msgctxt "Command line option description"
 msgid "Import Tournament Report File."
 msgstr ""
 
-#: main.cpp:87
+#: main.cpp:82
 #, kde-format
 msgctxt "@info:shell Command line option description"
 msgid "Event to open."
 msgstr ""
 
-#: main.cpp:106
+#: main.cpp:101
 #, kde-format
 msgctxt "@info:shell"
-msgid "Error: Can't open an event when importing a TRF"
+msgid "Error: Can’t open an event when importing a TRF"
 msgstr ""
 
-#: main.cpp:115
+#: main.cpp:110
 #, kde-format
 msgctxt "@info:shell"
-msgid "Error: Can't open more that one event"
+msgid "Error: Can’t open more than one event"
 msgstr ""
 
 #: pairingmodel.cpp:107
@@ -318,7 +322,7 @@ msgid "Optional"
 msgstr ""
 
 #: qml/AddPlayerDialog.qml:116
-msgctxt "@label:textbox"
+msgctxt "@label:textbox Player National ID"
 msgid "National ID"
 msgstr ""
 
@@ -338,7 +342,7 @@ msgid "Origin"
 msgstr ""
 
 #: qml/AddPlayerDialog.qml:140
-msgctxt "@label:textbox"
+msgctxt "@label:textbox Player Gender"
 msgid "Gender"
 msgstr ""
 
@@ -372,14 +376,9 @@ msgctxt "@info:placeholder Arbiter's ID"
 msgid "ID"
 msgstr ""
 
-#: qml/components/ArbiterDelegate.qml:72
+#: qml/components/ArbiterDelegate.qml:72 qml/components/ArbiterDelegate.qml:78
 msgctxt "@action:button"
 msgid "Delete Arbiter"
-msgstr ""
-
-#: qml/components/ArbiterDelegate.qml:78
-msgctxt "@action:button"
-msgid "Delete arbiter"
 msgstr ""
 
 #: qml/components/MenuBar.qml:50 qml/components/MenuBar.qml:65
@@ -481,7 +480,7 @@ msgstr ""
 
 #: qml/DeletePlayerDialog.qml:20
 msgctxt "@label"
-msgid "Permanently delete player \"%1\"?"
+msgid "Permanently delete player “%1”?"
 msgstr ""
 
 #: qml/DeletePlayerDialog.qml:26
@@ -546,7 +545,12 @@ msgstr ""
 
 #: qml/PairingsPage.qml:88 qml/PairingsPage.qml:93
 msgid "Round %1"
-msgstr ""
+msgid_plural "Round %1"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+msgstr[4] ""
 
 #: qml/PairingsPage.qml:105
 msgctxt "@action:intoolbar"
@@ -555,33 +559,58 @@ msgstr ""
 
 #: qml/PairingsPage.qml:119
 msgctxt "@info"
-msgid "The tournament hasn't started yet."
+msgid "The tournament hasn’t started yet."
 msgstr ""
 
 #: qml/PairingsPage.qml:119
 msgctxt "@info"
 msgid "Round %1 has finished."
-msgstr ""
+msgid_plural "Round %1 has finished."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+msgstr[4] ""
 
 #: qml/PairingsPage.qml:123
 msgctxt "@action:button"
 msgid "Pair Round %1…"
-msgstr ""
+msgid_plural "Pair Round %1…"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+msgstr[4] ""
 
 #: qml/PairingsPage.qml:167
 msgctxt "@info:placeholder"
-msgid "No pairings for round %1 yet"
-msgstr ""
+msgid "No pairings for Round %1 yet"
+msgid_plural "No pairings for Round %1 yet"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+msgstr[4] ""
 
 #: qml/PairingsPage.qml:169
 msgctxt "@info:placeholder"
-msgid "All games of round %1 have finished"
-msgstr ""
+msgid "All games of Round %1 have finished"
+msgid_plural "All games of Round %1 have finished"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+msgstr[4] ""
 
 #: qml/PairRoundDialog.qml:21
 msgctxt "@title %1 is a number >= 1"
 msgid "Pair Round %1"
-msgstr ""
+msgid_plural "Pair Round %1"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+msgstr[4] ""
 
 #: qml/PairRoundDialog.qml:29
 msgctxt "@info"
@@ -590,8 +619,8 @@ msgstr ""
 
 #: qml/PairRoundDialog.qml:29
 msgctxt "@info %1 is a number"
-msgid "The following player won't be paired: %2"
-msgid_plural "The following %1 players won't be paired: %2"
+msgid "The following player won’t be paired: %2"
+msgid_plural "The following %1 players won’t be paired: %2"
 msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
@@ -627,7 +656,7 @@ msgstr ""
 
 #: qml/player/PlayerDetails.qml:17
 msgctxt "@title:window"
-msgid "Details of player \"%1\""
+msgid "Details of player “%1”"
 msgstr ""
 
 #: qml/player/PlayerDetails.qml:22
@@ -667,7 +696,12 @@ msgstr ""
 #: qml/player/PlayerPairingsPage.qml:117
 msgctxt "@info:label"
 msgid "Round %1"
-msgstr ""
+msgid_plural "Round %1"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+msgstr[4] ""
 
 #: qml/PlayersPage.qml:121
 msgctxt "@action:intoolbar Open player details"
@@ -765,7 +799,12 @@ msgstr ""
 #: qml/StandingsPage.qml:85 qml/StandingsPage.qml:95
 msgctxt "@item:inlistbox Standings After Round %1"
 msgid "After Round %1"
-msgstr ""
+msgid_plural "After Round %1"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+msgstr[4] ""
 
 #: qml/StandingsPage.qml:142
 msgctxt "@info:placeholder"
@@ -911,7 +950,7 @@ msgstr ""
 
 #: settings/DeleteRatingListDialog.qml:53
 msgctxt "@label"
-msgid "Permanently delete rating list \"%1\"?"
+msgid "Permanently delete rating list “%1”?"
 msgstr ""
 
 #: settings/DeleteRatingListDialog.qml:62
@@ -1075,14 +1114,14 @@ msgstr ""
 
 #: tournament/pairingengine.cpp:85 tournament/trf/reader.cpp:243
 #, kde-format
-msgid "Invalid pairing \"%1\"."
+msgid "Invalid pairing “%1”."
 msgstr ""
 
 #: tournament/pairingengine.cpp:91 tournament/pairingengine.cpp:95
 #: tournament/pairingengine.cpp:99 tournament/pairingengine.cpp:103
 #: tournament/trf/reader.cpp:256
 #, kde-format
-msgid "Invalid player \"%1\" on pairing \"%2\"."
+msgid "Invalid player “%1” on pairing “%2”."
 msgstr ""
 
 #: tournament/qml/AddTiebreakDialog.qml:20
@@ -1098,7 +1137,12 @@ msgstr ""
 #: tournament/qml/SettingsCalendarPage.qml:32
 msgctxt "round number"
 msgid "Round %1"
-msgstr ""
+msgid_plural "Round %1"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+msgstr[4] ""
 
 #: tournament/qml/SettingsDialog.qml:19
 msgctxt "@action:button"
@@ -1219,7 +1263,7 @@ msgstr[1] ""
 #: tournament/ratinglists/ratinglistsmanager.cpp:219
 #, kde-format
 msgctxt "@info"
-msgid "Could not open file: the file does not exists."
+msgid "Could not open file: the file does not exist."
 msgstr ""
 
 #: tournament/ratinglists/ratinglistsmanager.cpp:240
@@ -1287,7 +1331,7 @@ msgstr ""
 #: tournament/tiebreaks/buchholz.cpp:35
 #, kde-format
 msgctxt "@info"
-msgid "Unsupported tiebreak option \"%1\""
+msgid "Unsupported tiebreak option “%1”"
 msgstr ""
 
 #: tournament/tiebreaks/buchholz.h:25 tournament/tournament.cpp:534
@@ -1300,7 +1344,12 @@ msgstr ""
 #, kde-format
 msgctxt "Buchholz N tiebreak, N is a number < 0"
 msgid "Buchholz %1"
-msgstr ""
+msgid_plural "Buchholz %1"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+msgstr[4] ""
 
 #: tournament/tiebreaks/dummy.h:23
 #, kde-format
@@ -1342,31 +1391,31 @@ msgstr ""
 
 #: tournament/tournament.cpp:1206
 #, kde-format
-msgid "Couldn't open file"
+msgid "Couldn’t open file"
 msgstr ""
 
 #: tournament/trf/reader.cpp:54 tournament/trf/reader.cpp:61
 #, kde-format
-msgid "Player \"%1\" not found."
+msgid "Player “%1” not found."
 msgstr ""
 
 #: tournament/trf/reader.cpp:67
 #, kde-format
-msgid "Unknown result on pairing \"%1\" with \"%2\"."
+msgid "Unknown result on pairing “%1” with “%2”."
 msgstr ""
 
 #: tournament/trf/reader.cpp:189
 #, kde-format
 msgctxt "@info"
-msgid "Date \"%1\" is invalid."
+msgid "Date “%1” is invalid."
 msgstr ""
 
 #: tournament/trf/reader.cpp:263
 #, kde-format
-msgid "Unknown result \"%1\" on pairing \"%2\"."
+msgid "Unknown result “%1” on pairing “%2”."
 msgstr ""
 
 #: tournament/trf/reader.cpp:266
 #, kde-format
-msgid "Pairing \"%1\" has no opponent."
+msgid "Pairing “%1” has no opponent."
 msgstr ""

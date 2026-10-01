@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-27 00:41+0000\n"
+"POT-Creation-Date: 2026-10-01 00:41+0000\n"
 "PO-Revision-Date: 2026-09-14 20:10+0200\n"
 "Last-Translator: Roman Paholík <wizzardsk@gmail.com>\n"
 "Language-Team: none\n"
@@ -24,8 +24,9 @@ msgid "%1 · %2"
 msgstr "%1 · %2"
 
 #: controller.cpp:187
-#, kde-format
-msgid "Couldn't export tournament."
+#, fuzzy, kde-format
+#| msgid "Couldn't export tournament."
+msgid "Couldn’t export tournament."
 msgstr "Nepodarilo sa exportovať turnaj."
 
 #: documents.cpp:23
@@ -35,22 +36,37 @@ msgid "Starting Rank"
 msgstr "Počiatočné poradie"
 
 #: documents.cpp:62
-#, kde-format
-msgctxt "@title"
+#, fuzzy, kde-format
+#| msgctxt "@title"
+#| msgid "Round %1 Pairings"
+msgctxt "@title %1 is a number"
 msgid "Round %1 Pairings"
-msgstr "Párovanie kola %1"
+msgid_plural "Round %1 Pairings"
+msgstr[0] "Párovanie kola %1"
+msgstr[1] "Párovanie kola %1"
+msgstr[2] "Párovanie kola %1"
 
 #: documents.cpp:103
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title"
+#| msgid "Standings After Round %1"
 msgctxt "@title"
 msgid "Standings After Round %1"
-msgstr "Poradie po kole %1"
+msgid_plural "Standings After Round %1"
+msgstr[0] "Poradie po kole %1"
+msgstr[1] "Poradie po kole %1"
+msgstr[2] "Poradie po kole %1"
 
 #: documents.cpp:105
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title"
+#| msgid "Provisional Standings After Round %1"
 msgctxt "@title"
 msgid "Provisional Standings After Round %1"
-msgstr "Predbežné poradie po kole %1"
+msgid_plural "Provisional Standings After Round %1"
+msgstr[0] "Predbežné poradie po kole %1"
+msgstr[1] "Predbežné poradie po kole %1"
+msgstr[2] "Predbežné poradie po kole %1"
 
 #: documents.cpp:109
 #, kde-format
@@ -64,73 +80,66 @@ msgctxt "@title"
 msgid "Provisional Final Standings"
 msgstr "Predbežné konečné poradie"
 
-#: main.cpp:59
-#, kde-format
-msgctxt "@title"
-msgid "Chessament"
-msgstr "Chessament"
-
-#: main.cpp:63
-#, kde-format
-msgid "Chess Tournament Manager"
-msgstr "Správca šachových turnajov"
-
-#: main.cpp:67
+#: main.cpp:60
 #, kde-format
 msgid "© 2024–2026 Manuel Alcaraz Zambrano"
 msgstr "© 2024–2026 Manuel Alcaraz Zambrano"
 
-#: main.cpp:68
+#: main.cpp:62
 #, kde-format
 msgctxt "@info:credit"
 msgid "Manuel Alcaraz Zambrano"
 msgstr "Manuel Alcaraz Zambrano"
 
-#: main.cpp:69
+#: main.cpp:63
 #, kde-format
 msgctxt "@info:credit"
 msgid "Author & Maintainer"
 msgstr "Autor a správca"
 
-#: main.cpp:72
+#: main.cpp:66
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "Roman Paholík"
 
-#: main.cpp:72
+#: main.cpp:66
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "wizzardsk@gmail.com"
 
-#: main.cpp:74
+#: main.cpp:68
 #, kde-format
 msgid "Swiss-system chess tournament pairing engine."
 msgstr "Párovací engine pre šachové turnaje švajčiarskym systémom."
 
-#: main.cpp:84
+#: main.cpp:79
 #, kde-format
 msgctxt "Command line option description"
 msgid "Import Tournament Report File."
 msgstr "Importovať súbor správy o turnaji."
 
-#: main.cpp:87
+#: main.cpp:82
 #, kde-format
 msgctxt "@info:shell Command line option description"
 msgid "Event to open."
 msgstr "Udalosť na otvorenie."
 
-#: main.cpp:106
-#, kde-format
+#: main.cpp:101
+#, fuzzy, kde-format
+#| msgctxt "@info:shell"
+#| msgid "Error: Can't open an event when importing a TRF"
 msgctxt "@info:shell"
-msgid "Error: Can't open an event when importing a TRF"
+msgid "Error: Can’t open an event when importing a TRF"
 msgstr "Chyba: Pri importe TRF nie je možné otvoriť udalosť"
 
-#: main.cpp:115
-#, kde-format
+#: main.cpp:110
+#, fuzzy, kde-format
+#| msgctxt "@info:shell"
+#| msgid "Error: Can't open more that one event"
 msgctxt "@info:shell"
-msgid "Error: Can't open more that one event"
+msgid "Error: Can’t open more than one event"
 msgstr "Chyba: Nie je možné otvoriť viac ako jednu udalosť"
 
 #: pairingmodel.cpp:107
@@ -317,7 +326,10 @@ msgid "Optional"
 msgstr "Voliteľné"
 
 #: qml/AddPlayerDialog.qml:116
-msgctxt "@label:textbox"
+#, fuzzy
+#| msgctxt "@title:column Player National ID"
+#| msgid "National ID"
+msgctxt "@label:textbox Player National ID"
 msgid "National ID"
 msgstr "Národné ID"
 
@@ -337,7 +349,10 @@ msgid "Origin"
 msgstr "Pôvod"
 
 #: qml/AddPlayerDialog.qml:140
-msgctxt "@label:textbox"
+#, fuzzy
+#| msgctxt "@title:column Player Gender"
+#| msgid "Gender"
+msgctxt "@label:textbox Player Gender"
 msgid "Gender"
 msgstr "Pohlavie"
 
@@ -371,14 +386,9 @@ msgctxt "@info:placeholder Arbiter's ID"
 msgid "ID"
 msgstr "ID"
 
-#: qml/components/ArbiterDelegate.qml:72
+#: qml/components/ArbiterDelegate.qml:72 qml/components/ArbiterDelegate.qml:78
 msgctxt "@action:button"
 msgid "Delete Arbiter"
-msgstr "Odstrániť rozhodcu"
-
-#: qml/components/ArbiterDelegate.qml:78
-msgctxt "@action:button"
-msgid "Delete arbiter"
 msgstr "Odstrániť rozhodcu"
 
 #: qml/components/MenuBar.qml:50 qml/components/MenuBar.qml:65
@@ -479,8 +489,11 @@ msgid "Delete Player"
 msgstr "Odstrániť hráča"
 
 #: qml/DeletePlayerDialog.qml:20
+#, fuzzy
+#| msgctxt "@label"
+#| msgid "Permanently delete player \"%1\"?"
 msgctxt "@label"
-msgid "Permanently delete player \"%1\"?"
+msgid "Permanently delete player “%1”?"
 msgstr "Natrvalo odstrániť hráča „%1“?"
 
 #: qml/DeletePlayerDialog.qml:26
@@ -544,8 +557,13 @@ msgid "Export as PDF…"
 msgstr "Exportovať ako PDF…"
 
 #: qml/PairingsPage.qml:88 qml/PairingsPage.qml:93
+#, fuzzy
+#| msgid "Round %1"
 msgid "Round %1"
-msgstr "Kolo %1"
+msgid_plural "Round %1"
+msgstr[0] "Kolo %1"
+msgstr[1] "Kolo %1"
+msgstr[2] "Kolo %1"
 
 #: qml/PairingsPage.qml:105
 msgctxt "@action:intoolbar"
@@ -553,34 +571,67 @@ msgid "Remove pairings of this and following rounds…"
 msgstr "Odstrániť párovania tohto a nasledujúcich kôl…"
 
 #: qml/PairingsPage.qml:119
+#, fuzzy
+#| msgctxt "@info"
+#| msgid "The tournament hasn't started yet."
 msgctxt "@info"
-msgid "The tournament hasn't started yet."
+msgid "The tournament hasn’t started yet."
 msgstr "Turnaj sa ešte nezačal."
 
 #: qml/PairingsPage.qml:119
+#, fuzzy
+#| msgctxt "@info"
+#| msgid "Round %1 has finished."
 msgctxt "@info"
 msgid "Round %1 has finished."
-msgstr "Kolo %1 skončilo."
+msgid_plural "Round %1 has finished."
+msgstr[0] "Kolo %1 skončilo."
+msgstr[1] "Kolo %1 skončilo."
+msgstr[2] "Kolo %1 skončilo."
 
 #: qml/PairingsPage.qml:123
+#, fuzzy
+#| msgctxt "@action:button"
+#| msgid "Pair Round %1…"
 msgctxt "@action:button"
 msgid "Pair Round %1…"
-msgstr "Párovať kolo %1…"
+msgid_plural "Pair Round %1…"
+msgstr[0] "Párovať kolo %1…"
+msgstr[1] "Párovať kolo %1…"
+msgstr[2] "Párovať kolo %1…"
 
 #: qml/PairingsPage.qml:167
+#, fuzzy
+#| msgctxt "@info:placeholder"
+#| msgid "No pairings for round %1 yet"
 msgctxt "@info:placeholder"
-msgid "No pairings for round %1 yet"
-msgstr "Zatiaľ žiadne párovania pre kolo %1"
+msgid "No pairings for Round %1 yet"
+msgid_plural "No pairings for Round %1 yet"
+msgstr[0] "Zatiaľ žiadne párovania pre kolo %1"
+msgstr[1] "Zatiaľ žiadne párovania pre kolo %1"
+msgstr[2] "Zatiaľ žiadne párovania pre kolo %1"
 
 #: qml/PairingsPage.qml:169
+#, fuzzy
+#| msgctxt "@info:placeholder"
+#| msgid "All games of round %1 have finished"
 msgctxt "@info:placeholder"
-msgid "All games of round %1 have finished"
-msgstr "Všetky partie kola %1 sa skončili"
+msgid "All games of Round %1 have finished"
+msgid_plural "All games of Round %1 have finished"
+msgstr[0] "Všetky partie kola %1 sa skončili"
+msgstr[1] "Všetky partie kola %1 sa skončili"
+msgstr[2] "Všetky partie kola %1 sa skončili"
 
 #: qml/PairRoundDialog.qml:21
+#, fuzzy
+#| msgctxt "@title %1 is a number >= 1"
+#| msgid "Pair Round %1"
 msgctxt "@title %1 is a number >= 1"
 msgid "Pair Round %1"
-msgstr "Párovať kolo %1"
+msgid_plural "Pair Round %1"
+msgstr[0] "Párovať kolo %1"
+msgstr[1] "Párovať kolo %1"
+msgstr[2] "Párovať kolo %1"
 
 #: qml/PairRoundDialog.qml:29
 msgctxt "@info"
@@ -588,9 +639,13 @@ msgid "All players will be paired."
 msgstr "Všetci hráči budú spárovaní."
 
 #: qml/PairRoundDialog.qml:29
+#, fuzzy
+#| msgctxt "@info %1 is a number"
+#| msgid "The following player won't be paired: %2"
+#| msgid_plural "The following %1 players won't be paired: %2"
 msgctxt "@info %1 is a number"
-msgid "The following player won't be paired: %2"
-msgid_plural "The following %1 players won't be paired: %2"
+msgid "The following player won’t be paired: %2"
+msgid_plural "The following %1 players won’t be paired: %2"
 msgstr[0] "Nasledujúci hráč nebude spárovaný: %2"
 msgstr[1] "Nasledujúci %1 hráči nebudú spárovaní: %2"
 msgstr[2] "Nasledujúcich %1 hráčov nebude spárovaných: %2"
@@ -623,8 +678,11 @@ msgid "Black"
 msgstr "Čierny"
 
 #: qml/player/PlayerDetails.qml:17
+#, fuzzy
+#| msgctxt "@title:window"
+#| msgid "Details of player \"%1\""
 msgctxt "@title:window"
-msgid "Details of player \"%1\""
+msgid "Details of player “%1”"
 msgstr "Podrobnosti hráča „%1“"
 
 #: qml/player/PlayerDetails.qml:22
@@ -662,9 +720,15 @@ msgid "Pairings"
 msgstr "Párovania"
 
 #: qml/player/PlayerPairingsPage.qml:117
+#, fuzzy
+#| msgctxt "@info:label"
+#| msgid "Round %1"
 msgctxt "@info:label"
 msgid "Round %1"
-msgstr "Kolo %1"
+msgid_plural "Round %1"
+msgstr[0] "Kolo %1"
+msgstr[1] "Kolo %1"
+msgstr[2] "Kolo %1"
 
 #: qml/PlayersPage.qml:121
 msgctxt "@action:intoolbar Open player details"
@@ -764,9 +828,15 @@ msgid "Final Standings"
 msgstr "Konečné skóre"
 
 #: qml/StandingsPage.qml:85 qml/StandingsPage.qml:95
+#, fuzzy
+#| msgctxt "@item:inlistbox Standings After Round %1"
+#| msgid "After Round %1"
 msgctxt "@item:inlistbox Standings After Round %1"
 msgid "After Round %1"
-msgstr "Po kole %1"
+msgid_plural "After Round %1"
+msgstr[0] "Po kole %1"
+msgstr[1] "Po kole %1"
+msgstr[2] "Po kole %1"
 
 #: qml/StandingsPage.qml:142
 msgctxt "@info:placeholder"
@@ -911,8 +981,11 @@ msgid "Delete Rating List"
 msgstr "Odstrániť ratingovú listinu"
 
 #: settings/DeleteRatingListDialog.qml:53
+#, fuzzy
+#| msgctxt "@label"
+#| msgid "Permanently delete rating list \"%1\"?"
 msgctxt "@label"
-msgid "Permanently delete rating list \"%1\"?"
+msgid "Permanently delete rating list “%1”?"
 msgstr "Natrvalo odstrániť ratingovú listinu „%1“?"
 
 #: settings/DeleteRatingListDialog.qml:62
@@ -1075,15 +1148,17 @@ msgid "bbpPairings terminated with a non zero exit code: %1"
 msgstr "bbpPairings skončil s nenulovým návratovým kódom: %1"
 
 #: tournament/pairingengine.cpp:85 tournament/trf/reader.cpp:243
-#, kde-format
-msgid "Invalid pairing \"%1\"."
+#, fuzzy, kde-format
+#| msgid "Invalid pairing \"%1\"."
+msgid "Invalid pairing “%1”."
 msgstr "Neplatné párovanie „%1“."
 
 #: tournament/pairingengine.cpp:91 tournament/pairingengine.cpp:95
 #: tournament/pairingengine.cpp:99 tournament/pairingengine.cpp:103
 #: tournament/trf/reader.cpp:256
-#, kde-format
-msgid "Invalid player \"%1\" on pairing \"%2\"."
+#, fuzzy, kde-format
+#| msgid "Invalid player \"%1\" on pairing \"%2\"."
+msgid "Invalid player “%1” on pairing “%2”."
 msgstr "Neplatný hráč „%1“ v párovaní „%2“."
 
 #: tournament/qml/AddTiebreakDialog.qml:20
@@ -1097,9 +1172,15 @@ msgid "Calendar"
 msgstr "Kalendár"
 
 #: tournament/qml/SettingsCalendarPage.qml:32
+#, fuzzy
+#| msgctxt "round number"
+#| msgid "Round %1"
 msgctxt "round number"
 msgid "Round %1"
-msgstr "Kolo %1"
+msgid_plural "Round %1"
+msgstr[0] "Kolo %1"
+msgstr[1] "Kolo %1"
+msgstr[2] "Kolo %1"
 
 #: tournament/qml/SettingsDialog.qml:19
 msgctxt "@action:button"
@@ -1219,9 +1300,11 @@ msgstr[1] "Importovaní %1 hráči."
 msgstr[2] "Importovaných %1 hráčov."
 
 #: tournament/ratinglists/ratinglistsmanager.cpp:219
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@info"
+#| msgid "Could not open file: the file does not exists."
 msgctxt "@info"
-msgid "Could not open file: the file does not exists."
+msgid "Could not open file: the file does not exist."
 msgstr "Nepodarilo sa otvoriť súbor: súbor neexistuje."
 
 #: tournament/ratinglists/ratinglistsmanager.cpp:240
@@ -1291,9 +1374,11 @@ msgid "Exclude the lowest scores:"
 msgstr "Vylúčiť najnižšie skóre:"
 
 #: tournament/tiebreaks/buchholz.cpp:35
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@info"
+#| msgid "Unsupported tiebreak option \"%1\""
 msgctxt "@info"
-msgid "Unsupported tiebreak option \"%1\""
+msgid "Unsupported tiebreak option “%1”"
 msgstr "Nepodporovaná voľba rozstrelu „%1“"
 
 #: tournament/tiebreaks/buchholz.h:25 tournament/tournament.cpp:534
@@ -1303,10 +1388,15 @@ msgid "Buchholz"
 msgstr "Buchholz"
 
 #: tournament/tiebreaks/buchholz.h:28
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "Buchholz N tiebreak, N is a number < 0"
+#| msgid "Buchholz %1"
 msgctxt "Buchholz N tiebreak, N is a number < 0"
 msgid "Buchholz %1"
-msgstr "Buchholz %1"
+msgid_plural "Buchholz %1"
+msgstr[0] "Buchholz %1"
+msgstr[1] "Buchholz %1"
+msgstr[2] "Buchholz %1"
 
 #: tournament/tiebreaks/dummy.h:23
 #, kde-format
@@ -1347,35 +1437,61 @@ msgid "An error ocurred while pairing the round: %1"
 msgstr "Pri párovaní kola sa vyskytla chyba: %1"
 
 #: tournament/tournament.cpp:1206
-#, kde-format
-msgid "Couldn't open file"
+#, fuzzy, kde-format
+#| msgid "Couldn't open file"
+msgid "Couldn’t open file"
 msgstr "Nepodarilo sa otvoriť súbor"
 
 #: tournament/trf/reader.cpp:54 tournament/trf/reader.cpp:61
-#, kde-format
-msgid "Player \"%1\" not found."
+#, fuzzy, kde-format
+#| msgid "Player \"%1\" not found."
+msgid "Player “%1” not found."
 msgstr "Hráč „%1“ sa nenašiel."
 
 #: tournament/trf/reader.cpp:67
-#, kde-format
-msgid "Unknown result on pairing \"%1\" with \"%2\"."
+#, fuzzy, kde-format
+#| msgid "Unknown result on pairing \"%1\" with \"%2\"."
+msgid "Unknown result on pairing “%1” with “%2”."
 msgstr "Neznámy výsledok v párovaní „%1“ s „%2“."
 
 #: tournament/trf/reader.cpp:189
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@info"
+#| msgid "Date \"%1\" is invalid."
 msgctxt "@info"
-msgid "Date \"%1\" is invalid."
+msgid "Date “%1” is invalid."
 msgstr "Dátum „%1“ je neplatný."
 
 #: tournament/trf/reader.cpp:263
-#, kde-format
-msgid "Unknown result \"%1\" on pairing \"%2\"."
+#, fuzzy, kde-format
+#| msgid "Unknown result \"%1\" on pairing \"%2\"."
+msgid "Unknown result “%1” on pairing “%2”."
 msgstr "Neznámy výsledok „%1“ v párovaní „%2“."
 
 #: tournament/trf/reader.cpp:266
-#, kde-format
-msgid "Pairing \"%1\" has no opponent."
+#, fuzzy, kde-format
+#| msgid "Pairing \"%1\" has no opponent."
+msgid "Pairing “%1” has no opponent."
 msgstr "Párovanie „%1“ nemá súpera."
+
+#~ msgctxt "@title"
+#~ msgid "Chessament"
+#~ msgstr "Chessament"
+
+#~ msgid "Chess Tournament Manager"
+#~ msgstr "Správca šachových turnajov"
+
+#~ msgctxt "@label:textbox"
+#~ msgid "National ID"
+#~ msgstr "Národné ID"
+
+#~ msgctxt "@label:textbox"
+#~ msgid "Gender"
+#~ msgstr "Pohlavie"
+
+#~ msgctxt "@action:button"
+#~ msgid "Delete arbiter"
+#~ msgstr "Odstrániť rozhodcu"
 
 #~ msgid "Pairing allocated bye"
 #~ msgstr "Párovanie pridelených voľných kôl"

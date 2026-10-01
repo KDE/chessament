@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-27 00:41+0000\n"
+"POT-Creation-Date: 2026-10-01 00:41+0000\n"
 "PO-Revision-Date: 2026-08-27 18:25+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -25,8 +25,9 @@ msgid "%1 · %2"
 msgstr "%1 · %2"
 
 #: controller.cpp:187
-#, kde-format
-msgid "Couldn't export tournament."
+#, fuzzy, kde-format
+#| msgid "Couldn't export tournament."
+msgid "Couldn’t export tournament."
 msgstr "Не вдалося експортувати дані турніру."
 
 #: documents.cpp:23
@@ -36,22 +37,40 @@ msgid "Starting Rank"
 msgstr "Початковий ранг"
 
 #: documents.cpp:62
-#, kde-format
-msgctxt "@title"
+#, fuzzy, kde-format
+#| msgctxt "@title"
+#| msgid "Round %1 Pairings"
+msgctxt "@title %1 is a number"
 msgid "Round %1 Pairings"
-msgstr "Поділ на пари раунду %1"
+msgid_plural "Round %1 Pairings"
+msgstr[0] "Поділ на пари раунду %1"
+msgstr[1] "Поділ на пари раунду %1"
+msgstr[2] "Поділ на пари раунду %1"
+msgstr[3] "Поділ на пари раунду %1"
 
 #: documents.cpp:103
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title"
+#| msgid "Standings After Round %1"
 msgctxt "@title"
 msgid "Standings After Round %1"
-msgstr "Результати після раунду %1"
+msgid_plural "Standings After Round %1"
+msgstr[0] "Результати після раунду %1"
+msgstr[1] "Результати після раунду %1"
+msgstr[2] "Результати після раунду %1"
+msgstr[3] "Результати після раунду %1"
 
 #: documents.cpp:105
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title"
+#| msgid "Provisional Standings After Round %1"
 msgctxt "@title"
 msgid "Provisional Standings After Round %1"
-msgstr "Попередні результати після раунду %1"
+msgid_plural "Provisional Standings After Round %1"
+msgstr[0] "Попередні результати після раунду %1"
+msgstr[1] "Попередні результати після раунду %1"
+msgstr[2] "Попередні результати після раунду %1"
+msgstr[3] "Попередні результати після раунду %1"
 
 #: documents.cpp:109
 #, kde-format
@@ -65,73 +84,66 @@ msgctxt "@title"
 msgid "Provisional Final Standings"
 msgstr "Попередні остаточні результати"
 
-#: main.cpp:59
-#, kde-format
-msgctxt "@title"
-msgid "Chessament"
-msgstr "Chessament"
-
-#: main.cpp:63
-#, kde-format
-msgid "Chess Tournament Manager"
-msgstr "Керування шаховим турніром"
-
-#: main.cpp:67
+#: main.cpp:60
 #, kde-format
 msgid "© 2024–2026 Manuel Alcaraz Zambrano"
 msgstr "© Manuel Alcaraz Zambrano, 2024–2026"
 
-#: main.cpp:68
+#: main.cpp:62
 #, kde-format
 msgctxt "@info:credit"
 msgid "Manuel Alcaraz Zambrano"
 msgstr "Manuel Alcaraz Zambrano"
 
-#: main.cpp:69
+#: main.cpp:63
 #, kde-format
 msgctxt "@info:credit"
 msgid "Author & Maintainer"
 msgstr "Автор і супровідник"
 
-#: main.cpp:72
+#: main.cpp:66
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "Юрій Чорноіван"
 
-#: main.cpp:72
+#: main.cpp:66
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "yurchor@ukr.net"
 
-#: main.cpp:74
+#: main.cpp:68
 #, kde-format
 msgid "Swiss-system chess tournament pairing engine."
 msgstr "Рушій поділу на пари для турнірів за швейцарською системою."
 
-#: main.cpp:84
+#: main.cpp:79
 #, kde-format
 msgctxt "Command line option description"
 msgid "Import Tournament Report File."
 msgstr "Імпортувати файл звіту щодо турніру."
 
-#: main.cpp:87
+#: main.cpp:82
 #, kde-format
 msgctxt "@info:shell Command line option description"
 msgid "Event to open."
 msgstr "Подія, яку слід відкрити."
 
-#: main.cpp:106
-#, kde-format
+#: main.cpp:101
+#, fuzzy, kde-format
+#| msgctxt "@info:shell"
+#| msgid "Error: Can't open an event when importing a TRF"
 msgctxt "@info:shell"
-msgid "Error: Can't open an event when importing a TRF"
+msgid "Error: Can’t open an event when importing a TRF"
 msgstr "Помилка: не вдалося відкрити подію під час імпортування TRF"
 
-#: main.cpp:115
-#, kde-format
+#: main.cpp:110
+#, fuzzy, kde-format
+#| msgctxt "@info:shell"
+#| msgid "Error: Can't open more that one event"
 msgctxt "@info:shell"
-msgid "Error: Can't open more that one event"
+msgid "Error: Can’t open more than one event"
 msgstr "Помилка: не можна відкривати декілька подій одночасно"
 
 #: pairingmodel.cpp:107
@@ -318,7 +330,10 @@ msgid "Optional"
 msgstr "Необов'язкове"
 
 #: qml/AddPlayerDialog.qml:116
-msgctxt "@label:textbox"
+#, fuzzy
+#| msgctxt "@title:column Player National ID"
+#| msgid "National ID"
+msgctxt "@label:textbox Player National ID"
 msgid "National ID"
 msgstr "Національний ідентифікатор"
 
@@ -338,7 +353,10 @@ msgid "Origin"
 msgstr "Походження"
 
 #: qml/AddPlayerDialog.qml:140
-msgctxt "@label:textbox"
+#, fuzzy
+#| msgctxt "@title:column Player Gender"
+#| msgid "Gender"
+msgctxt "@label:textbox Player Gender"
 msgid "Gender"
 msgstr "Стать"
 
@@ -372,14 +390,9 @@ msgctxt "@info:placeholder Arbiter's ID"
 msgid "ID"
 msgstr "Ід."
 
-#: qml/components/ArbiterDelegate.qml:72
+#: qml/components/ArbiterDelegate.qml:72 qml/components/ArbiterDelegate.qml:78
 msgctxt "@action:button"
 msgid "Delete Arbiter"
-msgstr "Вилучити суддю"
-
-#: qml/components/ArbiterDelegate.qml:78
-msgctxt "@action:button"
-msgid "Delete arbiter"
 msgstr "Вилучити суддю"
 
 #: qml/components/MenuBar.qml:50 qml/components/MenuBar.qml:65
@@ -480,8 +493,11 @@ msgid "Delete Player"
 msgstr "Вилучення гравця"
 
 #: qml/DeletePlayerDialog.qml:20
+#, fuzzy
+#| msgctxt "@label"
+#| msgid "Permanently delete player \"%1\"?"
 msgctxt "@label"
-msgid "Permanently delete player \"%1\"?"
+msgid "Permanently delete player “%1”?"
 msgstr "Остаточно вилучити гравця «%1»?"
 
 #: qml/DeletePlayerDialog.qml:26
@@ -545,8 +561,14 @@ msgid "Export as PDF…"
 msgstr "Експортувати до PDF…"
 
 #: qml/PairingsPage.qml:88 qml/PairingsPage.qml:93
+#, fuzzy
+#| msgid "Round %1"
 msgid "Round %1"
-msgstr "Раунд %1"
+msgid_plural "Round %1"
+msgstr[0] "Раунд %1"
+msgstr[1] "Раунд %1"
+msgstr[2] "Раунд %1"
+msgstr[3] "Раунд %1"
 
 #: qml/PairingsPage.qml:105
 msgctxt "@action:intoolbar"
@@ -554,34 +576,72 @@ msgid "Remove pairings of this and following rounds…"
 msgstr "Вилучити поділ на пари для цього і наступного раундів…"
 
 #: qml/PairingsPage.qml:119
+#, fuzzy
+#| msgctxt "@info"
+#| msgid "The tournament hasn't started yet."
 msgctxt "@info"
-msgid "The tournament hasn't started yet."
+msgid "The tournament hasn’t started yet."
 msgstr "Турнір ще не розпочато."
 
 #: qml/PairingsPage.qml:119
+#, fuzzy
+#| msgctxt "@info"
+#| msgid "Round %1 has finished."
 msgctxt "@info"
 msgid "Round %1 has finished."
-msgstr "Раунд %1 завершено."
+msgid_plural "Round %1 has finished."
+msgstr[0] "Раунд %1 завершено."
+msgstr[1] "Раунд %1 завершено."
+msgstr[2] "Раунд %1 завершено."
+msgstr[3] "Раунд %1 завершено."
 
 #: qml/PairingsPage.qml:123
+#, fuzzy
+#| msgctxt "@action:button"
+#| msgid "Pair Round %1…"
 msgctxt "@action:button"
 msgid "Pair Round %1…"
-msgstr "Поділ на пари раунду %1…"
+msgid_plural "Pair Round %1…"
+msgstr[0] "Поділ на пари раунду %1…"
+msgstr[1] "Поділ на пари раунду %1…"
+msgstr[2] "Поділ на пари раунду %1…"
+msgstr[3] "Поділ на пари раунду %1…"
 
 #: qml/PairingsPage.qml:167
+#, fuzzy
+#| msgctxt "@info:placeholder"
+#| msgid "No pairings for round %1 yet"
 msgctxt "@info:placeholder"
-msgid "No pairings for round %1 yet"
-msgstr "Поділу на пари для раунду %1 ще немає"
+msgid "No pairings for Round %1 yet"
+msgid_plural "No pairings for Round %1 yet"
+msgstr[0] "Поділу на пари для раунду %1 ще немає"
+msgstr[1] "Поділу на пари для раунду %1 ще немає"
+msgstr[2] "Поділу на пари для раунду %1 ще немає"
+msgstr[3] "Поділу на пари для раунду %1 ще немає"
 
 #: qml/PairingsPage.qml:169
+#, fuzzy
+#| msgctxt "@info:placeholder"
+#| msgid "All games of round %1 have finished"
 msgctxt "@info:placeholder"
-msgid "All games of round %1 have finished"
-msgstr "Усі ігри раунду %1 завершено"
+msgid "All games of Round %1 have finished"
+msgid_plural "All games of Round %1 have finished"
+msgstr[0] "Усі ігри раунду %1 завершено"
+msgstr[1] "Усі ігри раунду %1 завершено"
+msgstr[2] "Усі ігри раунду %1 завершено"
+msgstr[3] "Усі ігри раунду %1 завершено"
 
 #: qml/PairRoundDialog.qml:21
+#, fuzzy
+#| msgctxt "@title %1 is a number >= 1"
+#| msgid "Pair Round %1"
 msgctxt "@title %1 is a number >= 1"
 msgid "Pair Round %1"
-msgstr "Поділ на пари раунду %1"
+msgid_plural "Pair Round %1"
+msgstr[0] "Поділ на пари раунду %1"
+msgstr[1] "Поділ на пари раунду %1"
+msgstr[2] "Поділ на пари раунду %1"
+msgstr[3] "Поділ на пари раунду %1"
 
 #: qml/PairRoundDialog.qml:29
 msgctxt "@info"
@@ -589,9 +649,13 @@ msgid "All players will be paired."
 msgstr "Для усіх гравців буде знайдено пари."
 
 #: qml/PairRoundDialog.qml:29
+#, fuzzy
+#| msgctxt "@info %1 is a number"
+#| msgid "The following player won't be paired: %2"
+#| msgid_plural "The following %1 players won't be paired: %2"
 msgctxt "@info %1 is a number"
-msgid "The following player won't be paired: %2"
-msgid_plural "The following %1 players won't be paired: %2"
+msgid "The following player won’t be paired: %2"
+msgid_plural "The following %1 players won’t be paired: %2"
 msgstr[0] "Не буде знайдено пари для такого %1 гравця: %2"
 msgstr[1] "Не буде знайдено пари для таких %1 гравців: %2"
 msgstr[2] "Не буде знайдено пари для таких %1 гравців: %2"
@@ -625,8 +689,11 @@ msgid "Black"
 msgstr "Чорний"
 
 #: qml/player/PlayerDetails.qml:17
+#, fuzzy
+#| msgctxt "@title:window"
+#| msgid "Details of player \"%1\""
 msgctxt "@title:window"
-msgid "Details of player \"%1\""
+msgid "Details of player “%1”"
 msgstr "Параметри гравця «%1»"
 
 #: qml/player/PlayerDetails.qml:22
@@ -664,9 +731,16 @@ msgid "Pairings"
 msgstr "Поділ на пари"
 
 #: qml/player/PlayerPairingsPage.qml:117
+#, fuzzy
+#| msgctxt "@info:label"
+#| msgid "Round %1"
 msgctxt "@info:label"
 msgid "Round %1"
-msgstr "Раунд %1"
+msgid_plural "Round %1"
+msgstr[0] "Раунд %1"
+msgstr[1] "Раунд %1"
+msgstr[2] "Раунд %1"
+msgstr[3] "Раунд %1"
 
 #: qml/PlayersPage.qml:121
 msgctxt "@action:intoolbar Open player details"
@@ -768,9 +842,16 @@ msgid "Final Standings"
 msgstr "Остаточні результати"
 
 #: qml/StandingsPage.qml:85 qml/StandingsPage.qml:95
+#, fuzzy
+#| msgctxt "@item:inlistbox Standings After Round %1"
+#| msgid "After Round %1"
 msgctxt "@item:inlistbox Standings After Round %1"
 msgid "After Round %1"
-msgstr "Після раунду %1"
+msgid_plural "After Round %1"
+msgstr[0] "Після раунду %1"
+msgstr[1] "Після раунду %1"
+msgstr[2] "Після раунду %1"
+msgstr[3] "Після раунду %1"
 
 #: qml/StandingsPage.qml:142
 msgctxt "@info:placeholder"
@@ -915,8 +996,11 @@ msgid "Delete Rating List"
 msgstr "Вилучення рейтингового списку"
 
 #: settings/DeleteRatingListDialog.qml:53
+#, fuzzy
+#| msgctxt "@label"
+#| msgid "Permanently delete rating list \"%1\"?"
 msgctxt "@label"
-msgid "Permanently delete rating list \"%1\"?"
+msgid "Permanently delete rating list “%1”?"
 msgstr "Остаточно вилучити рейтинговий список «%1»?"
 
 #: settings/DeleteRatingListDialog.qml:62
@@ -1080,15 +1164,17 @@ msgid "bbpPairings terminated with a non zero exit code: %1"
 msgstr "Роботу bbpPairings перервано з ненульовим кодом виходу: %1"
 
 #: tournament/pairingengine.cpp:85 tournament/trf/reader.cpp:243
-#, kde-format
-msgid "Invalid pairing \"%1\"."
+#, fuzzy, kde-format
+#| msgid "Invalid pairing \"%1\"."
+msgid "Invalid pairing “%1”."
 msgstr "Некоректний розподіл на пари «%1»."
 
 #: tournament/pairingengine.cpp:91 tournament/pairingengine.cpp:95
 #: tournament/pairingengine.cpp:99 tournament/pairingengine.cpp:103
 #: tournament/trf/reader.cpp:256
-#, kde-format
-msgid "Invalid player \"%1\" on pairing \"%2\"."
+#, fuzzy, kde-format
+#| msgid "Invalid player \"%1\" on pairing \"%2\"."
+msgid "Invalid player “%1” on pairing “%2”."
 msgstr "Некоректний гравець «%1» у поділі на пари «%2»."
 
 #: tournament/qml/AddTiebreakDialog.qml:20
@@ -1102,9 +1188,16 @@ msgid "Calendar"
 msgstr "Календар"
 
 #: tournament/qml/SettingsCalendarPage.qml:32
+#, fuzzy
+#| msgctxt "round number"
+#| msgid "Round %1"
 msgctxt "round number"
 msgid "Round %1"
-msgstr "Раунд %1"
+msgid_plural "Round %1"
+msgstr[0] "Раунд %1"
+msgstr[1] "Раунд %1"
+msgstr[2] "Раунд %1"
+msgstr[3] "Раунд %1"
 
 #: tournament/qml/SettingsDialog.qml:19
 msgctxt "@action:button"
@@ -1225,9 +1318,11 @@ msgstr[2] "Імпортовано дані %1 гравців."
 msgstr[3] "Імпортовано дані гравця."
 
 #: tournament/ratinglists/ratinglistsmanager.cpp:219
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@info"
+#| msgid "Could not open file: the file does not exists."
 msgctxt "@info"
-msgid "Could not open file: the file does not exists."
+msgid "Could not open file: the file does not exist."
 msgstr "Не вдалося відкрити файл: файла не існує."
 
 #: tournament/ratinglists/ratinglistsmanager.cpp:240
@@ -1297,9 +1392,11 @@ msgid "Exclude the lowest scores:"
 msgstr "Виключити найнижчі рейтинги:"
 
 #: tournament/tiebreaks/buchholz.cpp:35
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@info"
+#| msgid "Unsupported tiebreak option \"%1\""
 msgctxt "@info"
-msgid "Unsupported tiebreak option \"%1\""
+msgid "Unsupported tiebreak option “%1”"
 msgstr "Непідтримуваний варіант тай-брейка «%1»"
 
 #: tournament/tiebreaks/buchholz.h:25 tournament/tournament.cpp:534
@@ -1309,10 +1406,16 @@ msgid "Buchholz"
 msgstr "Бухгольц"
 
 #: tournament/tiebreaks/buchholz.h:28
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "Buchholz N tiebreak, N is a number < 0"
+#| msgid "Buchholz %1"
 msgctxt "Buchholz N tiebreak, N is a number < 0"
 msgid "Buchholz %1"
-msgstr "Бухгольц %1"
+msgid_plural "Buchholz %1"
+msgstr[0] "Бухгольц %1"
+msgstr[1] "Бухгольц %1"
+msgstr[2] "Бухгольц %1"
+msgstr[3] "Бухгольц %1"
 
 #: tournament/tiebreaks/dummy.h:23
 #, kde-format
@@ -1353,35 +1456,61 @@ msgid "An error ocurred while pairing the round: %1"
 msgstr "Під час поділу на пари для раунду сталася помилка: %1"
 
 #: tournament/tournament.cpp:1206
-#, kde-format
-msgid "Couldn't open file"
+#, fuzzy, kde-format
+#| msgid "Couldn't open file"
+msgid "Couldn’t open file"
 msgstr "Не вдалося відкрити файл"
 
 #: tournament/trf/reader.cpp:54 tournament/trf/reader.cpp:61
-#, kde-format
-msgid "Player \"%1\" not found."
+#, fuzzy, kde-format
+#| msgid "Player \"%1\" not found."
+msgid "Player “%1” not found."
 msgstr "Гравця «%1» не знайдено."
 
 #: tournament/trf/reader.cpp:67
-#, kde-format
-msgid "Unknown result on pairing \"%1\" with \"%2\"."
+#, fuzzy, kde-format
+#| msgid "Unknown result on pairing \"%1\" with \"%2\"."
+msgid "Unknown result on pairing “%1” with “%2”."
 msgstr "Невідомий результат для поділу на пари «%1» з «%2»."
 
 #: tournament/trf/reader.cpp:189
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@info"
+#| msgid "Date \"%1\" is invalid."
 msgctxt "@info"
-msgid "Date \"%1\" is invalid."
+msgid "Date “%1” is invalid."
 msgstr "Дата «%1» є некоректною."
 
 #: tournament/trf/reader.cpp:263
-#, kde-format
-msgid "Unknown result \"%1\" on pairing \"%2\"."
+#, fuzzy, kde-format
+#| msgid "Unknown result \"%1\" on pairing \"%2\"."
+msgid "Unknown result “%1” on pairing “%2”."
 msgstr "Невідомий результат «%1» у поділі на пари «%2»."
 
 #: tournament/trf/reader.cpp:266
-#, kde-format
-msgid "Pairing \"%1\" has no opponent."
+#, fuzzy, kde-format
+#| msgid "Pairing \"%1\" has no opponent."
+msgid "Pairing “%1” has no opponent."
 msgstr "У парах «%1» немає суперника."
+
+#~ msgctxt "@title"
+#~ msgid "Chessament"
+#~ msgstr "Chessament"
+
+#~ msgid "Chess Tournament Manager"
+#~ msgstr "Керування шаховим турніром"
+
+#~ msgctxt "@label:textbox"
+#~ msgid "National ID"
+#~ msgstr "Національний ідентифікатор"
+
+#~ msgctxt "@label:textbox"
+#~ msgid "Gender"
+#~ msgstr "Стать"
+
+#~ msgctxt "@action:button"
+#~ msgid "Delete arbiter"
+#~ msgstr "Вилучити суддю"
 
 #~ msgid "Pairing allocated bye"
 #~ msgstr "Призначений фіктивний парний гравець"
