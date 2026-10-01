@@ -57,13 +57,12 @@ TablePage {
     actions: [
         Kirigami.Action {
             id: hideFinishedAction
-            text: KI18n.i18nc("@option:check", "Hide finished games")
-            checkable: true
-            checked: false
+            AC.ActionCollection.action: "HideFinishedGames"
+            AC.ActionCollection.collection: "org.kde.chessament.pairings"
             displayComponent: Controls.Switch {
                 action: hideFinishedAction
             }
-            onToggled: {
+            onCheckedChanged: function (): void {
                 proxyModel.invalidateFilter();
             }
         },

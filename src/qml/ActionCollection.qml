@@ -70,6 +70,17 @@ AC.ActionCollectionManager {
     }
 
     AC.ActionCollection {
+        name: "org.kde.chessament.pairings"
+        text: KI18n.i18nc("@action:menu", "Pairings")
+
+        AC.ActionData {
+            name: "HideFinishedGames"
+            text: KI18n.i18nc("@option:check", "Hide finished games")
+            checkable: true
+        }
+    }
+
+    AC.ActionCollection {
         name: "org.kde.chessament.help"
         text: KI18n.i18nc("@action:menu", "Help")
 

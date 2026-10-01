@@ -109,6 +109,11 @@ Controls.MenuBar {
 
     Controls.Menu {
         title: KI18n.i18nc("@action:menu", "View")
+
+        Kirigami.Action {
+            AC.ActionCollection.action: "HideFinishedGames"
+            AC.ActionCollection.collection: "org.kde.chessament.pairings"
+        }
     }
 
     Controls.Menu {
