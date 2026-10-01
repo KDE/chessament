@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-01 00:41+0000\n"
-"PO-Revision-Date: 2026-08-27 20:03+0300\n"
+"POT-Creation-Date: 2026-10-01 17:37+0000\n"
+"PO-Revision-Date: 2026-10-01 20:13+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -24,8 +24,7 @@ msgid "%1 · %2"
 msgstr "%1 · %2"
 
 #: controller.cpp:187
-#, fuzzy, kde-format
-#| msgid "Couldn't export tournament."
+#, kde-format
 msgid "Couldn’t export tournament."
 msgstr "Turnuva dışa aktarılamadı."
 
@@ -36,9 +35,7 @@ msgid "Starting Rank"
 msgstr "Başlangıç Derecesi"
 
 #: documents.cpp:62
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Round %1 Pairings"
+#, kde-format
 msgctxt "@title %1 is a number"
 msgid "Round %1 Pairings"
 msgid_plural "Round %1 Pairings"
@@ -46,9 +43,7 @@ msgstr[0] "Raunt %1 Eşleşmeleri"
 msgstr[1] "Raunt %1 Eşleşmeleri"
 
 #: documents.cpp:103
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Standings After Round %1"
+#, kde-format
 msgctxt "@title"
 msgid "Standings After Round %1"
 msgid_plural "Standings After Round %1"
@@ -56,9 +51,7 @@ msgstr[0] "%1 Raunt Sonrası Puan Durumu"
 msgstr[1] "%1 Raunt Sonrası Puan Durumu"
 
 #: documents.cpp:105
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Provisional Standings After Round %1"
+#, kde-format
 msgctxt "@title"
 msgid "Provisional Standings After Round %1"
 msgid_plural "Provisional Standings After Round %1"
@@ -124,17 +117,13 @@ msgid "Event to open."
 msgstr "Açılacak etkinlik."
 
 #: main.cpp:101
-#, fuzzy, kde-format
-#| msgctxt "@info:shell"
-#| msgid "Error: Can't open an event when importing a TRF"
+#, kde-format
 msgctxt "@info:shell"
 msgid "Error: Can’t open an event when importing a TRF"
 msgstr "Hata: Bir TRF içe aktarılırken etkinlik açılamaz"
 
 #: main.cpp:110
-#, fuzzy, kde-format
-#| msgctxt "@info:shell"
-#| msgid "Error: Can't open more that one event"
+#, kde-format
 msgctxt "@info:shell"
 msgid "Error: Can’t open more than one event"
 msgstr "Hata: Birden çok etkinlik açılamaz"
@@ -261,7 +250,7 @@ msgctxt "@action:inmenu"
 msgid "Export tournament report…"
 msgstr "Turnuva Raporunu Dışa Aktar…"
 
-#: qml/ActionCollection.qml:49 qml/components/MenuBar.qml:115
+#: qml/ActionCollection.qml:49 qml/components/MenuBar.qml:120
 msgctxt "@action:menu"
 msgid "Tournament"
 msgstr "Turnuva"
@@ -281,7 +270,19 @@ msgctxt "@action Update players ratings"
 msgid "Update ratings…"
 msgstr "Derecelendirmelerini Güncelle…"
 
-#: qml/ActionCollection.qml:74 qml/components/MenuBar.qml:149
+#: qml/ActionCollection.qml:74
+#, fuzzy
+#| msgid "Pairings"
+msgctxt "@action:menu"
+msgid "Pairings"
+msgstr "Eşleşmeler"
+
+#: qml/ActionCollection.qml:78
+msgctxt "@option:check"
+msgid "Hide finished games"
+msgstr "Biten oyunları gizle"
+
+#: qml/ActionCollection.qml:85 qml/components/MenuBar.qml:154
 msgctxt "@action:menu"
 msgid "Help"
 msgstr "Yardım"
@@ -323,12 +324,9 @@ msgid "Optional"
 msgstr "İsteğe bağlı"
 
 #: qml/AddPlayerDialog.qml:116
-#, fuzzy
-#| msgctxt "@title:column Player National ID"
-#| msgid "National ID"
 msgctxt "@label:textbox Player National ID"
 msgid "National ID"
-msgstr "Ulusal Kimlik"
+msgstr "Ulusal kimlik"
 
 #: qml/AddPlayerDialog.qml:122
 msgctxt "@label:textbox"
@@ -346,9 +344,6 @@ msgid "Origin"
 msgstr "Köken"
 
 #: qml/AddPlayerDialog.qml:140
-#, fuzzy
-#| msgctxt "@title:column Player Gender"
-#| msgid "Gender"
 msgctxt "@label:textbox Player Gender"
 msgid "Gender"
 msgstr "Cinsiyet"
@@ -404,7 +399,7 @@ msgctxt "@action:menu"
 msgid "View"
 msgstr "Görüntüle"
 
-#: qml/components/MenuBar.qml:129
+#: qml/components/MenuBar.qml:134
 msgctxt "@action:menu"
 msgid "Settings"
 msgstr "Ayarlar"
@@ -486,9 +481,6 @@ msgid "Delete Player"
 msgstr "Oyuncuyu Sil"
 
 #: qml/DeletePlayerDialog.qml:20
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "Permanently delete player \"%1\"?"
 msgctxt "@label"
 msgid "Permanently delete player “%1”?"
 msgstr "Oyuncu “%1”, kalıcı olarak silinsin mi?"
@@ -543,71 +535,49 @@ msgctxt "@label:listbox"
 msgid "PDF document (*.pdf)"
 msgstr "PDF belgesi (*.pdf)"
 
-#: qml/PairingsPage.qml:60
-msgctxt "@option:check"
-msgid "Hide finished games"
-msgstr "Biten oyunları gizle"
-
-#: qml/PairingsPage.qml:78 qml/PlayersPage.qml:142 qml/StandingsPage.qml:70
+#: qml/PairingsPage.qml:77 qml/PlayersPage.qml:142 qml/StandingsPage.qml:70
 msgctxt "@action:intoolbar"
 msgid "Export as PDF…"
 msgstr "PDF Olarak Dışa Aktar…"
 
-#: qml/PairingsPage.qml:88 qml/PairingsPage.qml:93
-#, fuzzy
-#| msgid "Round %1"
+#: qml/PairingsPage.qml:87 qml/PairingsPage.qml:92
 msgid "Round %1"
 msgid_plural "Round %1"
 msgstr[0] "Raunt %1"
 msgstr[1] "Raunt %1"
 
-#: qml/PairingsPage.qml:105
+#: qml/PairingsPage.qml:104
 msgctxt "@action:intoolbar"
 msgid "Remove pairings of this and following rounds…"
 msgstr "Bu ve Sonraki Rauntların Eşleşmelerini Kaldır…"
 
-#: qml/PairingsPage.qml:119
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "The tournament hasn't started yet."
+#: qml/PairingsPage.qml:118
 msgctxt "@info"
 msgid "The tournament hasn’t started yet."
 msgstr "Turnuva henüz başlamadı."
 
-#: qml/PairingsPage.qml:119
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Round %1 has finished."
+#: qml/PairingsPage.qml:118
 msgctxt "@info"
 msgid "Round %1 has finished."
 msgid_plural "Round %1 has finished."
 msgstr[0] "%1. raunt bitti."
 msgstr[1] "%1. raunt bitti."
 
-#: qml/PairingsPage.qml:123
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Pair Round %1…"
+#: qml/PairingsPage.qml:122
 msgctxt "@action:button"
 msgid "Pair Round %1…"
 msgid_plural "Pair Round %1…"
 msgstr[0] "Eşleştir: %1. Raunt…"
 msgstr[1] "Eşleştir: %1. Raunt…"
 
-#: qml/PairingsPage.qml:167
-#, fuzzy
-#| msgctxt "@info:placeholder"
-#| msgid "No pairings for round %1 yet"
+#: qml/PairingsPage.qml:166
 msgctxt "@info:placeholder"
 msgid "No pairings for Round %1 yet"
 msgid_plural "No pairings for Round %1 yet"
 msgstr[0] "Raunt %1 için henüz bir eşleşme yok"
 msgstr[1] "Raunt %1 için henüz bir eşleşme yok"
 
-#: qml/PairingsPage.qml:169
-#, fuzzy
-#| msgctxt "@info:placeholder"
-#| msgid "All games of round %1 have finished"
+#: qml/PairingsPage.qml:168
 msgctxt "@info:placeholder"
 msgid "All games of Round %1 have finished"
 msgid_plural "All games of Round %1 have finished"
@@ -615,9 +585,6 @@ msgstr[0] "%1. raundun tüm oyunları bitti"
 msgstr[1] "%1. raundun tüm oyunları bitti"
 
 #: qml/PairRoundDialog.qml:21
-#, fuzzy
-#| msgctxt "@title %1 is a number >= 1"
-#| msgid "Pair Round %1"
 msgctxt "@title %1 is a number >= 1"
 msgid "Pair Round %1"
 msgid_plural "Pair Round %1"
@@ -630,10 +597,6 @@ msgid "All players will be paired."
 msgstr "Tüm oyuncular eşleştirilecek."
 
 #: qml/PairRoundDialog.qml:29
-#, fuzzy
-#| msgctxt "@info %1 is a number"
-#| msgid "The following player won't be paired: %2"
-#| msgid_plural "The following %1 players won't be paired: %2"
 msgctxt "@info %1 is a number"
 msgid "The following player won’t be paired: %2"
 msgid_plural "The following %1 players won’t be paired: %2"
@@ -668,9 +631,6 @@ msgid "Black"
 msgstr "Siyah"
 
 #: qml/player/PlayerDetails.qml:17
-#, fuzzy
-#| msgctxt "@title:window"
-#| msgid "Details of player \"%1\""
 msgctxt "@title:window"
 msgid "Details of player “%1”"
 msgstr "“%1” Ayrıntıları"
@@ -710,9 +670,6 @@ msgid "Pairings"
 msgstr "Eşleşmeler"
 
 #: qml/player/PlayerPairingsPage.qml:117
-#, fuzzy
-#| msgctxt "@info:label"
-#| msgid "Round %1"
 msgctxt "@info:label"
 msgid "Round %1"
 msgid_plural "Round %1"
@@ -815,9 +772,6 @@ msgid "Final Standings"
 msgstr "Son Puan Durumu"
 
 #: qml/StandingsPage.qml:85 qml/StandingsPage.qml:95
-#, fuzzy
-#| msgctxt "@item:inlistbox Standings After Round %1"
-#| msgid "After Round %1"
 msgctxt "@item:inlistbox Standings After Round %1"
 msgid "After Round %1"
 msgid_plural "After Round %1"
@@ -967,9 +921,6 @@ msgid "Delete Rating List"
 msgstr "Derecelendirme Listesini Sil"
 
 #: settings/DeleteRatingListDialog.qml:53
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "Permanently delete rating list \"%1\"?"
 msgctxt "@label"
 msgid "Permanently delete rating list “%1”?"
 msgstr "Derecelendirme listesi “%1”, kalıcı olarak silinsin mi?"
@@ -1134,16 +1085,14 @@ msgid "bbpPairings terminated with a non zero exit code: %1"
 msgstr "bbpPairings, sıfır olmayan bir çıkış koduyla sonlandı: %1"
 
 #: tournament/pairingengine.cpp:85 tournament/trf/reader.cpp:243
-#, fuzzy, kde-format
-#| msgid "Invalid pairing \"%1\"."
+#, kde-format
 msgid "Invalid pairing “%1”."
 msgstr "Geçersiz eşleşme “%1”."
 
 #: tournament/pairingengine.cpp:91 tournament/pairingengine.cpp:95
 #: tournament/pairingengine.cpp:99 tournament/pairingengine.cpp:103
 #: tournament/trf/reader.cpp:256
-#, fuzzy, kde-format
-#| msgid "Invalid player \"%1\" on pairing \"%2\"."
+#, kde-format
 msgid "Invalid player “%1” on pairing “%2”."
 msgstr "“%2” eşleşmesinde geçersiz oyuncu “%1”."
 
@@ -1158,9 +1107,6 @@ msgid "Calendar"
 msgstr "Takvim"
 
 #: tournament/qml/SettingsCalendarPage.qml:32
-#, fuzzy
-#| msgctxt "round number"
-#| msgid "Round %1"
 msgctxt "round number"
 msgid "Round %1"
 msgid_plural "Round %1"
@@ -1284,9 +1230,7 @@ msgstr[0] "1 oyuncu içe aktarıldı."
 msgstr[1] "%1 oyuncu içe aktarıldı."
 
 #: tournament/ratinglists/ratinglistsmanager.cpp:219
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Could not open file: the file does not exists."
+#, kde-format
 msgctxt "@info"
 msgid "Could not open file: the file does not exist."
 msgstr "Dosya açılamadı: Dosya yok."
@@ -1357,9 +1301,7 @@ msgid "Exclude the lowest scores:"
 msgstr "Şu kadar düşük puanları dışla:"
 
 #: tournament/tiebreaks/buchholz.cpp:35
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Unsupported tiebreak option \"%1\""
+#, kde-format
 msgctxt "@info"
 msgid "Unsupported tiebreak option “%1”"
 msgstr "Desteklenmeyen beraberlik seçeneği “%1”"
@@ -1371,9 +1313,7 @@ msgid "Buchholz"
 msgstr "Buchholz"
 
 #: tournament/tiebreaks/buchholz.h:28
-#, fuzzy, kde-format
-#| msgctxt "Buchholz N tiebreak, N is a number < 0"
-#| msgid "Buchholz %1"
+#, kde-format
 msgctxt "Buchholz N tiebreak, N is a number < 0"
 msgid "Buchholz %1"
 msgid_plural "Buchholz %1"
@@ -1419,40 +1359,33 @@ msgid "An error ocurred while pairing the round: %1"
 msgstr "Raunt eşleştirilirken bir hata oluştu: %1"
 
 #: tournament/tournament.cpp:1206
-#, fuzzy, kde-format
-#| msgid "Couldn't open file"
+#, kde-format
 msgid "Couldn’t open file"
 msgstr "Dosya açılamadı"
 
 #: tournament/trf/reader.cpp:54 tournament/trf/reader.cpp:61
-#, fuzzy, kde-format
-#| msgid "Player \"%1\" not found."
+#, kde-format
 msgid "Player “%1” not found."
 msgstr "Oyuncu “%1” bulunamadı."
 
 #: tournament/trf/reader.cpp:67
-#, fuzzy, kde-format
-#| msgid "Unknown result on pairing \"%1\" with \"%2\"."
+#, kde-format
 msgid "Unknown result on pairing “%1” with “%2”."
 msgstr "“%1” kişisini “%2” ile eşleştirirken bilinmeyen sonuç."
 
 #: tournament/trf/reader.cpp:189
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Date \"%1\" is invalid."
+#, kde-format
 msgctxt "@info"
 msgid "Date “%1” is invalid."
 msgstr "“%1” tarihi geçersiz."
 
 #: tournament/trf/reader.cpp:263
-#, fuzzy, kde-format
-#| msgid "Unknown result \"%1\" on pairing \"%2\"."
+#, kde-format
 msgid "Unknown result “%1” on pairing “%2”."
 msgstr "“%2” eşleşmesinde bilinmeyen sonuç “%1”."
 
 #: tournament/trf/reader.cpp:266
-#, fuzzy, kde-format
-#| msgid "Pairing \"%1\" has no opponent."
+#, kde-format
 msgid "Pairing “%1” has no opponent."
 msgstr "“%1” eşleşmesinin bir rakibi yok."
 

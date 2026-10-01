@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-01 00:41+0000\n"
-"PO-Revision-Date: 2026-08-27 07:38+0300\n"
+"POT-Creation-Date: 2026-10-01 17:37+0000\n"
+"PO-Revision-Date: 2026-10-01 09:09+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Lokalize 26.04.3\n"
+"X-Generator: Lokalize 26.08.0\n"
 
 #: byesmodel.cpp:85
 #, kde-format
@@ -25,8 +25,7 @@ msgid "%1 · %2"
 msgstr "%1 · %2"
 
 #: controller.cpp:187
-#, fuzzy, kde-format
-#| msgid "Couldn't export tournament."
+#, kde-format
 msgid "Couldn’t export tournament."
 msgstr "לא ניתן לייצא תחרות."
 
@@ -37,9 +36,7 @@ msgid "Starting Rank"
 msgstr "דירוג התחלתי"
 
 #: documents.cpp:62
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Round %1 Pairings"
+#, kde-format
 msgctxt "@title %1 is a number"
 msgid "Round %1 Pairings"
 msgid_plural "Round %1 Pairings"
@@ -49,9 +46,7 @@ msgstr[2] "שיבוצים לסיבוב %1"
 msgstr[3] "שיבוצים לסיבוב %1"
 
 #: documents.cpp:103
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Standings After Round %1"
+#, kde-format
 msgctxt "@title"
 msgid "Standings After Round %1"
 msgid_plural "Standings After Round %1"
@@ -61,9 +56,7 @@ msgstr[2] "דירוג אחרי סיבוב %1"
 msgstr[3] "דירוג אחרי סיבוב %1"
 
 #: documents.cpp:105
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Provisional Standings After Round %1"
+#, kde-format
 msgctxt "@title"
 msgid "Provisional Standings After Round %1"
 msgid_plural "Provisional Standings After Round %1"
@@ -131,17 +124,13 @@ msgid "Event to open."
 msgstr "אירוע לפתיחה."
 
 #: main.cpp:101
-#, fuzzy, kde-format
-#| msgctxt "@info:shell"
-#| msgid "Error: Can't open an event when importing a TRF"
+#, kde-format
 msgctxt "@info:shell"
 msgid "Error: Can’t open an event when importing a TRF"
 msgstr "שגיאה: לא ניתן לפתוח אירוע בעת ייבוא TRF"
 
 #: main.cpp:110
-#, fuzzy, kde-format
-#| msgctxt "@info:shell"
-#| msgid "Error: Can't open more that one event"
+#, kde-format
 msgctxt "@info:shell"
 msgid "Error: Can’t open more than one event"
 msgstr "שגיאה: לא ניתן לפתוח יותר מאירוע אחד"
@@ -268,7 +257,7 @@ msgctxt "@action:inmenu"
 msgid "Export tournament report…"
 msgstr "ייצוא דוח תחרות…"
 
-#: qml/ActionCollection.qml:49 qml/components/MenuBar.qml:115
+#: qml/ActionCollection.qml:49 qml/components/MenuBar.qml:120
 msgctxt "@action:menu"
 msgid "Tournament"
 msgstr "תחרות"
@@ -288,7 +277,19 @@ msgctxt "@action Update players ratings"
 msgid "Update ratings…"
 msgstr "עדכון דירוגים…"
 
-#: qml/ActionCollection.qml:74 qml/components/MenuBar.qml:149
+#: qml/ActionCollection.qml:74
+#, fuzzy
+#| msgid "Pairings"
+msgctxt "@action:menu"
+msgid "Pairings"
+msgstr "שיבוצים"
+
+#: qml/ActionCollection.qml:78
+msgctxt "@option:check"
+msgid "Hide finished games"
+msgstr "הסתרת משחקים שהושלמו"
+
+#: qml/ActionCollection.qml:85 qml/components/MenuBar.qml:154
 msgctxt "@action:menu"
 msgid "Help"
 msgstr "עזרה"
@@ -330,9 +331,6 @@ msgid "Optional"
 msgstr "רשות"
 
 #: qml/AddPlayerDialog.qml:116
-#, fuzzy
-#| msgctxt "@title:column Player National ID"
-#| msgid "National ID"
 msgctxt "@label:textbox Player National ID"
 msgid "National ID"
 msgstr "מזהה לאומי"
@@ -353,9 +351,6 @@ msgid "Origin"
 msgstr "מקור"
 
 #: qml/AddPlayerDialog.qml:140
-#, fuzzy
-#| msgctxt "@title:column Player Gender"
-#| msgid "Gender"
 msgctxt "@label:textbox Player Gender"
 msgid "Gender"
 msgstr "מגדר"
@@ -411,7 +406,7 @@ msgctxt "@action:menu"
 msgid "View"
 msgstr "תצוגה"
 
-#: qml/components/MenuBar.qml:129
+#: qml/components/MenuBar.qml:134
 msgctxt "@action:menu"
 msgid "Settings"
 msgstr "הגדרות"
@@ -493,9 +488,6 @@ msgid "Delete Player"
 msgstr "מחיקת שחקן/ית"
 
 #: qml/DeletePlayerDialog.qml:20
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "Permanently delete player \"%1\"?"
 msgctxt "@label"
 msgid "Permanently delete player “%1”?"
 msgstr "למחוק את השחקן/ית „%1” לצמיתות?"
@@ -550,19 +542,12 @@ msgctxt "@label:listbox"
 msgid "PDF document (*.pdf)"
 msgstr "מסמך PDF‏ (‎*.pdf)"
 
-#: qml/PairingsPage.qml:60
-msgctxt "@option:check"
-msgid "Hide finished games"
-msgstr "הסתרת משחקים שהושלמו"
-
-#: qml/PairingsPage.qml:78 qml/PlayersPage.qml:142 qml/StandingsPage.qml:70
+#: qml/PairingsPage.qml:77 qml/PlayersPage.qml:142 qml/StandingsPage.qml:70
 msgctxt "@action:intoolbar"
 msgid "Export as PDF…"
 msgstr "ייצוא כ־PDF…"
 
-#: qml/PairingsPage.qml:88 qml/PairingsPage.qml:93
-#, fuzzy
-#| msgid "Round %1"
+#: qml/PairingsPage.qml:87 qml/PairingsPage.qml:92
 msgid "Round %1"
 msgid_plural "Round %1"
 msgstr[0] "סיבוב %1"
@@ -570,23 +555,17 @@ msgstr[1] "סיבוב %1"
 msgstr[2] "סיבוב %1"
 msgstr[3] "סיבוב %1"
 
-#: qml/PairingsPage.qml:105
+#: qml/PairingsPage.qml:104
 msgctxt "@action:intoolbar"
 msgid "Remove pairings of this and following rounds…"
 msgstr "הסרת שיבוצים בסיבוב הזה ובבאים אחריו…"
 
-#: qml/PairingsPage.qml:119
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "The tournament hasn't started yet."
+#: qml/PairingsPage.qml:118
 msgctxt "@info"
 msgid "The tournament hasn’t started yet."
 msgstr "התחרות לא התחילה עדיין."
 
-#: qml/PairingsPage.qml:119
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Round %1 has finished."
+#: qml/PairingsPage.qml:118
 msgctxt "@info"
 msgid "Round %1 has finished."
 msgid_plural "Round %1 has finished."
@@ -595,10 +574,7 @@ msgstr[1] "סיבוב %1 הושלם."
 msgstr[2] "סיבוב %1 הושלם."
 msgstr[3] "סיבוב %1 הושלם."
 
-#: qml/PairingsPage.qml:123
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Pair Round %1…"
+#: qml/PairingsPage.qml:122
 msgctxt "@action:button"
 msgid "Pair Round %1…"
 msgid_plural "Pair Round %1…"
@@ -607,10 +583,7 @@ msgstr[1] "סיבוב שיבוץ %1…"
 msgstr[2] "סיבוב שיבוץ %1…"
 msgstr[3] "סיבוב שיבוץ %1…"
 
-#: qml/PairingsPage.qml:167
-#, fuzzy
-#| msgctxt "@info:placeholder"
-#| msgid "No pairings for round %1 yet"
+#: qml/PairingsPage.qml:166
 msgctxt "@info:placeholder"
 msgid "No pairings for Round %1 yet"
 msgid_plural "No pairings for Round %1 yet"
@@ -619,10 +592,7 @@ msgstr[1] "אין עדיין שיבוצים לסיבוב %1"
 msgstr[2] "אין עדיין שיבוצים לסיבוב %1"
 msgstr[3] "אין עדיין שיבוצים לסיבוב %1"
 
-#: qml/PairingsPage.qml:169
-#, fuzzy
-#| msgctxt "@info:placeholder"
-#| msgid "All games of round %1 have finished"
+#: qml/PairingsPage.qml:168
 msgctxt "@info:placeholder"
 msgid "All games of Round %1 have finished"
 msgid_plural "All games of Round %1 have finished"
@@ -632,9 +602,6 @@ msgstr[2] "כל המשחקים בסיבוב %1 הושלמו"
 msgstr[3] "כל המשחקים בסיבוב %1 הושלמו"
 
 #: qml/PairRoundDialog.qml:21
-#, fuzzy
-#| msgctxt "@title %1 is a number >= 1"
-#| msgid "Pair Round %1"
 msgctxt "@title %1 is a number >= 1"
 msgid "Pair Round %1"
 msgid_plural "Pair Round %1"
@@ -649,10 +616,6 @@ msgid "All players will be paired."
 msgstr "כל השחקנים ישובצו."
 
 #: qml/PairRoundDialog.qml:29
-#, fuzzy
-#| msgctxt "@info %1 is a number"
-#| msgid "The following player won't be paired: %2"
-#| msgid_plural "The following %1 players won't be paired: %2"
 msgctxt "@info %1 is a number"
 msgid "The following player won’t be paired: %2"
 msgid_plural "The following %1 players won’t be paired: %2"
@@ -689,9 +652,6 @@ msgid "Black"
 msgstr "שחור"
 
 #: qml/player/PlayerDetails.qml:17
-#, fuzzy
-#| msgctxt "@title:window"
-#| msgid "Details of player \"%1\""
 msgctxt "@title:window"
 msgid "Details of player “%1”"
 msgstr "פרטי השחקן/ית „%1”"
@@ -731,9 +691,6 @@ msgid "Pairings"
 msgstr "שיבוצים"
 
 #: qml/player/PlayerPairingsPage.qml:117
-#, fuzzy
-#| msgctxt "@info:label"
-#| msgid "Round %1"
 msgctxt "@info:label"
 msgid "Round %1"
 msgid_plural "Round %1"
@@ -841,9 +798,6 @@ msgid "Final Standings"
 msgstr "עמדות סופיות"
 
 #: qml/StandingsPage.qml:85 qml/StandingsPage.qml:95
-#, fuzzy
-#| msgctxt "@item:inlistbox Standings After Round %1"
-#| msgid "After Round %1"
 msgctxt "@item:inlistbox Standings After Round %1"
 msgid "After Round %1"
 msgid_plural "After Round %1"
@@ -995,9 +949,6 @@ msgid "Delete Rating List"
 msgstr "מחיקת רשימות דירוג"
 
 #: settings/DeleteRatingListDialog.qml:53
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "Permanently delete rating list \"%1\"?"
 msgctxt "@label"
 msgid "Permanently delete rating list “%1”?"
 msgstr "למחוק את רשימת הדירוג „%1” לצמיתות?"
@@ -1162,16 +1113,14 @@ msgid "bbpPairings terminated with a non zero exit code: %1"
 msgstr "bbpPairings נקטע עם קוד יציאה שונה מאפס: %1"
 
 #: tournament/pairingengine.cpp:85 tournament/trf/reader.cpp:243
-#, fuzzy, kde-format
-#| msgid "Invalid pairing \"%1\"."
+#, kde-format
 msgid "Invalid pairing “%1”."
 msgstr "השיבוץ „%1” שגוי."
 
 #: tournament/pairingengine.cpp:91 tournament/pairingengine.cpp:95
 #: tournament/pairingengine.cpp:99 tournament/pairingengine.cpp:103
 #: tournament/trf/reader.cpp:256
-#, fuzzy, kde-format
-#| msgid "Invalid player \"%1\" on pairing \"%2\"."
+#, kde-format
 msgid "Invalid player “%1” on pairing “%2”."
 msgstr "שחקן שגוי „%1” לשיבוץ „%2”."
 
@@ -1186,9 +1135,6 @@ msgid "Calendar"
 msgstr "לוח שנה"
 
 #: tournament/qml/SettingsCalendarPage.qml:32
-#, fuzzy
-#| msgctxt "round number"
-#| msgid "Round %1"
 msgctxt "round number"
 msgid "Round %1"
 msgid_plural "Round %1"
@@ -1316,9 +1262,7 @@ msgstr[2] "%1 שחקנים/ות יובאו."
 msgstr[3] "%1 שחקנים/ות יובאו."
 
 #: tournament/ratinglists/ratinglistsmanager.cpp:219
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Could not open file: the file does not exists."
+#, kde-format
 msgctxt "@info"
 msgid "Could not open file: the file does not exist."
 msgstr "לא ניתן לפתוח את הקובץ: הקובץ לא קיים."
@@ -1390,9 +1334,7 @@ msgid "Exclude the lowest scores:"
 msgstr "להחריג את הציונים הנמוכים ביותר:"
 
 #: tournament/tiebreaks/buchholz.cpp:35
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Unsupported tiebreak option \"%1\""
+#, kde-format
 msgctxt "@info"
 msgid "Unsupported tiebreak option “%1”"
 msgstr "אפשרות שובר שוויון „%1” לא נתמכת"
@@ -1404,9 +1346,7 @@ msgid "Buchholz"
 msgstr "בוכהולץ"
 
 #: tournament/tiebreaks/buchholz.h:28
-#, fuzzy, kde-format
-#| msgctxt "Buchholz N tiebreak, N is a number < 0"
-#| msgid "Buchholz %1"
+#, kde-format
 msgctxt "Buchholz N tiebreak, N is a number < 0"
 msgid "Buchholz %1"
 msgid_plural "Buchholz %1"
@@ -1454,40 +1394,33 @@ msgid "An error ocurred while pairing the round: %1"
 msgstr "אירעה שגיאה בעת השיבוץ לסיבוב: %1"
 
 #: tournament/tournament.cpp:1206
-#, fuzzy, kde-format
-#| msgid "Couldn't open file"
+#, kde-format
 msgid "Couldn’t open file"
 msgstr "לא ניתן לפתוח את הקובץ"
 
 #: tournament/trf/reader.cpp:54 tournament/trf/reader.cpp:61
-#, fuzzy, kde-format
-#| msgid "Player \"%1\" not found."
+#, kde-format
 msgid "Player “%1” not found."
-msgstr "השחקן „%1” לא נמצא."
+msgstr "השחקן/ית „%1” לא נמצא/ה."
 
 #: tournament/trf/reader.cpp:67
-#, fuzzy, kde-format
-#| msgid "Unknown result on pairing \"%1\" with \"%2\"."
+#, kde-format
 msgid "Unknown result on pairing “%1” with “%2”."
 msgstr "תוצאה לא ידועה לשיבוץ של „%1” עם „%2”."
 
 #: tournament/trf/reader.cpp:189
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Date \"%1\" is invalid."
+#, kde-format
 msgctxt "@info"
 msgid "Date “%1” is invalid."
 msgstr "התאריך „%1” שגוי."
 
 #: tournament/trf/reader.cpp:263
-#, fuzzy, kde-format
-#| msgid "Unknown result \"%1\" on pairing \"%2\"."
+#, kde-format
 msgid "Unknown result “%1” on pairing “%2”."
 msgstr "תוצאה לא ידועה „%1” לשיבוץ „%2”."
 
 #: tournament/trf/reader.cpp:266
-#, fuzzy, kde-format
-#| msgid "Pairing \"%1\" has no opponent."
+#, kde-format
 msgid "Pairing “%1” has no opponent."
 msgstr "לשיבוץ „%1” אין יריב."
 

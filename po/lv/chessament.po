@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-01 00:41+0000\n"
+"POT-Creation-Date: 2026-10-01 17:37+0000\n"
 "PO-Revision-Date: 2025-11-09 11:05+0200\n"
 "Last-Translator: Toms Trasūns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -263,7 +263,7 @@ msgctxt "@action:inmenu"
 msgid "Export tournament report…"
 msgstr "Eksportēt turnīra ziņojumu…"
 
-#: qml/ActionCollection.qml:49 qml/components/MenuBar.qml:115
+#: qml/ActionCollection.qml:49 qml/components/MenuBar.qml:120
 #, fuzzy
 #| msgctxt "@label:textbox"
 #| msgid "Tournament name"
@@ -286,7 +286,19 @@ msgctxt "@action Update players ratings"
 msgid "Update ratings…"
 msgstr ""
 
-#: qml/ActionCollection.qml:74 qml/components/MenuBar.qml:149
+#: qml/ActionCollection.qml:74
+#, fuzzy
+#| msgid "Pairings"
+msgctxt "@action:menu"
+msgid "Pairings"
+msgstr "Pāri"
+
+#: qml/ActionCollection.qml:78
+msgctxt "@option:check"
+msgid "Hide finished games"
+msgstr "Slēpt pabeigtās partijas"
+
+#: qml/ActionCollection.qml:85 qml/components/MenuBar.qml:154
 msgctxt "@action:menu"
 msgid "Help"
 msgstr "Palīdzība"
@@ -421,7 +433,7 @@ msgctxt "@action:menu"
 msgid "View"
 msgstr ""
 
-#: qml/components/MenuBar.qml:129
+#: qml/components/MenuBar.qml:134
 msgctxt "@action:menu"
 msgid "Settings"
 msgstr "Iestatījumi"
@@ -569,17 +581,12 @@ msgctxt "@label:listbox"
 msgid "PDF document (*.pdf)"
 msgstr ""
 
-#: qml/PairingsPage.qml:60
-msgctxt "@option:check"
-msgid "Hide finished games"
-msgstr "Slēpt pabeigtās partijas"
-
-#: qml/PairingsPage.qml:78 qml/PlayersPage.qml:142 qml/StandingsPage.qml:70
+#: qml/PairingsPage.qml:77 qml/PlayersPage.qml:142 qml/StandingsPage.qml:70
 msgctxt "@action:intoolbar"
 msgid "Export as PDF…"
 msgstr "Eksportēt kā PDF…"
 
-#: qml/PairingsPage.qml:88 qml/PairingsPage.qml:93
+#: qml/PairingsPage.qml:87 qml/PairingsPage.qml:92
 #, fuzzy
 #| msgid "Round %1"
 msgid "Round %1"
@@ -588,17 +595,17 @@ msgstr[0] "%1. kārta"
 msgstr[1] "%1. kārta"
 msgstr[2] "%1. kārta"
 
-#: qml/PairingsPage.qml:105
+#: qml/PairingsPage.qml:104
 msgctxt "@action:intoolbar"
 msgid "Remove pairings of this and following rounds…"
 msgstr "Noņemt pārus no šīs un turpmākajām kārtām…"
 
-#: qml/PairingsPage.qml:119
+#: qml/PairingsPage.qml:118
 msgctxt "@info"
 msgid "The tournament hasn’t started yet."
 msgstr ""
 
-#: qml/PairingsPage.qml:119
+#: qml/PairingsPage.qml:118
 #, fuzzy
 #| msgctxt "@info:placeholder"
 #| msgid "All games of round %1 have finished"
@@ -609,7 +616,7 @@ msgstr[0] "Visas %1. kārtas spēles ir pabeigtas"
 msgstr[1] "Visas %1. kārtas spēles ir pabeigtas"
 msgstr[2] "Visas %1. kārtas spēles ir pabeigtas"
 
-#: qml/PairingsPage.qml:123
+#: qml/PairingsPage.qml:122
 #, fuzzy
 #| msgid "Pair Round %1"
 msgctxt "@action:button"
@@ -619,7 +626,7 @@ msgstr[0] "Veidot pārus %1. kārtai"
 msgstr[1] "Veidot pārus %1. kārtai"
 msgstr[2] "Veidot pārus %1. kārtai"
 
-#: qml/PairingsPage.qml:167
+#: qml/PairingsPage.qml:166
 #, fuzzy
 #| msgctxt "@info:placeholder"
 #| msgid "No pairings for round %1 yet"
@@ -630,7 +637,7 @@ msgstr[0] "%1. kārtai vēl nav pāru"
 msgstr[1] "%1. kārtai vēl nav pāru"
 msgstr[2] "%1. kārtai vēl nav pāru"
 
-#: qml/PairingsPage.qml:169
+#: qml/PairingsPage.qml:168
 #, fuzzy
 #| msgctxt "@info:placeholder"
 #| msgid "All games of round %1 have finished"

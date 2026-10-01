@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-01 00:41+0000\n"
+"POT-Creation-Date: 2026-10-01 17:37+0000\n"
 "PO-Revision-Date: 2026-03-21 06:45+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
@@ -263,7 +263,7 @@ msgctxt "@action:inmenu"
 msgid "Export tournament report…"
 msgstr "Wyeksportuj sprawozdanie z turnieju…"
 
-#: qml/ActionCollection.qml:49 qml/components/MenuBar.qml:115
+#: qml/ActionCollection.qml:49 qml/components/MenuBar.qml:120
 #, fuzzy
 #| msgctxt "@label:textbox"
 #| msgid "Tournament name"
@@ -286,7 +286,19 @@ msgctxt "@action Update players ratings"
 msgid "Update ratings…"
 msgstr ""
 
-#: qml/ActionCollection.qml:74 qml/components/MenuBar.qml:149
+#: qml/ActionCollection.qml:74
+#, fuzzy
+#| msgid "Pairings"
+msgctxt "@action:menu"
+msgid "Pairings"
+msgstr "Parowania"
+
+#: qml/ActionCollection.qml:78
+msgctxt "@option:check"
+msgid "Hide finished games"
+msgstr "Ukryj ukończone gry"
+
+#: qml/ActionCollection.qml:85 qml/components/MenuBar.qml:154
 msgctxt "@action:menu"
 msgid "Help"
 msgstr "Pomoc"
@@ -421,7 +433,7 @@ msgctxt "@action:menu"
 msgid "View"
 msgstr "Widok"
 
-#: qml/components/MenuBar.qml:129
+#: qml/components/MenuBar.qml:134
 msgctxt "@action:menu"
 msgid "Settings"
 msgstr "Ustawienia"
@@ -575,17 +587,12 @@ msgctxt "@label:listbox"
 msgid "PDF document (*.pdf)"
 msgstr ""
 
-#: qml/PairingsPage.qml:60
-msgctxt "@option:check"
-msgid "Hide finished games"
-msgstr "Ukryj ukończone gry"
-
-#: qml/PairingsPage.qml:78 qml/PlayersPage.qml:142 qml/StandingsPage.qml:70
+#: qml/PairingsPage.qml:77 qml/PlayersPage.qml:142 qml/StandingsPage.qml:70
 msgctxt "@action:intoolbar"
 msgid "Export as PDF…"
 msgstr "Wyeksportuj jako PDF…"
 
-#: qml/PairingsPage.qml:88 qml/PairingsPage.qml:93
+#: qml/PairingsPage.qml:87 qml/PairingsPage.qml:92
 #, fuzzy
 #| msgid "Round %1"
 msgid "Round %1"
@@ -594,12 +601,12 @@ msgstr[0] "Runda %1"
 msgstr[1] "Runda %1"
 msgstr[2] "Runda %1"
 
-#: qml/PairingsPage.qml:105
+#: qml/PairingsPage.qml:104
 msgctxt "@action:intoolbar"
 msgid "Remove pairings of this and following rounds…"
 msgstr "Usuń parowanie dla tej i następnych rund…"
 
-#: qml/PairingsPage.qml:119
+#: qml/PairingsPage.qml:118
 #, fuzzy
 #| msgctxt "@info"
 #| msgid "The tournament hasn't started yet."
@@ -607,7 +614,7 @@ msgctxt "@info"
 msgid "The tournament hasn’t started yet."
 msgstr "Turniej jeszcze się nie rozpoczął."
 
-#: qml/PairingsPage.qml:119
+#: qml/PairingsPage.qml:118
 #, fuzzy
 #| msgctxt "@info"
 #| msgid "Round %1 has finished."
@@ -618,7 +625,7 @@ msgstr[0] "Ukończono rundę %1."
 msgstr[1] "Ukończono rundę %1."
 msgstr[2] "Ukończono rundę %1."
 
-#: qml/PairingsPage.qml:123
+#: qml/PairingsPage.qml:122
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "Pair Round %1…"
@@ -629,7 +636,7 @@ msgstr[0] "Runda pary %1…"
 msgstr[1] "Runda pary %1…"
 msgstr[2] "Runda pary %1…"
 
-#: qml/PairingsPage.qml:167
+#: qml/PairingsPage.qml:166
 #, fuzzy
 #| msgctxt "@info:placeholder"
 #| msgid "No pairings for round %1 yet"
@@ -640,7 +647,7 @@ msgstr[0] "Nie ma jeszcze parowania dla rundy %1"
 msgstr[1] "Nie ma jeszcze parowania dla rundy %1"
 msgstr[2] "Nie ma jeszcze parowania dla rundy %1"
 
-#: qml/PairingsPage.qml:169
+#: qml/PairingsPage.qml:168
 #, fuzzy
 #| msgctxt "@info:placeholder"
 #| msgid "All games of round %1 have finished"

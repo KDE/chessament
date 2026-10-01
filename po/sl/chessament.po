@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-01 00:41+0000\n"
-"PO-Revision-Date: 2026-08-27 06:53+0200\n"
+"POT-Creation-Date: 2026-10-01 17:37+0000\n"
+"PO-Revision-Date: 2026-10-01 07:43+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -22,8 +22,7 @@ msgid "%1 · %2"
 msgstr "%1 · %2"
 
 #: controller.cpp:187
-#, fuzzy, kde-format
-#| msgid "Couldn't export tournament."
+#, kde-format
 msgid "Couldn’t export tournament."
 msgstr "Turnirja ni bilo mogoče izvoziti."
 
@@ -34,21 +33,17 @@ msgid "Starting Rank"
 msgstr "Začni rangiranje"
 
 #: documents.cpp:62
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Round %1 Pairings"
+#, kde-format
 msgctxt "@title %1 is a number"
 msgid "Round %1 Pairings"
 msgid_plural "Round %1 Pairings"
 msgstr[0] "Krog %1 Parov"
-msgstr[1] "Krog %1 Parov"
-msgstr[2] "Krog %1 Parov"
-msgstr[3] "Krog %1 Parov"
+msgstr[1] "Krog %1 Par"
+msgstr[2] "Krog %1 Para"
+msgstr[3] "Krog %1 Pari"
 
 #: documents.cpp:103
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Standings After Round %1"
+#, kde-format
 msgctxt "@title"
 msgid "Standings After Round %1"
 msgid_plural "Standings After Round %1"
@@ -58,9 +53,7 @@ msgstr[2] "Rezultati po krogu %1"
 msgstr[3] "Rezultati po krogu %1"
 
 #: documents.cpp:105
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Provisional Standings After Round %1"
+#, kde-format
 msgctxt "@title"
 msgid "Provisional Standings After Round %1"
 msgid_plural "Provisional Standings After Round %1"
@@ -128,17 +121,13 @@ msgid "Event to open."
 msgstr "Dogodek za odprtje."
 
 #: main.cpp:101
-#, fuzzy, kde-format
-#| msgctxt "@info:shell"
-#| msgid "Error: Can't open an event when importing a TRF"
+#, kde-format
 msgctxt "@info:shell"
 msgid "Error: Can’t open an event when importing a TRF"
 msgstr "Napaka: Ni mogoče odpreti dogodka ob uvažanju TRF"
 
 #: main.cpp:110
-#, fuzzy, kde-format
-#| msgctxt "@info:shell"
-#| msgid "Error: Can't open more that one event"
+#, kde-format
 msgctxt "@info:shell"
 msgid "Error: Can’t open more than one event"
 msgstr "Napaka: Ni mogoče odpreti več kot enega dogodka"
@@ -265,7 +254,7 @@ msgctxt "@action:inmenu"
 msgid "Export tournament report…"
 msgstr "Izvozi poročilo o turnirju…"
 
-#: qml/ActionCollection.qml:49 qml/components/MenuBar.qml:115
+#: qml/ActionCollection.qml:49 qml/components/MenuBar.qml:120
 msgctxt "@action:menu"
 msgid "Tournament"
 msgstr "Turnir"
@@ -285,7 +274,19 @@ msgctxt "@action Update players ratings"
 msgid "Update ratings…"
 msgstr "Posodobi ocene…"
 
-#: qml/ActionCollection.qml:74 qml/components/MenuBar.qml:149
+#: qml/ActionCollection.qml:74
+#, fuzzy
+#| msgid "Pairings"
+msgctxt "@action:menu"
+msgid "Pairings"
+msgstr "Pari"
+
+#: qml/ActionCollection.qml:78
+msgctxt "@option:check"
+msgid "Hide finished games"
+msgstr "Skrij končane igre"
+
+#: qml/ActionCollection.qml:85 qml/components/MenuBar.qml:154
 msgctxt "@action:menu"
 msgid "Help"
 msgstr "Pomoč"
@@ -327,9 +328,6 @@ msgid "Optional"
 msgstr "Neobvezno"
 
 #: qml/AddPlayerDialog.qml:116
-#, fuzzy
-#| msgctxt "@title:column Player National ID"
-#| msgid "National ID"
 msgctxt "@label:textbox Player National ID"
 msgid "National ID"
 msgstr "Nacionalni ID"
@@ -350,9 +348,6 @@ msgid "Origin"
 msgstr "Izvor"
 
 #: qml/AddPlayerDialog.qml:140
-#, fuzzy
-#| msgctxt "@title:column Player Gender"
-#| msgid "Gender"
 msgctxt "@label:textbox Player Gender"
 msgid "Gender"
 msgstr "Spol"
@@ -408,7 +403,7 @@ msgctxt "@action:menu"
 msgid "View"
 msgstr "Pogled"
 
-#: qml/components/MenuBar.qml:129
+#: qml/components/MenuBar.qml:134
 msgctxt "@action:menu"
 msgid "Settings"
 msgstr "Nastavitve"
@@ -490,9 +485,6 @@ msgid "Delete Player"
 msgstr "Izbriši igralca"
 
 #: qml/DeletePlayerDialog.qml:20
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "Permanently delete player \"%1\"?"
 msgctxt "@label"
 msgid "Permanently delete player “%1”?"
 msgstr "Naj permanentno izbrišem igralca \"%1\"?"
@@ -547,19 +539,12 @@ msgctxt "@label:listbox"
 msgid "PDF document (*.pdf)"
 msgstr "PDF dokument (*.pdf)"
 
-#: qml/PairingsPage.qml:60
-msgctxt "@option:check"
-msgid "Hide finished games"
-msgstr "Skrij končane igre"
-
-#: qml/PairingsPage.qml:78 qml/PlayersPage.qml:142 qml/StandingsPage.qml:70
+#: qml/PairingsPage.qml:77 qml/PlayersPage.qml:142 qml/StandingsPage.qml:70
 msgctxt "@action:intoolbar"
 msgid "Export as PDF…"
 msgstr "Izvozi kot PDF…"
 
-#: qml/PairingsPage.qml:88 qml/PairingsPage.qml:93
-#, fuzzy
-#| msgid "Round %1"
+#: qml/PairingsPage.qml:87 qml/PairingsPage.qml:92
 msgid "Round %1"
 msgid_plural "Round %1"
 msgstr[0] "Krog %1"
@@ -567,23 +552,17 @@ msgstr[1] "Krog %1"
 msgstr[2] "Krog %1"
 msgstr[3] "Krog %1"
 
-#: qml/PairingsPage.qml:105
+#: qml/PairingsPage.qml:104
 msgctxt "@action:intoolbar"
 msgid "Remove pairings of this and following rounds…"
 msgstr "Odstrani pare tega in naslednjih krogov…"
 
-#: qml/PairingsPage.qml:119
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "The tournament hasn't started yet."
+#: qml/PairingsPage.qml:118
 msgctxt "@info"
 msgid "The tournament hasn’t started yet."
 msgstr "Turnir se še ni začel."
 
-#: qml/PairingsPage.qml:119
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "Round %1 has finished."
+#: qml/PairingsPage.qml:118
 msgctxt "@info"
 msgid "Round %1 has finished."
 msgid_plural "Round %1 has finished."
@@ -592,10 +571,7 @@ msgstr[1] "Krog %1 se je končal."
 msgstr[2] "Krog %1 se je končal."
 msgstr[3] "Krog %1 se je končal."
 
-#: qml/PairingsPage.qml:123
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Pair Round %1…"
+#: qml/PairingsPage.qml:122
 msgctxt "@action:button"
 msgid "Pair Round %1…"
 msgid_plural "Pair Round %1…"
@@ -604,10 +580,7 @@ msgstr[1] "Par kroga %1…"
 msgstr[2] "Par kroga %1…"
 msgstr[3] "Par kroga %1…"
 
-#: qml/PairingsPage.qml:167
-#, fuzzy
-#| msgctxt "@info:placeholder"
-#| msgid "No pairings for round %1 yet"
+#: qml/PairingsPage.qml:166
 msgctxt "@info:placeholder"
 msgid "No pairings for Round %1 yet"
 msgid_plural "No pairings for Round %1 yet"
@@ -616,10 +589,7 @@ msgstr[1] "Še ni parov za krog %1"
 msgstr[2] "Še ni parov za krog %1"
 msgstr[3] "Še ni parov za krog %1"
 
-#: qml/PairingsPage.qml:169
-#, fuzzy
-#| msgctxt "@info:placeholder"
-#| msgid "All games of round %1 have finished"
+#: qml/PairingsPage.qml:168
 msgctxt "@info:placeholder"
 msgid "All games of Round %1 have finished"
 msgid_plural "All games of Round %1 have finished"
@@ -629,9 +599,6 @@ msgstr[2] "Vse igre kroga %1 so končane"
 msgstr[3] "Vse igre kroga %1 so končane"
 
 #: qml/PairRoundDialog.qml:21
-#, fuzzy
-#| msgctxt "@title %1 is a number >= 1"
-#| msgid "Pair Round %1"
 msgctxt "@title %1 is a number >= 1"
 msgid "Pair Round %1"
 msgid_plural "Pair Round %1"
@@ -646,10 +613,6 @@ msgid "All players will be paired."
 msgstr "Vsi igralci bodo razvrščeni v pare."
 
 #: qml/PairRoundDialog.qml:29
-#, fuzzy
-#| msgctxt "@info %1 is a number"
-#| msgid "The following player won't be paired: %2"
-#| msgid_plural "The following %1 players won't be paired: %2"
 msgctxt "@info %1 is a number"
 msgid "The following player won’t be paired: %2"
 msgid_plural "The following %1 players won’t be paired: %2"
@@ -686,12 +649,9 @@ msgid "Black"
 msgstr "Črni"
 
 #: qml/player/PlayerDetails.qml:17
-#, fuzzy
-#| msgctxt "@title:window"
-#| msgid "Details of player \"%1\""
 msgctxt "@title:window"
 msgid "Details of player “%1”"
-msgstr "Podrobnosti igfralca \"%1\""
+msgstr "Podrobnosti igralca \"%1\""
 
 #: qml/player/PlayerDetails.qml:22
 msgctxt "@action:button"
@@ -728,9 +688,6 @@ msgid "Pairings"
 msgstr "Pari"
 
 #: qml/player/PlayerPairingsPage.qml:117
-#, fuzzy
-#| msgctxt "@info:label"
-#| msgid "Round %1"
 msgctxt "@info:label"
 msgid "Round %1"
 msgid_plural "Round %1"
@@ -839,9 +796,6 @@ msgid "Final Standings"
 msgstr "Končni vrstni red"
 
 #: qml/StandingsPage.qml:85 qml/StandingsPage.qml:95
-#, fuzzy
-#| msgctxt "@item:inlistbox Standings After Round %1"
-#| msgid "After Round %1"
 msgctxt "@item:inlistbox Standings After Round %1"
 msgid "After Round %1"
 msgid_plural "After Round %1"
@@ -993,9 +947,6 @@ msgid "Delete Rating List"
 msgstr "Zbriši seznam ratingov"
 
 #: settings/DeleteRatingListDialog.qml:53
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "Permanently delete rating list \"%1\"?"
 msgctxt "@label"
 msgid "Permanently delete rating list “%1”?"
 msgstr "Naj permanentno izbrišem seznam ratingov \"%1\"?"
@@ -1161,16 +1112,14 @@ msgid "bbpPairings terminated with a non zero exit code: %1"
 msgstr "bbpPairings se je končal z neničelno kodo izhoda: %1"
 
 #: tournament/pairingengine.cpp:85 tournament/trf/reader.cpp:243
-#, fuzzy, kde-format
-#| msgid "Invalid pairing \"%1\"."
+#, kde-format
 msgid "Invalid pairing “%1”."
 msgstr "Neveljaven par \"%1\"."
 
 #: tournament/pairingengine.cpp:91 tournament/pairingengine.cpp:95
 #: tournament/pairingengine.cpp:99 tournament/pairingengine.cpp:103
 #: tournament/trf/reader.cpp:256
-#, fuzzy, kde-format
-#| msgid "Invalid player \"%1\" on pairing \"%2\"."
+#, kde-format
 msgid "Invalid player “%1” on pairing “%2”."
 msgstr "Neveljaven igralec \"%1\" v paru \"%2\"."
 
@@ -1185,9 +1134,6 @@ msgid "Calendar"
 msgstr "Koledar"
 
 #: tournament/qml/SettingsCalendarPage.qml:32
-#, fuzzy
-#| msgctxt "round number"
-#| msgid "Round %1"
 msgctxt "round number"
 msgid "Round %1"
 msgid_plural "Round %1"
@@ -1315,9 +1261,7 @@ msgstr[2] "Uvožena %1 igralca."
 msgstr[3] "Uvoženi %1 igralci."
 
 #: tournament/ratinglists/ratinglistsmanager.cpp:219
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Could not open file: the file does not exists."
+#, kde-format
 msgctxt "@info"
 msgid "Could not open file: the file does not exist."
 msgstr "Datoteke ni bilo mogoče odpreti: datoteka ne obstaja."
@@ -1389,9 +1333,7 @@ msgid "Exclude the lowest scores:"
 msgstr "Izključi najnižje ocene:"
 
 #: tournament/tiebreaks/buchholz.cpp:35
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Unsupported tiebreak option \"%1\""
+#, kde-format
 msgctxt "@info"
 msgid "Unsupported tiebreak option “%1”"
 msgstr "Nepodprta možnost tiebreaka \"%1\""
@@ -1403,9 +1345,7 @@ msgid "Buchholz"
 msgstr "Buchholz"
 
 #: tournament/tiebreaks/buchholz.h:28
-#, fuzzy, kde-format
-#| msgctxt "Buchholz N tiebreak, N is a number < 0"
-#| msgid "Buchholz %1"
+#, kde-format
 msgctxt "Buchholz N tiebreak, N is a number < 0"
 msgid "Buchholz %1"
 msgid_plural "Buchholz %1"
@@ -1453,40 +1393,33 @@ msgid "An error ocurred while pairing the round: %1"
 msgstr "Pri uparjanju kroga je prišlo do napake: %1"
 
 #: tournament/tournament.cpp:1206
-#, fuzzy, kde-format
-#| msgid "Couldn't open file"
+#, kde-format
 msgid "Couldn’t open file"
 msgstr "Datoteke ni bilo mogoče odpreti"
 
 #: tournament/trf/reader.cpp:54 tournament/trf/reader.cpp:61
-#, fuzzy, kde-format
-#| msgid "Player \"%1\" not found."
+#, kde-format
 msgid "Player “%1” not found."
 msgstr "Igralca \"%1\" ni mogoče najti."
 
 #: tournament/trf/reader.cpp:67
-#, fuzzy, kde-format
-#| msgid "Unknown result on pairing \"%1\" with \"%2\"."
+#, kde-format
 msgid "Unknown result on pairing “%1” with “%2”."
 msgstr "Neznan rezultat pri paru %1 z %2."
 
 #: tournament/trf/reader.cpp:189
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Date \"%1\" is invalid."
+#, kde-format
 msgctxt "@info"
 msgid "Date “%1” is invalid."
 msgstr "Datum \"%1\" je neveljaven."
 
 #: tournament/trf/reader.cpp:263
-#, fuzzy, kde-format
-#| msgid "Unknown result \"%1\" on pairing \"%2\"."
+#, kde-format
 msgid "Unknown result “%1” on pairing “%2”."
 msgstr "Neznan rezultat \"%1\" pri uparjanju \"%2\"."
 
 #: tournament/trf/reader.cpp:266
-#, fuzzy, kde-format
-#| msgid "Pairing \"%1\" has no opponent."
+#, kde-format
 msgid "Pairing “%1” has no opponent."
 msgstr "Uparjanje \"%1\" nima nasprotnika."
 
