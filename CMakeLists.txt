@@ -18,7 +18,7 @@ set_package_properties(ECM PROPERTIES
     URL "https://api.kde.org/ecm/"
     DESCRIPTION "Extra CMake Modules")
 
-set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
+set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH} ${CMAKE_CURRENT_SOURCE_DIR}/cmake/modules)
 
 set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -130,8 +130,8 @@ set_package_properties(SharedMimeInfo PROPERTIES
     TYPE REQUIRED
 )
 
-find_package(bbpPairings)
-set_package_properties(bbpPairings PROPERTIES
+find_package(BBPPairings)
+set_package_properties(BBPPairings PROPERTIES
     TYPE RUNTIME
     PURPOSE "Pairing engine"
     URL "https://github.com/BieremaBoyzProgramming/bbpPairings"
