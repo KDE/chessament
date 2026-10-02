@@ -8,6 +8,7 @@ project(chessament VERSION 0.1)
 set(QT6_MIN_VERSION 6.10.0)
 set(KF6_MIN_VERSION 6.28.0)
 set(KIRIGAMI_ADDONS_MIN_VERSION 1.6.0)
+set(KIRIGAMI_APP_COMPONENTS_MIN_VERSION 1.1.0)
 set(QCORO_MIN_VERSION 0.11)
 
 include(FeatureSummary)
@@ -111,7 +112,7 @@ set_package_properties(KF6KirigamiAddons PROPERTIES
     PURPOSE "Required application components and runtime dependency"
 )
 
-find_package(KF6KirigamiAppComponents)
+find_package(KF6KirigamiAppComponents ${KIRIGAMI_APP_COMPONENTS_MIN_VERSION})
 set_package_properties(KF6KirigamiAppComponents PROPERTIES
     TYPE REQUIRED
     PURPOSE "Required application components"
