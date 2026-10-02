@@ -42,7 +42,7 @@ QList<QStringList> TiebreaksTest::readStandings(const QString &fileName)
     while (!stream.atEnd()) {
         stream.readLineInto(&line);
 
-        if (line.isEmpty() || line.startsWith('#'_L1)) {
+        if (line.isEmpty() || line.startsWith(u'#') || line.startsWith(u'R')) {
             continue;
         }
 
@@ -60,14 +60,16 @@ void TiebreaksTest::testTiebreaks_data()
     QTest::addColumn<int>("precision");
     QTest::addColumn<QString>("tiebreaks");
 
-    QTest::newRow("tournament_1.txt BH") << u"tournament_1.txt"_s << u".bh"_s << 1 << u"pts,bh"_s;
-    QTest::newRow("tournament_1.txt WIN") << u"tournament_1.txt"_s << u".win"_s << 1 << u"pts,win"_s;
-    QTest::newRow("tournament_1.txt WON") << u"tournament_1.txt"_s << u".won"_s << 1 << u"pts,won"_s;
+    QTest::newRow("tournament_1.trf BH") << u"tournament_1.trf"_s << u".bh"_s << 1 << u"pts,bh"_s;
+    QTest::newRow("tournament_1.trf BH/C1") << u"tournament_1.trf"_s << u".bh_c1"_s << 1 << u"pts,bh/c1"_s;
+    QTest::newRow("tournament_1.trf WIN") << u"tournament_1.trf"_s << u".win"_s << 0 << u"pts,win"_s;
+    QTest::newRow("tournament_1.trf WON") << u"tournament_1.trf"_s << u".won"_s << 0 << u"pts,won"_s;
+    QTest::newRow("tournament_1.trf BPG") << u"tournament_1.trf"_s << u".bpg"_s << 0 << u"pts,bpg"_s;
+    QTest::newRow("tournament_1.trf AOB") << u"tournament_1.trf"_s << u".aob"_s << 2 << u"pts,aob"_s;
     QTest::newRow("buchholz_1.trf BH") << u"buchholz_1.trf"_s << u".bh"_s << 1 << u"pts,bh"_s;
     QTest::newRow("buchholz_2.trf BH") << u"buchholz_2.trf"_s << u".bh"_s << 1 << u"pts,bh"_s;
     QTest::newRow("buchholz_3.trf BH") << u"buchholz_3.trf"_s << u".bh"_s << 1 << u"pts,bh"_s;
     QTest::newRow("buchholz_4.trf BH") << u"buchholz_4.trf"_s << u".bh"_s << 1 << u"pts,bh"_s;
-    QTest::newRow("tournament_1.txt AOB") << u"tournament_1.txt"_s << u".aob"_s << 2 << u"pts,aob"_s;
 }
 
 void TiebreaksTest::testTiebreaks()
@@ -95,8 +97,8 @@ void TiebreaksTest::testTiebreaks()
         const auto &expected = expectedStandings[i];
 
         const auto result = QStringList{
-            QString::number(standing.player()->startingRank()),
             QString::number(standing.rank()),
+            QString::number(standing.player()->startingRank()),
             QString::number(standing.values()[0], 'f', 1),
             QString::number(standing.values()[1], 'f', precision),
         };
