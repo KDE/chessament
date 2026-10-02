@@ -52,8 +52,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.kde.org/stable/kirigami-app-components/kirigami-app-components-1.0.2.tar.xz",
-                    "sha256": "6bfd9e0a3a4b7d17505f0c3c0c395628165973b6f4cf1e4a7a1f3342873b44d0",
+                    "url": "https://download.kde.org/stable/kirigami-app-components/kirigami-app-components-1.1.1.tar.xz",
+                    "sha256": "f68f4d082933213d82b805217f2fa0690f51df7d00214ddb873812a60a6b830b",
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 391965,
