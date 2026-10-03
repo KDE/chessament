@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-01 17:37+0000\n"
-"PO-Revision-Date: 2026-10-01 07:43+0200\n"
+"PO-Revision-Date: 2026-10-02 07:07+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -275,11 +275,9 @@ msgid "Update ratings…"
 msgstr "Posodobi ocene…"
 
 #: qml/ActionCollection.qml:74
-#, fuzzy
-#| msgid "Pairings"
 msgctxt "@action:menu"
 msgid "Pairings"
-msgstr "Pari"
+msgstr "Uparjanje"
 
 #: qml/ActionCollection.qml:78
 msgctxt "@option:check"

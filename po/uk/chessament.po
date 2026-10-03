@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-01 17:37+0000\n"
-"PO-Revision-Date: 2026-10-01 14:14+0300\n"
+"PO-Revision-Date: 2026-10-02 08:46+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -278,8 +278,6 @@ msgid "Update ratings…"
 msgstr "Оновити рейтинги…"
 
 #: qml/ActionCollection.qml:74
-#, fuzzy
-#| msgid "Pairings"
 msgctxt "@action:menu"
 msgid "Pairings"
 msgstr "Поділ на пари"
