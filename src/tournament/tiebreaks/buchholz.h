@@ -24,8 +24,7 @@ public:
         if (cutLowest == 0) {
             return i18nc("Buchholz tiebreak", "Buchholz");
         }
-        const auto cutText = QLocale::system().toString(-cutLowest);
-        return i18ncp("Buchholz N tiebreak, N is a number < 0", "Buchholz %1", "Buchholz %1", cutText);
+        return i18ncp("Buchholz N tiebreak, N is a number < 0", "Buchholz %1", "Buchholz %1", -cutLowest);
     };
 
     [[nodiscard]] QString code() override
