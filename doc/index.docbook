@@ -246,19 +246,16 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 			<sect2 id="reference-menus-view">
 				<title>The View Menu</title>
 				<variablelist>
-					<varlistentry id="menu-view-commandbar">
+					<varlistentry id="menu-view-hide-finished-games">
 						<term>
 							<menuchoice>
-								<shortcut>
-									<keycombo action="simul">&Ctrl;&Alt;<keycap>I</keycap></keycombo>
-								</shortcut>
 								<guimenu>View</guimenu>
-								<guimenuitem>Open Command Bar</guimenuitem>
+								<guimenuitem>Hide finished games</guimenuitem>
 							</menuchoice>
 						</term>
 						<listitem>
 							<para>
-								<action>Opens</action> the command bar.
+								<action>Hides</action> the games that have a result entered.
 							</para>
 						</listitem>
 					</varlistentry>
@@ -296,6 +293,27 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 						<listitem>
 							<para>
 								<action>Opens</action> &chessament; Settings window.
+							</para>
+						</listitem>
+					</varlistentry>
+				</variablelist>
+			</sect2>
+			<sect2 id="reference-menus-help">
+				<title>The Help Menu</title>
+				<variablelist>
+					<varlistentry id="menu-help-commandbar">
+						<term>
+							<menuchoice>
+								<shortcut>
+									<keycombo action="simul">&Ctrl;&Alt;<keycap>I</keycap></keycombo>
+								</shortcut>
+								<guimenu>Help</guimenu>
+								<guimenuitem>Find Action…</guimenuitem>
+							</menuchoice>
+						</term>
+						<listitem>
+							<para>
+								<action>Opens</action> the command bar.
 							</para>
 						</listitem>
 					</varlistentry>
