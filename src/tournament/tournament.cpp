@@ -550,6 +550,10 @@ QList<QVariantMap> Tournament::availableTiebreaks()
             {"name"_L1, i18nc("Number of Games Played with Black (over the board) tiebreak", "Number of Games Played with Black (over the board)")},
         },
         {
+            {"id"_L1, "bwg"_L1},
+            {"name"_L1, i18nc("Tiebreak", "Number of Games Won with Black (over the board)")},
+        },
+        {
             {"id"_L1, "aob"_L1},
             {"name"_L1, i18nc("Tiebreak", "Average Buchholz of Opponents")},
         },
