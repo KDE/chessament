@@ -43,7 +43,6 @@ std::expected<void, QString> Buchholz::setTrfOptions(const QList<QString> &optio
 
 double Buchholz::calculate(Tournament *tournament, State state, QList<Player *> players, Player *player)
 {
-    Q_UNUSED(tournament)
     Q_UNUSED(players)
 
     std::vector<double> contributions;
@@ -59,6 +58,12 @@ double Buchholz::calculate(Tournament *tournament, State state, QList<Player *> 
         if (Pairing::isUnplayed(pairing->whiteResult())) {
             // 16.4: dummy opponent with the same points as the player
             p = state.points(player);
+
+            if (Pairing::isForfeit(pairing->whiteResult())) {
+                p = std::min(p, state.pointsForTiebreaks(opponent));
+            } else {
+                p = std::min(p, .5 * tournament->numberOfRounds());
+            }
         } else {
             p = state.pointsForTiebreaks(opponent);
         }

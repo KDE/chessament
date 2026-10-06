@@ -239,6 +239,17 @@ public:
         }
     }
 
+    static bool isForfeit(PartialResult result)
+    {
+        switch (result) {
+        case PartialResult::WinForfeit:
+        case PartialResult::LostForfeit:
+            return true;
+        default:
+            return false;
+        }
+    }
+
     static double pointsForResult(PartialResult result)
     {
         switch (result) {
