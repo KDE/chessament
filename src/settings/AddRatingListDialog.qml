@@ -73,7 +73,7 @@ FormCard.FormCardDialog {
     function importList(): void {
         stateGroup.state = "importing";
 
-        dialog.model.importRatingList(nameField.text, urlField.editText).then(error => {
+        dialog.model.importRatingList(nameField.text, urlField.text).then(error => {
             if (error) {
                 dialog.error = error;
             }
@@ -85,7 +85,7 @@ FormCard.FormCardDialog {
         id: fileDialog
         nameFilters: [KI18n.i18nc("@label:listbox", "All Supported Files (*.zip *.xls)")]
         currentFolder: StandardPaths.standardLocations(StandardPaths.HomeLocation)[0]
-        onAccepted: urlField.editText = selectedFile.toString().replace("file://", "")
+        onAccepted: urlField.text = selectedFile.toString().replace("file://", "")
     }
 
     FormCard.FormTextFieldDelegate {
@@ -93,11 +93,9 @@ FormCard.FormCardDialog {
         label: KI18n.i18nc("@info:label", "Name")
     }
 
-    FormCard.FormComboBoxDelegate {
+    FormCard.FormTextFieldDelegate {
         id: urlField
-        text: KI18n.i18nc("@info:label", "Rating list file or URL")
-        editable: true
-        model: ["https://ratings.fide.com/download/players_list.zip"]
+        label: KI18n.i18nc("@info:label", "Rating list file or URL")
         trailing: Controls.Button {
             icon.name: "document-open-data-symbolic"
             text: KI18n.i18nc("@action:button", "Select file")
@@ -144,7 +142,7 @@ FormCard.FormCardDialog {
             id: importButton
             text: KI18n.i18nc("@action:button", "Import")
             icon.name: "document-import-symbolic"
-            enabled: nameField.text.trim().length > 0 && dialog.model.isSupportedUrl(urlField.editText)
+            enabled: nameField.text.trim().length > 0 && dialog.model.isSupportedUrl(urlField.text)
             onClicked: dialog.importList()
 
             Controls.DialogButtonBox.buttonRole: Controls.DialogButtonBox.ActionRole
