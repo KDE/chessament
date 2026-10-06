@@ -10,6 +10,7 @@ target_sources(tournament PRIVATE
     numberwins.cpp
     playedblack.cpp
     points.cpp
+    progressive.cpp
     won.cpp
 )
 

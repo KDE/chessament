@@ -539,9 +539,11 @@ QList<QVariantMap> Tournament::availableTiebreaks()
         },
         {
             {"id"_L1, "won"_L1},
-            {"name"_L1,
-             i18nc("Number of Games Won (over the board) tiebreak. Different from the 'Number of Wins' tiebreak, which includes games won by forfeit.",
-                   "Number of Games Won (over the board)")},
+            {
+                "name"_L1,
+                i18nc("Number of Games Won (over the board) tiebreak. Different from the 'Number of Wins' tiebreak, which includes games won by forfeit.",
+                      "Number of Games Won (over the board)"),
+            },
         },
         {
             {"id"_L1, "bpg"_L1},
@@ -550,6 +552,10 @@ QList<QVariantMap> Tournament::availableTiebreaks()
         {
             {"id"_L1, "aob"_L1},
             {"name"_L1, i18nc("Tiebreak", "Average Buchholz of Opponents")},
+        },
+        {
+            {"id"_L1, "ps"_L1},
+            {"name"_L1, i18nc("Progressive Scores tiebreak", "Progressive")},
         },
     };
 }

@@ -11,6 +11,7 @@
 #include "tiebreaks/numberwins.h"
 #include "tiebreaks/playedblack.h"
 #include "tiebreaks/points.h"
+#include "tiebreaks/progressive.h"
 #include "tiebreaks/won.h"
 #include "utils.h"
 
@@ -151,6 +152,9 @@ std::unique_ptr<Tiebreak> Tiebreaks::tiebreak(const QString &id)
     }
     if (id == "aob"_L1) {
         return std::make_unique<AverageBuchholzOfOpponents>();
+    }
+    if (id == "ps"_L1) {
+        return std::make_unique<Progressive>();
     }
     return nullptr;
 }
