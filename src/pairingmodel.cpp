@@ -3,6 +3,7 @@
 
 #include "pairingmodel.h"
 
+#include "chessamentconfig.h"
 #include "tournament.h"
 
 #include <KLocalizedString>
@@ -152,19 +153,42 @@ bool PairingModel::setResult(int board, Qt::Key key)
 {
     Pairing::Result result;
 
-    switch (key) {
-    case Qt::Key_0:
-        result = {Pairing::PartialResult::Lost, Pairing::PartialResult::Win};
-        break;
-    case Qt::Key_1:
-        result = {Pairing::PartialResult::Win, Pairing::PartialResult::Lost};
-        break;
-    case Qt::Key_5:
-        result = {Pairing::PartialResult::Draw, Pairing::PartialResult::Draw};
-        break;
-    default:
-        // Enter key changes to the next pairing
-        return key == Qt::Key_Enter;
+    if (Config::resultEntry() == Config::EnumResultEntry::Use150) {
+        switch (key) {
+        case Qt::Key_0:
+            result = {Pairing::PartialResult::Lost, Pairing::PartialResult::Win};
+            break;
+        case Qt::Key_1:
+            result = {Pairing::PartialResult::Win, Pairing::PartialResult::Lost};
+            break;
+        case Qt::Key_5:
+            result = {Pairing::PartialResult::Draw, Pairing::PartialResult::Draw};
+            break;
+        default:
+            // Enter key changes to the next pairing
+            return key == Qt::Key_Enter;
+        }
+    } else {
+        switch (key) {
+        case Qt::Key_1:
+            result = {Pairing::PartialResult::Win, Pairing::PartialResult::Lost};
+            break;
+        case Qt::Key_2:
+            result = {Pairing::PartialResult::Draw, Pairing::PartialResult::Draw};
+            break;
+        case Qt::Key_3:
+            result = {Pairing::PartialResult::Lost, Pairing::PartialResult::Win};
+            break;
+        case Qt::Key_4:
+            result = {Pairing::PartialResult::WinForfeit, Pairing::PartialResult::LostForfeit};
+            break;
+        case Qt::Key_6:
+            result = {Pairing::PartialResult::LostForfeit, Pairing::PartialResult::WinForfeit};
+            break;
+        default:
+            // Enter key changes to the next pairing
+            return key == Qt::Key_Enter;
+        }
     }
 
     return setResult(board, result.first, result.second);

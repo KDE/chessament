@@ -27,4 +27,32 @@ FormCard.FormCardPage {
             }
         }
     }
+
+    FormCard.FormHeader {
+        title: KI18n.i18nc("@title:group", "Result Entry")
+    }
+
+    FormCard.FormCard {
+        FormCard.FormRadioDelegate {
+            text: KI18n.i18nc("@option:radio", "Use 1-2-3 keys")
+            checked: Config.resultEntry === 0
+            onCheckedChanged: function (): void {
+                if (checked) {
+                    Config.resultEntry = 0;
+                    Config.save();
+                }
+            }
+        }
+
+        FormCard.FormRadioDelegate {
+            text: KI18n.i18nc("@option:radio", "Use 1-5-0 keys")
+            checked: Config.resultEntry === 1
+            onCheckedChanged: function (): void {
+                if (checked) {
+                    Config.resultEntry = 1;
+                    Config.save();
+                }
+            }
+        }
+    }
 }

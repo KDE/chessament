@@ -13,6 +13,13 @@ SPDX-License-Identifier: LGPL-3.0-or-later
             <label>Automatically open exported PDF files.</label>
             <default>false</default>
         </entry>
+        <entry key="ResultEntry" type="Enum">
+            <label>Result entry</label>
+            <choices>
+                <choice name="Use123" value="Use 1-2-3 keys" />
+                <choice name="Use150" value="Use 1-5-0 keys" />
+            </choices>
+        </entry>
         <entry key="Developer" type="Bool">
             <label>Enable experimental/developer options.</label>
             <default>false</default>
