@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-01 17:37+0000\n"
+"POT-Creation-Date: 2026-10-07 00:42+0000\n"
 "PO-Revision-Date: 2026-10-02 21:45+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -128,37 +128,37 @@ msgctxt "@info:shell"
 msgid "Error: Can’t open more than one event"
 msgstr "Fel: Kan inte öppna mer än ett evenemang"
 
-#: pairingmodel.cpp:107
+#: pairingmodel.cpp:108
 #, kde-format
 msgctxt "@title:column Board Number"
 msgid "Board"
 msgstr "Bräde"
 
-#: pairingmodel.cpp:109
+#: pairingmodel.cpp:110
 #, kde-format
 msgctxt "@title:column White Player Starting Rank Number"
 msgid "№"
 msgstr "№"
 
-#: pairingmodel.cpp:111
+#: pairingmodel.cpp:112
 #, kde-format
 msgctxt "@title:column Name of the White Player"
 msgid "White Player"
 msgstr "Vit spelare"
 
-#: pairingmodel.cpp:113
+#: pairingmodel.cpp:114
 #, kde-format
 msgctxt "@title:column Game Result"
 msgid "Result"
 msgstr "Resultat"
 
-#: pairingmodel.cpp:115
+#: pairingmodel.cpp:116
 #, kde-format
 msgctxt "@title:column Name of the Black Player"
 msgid "Black Player"
 msgstr "Svart spelare"
 
-#: pairingmodel.cpp:117
+#: pairingmodel.cpp:118
 #, kde-format
 msgctxt "@title:column Black Player Starting Rank Number"
 msgid "№"
@@ -888,12 +888,12 @@ msgctxt "@info:label"
 msgid "Rating list file or URL"
 msgstr "Rankningslistefil eller webbadress"
 
-#: settings/AddRatingListDialog.qml:103
+#: settings/AddRatingListDialog.qml:101
 msgctxt "@action:button"
 msgid "Select file"
 msgstr "Välj fil"
 
-#: settings/AddRatingListDialog.qml:145
+#: settings/AddRatingListDialog.qml:143
 msgctxt "@action:button"
 msgid "Import"
 msgstr "Importera"
@@ -942,6 +942,24 @@ msgstr "Allmänt"
 msgctxt "@option:check"
 msgid "Automatically open exported PDF files"
 msgstr "Öppna automatiskt exporterade PDF-filer"
+
+#: settings/GeneralPage.qml:32
+#, fuzzy
+#| msgctxt "@title:column Game Result"
+#| msgid "Result"
+msgctxt "@title:group"
+msgid "Result Entry"
+msgstr "Resultat"
+
+#: settings/GeneralPage.qml:37
+msgctxt "@option:radio"
+msgid "Use 1-2-3 keys"
+msgstr ""
+
+#: settings/GeneralPage.qml:48
+msgctxt "@option:radio"
+msgid "Use 1-5-0 keys"
+msgstr ""
 
 #: settings/RatingListsPage.qml:19 settings/RatingListsPage.qml:22
 msgctxt "@title"
@@ -1013,25 +1031,25 @@ msgctxt "FIDE Federation"
 msgid "Wales"
 msgstr "Wales"
 
-#: tournament/pairing.h:266 tournament/pairing.h:282 tournament/pairing.h:286
+#: tournament/pairing.h:277 tournament/pairing.h:293 tournament/pairing.h:297
 #, kde-format
 msgctxt "@item Game result: draw"
 msgid "½"
 msgstr "½"
 
-#: tournament/pairing.h:270
+#: tournament/pairing.h:281
 #, kde-format
 msgctxt "@item Game result: win by forfeit"
 msgid "+"
 msgstr "+"
 
-#: tournament/pairing.h:272
+#: tournament/pairing.h:283
 #, kde-format
 msgctxt "@item Game result: lost by forfeit"
 msgid "-"
 msgstr "-"
 
-#: tournament/pairing.h:275
+#: tournament/pairing.h:286
 #, kde-format
 msgctxt ""
 "@item Game result. %1 is the points obtained, but the game is unrated. The "
@@ -1039,7 +1057,7 @@ msgctxt ""
 msgid "%1U"
 msgstr "%1O"
 
-#: tournament/pairing.h:279 tournament/pairing.h:283
+#: tournament/pairing.h:290 tournament/pairing.h:294
 #, kde-format
 msgctxt ""
 "@item Game result: %1 is the points obtained, but the game is unrated. The "
@@ -1047,13 +1065,13 @@ msgctxt ""
 msgid "%1U"
 msgstr "%1O"
 
-#: tournament/pairing.h:287 tournament/pairing.h:291 tournament/pairing.h:295
+#: tournament/pairing.h:298 tournament/pairing.h:302 tournament/pairing.h:306
 #, kde-format
 msgctxt "@item Game result, %1 is the points awarded for the bye"
 msgid "Bye (%1)"
 msgstr "Frirond (%1)"
 
-#: tournament/pairing.h:298
+#: tournament/pairing.h:309
 #, kde-format
 msgctxt "@item Game result: pairing-allocated bye. Keep it short"
 msgid "Bye (Pairing)"
@@ -1286,7 +1304,7 @@ msgid_plural "Saved %1 players."
 msgstr[0] "Sparade 1 spelare."
 msgstr[1] "Sparade %1 spelare."
 
-#: tournament/tiebreaks/aob.h:23 tournament/tournament.cpp:552
+#: tournament/tiebreaks/aob.h:23 tournament/tournament.cpp:558
 #, kde-format
 msgctxt "Tiebreak"
 msgid "Average Buchholz of Opponents"
@@ -1310,13 +1328,21 @@ msgctxt "Buchholz tiebreak"
 msgid "Buchholz"
 msgstr "Buchholz"
 
-#: tournament/tiebreaks/buchholz.h:28
+#: tournament/tiebreaks/buchholz.h:27
 #, kde-format
 msgctxt "Buchholz N tiebreak, N is a number < 0"
 msgid "Buchholz %1"
 msgid_plural "Buchholz %1"
 msgstr[0] "Buchholz %1"
 msgstr[1] "Buchholz %1"
+
+#: tournament/tiebreaks/bwg.h:22 tournament/tournament.cpp:554
+#, fuzzy, kde-format
+#| msgctxt "Number of Games Played with Black (over the board) tiebreak"
+#| msgid "Number of Games Played with Black (over the board)"
+msgctxt "Tiebreak"
+msgid "Number of Games Won with Black (over the board)"
+msgstr "Antal matcher spelade med svart (över hela linjen)"
 
 #: tournament/tiebreaks/dummy.h:23
 #, kde-format
@@ -1330,7 +1356,7 @@ msgctxt "Number of Wins tiebreak"
 msgid "Number of Wins"
 msgstr "Antal vinster"
 
-#: tournament/tiebreaks/playedblack.h:22 tournament/tournament.cpp:548
+#: tournament/tiebreaks/playedblack.h:22 tournament/tournament.cpp:550
 #, kde-format
 msgctxt "Number of Games Played with Black (over the board) tiebreak"
 msgid "Number of Games Played with Black (over the board)"
@@ -1343,7 +1369,13 @@ msgctxt "Game points"
 msgid "Points"
 msgstr "Poäng"
 
-#: tournament/tiebreaks/won.h:23 tournament/tournament.cpp:544
+#: tournament/tiebreaks/progressive.h:22 tournament/tournament.cpp:562
+#, kde-format
+msgctxt "Progressive Scores tiebreak"
+msgid "Progressive"
+msgstr ""
+
+#: tournament/tiebreaks/won.h:23 tournament/tournament.cpp:545
 #, kde-format
 msgctxt ""
 "Number of Games Won (over the board) tiebreak. Different from the 'Number of "
@@ -1351,12 +1383,12 @@ msgctxt ""
 msgid "Number of Games Won (over the board)"
 msgstr "Antal vunna matcher (över hela linjen)"
 
-#: tournament/tournament.cpp:981
+#: tournament/tournament.cpp:991
 #, kde-format
 msgid "An error ocurred while pairing the round: %1"
 msgstr "Ett fel uppstod när omgången skulle lottas: %1"
 
-#: tournament/tournament.cpp:1206
+#: tournament/tournament.cpp:1216
 #, kde-format
 msgid "Couldn’t open file"
 msgstr "Kunde inte öppna fil"
