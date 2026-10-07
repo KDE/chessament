@@ -13,6 +13,7 @@
 #include "tiebreaks/playedblack.h"
 #include "tiebreaks/points.h"
 #include "tiebreaks/progressive.h"
+#include "tiebreaks/rep.h"
 #include "tiebreaks/sb.h"
 #include "tiebreaks/won.h"
 #include "utils.h"
@@ -163,6 +164,9 @@ std::unique_ptr<Tiebreak> Tiebreaks::tiebreak(const QString &id)
     }
     if (id == "sb"_L1) {
         return std::make_unique<SonnebornBerger>();
+    }
+    if (id == "rep"_L1) {
+        return std::make_unique<RoundsElectedToPlay>();
     }
     return nullptr;
 }

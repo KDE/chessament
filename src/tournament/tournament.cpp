@@ -565,6 +565,10 @@ QList<QVariantMap> Tournament::availableTiebreaks()
             {"id"_L1, "sb"_L1},
             {"name"_L1, i18nc("Tiebreak", "Sonneborn-Berger")},
         },
+        {
+            {"id"_L1, "rep"_L1},
+            {"name"_L1, i18nc("Tiebreak", "Rounds one Elected to Play")},
+        },
     };
 }
 

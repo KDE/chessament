@@ -9,10 +9,11 @@ target_sources(tournament PRIVATE
     buchholz.cpp
     bwg.cpp
     numberwins.cpp
-    sb.cpp
     playedblack.cpp
     points.cpp
     progressive.cpp
+    rep.cpp
+    sb.cpp
     won.cpp
 )
 
