@@ -62,6 +62,9 @@ void TiebreaksTest::testTiebreaks_data()
 
     QTest::newRow("tournament_1.trf BH") << u"tournament_1.trf"_s << u".bh"_s << 1 << u"pts,bh"_s;
     QTest::newRow("tournament_1.trf BH/C1") << u"tournament_1.trf"_s << u".bh_c1"_s << 1 << u"pts,bh/c1"_s;
+    QTest::newRow("tournament_1.trf SB") << u"tournament_1.trf"_s << u".sb"_s << 2 << u"pts,sb"_s;
+    QTest::newRow("tournament_1.trf SB/C1") << u"tournament_1.trf"_s << u".sb_c1"_s << 2 << u"pts,sb/c1"_s;
+    QTest::newRow("tournament_1.trf SB/C2") << u"tournament_1.trf"_s << u".sb_c2"_s << 2 << u"pts,sb/c2"_s;
     QTest::newRow("tournament_1.trf WIN") << u"tournament_1.trf"_s << u".win"_s << 0 << u"pts,win"_s;
     QTest::newRow("tournament_1.trf WON") << u"tournament_1.trf"_s << u".won"_s << 0 << u"pts,won"_s;
     QTest::newRow("tournament_1.trf BPG") << u"tournament_1.trf"_s << u".bpg"_s << 0 << u"pts,bpg"_s;

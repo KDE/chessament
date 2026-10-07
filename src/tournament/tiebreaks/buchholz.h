@@ -3,14 +3,14 @@
 
 #pragma once
 
-#include "tiebreak.h"
+#include "sb.h"
 
 #include <KLocalizedString>
 #include <QLocale>
 
 using namespace Qt::Literals::StringLiterals;
 
-class Buchholz : public Tiebreak
+class Buchholz : public SonnebornBergerBase
 {
 public:
     [[nodiscard]] QString id() override
@@ -36,14 +36,5 @@ public:
         return "BH/C%1"_L1.arg(QString::number(cutLowest));
     }
 
-    [[nodiscard]] bool isConfigurable() override
-    {
-        return true;
-    }
-
-    [[nodiscard]] QList<QVariantMap> options() override;
-
-    std::expected<void, QString> setTrfOptions(const QList<QString> &options) override;
-
-    double calculate(Tournament *tournament, State state, QList<Player *> players, Player *player) override;
+    [[nodiscard]] double contribution(double pointsForResult, double value) const override;
 };

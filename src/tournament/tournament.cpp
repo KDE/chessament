@@ -561,6 +561,10 @@ QList<QVariantMap> Tournament::availableTiebreaks()
             {"id"_L1, "ps"_L1},
             {"name"_L1, i18nc("Progressive Scores tiebreak", "Progressive")},
         },
+        {
+            {"id"_L1, "sb"_L1},
+            {"name"_L1, i18nc("Tiebreak", "Sonneborn-Berger")},
+        },
     };
 }
 
