@@ -42,7 +42,7 @@ public:
     enum class Color {
         Unknown,
         White,
-        Black
+        Black,
     };
     Q_ENUM(Color)
 

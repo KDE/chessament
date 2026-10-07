@@ -59,7 +59,7 @@ public:
         WGM,
         WIM,
         WFM,
-        WCM
+        WCM,
     };
     Q_ENUM(Title)
 

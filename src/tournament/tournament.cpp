@@ -9,11 +9,11 @@
 #include <QSqlRecord>
 
 #include <algorithm>
+#include <utility>
 
 #include "db.h"
 #include "event.h"
 #include "pairing.h"
-#include "ratinglists/ratinglist.h"
 #include "ratinglists/ratinglistsmanager.h"
 #include "state.h"
 #include "tiebreaks/points.h"
@@ -138,7 +138,7 @@ std::expected<void, QString> Tournament::setTiebreaksFromTrf(const QString &line
         tiebreaks.addTiebreak(std::move(*tiebreak));
     }
 
-    m_tiebreaks = tiebreaks;
+    m_tiebreaks = std::move(tiebreaks);
 
     return {};
 }
@@ -324,7 +324,7 @@ void Tournament::sortPlayers()
         return p1->rating() > p2->rating();
     });
 
-    for (int i = 0; i < static_cast<int>(m_players.size()); i++) {
+    for (int i = 0; std::cmp_less(i, m_players.size()); i++) {
         auto *player = m_players.at(i).get();
         player->setStartingRank(i + 1);
         savePlayer(player);
@@ -428,7 +428,7 @@ QList<Pairing *> Tournament::pairingsOfPlayer(Player *player)
     QList<Pairing *> result;
 
     for (int i = 0; i < m_numberOfRounds; ++i) {
-        if (i >= static_cast<int>(m_rounds.size())) {
+        if (std::cmp_greater_equal(i, m_rounds.size())) {
             result << nullptr;
             continue;
         }
@@ -524,6 +524,7 @@ QList<Standing> Tournament::standings(const State &state)
 
 QList<QVariantMap> Tournament::availableTiebreaks()
 {
+    Q_UNUSED(this);
     return {
         {
             {"id"_L1, "pts"_L1},
@@ -596,7 +597,7 @@ std::expected<void, QString> Tournament::ensureRoundExists(int round)
     Q_ASSERT(round >= 1);
 
     if (m_rounds.size() < static_cast<size_t>(round)) {
-        for (size_t i = m_rounds.size() + 1; i <= static_cast<size_t>(round); ++i) {
+        for (size_t i = m_rounds.size() + 1; std::cmp_less_equal(i, round); ++i) {
             auto round = std::make_unique<Round>();
 
             QSqlQuery query(m_event->db());
@@ -610,7 +611,7 @@ std::expected<void, QString> Tournament::ensureRoundExists(int round)
             }
 
             round->setId(query.lastInsertId().toInt());
-            round->setNumber(int(i));
+            round->setNumber(static_cast<int>(i));
 
             m_rounds.push_back(std::move(round));
         }
@@ -833,9 +834,9 @@ int Tournament::numberOfPlayers()
 
 int Tournament::numberOfRatedPlayers()
 {
-    return std::count_if(m_players.cbegin(), m_players.cend(), [](const auto &p) {
+    return static_cast<int>(std::count_if(m_players.cbegin(), m_players.cend(), [](const auto &p) {
         return p->rating() > 0;
-    });
+    }));
 }
 
 std::expected<void, QString> Tournament::sortPairings(std::optional<int> round)

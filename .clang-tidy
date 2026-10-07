@@ -6,6 +6,7 @@ Checks: >
   clang-diagnostic-*,
   clang-analyzer-*,
   bugprone-*,
+  -bugprone-easily-swappable-parameters,
   -bugprone-suspicious-include,
   -bugprone-switch-missing-default-case,
   misc-*,
