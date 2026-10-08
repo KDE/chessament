@@ -19,6 +19,8 @@ public:
     void setRank(int rank);
     void addValue(double value);
 
+    bool operator<(const Standing &other) const;
+
 private:
     int m_rank = 1;
     Player *m_player;

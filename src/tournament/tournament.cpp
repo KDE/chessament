@@ -451,19 +451,6 @@ QList<Standing> Tournament::standings(const State &state)
 {
     QList<Standing> standings;
 
-    // Sort by tiebreaks
-    auto sortStandings = [&standings]() {
-        std::ranges::sort(standings, [](const Standing &p1, const Standing &p2) {
-            for (size_t i = 0; i < p1.values().size(); i++) {
-                if (p1.values().at(i) == p2.values().at(i)) {
-                    continue;
-                }
-                return p1.values().at(i) > p2.values().at(i);
-            }
-            return p1.player()->startingRank() < p2.player()->startingRank();
-        });
-    };
-
     for (const auto &player : std::as_const(m_players)) {
         standings << Standing(player.get(), {});
     }
@@ -484,12 +471,6 @@ QList<Standing> Tournament::standings(const State &state)
                 i++;
             } else {
                 for (int j = 0; j < players.size(); j++) {
-                    /*for (const auto &p : players) {
-                        qDebug() << p->name();
-                    }
-                    qDebug() << "Player" << j << "is" << players.at(j)->name();
-                    qDebug() << "SPlayer" << j << "is" << standings.at(i - players.size() + j).first->name();
-                    qDebug() << "--";*/
                     standings[i - players.size() + j].addValue(tiebreak->calculate(this, state, players, players.at(j)));
                 }
                 players.clear();
@@ -498,15 +479,10 @@ QList<Standing> Tournament::standings(const State &state)
             }
         }
         for (int j = 0; j < players.size(); j++) {
-            /*for (const auto &p : players) {
-                qDebug() << p->name();
-            }
-            qDebug() << "Player" << j << "is" << players.at(j)->name();
-            qDebug() << "SPlayer" << j << "is" << standings.at(i - players.size() + j).first->name();
-            qDebug() << "--";*/
             standings[i - players.size() + j].addValue(tiebreak->calculate(this, state, players, players.at(j)));
         }
-        sortStandings();
+
+        std::ranges::sort(standings, std::less{});
     }
 
     // Calculate ranks

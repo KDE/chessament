@@ -3,6 +3,8 @@
 
 #include "standing.h"
 
+#include "player.h"
+
 Standing::Standing(Player *player, std::vector<double> values)
     : m_player(player)
     , m_values(std::move(values))
@@ -32,4 +34,18 @@ void Standing::setRank(int rank)
 void Standing::addValue(double value)
 {
     m_values.push_back(value);
+}
+
+bool Standing::operator<(const Standing &other) const
+{
+    Q_ASSERT(m_values.size() == other.m_values.size());
+
+    for (std::size_t i = 0; i < m_values.size(); i++) {
+        if (m_values.at(i) == other.m_values.at(i)) {
+            continue;
+        }
+        return m_values.at(i) > other.m_values.at(i);
+    }
+
+    return m_player->startingRank() < other.m_player->startingRank();
 }
