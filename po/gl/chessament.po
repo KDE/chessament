@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-07 00:42+0000\n"
+"POT-Creation-Date: 2026-10-08 00:42+0000\n"
 "PO-Revision-Date: 2025-06-22 16:06+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.gal>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -1491,25 +1491,13 @@ msgid_plural "Saved %1 players."
 msgstr[0] "Engadir unha participante"
 msgstr[1] "Engadir unha participante"
 
-#: tournament/tiebreaks/aob.h:23 tournament/tournament.cpp:558
+#: tournament/tiebreaks/aob.h:23 tournament/tournament.cpp:559
 #, kde-format
 msgctxt "Tiebreak"
 msgid "Average Buchholz of Opponents"
 msgstr ""
 
-#: tournament/tiebreaks/buchholz.cpp:14
-#, kde-format
-msgctxt "@label:spinbox"
-msgid "Exclude the lowest scores:"
-msgstr ""
-
-#: tournament/tiebreaks/buchholz.cpp:35
-#, kde-format
-msgctxt "@info"
-msgid "Unsupported tiebreak option “%1”"
-msgstr ""
-
-#: tournament/tiebreaks/buchholz.h:25 tournament/tournament.cpp:534
+#: tournament/tiebreaks/buchholz.h:25 tournament/tournament.cpp:535
 #, kde-format
 msgctxt "Buchholz tiebreak"
 msgid "Buchholz"
@@ -1523,7 +1511,7 @@ msgid_plural "Buchholz %1"
 msgstr[0] ""
 msgstr[1] ""
 
-#: tournament/tiebreaks/bwg.h:22 tournament/tournament.cpp:554
+#: tournament/tiebreaks/bwg.h:22 tournament/tournament.cpp:555
 #, fuzzy, kde-format
 #| msgctxt "@label"
 #| msgid "Number of rounds"
@@ -1537,7 +1525,7 @@ msgctxt "@info"
 msgid "Unsupported tiebreak"
 msgstr ""
 
-#: tournament/tiebreaks/numberwins.h:22 tournament/tournament.cpp:538
+#: tournament/tiebreaks/numberwins.h:22 tournament/tournament.cpp:539
 #, fuzzy, kde-format
 #| msgctxt "@label"
 #| msgid "Number of rounds"
@@ -1545,26 +1533,58 @@ msgctxt "Number of Wins tiebreak"
 msgid "Number of Wins"
 msgstr "Número de roldas"
 
-#: tournament/tiebreaks/playedblack.h:22 tournament/tournament.cpp:550
+#: tournament/tiebreaks/playedblack.h:22 tournament/tournament.cpp:551
 #, kde-format
 msgctxt "Number of Games Played with Black (over the board) tiebreak"
 msgid "Number of Games Played with Black (over the board)"
 msgstr ""
 
 #: tournament/tiebreaks/points.h:22 tournament/tiebreaks/points.h:27
-#: tournament/tournament.cpp:530
+#: tournament/tournament.cpp:531
 #, kde-format
 msgctxt "Game points"
 msgid "Points"
 msgstr ""
 
-#: tournament/tiebreaks/progressive.h:22 tournament/tournament.cpp:562
+#: tournament/tiebreaks/progressive.h:22 tournament/tournament.cpp:563
 #, kde-format
 msgctxt "Progressive Scores tiebreak"
 msgid "Progressive"
 msgstr ""
 
-#: tournament/tiebreaks/won.h:23 tournament/tournament.cpp:545
+#: tournament/tiebreaks/rep.h:22 tournament/tournament.cpp:571
+#, kde-format
+msgctxt "Tiebreak"
+msgid "Rounds one Elected to Play"
+msgstr ""
+
+#: tournament/tiebreaks/sb.cpp:15
+#, kde-format
+msgctxt "@label:spinbox"
+msgid "Exclude the lowest scores:"
+msgstr ""
+
+#: tournament/tiebreaks/sb.cpp:36
+#, kde-format
+msgctxt "@info"
+msgid "Unsupported tiebreak option “%1”"
+msgstr ""
+
+#: tournament/tiebreaks/sb.h:58 tournament/tournament.cpp:567
+#, kde-format
+msgctxt "Tiebreak"
+msgid "Sonneborn-Berger"
+msgstr ""
+
+#: tournament/tiebreaks/sb.h:60
+#, kde-format
+msgctxt "Tiebreak modifier, N is a number < 0"
+msgid "Sonneborn-Berger %1"
+msgid_plural "Sonneborn-Berger %1"
+msgstr[0] ""
+msgstr[1] ""
+
+#: tournament/tiebreaks/won.h:23 tournament/tournament.cpp:546
 #, fuzzy, kde-format
 #| msgctxt "@label"
 #| msgid "Number of rounds"
@@ -1574,12 +1594,12 @@ msgctxt ""
 msgid "Number of Games Won (over the board)"
 msgstr "Número de roldas"
 
-#: tournament/tournament.cpp:991
+#: tournament/tournament.cpp:1000
 #, kde-format
 msgid "An error ocurred while pairing the round: %1"
 msgstr "Produciuse un erro ao emparellar a rolda: %1"
 
-#: tournament/tournament.cpp:1216
+#: tournament/tournament.cpp:1225
 #, fuzzy, kde-format
 #| msgid "Couldn't open file"
 msgid "Couldn’t open file"

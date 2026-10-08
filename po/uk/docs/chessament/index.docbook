@@ -352,26 +352,20 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 				<title
 >Меню «Перегляд»</title>
 				<variablelist>
-					<varlistentry id="menu-view-commandbar">
+					<varlistentry id="menu-view-hide-finished-games">
 						<term>
 							<menuchoice
-><shortcut
-> <keycombo action="simul"
->&Ctrl;&Alt;<keycap
->I</keycap
-></keycombo
-> </shortcut
-> <guimenu
->Перегляд</guimenu
+><guimenu
+>Файл</guimenu
 > <guimenuitem
->Відкрити панель команд</guimenuitem
+>Приховати завершені ігри</guimenuitem
 > </menuchoice>
 						</term>
 						<listitem>
 							<para
 ><action
->Відкриває</action
-> панель команд. </para>
+>Приховує</action
+> ігри, результат для яких введено. </para>
 						</listitem>
 					</varlistentry>
 				</variablelist>
@@ -422,6 +416,34 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 ><action
 >Відкриває</action
 > вікно параметрів &chessament;. </para>
+						</listitem>
+					</varlistentry>
+				</variablelist>
+			</sect2>
+			<sect2 id="reference-menus-help">
+				<title
+>Меню «Довідка»</title>
+				<variablelist>
+					<varlistentry id="menu-help-commandbar">
+						<term>
+							<menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;&Alt;<keycap
+>I</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Довідка</guimenu
+> <guimenuitem
+>Знайти дію…</guimenuitem
+> </menuchoice>
+						</term>
+						<listitem>
+							<para
+><action
+>Відкриває</action
+> панель команд. </para>
 						</listitem>
 					</varlistentry>
 				</variablelist>

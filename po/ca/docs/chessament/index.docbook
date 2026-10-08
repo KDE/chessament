@@ -338,26 +338,20 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 				<title
 >El menú Vista</title>
 				<variablelist>
-					<varlistentry id="menu-view-commandbar">
+					<varlistentry id="menu-view-hide-finished-games">
 						<term>
 							<menuchoice
-><shortcut
-> <keycombo action="simul"
->&Ctrl;&Alt;<keycap
->I</keycap
-></keycombo
-> </shortcut
-> <guimenu
+><guimenu
 >Vista</guimenu
 > <guimenuitem
->Obre la barra d'ordres</guimenuitem
+>Oculta les partides finalitzades</guimenuitem
 > </menuchoice>
 						</term>
 						<listitem>
 							<para
 ><action
->Obre</action
-> la barra d'ordres. </para>
+>Oculta</action
+> les partides amb un resultat introduït. </para>
 						</listitem>
 					</varlistentry>
 				</variablelist>
@@ -408,6 +402,34 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 ><action
 >Obre</action
 > la finestra de configuració del &chessament;. </para>
+						</listitem>
+					</varlistentry>
+				</variablelist>
+			</sect2>
+			<sect2 id="reference-menus-help">
+				<title
+>El menú Ajuda</title>
+				<variablelist>
+					<varlistentry id="menu-help-commandbar">
+						<term>
+							<menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;&Alt;<keycap
+>I</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Ajuda</guimenu
+> <guimenuitem
+>Cerca una acció…</guimenuitem
+> </menuchoice>
+						</term>
+						<listitem>
+							<para
+><action
+>Obre</action
+> la barra d'ordres. </para>
 						</listitem>
 					</varlistentry>
 				</variablelist>

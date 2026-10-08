@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-07 00:42+0000\n"
+"POT-Creation-Date: 2026-10-08 00:42+0000\n"
 "PO-Revision-Date: 2026-08-29 17:28+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -1436,27 +1436,13 @@ msgstr[3] "حفظ %1 لاعبين"
 msgstr[4] "حفظ %1 لاعبًا"
 msgstr[5] "حفظ %1 لاعب"
 
-#: tournament/tiebreaks/aob.h:23 tournament/tournament.cpp:558
+#: tournament/tiebreaks/aob.h:23 tournament/tournament.cpp:559
 #, kde-format
 msgctxt "Tiebreak"
 msgid "Average Buchholz of Opponents"
 msgstr "متوسط بوخولز للخصوم"
 
-#: tournament/tiebreaks/buchholz.cpp:14
-#, kde-format
-msgctxt "@label:spinbox"
-msgid "Exclude the lowest scores:"
-msgstr "استثنِ أدنى النتائج:"
-
-#: tournament/tiebreaks/buchholz.cpp:35
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Unsupported tiebreak option \"%1\""
-msgctxt "@info"
-msgid "Unsupported tiebreak option “%1”"
-msgstr "خيار فاصل غير متاح ”%1“"
-
-#: tournament/tiebreaks/buchholz.h:25 tournament/tournament.cpp:534
+#: tournament/tiebreaks/buchholz.h:25 tournament/tournament.cpp:535
 #, kde-format
 msgctxt "Buchholz tiebreak"
 msgid "Buchholz"
@@ -1476,7 +1462,7 @@ msgstr[3] "بوخهولز %1"
 msgstr[4] "بوخهولز %1"
 msgstr[5] "بوخهولز %1"
 
-#: tournament/tiebreaks/bwg.h:22 tournament/tournament.cpp:554
+#: tournament/tiebreaks/bwg.h:22 tournament/tournament.cpp:555
 #, fuzzy, kde-format
 #| msgctxt "Number of Games Played with Black (over the board) tiebreak"
 #| msgid "Number of Games Played with Black (over the board)"
@@ -1490,32 +1476,70 @@ msgctxt "@info"
 msgid "Unsupported tiebreak"
 msgstr "خيار فاصل غير متاح"
 
-#: tournament/tiebreaks/numberwins.h:22 tournament/tournament.cpp:538
+#: tournament/tiebreaks/numberwins.h:22 tournament/tournament.cpp:539
 #, kde-format
 msgctxt "Number of Wins tiebreak"
 msgid "Number of Wins"
 msgstr "عدد الكسب"
 
-#: tournament/tiebreaks/playedblack.h:22 tournament/tournament.cpp:550
+#: tournament/tiebreaks/playedblack.h:22 tournament/tournament.cpp:551
 #, kde-format
 msgctxt "Number of Games Played with Black (over the board) tiebreak"
 msgid "Number of Games Played with Black (over the board)"
 msgstr "عدد المباريات الملعوبة بالقطع السوداء (على الرقعة)"
 
 #: tournament/tiebreaks/points.h:22 tournament/tiebreaks/points.h:27
-#: tournament/tournament.cpp:530
+#: tournament/tournament.cpp:531
 #, kde-format
 msgctxt "Game points"
 msgid "Points"
 msgstr "النقاط"
 
-#: tournament/tiebreaks/progressive.h:22 tournament/tournament.cpp:562
+#: tournament/tiebreaks/progressive.h:22 tournament/tournament.cpp:563
 #, kde-format
 msgctxt "Progressive Scores tiebreak"
 msgid "Progressive"
 msgstr ""
 
-#: tournament/tiebreaks/won.h:23 tournament/tournament.cpp:545
+#: tournament/tiebreaks/rep.h:22 tournament/tournament.cpp:571
+#, kde-format
+msgctxt "Tiebreak"
+msgid "Rounds one Elected to Play"
+msgstr ""
+
+#: tournament/tiebreaks/sb.cpp:15
+#, kde-format
+msgctxt "@label:spinbox"
+msgid "Exclude the lowest scores:"
+msgstr "استثنِ أدنى النتائج:"
+
+#: tournament/tiebreaks/sb.cpp:36
+#, fuzzy, kde-format
+#| msgctxt "@info"
+#| msgid "Unsupported tiebreak option \"%1\""
+msgctxt "@info"
+msgid "Unsupported tiebreak option “%1”"
+msgstr "خيار فاصل غير متاح ”%1“"
+
+#: tournament/tiebreaks/sb.h:58 tournament/tournament.cpp:567
+#, kde-format
+msgctxt "Tiebreak"
+msgid "Sonneborn-Berger"
+msgstr ""
+
+#: tournament/tiebreaks/sb.h:60
+#, kde-format
+msgctxt "Tiebreak modifier, N is a number < 0"
+msgid "Sonneborn-Berger %1"
+msgid_plural "Sonneborn-Berger %1"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+msgstr[4] ""
+msgstr[5] ""
+
+#: tournament/tiebreaks/won.h:23 tournament/tournament.cpp:546
 #, kde-format
 msgctxt ""
 "Number of Games Won (over the board) tiebreak. Different from the 'Number of "
@@ -1523,12 +1547,12 @@ msgctxt ""
 msgid "Number of Games Won (over the board)"
 msgstr "عدد المباريات الفائزة (على الرقعة)"
 
-#: tournament/tournament.cpp:991
+#: tournament/tournament.cpp:1000
 #, kde-format
 msgid "An error ocurred while pairing the round: %1"
 msgstr "حدث خطأ أثناء إقران الجولة: %1"
 
-#: tournament/tournament.cpp:1216
+#: tournament/tournament.cpp:1225
 #, fuzzy, kde-format
 #| msgid "Couldn't open file"
 msgid "Couldn’t open file"

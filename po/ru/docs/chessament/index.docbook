@@ -75,7 +75,7 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 		<title
 >Введение</title>
 		<para
->&chessament; — приложение для управления шахматными турнирами. Поддерживает индивидуальные турниры по швейцарской системе. </para>
+>&chessament; — приложение для управления шахматными турнирами. Поддерживает личные турниры по швейцарской системе. </para>
 		<para
 >Основные возможности &chessament;: </para>
 		<itemizedlist>
@@ -123,7 +123,7 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 
 		<sect1 id="making-pairings">
 			<title
->Пары &amp; результаты</title>
+>Пары и результаты</title>
 			<para
 >После завершения регистрации всех игроков турнира можно составить пары для первого тура. Перейдите в представление <guibutton
 >Пары</guibutton
@@ -207,19 +207,19 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 				</listitem>
 				<listitem>
 					<para
->Количество партий, сыгранных чёрными (<acronym
+>Число партий, сыгранных чёрными (<acronym
 >BPG</acronym
 >)</para>
 				</listitem>
 				<listitem>
 					<para
->Количество выигранных партий (за доской) (<acronym
+>Число выигранных партий (за доской) (<acronym
 >WON</acronym
 >)</para>
 				</listitem>
 				<listitem>
 					<para
->Количество побед (<acronym
+>Число побед (<acronym
 >WIN</acronym
 >)</para>
 				</listitem>
@@ -250,7 +250,7 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 ><guimenu
 >Файл</guimenu
 > <guimenuitem
->Новый турнир…</guimenuitem
+>Создать турнир…</guimenuitem
 > </menuchoice>
 						</term>
 						<listitem>
@@ -334,7 +334,7 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 ><guimenu
 >Файл</guimenu
 > <guimenuitem
->Экспортировать отчёт о турнире…</guimenuitem
+>Экспорт отчёта о турнире…</guimenuitem
 > </menuchoice>
 						</term>
 						<listitem>
@@ -352,26 +352,20 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 				<title
 >Меню «Вид»</title>
 				<variablelist>
-					<varlistentry id="menu-view-commandbar">
+					<varlistentry id="menu-view-hide-finished-games">
 						<term>
 							<menuchoice
-><shortcut
-> <keycombo action="simul"
->&Ctrl;&Alt;<keycap
->I</keycap
-></keycombo
-> </shortcut
-> <guimenu
+><guimenu
 >Вид</guimenu
 > <guimenuitem
->Открыть панель команд</guimenuitem
+>Скрывать завершённые партии</guimenuitem
 > </menuchoice>
 						</term>
 						<listitem>
 							<para
 ><action
->Открывает</action
-> панель команд. </para>
+>Скрывает</action
+> партии, для которых введён результат. </para>
 						</listitem>
 					</varlistentry>
 				</variablelist>
@@ -422,6 +416,34 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 ><action
 >Открывает</action
 > окно параметров &chessament;. </para>
+						</listitem>
+					</varlistentry>
+				</variablelist>
+			</sect2>
+			<sect2 id="reference-menus-help">
+				<title
+>Меню «Справка»</title>
+				<variablelist>
+					<varlistentry id="menu-help-commandbar">
+						<term>
+							<menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;&Alt;<keycap
+>I</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Справка</guimenu
+> <guimenuitem
+>Найти действие…</guimenuitem
+> </menuchoice>
+						</term>
+						<listitem>
+							<para
+><action
+>Открывает</action
+> панель команд. </para>
 						</listitem>
 					</varlistentry>
 				</variablelist>

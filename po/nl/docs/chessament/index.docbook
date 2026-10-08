@@ -338,26 +338,20 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 				<title
 >Het menu Beeld</title>
 				<variablelist>
-					<varlistentry id="menu-view-commandbar">
+					<varlistentry id="menu-view-hide-finished-games">
 						<term>
 							<menuchoice
-><shortcut
-> <keycombo action="simul"
->&Ctrl;&Alt;<keycap
->I</keycap
-></keycombo
-> </shortcut
-> <guimenu
+><guimenu
 >Beeld</guimenu
 > <guimenuitem
->Opdrachtbalk openen</guimenuitem
+>Beëindigde spellen verbergen</guimenuitem
 > </menuchoice>
 						</term>
 						<listitem>
 							<para
 ><action
->Opent</action
-> de opdrachtbalk. </para>
+>Verbergt</action
+> de spellen die een resultaat hebben ingevoerd. </para>
 						</listitem>
 					</varlistentry>
 				</variablelist>
@@ -408,6 +402,34 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 ><action
 >Opent</action
 > &chessament; het venster Instellingen. </para>
+						</listitem>
+					</varlistentry>
+				</variablelist>
+			</sect2>
+			<sect2 id="reference-menus-help">
+				<title
+>Het menu Help</title>
+				<variablelist>
+					<varlistentry id="menu-help-commandbar">
+						<term>
+							<menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;&Alt;<keycap
+>I</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Help</guimenu
+> <guimenuitem
+>Zoek actie…</guimenuitem
+> </menuchoice>
+						</term>
+						<listitem>
+							<para
+><action
+>Opent</action
+> de opdrachtbalk. </para>
 						</listitem>
 					</varlistentry>
 				</variablelist>
