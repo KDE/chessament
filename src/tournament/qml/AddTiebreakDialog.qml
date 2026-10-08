@@ -4,13 +4,15 @@
 pragma ComponentBehavior: Bound
 
 import QtQuick
+import QtQuick.Controls as Controls
 
 import org.kde.ki18n
+import org.kde.kirigami as Kirigami
 import org.kde.kirigamiaddons.formcard as FormCard
 
 import org.kde.chessament.tournament
 
-FormCard.FormCardDialog {
+Controls.Dialog {
     id: root
 
     required property Tournament tournament
@@ -18,17 +20,39 @@ FormCard.FormCardDialog {
     property string tiebreak
 
     title: KI18n.i18nc("@title:window", "Add Tiebreak")
+    implicitWidth: Math.min(Controls.ApplicationWindow.window.width - Kirigami.Units.gridUnit * 4, Kirigami.Units.gridUnit * 25)
+    implicitHeight: Math.min(Controls.ApplicationWindow.window.height - Kirigami.Units.gridUnit * 4, contentItem.implicitHeight)
+    anchors.centerIn: parent
+    modal: true
 
-    Repeater {
-        model: root.tournament.availableTiebreaks()
+    leftPadding: 0
+    rightPadding: 0
+    topPadding: 0
+    bottomPadding: 0
 
-        FormCard.FormButtonDelegate {
-            required property var modelData
+    contentItem: Kirigami.ScrollablePage {
+        background: null
 
-            text: modelData.name
-            onPressed: {
-                root.tiebreak = modelData.id;
-                root.accept();
+        leftPadding: 0
+        rightPadding: 0
+        topPadding: 0
+        bottomPadding: 0
+
+        ColumnLayout {
+            spacing: 0
+
+            Repeater {
+                model: root.tournament.availableTiebreaks()
+
+                FormCard.FormButtonDelegate {
+                    required property var modelData
+
+                    text: modelData.name
+                    onPressed: {
+                        root.tiebreak = modelData.id;
+                        root.accept();
+                    }
+                }
             }
         }
     }
