@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-08 00:42+0000\n"
-"PO-Revision-Date: 2026-10-07 12:09+0200\n"
-"Last-Translator: Libor Filipek <libor.filipek@gmail.com>\n"
+"POT-Creation-Date: 2026-10-09 00:43+0000\n"
+"PO-Revision-Date: 2026-10-08 12:06+0200\n"
+"Last-Translator: Libor Filípek <libor.filipek@gmail.com>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
@@ -1126,7 +1126,7 @@ msgstr "Neplatné párování \"%1\"."
 msgid "Invalid player “%1” on pairing “%2”."
 msgstr "Neplatný hráč \"%1\" v páru \"%2\"."
 
-#: tournament/qml/AddTiebreakDialog.qml:20
+#: tournament/qml/AddTiebreakDialog.qml:22
 msgctxt "@title:window"
 msgid "Add Tiebreak"
 msgstr "Přidat rozhodovací kolo"
@@ -1318,13 +1318,13 @@ msgstr[0] "Uložen 1 hráč."
 msgstr[1] "Uloženi %1 hráči."
 msgstr[2] "Uloženo %1 hráčů."
 
-#: tournament/tiebreaks/aob.h:23 tournament/tournament.cpp:559
+#: tournament/tiebreaks/aob.h:23 tournament/tournament.cpp:535
 #, kde-format
 msgctxt "Tiebreak"
 msgid "Average Buchholz of Opponents"
 msgstr "Průměrná hodnota Buchholz soupeřů"
 
-#: tournament/tiebreaks/buchholz.h:25 tournament/tournament.cpp:535
+#: tournament/tiebreaks/buchholz.h:25 tournament/tournament.cpp:511
 #, kde-format
 msgctxt "Buchholz tiebreak"
 msgid "Buchholz"
@@ -1339,7 +1339,7 @@ msgstr[0] "Buchholz %1"
 msgstr[1] "Buchholz %1"
 msgstr[2] "Buchholz %1"
 
-#: tournament/tiebreaks/bwg.h:22 tournament/tournament.cpp:555
+#: tournament/tiebreaks/bwg.h:22 tournament/tournament.cpp:531
 #, kde-format
 msgctxt "Tiebreak"
 msgid "Number of Games Won with Black (over the board)"
@@ -1351,36 +1351,36 @@ msgctxt "@info"
 msgid "Unsupported tiebreak"
 msgstr "Nepodporované rozhodovací kolo"
 
-#: tournament/tiebreaks/numberwins.h:22 tournament/tournament.cpp:539
+#: tournament/tiebreaks/numberwins.h:22 tournament/tournament.cpp:515
 #, kde-format
 msgctxt "Number of Wins tiebreak"
 msgid "Number of Wins"
 msgstr "Počet vítězství"
 
-#: tournament/tiebreaks/playedblack.h:22 tournament/tournament.cpp:551
+#: tournament/tiebreaks/playedblack.h:22 tournament/tournament.cpp:527
 #, kde-format
 msgctxt "Number of Games Played with Black (over the board) tiebreak"
 msgid "Number of Games Played with Black (over the board)"
 msgstr "Počet partií odehraných černými (u šachovnice)"
 
 #: tournament/tiebreaks/points.h:22 tournament/tiebreaks/points.h:27
-#: tournament/tournament.cpp:531
+#: tournament/tournament.cpp:507
 #, kde-format
 msgctxt "Game points"
 msgid "Points"
 msgstr "Body"
 
-#: tournament/tiebreaks/progressive.h:22 tournament/tournament.cpp:563
+#: tournament/tiebreaks/progressive.h:22 tournament/tournament.cpp:539
 #, kde-format
 msgctxt "Progressive Scores tiebreak"
 msgid "Progressive"
 msgstr "Progresivní"
 
-#: tournament/tiebreaks/rep.h:22 tournament/tournament.cpp:571
+#: tournament/tiebreaks/rep.h:22 tournament/tournament.cpp:547
 #, kde-format
 msgctxt "Tiebreak"
 msgid "Rounds one Elected to Play"
-msgstr ""
+msgstr "Vybraní hráči do prvního kola"
 
 #: tournament/tiebreaks/sb.cpp:15
 #, kde-format
@@ -1394,22 +1394,22 @@ msgctxt "@info"
 msgid "Unsupported tiebreak option “%1”"
 msgstr "Nepodporovaná možnost rozhodovacího kola \"%1\""
 
-#: tournament/tiebreaks/sb.h:58 tournament/tournament.cpp:567
+#: tournament/tiebreaks/sb.h:58 tournament/tournament.cpp:543
 #, kde-format
 msgctxt "Tiebreak"
 msgid "Sonneborn-Berger"
-msgstr ""
+msgstr "Sonneborn-Berger"
 
 #: tournament/tiebreaks/sb.h:60
 #, kde-format
 msgctxt "Tiebreak modifier, N is a number < 0"
 msgid "Sonneborn-Berger %1"
 msgid_plural "Sonneborn-Berger %1"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Sonneborn-Berger %1"
+msgstr[1] "Sonneborn-Berger %1"
+msgstr[2] "Sonneborn-Berger %1"
 
-#: tournament/tiebreaks/won.h:23 tournament/tournament.cpp:546
+#: tournament/tiebreaks/won.h:23 tournament/tournament.cpp:522
 #, kde-format
 msgctxt ""
 "Number of Games Won (over the board) tiebreak. Different from the 'Number of "
@@ -1417,12 +1417,12 @@ msgctxt ""
 msgid "Number of Games Won (over the board)"
 msgstr "Počet vyhraných partií (u šachovnice)"
 
-#: tournament/tournament.cpp:1000
+#: tournament/tournament.cpp:976
 #, kde-format
 msgid "An error ocurred while pairing the round: %1"
 msgstr "Při párování kola došlo k chybě: %1"
 
-#: tournament/tournament.cpp:1225
+#: tournament/tournament.cpp:1201
 #, kde-format
 msgid "Couldn’t open file"
 msgstr "Soubor nelze otevřít"

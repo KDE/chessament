@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-08 00:42+0000\n"
+"POT-Creation-Date: 2026-10-09 00:43+0000\n"
 "PO-Revision-Date: 2026-10-02 21:45+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -1113,7 +1113,7 @@ msgstr "Ogiltig lottning “%1”."
 msgid "Invalid player “%1” on pairing “%2”."
 msgstr "Ogiltig spelare “%1” för lottning “%2”."
 
-#: tournament/qml/AddTiebreakDialog.qml:20
+#: tournament/qml/AddTiebreakDialog.qml:22
 msgctxt "@title:window"
 msgid "Add Tiebreak"
 msgstr "Lägg till tiebreak"
@@ -1304,13 +1304,13 @@ msgid_plural "Saved %1 players."
 msgstr[0] "Sparade 1 spelare."
 msgstr[1] "Sparade %1 spelare."
 
-#: tournament/tiebreaks/aob.h:23 tournament/tournament.cpp:559
+#: tournament/tiebreaks/aob.h:23 tournament/tournament.cpp:535
 #, kde-format
 msgctxt "Tiebreak"
 msgid "Average Buchholz of Opponents"
 msgstr "Medelvärde av Buchholz för motspelare"
 
-#: tournament/tiebreaks/buchholz.h:25 tournament/tournament.cpp:535
+#: tournament/tiebreaks/buchholz.h:25 tournament/tournament.cpp:511
 #, kde-format
 msgctxt "Buchholz tiebreak"
 msgid "Buchholz"
@@ -1324,7 +1324,7 @@ msgid_plural "Buchholz %1"
 msgstr[0] "Buchholz %1"
 msgstr[1] "Buchholz %1"
 
-#: tournament/tiebreaks/bwg.h:22 tournament/tournament.cpp:555
+#: tournament/tiebreaks/bwg.h:22 tournament/tournament.cpp:531
 #, fuzzy, kde-format
 #| msgctxt "Number of Games Played with Black (over the board) tiebreak"
 #| msgid "Number of Games Played with Black (over the board)"
@@ -1338,32 +1338,32 @@ msgctxt "@info"
 msgid "Unsupported tiebreak"
 msgstr "Tiebreak stöds inte"
 
-#: tournament/tiebreaks/numberwins.h:22 tournament/tournament.cpp:539
+#: tournament/tiebreaks/numberwins.h:22 tournament/tournament.cpp:515
 #, kde-format
 msgctxt "Number of Wins tiebreak"
 msgid "Number of Wins"
 msgstr "Antal vinster"
 
-#: tournament/tiebreaks/playedblack.h:22 tournament/tournament.cpp:551
+#: tournament/tiebreaks/playedblack.h:22 tournament/tournament.cpp:527
 #, kde-format
 msgctxt "Number of Games Played with Black (over the board) tiebreak"
 msgid "Number of Games Played with Black (over the board)"
 msgstr "Antal matcher spelade med svart (över hela linjen)"
 
 #: tournament/tiebreaks/points.h:22 tournament/tiebreaks/points.h:27
-#: tournament/tournament.cpp:531
+#: tournament/tournament.cpp:507
 #, kde-format
 msgctxt "Game points"
 msgid "Points"
 msgstr "Poäng"
 
-#: tournament/tiebreaks/progressive.h:22 tournament/tournament.cpp:563
+#: tournament/tiebreaks/progressive.h:22 tournament/tournament.cpp:539
 #, kde-format
 msgctxt "Progressive Scores tiebreak"
 msgid "Progressive"
 msgstr ""
 
-#: tournament/tiebreaks/rep.h:22 tournament/tournament.cpp:571
+#: tournament/tiebreaks/rep.h:22 tournament/tournament.cpp:547
 #, kde-format
 msgctxt "Tiebreak"
 msgid "Rounds one Elected to Play"
@@ -1381,7 +1381,7 @@ msgctxt "@info"
 msgid "Unsupported tiebreak option “%1”"
 msgstr "Alternativ för tiebreak som inte stöds “%1”"
 
-#: tournament/tiebreaks/sb.h:58 tournament/tournament.cpp:567
+#: tournament/tiebreaks/sb.h:58 tournament/tournament.cpp:543
 #, kde-format
 msgctxt "Tiebreak"
 msgid "Sonneborn-Berger"
@@ -1395,7 +1395,7 @@ msgid_plural "Sonneborn-Berger %1"
 msgstr[0] ""
 msgstr[1] ""
 
-#: tournament/tiebreaks/won.h:23 tournament/tournament.cpp:546
+#: tournament/tiebreaks/won.h:23 tournament/tournament.cpp:522
 #, kde-format
 msgctxt ""
 "Number of Games Won (over the board) tiebreak. Different from the 'Number of "
@@ -1403,12 +1403,12 @@ msgctxt ""
 msgid "Number of Games Won (over the board)"
 msgstr "Antal vunna matcher (över hela linjen)"
 
-#: tournament/tournament.cpp:1000
+#: tournament/tournament.cpp:976
 #, kde-format
 msgid "An error ocurred while pairing the round: %1"
 msgstr "Ett fel uppstod när omgången skulle lottas: %1"
 
-#: tournament/tournament.cpp:1225
+#: tournament/tournament.cpp:1201
 #, kde-format
 msgid "Couldn’t open file"
 msgstr "Kunde inte öppna fil"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-08 00:42+0000\n"
+"POT-Creation-Date: 2026-10-09 00:43+0000\n"
 "PO-Revision-Date: 2025-11-09 11:05+0200\n"
 "Last-Translator: Toms Trasūns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -1262,7 +1262,7 @@ msgstr "Nederīgs pāris „%1“."
 msgid "Invalid player “%1” on pairing “%2”."
 msgstr "Nederīgs spēlētājs „%1“ pāra izveidošanai „%2“."
 
-#: tournament/qml/AddTiebreakDialog.qml:20
+#: tournament/qml/AddTiebreakDialog.qml:22
 msgctxt "@title:window"
 msgid "Add Tiebreak"
 msgstr "Pievienot neizšķirta izšķiršanu"
@@ -1474,13 +1474,13 @@ msgstr[0] "%1 spēlētājs"
 msgstr[1] "%1 spēlētāji"
 msgstr[2] "%1 spēlētāju"
 
-#: tournament/tiebreaks/aob.h:23 tournament/tournament.cpp:559
+#: tournament/tiebreaks/aob.h:23 tournament/tournament.cpp:535
 #, kde-format
 msgctxt "Tiebreak"
 msgid "Average Buchholz of Opponents"
 msgstr ""
 
-#: tournament/tiebreaks/buchholz.h:25 tournament/tournament.cpp:535
+#: tournament/tiebreaks/buchholz.h:25 tournament/tournament.cpp:511
 #, kde-format
 msgctxt "Buchholz tiebreak"
 msgid "Buchholz"
@@ -1497,7 +1497,7 @@ msgstr[0] "Buhholca sistēma"
 msgstr[1] "Buhholca sistēma"
 msgstr[2] "Buhholca sistēma"
 
-#: tournament/tiebreaks/bwg.h:22 tournament/tournament.cpp:555
+#: tournament/tiebreaks/bwg.h:22 tournament/tournament.cpp:531
 #, fuzzy, kde-format
 #| msgctxt "Number of Wins tiebreak"
 #| msgid "Number of Wins"
@@ -1513,32 +1513,32 @@ msgctxt "@info"
 msgid "Unsupported tiebreak"
 msgstr "Pielāgot neizšķirta izšķiršanu"
 
-#: tournament/tiebreaks/numberwins.h:22 tournament/tournament.cpp:539
+#: tournament/tiebreaks/numberwins.h:22 tournament/tournament.cpp:515
 #, kde-format
 msgctxt "Number of Wins tiebreak"
 msgid "Number of Wins"
 msgstr "Uzvaru skaits"
 
-#: tournament/tiebreaks/playedblack.h:22 tournament/tournament.cpp:551
+#: tournament/tiebreaks/playedblack.h:22 tournament/tournament.cpp:527
 #, kde-format
 msgctxt "Number of Games Played with Black (over the board) tiebreak"
 msgid "Number of Games Played with Black (over the board)"
 msgstr ""
 
 #: tournament/tiebreaks/points.h:22 tournament/tiebreaks/points.h:27
-#: tournament/tournament.cpp:531
+#: tournament/tournament.cpp:507
 #, kde-format
 msgctxt "Game points"
 msgid "Points"
 msgstr "Punkti"
 
-#: tournament/tiebreaks/progressive.h:22 tournament/tournament.cpp:563
+#: tournament/tiebreaks/progressive.h:22 tournament/tournament.cpp:539
 #, kde-format
 msgctxt "Progressive Scores tiebreak"
 msgid "Progressive"
 msgstr ""
 
-#: tournament/tiebreaks/rep.h:22 tournament/tournament.cpp:571
+#: tournament/tiebreaks/rep.h:22 tournament/tournament.cpp:547
 #, kde-format
 msgctxt "Tiebreak"
 msgid "Rounds one Elected to Play"
@@ -1558,7 +1558,7 @@ msgctxt "@info"
 msgid "Unsupported tiebreak option “%1”"
 msgstr "Pielāgot neizšķirta izšķiršanu"
 
-#: tournament/tiebreaks/sb.h:58 tournament/tournament.cpp:567
+#: tournament/tiebreaks/sb.h:58 tournament/tournament.cpp:543
 #, kde-format
 msgctxt "Tiebreak"
 msgid "Sonneborn-Berger"
@@ -1573,7 +1573,7 @@ msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
 
-#: tournament/tiebreaks/won.h:23 tournament/tournament.cpp:546
+#: tournament/tiebreaks/won.h:23 tournament/tournament.cpp:522
 #, fuzzy, kde-format
 #| msgctxt "Number of Wins tiebreak"
 #| msgid "Number of Wins"
@@ -1583,12 +1583,12 @@ msgctxt ""
 msgid "Number of Games Won (over the board)"
 msgstr "Uzvaru skaits"
 
-#: tournament/tournament.cpp:1000
+#: tournament/tournament.cpp:976
 #, kde-format
 msgid "An error ocurred while pairing the round: %1"
 msgstr "Pārojot kārtu, notika kļūda: %1"
 
-#: tournament/tournament.cpp:1225
+#: tournament/tournament.cpp:1201
 #, fuzzy, kde-format
 #| msgid "Couldn't open file"
 msgid "Couldn’t open file"

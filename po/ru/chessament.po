@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-08 00:42+0000\n"
-"PO-Revision-Date: 2026-10-07 09:50+0200\n"
+"POT-Creation-Date: 2026-10-09 00:43+0000\n"
+"PO-Revision-Date: 2026-10-08 08:05+0200\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -1138,7 +1138,7 @@ msgstr "Недопустимая пара «%1»."
 msgid "Invalid player “%1” on pairing “%2”."
 msgstr "Недопустимый игрок «%1» в паре «%2»."
 
-#: tournament/qml/AddTiebreakDialog.qml:20
+#: tournament/qml/AddTiebreakDialog.qml:22
 msgctxt "@title:window"
 msgid "Add Tiebreak"
 msgstr "Добавление дополнительного показателя"
@@ -1336,13 +1336,13 @@ msgstr[1] "Сохранено %1 игрока."
 msgstr[2] "Сохранено %1 игроков."
 msgstr[3] "Сохранён один игрок."
 
-#: tournament/tiebreaks/aob.h:23 tournament/tournament.cpp:559
+#: tournament/tiebreaks/aob.h:23 tournament/tournament.cpp:535
 #, kde-format
 msgctxt "Tiebreak"
 msgid "Average Buchholz of Opponents"
 msgstr "Средний коэффициент Бухгольца соперников"
 
-#: tournament/tiebreaks/buchholz.h:25 tournament/tournament.cpp:535
+#: tournament/tiebreaks/buchholz.h:25 tournament/tournament.cpp:511
 #, kde-format
 msgctxt "Buchholz tiebreak"
 msgid "Buchholz"
@@ -1358,7 +1358,7 @@ msgstr[1] "Бухгольц %1"
 msgstr[2] "Бухгольц %1"
 msgstr[3] "Бухгольц %1"
 
-#: tournament/tiebreaks/bwg.h:22 tournament/tournament.cpp:555
+#: tournament/tiebreaks/bwg.h:22 tournament/tournament.cpp:531
 #, kde-format
 msgctxt "Tiebreak"
 msgid "Number of Games Won with Black (over the board)"
@@ -1370,36 +1370,36 @@ msgctxt "@info"
 msgid "Unsupported tiebreak"
 msgstr "Неподдерживаемый дополнительный показатель"
 
-#: tournament/tiebreaks/numberwins.h:22 tournament/tournament.cpp:539
+#: tournament/tiebreaks/numberwins.h:22 tournament/tournament.cpp:515
 #, kde-format
 msgctxt "Number of Wins tiebreak"
 msgid "Number of Wins"
 msgstr "Число побед"
 
-#: tournament/tiebreaks/playedblack.h:22 tournament/tournament.cpp:551
+#: tournament/tiebreaks/playedblack.h:22 tournament/tournament.cpp:527
 #, kde-format
 msgctxt "Number of Games Played with Black (over the board) tiebreak"
 msgid "Number of Games Played with Black (over the board)"
 msgstr "Число партий, сыгранных чёрными (за доской)"
 
 #: tournament/tiebreaks/points.h:22 tournament/tiebreaks/points.h:27
-#: tournament/tournament.cpp:531
+#: tournament/tournament.cpp:507
 #, kde-format
 msgctxt "Game points"
 msgid "Points"
 msgstr "Очки"
 
-#: tournament/tiebreaks/progressive.h:22 tournament/tournament.cpp:563
+#: tournament/tiebreaks/progressive.h:22 tournament/tournament.cpp:539
 #, kde-format
 msgctxt "Progressive Scores tiebreak"
 msgid "Progressive"
 msgstr "Прогресс"
 
-#: tournament/tiebreaks/rep.h:22 tournament/tournament.cpp:571
+#: tournament/tiebreaks/rep.h:22 tournament/tournament.cpp:547
 #, kde-format
 msgctxt "Tiebreak"
 msgid "Rounds one Elected to Play"
-msgstr ""
+msgstr "Число туров, в которых игрок решил играть"
 
 #: tournament/tiebreaks/sb.cpp:15
 #, kde-format
@@ -1413,23 +1413,23 @@ msgctxt "@info"
 msgid "Unsupported tiebreak option “%1”"
 msgstr "Неподдерживаемый параметр дополнительного показателя «%1»"
 
-#: tournament/tiebreaks/sb.h:58 tournament/tournament.cpp:567
+#: tournament/tiebreaks/sb.h:58 tournament/tournament.cpp:543
 #, kde-format
 msgctxt "Tiebreak"
 msgid "Sonneborn-Berger"
-msgstr ""
+msgstr "Зонненборн — Бергер"
 
 #: tournament/tiebreaks/sb.h:60
 #, kde-format
 msgctxt "Tiebreak modifier, N is a number < 0"
 msgid "Sonneborn-Berger %1"
 msgid_plural "Sonneborn-Berger %1"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "Зонненборн — Бергер %1"
+msgstr[1] "Зонненборн — Бергер %1"
+msgstr[2] "Зонненборн — Бергер %1"
+msgstr[3] "Зонненборн — Бергер %1"
 
-#: tournament/tiebreaks/won.h:23 tournament/tournament.cpp:546
+#: tournament/tiebreaks/won.h:23 tournament/tournament.cpp:522
 #, kde-format
 msgctxt ""
 "Number of Games Won (over the board) tiebreak. Different from the 'Number of "
@@ -1437,12 +1437,12 @@ msgctxt ""
 msgid "Number of Games Won (over the board)"
 msgstr "Число выигранных партий (за доской)"
 
-#: tournament/tournament.cpp:1000
+#: tournament/tournament.cpp:976
 #, kde-format
 msgid "An error ocurred while pairing the round: %1"
 msgstr "Ошибка жеребьёвки тура: %1"
 
-#: tournament/tournament.cpp:1225
+#: tournament/tournament.cpp:1201
 #, kde-format
 msgid "Couldn’t open file"
 msgstr "Не удалось открыть файл"
