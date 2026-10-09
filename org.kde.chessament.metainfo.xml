@@ -26,6 +26,7 @@
   <name xml:lang="nl">Chessament</name>
   <name xml:lang="pl">Chessament</name>
   <name xml:lang="pt-BR">Chessament</name>
+  <name xml:lang="ru">Chessament</name>
   <name xml:lang="sk">Chessament</name>
   <name xml:lang="sl">Chessament</name>
   <name xml:lang="sv">Chessament</name>
@@ -52,6 +53,7 @@
   <summary xml:lang="nl">Beheerder van een schaaktoernooi</summary>
   <summary xml:lang="pl">Zarządzanie turniejami szachowymi</summary>
   <summary xml:lang="pt-BR">Gerenciador de torneio de xadrez</summary>
+  <summary xml:lang="ru">Управление шахматными турнирами</summary>
   <summary xml:lang="sk">Správca šachových turnajov</summary>
   <summary xml:lang="sl">Upravljalnik šahovskih turnirjev</summary>
   <summary xml:lang="sv">Schackturneringshanterare</summary>
@@ -79,6 +81,7 @@
     <p xml:lang="nl">Chessament is een beheerder van schaaktoernooien. Het ondersteunt op dit moment individuele toernooien volgens het Zwitserse systeem.</p>
     <p xml:lang="pl">Chessament jest programem do zarządzania turniejami szachowymi. Obecnie obsługuje pojedyncze turnieje w systemie szwajcarskim.</p>
     <p xml:lang="pt-BR">Chessament é um gerenciador de torneios de xadrez. Atualmente, ele suporta torneios individuais no sistema suíço.</p>
+    <p xml:lang="ru">Chessament — приложение для управления шахматными турнирами. В настоящее время поддерживаются личные турниры по швейцарской системе.</p>
     <p xml:lang="sk">Chessament je správca šachových turnajov. Momentálne podporuje individuálne turnaje švajčiarskym systémom.</p>
     <p xml:lang="sl">Chessament je upravitelj šahovskih turnirjev. Trenutno podpira posamezne turnirje po švicarskem sistemu.</p>
     <p xml:lang="sv">Chessament är en schackturneringshanterare. Den stöder för närvarande individuella schweizerturneringar.</p>
@@ -126,6 +129,7 @@
       <caption xml:lang="ka">მოთამაშის ფერი</caption>
       <caption xml:lang="nl">Weergave van spelers</caption>
       <caption xml:lang="pt-BR">Visão dos jogadores</caption>
+      <caption xml:lang="ru">Список игроков</caption>
       <caption xml:lang="sk">Pohľad na hráčov</caption>
       <caption xml:lang="sl">Pogled igralcev</caption>
       <caption xml:lang="sv">Spelarvy</caption>
@@ -148,6 +152,7 @@
       <caption xml:lang="ka">დაწყვილებების ხედი</caption>
       <caption xml:lang="nl">Weergave van paren</caption>
       <caption xml:lang="pt-BR">Visão dos pares</caption>
+      <caption xml:lang="ru">Пары</caption>
       <caption xml:lang="sk">Pohľad na párovania</caption>
       <caption xml:lang="sl">Pogled parov</caption>
       <caption xml:lang="sv">Lottningsvy</caption>
@@ -170,6 +175,7 @@
       <caption xml:lang="ka">შედეგების ხედი</caption>
       <caption xml:lang="nl">Weergave van standen</caption>
       <caption xml:lang="pt-BR">Visão da pontuação</caption>
+      <caption xml:lang="ru">Турнирная таблица</caption>
       <caption xml:lang="sk">Pohľad na poradie</caption>
       <caption xml:lang="sl">Pogled stanj</caption>
       <caption xml:lang="sv">Ställningsvy</caption>
