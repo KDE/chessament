@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-09 00:43+0000\n"
-"PO-Revision-Date: 2026-10-02 19:38+0200\n"
+"PO-Revision-Date: 2026-10-09 11:01+0200\n"
 "Last-Translator: Valter Mura <valtermura@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -945,22 +945,19 @@ msgid "Automatically open exported PDF files"
 msgstr "Apri in automatico i file PDF esportati"
 
 #: settings/GeneralPage.qml:32
-#, fuzzy
-#| msgctxt "@title:column Game Result"
-#| msgid "Result"
 msgctxt "@title:group"
 msgid "Result Entry"
-msgstr "Risultato"
+msgstr "Voce dei risultati"
 
 #: settings/GeneralPage.qml:37
 msgctxt "@option:radio"
 msgid "Use 1-2-3 keys"
-msgstr ""
+msgstr "Usa i tasti 1-2-3"
 
 #: settings/GeneralPage.qml:48
 msgctxt "@option:radio"
 msgid "Use 1-5-0 keys"
-msgstr ""
+msgstr "Usa i tasti 1-5-0"
 
 #: settings/RatingListsPage.qml:19 settings/RatingListsPage.qml:22
 msgctxt "@title"
@@ -1328,12 +1325,10 @@ msgstr[0] "Buchholz %1"
 msgstr[1] "Buchholz %1"
 
 #: tournament/tiebreaks/bwg.h:22 tournament/tournament.cpp:531
-#, fuzzy, kde-format
-#| msgctxt "Number of Games Played with Black (over the board) tiebreak"
-#| msgid "Number of Games Played with Black (over the board)"
+#, kde-format
 msgctxt "Tiebreak"
 msgid "Number of Games Won with Black (over the board)"
-msgstr "Numero di partite giocate col nero (sulla scacchiera)"
+msgstr "Numero di partite vinte col nero (sulla scacchiera)"
 
 #: tournament/tiebreaks/dummy.h:23
 #, kde-format
@@ -1364,13 +1359,13 @@ msgstr "Punti"
 #, kde-format
 msgctxt "Progressive Scores tiebreak"
 msgid "Progressive"
-msgstr ""
+msgstr "Progressivo"
 
 #: tournament/tiebreaks/rep.h:22 tournament/tournament.cpp:547
 #, kde-format
 msgctxt "Tiebreak"
 msgid "Rounds one Elected to Play"
-msgstr ""
+msgstr "A turno uno scelto per giocare"
 
 #: tournament/tiebreaks/sb.cpp:15
 #, kde-format
@@ -1388,15 +1383,15 @@ msgstr "Opzione di spareggio «%1» non supportata"
 #, kde-format
 msgctxt "Tiebreak"
 msgid "Sonneborn-Berger"
-msgstr ""
+msgstr "Sonneborn-Berger"
 
 #: tournament/tiebreaks/sb.h:60
 #, kde-format
 msgctxt "Tiebreak modifier, N is a number < 0"
 msgid "Sonneborn-Berger %1"
 msgid_plural "Sonneborn-Berger %1"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Sonneborn-Berger %1"
+msgstr[1] "Sonneborn-Berger %1"
 
 #: tournament/tiebreaks/won.h:23 tournament/tournament.cpp:522
 #, kde-format

@@ -1,22 +1,21 @@
-# Copyright (C) 2026 This file is copyright:
-# This file is distributed under the same license as the chessament package.
-#
-# SPDX-FileCopyrightText: 2025, 2026 Yuri Chornoivan <yurchor@ukr.net>
+# Nemanja Hiršl <nemhirsl@gmail.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-09 00:43+0000\n"
-"PO-Revision-Date: 2026-10-08 17:57+0300\n"
-"Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
-"Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
-"Language: uk\n"
+"PO-Revision-Date: 2026-10-09 22:30+0200\n"
+"Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
+"Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
+"Language: sr@latin\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Lokalize 25.12.1\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+"X-Environment: kde\n"
 
 #: byesmodel.cpp:85
 #, kde-format
@@ -27,60 +26,60 @@ msgstr "%1 · %2"
 #: controller.cpp:187
 #, kde-format
 msgid "Couldn’t export tournament."
-msgstr "Не вдалося експортувати дані турніру."
+msgstr "Ne mogu da izvezem turnir."
 
 #: documents.cpp:23
 #, kde-format
 msgctxt "@title"
 msgid "Starting Rank"
-msgstr "Початковий ранг"
+msgstr "Početni poredak"
 
 #: documents.cpp:62
 #, kde-format
 msgctxt "@title %1 is a number"
 msgid "Round %1 Pairings"
 msgid_plural "Round %1 Pairings"
-msgstr[0] "Поділ на пари раунду %1"
-msgstr[1] "Поділ на пари раунду %1"
-msgstr[2] "Поділ на пари раунду %1"
-msgstr[3] "Поділ на пари раунду %1"
+msgstr[0] "Parovi %1. kola"
+msgstr[1] "Parovi %1. kola"
+msgstr[2] "Parovi %1. kola"
+msgstr[3] "Parovi %1. kola"
 
 #: documents.cpp:103
 #, kde-format
 msgctxt "@title"
 msgid "Standings After Round %1"
 msgid_plural "Standings After Round %1"
-msgstr[0] "Результати після раунду %1"
-msgstr[1] "Результати після раунду %1"
-msgstr[2] "Результати після раунду %1"
-msgstr[3] "Результати після раунду %1"
+msgstr[0] "Plasman posle %1. kola"
+msgstr[1] "Plasman posle %1. kola"
+msgstr[2] "Plasman posle %1. kola"
+msgstr[3] "Plasman posle %1. kola"
 
 #: documents.cpp:105
 #, kde-format
 msgctxt "@title"
 msgid "Provisional Standings After Round %1"
 msgid_plural "Provisional Standings After Round %1"
-msgstr[0] "Попередні результати після раунду %1"
-msgstr[1] "Попередні результати після раунду %1"
-msgstr[2] "Попередні результати після раунду %1"
-msgstr[3] "Попередні результати після раунду %1"
+msgstr[0] "Privremeni plasman posle %1. kola"
+msgstr[1] "Privremeni plasman posle %1. kola"
+msgstr[2] "Privremeni plasman posle %1. kola"
+msgstr[3] "Privremeni plasman posle %1. kola"
 
 #: documents.cpp:109
 #, kde-format
 msgctxt "@title"
 msgid "Final Standings"
-msgstr "Остаточні результати"
+msgstr "Konačan plasman"
 
 #: documents.cpp:111
 #, kde-format
 msgctxt "@title"
 msgid "Provisional Final Standings"
-msgstr "Попередні остаточні результати"
+msgstr "Privremeni konačni plasman"
 
 #: main.cpp:60
 #, kde-format
 msgid "© 2024–2026 Manuel Alcaraz Zambrano"
-msgstr "© Manuel Alcaraz Zambrano, 2024–2026"
+msgstr "© 2024–2026 Manuel Alcaraz Zambrano"
 
 #: main.cpp:62
 #, kde-format
@@ -92,54 +91,54 @@ msgstr "Manuel Alcaraz Zambrano"
 #, kde-format
 msgctxt "@info:credit"
 msgid "Author & Maintainer"
-msgstr "Автор і супровідник"
+msgstr "Autor i održavalac"
 
 #: main.cpp:66
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Юрій Чорноіван"
+msgstr "Nemanja Hiršl"
 
 #: main.cpp:66
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "yurchor@ukr.net"
+msgstr "nemhirsl@gmail.com"
 
 #: main.cpp:68
 #, kde-format
 msgid "Swiss-system chess tournament pairing engine."
-msgstr "Рушій поділу на пари для турнірів за швейцарською системою."
+msgstr "Motor za parovanje šahovskih turnira po švajcarskom sistemu."
 
 #: main.cpp:79
 #, kde-format
 msgctxt "Command line option description"
 msgid "Import Tournament Report File."
-msgstr "Імпортувати файл звіту щодо турніру."
+msgstr "Uvezi fajl izveštaja o turniru."
 
 #: main.cpp:82
 #, kde-format
 msgctxt "@info:shell Command line option description"
 msgid "Event to open."
-msgstr "Подія, яку слід відкрити."
+msgstr "Događaj za otvaranje."
 
 #: main.cpp:101
 #, kde-format
 msgctxt "@info:shell"
 msgid "Error: Can’t open an event when importing a TRF"
-msgstr "Помилка: не вдалося відкрити подію під час імпортування TRF"
+msgstr "Greška: ne mogu da otvorim događaj pri uvozu TRF fajla"
 
 #: main.cpp:110
 #, kde-format
 msgctxt "@info:shell"
 msgid "Error: Can’t open more than one event"
-msgstr "Помилка: не можна відкривати декілька подій одночасно"
+msgstr "Greška: ne mogu da otvorim više od jednog događaja"
 
 #: pairingmodel.cpp:108
 #, kde-format
 msgctxt "@title:column Board Number"
 msgid "Board"
-msgstr "Дошка"
+msgstr "tabla"
 
 #: pairingmodel.cpp:110
 #, kde-format
@@ -151,19 +150,19 @@ msgstr "№"
 #, kde-format
 msgctxt "@title:column Name of the White Player"
 msgid "White Player"
-msgstr "Гравець білими"
+msgstr "beli"
 
 #: pairingmodel.cpp:114
 #, kde-format
 msgctxt "@title:column Game Result"
 msgid "Result"
-msgstr "Результат"
+msgstr "rezultat"
 
 #: pairingmodel.cpp:116
 #, kde-format
 msgctxt "@title:column Name of the Black Player"
 msgid "Black Player"
-msgstr "Гравець чорними"
+msgstr "crni"
 
 #: pairingmodel.cpp:118
 #, kde-format
@@ -181,319 +180,319 @@ msgstr "№"
 #, kde-format
 msgctxt "@title:column Player Title"
 msgid "Title"
-msgstr "Титул"
+msgstr "titula"
 
 #: playersmodel.cpp:222 standingsmodel.cpp:98
 #, kde-format
 msgctxt "@title:column Player Name"
 msgid "Name"
-msgstr "Ім'я"
+msgstr "ime"
 
 #: playersmodel.cpp:224
 #, kde-format
 msgctxt "@title:column Player Rating"
 msgid "Rating"
-msgstr "Рейтинг"
+msgstr "rejting"
 
 #: playersmodel.cpp:226
 #, kde-format
 msgctxt "@title:column Player National Rating"
 msgid "National Rating"
-msgstr "Національний рейтинг"
+msgstr "nacionalni rejting"
 
 #: playersmodel.cpp:228
 #, kde-format
 msgctxt "@title:column"
 msgid "Player ID"
-msgstr "ІД гравця"
+msgstr "identifikator igrača"
 
 #: playersmodel.cpp:230
 #, kde-format
 msgctxt "@title:column Player National ID"
 msgid "National ID"
-msgstr "Національний ідентифікатор"
+msgstr "nacionalni identifikator"
 
 #: playersmodel.cpp:232
 #, kde-format
 msgctxt "@title:column"
 msgid "Birth date"
-msgstr "Дата народження"
+msgstr "datum rođenja"
 
 #: playersmodel.cpp:234
 #, kde-format
 msgctxt "@title:column Player Federation"
 msgid "Federation"
-msgstr "Федерація"
+msgstr "federacija"
 
 #: playersmodel.cpp:236
 #, kde-format
 msgctxt "@title:column Player Origin"
 msgid "Origin"
-msgstr "Походження"
+msgstr "poreklo"
 
 #: playersmodel.cpp:238
 #, kde-format
 msgctxt "@title:column Player Gender"
 msgid "Gender"
-msgstr "Стать"
+msgstr "pol"
 
 #: qml/ActionCollection.qml:12 qml/components/MenuBar.qml:30
 msgctxt "@action:menu"
 msgid "File"
-msgstr "Файл"
+msgstr "Fajl"
 
 #: qml/ActionCollection.qml:17
 msgctxt "@action:inmenu"
 msgid "New tournament…"
-msgstr "Новий турнір…"
+msgstr "Novi turnir…"
 
 #: qml/ActionCollection.qml:32
 msgctxt "@action:inmenu"
 msgid "Import tournament report…"
-msgstr "Імпортувати звіт щодо турніру…"
+msgstr "Uvezi izveštaj o turniru…"
 
 #: qml/ActionCollection.qml:39
 msgctxt "@action:inmenu"
 msgid "Export tournament report…"
-msgstr "Експортувати звіт щодо турніру…"
+msgstr "Izvezi izveštaj o turniru…"
 
 #: qml/ActionCollection.qml:49 qml/components/MenuBar.qml:120
 msgctxt "@action:menu"
 msgid "Tournament"
-msgstr "Турнір"
+msgstr "Turnir"
 
 #: qml/ActionCollection.qml:54
 msgctxt "@action:intoolbar"
 msgid "Add Player…"
-msgstr "Додати гравця…"
+msgstr "Dodaj igrača…"
 
 #: qml/ActionCollection.qml:61
 msgctxt "@action:intoolbar"
 msgid "Print…"
-msgstr "Надрукувати…"
+msgstr "Štampaj…"
 
 #: qml/ActionCollection.qml:68
 msgctxt "@action Update players ratings"
 msgid "Update ratings…"
-msgstr "Оновити рейтинги…"
+msgstr "Ažuriraj rejtinge…"
 
 #: qml/ActionCollection.qml:74
 msgctxt "@action:menu"
 msgid "Pairings"
-msgstr "Поділ на пари"
+msgstr "Parovi"
 
 #: qml/ActionCollection.qml:78
 msgctxt "@option:check"
 msgid "Hide finished games"
-msgstr "Приховати завершені ігри"
+msgstr "Sakrij završene partije"
 
 #: qml/ActionCollection.qml:85 qml/components/MenuBar.qml:154
 msgctxt "@action:menu"
 msgid "Help"
-msgstr "Довідка"
+msgstr "Pomoć"
 
 #: qml/AddPlayerDialog.qml:19
 msgctxt "@title:window"
 msgid "Add player"
-msgstr "Додавання гравця"
+msgstr "Dodavanje igrača"
 
 #: qml/AddPlayerDialog.qml:48
 msgctxt "@label:textbox"
 msgid "Title"
-msgstr "Звертання"
+msgstr "Titula"
 
 #: qml/AddPlayerDialog.qml:55
 msgctxt "@label:textbox"
 msgid "Name"
-msgstr "Ім'я"
+msgstr "Ime"
 
 #: qml/AddPlayerDialog.qml:96
 msgctxt "@label:textbox"
 msgid "Rating"
-msgstr "Рейтинг"
+msgstr "Rejting"
 
 #: qml/AddPlayerDialog.qml:103
 msgctxt "@label:textbox"
 msgid "National rating"
-msgstr "Національний рейтинг"
+msgstr "Nacionalni rejting"
 
 #: qml/AddPlayerDialog.qml:110
 msgctxt "@label:textbox"
 msgid "Player ID"
-msgstr "ІД гравця"
+msgstr "Identifikator igrača"
 
 #: qml/AddPlayerDialog.qml:111 qml/AddPlayerDialog.qml:117
 #: qml/AddPlayerDialog.qml:123 qml/AddPlayerDialog.qml:129
 #: qml/AddPlayerDialog.qml:135 qml/AddPlayerDialog.qml:141
 msgid "Optional"
-msgstr "Необов'язкове"
+msgstr "Opciono"
 
 #: qml/AddPlayerDialog.qml:116
 msgctxt "@label:textbox Player National ID"
 msgid "National ID"
-msgstr "Національний ідентифікатор"
+msgstr "Nacionalni identifikator"
 
 #: qml/AddPlayerDialog.qml:122
 msgctxt "@label:textbox"
 msgid "Birth date"
-msgstr "Дата народження"
+msgstr "Datum rođenja"
 
 #: qml/AddPlayerDialog.qml:128 tournament/qml/SettingsInformationPage.qml:45
 msgctxt "@label:textbox"
 msgid "Federation"
-msgstr "Федерація"
+msgstr "Federacija"
 
 #: qml/AddPlayerDialog.qml:134
 msgctxt "@label:textbox"
 msgid "Origin"
-msgstr "Походження"
+msgstr "Poreklo"
 
 #: qml/AddPlayerDialog.qml:140
 msgctxt "@label:textbox Player Gender"
 msgid "Gender"
-msgstr "Стать"
+msgstr "Pol"
 
 #: qml/components/ArbiterDelegate.qml:34
 msgctxt "@item:inlistbox Chief Arbiter"
 msgid "Chief"
-msgstr "Головний суддя"
+msgstr "glavni sudija"
 
 #: qml/components/ArbiterDelegate.qml:38
 msgctxt "@item:inlistbox Deputy Chief Arbiter"
 msgid "Deputy Chief"
-msgstr "Заступник головного судді"
+msgstr "zamenik glavnog sudije"
 
 #: qml/components/ArbiterDelegate.qml:42
 msgctxt "@item:inlistbox"
 msgid "Arbiter"
-msgstr "Суддя"
+msgstr "sudija"
 
 #: qml/components/ArbiterDelegate.qml:53
 msgctxt "@info:placeholder Arbiter's Title"
 msgid "Title"
-msgstr "Титул"
+msgstr "Titula"
 
 #: qml/components/ArbiterDelegate.qml:60
 msgctxt "@info:placeholder Arbiter's Name"
 msgid "Name"
-msgstr "Ім'я"
+msgstr "Ime"
 
 #: qml/components/ArbiterDelegate.qml:67
 msgctxt "@info:placeholder Arbiter's ID"
 msgid "ID"
-msgstr "Ід."
+msgstr "Identifikator"
 
 #: qml/components/ArbiterDelegate.qml:72 qml/components/ArbiterDelegate.qml:78
 msgctxt "@action:button"
 msgid "Delete Arbiter"
-msgstr "Вилучити суддю"
+msgstr "Obriši sudiju"
 
 #: qml/components/MenuBar.qml:50 qml/components/MenuBar.qml:65
 #: qml/NewTournamentDialog.qml:51
 msgctxt "@label:listbox"
 msgid "Chessament event (*.chessament)"
-msgstr "подія Chessament (*.chessament)"
+msgstr "Događaj Chessament (*.chessament)"
 
 #: qml/components/MenuBar.qml:78 qml/components/MenuBar.qml:93
 msgctxt "@label:listbox"
 msgid "TRF files (*.trf *.txt)"
-msgstr "файли TRF (*.trf *.txt)"
+msgstr "TRF fajlovi (*.trf *.txt)"
 
 #: qml/components/MenuBar.qml:111
 msgctxt "@action:menu"
 msgid "View"
-msgstr "Переглянути"
+msgstr "Prikaz"
 
 #: qml/components/MenuBar.qml:134
 msgctxt "@action:menu"
 msgid "Settings"
-msgstr "Параметри"
+msgstr "Podešavanje"
 
 #: qml/components/TiebreakDelegate.qml:33
 #: qml/components/TiebreakDelegate.qml:38
 msgctxt "@action:button"
 msgid "Configure tiebreak"
-msgstr "Налаштувати тай-брейк"
+msgstr "Podesi dodatni kriterijum"
 
 #: qml/components/TiebreakDelegate.qml:54
 msgctxt "@action:button Move tiebreak up"
 msgid "Move Up"
-msgstr "Пересунути вище"
+msgstr "Pomeri nagore"
 
 #: qml/components/TiebreakDelegate.qml:59
 msgctxt "@action:button Move tiebreak up"
 msgid "Move up"
-msgstr "Пересунути вище"
+msgstr "Pomeri nagore"
 
 #: qml/components/TiebreakDelegate.qml:66
 msgctxt "@action:button Move tiebreak down"
 msgid "Move Down"
-msgstr "Пересунути нижче"
+msgstr "Pomeri nadole"
 
 #: qml/components/TiebreakDelegate.qml:71
 msgctxt "@action:button Move tiebreak down"
 msgid "Move down"
-msgstr "Пересунути нижче"
+msgstr "Pomeri nadole"
 
 #: qml/components/TiebreakDelegate.qml:78
 msgctxt "@action:button"
 msgid "Delete Tiebreak"
-msgstr "Вилучити тай-брейк"
+msgstr "Obriši dodatni kriterijum"
 
 #: qml/components/TiebreakDelegate.qml:83
 msgctxt "@action:button"
 msgid "Delete tiebreak"
-msgstr "Вилучити тай-брейк"
+msgstr "Obriši dodatni kriterijum"
 
 #: qml/components/TimeControlDelegate.qml:37
 msgctxt "@label:textbox Number of moves"
 msgid "Moves"
-msgstr "Ходи"
+msgstr "Broj poteza"
 
 #: qml/components/TimeControlDelegate.qml:51
 msgctxt "@label:textbox Time control period time"
 msgid "Time (minutes)"
-msgstr "Час (у хвилинах)"
+msgstr "Vreme (minuti)"
 
 #: qml/components/TimeControlDelegate.qml:65
 msgctxt "@label:textbox Time control period increment (per second)"
 msgid "Increment (seconds)"
-msgstr "Приріст (у секундах)"
+msgstr "Uvećanje (sekunde)"
 
 #: qml/components/TimeControlDelegate.qml:77
 msgctxt "@action:button Delete time control period"
 msgid "Delete"
-msgstr "Вилучити"
+msgstr "Obriši"
 
 #: qml/DeletePairingsDialog.qml:17
 msgctxt "@title"
 msgid "Remove pairings"
-msgstr "Вилучити поділи на пари"
+msgstr "Uklanjanje parova"
 
 #: qml/DeletePairingsDialog.qml:25
 msgctxt "@action:check"
 msgid "Keep byes"
-msgstr "Зберегти заміни"
+msgstr "Zadrži slobodna kola"
 
 #: qml/DeletePairingsDialog.qml:33
 msgctxt "@action:button Remove pairings"
 msgid "Remove"
-msgstr "Вилучити"
+msgstr "Ukloni"
 
 #: qml/DeletePlayerDialog.qml:19
 msgctxt "@title"
 msgid "Delete Player"
-msgstr "Вилучення гравця"
+msgstr "Brisanje igrača"
 
 #: qml/DeletePlayerDialog.qml:20
 msgctxt "@label"
 msgid "Permanently delete player “%1”?"
-msgstr "Остаточно вилучити гравця «%1»?"
+msgstr "Trajno obrisati igrača „%1“?"
 
 #: qml/DeletePlayerDialog.qml:26
 msgctxt "@action:button Delete Player"
 msgid "Delete"
-msgstr "Вилучити"
+msgstr "Obriši"
 
 #: qml/Main.qml:17
 msgctxt "@title:window"
@@ -508,247 +507,247 @@ msgstr "Chessament"
 #: qml/Main.qml:51 settings/AddRatingListDialog.qml:59
 msgctxt "@title"
 msgid "Error"
-msgstr "Помилка"
+msgstr "Greška"
 
 #: qml/NewTournamentDialog.qml:17
 msgctxt "@title"
 msgid "New tournament"
-msgstr "Новий турнір"
+msgstr "Novi turnir"
 
 #: qml/NewTournamentDialog.qml:30
 msgctxt "@label:textbox tournament name"
 msgid "Name:"
-msgstr "Ім'я:"
+msgstr "Ime:"
 
 #: qml/NewTournamentDialog.qml:34
 msgctxt "@label"
 msgid "Format"
-msgstr "Формат"
+msgstr "Format"
 
 #: qml/NewTournamentDialog.qml:35
 msgctxt "@label"
 msgid "Swiss system"
-msgstr "Швейцарська система"
+msgstr "Švajcarski sistem"
 
 #: qml/NewTournamentDialog.qml:40
 msgctxt "@label"
 msgid "Number of rounds"
-msgstr "Кількість раундів"
+msgstr "Broj kola"
 
 #: qml/PairingsPage.qml:52 qml/PlayersPage.qml:48 qml/StandingsPage.qml:55
 msgctxt "@label:listbox"
 msgid "PDF document (*.pdf)"
-msgstr "документ PDF (*.pdf)"
+msgstr "PDF dokument (*.pdf)"
 
 #: qml/PairingsPage.qml:77 qml/PlayersPage.qml:142 qml/StandingsPage.qml:70
 msgctxt "@action:intoolbar"
 msgid "Export as PDF…"
-msgstr "Експортувати до PDF…"
+msgstr "Izvezi kao PDF…"
 
 #: qml/PairingsPage.qml:87 qml/PairingsPage.qml:92
 msgid "Round %1"
 msgid_plural "Round %1"
-msgstr[0] "Раунд %1"
-msgstr[1] "Раунд %1"
-msgstr[2] "Раунд %1"
-msgstr[3] "Раунд %1"
+msgstr[0] "Kolo %1"
+msgstr[1] "Kolo %1"
+msgstr[2] "Kolo %1"
+msgstr[3] "Kolo %1"
 
 #: qml/PairingsPage.qml:104
 msgctxt "@action:intoolbar"
 msgid "Remove pairings of this and following rounds…"
-msgstr "Вилучити поділ на пари для цього і наступного раундів…"
+msgstr "Ukloni parove ovog i sledećih kola…"
 
 #: qml/PairingsPage.qml:118
 msgctxt "@info"
 msgid "The tournament hasn’t started yet."
-msgstr "Турнір ще не розпочато."
+msgstr "Turnir još nije počeo."
 
 #: qml/PairingsPage.qml:118
 msgctxt "@info"
 msgid "Round %1 has finished."
 msgid_plural "Round %1 has finished."
-msgstr[0] "Раунд %1 завершено."
-msgstr[1] "Раунд %1 завершено."
-msgstr[2] "Раунд %1 завершено."
-msgstr[3] "Раунд %1 завершено."
+msgstr[0] "%1. kolo je završeno."
+msgstr[1] "%1. kolo je završeno."
+msgstr[2] "%1. kolo je završeno."
+msgstr[3] "%1. kolo je završeno."
 
 #: qml/PairingsPage.qml:122
 msgctxt "@action:button"
 msgid "Pair Round %1…"
 msgid_plural "Pair Round %1…"
-msgstr[0] "Поділ на пари раунду %1…"
-msgstr[1] "Поділ на пари раунду %1…"
-msgstr[2] "Поділ на пари раунду %1…"
-msgstr[3] "Поділ на пари раунду %1…"
+msgstr[0] "Upari %1. kolo…"
+msgstr[1] "Upari %1. kolo…"
+msgstr[2] "Upari %1. kolo…"
+msgstr[3] "Upari %1. kolo…"
 
 #: qml/PairingsPage.qml:166
 msgctxt "@info:placeholder"
 msgid "No pairings for Round %1 yet"
 msgid_plural "No pairings for Round %1 yet"
-msgstr[0] "Поділу на пари для раунду %1 ще немає"
-msgstr[1] "Поділу на пари для раунду %1 ще немає"
-msgstr[2] "Поділу на пари для раунду %1 ще немає"
-msgstr[3] "Поділу на пари для раунду %1 ще немає"
+msgstr[0] "Još nema parova za %1. kolo"
+msgstr[1] "Još nema parova za %1. kolo"
+msgstr[2] "Još nema parova za %1. kolo"
+msgstr[3] "Još nema parova za %1. kolo"
 
 #: qml/PairingsPage.qml:168
 msgctxt "@info:placeholder"
 msgid "All games of Round %1 have finished"
 msgid_plural "All games of Round %1 have finished"
-msgstr[0] "Усі ігри раунду %1 завершено"
-msgstr[1] "Усі ігри раунду %1 завершено"
-msgstr[2] "Усі ігри раунду %1 завершено"
-msgstr[3] "Усі ігри раунду %1 завершено"
+msgstr[0] "Sve partije %1. kola su završene"
+msgstr[1] "Sve partije %1. kola su završene"
+msgstr[2] "Sve partije %1. kola su završene"
+msgstr[3] "Sve partije %1. kola su završene"
 
 #: qml/PairRoundDialog.qml:21
 msgctxt "@title %1 is a number >= 1"
 msgid "Pair Round %1"
 msgid_plural "Pair Round %1"
-msgstr[0] "Поділ на пари раунду %1"
-msgstr[1] "Поділ на пари раунду %1"
-msgstr[2] "Поділ на пари раунду %1"
-msgstr[3] "Поділ на пари раунду %1"
+msgstr[0] "Parovanje %1. kola"
+msgstr[1] "Parovanje %1. kola"
+msgstr[2] "Parovanje %1. kola"
+msgstr[3] "Parovanje %1. kola"
 
 #: qml/PairRoundDialog.qml:29
 msgctxt "@info"
 msgid "All players will be paired."
-msgstr "Для усіх гравців буде знайдено пари."
+msgstr "Svi igrači će biti upareni."
 
 #: qml/PairRoundDialog.qml:29
 msgctxt "@info %1 is a number"
 msgid "The following player won’t be paired: %2"
 msgid_plural "The following %1 players won’t be paired: %2"
-msgstr[0] "Не буде знайдено пари для такого %1 гравця: %2"
-msgstr[1] "Не буде знайдено пари для таких %1 гравців: %2"
-msgstr[2] "Не буде знайдено пари для таких %1 гравців: %2"
-msgstr[3] "Не буде знайдено пари для такого гравця: %2"
+msgstr[0] "Sledeći %1 igrač neće biti uparen: %2"
+msgstr[1] "Sledeća %1 igrača neće biti uparena: %2"
+msgstr[2] "Sledećih %1 igrača neće biti upareno: %2"
+msgstr[3] "Sledeći igrač neće biti uparen: %2"
 
 #: qml/PairRoundDialog.qml:39
 msgctxt "@option:check"
 msgid "Sort players"
-msgstr "Упорядкування гравців"
+msgstr "Poređaj igrače"
 
 #: qml/PairRoundDialog.qml:46
 msgctxt "@label:listbox"
 msgid "First player color:"
-msgstr "Колір першого гравця:"
+msgstr "Figure prvog igrača:"
 
 #: qml/PairRoundDialog.qml:54
 msgctxt "@item:inlistbox As in 'Random color'"
 msgid "Random"
-msgstr "Випадковий"
+msgstr "nasumične"
 
 #: qml/PairRoundDialog.qml:58 tournament/pairing.h:78
 #, kde-format
 msgctxt "@item:inlistbox As in 'White pieces'"
 msgid "White"
-msgstr "Білий"
+msgstr "bele"
 
 #: qml/PairRoundDialog.qml:62 tournament/pairing.h:80
 #, kde-format
 msgctxt "@item:inlistbox As in 'Black pieces'"
 msgid "Black"
-msgstr "Чорний"
+msgstr "crne"
 
 #: qml/player/PlayerDetails.qml:17
 msgctxt "@title:window"
 msgid "Details of player “%1”"
-msgstr "Параметри гравця «%1»"
+msgstr "Detalji igrača „%1“"
 
 #: qml/player/PlayerDetails.qml:22
 msgctxt "@action:button"
 msgid "Pairings"
-msgstr "Поділ на пари"
+msgstr "Parovi"
 
 #: qml/player/PlayerPairingsPage.qml:21
 msgctxt "@title"
 msgid "Pairings"
-msgstr "Поділ на пари"
+msgstr "Parovi"
 
 #: qml/player/PlayerPairingsPage.qml:26
 msgctxt ""
 "@action:button Removes all the voluntary byes of the player for the upcoming "
 "rounds"
 msgid "Reinstate Player"
-msgstr "Відновити гравця"
+msgstr "Vrati igrača"
 
 #: qml/player/PlayerPairingsPage.qml:35
 msgctxt ""
 "@action:button Sets a zero-point bye for all remaining rounds for the player"
 msgid "Retire Player"
-msgstr "Виключити гравця"
+msgstr "Povuci igrača"
 
 #: qml/player/PlayerPairingsPage.qml:55
 msgctxt "@item:inlistbox Available to play"
 msgid "Available"
-msgstr "Доступний"
+msgstr "dostupan"
 
 #: qml/player/PlayerPairingsPage.qml:92
 #: tournament/qml/SettingsFormatPage.qml:45
 msgctxt "@title:group"
 msgid "Pairings"
-msgstr "Поділ на пари"
+msgstr "Parovi"
 
 #: qml/player/PlayerPairingsPage.qml:117
 msgctxt "@info:label"
 msgid "Round %1"
 msgid_plural "Round %1"
-msgstr[0] "Раунд %1"
-msgstr[1] "Раунд %1"
-msgstr[2] "Раунд %1"
-msgstr[3] "Раунд %1"
+msgstr[0] "Kolo %1"
+msgstr[1] "Kolo %1"
+msgstr[2] "Kolo %1"
+msgstr[3] "Kolo %1"
 
 #: qml/PlayersPage.qml:121
 msgctxt "@action:intoolbar Open player details"
 msgid "Details…"
-msgstr "Подробиці…"
+msgstr "Detalji…"
 
 #: qml/PlayersPage.qml:127
 msgctxt "@action:intoolbar"
 msgid "Sort Players…"
-msgstr "Упорядкувати гравців…"
+msgstr "Poređaj igrače…"
 
 #: qml/PlayersPage.qml:158
 msgctxt "@action:inmenu"
 msgid "Open Player Details"
-msgstr "Відкрити параметри гравця"
+msgstr "Otvori detalje igrača"
 
 #: qml/PlayersPage.qml:164
 msgctxt "@action:inmenu"
 msgid "Delete Player…"
-msgstr "Вилучити гравця…"
+msgstr "Obriši igrača…"
 
 #: qml/PlayersPage.qml:184
 msgctxt "@info:placeholder"
 msgid "No players found"
-msgstr "Не знайдено жодного гравця"
+msgstr "Nema nađenih igrača"
 
 #: qml/PlayersPage.qml:184
 msgctxt "@info:placeholder"
 msgid "No players yet"
-msgstr "Ще немає жодного гравця"
+msgstr "Još nema igrača"
 
 #: qml/PlayersPage.qml:188
 msgctxt "@action:button"
 msgid "Add Player…"
-msgstr "Додати гравця…"
+msgstr "Dodaj igrača…"
 
 #: qml/PlayersPage.qml:207
 msgctxt "@info:status Number of players"
 msgid "1 player"
 msgid_plural "%1 players"
-msgstr[0] "%1 гравець"
-msgstr[1] "%1 гравці"
-msgstr[2] "%1 гравців"
-msgstr[3] "%1 гравець"
+msgstr[0] "%1 igrač"
+msgstr[1] "%1 igrača"
+msgstr[2] "%1 igrača"
+msgstr[3] "%1 igrač"
 
 #: qml/PlayersPage.qml:208
 msgctxt "@info:status Number of rated players"
 msgid "1 rated"
 msgid_plural "%1 rated"
-msgstr[0] "%1 з рейтингом"
-msgstr[1] "%1 з рейтингом"
-msgstr[2] "%1 з рейтингом"
-msgstr[3] "%1 з рейтингом"
+msgstr[0] "%1 sa rejtingom"
+msgstr[1] "%1 sa rejtingom"
+msgstr[2] "%1 sa rejtingom"
+msgstr[3] "%1 sa rejtingom"
 
 #: qml/PlayersPage.qml:210
 msgctxt "@info:status Total number of players (Number of players rated)"
@@ -758,29 +757,29 @@ msgstr "%1 (%2)"
 #: qml/ResultsFooter.qml:103
 msgctxt "@action:intoolbar Other game results"
 msgid "Other"
-msgstr "Інше"
+msgstr "Drugo"
 
 #: qml/Sidebar.qml:49
 msgid "Players"
-msgstr "Гравці"
+msgstr "Igrači"
 
 #: qml/Sidebar.qml:57
 msgid "Pairings"
-msgstr "Поділ на пари"
+msgstr "Parovi"
 
 #: qml/Sidebar.qml:65
 msgid "Standings"
-msgstr "Результати"
+msgstr "Plasman"
 
 #: qml/Sidebar.qml:84
 msgctxt "@action:button"
 msgid "Settings"
-msgstr "Параметри"
+msgstr "Postavke"
 
 #: qml/SortPlayersDialog.qml:18
 msgctxt "@title"
 msgid "Sort Players"
-msgstr "Упорядкування гравців"
+msgstr "Ređanje igrača"
 
 #: qml/SortPlayersDialog.qml:27
 msgctxt "@info"
@@ -788,274 +787,274 @@ msgid ""
 "Changing the initial ranking after the fourth round has been paired is not "
 "allowed in official tournaments."
 msgstr ""
-"Зміну початкових рангів після розподілу пар у четвертому раунді в офіційних "
-"турнірах заборонено."
+"Na zvaničnim turnirima nije dozvoljeno menjati početni poredak pošto je "
+"upareno četvrto kolo."
 
 #: qml/StandingsPage.qml:83 qml/StandingsPage.qml:93
 msgctxt "@item:inlistbox"
 msgid "Final Standings"
-msgstr "Остаточні результати"
+msgstr "konačan plasman"
 
 #: qml/StandingsPage.qml:85 qml/StandingsPage.qml:95
 msgctxt "@item:inlistbox Standings After Round %1"
 msgid "After Round %1"
 msgid_plural "After Round %1"
-msgstr[0] "Після раунду %1"
-msgstr[1] "Після раунду %1"
-msgstr[2] "Після раунду %1"
-msgstr[3] "Після раунду %1"
+msgstr[0] "posle %1. kola"
+msgstr[1] "posle %1. kola"
+msgstr[2] "posle %1. kola"
+msgstr[3] "posle %1. kola"
 
 #: qml/StandingsPage.qml:142
 msgctxt "@info:placeholder"
 msgid "No standings yet"
-msgstr "Місця ще не розподілено"
+msgstr "Još nema plasmana"
 
 #: qml/UpdateRatingsDialog.qml:18
 msgctxt "@title"
 msgid "Update Ratings"
-msgstr "Оновити рейтинги"
+msgstr "Ažuriranje rejtinga"
 
 #: qml/UpdateRatingsDialog.qml:26
 msgctxt "@info"
 msgid "No rating lists available."
-msgstr "Немає доступних рейтингових списків."
+msgstr "Nema dostupnih spiskova rejtinga."
 
 #: qml/UpdateRatingsDialog.qml:34
 msgctxt "@label:listbox"
 msgid "Choose a rating list:"
-msgstr "Вибрати рейтинговий список:"
+msgstr "Izaberite spisak rejtinga:"
 
 #: qml/UpdateRatingsDialog.qml:45
 msgctxt "@action:button Update players ratings"
 msgid "Update"
-msgstr "Оновити"
+msgstr "Ažuriraj"
 
 #: qml/WelcomePage.qml:19
 msgctxt "@title"
 msgid "Welcome to Chessament"
-msgstr "Вітаємо у Chessament"
+msgstr "Dobro došli u Chessament"
 
 #: qml/WelcomePage.qml:20
 msgctxt "@info"
 msgid "Chessament is a chess tournament manager"
-msgstr "Chessament — програма для керування шаховими турнірами"
+msgstr "Chessament je menadžer šahovskih turnira"
 
 #: searchplayersmodel.cpp:41
 #, kde-format
 msgctxt "%1 is the player's rating"
 msgid "Rating: %1"
-msgstr "Рейтинг: %1"
+msgstr "Rejting: %1"
 
 #: searchplayersmodel.cpp:43
 #, kde-format
 msgctxt "%1 is the player's rating, %2 is the player's origin"
 msgid "Rating: %1 · %2"
-msgstr "Рейтинг: %1 · %2"
+msgstr "Rejting: %1 · %2"
 
 #: settings/AccountsPage.qml:19
 msgctxt "@title"
 msgid "Accounts"
-msgstr "Облікові записи"
+msgstr "Nalozi"
 
 #: settings/AccountsPage.qml:22
 msgctxt "@title:group"
 msgid "Accounts"
-msgstr "Облікові записи"
+msgstr "Nalozi"
 
 #: settings/AccountsPage.qml:43
 msgctxt "@action:button"
 msgid "Logout"
-msgstr "Вийти"
+msgstr "Odjavi se"
 
 #: settings/AccountsPage.qml:54
 msgctxt "@action:button"
 msgid "Add Account"
-msgstr "Додати обліковий запис"
+msgstr "Dodaj nalog"
 
 #: settings/AddAccountDialog.qml:16
 msgctxt "@title"
 msgid "Add Account"
-msgstr "Додавання облікового запису"
+msgstr "Dodavanje naloga"
 
 #: settings/AddAccountDialog.qml:24
 msgctxt "@label:textbox"
 msgid "Server URL"
-msgstr "Адреса сервера"
+msgstr "URL servera"
 
 #: settings/AddAccountDialog.qml:35
 msgctxt "@action:button"
 msgid "Continue"
-msgstr "Продовжити"
+msgstr "Nastavi"
 
 #: settings/AddRatingListDialog.qml:62
 msgctxt "@title:window"
 msgid "Importing Rating List"
-msgstr "Імпортування рейтингового списку"
+msgstr "Uvoz spiska rejtinga"
 
 #: settings/AddRatingListDialog.qml:65
 msgctxt "@title:window"
 msgid "Rating List Imported"
-msgstr "Імпортовано рейтингові списки"
+msgstr "Spisak rejtinga je uvezen"
 
 #: settings/AddRatingListDialog.qml:67
 msgctxt "@title:window"
 msgid "Add Rating List"
-msgstr "Додати список рейтингів"
+msgstr "Dodavanje spiska rejtinga"
 
 #: settings/AddRatingListDialog.qml:86
 msgctxt "@label:listbox"
 msgid "All Supported Files (*.zip *.xls)"
-msgstr "усі підтримувані файли (*.zip *.xls)"
+msgstr "Svi podržani fajlovi (*.zip *.xls)"
 
 #: settings/AddRatingListDialog.qml:93
 msgctxt "@info:label"
 msgid "Name"
-msgstr "Ім'я"
+msgstr "Ime"
 
 #: settings/AddRatingListDialog.qml:98
 msgctxt "@info:label"
 msgid "Rating list file or URL"
-msgstr "Файл або адреса рейтингового списку"
+msgstr "Fajl ili URL spiska rejtinga"
 
 #: settings/AddRatingListDialog.qml:101
 msgctxt "@action:button"
 msgid "Select file"
-msgstr "Виберіть файл"
+msgstr "Izaberi fajl"
 
 #: settings/AddRatingListDialog.qml:143
 msgctxt "@action:button"
 msgid "Import"
-msgstr "Імпортувати"
+msgstr "Uvezi"
 
 #: settings/ChessamentConfigurationView.qml:19
 msgctxt "@action:button"
 msgid "General"
-msgstr "Загальне"
+msgstr "Opšte"
 
 #: settings/ChessamentConfigurationView.qml:25
 msgctxt "@action:button"
 msgid "Accounts"
-msgstr "Облікові записи"
+msgstr "Nalozi"
 
 #: settings/ChessamentConfigurationView.qml:32
 msgctxt "@action:button"
 msgid "Rating Lists"
-msgstr "Рейтингові списки"
+msgstr "Spiskovi rejtinga"
 
 #: settings/DeleteRatingListDialog.qml:24
 msgctxt "@title"
 msgid "Delete Rating List"
-msgstr "Вилучення рейтингового списку"
+msgstr "Brisanje spiska rejtinga"
 
 #: settings/DeleteRatingListDialog.qml:53
 msgctxt "@label"
 msgid "Permanently delete rating list “%1”?"
-msgstr "Остаточно вилучити рейтинговий список «%1»?"
+msgstr "Trajno obrisati spisak rejtinga „%1“?"
 
 #: settings/DeleteRatingListDialog.qml:62
 msgctxt "@action:button Delete Rating List"
 msgid "Delete"
-msgstr "Вилучити"
+msgstr "Obriši"
 
 #: settings/GeneralPage.qml:14
 msgctxt "@title"
 msgid "General"
-msgstr "Загальне"
+msgstr "Opšte"
 
 #: settings/GeneralPage.qml:17
 msgctxt "@title:group"
 msgid "General"
-msgstr "Загальне"
+msgstr "Opšte"
 
 #: settings/GeneralPage.qml:22
 msgctxt "@option:check"
 msgid "Automatically open exported PDF files"
-msgstr "Автоматично відкривати експортовані файли PDF"
+msgstr "Automatski otvori izvezene PDF fajlove"
 
 #: settings/GeneralPage.qml:32
 msgctxt "@title:group"
 msgid "Result Entry"
-msgstr "Запис результату"
+msgstr "Unos rezultata"
 
 #: settings/GeneralPage.qml:37
 msgctxt "@option:radio"
 msgid "Use 1-2-3 keys"
-msgstr "Використовувати клавіші 1-2-3"
+msgstr "Koristi tastere 1-2-3"
 
 #: settings/GeneralPage.qml:48
 msgctxt "@option:radio"
 msgid "Use 1-5-0 keys"
-msgstr "Використовувати клавіші 1-5-0"
+msgstr "Koristi tastere 1-5-0"
 
 #: settings/RatingListsPage.qml:19 settings/RatingListsPage.qml:22
 msgctxt "@title"
 msgid "Rating Lists"
-msgstr "Рейтингові списки"
+msgstr "Spiskovi rejtinga"
 
 #: settings/RatingListsPage.qml:27
 msgctxt "@info:status"
 msgid "No rating lists yet."
-msgstr "Рейтингових списків ще немає."
+msgstr "Još nema spiskova rejtinga."
 
 #: settings/RatingListsPage.qml:47
 msgctxt "@action:button"
 msgid "Delete Rating List"
-msgstr "Вилучити рейтинговий список"
+msgstr "Obriši spisak rejtinga"
 
 #: settings/RatingListsPage.qml:59
 msgctxt "@action:button"
 msgid "Delete rating list"
-msgstr "Вилучити рейтинговий список"
+msgstr "Obriši spisak rejtinga"
 
 #: settings/RatingListsPage.qml:69
 msgctxt "@action:button"
 msgid "Add rating list"
-msgstr "Додати рейтинговий список"
+msgstr "Dodaj spisak rejtinga"
 
 #: standingsmodel.cpp:92
 #, kde-format
 msgctxt "@title:column Player Ranking"
 msgid "Rank"
-msgstr "Ранг"
+msgstr "mesto"
 
 #: timecontrolmodel.cpp:38
 #, kde-format
 msgctxt "@info"
 msgid "The time control is Blitz."
-msgstr "Часовим регламентом є «Бліц»."
+msgstr "Vremenska kontrola je blic."
 
 #: timecontrolmodel.cpp:40
 #, kde-format
 msgctxt "@info"
 msgid "The time control is Rapid."
-msgstr "Часовим регламентом є «Швидкі»."
+msgstr "Vremenska kontrola je rapid."
 
 #: timecontrolmodel.cpp:42
 #, kde-format
 msgctxt "@info"
 msgid "The time control is Classical."
-msgstr "Часовим регламентом є «Класичні»."
+msgstr "Vremenska kontrola je klasična."
 
 #: tournament/event.cpp:166 tournament/event.cpp:175
 #, kde-kuit-format
 msgctxt "@info"
 msgid "The file is not a <application>Chessament</application> event."
-msgstr "Файл не є файлом події <application>Chessament</application>."
+msgstr "Fajl nije događaj <application>Chessament</application>."
 
 #: tournament/federations.h:175
 msgctxt "FIDE Federation"
 msgid "Scotland"
-msgstr "Шотландська"
+msgstr "Škotska"
 
 #: tournament/federations.h:203
 msgctxt "FIDE Federation"
 msgid "Chinese Taipei"
-msgstr "Китайська (Тайвань)"
+msgstr "Kineski Tajpej"
 
 #: tournament/federations.h:217
 msgctxt "FIDE Federation"
 msgid "Wales"
-msgstr "Валійська"
+msgstr "Vels"
 
 #: tournament/pairing.h:277 tournament/pairing.h:293 tournament/pairing.h:297
 #, kde-format
@@ -1081,7 +1080,7 @@ msgctxt ""
 "@item Game result. %1 is the points obtained, but the game is unrated. The "
 "'U' is the initial for 'Unrated'"
 msgid "%1U"
-msgstr "%1U"
+msgstr "%1N"
 
 #: tournament/pairing.h:290 tournament/pairing.h:294
 #, kde-format
@@ -1089,111 +1088,110 @@ msgctxt ""
 "@item Game result: %1 is the points obtained, but the game is unrated. The "
 "'U' is the initial for 'Unrated'"
 msgid "%1U"
-msgstr "%1U"
+msgstr "%1N"
 
 #: tournament/pairing.h:298 tournament/pairing.h:302 tournament/pairing.h:306
 #, kde-format
 msgctxt "@item Game result, %1 is the points awarded for the bye"
 msgid "Bye (%1)"
-msgstr "Перерва (%1)"
+msgstr "slobodan (%1)"
 
 #: tournament/pairing.h:309
 #, kde-format
 msgctxt "@item Game result: pairing-allocated bye. Keep it short"
 msgid "Bye (Pairing)"
-msgstr "Перерва (поділ на пари)"
+msgstr "slobodan (parovanje)"
 
 #: tournament/pairingengine.cpp:29
 #, kde-format
 msgctxt "bbpPairings is the name of a program, should not be translated"
 msgid "The pairing engine bbpPairings could not be found. Is it installed?"
-msgstr ""
-"Не вдалося знайти рушій поділу на пари bbpPairings. Чи встановлено цей рушій?"
+msgstr "Ne mogu da nađem motor za parovanje bbpPairings. Da li je instaliran?"
 
 #: tournament/pairingengine.cpp:37
 #, kde-format
 msgid "Could not create temporary file."
-msgstr "Не вдалося створити тимчасовий файл."
+msgstr "Ne mogu da napravim privremeni fajl."
 
 #: tournament/pairingengine.cpp:64
 #, kde-format
 msgctxt "@info"
 msgid "No valid pairing exists."
-msgstr "Немає коректного поділу на пари."
+msgstr "Ne postoji ispravno parovanje."
 
 #: tournament/pairingengine.cpp:67
 #, kde-format
 msgctxt "bbpPairings is the name of a program, should not be translated"
 msgid "bbpPairings terminated with a non zero exit code: %1"
-msgstr "Роботу bbpPairings перервано з ненульовим кодом виходу: %1"
+msgstr "bbpPairings se okončao sa izlaznim kodom različitim od nule: %1"
 
 #: tournament/pairingengine.cpp:85 tournament/trf/reader.cpp:243
 #, kde-format
 msgid "Invalid pairing “%1”."
-msgstr "Некоректний розподіл на пари «%1»."
+msgstr "Loš par „%1“."
 
 #: tournament/pairingengine.cpp:91 tournament/pairingengine.cpp:95
 #: tournament/pairingengine.cpp:99 tournament/pairingengine.cpp:103
 #: tournament/trf/reader.cpp:256
 #, kde-format
 msgid "Invalid player “%1” on pairing “%2”."
-msgstr "Некоректний гравець «%1» у поділі на пари «%2»."
+msgstr "Loš igrač „%1“ u paru „%2“."
 
 #: tournament/qml/AddTiebreakDialog.qml:22
 msgctxt "@title:window"
 msgid "Add Tiebreak"
-msgstr "Додавання тай-брейка"
+msgstr "Dodavanje dodatnog kriterijuma"
 
 #: tournament/qml/SettingsCalendarPage.qml:17
 msgctxt "@title"
 msgid "Calendar"
-msgstr "Календар"
+msgstr "Kalendar"
 
 #: tournament/qml/SettingsCalendarPage.qml:32
 msgctxt "round number"
 msgid "Round %1"
 msgid_plural "Round %1"
-msgstr[0] "Раунд %1"
-msgstr[1] "Раунд %1"
-msgstr[2] "Раунд %1"
-msgstr[3] "Раунд %1"
+msgstr[0] "Kolo %1"
+msgstr[1] "Kolo %1"
+msgstr[2] "Kolo %1"
+msgstr[3] "Kolo %1"
 
 #: tournament/qml/SettingsDialog.qml:19
 msgctxt "@action:button"
 msgid "Information"
-msgstr "Відомості"
+msgstr "Podaci"
 
 #: tournament/qml/SettingsDialog.qml:30
 msgctxt "@action:button"
 msgid "Format"
-msgstr "Формат"
+msgstr "Format"
 
 #: tournament/qml/SettingsDialog.qml:41
 msgctxt "@action:button"
 msgid "Calendar"
-msgstr "Календар"
+msgstr "Kalendar"
 
 #: tournament/qml/SettingsFormatPage.qml:20
 msgctxt "@title"
 msgid "Format"
-msgstr "Формат"
+msgstr "Format"
 
 #: tournament/qml/SettingsFormatPage.qml:23
 msgctxt "@title:group"
 msgid "Format"
-msgstr "Формат"
+msgstr "Format"
 
 #: tournament/qml/SettingsFormatPage.qml:27
 msgid "Swiss system"
-msgstr "Швейцарська система"
+msgstr "Švajcarski sistem"
 
 #: tournament/qml/SettingsFormatPage.qml:31
 msgid "Rounds"
-msgstr "Раунди"
+msgstr "Kola"
 
 #: tournament/qml/SettingsFormatPage.qml:49
 msgid "Pairing engine"
-msgstr "Рушій розподілу на пари"
+msgstr "Motor za parovanje"
 
 #: tournament/qml/SettingsFormatPage.qml:50
 msgid "bbpPairings"
@@ -1202,91 +1200,91 @@ msgstr "bbpPairings"
 #: tournament/qml/SettingsFormatPage.qml:56
 msgctxt "@title:group"
 msgid "Time Control"
-msgstr "Керування часом"
+msgstr "Vremenska kontrola"
 
 #: tournament/qml/SettingsFormatPage.qml:60
 msgctxt "@action:button Add time control period"
 msgid "Add Period"
-msgstr "Додати період"
+msgstr "Dodaj period"
 
 #: tournament/qml/SettingsFormatPage.qml:89
 msgctxt "@title:group"
 msgid "Tiebreaks"
-msgstr "Тай-брейки"
+msgstr "Dodatni kriterijumi"
 
 #: tournament/qml/SettingsFormatPage.qml:114
 msgctxt "@action:button"
 msgid "Add Tiebreak"
-msgstr "Додати тай-брейк"
+msgstr "Dodaj dodatni kriterijum"
 
 #: tournament/qml/SettingsInformationPage.qml:19
 msgctxt "@title"
 msgid "Information"
-msgstr "Відомості"
+msgstr "Podaci"
 
 #: tournament/qml/SettingsInformationPage.qml:22
 msgctxt "@title:group"
 msgid "Basic details"
-msgstr "Основні параметри"
+msgstr "Osnovni podaci"
 
 #: tournament/qml/SettingsInformationPage.qml:27
 msgctxt "@label:textbox"
 msgid "Tournament name"
-msgstr "Назва турніру"
+msgstr "Ime turnira"
 
 #: tournament/qml/SettingsInformationPage.qml:36
 msgctxt "@label:textbox"
 msgid "City"
-msgstr "Місто"
+msgstr "Grad"
 
 #: tournament/qml/SettingsInformationPage.qml:54
 msgctxt "@title:group"
 msgid "Arbiters"
-msgstr "Судді"
+msgstr "Sudije"
 
 #: tournament/qml/SettingsInformationPage.qml:58
 msgctxt "@action:button"
 msgid "Add Arbiter"
-msgstr "Додати суддю"
+msgstr "Dodaj sudiju"
 
 #: tournament/qml/SettingsInformationPage.qml:65
 msgctxt "@info:status"
 msgid "No arbiters yet."
-msgstr "Судей ще немає."
+msgstr "Još nema sudija."
 
 #: tournament/qml/TiebreakDialog.qml:18
 msgctxt "@title:window"
 msgid "Edit Tiebreak"
-msgstr "Редагування тай-брейка"
+msgstr "Uređivanje dodatnog kriterijuma"
 
 #: tournament/ratinglists/ratinglistsmanager.cpp:191
 #: tournament/ratinglists/ratinglistsmanager.cpp:224
 #, kde-format
 msgctxt "@info"
 msgid "Could not open file."
-msgstr "Не вдалося відкрити файл."
+msgstr "Ne mogu da otvorim fajl."
 
 #: tournament/ratinglists/ratinglistsmanager.cpp:207
 #, kde-format
 msgctxt "@info:progress"
 msgid "Imported one player."
 msgid_plural "Imported %1 players."
-msgstr[0] "Імпортовано дані %1 гравця."
-msgstr[1] "Імпортовано дані %1 гравців."
-msgstr[2] "Імпортовано дані %1 гравців."
-msgstr[3] "Імпортовано дані гравця."
+msgstr[0] "Uvezen je %1 igrač."
+msgstr[1] "Uvezena su %1 igrača."
+msgstr[2] "Uvezeno je %1 igrača."
+msgstr[3] "Uvezen je jedan igrač."
 
 #: tournament/ratinglists/ratinglistsmanager.cpp:219
 #, kde-format
 msgctxt "@info"
 msgid "Could not open file: the file does not exist."
-msgstr "Не вдалося відкрити файл: файла не існує."
+msgstr "Ne mogu da otvorim fajl: fajl ne postoji."
 
 #: tournament/ratinglists/ratinglistsmanager.cpp:240
 #, kde-format
 msgctxt "@info:progress"
 msgid "Downloading file…"
-msgstr "Отримання файла…"
+msgstr "Preuzimam fajl…"
 
 #: tournament/ratinglists/ratinglistsmanager.cpp:256
 #, kde-format
@@ -1297,26 +1295,26 @@ msgid ""
 "Downloading file…\n"
 "%1 / %2 (%3%)"
 msgstr ""
-"Отримання файла…\n"
-"%1 з %2 (%3%)"
+"Preuzimam fajl…\n"
+"%1 / %2 (%3%)"
 
 #: tournament/ratinglists/ratinglistsmanager.cpp:268
 #, kde-format
 msgctxt "@info"
 msgid "Could not download rating list: %1"
-msgstr "Не вдалося отримати список оцінок: %1"
+msgstr "Ne mogu da preuzmem spisak rejtinga: %1"
 
 #: tournament/ratinglists/ratinglistsmanager.cpp:280
 #, kde-format
 msgctxt "@info"
 msgid "Could not download rating list from %1 (unsupported protocol)."
-msgstr "Не вдалося отримати список оцінок з %1 (непідтримуваний протокол)."
+msgstr "Ne mogu da preuzmem spisak rejtinga sa %1 (nepodržan protokol)."
 
 #: tournament/ratinglists/ratinglistsmanager.cpp:293
 #, kde-format
 msgctxt "@info"
 msgid "Could not extract file."
-msgstr "Не вдалося видобути файл."
+msgstr "Ne mogu da raspakujem fajl."
 
 #: tournament/ratinglists/ratinglistsmanager.cpp:298
 #: tournament/ratinglists/ratinglistsmanager.cpp:303
@@ -1324,110 +1322,110 @@ msgstr "Не вдалося видобути файл."
 #, kde-format
 msgctxt "@info"
 msgid "File format not supported."
-msgstr "Підтримки формату файлів не передбачено."
+msgstr "Format fajla nije podržan."
 
 #: tournament/ratinglists/ratinglistsmanager.cpp:510
 #, kde-format
 msgctxt "@info:progress"
 msgid "Saved 1 player."
 msgid_plural "Saved %1 players."
-msgstr[0] "Збережено дані %1 гравця."
-msgstr[1] "Збережено дані %1 гравців."
-msgstr[2] "Збережено дані %1 гравців."
-msgstr[3] "Збережено дані гравця."
+msgstr[0] "Sačuvan je %1 igrač."
+msgstr[1] "Sačuvana su %1 igrača."
+msgstr[2] "Sačuvano je %1 igrača."
+msgstr[3] "Sačuvan je jedan igrač."
 
 #: tournament/tiebreaks/aob.h:23 tournament/tournament.cpp:535
 #, kde-format
 msgctxt "Tiebreak"
 msgid "Average Buchholz of Opponents"
-msgstr "Середнє Бухгольца для суперників"
+msgstr "Prosečni Buholc protivnika"
 
 #: tournament/tiebreaks/buchholz.h:25 tournament/tournament.cpp:511
 #, kde-format
 msgctxt "Buchholz tiebreak"
 msgid "Buchholz"
-msgstr "Бухгольц"
+msgstr "Buholc"
 
 #: tournament/tiebreaks/buchholz.h:27
 #, kde-format
 msgctxt "Buchholz N tiebreak, N is a number < 0"
 msgid "Buchholz %1"
 msgid_plural "Buchholz %1"
-msgstr[0] "Бухгольц %1"
-msgstr[1] "Бухгольц %1"
-msgstr[2] "Бухгольц %1"
-msgstr[3] "Бухгольц %1"
+msgstr[0] "Buholc %1"
+msgstr[1] "Buholc %1"
+msgstr[2] "Buholc %1"
+msgstr[3] "Buholc %1"
 
 #: tournament/tiebreaks/bwg.h:22 tournament/tournament.cpp:531
 #, kde-format
 msgctxt "Tiebreak"
 msgid "Number of Games Won with Black (over the board)"
-msgstr "Кількість перемог при грі чорними (за дошкою)"
+msgstr "Broj dobijenih partija crnim figurama (za tablom)"
 
 #: tournament/tiebreaks/dummy.h:23
 #, kde-format
 msgctxt "@info"
 msgid "Unsupported tiebreak"
-msgstr "Непідтримуваний тай-брейк"
+msgstr "Nepodržan dodatni kriterijum"
 
 #: tournament/tiebreaks/numberwins.h:22 tournament/tournament.cpp:515
 #, kde-format
 msgctxt "Number of Wins tiebreak"
 msgid "Number of Wins"
-msgstr "Кількість перемог"
+msgstr "Broj pobeda"
 
 #: tournament/tiebreaks/playedblack.h:22 tournament/tournament.cpp:527
 #, kde-format
 msgctxt "Number of Games Played with Black (over the board) tiebreak"
 msgid "Number of Games Played with Black (over the board)"
-msgstr "Кількість перемог при грі чорними (за дошкою)"
+msgstr "Broj odigranih partija crnim figurama (za tablom)"
 
 #: tournament/tiebreaks/points.h:22 tournament/tiebreaks/points.h:27
 #: tournament/tournament.cpp:507
 #, kde-format
 msgctxt "Game points"
 msgid "Points"
-msgstr "Очки"
+msgstr "Poeni"
 
 #: tournament/tiebreaks/progressive.h:22 tournament/tournament.cpp:539
 #, kde-format
 msgctxt "Progressive Scores tiebreak"
 msgid "Progressive"
-msgstr "Прогресивний підрахунок"
+msgstr "Progresivni"
 
 #: tournament/tiebreaks/rep.h:22 tournament/tournament.cpp:547
 #, kde-format
 msgctxt "Tiebreak"
 msgid "Rounds one Elected to Play"
-msgstr "Вибрані раунди для гри"
+msgstr "Kola u kojima je izabrao da igra"
 
 #: tournament/tiebreaks/sb.cpp:15
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Exclude the lowest scores:"
-msgstr "Виключити найнижчі рейтинги:"
+msgstr "Izostavi najniže rezultate:"
 
 #: tournament/tiebreaks/sb.cpp:36
 #, kde-format
 msgctxt "@info"
 msgid "Unsupported tiebreak option “%1”"
-msgstr "Непідтримуваний варіант тай-брейка «%1»"
+msgstr "Nepodržana opcija dodatnog kriterijuma „%1“"
 
 #: tournament/tiebreaks/sb.h:58 tournament/tournament.cpp:543
 #, kde-format
 msgctxt "Tiebreak"
 msgid "Sonneborn-Berger"
-msgstr "Зоннерборна-Бергера"
+msgstr "Soneborn-Berger"
 
 #: tournament/tiebreaks/sb.h:60
 #, kde-format
 msgctxt "Tiebreak modifier, N is a number < 0"
 msgid "Sonneborn-Berger %1"
 msgid_plural "Sonneborn-Berger %1"
-msgstr[0] "Зоннерборна-Бергера %1"
-msgstr[1] "Зоннерборна-Бергера %1"
-msgstr[2] "Зоннерборна-Бергера %1"
-msgstr[3] "Зоннерборна-Бергера %1"
+msgstr[0] "Soneborn-Berger %1"
+msgstr[1] "Soneborn-Berger %1"
+msgstr[2] "Soneborn-Berger %1"
+msgstr[3] "Soneborn-Berger %1"
 
 #: tournament/tiebreaks/won.h:23 tournament/tournament.cpp:522
 #, kde-format
@@ -1435,176 +1433,40 @@ msgctxt ""
 "Number of Games Won (over the board) tiebreak. Different from the 'Number of "
 "Wins' tiebreak, which includes games won by forfeit."
 msgid "Number of Games Won (over the board)"
-msgstr "Кількість перемог (за дошкою)"
+msgstr "Broj dobijenih partija (za tablom)"
 
 #: tournament/tournament.cpp:976
 #, kde-format
 msgid "An error ocurred while pairing the round: %1"
-msgstr "Під час поділу на пари для раунду сталася помилка: %1"
+msgstr "Greška pri parovanju kola: %1"
 
 #: tournament/tournament.cpp:1201
 #, kde-format
 msgid "Couldn’t open file"
-msgstr "Не вдалося відкрити файл"
+msgstr "Ne mogu da otvorim fajl"
 
 #: tournament/trf/reader.cpp:54 tournament/trf/reader.cpp:61
 #, kde-format
 msgid "Player “%1” not found."
-msgstr "Гравця «%1» не знайдено."
+msgstr "Igrač „%1“ nije nađen."
 
 #: tournament/trf/reader.cpp:67
 #, kde-format
 msgid "Unknown result on pairing “%1” with “%2”."
-msgstr "Невідомий результат для поділу на пари «%1» з «%2»."
+msgstr "Nepoznat rezultat u paru „%1“ sa „%2“."
 
 #: tournament/trf/reader.cpp:189
 #, kde-format
 msgctxt "@info"
 msgid "Date “%1” is invalid."
-msgstr "Дата «%1» є некоректною."
+msgstr "Datum „%1“ nije ispravan."
 
 #: tournament/trf/reader.cpp:263
 #, kde-format
 msgid "Unknown result “%1” on pairing “%2”."
-msgstr "Невідомий результат «%1» у поділі на пари «%2»."
+msgstr "Nepoznat rezultat „%1“ u paru „%2“."
 
 #: tournament/trf/reader.cpp:266
 #, kde-format
 msgid "Pairing “%1” has no opponent."
-msgstr "У парах «%1» немає суперника."
-
-#~ msgctxt "@title"
-#~ msgid "Chessament"
-#~ msgstr "Chessament"
-
-#~ msgid "Chess Tournament Manager"
-#~ msgstr "Керування шаховим турніром"
-
-#~ msgctxt "@label:textbox"
-#~ msgid "National ID"
-#~ msgstr "Національний ідентифікатор"
-
-#~ msgctxt "@label:textbox"
-#~ msgid "Gender"
-#~ msgstr "Стать"
-
-#~ msgctxt "@action:button"
-#~ msgid "Delete arbiter"
-#~ msgstr "Вилучити суддю"
-
-#~ msgid "Pairing allocated bye"
-#~ msgstr "Призначений фіктивний парний гравець"
-
-#~ msgid "The value of the pairing allocated bye"
-#~ msgstr "Значення призначеного фіктивного парного гравця"
-
-#~ msgctxt "@action:intoolbar"
-#~ msgid "*"
-#~ msgstr "*"
-
-#~ msgctxt "@action:intoolbar"
-#~ msgid "1-0"
-#~ msgstr "1-0"
-
-#~ msgctxt "@action:intoolbar"
-#~ msgid "½-½"
-#~ msgstr "½-½"
-
-#~ msgctxt "@action:intoolbar"
-#~ msgid "0-1"
-#~ msgstr "0-1"
-
-#~ msgctxt "@action:intoolbar"
-#~ msgid "1F-0F"
-#~ msgstr "1F-0F"
-
-#~ msgctxt "@action:intoolbar"
-#~ msgid "0F-1F"
-#~ msgstr "0F-1F"
-
-#~ msgctxt "@action:intoolbar"
-#~ msgid "0F-0F"
-#~ msgstr "0F-0F"
-
-#~ msgctxt "@action:intoolbar"
-#~ msgid "1U-0U"
-#~ msgstr "1U-0U"
-
-#~ msgctxt "@action:intoolbar"
-#~ msgid "½U-½U"
-#~ msgstr "½U-½U"
-
-#~ msgctxt "@action:intoolbar"
-#~ msgid "0U-1U"
-#~ msgstr "0U-1U"
-
-#~ msgctxt "@action:intoolbar"
-#~ msgid "½U-0U"
-#~ msgstr "½U-0U"
-
-#~ msgctxt "@action:intoolbar"
-#~ msgid "0U-½U"
-#~ msgstr "0U-½U"
-
-#~ msgctxt "@action:intoolbar"
-#~ msgid "0U-0U"
-#~ msgstr "0U-0U"
-
-#~ msgctxt "@action:intoolbar"
-#~ msgid "0-0"
-#~ msgstr "0-0"
-
-#~ msgctxt "@action:intoolbar"
-#~ msgid "0-½"
-#~ msgstr "0-½"
-
-#~ msgctxt "@label:textbox"
-#~ msgid "Chief arbiter"
-#~ msgstr "Головний арбітр"
-
-#~ msgctxt "@title:column"
-#~ msgid "Sex"
-#~ msgstr "Стать"
-
-#~ msgctxt "@label:textbox"
-#~ msgid "Sex"
-#~ msgstr "Стать"
-
-#~ msgctxt "@action:button"
-#~ msgid "Connect Account"
-#~ msgstr "З'єднати обліковий запис"
-
-#~ msgid "Logged in as %1"
-#~ msgstr "Вхід до системи від імені %1"
-
-#~ msgctxt "@info:status players, rated"
-#~ msgid "%1, %2"
-#~ msgstr "%1, %2"
-
-#~ msgctxt "@action:inmenu"
-#~ msgid "Connect account"
-#~ msgstr "З'єднати обліковий запис"
-
-#~ msgctxt "@action:button"
-#~ msgid "Add player"
-#~ msgstr "Додати гравця"
-
-#~ msgctxt "@title:column"
-#~ msgid "No"
-#~ msgstr "№"
-
-#~ msgctxt "@title:column"
-#~ msgid "Surname"
-#~ msgstr "Прізвище"
-
-#~ msgctxt "@title:column"
-#~ msgid "Full Name"
-#~ msgstr "Ім'я повністю"
-
-#~ msgctxt "@action:button"
-#~ msgid "Save As…"
-#~ msgstr "Зберегти як…"
-
-#~ msgctxt "@title %1 is a number >= 1"
-#~ msgid "Pair round %1"
-#~ msgstr "Поділ на пари раунду %1"
+msgstr "Par „%1“ nema protivnika."

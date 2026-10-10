@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-09 00:43+0000\n"
-"PO-Revision-Date: 2026-09-01 12:12+0200\n"
+"PO-Revision-Date: 2026-10-09 15:47+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -35,13 +35,12 @@ msgid "Starting Rank"
 msgstr ""
 
 #: documents.cpp:62
-#, fuzzy, kde-format
-#| msgid "Round %1"
+#, kde-format
 msgctxt "@title %1 is a number"
 msgid "Round %1 Pairings"
 msgid_plural "Round %1 Pairings"
-msgstr[0] "Round (Circular) %1"
-msgstr[1] "Round (Circular) %1"
+msgstr[0] "Round (Partita) %1 Appariamentos"
+msgstr[1] "Round (partita) %1 Appariamentos"
 
 #: documents.cpp:103
 #, kde-format
@@ -272,11 +271,9 @@ msgid "Update ratings…"
 msgstr ""
 
 #: qml/ActionCollection.qml:74
-#, fuzzy
-#| msgid "Round %1"
 msgctxt "@action:menu"
 msgid "Pairings"
-msgstr "Round (Circular) %1"
+msgstr "Appariamentos"
 
 #: qml/ActionCollection.qml:78
 msgctxt "@option:check"
@@ -325,12 +322,9 @@ msgid "Optional"
 msgstr "Optional"
 
 #: qml/AddPlayerDialog.qml:116
-#, fuzzy
-#| msgctxt "@title:column Player National ID"
-#| msgid "National ID"
 msgctxt "@label:textbox Player National ID"
 msgid "National ID"
-msgstr "IN National"
+msgstr "ID National"
 
 #: qml/AddPlayerDialog.qml:122
 msgctxt "@label:textbox"
@@ -348,9 +342,6 @@ msgid "Origin"
 msgstr "Origine"
 
 #: qml/AddPlayerDialog.qml:140
-#, fuzzy
-#| msgctxt "@title:column Player Gender"
-#| msgid "Gender"
 msgctxt "@label:textbox Player Gender"
 msgid "Gender"
 msgstr "Genere"
@@ -548,12 +539,10 @@ msgid "Export as PDF…"
 msgstr "Exporta como PDF…"
 
 #: qml/PairingsPage.qml:87 qml/PairingsPage.qml:92
-#, fuzzy
-#| msgid "Round %1"
 msgid "Round %1"
 msgid_plural "Round %1"
-msgstr[0] "Round (Circular) %1"
-msgstr[1] "Round (Circular) %1"
+msgstr[0] "Round (partita) %1"
+msgstr[1] "Round (partita) %1"
 
 #: qml/PairingsPage.qml:104
 msgctxt "@action:intoolbar"
@@ -573,14 +562,11 @@ msgstr[0] ""
 msgstr[1] ""
 
 #: qml/PairingsPage.qml:122
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Pair Round %1…"
 msgctxt "@action:button"
 msgid "Pair Round %1…"
 msgid_plural "Pair Round %1…"
-msgstr[0] "Pair Round (Copula Circular) %1..."
-msgstr[1] "Pair Round (Copula Circular) %1..."
+msgstr[0] "Pair Round (partita par) %1..."
+msgstr[1] "Pair Round (partitas par) %1..."
 
 #: qml/PairingsPage.qml:166
 msgctxt "@info:placeholder"
@@ -597,14 +583,11 @@ msgstr[0] ""
 msgstr[1] ""
 
 #: qml/PairRoundDialog.qml:21
-#, fuzzy
-#| msgctxt "@title %1 is a number >= 1"
-#| msgid "Pair Round %1"
 msgctxt "@title %1 is a number >= 1"
 msgid "Pair Round %1"
 msgid_plural "Pair Round %1"
-msgstr[0] "Pair Round (Copula Circular) %1"
-msgstr[1] "Pair Round (Copula Circular) %1"
+msgstr[0] "Pair Round (partita par) %1"
+msgstr[1] "Pair Round (partitas par) %1"
 
 #: qml/PairRoundDialog.qml:29
 msgctxt "@info"
@@ -685,14 +668,11 @@ msgid "Pairings"
 msgstr ""
 
 #: qml/player/PlayerPairingsPage.qml:117
-#, fuzzy
-#| msgctxt "@info:label"
-#| msgid "Round %1"
 msgctxt "@info:label"
 msgid "Round %1"
 msgid_plural "Round %1"
-msgstr[0] "Round (Circular) %1"
-msgstr[1] "Round (Circular) %1"
+msgstr[0] "Round (partita) %1"
+msgstr[1] "Round (partitas) %1"
 
 #: qml/PlayersPage.qml:121
 msgctxt "@action:intoolbar Open player details"
@@ -962,12 +942,9 @@ msgid "Automatically open exported PDF files"
 msgstr ""
 
 #: settings/GeneralPage.qml:32
-#, fuzzy
-#| msgctxt "@title:column Game Result"
-#| msgid "Result"
 msgctxt "@title:group"
 msgid "Result Entry"
-msgstr "Resultato"
+msgstr "Entrata de Resultato"
 
 #: settings/GeneralPage.qml:37
 msgctxt "@option:radio"
@@ -1141,14 +1118,11 @@ msgid "Calendar"
 msgstr "Calendario"
 
 #: tournament/qml/SettingsCalendarPage.qml:32
-#, fuzzy
-#| msgctxt "round number"
-#| msgid "Round %1"
 msgctxt "round number"
 msgid "Round %1"
 msgid_plural "Round %1"
-msgstr[0] "Round (Circular) %1"
-msgstr[1] "Round (Circular) %1"
+msgstr[0] "Round (partita) %1"
+msgstr[1] "Round (partita) %1"
 
 #: tournament/qml/SettingsDialog.qml:19
 msgctxt "@action:button"
@@ -1267,12 +1241,10 @@ msgstr[0] ""
 msgstr[1] ""
 
 #: tournament/ratinglists/ratinglistsmanager.cpp:219
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Could not open file."
+#, kde-format
 msgctxt "@info"
 msgid "Could not open file: the file does not exist."
-msgstr "Non poteva aperir file."
+msgstr "Non poteva aperir file: le filenon existe."
 
 #: tournament/ratinglists/ratinglistsmanager.cpp:240
 #, kde-format
@@ -1427,39 +1399,35 @@ msgid "An error ocurred while pairing the round: %1"
 msgstr ""
 
 #: tournament/tournament.cpp:1201
-#, fuzzy, kde-format
-#| msgid "Couldn't open file"
+#, kde-format
 msgid "Couldn’t open file"
 msgstr "Non poteva aperir file"
 
 #: tournament/trf/reader.cpp:54 tournament/trf/reader.cpp:61
-#, fuzzy, kde-format
-#| msgid "Player \"%1\" not found."
+#, kde-format
 msgid "Player “%1” not found."
-msgstr "Jocator \"%1\" non trovate."
+msgstr "Jocator “%1”  non trovate."
 
 #: tournament/trf/reader.cpp:67
 #, kde-format
 msgid "Unknown result on pairing “%1” with “%2”."
-msgstr ""
+msgstr "Resultato incognite sur appariamento  “%1” con “%2”."
 
 #: tournament/trf/reader.cpp:189
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "Date \"%1\" is invalid."
+#, kde-format
 msgctxt "@info"
 msgid "Date “%1” is invalid."
-msgstr "Data \"%1\" es invalide."
+msgstr "Data “%1” es invalide."
 
 #: tournament/trf/reader.cpp:263
 #, kde-format
 msgid "Unknown result “%1” on pairing “%2”."
-msgstr ""
+msgstr "Resultato incognite “%1” sur appariamento “%2”."
 
 #: tournament/trf/reader.cpp:266
 #, kde-format
 msgid "Pairing “%1” has no opponent."
-msgstr ""
+msgstr "Appariamento no ha “%1” opponente."
 
 #~ msgctxt "@title"
 #~ msgid "Chessament"
