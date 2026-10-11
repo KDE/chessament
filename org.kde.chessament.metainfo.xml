@@ -29,6 +29,10 @@
   <name xml:lang="ru">Chessament</name>
   <name xml:lang="sk">Chessament</name>
   <name xml:lang="sl">Chessament</name>
+  <name xml:lang="sr">Chessament</name>
+  <name xml:lang="sr-Latn">Chessament</name>
+  <name xml:lang="sr-ijekavian">Chessament</name>
+  <name xml:lang="sr-ijekavianlatin">Chessament</name>
   <name xml:lang="sv">Chessament</name>
   <name xml:lang="tr">Chessament</name>
   <name xml:lang="ug">شاھمات مۇسابىقىسى</name>
@@ -56,6 +60,10 @@
   <summary xml:lang="ru">Управление шахматными турнирами</summary>
   <summary xml:lang="sk">Správca šachových turnajov</summary>
   <summary xml:lang="sl">Upravljalnik šahovskih turnirjev</summary>
+  <summary xml:lang="sr">Менаџер шаховских турнира</summary>
+  <summary xml:lang="sr-Latn">Menadžer šahovskih turnira</summary>
+  <summary xml:lang="sr-ijekavian">Менаџер шаховских турнира</summary>
+  <summary xml:lang="sr-ijekavianlatin">Menadžer šahovskih turnira</summary>
   <summary xml:lang="sv">Schackturneringshanterare</summary>
   <summary xml:lang="tr">Satranç turnuvası yöneticisi</summary>
   <summary xml:lang="ug">خەلقئارا شاھمات مۇسابىقە باشقۇرغۇچ</summary>
@@ -84,6 +92,10 @@
     <p xml:lang="ru">Chessament — приложение для управления шахматными турнирами. В настоящее время поддерживаются личные турниры по швейцарской системе.</p>
     <p xml:lang="sk">Chessament je správca šachových turnajov. Momentálne podporuje individuálne turnaje švajčiarskym systémom.</p>
     <p xml:lang="sl">Chessament je upravitelj šahovskih turnirjev. Trenutno podpira posamezne turnirje po švicarskem sistemu.</p>
+    <p xml:lang="sr">Chessament је менаџер шаховских турнира. Тренутно подржава појединачне турнире по швајцарском систему.</p>
+    <p xml:lang="sr-Latn">Chessament je menadžer šahovskih turnira. Trenutno podržava pojedinačne turnire po švajcarskom sistemu.</p>
+    <p xml:lang="sr-ijekavian">Chessament је менаџер шаховских турнира. Тренутно подржава појединачне турнире по швајцарском систему.</p>
+    <p xml:lang="sr-ijekavianlatin">Chessament je menadžer šahovskih turnira. Trenutno podržava pojedinačne turnire po švajcarskom sistemu.</p>
     <p xml:lang="sv">Chessament är en schackturneringshanterare. Den stöder för närvarande individuella schweizerturneringar.</p>
     <p xml:lang="tr">Chessament, bir satranç turnuvası yöneticisidir. Şu anda yalnızca İsviçre tarzı turnuvaları destekler.</p>
     <p xml:lang="uk">Chessament — програма для керування шаховими турнірами. У поточній версії передбачено турніри за індивідуальною швейцарською системою.</p>
@@ -132,6 +144,10 @@
       <caption xml:lang="ru">Список игроков</caption>
       <caption xml:lang="sk">Pohľad na hráčov</caption>
       <caption xml:lang="sl">Pogled igralcev</caption>
+      <caption xml:lang="sr">Приказ играча</caption>
+      <caption xml:lang="sr-Latn">Prikaz igrača</caption>
+      <caption xml:lang="sr-ijekavian">Приказ играча</caption>
+      <caption xml:lang="sr-ijekavianlatin">Prikaz igrača</caption>
       <caption xml:lang="sv">Spelarvy</caption>
       <caption xml:lang="tr">Oyuncular görünümü</caption>
       <caption xml:lang="uk">Перегляд гравців</caption>
@@ -155,6 +171,10 @@
       <caption xml:lang="ru">Пары</caption>
       <caption xml:lang="sk">Pohľad na párovania</caption>
       <caption xml:lang="sl">Pogled parov</caption>
+      <caption xml:lang="sr">Приказ парова</caption>
+      <caption xml:lang="sr-Latn">Prikaz parova</caption>
+      <caption xml:lang="sr-ijekavian">Приказ парова</caption>
+      <caption xml:lang="sr-ijekavianlatin">Prikaz parova</caption>
       <caption xml:lang="sv">Lottningsvy</caption>
       <caption xml:lang="tr">Eşleşmeler görünümü</caption>
       <caption xml:lang="uk">Перегляд пар</caption>
@@ -178,6 +198,10 @@
       <caption xml:lang="ru">Турнирная таблица</caption>
       <caption xml:lang="sk">Pohľad na poradie</caption>
       <caption xml:lang="sl">Pogled stanj</caption>
+      <caption xml:lang="sr">Приказ пласмана</caption>
+      <caption xml:lang="sr-Latn">Prikaz plasmana</caption>
+      <caption xml:lang="sr-ijekavian">Приказ пласмана</caption>
+      <caption xml:lang="sr-ijekavianlatin">Prikaz plasmana</caption>
       <caption xml:lang="sv">Ställningsvy</caption>
       <caption xml:lang="tr">Dereceler görünümü</caption>
       <caption xml:lang="uk">Перегляд місць</caption>
