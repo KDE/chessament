@@ -51,8 +51,6 @@ QCoro::Task<std::expected<QList<std::pair<uint, uint>>, QString>> PairingEngine:
     file.write(trf.toUtf8());
     file.flush();
 
-    std::cout << trf.toStdString();
-
     co_await proc.start(u"bbpPairings"_s, {u"--dutch"_s, file.fileName(), u"-p"_s});
     co_await proc.waitForFinished(std::chrono::milliseconds(3s));
 
@@ -72,7 +70,6 @@ QCoro::Task<std::expected<QList<std::pair<uint, uint>>, QString>> PairingEngine:
     const auto players = tournament->playersByStartingRank();
 
     const auto output = QString::fromUtf8(process.readAll());
-    std::cout << output.toStdString();
     const auto lines = output.split(u'\n').mid(1);
 
     for (const auto &line : lines) {

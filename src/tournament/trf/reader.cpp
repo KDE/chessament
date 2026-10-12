@@ -73,13 +73,13 @@ std::expected<void, QString> TrfReader::read(QTextStream *trf)
         }
     }
 
-    m_tournament->setNumberOfRounds(m_tournament->m_rounds.size());
+    m_tournament->setNumberOfRounds(static_cast<int>(m_tournament->m_rounds.size()));
 
     if (auto ok = m_tournament->sortPairings(); !ok) {
         return ok;
     }
 
-    m_tournament->setCurrentRound(m_tournament->m_rounds.size());
+    m_tournament->setCurrentRound(static_cast<int>(m_tournament->m_rounds.size()));
     for (int i = 1; i <= m_tournament->m_numberOfRounds; ++i) {
         if (!m_tournament->isRoundFullyPaired(i)) {
             m_tournament->setCurrentRound(i - 1);
@@ -174,7 +174,7 @@ std::expected<void, QString> TrfReader::readDates(QStringView line)
     }
 
     QStringView dateString;
-    for (qsizetype i = 0;; ++i) {
+    for (int i = 0;; ++i) {
         dateString = line.mid(87 + (10 * i), 8);
 
         if (dateString.isEmpty()) {
@@ -222,8 +222,8 @@ std::expected<void, QString> TrfReader::readPlayer(QStringView line)
     const auto playerRounds = line.mid(91);
     QStringView round;
 
-    for (qsizetype roundNumber = 1;; roundNumber++) {
-        round = playerRounds.mid(10 * (roundNumber - 1), 8);
+    for (int roundNumber = 1;; roundNumber++) {
+        round = playerRounds.mid(10L * (roundNumber - 1), 8);
 
         if (round.isEmpty() || round == "        "_L1) {
             break;
@@ -278,7 +278,7 @@ std::expected<void, QString> TrfReader::readPairing(int startingRank, int round,
     } else {
         newPairing.second = result;
     }
-    m_pairings[pairing] = newPairing;
+    m_pairings[pairing] = std::move(newPairing);
 
     return {};
 }

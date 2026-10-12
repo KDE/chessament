@@ -269,7 +269,7 @@ std::expected<void, QString> Tournament::deletePlayer(int startingRank)
 
     m_players.erase(m_players.begin() + startingRank - 1);
 
-    for (int i = startingRank - 1; i < static_cast<int>(m_players.size()); ++i) {
+    for (int i = startingRank - 1; std::cmp_less(i, m_players.size()); ++i) {
         const auto &player = m_players.at(i);
         player->setStartingRank(i + 1);
         savePlayer(player.get());
@@ -892,8 +892,6 @@ std::expected<void, QString> Tournament::sortPairings(std::optional<int> round)
                 if (aScore != bScore) {
                     return aScore > bScore;
                 }
-
-                //
                 if (aTotal != bTotal) {
                     return aTotal > bTotal;
                 }
@@ -905,12 +903,10 @@ std::expected<void, QString> Tournament::sortPairings(std::optional<int> round)
         for (size_t i = 0; i < pairings.size(); i++) {
             pairings.at(i)->setBoard(static_cast<int>(i) + 1);
 
-            if (auto ok = savePairing(pairings[i].get()); !ok) {
+            if (const auto ok = savePairing(pairings[i].get()); !ok) {
                 return ok;
             }
         }
-
-        // m_rounds.at(i)->setPairings(pairings);
     }
 
     return {};
