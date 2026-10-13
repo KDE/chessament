@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-09 00:43+0000\n"
+"POT-Creation-Date: 2026-10-13 00:42+0000\n"
 "PO-Revision-Date: 2026-10-08 13:04+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -1090,25 +1090,25 @@ msgstr ""
 msgid "Could not create temporary file."
 msgstr "No s'ha pogut crear un fitxer temporal."
 
-#: tournament/pairingengine.cpp:64
+#: tournament/pairingengine.cpp:62
 #, kde-format
 msgctxt "@info"
 msgid "No valid pairing exists."
 msgstr "No existixen aparellaments vàlids."
 
-#: tournament/pairingengine.cpp:67
+#: tournament/pairingengine.cpp:65
 #, kde-format
 msgctxt "bbpPairings is the name of a program, should not be translated"
 msgid "bbpPairings terminated with a non zero exit code: %1"
 msgstr "bbpPairings ha finalitzat amb un codi d'eixida no zero: %1"
 
-#: tournament/pairingengine.cpp:85 tournament/trf/reader.cpp:243
+#: tournament/pairingengine.cpp:82 tournament/trf/reader.cpp:243
 #, kde-format
 msgid "Invalid pairing “%1”."
 msgstr "Aparellament no vàlid «%1»."
 
-#: tournament/pairingengine.cpp:91 tournament/pairingengine.cpp:95
-#: tournament/pairingengine.cpp:99 tournament/pairingengine.cpp:103
+#: tournament/pairingengine.cpp:88 tournament/pairingengine.cpp:92
+#: tournament/pairingengine.cpp:96 tournament/pairingengine.cpp:100
 #: tournament/trf/reader.cpp:256
 #, kde-format
 msgid "Invalid player “%1” on pairing “%2”."
@@ -1404,12 +1404,12 @@ msgctxt ""
 msgid "Number of Games Won (over the board)"
 msgstr "Nombre de partides guanyades (sobre el tauler)"
 
-#: tournament/tournament.cpp:976
+#: tournament/tournament.cpp:972
 #, kde-format
 msgid "An error ocurred while pairing the round: %1"
 msgstr "S'ha produït un error en aparellar la ronda: %1"
 
-#: tournament/tournament.cpp:1201
+#: tournament/tournament.cpp:1197
 #, kde-format
 msgid "Couldn’t open file"
 msgstr "No s'ha pogut obrir el fitxer"

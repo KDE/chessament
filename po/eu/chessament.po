@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-09 00:43+0000\n"
+"POT-Creation-Date: 2026-10-13 00:42+0000\n"
 "PO-Revision-Date: 2026-01-06 11:22+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -1225,27 +1225,27 @@ msgstr ""
 msgid "Could not create temporary file."
 msgstr "Ezin izan du aldi baterako fitxategia sortu."
 
-#: tournament/pairingengine.cpp:64
+#: tournament/pairingengine.cpp:62
 #, fuzzy, kde-format
 #| msgid "Invalid pairing \"%1\"."
 msgctxt "@info"
 msgid "No valid pairing exists."
 msgstr "Parekatze baliogabea \"%1\"."
 
-#: tournament/pairingengine.cpp:67
+#: tournament/pairingengine.cpp:65
 #, kde-format
 msgctxt "bbpPairings is the name of a program, should not be translated"
 msgid "bbpPairings terminated with a non zero exit code: %1"
 msgstr "bbpPairings zero ez den irteera-kode batekin bukatu da: %1"
 
-#: tournament/pairingengine.cpp:85 tournament/trf/reader.cpp:243
+#: tournament/pairingengine.cpp:82 tournament/trf/reader.cpp:243
 #, fuzzy, kde-format
 #| msgid "Invalid pairing \"%1\"."
 msgid "Invalid pairing “%1”."
 msgstr "Parekatze baliogabea \"%1\"."
 
-#: tournament/pairingengine.cpp:91 tournament/pairingengine.cpp:95
-#: tournament/pairingengine.cpp:99 tournament/pairingengine.cpp:103
+#: tournament/pairingengine.cpp:88 tournament/pairingengine.cpp:92
+#: tournament/pairingengine.cpp:96 tournament/pairingengine.cpp:100
 #: tournament/trf/reader.cpp:256
 #, fuzzy, kde-format
 #| msgid "Invalid player \"%1\" on pairing \"%2\"."
@@ -1572,12 +1572,12 @@ msgctxt ""
 msgid "Number of Games Won (over the board)"
 msgstr "Garaipen kopurua"
 
-#: tournament/tournament.cpp:976
+#: tournament/tournament.cpp:972
 #, kde-format
 msgid "An error ocurred while pairing the round: %1"
 msgstr "Errore bat gertatu da jardunaldiko parekatzea egitean: %1"
 
-#: tournament/tournament.cpp:1201
+#: tournament/tournament.cpp:1197
 #, fuzzy, kde-format
 #| msgid "Couldn't open file"
 msgid "Couldn’t open file"
