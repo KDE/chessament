@@ -221,6 +221,11 @@ void Player::setExtra(const QByteArray &extra)
     m_extra = doc.object();
 }
 
+QString Player::safeName() const
+{
+    return m_name.toHtmlEscaped();
+}
+
 QJsonObject Player::toJson() const
 {
     QJsonObject json;

@@ -252,6 +252,9 @@ public:
 
     [[nodiscard]] QByteArray extraString() const;
 
+    // TODO: Replace with Qt.escapeHtml() once we depend on Qt 6.12
+    [[nodiscard]] Q_INVOKABLE QString safeName() const;
+
     /*!
      * Returns a JSON representation of the player.
      *

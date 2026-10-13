@@ -10,7 +10,6 @@
 #include <QStandardPaths>
 #include <QTemporaryFile>
 #include <chrono>
-#include <iostream>
 
 #include "trf/writer.h"
 
@@ -52,7 +51,7 @@ QCoro::Task<std::expected<QList<std::pair<uint, uint>>, QString>> PairingEngine:
     file.flush();
 
     co_await proc.start(u"bbpPairings"_s, {u"--dutch"_s, file.fileName(), u"-p"_s});
-    co_await proc.waitForFinished(std::chrono::milliseconds(3s));
+    co_await proc.waitForFinished(3s);
 
     switch (process.exitCode()) {
     case 0:
