@@ -12,7 +12,7 @@ using namespace Qt::StringLiterals;
 
 /*!
  * \class Player
- * \inmodule tournament
+ * \inmodule libtournament
  * \inheaderfile tournament/player.h
  */
 class Player : public QObject
@@ -162,7 +162,6 @@ public:
 
     /*!
      * \property Player::id
-     * \brief the ID of the player
      *
      * This property holds the database ID of the player.
      */
@@ -170,7 +169,6 @@ public:
 
     /*!
      * \property Player::startingRank
-     * \brief the ID of the player
      *
      * This property holds the starting rank of the player.
      */
@@ -178,7 +176,6 @@ public:
 
     /*!
      * \property Player::title
-     * \brief the title of the player
      *
      * This property holds the title of the player.
      */
@@ -186,7 +183,6 @@ public:
 
     /*!
      * \property Player::name
-     * \brief the name of the player
      *
      * This property holds the name of the player.
      */
@@ -194,7 +190,6 @@ public:
 
     /*!
      * \property Player::rating
-     * \brief the rating of the player
      *
      * This property holds the rating of the player.
      */
@@ -202,7 +197,6 @@ public:
 
     /*!
      * \property Player::nationalRating
-     * \brief the national rating of the player
      *
      * This property holds the national rating of the player.
      */
@@ -210,17 +204,20 @@ public:
 
     /*!
      * \property Player::playerId
-     * \brief the player ID of the player
      *
      * This property holds the player ID of the player.
      */
     [[nodiscard]] QString playerId() const;
 
+    /*!
+     * \property Player::nationalId
+     *
+     * This property holds the national ID of the player.
+     */
     [[nodiscard]] QString nationalId() const;
 
     /*!
      * \property Player::birthDate
-     * \brief the birth date of the player
      *
      * This property holds the birth date of the player.
      */
@@ -228,7 +225,6 @@ public:
 
     /*!
      * \property Player::federation
-     * \brief the federation of the player
      *
      * This property holds the federation of the player.
      */
@@ -236,7 +232,6 @@ public:
 
     /*!
      * \property Player::origin
-     * \brief the origin of the player
      *
      * This property holds the origin the player.
      */
@@ -244,7 +239,6 @@ public:
 
     /*!
      * \property Player::gender
-     * \brief the gender of the player
      *
      * This property holds the gender of the player.
      */
@@ -252,6 +246,9 @@ public:
 
     [[nodiscard]] QByteArray extraString() const;
 
+    /*!
+     * Returns the name of the player with special HTML characters scaped.
+     */
     // TODO: Replace with Qt.escapeHtml() once we depend on Qt 6.12
     [[nodiscard]] Q_INVOKABLE QString safeName() const;
 

@@ -86,3 +86,8 @@ if (BUILD_EXPERIMENTAL)
     )
 endif()
 
+if (BUILD_DEVELOPER_DOCS)
+    include(ECMGenerateQDoc)
+    ecm_generate_qdoc(tournament libtournament.qdocconf)
+endif()
+

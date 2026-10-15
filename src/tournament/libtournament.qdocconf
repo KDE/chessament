@@ -1,7 +1,7 @@
 include($KDE_DOCS/global/qt-module-defaults.qdocconf)
 
 project = libtournament
-description = Todo
+description = Library to manage chess tournaments
 
 documentationinheaders = true
 
@@ -10,7 +10,23 @@ sourcedirs += .
 
 outputformats = HTML
 
-depends += kde qtcore
+depends += kde qtcore qtquick
+
+navigation.landingpage = "libtournament"
+
+qhp.projects = libtournament
+
+qhp.libtournament.file = libtournament.qhp
+qhp.libtournament.namespace = org.kde.chessament.tournament.$QT_VERSION_TAG
+qhp.libtournament.virtualFolder = libtournament
+qhp.libtournament.indexTitle = libtournament
+qhp.libtournament.indexRoot =
+
+qhp.libtournament.subprojects = libtournament
+qhp.libtournament.subprojects.libtournament.title = libtournament C++ Classes
+qhp.libtournament.subprojects.libtournament.indexTitle = libtournament C++ Classes
+qhp.libtournament.subprojects.libtournament.selectors = class fake:headerfile
+qhp.libtournament.subprojects.libtournament.sortPages = true
 
 tagfile = libtournament.tags
 

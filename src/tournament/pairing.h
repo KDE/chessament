@@ -12,7 +12,7 @@
 
 /*!
  * \class Pairing
- * \inmodule tournament
+ * \inmodule libtournament
  * \inheaderfile tournament/pairing.h
  */
 class Pairing : public QObject
@@ -171,11 +171,19 @@ public:
         {u"Other"_s, {ValidResults[12], ValidResults[13], ValidResults[14]}},
     };
 
+    /*!
+     * Returns whether \a result is a known valid result.
+     */
     static bool isValidResult(std::pair<PartialResult, PartialResult> result)
     {
         return Pairing::ValidResults.contains(result);
     }
 
+    /*!
+     * Returns whether \a result represents an unplayed game (a game that didn't occur over-the-board).
+     *
+     * Unplayed games are forfeits or byes.
+     */
     static bool isUnplayed(PartialResult result)
     {
         switch (result) {
@@ -191,6 +199,9 @@ public:
         }
     }
 
+    /*!
+     * Returns whether \a result is a bye.
+     */
     static bool isBye(PartialResult result)
     {
         switch (result) {
@@ -204,6 +215,11 @@ public:
         }
     }
 
+    /*!
+     * Returns whether \a result is a requested bye.
+     *
+     * Full-point byes are not considered requested byes. To include full-point byes, use \l isVoluntaryBye().
+     */
     static bool isRequestedBye(PartialResult result)
     {
         switch (result) {
@@ -215,6 +231,9 @@ public:
         }
     }
 
+    /*!
+     * Returns whether \a result is a voluntary bye.
+     */
     static bool isVoluntaryBye(PartialResult result)
     {
         switch (result) {
@@ -227,6 +246,13 @@ public:
         }
     }
 
+    /*!
+     * Returns whether \a result represents a voluntary unplayed game.
+     *
+     * Voluntary unplayed games are requested byes and lost by forfeit.
+     *
+     * \sa isRequestedBye()
+     */
     static bool isVUR(PartialResult result)
     {
         switch (result) {
@@ -239,6 +265,9 @@ public:
         }
     }
 
+    /*!
+     * Returns whether \a result represents a forfeit.
+     */
     static bool isForfeit(PartialResult result)
     {
         switch (result) {
@@ -250,6 +279,9 @@ public:
         }
     }
 
+    /*!
+     * Returns the points awarded for \a result.
+     */
     static double pointsForResult(PartialResult result)
     {
         switch (result) {
@@ -268,6 +300,9 @@ public:
         }
     }
 
+    /*!
+     * Returns a localized string of \a result.
+     */
     static QString partialResultToString(PartialResult result)
     {
         switch (result) {
@@ -313,6 +348,13 @@ public:
         Q_UNREACHABLE();
     }
 
+    /*!
+     * Returns a localized string of the game result.
+     *
+     * \a whiteResult The result of the white player.
+     *
+     * \a blackResult The result of the black player.
+     */
     static QString resultToString(PartialResult whiteResult, PartialResult blackResult)
     {
         if (!Pairing::isBye(whiteResult)) {
@@ -407,7 +449,6 @@ public:
 
     /*!
      * \property Pairing::board
-     * \brief the board of the pairing
      *
      * This property holds the board of the pairing.
      */
@@ -415,7 +456,6 @@ public:
 
     /*!
      * \property Pairing::whitePlayer
-     * \brief the player with the white pieces
      *
      * This property holds the player with the white pieces.
      */
@@ -423,7 +463,6 @@ public:
 
     /*!
      * \property Pairing::whiteResult
-     * \brief the result of the white player
      *
      * This property holds the result of the player with the white pieces.
      */
@@ -431,7 +470,6 @@ public:
 
     /*!
      * \property Pairing::blackPlayer
-     * \brief the player with the black pieces
      *
      * This property holds the player with the black pieces.
      */
@@ -439,7 +477,6 @@ public:
 
     /*!
      * \property Pairing::blackResult
-     * \brief the result of the black player
      *
      * This property holds the result of the player with the black pieces.
      */
@@ -449,6 +486,11 @@ public:
 
     [[nodiscard]] QByteArray extraString() const;
 
+    /*!
+     * Returns the result of player \a p.
+     *
+     * If \a p is neither the white player or the black player, the behaviour is undefined.
+     */
     Pairing::PartialResult resultOfPlayer(Player *p)
     {
         if (p == m_whitePlayer) {
@@ -460,8 +502,14 @@ public:
         Q_UNREACHABLE();
     }
 
+    /*!
+     * Returns the opponent of \a player.
+     */
     Player *opponent(const Player *player);
 
+    /*!
+     * Returns the color of \a player.
+     */
     Color colorOfPlayer(const Player *player);
 
     /*!

@@ -11,7 +11,7 @@
 
 /*!
  * \class Event
- * \inmodule tournament
+ * \inmodule libtournament
  * \inheaderfile tournament/event.h
  */
 class Event : public QObject
@@ -29,7 +29,6 @@ public:
 
     /*!
      * \property Event::fileName
-     * \brief the file name of the event
      *
      * This property holds the file name of the event.
      */
@@ -40,8 +39,16 @@ public:
      */
     size_t numberOfTournaments();
 
+    /*!
+     * Creates a new event.
+     *
+     * \a fileName The location to save the event. If it is empty it will be stored in memory.
+     */
     std::expected<void, QString> create(const QString &fileName = {});
 
+    /*!
+     * Opens the event stored in \fileName.
+     */
     std::expected<void, QString> open(const QString &fileName);
 
     /*!
@@ -69,7 +76,7 @@ public:
     std::expected<void, QString> saveAs(const QString &fileName);
 
     /*!
-     * Deletes the event.
+     * Permanently deletes the event.
      *
      * Returns true if successful; false otherwise.
      */

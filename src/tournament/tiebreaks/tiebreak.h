@@ -12,6 +12,11 @@ class Tournament;
 class Player;
 class State;
 
+/*!
+ * \class Tiebreak
+ * \inmodule libtournament
+ * \inheaderfile tournament/tiebreaks/tiebreak.h
+ */
 class Tiebreak
 {
 public:

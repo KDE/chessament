@@ -7,13 +7,29 @@
 
 class Player;
 
+/*!
+ * \class Standing
+ * \inmodule libtournament
+ * \inheaderfile tournament/standing.h
+ */
 class Standing
 {
 public:
     explicit Standing(Player *player, std::vector<double> values);
 
+    /*!
+     * Returns the rank of the player.
+     */
     [[nodiscard]] int rank() const;
+
+    /*!
+     * Returns the player associated with this standing.
+     */
     [[nodiscard]] Player *player() const;
+
+    /*!
+     * Returns the tiebreak values of this player.
+     */
     [[nodiscard]] std::vector<double> values() const;
 
     void setRank(int rank);

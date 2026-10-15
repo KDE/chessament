@@ -13,6 +13,11 @@ class Tournament;
 
 #include "tournament.h"
 
+/*!
+ * \class PairingEngine
+ * \inmodule libtournament
+ * \inheaderfile tournament/pairingengine.h
+ */
 class PairingEngine : public QObject
 {
     Q_OBJECT

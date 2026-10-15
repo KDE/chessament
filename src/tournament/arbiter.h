@@ -7,6 +7,11 @@
 #include <QObject>
 #include <qqmlregistration.h>
 
+/*!
+ * \class Arbiter
+ * \inmodule libtournament
+ * \inheaderfile tournament/arbiter.h
+ */
 class Arbiter : public QObject
 {
     Q_OBJECT
@@ -19,6 +24,15 @@ class Arbiter : public QObject
     Q_PROPERTY(QString arbiterId READ arbiterId WRITE setArbiterId NOTIFY arbiterIdChanged)
 
 public:
+    /*!
+     * \enum Arbiter::Role
+     *
+     * This enum type specifies the role of the arbiter.
+     *
+     * \value Arbiter Arbiter.
+     * \value Chief Chief Arbiter.
+     * \value Deputy Deputy Chief Arbiter.
+     */
     enum class Role {
         Arbiter,
         Chief,
@@ -30,9 +44,32 @@ public:
 
     explicit Arbiter(const QString &name);
 
+    /*!
+     * \property Arbiter::role
+     *
+     * This property holds the role of the arbiter.
+     */
     [[nodiscard]] Arbiter::Role role() const;
+
+    /*!
+     * \property Arbiter::title
+     *
+     * This property holds the title of the arbiter.
+     */
     [[nodiscard]] QString title() const;
+
+    /*!
+     * \property Arbiter::name
+     *
+     * This property holds the name of the arbiter.
+     */
     [[nodiscard]] QString name() const;
+
+    /*!
+     * \property Arbiter::arbiterId
+     *
+     * This property holds the ID of the arbiter.
+     */
     [[nodiscard]] QString arbiterId() const;
 
     [[nodiscard]] QJsonObject toJson() const;

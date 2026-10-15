@@ -1,7 +1,9 @@
 /*!
     \module libtournament
     \title libtournament C++ Classes
-
+    \ingroup modules
+    \cmakepackage chessament
+    \cmakecomponent tournament
     \brief C++ library to manage chess tournaments.
 
 */

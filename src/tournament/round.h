@@ -7,6 +7,11 @@
 
 #include "pairing.h"
 
+/*!
+ * \class Round
+ * \inmodule libtournament
+ * \inheaderfile tournament/round.h
+ */
 class Round : public QObject
 {
     Q_OBJECT
@@ -20,14 +25,47 @@ class Round : public QObject
 public:
     explicit Round() = default;
 
+    /*!
+     * \property Round::id
+     *
+     * This property holds the database ID of the round.
+     */
     [[nodiscard]] int id() const;
+
+    /*!
+     * \property Round::number
+     *
+     * This property holds the round number.
+     */
     [[nodiscard]] int number() const;
+
+    /*!
+     * \property Round::dateTime
+     *
+     * This property holds the date and time of the round.
+     */
     [[nodiscard]] QDateTime dateTime() const;
+
     [[nodiscard]] QByteArray extraString() const;
 
+    /*!
+     * Returns the pairings of the round.
+     */
     [[nodiscard]] QList<Pairing *> pairings() const;
+
+    /*!
+     * Returns the pairing in board \a board.
+     */
     Pairing *pairing(int board);
+
+    /*!
+     * Adds \a pairing to the pairings of this round.
+     */
     void addPairing(std::unique_ptr<Pairing> pairing);
+
+    /*!
+     * Removes the pairings that meet \a predicate.
+     */
     void removePairings(std::function<bool(Pairing *)> predicate);
 
     [[nodiscard]] QJsonObject toJson() const;

@@ -33,7 +33,7 @@ using namespace Qt::StringLiterals;
 
 /*!
  * \class Tournament
- * \inmodule tournament
+ * \inmodule libtournament
  * \inheaderfile tournament/tournament.h
  */
 class Tournament : public QObject
@@ -55,7 +55,6 @@ class Tournament : public QObject
 public:
     /*!
      * \property Tournament::id
-     * \brief the ID of the tournament
      *
      * This property holds the database ID of the tournament.
      */
@@ -63,7 +62,6 @@ public:
 
     /*!
      * \property Tournament::name
-     * \brief the name of the tournament
      *
      * This property holds the name of the tournament.
      */
@@ -71,7 +69,6 @@ public:
 
     /*!
      * \property Tournament::city
-     * \brief the location of the tournament
      *
      * This property holds the location of the tournament.
      */
@@ -79,31 +76,32 @@ public:
 
     /*!
      * \property Tournament::federation
-     * \brief the federation of the tournament
      *
      * This property holds the federation of the tournament.
      */
     [[nodiscard]] QString federation() const;
 
+    /*!
+     * Returns the arbiters of the tournament.
+     */
     [[nodiscard]] Arbiters &arbiters();
 
     void saveArbiters();
 
+    /*!
+     * Returns the time control of the tournament.
+     */
     TimeControl &timeControl();
 
     void saveTimeControl();
 
     /*!
-     * \property Tournament::tiebreaks
-     * \brief the tiebreaks of the tournament
-     *
-     * This property holds the list of tiebreaks of the tournament.
+     * Returns the tiebreaks of the tournament.
      */
     [[nodiscard]] Tiebreaks &tiebreaks();
 
     /*!
      * \property Tournament::numberOfRounds
-     * \brief the number of rounds of the tournament
      *
      * This property holds the number of rounds of the tournament.
      */
@@ -111,12 +109,14 @@ public:
 
     /*!
      * \property Tournament::currentRound
-     * \brief the number of the current round of the tournament
      *
-     * The current round is the number of the last paired round, or 0 if the tournament has not started yet.
+     * This property holds the current round of the tournament. It is 0 if the tournament has not started yet.
      */
     [[nodiscard]] int currentRound() const;
 
+    /*!
+     * Returns the event that holds this tournament.
+     */
     [[nodiscard]] Event *getEvent() const;
 
     /*!
@@ -129,6 +129,9 @@ public:
      */
     std::expected<void, QString> addPlayer(std::unique_ptr<Player> player);
 
+    /*!
+     * Removes the player with starting rank \a startingRank.
+     */
     std::expected<void, QString> deletePlayer(int startingRank);
 
     /*!
@@ -146,7 +149,7 @@ public:
     /*!
      * Changes the starting rank of \a player to \a startingRank.
      *
-     * It adjusts the starting rank of other players if necessary.
+     * The starting rank of other players is adjusted if necessary.
      */
     int changePlayerStartingRank(Player *player, int startingRank);
 
@@ -156,7 +159,7 @@ public:
     QMap<uint, Player *> playersByStartingRank();
 
     /*!
-     * Returns the players grouped by their id.
+     * Returns the players grouped by their database ID.
      */
     QMap<QString, Player *> playersById();
 
@@ -167,6 +170,9 @@ public:
      */
     QHash<Player *, QList<Pairing *>> pairingsByPlayer(std::optional<int> maxRound = std::nullopt);
 
+    /*!
+     * Returns the pairings of \a player.
+     */
     QList<Pairing *> pairingsOfPlayer(Player *player);
 
     /*
@@ -209,10 +215,21 @@ public:
 
     bool hasRetired(Player *player);
 
+    /*!
+     * Sets a zero-point bye for all upcoming rounds for \a player.
+     */
     std::expected<void, QString> retire(Player *player);
 
+    /*!
+     * Removes all upcoming byes of \a player.
+     */
     std::expected<void, QString> incorpore(Player *player);
 
+    /*!
+     * Returns a list of players that have a voluntary bye in \a round.
+     *
+     * \sa Pairing::isVoluntaryBye()
+     */
     Q_INVOKABLE [[nodiscard]] QList<Player *> voluntaryByes(int round) const;
 
     /*!
@@ -220,6 +237,9 @@ public:
      */
     Pairing *pairing(int round, int board);
 
+    /*!
+     * Returns the pairing of \a player in round \a round.
+     */
     Pairing *pairing(int round, Player *player) const;
 
     /*!
@@ -230,7 +250,7 @@ public:
     /*!
      * Sorts the pairings of round \a round.
      *
-     * If \a round is negative, it sorts the pairings of all rounds.
+     * If \a round is null, it sorts the pairings of all rounds.
      */
     std::expected<void, QString> sortPairings(std::optional<int> round = std::nullopt);
 
@@ -264,6 +284,9 @@ public:
      */
     std::expected<void, QString> removePairings(int round, bool keepByes);
 
+    /*!
+     * Removes all pairings of \a player.
+     */
     std::expected<void, QString> deletePairings(Player *player);
 
     /*!
@@ -294,14 +317,15 @@ public:
 
     /*!
      * \property Tournament::numberOfPlayers
-     * \brief the number of players in the tournament
      *
      * This property holds the number of players in the tournament.
      */
     int numberOfPlayers();
 
     /*!
-     * Returns the number of rated players in the tournament.
+     * \property Tournament::numberOfRatedPlayers
+     *
+     * This property holds the number of rated players in the tournament.
      */
     int numberOfRatedPlayers();
 

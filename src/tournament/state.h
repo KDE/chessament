@@ -5,6 +5,11 @@
 
 #include "tournament.h"
 
+/*!
+ * \class State
+ * \inmodule libtournament
+ * \inheaderfile tournament/state.h
+ */
 class State
 {
 public:
