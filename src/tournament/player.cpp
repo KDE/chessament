@@ -300,7 +300,7 @@ std::string Player::toTrf(double points, int rank, bool normalize)
         gender = Utils::normalize(gender);
     }
 
-    return std::format("001 {:4} {:1.1}{:3.3} {:33.33} {:4} {:3.3} {:>11} {:10.10} {:4.1f} {:4}",
+    return std::format("001 {:4} {:1.1}{:3.3} {:33.33} {:4} {:3.3} {:>11.11} {:10.10} {:4.1f} {:4}",
                        m_startingRank,
                        gender.toStdString(),
                        title.toStdString(),
