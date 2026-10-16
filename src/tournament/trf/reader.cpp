@@ -114,7 +114,7 @@ std::expected<void, QString> TrfReader::readField(QStringView line)
         m_tournament->setName(value.trimmed().toString());
         break;
     case Trf::Field::City:
-        m_tournament->setCity(value.trimmed().toString());
+        m_tournament->setLocation(value.trimmed().toString());
         break;
     case Trf::Field::Federation:
         m_tournament->setFederation(value.trimmed().toString());

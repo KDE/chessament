@@ -31,7 +31,7 @@ void TrfWriter::write(QTextStream &stream)
 void TrfWriter::writeTournamentInformation(QTextStream &stream)
 {
     stream << Trf::reportFieldString(Trf::Field::TournamentName) << space << m_tournament->name() << newLine;
-    stream << Trf::reportFieldString(Trf::Field::City) << space << m_tournament->city() << newLine;
+    stream << Trf::reportFieldString(Trf::Field::City) << space << m_tournament->location() << newLine;
     stream << Trf::reportFieldString(Trf::Field::Federation) << space << m_tournament->federation() << newLine;
     stream << Trf::reportFieldString(Trf::Field::NumberOfPlayers) << space << m_tournament->numberOfPlayers() << newLine;
     stream << Trf::reportFieldString(Trf::Field::NumberOfRatedPlayers) << space << m_tournament->numberOfRatedPlayers() << newLine;

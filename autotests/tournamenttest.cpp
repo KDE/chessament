@@ -107,7 +107,7 @@ void TournamentTest::testImportTrf()
     auto t = *tournament;
 
     QCOMPARE(t->name(), u"Test Tournament"_s);
-    QCOMPARE(t->city(), u"Place"_s);
+    QCOMPARE(t->location(), u"Place"_s);
     QCOMPARE(t->federation(), u"ESP"_s);
     // QCOMPARE(t->timeControl(), u"8 min/player + 3 s/move"_s);
 
@@ -150,7 +150,7 @@ void TournamentTest::testLoadTournament()
     auto t = event->tournament(0);
 
     QCOMPARE(t->name(), u"Test Tournament"_s);
-    QCOMPARE(t->city(), u"Place"_s);
+    QCOMPARE(t->location(), u"Place"_s);
     QCOMPARE(t->federation(), u"ESP"_s);
     // QCOMPARE(t->timeControl(), u"8 min/player + 3 s/move"_s);
 

@@ -32,11 +32,10 @@ FormCard.FormCardPage {
         }
 
         FormCard.FormTextFieldDelegate {
-            id: city
-            label: KI18n.i18nc("@label:textbox", "City")
-            text: root.tournament.city
+            label: KI18n.i18nc("@label:textbox", "Location")
+            text: root.tournament.location
             onEditingFinished: {
-                root.tournament.city = text;
+                root.tournament.location = text;
             }
         }
 

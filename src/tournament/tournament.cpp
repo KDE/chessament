@@ -58,19 +58,19 @@ void Tournament::setName(const QString &name)
     Q_EMIT nameChanged();
 }
 
-QString Tournament::city() const
+QString Tournament::location() const
 {
-    return m_city;
+    return m_location;
 }
 
-void Tournament::setCity(const QString &city)
+void Tournament::setLocation(const QString &location)
 {
-    if (m_city == city) {
+    if (m_location == location) {
         return;
     }
-    m_city = city;
-    setOption(u"city"_s, city);
-    Q_EMIT cityChanged();
+    m_location = location;
+    setOption(u"location"_s, location);
+    Q_EMIT locationChanged();
 }
 
 QString Tournament::federation() const
@@ -1122,7 +1122,7 @@ QJsonObject Tournament::toJson() const
     tournament["name"_L1] = m_name;
     tournament["slug"_L1] = Utils::normalize(m_name.toLower()).replace(" "_L1, "-"_L1);
     tournament["federation"_L1] = m_federation;
-    tournament["city"_L1] = m_city;
+    tournament["location"_L1] = m_location;
     tournament["number_rounds"_L1] = m_numberOfRounds;
 
     QJsonArray players;
@@ -1151,8 +1151,8 @@ void Tournament::read(const QJsonObject &json)
         if (const auto v = tournament[QStringLiteral("name")]; v.isString()) {
             m_name = v.toString();
         }
-        if (const auto v = tournament[QStringLiteral("city")]; v.isString()) {
-            m_city = v.toString();
+        if (const auto v = tournament[QStringLiteral("location")]; v.isString()) {
+            m_location = v.toString();
         }
         if (const auto v = tournament[QStringLiteral("federation")]; v.isString()) {
             m_federation = v.toString();
@@ -1287,7 +1287,7 @@ std::expected<void, QString> Tournament::loadOptions()
     }
 
     setName(option(u"name"_s).toString());
-    setCity(option(u"city"_s).toString());
+    setLocation(option(u"location"_s).toString());
     setFederation(option(u"federation"_s).toString());
     setNumberOfRounds(option(u"number_of_rounds"_s).toInt());
     setCurrentRound(option(u"current_round"_s).toInt());

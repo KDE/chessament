@@ -44,7 +44,7 @@ class Tournament : public QObject
 
     Q_PROPERTY(QString id READ id WRITE setId NOTIFY idChanged)
     Q_PROPERTY(QString name READ name WRITE setName NOTIFY nameChanged)
-    Q_PROPERTY(QString city READ city WRITE setCity NOTIFY cityChanged)
+    Q_PROPERTY(QString location READ location WRITE setLocation NOTIFY locationChanged)
     Q_PROPERTY(QString federation READ federation WRITE setFederation NOTIFY federationChanged)
 
     Q_PROPERTY(int numberOfPlayers READ numberOfPlayers NOTIFY numberOfPlayersChanged)
@@ -68,11 +68,11 @@ public:
     [[nodiscard]] QString name() const;
 
     /*!
-     * \property Tournament::city
+     * \property Tournament::location
      *
      * This property holds the location of the tournament.
      */
-    [[nodiscard]] QString city() const;
+    [[nodiscard]] QString location() const;
 
     /*!
      * \property Tournament::federation
@@ -404,7 +404,7 @@ public:
 public Q_SLOTS:
     void setId(const QString &id);
     void setName(const QString &name);
-    void setCity(const QString &city);
+    void setLocation(const QString &location);
     void setFederation(const QString &federation);
     void setNumberOfRounds(int numberOfRounds);
     void setCurrentRound(int currentRound);
@@ -414,7 +414,7 @@ public Q_SLOTS:
 Q_SIGNALS:
     void idChanged();
     void nameChanged();
-    void cityChanged();
+    void locationChanged();
     void federationChanged();
 
     void numberOfPlayersChanged();
@@ -439,7 +439,7 @@ private:
 
     QString m_id;
     QString m_name;
-    QString m_city;
+    QString m_location;
     QString m_federation;
     Arbiters m_arbiters;
     TimeControl m_timeControl;
