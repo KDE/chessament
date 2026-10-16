@@ -89,6 +89,12 @@ FormCard.FormCardPage {
         title: KI18n.i18nc("@title:group", "Tiebreaks")
     }
     FormCard.FormCard {
+        FormCard.FormPlaceholderMessageDelegate {
+            text: KI18n.i18nc("@info:status", "No tiebreaks set up yet.")
+            icon.name: "view-list-details-symbolic"
+            visible: repeater.count === 0
+        }
+
         Repeater {
             id: repeater
 
