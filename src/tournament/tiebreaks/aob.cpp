@@ -7,28 +7,38 @@
 
 double AverageBuchholzOfOpponents::calculate(Tournament *tournament, State state, QList<Player *> players, Player *player)
 {
-    Q_UNUSED(tournament)
     Q_UNUSED(players)
 
     QHash<Player *, double> cache;
 
-    auto calculateBuchholz = [&state, &cache](Player *p) -> double {
+    auto calculateBuchholz = [&tournament, &state, &cache](Player *p) -> double {
         if (cache.contains(p)) {
             return cache[p];
         }
 
         double result = 0.;
+
         const auto pairings = state.pairings(p);
         for (const auto pairing : pairings) {
+            double value;
+
             const auto opponent = pairing->opponent(p);
 
             // Handle unplayed rounds of player
             if (Pairing::isUnplayed(pairing->whiteResult())) {
                 // 16.4: dummy opponent with the same points as the player
-                result += state.points(p);
+                value = state.points(p);
+
+                if (Pairing::isForfeit(pairing->whiteResult())) {
+                    value = std::min(value, state.pointsForTiebreaks(opponent));
+                } else {
+                    value = std::min(value, .5 * tournament->numberOfRounds());
+                }
             } else {
-                result += state.pointsForTiebreaks(opponent);
+                value = state.pointsForTiebreaks(opponent);
             }
+
+            result += value;
         }
 
         cache[p] = result;
@@ -49,7 +59,7 @@ double AverageBuchholzOfOpponents::calculate(Tournament *tournament, State state
     }
 
     if (count > 0) {
-        return std::round(100 * result / count) / 100.;
+        return std::round(1000 * result / count) / 1000.;
     }
 
     return 0.;
