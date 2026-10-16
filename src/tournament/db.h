@@ -31,6 +31,13 @@ const QString ADD_TOURNAMENT_QUERY = u"INSERT INTO tournaments(id) VALUES (:id);
 
 const QString GET_TOURNAMENTS_QUERY = u"SELECT * FROM tournaments;"_s;
 
+const QString EVENT_OPTIONS_TABLE_SCHEMA =
+    u"CREATE TABLE IF NOT EXISTS event_options("_s
+    u"name TEXT NOT NULL,"_s
+    u"value TEXT,"_s
+    u"PRIMARY KEY (name)"_s
+    u");"_s;
+
 const QString OPTIONS_TABLE_SCHEMA =
     u"CREATE TABLE IF NOT EXISTS options("_s
     u"tournament TEXT NOT NULL,"_s

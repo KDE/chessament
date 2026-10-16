@@ -193,6 +193,13 @@ void Event::closeDatabase()
 std::expected<void, QString> Event::createTables()
 {
     QSqlQuery query(db());
+    query.prepare(EVENT_OPTIONS_TABLE_SCHEMA);
+
+    if (!query.exec()) {
+        return std::unexpected(query.lastError().text());
+    }
+
+    query = QSqlQuery(db());
     query.prepare(TOURNAMENTS_TABLE_SCHEMA);
 
     if (!query.exec()) {
