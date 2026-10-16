@@ -58,7 +58,7 @@ FormCard.FormCardPage {
             Kirigami.Action {
                 icon.name: "list-add-symbolic"
                 text: KI18n.i18nc("@action:button Add time control period", "Add Period")
-                onTriggered: timeControlModel.addPeriod()
+                onTriggered: timeControl.addPeriod()
             }
         ]
     }
@@ -68,12 +68,12 @@ FormCard.FormCardPage {
 
             delegateModelAccess: DelegateModel.ReadWrite
             model: TimeControlModel {
-                id: timeControlModel
+                id: timeControl
                 tournament: root.tournament
             }
 
             TimeControlDelegate {
-                timeControlModel: timeControlModel
+                timeControlModel: timeControl
                 count: timeControlRepeater.count
             }
         }
@@ -81,7 +81,7 @@ FormCard.FormCardPage {
         FormCard.FormDelegateSeparator {}
 
         FormCard.FormTextDelegate {
-            text: timeControlModel.format
+            text: timeControl.format
         }
     }
 
@@ -94,7 +94,7 @@ FormCard.FormCardPage {
 
             delegateModelAccess: DelegateModel.ReadWrite
             model: TiebreakModel {
-                id: tiebreakModel
+                id: tiebreaks
                 tournament: root.tournament
 
                 onDataChanged: Controller.areStandingsValid = false
@@ -104,7 +104,7 @@ FormCard.FormCardPage {
 
             TiebreakDelegate {
                 count: repeater.count
-                tiebreakModel: tiebreakModel
+                tiebreakModel: tiebreaks
             }
         }
 
@@ -119,7 +119,7 @@ FormCard.FormCardPage {
                     "tournament": root.tournament
                 }) as AddTiebreakDialog;
                 dialog.accepted.connect(() => {
-                    tiebreakModel.addTiebreak(dialog.tiebreak);
+                    tiebreaks.addTiebreak(dialog.tiebreak);
                 });
                 dialog.open();
             }
