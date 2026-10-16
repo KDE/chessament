@@ -179,7 +179,7 @@ TimeControl::Format TimeControl::format() const
     if (duration < 60min) {
         return TimeControl::Format::Rapid;
     }
-    return TimeControl::Format::Classical;
+    return TimeControl::Format::Standard;
 }
 
 QJsonObject TimeControl::toJson() const

@@ -33,7 +33,7 @@ struct TimeControl {
     enum class Format {
         Blitz,
         Rapid,
-        Classical,
+        Standard,
     };
 
     explicit TimeControl() = default;

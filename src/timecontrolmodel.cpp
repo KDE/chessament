@@ -38,8 +38,8 @@ QString TimeControlModel::format() const
         return i18nc("@info", "The time control is Blitz.");
     case TimeControl::Format::Rapid:
         return i18nc("@info", "The time control is Rapid.");
-    case TimeControl::Format::Classical:
-        return i18nc("@info", "The time control is Classical.");
+    case TimeControl::Format::Standard:
+        return i18nc("@info", "The time control is Standard.");
     }
 
     Q_UNREACHABLE();
