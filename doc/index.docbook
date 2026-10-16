@@ -150,10 +150,22 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 					<para>Number of Games Won (over the board) (<acronym>WON</acronym>)</para>
 				</listitem>
 				<listitem>
+					<para>Number of Games Won with Black (over the board) (<acronym>BWG</acronym>)</para>
+				</listitem>
+				<listitem>
 					<para>Number of Wins (<acronym>WIN</acronym>)</para>
 				</listitem>
 				<listitem>
+					<para>Rounds one Elected to Play (<acronym>REP</acronym>)</para>
+				</listitem>
+				<listitem>
+					<para>Sonneborn-Berger (<acronym>SB</acronym>)</para>
+				</listitem>
+				<listitem>
 					<para>Points (<acronym>PTS</acronym>)</para>
+				</listitem>
+				<listitem>
+					<para>Progressive (<acronym>PS</acronym>)</para>
 				</listitem>
 			</itemizedlist>
 		</sect1>
