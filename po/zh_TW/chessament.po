@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-14 00:42+0000\n"
+"POT-Creation-Date: 2026-10-16 00:44+0000\n"
 "PO-Revision-Date: 2025-09-29 01:32+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -1069,25 +1069,25 @@ msgctxt "FIDE Federation"
 msgid "Wales"
 msgstr ""
 
-#: tournament/pairing.h:277 tournament/pairing.h:293 tournament/pairing.h:297
+#: tournament/pairing.h:312 tournament/pairing.h:328 tournament/pairing.h:332
 #, kde-format
 msgctxt "@item Game result: draw"
 msgid "½"
 msgstr ""
 
-#: tournament/pairing.h:281
+#: tournament/pairing.h:316
 #, kde-format
 msgctxt "@item Game result: win by forfeit"
 msgid "+"
 msgstr ""
 
-#: tournament/pairing.h:283
+#: tournament/pairing.h:318
 #, kde-format
 msgctxt "@item Game result: lost by forfeit"
 msgid "-"
 msgstr ""
 
-#: tournament/pairing.h:286
+#: tournament/pairing.h:321
 #, kde-format
 msgctxt ""
 "@item Game result. %1 is the points obtained, but the game is unrated. The "
@@ -1095,7 +1095,7 @@ msgctxt ""
 msgid "%1U"
 msgstr ""
 
-#: tournament/pairing.h:290 tournament/pairing.h:294
+#: tournament/pairing.h:325 tournament/pairing.h:329
 #, kde-format
 msgctxt ""
 "@item Game result: %1 is the points obtained, but the game is unrated. The "
@@ -1103,13 +1103,13 @@ msgctxt ""
 msgid "%1U"
 msgstr ""
 
-#: tournament/pairing.h:298 tournament/pairing.h:302 tournament/pairing.h:306
+#: tournament/pairing.h:333 tournament/pairing.h:337 tournament/pairing.h:341
 #, kde-format
 msgctxt "@item Game result, %1 is the points awarded for the bye"
 msgid "Bye (%1)"
 msgstr ""
 
-#: tournament/pairing.h:309
+#: tournament/pairing.h:344
 #, kde-format
 msgctxt "@item Game result: pairing-allocated bye. Keep it short"
 msgid "Bye (Pairing)"
