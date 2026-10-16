@@ -1232,6 +1232,9 @@ std::expected<void, QString> Tournament::createNewTournament()
 
     setId(newId);
 
+    saveTimeControl();
+    saveTiebreaks();
+
     return {};
 }
 
