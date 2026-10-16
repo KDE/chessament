@@ -122,7 +122,7 @@ Controls.MenuBar {
         Kirigami.Action {
             AC.ActionCollection.action: "UpdatePlayers"
             AC.ActionCollection.collection: "org.kde.chessament.tournament"
-            enabled: Config.developer && Controller.hasOpenTournament && Controller.tournament.numberOfPlayers > 0
+            enabled: Controller.hasOpenTournament && Controller.tournament.numberOfPlayers > 0
             onTriggered: function (): void {
                 const dialog = Qt.createComponent("org.kde.chessament", "UpdateRatingsDialog").createObject(root.Controls.ApplicationWindow.window, {}) as UpdateRatingsDialog;
                 dialog.open();
