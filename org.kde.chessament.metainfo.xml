@@ -124,7 +124,7 @@
     <name>The KDE Community</name>
     <url>https://kde.org</url>
   </developer>
-  <content_rating type="oars-1.1" />
+  <content_rating type="oars-1.1"/>
   <screenshots>
     <screenshot type="default">
       <image width="2260" height="1716">https://cdn.kde.org/screenshots/chessament/chessament.png</image>
