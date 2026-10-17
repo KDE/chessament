@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-16 00:44+0000\n"
+"POT-Creation-Date: 2026-10-17 00:45+0000\n"
 "PO-Revision-Date: 2026-09-05 10:00+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -347,7 +347,7 @@ msgctxt "@label:textbox"
 msgid "Birth date"
 msgstr "Syntymäaika"
 
-#: qml/AddPlayerDialog.qml:128 tournament/qml/SettingsInformationPage.qml:45
+#: qml/AddPlayerDialog.qml:128 tournament/qml/SettingsInformationPage.qml:44
 msgctxt "@label:textbox"
 msgid "Federation"
 msgstr "Liitto"
@@ -1069,10 +1069,12 @@ msgid "The time control is Rapid."
 msgstr "Ajanhallintana on Rapid."
 
 #: timecontrolmodel.cpp:42
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@info"
+#| msgid "The time control is Rapid."
 msgctxt "@info"
-msgid "The time control is Classical."
-msgstr "Ajanhallintana on perinteinen."
+msgid "The time control is Standard."
+msgstr "Ajanhallintana on Rapid."
 
 #: tournament/event.cpp:166 tournament/event.cpp:175
 #, kde-kuit-format
@@ -1256,7 +1258,15 @@ msgctxt "@title:group"
 msgid "Tiebreaks"
 msgstr "Katkaisupelit"
 
-#: tournament/qml/SettingsFormatPage.qml:114
+#: tournament/qml/SettingsFormatPage.qml:93
+#, fuzzy
+#| msgctxt "@info:status"
+#| msgid "No arbiters yet."
+msgctxt "@info:status"
+msgid "No tiebreaks set up yet."
+msgstr "Tuomareita ei vielä ole."
+
+#: tournament/qml/SettingsFormatPage.qml:120
 msgctxt "@action:button"
 msgid "Add Tiebreak"
 msgstr "Lisää katkaisupeli"
@@ -1276,22 +1286,25 @@ msgctxt "@label:textbox"
 msgid "Tournament name"
 msgstr "Turnauksen nimi"
 
-#: tournament/qml/SettingsInformationPage.qml:36
+#: tournament/qml/SettingsInformationPage.qml:35
+#, fuzzy
+#| msgctxt "@action:button"
+#| msgid "Information"
 msgctxt "@label:textbox"
-msgid "City"
-msgstr "Kaupunki"
+msgid "Location"
+msgstr "Tietoa"
 
-#: tournament/qml/SettingsInformationPage.qml:54
+#: tournament/qml/SettingsInformationPage.qml:53
 msgctxt "@title:group"
 msgid "Arbiters"
 msgstr "Tuomarit"
 
-#: tournament/qml/SettingsInformationPage.qml:58
+#: tournament/qml/SettingsInformationPage.qml:57
 msgctxt "@action:button"
 msgid "Add Arbiter"
 msgstr "Lisää tuomari"
 
-#: tournament/qml/SettingsInformationPage.qml:65
+#: tournament/qml/SettingsInformationPage.qml:64
 msgctxt "@info:status"
 msgid "No arbiters yet."
 msgstr "Tuomareita ei vielä ole."
@@ -1520,6 +1533,14 @@ msgstr "Tuntematon tulos ”%1” parissa ”%2”."
 #| msgid "Pairing \"%1\" has no opponent."
 msgid "Pairing “%1” has no opponent."
 msgstr "Parituksessa ”%1” ei ole vastapelaajaa."
+
+#~ msgctxt "@info"
+#~ msgid "The time control is Classical."
+#~ msgstr "Ajanhallintana on perinteinen."
+
+#~ msgctxt "@label:textbox"
+#~ msgid "City"
+#~ msgstr "Kaupunki"
 
 #~ msgctxt "@title"
 #~ msgid "Chessament"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-16 00:44+0000\n"
+"POT-Creation-Date: 2026-10-17 00:45+0000\n"
 "PO-Revision-Date: 2025-06-22 16:06+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.gal>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -375,7 +375,7 @@ msgctxt "@label:textbox"
 msgid "Birth date"
 msgstr "Data de nacemento"
 
-#: qml/AddPlayerDialog.qml:128 tournament/qml/SettingsInformationPage.qml:45
+#: qml/AddPlayerDialog.qml:128 tournament/qml/SettingsInformationPage.qml:44
 msgctxt "@label:textbox"
 msgid "Federation"
 msgstr "Federación"
@@ -1174,7 +1174,7 @@ msgstr ""
 #: timecontrolmodel.cpp:42
 #, kde-format
 msgctxt "@info"
-msgid "The time control is Classical."
+msgid "The time control is Standard."
 msgstr ""
 
 #: tournament/event.cpp:166 tournament/event.cpp:175
@@ -1365,7 +1365,15 @@ msgctxt "@title:group"
 msgid "Tiebreaks"
 msgstr ""
 
-#: tournament/qml/SettingsFormatPage.qml:114
+#: tournament/qml/SettingsFormatPage.qml:93
+#, fuzzy
+#| msgctxt "@info:placeholder"
+#| msgid "No players yet"
+msgctxt "@info:status"
+msgid "No tiebreaks set up yet."
+msgstr "Aínda non hai participantes"
+
+#: tournament/qml/SettingsFormatPage.qml:120
 msgctxt "@action:button"
 msgid "Add Tiebreak"
 msgstr ""
@@ -1385,22 +1393,25 @@ msgctxt "@label:textbox"
 msgid "Tournament name"
 msgstr "Nome do torneo"
 
-#: tournament/qml/SettingsInformationPage.qml:36
+#: tournament/qml/SettingsInformationPage.qml:35
+#, fuzzy
+#| msgctxt "@action:button"
+#| msgid "Information"
 msgctxt "@label:textbox"
-msgid "City"
-msgstr "Cidade"
+msgid "Location"
+msgstr "Información"
 
-#: tournament/qml/SettingsInformationPage.qml:54
+#: tournament/qml/SettingsInformationPage.qml:53
 msgctxt "@title:group"
 msgid "Arbiters"
 msgstr ""
 
-#: tournament/qml/SettingsInformationPage.qml:58
+#: tournament/qml/SettingsInformationPage.qml:57
 msgctxt "@action:button"
 msgid "Add Arbiter"
 msgstr ""
 
-#: tournament/qml/SettingsInformationPage.qml:65
+#: tournament/qml/SettingsInformationPage.qml:64
 #, fuzzy
 #| msgctxt "@info:placeholder"
 #| msgid "No players yet"
@@ -1634,6 +1645,10 @@ msgstr "O resultado «%1» do emparellamento «%2» é descoñecido."
 #| msgid "Pairing \"%1\" has no opponent."
 msgid "Pairing “%1” has no opponent."
 msgstr "O emparellamento «%1» non ten opoñente."
+
+#~ msgctxt "@label:textbox"
+#~ msgid "City"
+#~ msgstr "Cidade"
 
 #~ msgctxt "@title"
 #~ msgid "Chessament"

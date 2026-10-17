@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-16 00:44+0000\n"
+"POT-Creation-Date: 2026-10-17 00:45+0000\n"
 "PO-Revision-Date: 2026-10-08 18:58+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -331,7 +331,7 @@ msgctxt "@label:textbox"
 msgid "Birth date"
 msgstr "Doğum tarihi"
 
-#: qml/AddPlayerDialog.qml:128 tournament/qml/SettingsInformationPage.qml:45
+#: qml/AddPlayerDialog.qml:128 tournament/qml/SettingsInformationPage.qml:44
 msgctxt "@label:textbox"
 msgid "Federation"
 msgstr "Federasyon"
@@ -1002,10 +1002,12 @@ msgid "The time control is Rapid."
 msgstr "Zaman denetimi Hızlı olarak ayarlı."
 
 #: timecontrolmodel.cpp:42
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@info"
+#| msgid "The time control is Rapid."
 msgctxt "@info"
-msgid "The time control is Classical."
-msgstr "Zaman denetimi Klasik olarak ayarlı."
+msgid "The time control is Standard."
+msgstr "Zaman denetimi Hızlı olarak ayarlı."
 
 #: tournament/event.cpp:166 tournament/event.cpp:175
 #, kde-kuit-format
@@ -1182,7 +1184,15 @@ msgctxt "@title:group"
 msgid "Tiebreaks"
 msgstr "Eşitlik Bozmalar"
 
-#: tournament/qml/SettingsFormatPage.qml:114
+#: tournament/qml/SettingsFormatPage.qml:93
+#, fuzzy
+#| msgctxt "@info:status"
+#| msgid "No arbiters yet."
+msgctxt "@info:status"
+msgid "No tiebreaks set up yet."
+msgstr "Henüz hakem yok"
+
+#: tournament/qml/SettingsFormatPage.qml:120
 msgctxt "@action:button"
 msgid "Add Tiebreak"
 msgstr "Eşitlik Bozma Ekle"
@@ -1202,22 +1212,25 @@ msgctxt "@label:textbox"
 msgid "Tournament name"
 msgstr "Turnuva adı"
 
-#: tournament/qml/SettingsInformationPage.qml:36
+#: tournament/qml/SettingsInformationPage.qml:35
+#, fuzzy
+#| msgctxt "@action:button"
+#| msgid "Information"
 msgctxt "@label:textbox"
-msgid "City"
-msgstr "Şehir"
+msgid "Location"
+msgstr "Bilgi"
 
-#: tournament/qml/SettingsInformationPage.qml:54
+#: tournament/qml/SettingsInformationPage.qml:53
 msgctxt "@title:group"
 msgid "Arbiters"
 msgstr "Hakemler"
 
-#: tournament/qml/SettingsInformationPage.qml:58
+#: tournament/qml/SettingsInformationPage.qml:57
 msgctxt "@action:button"
 msgid "Add Arbiter"
 msgstr "Hakem Ekle"
 
-#: tournament/qml/SettingsInformationPage.qml:65
+#: tournament/qml/SettingsInformationPage.qml:64
 msgctxt "@info:status"
 msgid "No arbiters yet."
 msgstr "Henüz hakem yok"
@@ -1433,6 +1446,14 @@ msgstr "“%2” eşleşmesinde bilinmeyen sonuç “%1”."
 #, kde-format
 msgid "Pairing “%1” has no opponent."
 msgstr "“%1” eşleşmesinin bir rakibi yok."
+
+#~ msgctxt "@info"
+#~ msgid "The time control is Classical."
+#~ msgstr "Zaman denetimi Klasik olarak ayarlı."
+
+#~ msgctxt "@label:textbox"
+#~ msgid "City"
+#~ msgstr "Şehir"
 
 #~ msgctxt "@title"
 #~ msgid "Chessament"

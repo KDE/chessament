@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-16 00:44+0000\n"
+"POT-Creation-Date: 2026-10-17 00:45+0000\n"
 "PO-Revision-Date: 2026-08-29 17:40+0200\n"
 "Last-Translator: Philipp Kiemle <l10n.daphipz@fastmail.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -345,7 +345,7 @@ msgctxt "@label:textbox"
 msgid "Birth date"
 msgstr "Geburtsdatum"
 
-#: qml/AddPlayerDialog.qml:128 tournament/qml/SettingsInformationPage.qml:45
+#: qml/AddPlayerDialog.qml:128 tournament/qml/SettingsInformationPage.qml:44
 msgctxt "@label:textbox"
 msgid "Federation"
 msgstr "Verband"
@@ -1066,7 +1066,7 @@ msgstr ""
 #: timecontrolmodel.cpp:42
 #, kde-format
 msgctxt "@info"
-msgid "The time control is Classical."
+msgid "The time control is Standard."
 msgstr ""
 
 #: tournament/event.cpp:166 tournament/event.cpp:175
@@ -1254,7 +1254,15 @@ msgctxt "@title:group"
 msgid "Tiebreaks"
 msgstr ""
 
-#: tournament/qml/SettingsFormatPage.qml:114
+#: tournament/qml/SettingsFormatPage.qml:93
+#, fuzzy
+#| msgctxt "@info:status"
+#| msgid "No arbiters yet."
+msgctxt "@info:status"
+msgid "No tiebreaks set up yet."
+msgstr "Bisher noch keine Schiedsrichter vorhanden."
+
+#: tournament/qml/SettingsFormatPage.qml:120
 msgctxt "@action:button"
 msgid "Add Tiebreak"
 msgstr "Tie-Break hinzufügen"
@@ -1274,22 +1282,25 @@ msgctxt "@label:textbox"
 msgid "Tournament name"
 msgstr "Turniername"
 
-#: tournament/qml/SettingsInformationPage.qml:36
+#: tournament/qml/SettingsInformationPage.qml:35
+#, fuzzy
+#| msgctxt "@action:button"
+#| msgid "Information"
 msgctxt "@label:textbox"
-msgid "City"
-msgstr "Stadt"
+msgid "Location"
+msgstr "Information"
 
-#: tournament/qml/SettingsInformationPage.qml:54
+#: tournament/qml/SettingsInformationPage.qml:53
 msgctxt "@title:group"
 msgid "Arbiters"
 msgstr "Schiedsrichter"
 
-#: tournament/qml/SettingsInformationPage.qml:58
+#: tournament/qml/SettingsInformationPage.qml:57
 msgctxt "@action:button"
 msgid "Add Arbiter"
 msgstr "Schiedsrichter hinzufügen"
 
-#: tournament/qml/SettingsInformationPage.qml:65
+#: tournament/qml/SettingsInformationPage.qml:64
 msgctxt "@info:status"
 msgid "No arbiters yet."
 msgstr "Bisher noch keine Schiedsrichter vorhanden."
@@ -1524,6 +1535,10 @@ msgstr "Unbekanntes Ergebnis „%1“ in Paarung „%2“."
 #| msgid "Pairing \"%1\" has no opponent."
 msgid "Pairing “%1” has no opponent."
 msgstr "Die Paarung „%1“ hat keinen Gegner."
+
+#~ msgctxt "@label:textbox"
+#~ msgid "City"
+#~ msgstr "Stadt"
 
 #~ msgctxt "@title"
 #~ msgid "Chessament"

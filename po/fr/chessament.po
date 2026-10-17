@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-16 00:44+0000\n"
+"POT-Creation-Date: 2026-10-17 00:45+0000\n"
 "PO-Revision-Date: 2026-10-03 18:23+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: fr\n"
@@ -346,7 +346,7 @@ msgctxt "@label:textbox"
 msgid "Birth date"
 msgstr "Date de naissance"
 
-#: qml/AddPlayerDialog.qml:128 tournament/qml/SettingsInformationPage.qml:45
+#: qml/AddPlayerDialog.qml:128 tournament/qml/SettingsInformationPage.qml:44
 msgctxt "@label:textbox"
 msgid "Federation"
 msgstr "Fédération"
@@ -1062,10 +1062,12 @@ msgid "The time control is Rapid."
 msgstr "Le contrôle du temps est « Rapide »."
 
 #: timecontrolmodel.cpp:42
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@info"
+#| msgid "The time control is Rapid."
 msgctxt "@info"
-msgid "The time control is Classical."
-msgstr "Le contrôle du temps est « Classique »."
+msgid "The time control is Standard."
+msgstr "Le contrôle du temps est « Rapide »."
 
 #: tournament/event.cpp:166 tournament/event.cpp:175
 #, kde-kuit-format
@@ -1249,7 +1251,15 @@ msgctxt "@title:group"
 msgid "Tiebreaks"
 msgstr "Manches décisives"
 
-#: tournament/qml/SettingsFormatPage.qml:114
+#: tournament/qml/SettingsFormatPage.qml:93
+#, fuzzy
+#| msgctxt "@info:status"
+#| msgid "No arbiters yet."
+msgctxt "@info:status"
+msgid "No tiebreaks set up yet."
+msgstr "Aucun arbitre pour le moment."
+
+#: tournament/qml/SettingsFormatPage.qml:120
 msgctxt "@action:button"
 msgid "Add Tiebreak"
 msgstr "Ajouter une manche décisive"
@@ -1269,22 +1279,25 @@ msgctxt "@label:textbox"
 msgid "Tournament name"
 msgstr "Nom du tournoi"
 
-#: tournament/qml/SettingsInformationPage.qml:36
+#: tournament/qml/SettingsInformationPage.qml:35
+#, fuzzy
+#| msgctxt "@action:button"
+#| msgid "Information"
 msgctxt "@label:textbox"
-msgid "City"
-msgstr "Ville"
+msgid "Location"
+msgstr "Information"
 
-#: tournament/qml/SettingsInformationPage.qml:54
+#: tournament/qml/SettingsInformationPage.qml:53
 msgctxt "@title:group"
 msgid "Arbiters"
 msgstr "Arbitres"
 
-#: tournament/qml/SettingsInformationPage.qml:58
+#: tournament/qml/SettingsInformationPage.qml:57
 msgctxt "@action:button"
 msgid "Add Arbiter"
 msgstr "Ajouter un arbitre"
 
-#: tournament/qml/SettingsInformationPage.qml:65
+#: tournament/qml/SettingsInformationPage.qml:64
 msgctxt "@info:status"
 msgid "No arbiters yet."
 msgstr "Aucun arbitre pour le moment."
@@ -1516,6 +1529,14 @@ msgstr "Résultat inconnu « %1 » pour le couplage « %2 »."
 #| msgid "Pairing \"%1\" has no opponent."
 msgid "Pairing “%1” has no opponent."
 msgstr "Le couplage « %1 » n'a pas d'adversaire."
+
+#~ msgctxt "@info"
+#~ msgid "The time control is Classical."
+#~ msgstr "Le contrôle du temps est « Classique »."
+
+#~ msgctxt "@label:textbox"
+#~ msgid "City"
+#~ msgstr "Ville"
 
 #~ msgctxt "@title"
 #~ msgid "Chessament"

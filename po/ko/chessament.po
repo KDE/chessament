@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-16 00:44+0000\n"
+"POT-Creation-Date: 2026-10-17 00:45+0000\n"
 "PO-Revision-Date: 2025-07-21 00:46+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -351,7 +351,7 @@ msgctxt "@label:textbox"
 msgid "Birth date"
 msgstr ""
 
-#: qml/AddPlayerDialog.qml:128 tournament/qml/SettingsInformationPage.qml:45
+#: qml/AddPlayerDialog.qml:128 tournament/qml/SettingsInformationPage.qml:44
 msgctxt "@label:textbox"
 msgid "Federation"
 msgstr "연합"
@@ -1066,7 +1066,7 @@ msgstr ""
 #: timecontrolmodel.cpp:42
 #, kde-format
 msgctxt "@info"
-msgid "The time control is Classical."
+msgid "The time control is Standard."
 msgstr ""
 
 #: tournament/event.cpp:166 tournament/event.cpp:175
@@ -1245,7 +1245,12 @@ msgctxt "@title:group"
 msgid "Tiebreaks"
 msgstr ""
 
-#: tournament/qml/SettingsFormatPage.qml:114
+#: tournament/qml/SettingsFormatPage.qml:93
+msgctxt "@info:status"
+msgid "No tiebreaks set up yet."
+msgstr ""
+
+#: tournament/qml/SettingsFormatPage.qml:120
 msgctxt "@action:button"
 msgid "Add Tiebreak"
 msgstr ""
@@ -1265,22 +1270,22 @@ msgctxt "@label:textbox"
 msgid "Tournament name"
 msgstr ""
 
-#: tournament/qml/SettingsInformationPage.qml:36
+#: tournament/qml/SettingsInformationPage.qml:35
 msgctxt "@label:textbox"
-msgid "City"
+msgid "Location"
 msgstr ""
 
-#: tournament/qml/SettingsInformationPage.qml:54
+#: tournament/qml/SettingsInformationPage.qml:53
 msgctxt "@title:group"
 msgid "Arbiters"
 msgstr ""
 
-#: tournament/qml/SettingsInformationPage.qml:58
+#: tournament/qml/SettingsInformationPage.qml:57
 msgctxt "@action:button"
 msgid "Add Arbiter"
 msgstr ""
 
-#: tournament/qml/SettingsInformationPage.qml:65
+#: tournament/qml/SettingsInformationPage.qml:64
 msgctxt "@info:status"
 msgid "No arbiters yet."
 msgstr ""

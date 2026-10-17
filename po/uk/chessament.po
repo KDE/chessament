@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-16 00:44+0000\n"
+"POT-Creation-Date: 2026-10-17 00:45+0000\n"
 "PO-Revision-Date: 2026-10-08 17:57+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -338,7 +338,7 @@ msgctxt "@label:textbox"
 msgid "Birth date"
 msgstr "Дата народження"
 
-#: qml/AddPlayerDialog.qml:128 tournament/qml/SettingsInformationPage.qml:45
+#: qml/AddPlayerDialog.qml:128 tournament/qml/SettingsInformationPage.qml:44
 msgctxt "@label:textbox"
 msgid "Federation"
 msgstr "Федерація"
@@ -1031,10 +1031,12 @@ msgid "The time control is Rapid."
 msgstr "Часовим регламентом є «Швидкі»."
 
 #: timecontrolmodel.cpp:42
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@info"
+#| msgid "The time control is Rapid."
 msgctxt "@info"
-msgid "The time control is Classical."
-msgstr "Часовим регламентом є «Класичні»."
+msgid "The time control is Standard."
+msgstr "Часовим регламентом є «Швидкі»."
 
 #: tournament/event.cpp:166 tournament/event.cpp:175
 #, kde-kuit-format
@@ -1214,7 +1216,15 @@ msgctxt "@title:group"
 msgid "Tiebreaks"
 msgstr "Тай-брейки"
 
-#: tournament/qml/SettingsFormatPage.qml:114
+#: tournament/qml/SettingsFormatPage.qml:93
+#, fuzzy
+#| msgctxt "@info:status"
+#| msgid "No arbiters yet."
+msgctxt "@info:status"
+msgid "No tiebreaks set up yet."
+msgstr "Судей ще немає."
+
+#: tournament/qml/SettingsFormatPage.qml:120
 msgctxt "@action:button"
 msgid "Add Tiebreak"
 msgstr "Додати тай-брейк"
@@ -1234,22 +1244,25 @@ msgctxt "@label:textbox"
 msgid "Tournament name"
 msgstr "Назва турніру"
 
-#: tournament/qml/SettingsInformationPage.qml:36
+#: tournament/qml/SettingsInformationPage.qml:35
+#, fuzzy
+#| msgctxt "@action:button"
+#| msgid "Information"
 msgctxt "@label:textbox"
-msgid "City"
-msgstr "Місто"
+msgid "Location"
+msgstr "Відомості"
 
-#: tournament/qml/SettingsInformationPage.qml:54
+#: tournament/qml/SettingsInformationPage.qml:53
 msgctxt "@title:group"
 msgid "Arbiters"
 msgstr "Судді"
 
-#: tournament/qml/SettingsInformationPage.qml:58
+#: tournament/qml/SettingsInformationPage.qml:57
 msgctxt "@action:button"
 msgid "Add Arbiter"
 msgstr "Додати суддю"
 
-#: tournament/qml/SettingsInformationPage.qml:65
+#: tournament/qml/SettingsInformationPage.qml:64
 msgctxt "@info:status"
 msgid "No arbiters yet."
 msgstr "Судей ще немає."
@@ -1472,6 +1485,14 @@ msgstr "Невідомий результат «%1» у поділі на пар
 #, kde-format
 msgid "Pairing “%1” has no opponent."
 msgstr "У парах «%1» немає суперника."
+
+#~ msgctxt "@info"
+#~ msgid "The time control is Classical."
+#~ msgstr "Часовим регламентом є «Класичні»."
+
+#~ msgctxt "@label:textbox"
+#~ msgid "City"
+#~ msgstr "Місто"
 
 #~ msgctxt "@title"
 #~ msgid "Chessament"

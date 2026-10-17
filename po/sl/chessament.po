@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-16 00:44+0000\n"
+"POT-Creation-Date: 2026-10-17 00:45+0000\n"
 "PO-Revision-Date: 2026-10-08 07:12+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -335,7 +335,7 @@ msgctxt "@label:textbox"
 msgid "Birth date"
 msgstr "Datum rojstva"
 
-#: qml/AddPlayerDialog.qml:128 tournament/qml/SettingsInformationPage.qml:45
+#: qml/AddPlayerDialog.qml:128 tournament/qml/SettingsInformationPage.qml:44
 msgctxt "@label:textbox"
 msgid "Federation"
 msgstr "Zveza"
@@ -1028,10 +1028,12 @@ msgid "The time control is Rapid."
 msgstr "Časovna kontrola je Rapid."
 
 #: timecontrolmodel.cpp:42
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@info"
+#| msgid "The time control is Rapid."
 msgctxt "@info"
-msgid "The time control is Classical."
-msgstr "Časovna kontrola je Clasical."
+msgid "The time control is Standard."
+msgstr "Časovna kontrola je Rapid."
 
 #: tournament/event.cpp:166 tournament/event.cpp:175
 #, kde-kuit-format
@@ -1211,7 +1213,15 @@ msgctxt "@title:group"
 msgid "Tiebreaks"
 msgstr "Tiebreaki"
 
-#: tournament/qml/SettingsFormatPage.qml:114
+#: tournament/qml/SettingsFormatPage.qml:93
+#, fuzzy
+#| msgctxt "@info:status"
+#| msgid "No arbiters yet."
+msgctxt "@info:status"
+msgid "No tiebreaks set up yet."
+msgstr "Še ni razsodnikov."
+
+#: tournament/qml/SettingsFormatPage.qml:120
 msgctxt "@action:button"
 msgid "Add Tiebreak"
 msgstr "Dodaj Tiebreak"
@@ -1231,22 +1241,25 @@ msgctxt "@label:textbox"
 msgid "Tournament name"
 msgstr "Ime turnirja"
 
-#: tournament/qml/SettingsInformationPage.qml:36
+#: tournament/qml/SettingsInformationPage.qml:35
+#, fuzzy
+#| msgctxt "@action:button"
+#| msgid "Information"
 msgctxt "@label:textbox"
-msgid "City"
-msgstr "Mesto"
+msgid "Location"
+msgstr "Informacije"
 
-#: tournament/qml/SettingsInformationPage.qml:54
+#: tournament/qml/SettingsInformationPage.qml:53
 msgctxt "@title:group"
 msgid "Arbiters"
 msgstr "Razsodniki"
 
-#: tournament/qml/SettingsInformationPage.qml:58
+#: tournament/qml/SettingsInformationPage.qml:57
 msgctxt "@action:button"
 msgid "Add Arbiter"
 msgstr "Dodaj razsodnika"
 
-#: tournament/qml/SettingsInformationPage.qml:65
+#: tournament/qml/SettingsInformationPage.qml:64
 msgctxt "@info:status"
 msgid "No arbiters yet."
 msgstr "Še ni razsodnikov."
@@ -1469,6 +1482,14 @@ msgstr "Neznan rezultat \"%1\" pri uparjanju \"%2\"."
 #, kde-format
 msgid "Pairing “%1” has no opponent."
 msgstr "Uparjanje \"%1\" nima nasprotnika."
+
+#~ msgctxt "@info"
+#~ msgid "The time control is Classical."
+#~ msgstr "Časovna kontrola je Clasical."
+
+#~ msgctxt "@label:textbox"
+#~ msgid "City"
+#~ msgstr "Mesto"
 
 #~ msgctxt "@title"
 #~ msgid "Chessament"

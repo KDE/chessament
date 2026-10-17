@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-16 00:44+0000\n"
+"POT-Creation-Date: 2026-10-17 00:45+0000\n"
 "PO-Revision-Date: 2026-06-24 17:12+0100\n"
 "Last-Translator: Manuel Alcaraz Zambrano <manuel@alcarazzam.dev>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -353,7 +353,7 @@ msgctxt "@label:textbox"
 msgid "Birth date"
 msgstr "Fecha de nacimiento"
 
-#: qml/AddPlayerDialog.qml:128 tournament/qml/SettingsInformationPage.qml:45
+#: qml/AddPlayerDialog.qml:128 tournament/qml/SettingsInformationPage.qml:44
 msgctxt "@label:textbox"
 msgid "Federation"
 msgstr "Federación"
@@ -1111,7 +1111,7 @@ msgstr ""
 #: timecontrolmodel.cpp:42
 #, kde-format
 msgctxt "@info"
-msgid "The time control is Classical."
+msgid "The time control is Standard."
 msgstr ""
 
 #: tournament/event.cpp:166 tournament/event.cpp:175
@@ -1302,7 +1302,15 @@ msgctxt "@title:group"
 msgid "Tiebreaks"
 msgstr "Desempates"
 
-#: tournament/qml/SettingsFormatPage.qml:114
+#: tournament/qml/SettingsFormatPage.qml:93
+#, fuzzy
+#| msgctxt "@info:placeholder"
+#| msgid "No players yet"
+msgctxt "@info:status"
+msgid "No tiebreaks set up yet."
+msgstr "Todavía no hay jugadores"
+
+#: tournament/qml/SettingsFormatPage.qml:120
 msgctxt "@action:button"
 msgid "Add Tiebreak"
 msgstr "Añadir desempate"
@@ -1322,17 +1330,20 @@ msgctxt "@label:textbox"
 msgid "Tournament name"
 msgstr "Nombre del torneo"
 
-#: tournament/qml/SettingsInformationPage.qml:36
+#: tournament/qml/SettingsInformationPage.qml:35
+#, fuzzy
+#| msgctxt "@action:button"
+#| msgid "Information"
 msgctxt "@label:textbox"
-msgid "City"
-msgstr "Ciudad"
+msgid "Location"
+msgstr "Información"
 
-#: tournament/qml/SettingsInformationPage.qml:54
+#: tournament/qml/SettingsInformationPage.qml:53
 msgctxt "@title:group"
 msgid "Arbiters"
 msgstr ""
 
-#: tournament/qml/SettingsInformationPage.qml:58
+#: tournament/qml/SettingsInformationPage.qml:57
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "Add Tiebreak"
@@ -1340,7 +1351,7 @@ msgctxt "@action:button"
 msgid "Add Arbiter"
 msgstr "Añadir desempate"
 
-#: tournament/qml/SettingsInformationPage.qml:65
+#: tournament/qml/SettingsInformationPage.qml:64
 #, fuzzy
 #| msgctxt "@info:placeholder"
 #| msgid "No players yet"
@@ -1580,6 +1591,10 @@ msgstr "Resultado «%1» desconocido en el emparejamiento «%2»."
 #| msgid "Pairing \"%1\" has no opponent."
 msgid "Pairing “%1” has no opponent."
 msgstr "El emparejamiento «%1» no tiene oponente."
+
+#~ msgctxt "@label:textbox"
+#~ msgid "City"
+#~ msgstr "Ciudad"
 
 #~ msgctxt "@title"
 #~ msgid "Chessament"

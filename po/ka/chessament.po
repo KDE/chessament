@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-16 00:44+0000\n"
+"POT-Creation-Date: 2026-10-17 00:45+0000\n"
 "PO-Revision-Date: 2026-10-08 05:51+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -332,7 +332,7 @@ msgctxt "@label:textbox"
 msgid "Birth date"
 msgstr "დაბადების თარიღი"
 
-#: qml/AddPlayerDialog.qml:128 tournament/qml/SettingsInformationPage.qml:45
+#: qml/AddPlayerDialog.qml:128 tournament/qml/SettingsInformationPage.qml:44
 msgctxt "@label:textbox"
 msgid "Federation"
 msgstr "ფედერაცია"
@@ -1003,10 +1003,12 @@ msgid "The time control is Rapid."
 msgstr "დროის კონტროლია რაპიდი."
 
 #: timecontrolmodel.cpp:42
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@info"
+#| msgid "The time control is Rapid."
 msgctxt "@info"
-msgid "The time control is Classical."
-msgstr "დროის კონტროლია კლასიკური."
+msgid "The time control is Standard."
+msgstr "დროის კონტროლია რაპიდი."
 
 #: tournament/event.cpp:166 tournament/event.cpp:175
 #, kde-kuit-format
@@ -1183,7 +1185,15 @@ msgctxt "@title:group"
 msgid "Tiebreaks"
 msgstr "ტაიბრეიკები"
 
-#: tournament/qml/SettingsFormatPage.qml:114
+#: tournament/qml/SettingsFormatPage.qml:93
+#, fuzzy
+#| msgctxt "@info:status"
+#| msgid "No arbiters yet."
+msgctxt "@info:status"
+msgid "No tiebreaks set up yet."
+msgstr "ჯერ არბიტრები არაა."
+
+#: tournament/qml/SettingsFormatPage.qml:120
 msgctxt "@action:button"
 msgid "Add Tiebreak"
 msgstr "ტაიბრეიკის დამატება"
@@ -1203,22 +1213,25 @@ msgctxt "@label:textbox"
 msgid "Tournament name"
 msgstr "ტურნირის სახელი"
 
-#: tournament/qml/SettingsInformationPage.qml:36
+#: tournament/qml/SettingsInformationPage.qml:35
+#, fuzzy
+#| msgctxt "@action:button"
+#| msgid "Information"
 msgctxt "@label:textbox"
-msgid "City"
-msgstr "ქალაქი"
+msgid "Location"
+msgstr "ინფორმაცია"
 
-#: tournament/qml/SettingsInformationPage.qml:54
+#: tournament/qml/SettingsInformationPage.qml:53
 msgctxt "@title:group"
 msgid "Arbiters"
 msgstr "არბიტრები"
 
-#: tournament/qml/SettingsInformationPage.qml:58
+#: tournament/qml/SettingsInformationPage.qml:57
 msgctxt "@action:button"
 msgid "Add Arbiter"
 msgstr "არბიტრის დამატება"
 
-#: tournament/qml/SettingsInformationPage.qml:65
+#: tournament/qml/SettingsInformationPage.qml:64
 msgctxt "@info:status"
 msgid "No arbiters yet."
 msgstr "ჯერ არბიტრები არაა."
@@ -1433,6 +1446,14 @@ msgstr "უცნობი შედეგი '%1' დაწყვილებ�
 #, kde-format
 msgid "Pairing “%1” has no opponent."
 msgstr "წყვილს \"%1\" ოპონენტი არ გააჩნია."
+
+#~ msgctxt "@info"
+#~ msgid "The time control is Classical."
+#~ msgstr "დროის კონტროლია კლასიკური."
+
+#~ msgctxt "@label:textbox"
+#~ msgid "City"
+#~ msgstr "ქალაქი"
 
 #~ msgctxt "@title"
 #~ msgid "Chessament"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-16 00:44+0000\n"
+"POT-Creation-Date: 2026-10-17 00:45+0000\n"
 "PO-Revision-Date: 2026-08-29 17:28+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -360,7 +360,7 @@ msgctxt "@label:textbox"
 msgid "Birth date"
 msgstr "تاريخ الميلاد"
 
-#: qml/AddPlayerDialog.qml:128 tournament/qml/SettingsInformationPage.qml:45
+#: qml/AddPlayerDialog.qml:128 tournament/qml/SettingsInformationPage.qml:44
 msgctxt "@label:textbox"
 msgid "Federation"
 msgstr "اتحاد"
@@ -1119,10 +1119,12 @@ msgid "The time control is Rapid."
 msgstr "ضبط الوقت سريع."
 
 #: timecontrolmodel.cpp:42
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@info"
+#| msgid "The time control is Rapid."
 msgctxt "@info"
-msgid "The time control is Classical."
-msgstr "ضبط الوقت كلاسيكي."
+msgid "The time control is Standard."
+msgstr "ضبط الوقت سريع."
 
 #: tournament/event.cpp:166 tournament/event.cpp:175
 #, kde-kuit-format
@@ -1308,7 +1310,15 @@ msgctxt "@title:group"
 msgid "Tiebreaks"
 msgstr "كسور التعادل"
 
-#: tournament/qml/SettingsFormatPage.qml:114
+#: tournament/qml/SettingsFormatPage.qml:93
+#, fuzzy
+#| msgctxt "@info:status"
+#| msgid "No arbiters yet."
+msgctxt "@info:status"
+msgid "No tiebreaks set up yet."
+msgstr "لا يوجد محكمون بعد."
+
+#: tournament/qml/SettingsFormatPage.qml:120
 msgctxt "@action:button"
 msgid "Add Tiebreak"
 msgstr "أضف كسر التعادل"
@@ -1328,22 +1338,25 @@ msgctxt "@label:textbox"
 msgid "Tournament name"
 msgstr "اسم البطولة"
 
-#: tournament/qml/SettingsInformationPage.qml:36
+#: tournament/qml/SettingsInformationPage.qml:35
+#, fuzzy
+#| msgctxt "@action:button"
+#| msgid "Information"
 msgctxt "@label:textbox"
-msgid "City"
-msgstr "المدينة"
+msgid "Location"
+msgstr "معلومات"
 
-#: tournament/qml/SettingsInformationPage.qml:54
+#: tournament/qml/SettingsInformationPage.qml:53
 msgctxt "@title:group"
 msgid "Arbiters"
 msgstr "المحكمون"
 
-#: tournament/qml/SettingsInformationPage.qml:58
+#: tournament/qml/SettingsInformationPage.qml:57
 msgctxt "@action:button"
 msgid "Add Arbiter"
 msgstr "أضف محكم"
 
-#: tournament/qml/SettingsInformationPage.qml:65
+#: tournament/qml/SettingsInformationPage.qml:64
 msgctxt "@info:status"
 msgid "No arbiters yet."
 msgstr "لا يوجد محكمون بعد."
@@ -1589,6 +1602,14 @@ msgstr "نتيجة غير معروفة ”%1“ على الإقران ”%2“."
 #| msgid "Pairing \"%1\" has no opponent."
 msgid "Pairing “%1” has no opponent."
 msgstr "الإقران ”%1“ ليس له خصم."
+
+#~ msgctxt "@info"
+#~ msgid "The time control is Classical."
+#~ msgstr "ضبط الوقت كلاسيكي."
+
+#~ msgctxt "@label:textbox"
+#~ msgid "City"
+#~ msgstr "المدينة"
 
 #~ msgctxt "@title"
 #~ msgid "Chessament"
