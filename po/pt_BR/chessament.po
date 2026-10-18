@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-17 00:45+0000\n"
-"PO-Revision-Date: 2026-10-08 06:46-0300\n"
+"PO-Revision-Date: 2026-10-17 07:46-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 26.08.1\n"
+"X-Generator: Lokalize 26.08.2\n"
 
 #: byesmodel.cpp:85
 #, kde-format
@@ -1003,12 +1003,10 @@ msgid "The time control is Rapid."
 msgstr "O controle de tempo é Rápido."
 
 #: timecontrolmodel.cpp:42
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "The time control is Rapid."
+#, kde-format
 msgctxt "@info"
 msgid "The time control is Standard."
-msgstr "O controle de tempo é Rápido."
+msgstr "O controle de tempo é Padrão."
 
 #: tournament/event.cpp:166 tournament/event.cpp:175
 #, kde-kuit-format
@@ -1187,12 +1185,9 @@ msgid "Tiebreaks"
 msgstr "Desempates"
 
 #: tournament/qml/SettingsFormatPage.qml:93
-#, fuzzy
-#| msgctxt "@info:status"
-#| msgid "No arbiters yet."
 msgctxt "@info:status"
 msgid "No tiebreaks set up yet."
-msgstr "Nenhum árbitro ainda."
+msgstr "Nenhum desempate configurado ainda."
 
 #: tournament/qml/SettingsFormatPage.qml:120
 msgctxt "@action:button"
@@ -1215,12 +1210,9 @@ msgid "Tournament name"
 msgstr "Nome do torneio"
 
 #: tournament/qml/SettingsInformationPage.qml:35
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Information"
 msgctxt "@label:textbox"
 msgid "Location"
-msgstr "Informações"
+msgstr "Localização"
 
 #: tournament/qml/SettingsInformationPage.qml:53
 msgctxt "@title:group"

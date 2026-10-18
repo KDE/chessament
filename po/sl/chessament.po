@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-17 00:45+0000\n"
-"PO-Revision-Date: 2026-10-08 07:12+0200\n"
+"PO-Revision-Date: 2026-10-17 07:22+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -1028,12 +1028,10 @@ msgid "The time control is Rapid."
 msgstr "Časovna kontrola je Rapid."
 
 #: timecontrolmodel.cpp:42
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "The time control is Rapid."
+#, kde-format
 msgctxt "@info"
 msgid "The time control is Standard."
-msgstr "Časovna kontrola je Rapid."
+msgstr "Časovna kontrola je Standard."
 
 #: tournament/event.cpp:166 tournament/event.cpp:175
 #, kde-kuit-format
@@ -1214,12 +1212,9 @@ msgid "Tiebreaks"
 msgstr "Tiebreaki"
 
 #: tournament/qml/SettingsFormatPage.qml:93
-#, fuzzy
-#| msgctxt "@info:status"
-#| msgid "No arbiters yet."
 msgctxt "@info:status"
 msgid "No tiebreaks set up yet."
-msgstr "Še ni razsodnikov."
+msgstr "Tiebreaki še niso nastavljeni."
 
 #: tournament/qml/SettingsFormatPage.qml:120
 msgctxt "@action:button"
@@ -1242,12 +1237,9 @@ msgid "Tournament name"
 msgstr "Ime turnirja"
 
 #: tournament/qml/SettingsInformationPage.qml:35
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Information"
 msgctxt "@label:textbox"
 msgid "Location"
-msgstr "Informacije"
+msgstr "Kraj"
 
 #: tournament/qml/SettingsInformationPage.qml:53
 msgctxt "@title:group"

@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-17 00:45+0000\n"
-"PO-Revision-Date: 2026-10-14 16:56+0200\n"
+"PO-Revision-Date: 2026-10-17 08:17+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -1004,12 +1004,10 @@ msgid "The time control is Rapid."
 msgstr "El control de temps és Ràpid."
 
 #: timecontrolmodel.cpp:42
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "The time control is Rapid."
+#, kde-format
 msgctxt "@info"
 msgid "The time control is Standard."
-msgstr "El control de temps és Ràpid."
+msgstr "El control de temps és Estàndard."
 
 #: tournament/event.cpp:166 tournament/event.cpp:175
 #, kde-kuit-format
@@ -1189,12 +1187,9 @@ msgid "Tiebreaks"
 msgstr "Desempats"
 
 #: tournament/qml/SettingsFormatPage.qml:93
-#, fuzzy
-#| msgctxt "@info:status"
-#| msgid "No arbiters yet."
 msgctxt "@info:status"
 msgid "No tiebreaks set up yet."
-msgstr "Encara no hi ha cap àrbitre."
+msgstr "Encara no hi ha cap desempat."
 
 #: tournament/qml/SettingsFormatPage.qml:120
 msgctxt "@action:button"
@@ -1217,12 +1212,9 @@ msgid "Tournament name"
 msgstr "Nom del torneig"
 
 #: tournament/qml/SettingsInformationPage.qml:35
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Information"
 msgctxt "@label:textbox"
 msgid "Location"
-msgstr "Informació"
+msgstr "Emplaçament"
 
 #: tournament/qml/SettingsInformationPage.qml:53
 msgctxt "@title:group"

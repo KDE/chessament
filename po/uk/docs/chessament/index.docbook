@@ -219,14 +219,38 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 				</listitem>
 				<listitem>
 					<para
+>Кількість виграних ігор чорними (за дошкою) (<acronym
+>BWG</acronym
+>)</para>
+				</listitem>
+				<listitem>
+					<para
 >Кількість перемог (<acronym
 >WIN</acronym
 >)</para>
 				</listitem>
 				<listitem>
 					<para
+>Кількість раундів, які вибрано для гри (<acronym
+>REP</acronym
+>)</para>
+				</listitem>
+				<listitem>
+					<para
+>Зоннерборн-Бергер (<acronym
+>SB</acronym
+>)</para>
+				</listitem>
+				<listitem>
+					<para
 >Очки (<acronym
 >PTS</acronym
+>)</para>
+				</listitem>
+				<listitem>
+					<para
+>Прогресивне (<acronym
+>PS</acronym
 >)</para>
 				</listitem>
 			</itemizedlist>

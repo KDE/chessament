@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-17 00:45+0000\n"
-"PO-Revision-Date: 2026-10-08 19:58+0200\n"
+"PO-Revision-Date: 2026-10-17 13:01+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 26.08.1\n"
+"X-Generator: Lokalize 26.08.2\n"
 
 #: byesmodel.cpp:85
 #, kde-format
@@ -1002,12 +1002,10 @@ msgid "The time control is Rapid."
 msgstr "De tijdcontrole is Rapid."
 
 #: timecontrolmodel.cpp:42
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "The time control is Rapid."
+#, kde-format
 msgctxt "@info"
 msgid "The time control is Standard."
-msgstr "De tijdcontrole is Rapid."
+msgstr "De tijdcontrole is Standaard."
 
 #: tournament/event.cpp:166 tournament/event.cpp:175
 #, kde-kuit-format
@@ -1187,12 +1185,9 @@ msgid "Tiebreaks"
 msgstr "Tiebreaks"
 
 #: tournament/qml/SettingsFormatPage.qml:93
-#, fuzzy
-#| msgctxt "@info:status"
-#| msgid "No arbiters yet."
 msgctxt "@info:status"
 msgid "No tiebreaks set up yet."
-msgstr "Nog geen scheidsrechters."
+msgstr "Nog geen remises opgezet."
 
 #: tournament/qml/SettingsFormatPage.qml:120
 msgctxt "@action:button"
@@ -1215,12 +1210,9 @@ msgid "Tournament name"
 msgstr "Naam van toernooi"
 
 #: tournament/qml/SettingsInformationPage.qml:35
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Information"
 msgctxt "@label:textbox"
 msgid "Location"
-msgstr "Informatie"
+msgstr "Locatie"
 
 #: tournament/qml/SettingsInformationPage.qml:53
 msgctxt "@title:group"

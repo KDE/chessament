@@ -205,14 +205,38 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 				</listitem>
 				<listitem>
 					<para
+>Aantal gewonnen spellen met zwart (op het bord) (<acronym
+>BWG</acronym
+>)</para>
+				</listitem>
+				<listitem>
+					<para
 >Aantal winsten (<acronym
 >WIN</acronym
 >)</para>
 				</listitem>
 				<listitem>
 					<para
+>Rondes waarin werd gekozen om te spelen (<acronym
+>REP</acronym
+>)</para>
+				</listitem>
+				<listitem>
+					<para
+>Sonneborn-Berger (<acronym
+>SB</acronym
+>)</para>
+				</listitem>
+				<listitem>
+					<para
 >Punten (<acronym
 >PTS</acronym
+>)</para>
+				</listitem>
+				<listitem>
+					<para
+>Progressief (<acronym
+>PS</acronym
 >)</para>
 				</listitem>
 			</itemizedlist>

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-17 00:45+0000\n"
-"PO-Revision-Date: 2026-10-08 05:51+0200\n"
+"PO-Revision-Date: 2026-10-17 05:14+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.9\n"
+"X-Generator: Poedit 3.10\n"
 
 #: byesmodel.cpp:85
 #, kde-format
@@ -1003,12 +1003,10 @@ msgid "The time control is Rapid."
 msgstr "დროის კონტროლია რაპიდი."
 
 #: timecontrolmodel.cpp:42
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "The time control is Rapid."
+#, kde-format
 msgctxt "@info"
 msgid "The time control is Standard."
-msgstr "დროის კონტროლია რაპიდი."
+msgstr "დროის კონტროლი სტანდარტულია."
 
 #: tournament/event.cpp:166 tournament/event.cpp:175
 #, kde-kuit-format
@@ -1186,12 +1184,9 @@ msgid "Tiebreaks"
 msgstr "ტაიბრეიკები"
 
 #: tournament/qml/SettingsFormatPage.qml:93
-#, fuzzy
-#| msgctxt "@info:status"
-#| msgid "No arbiters yet."
 msgctxt "@info:status"
 msgid "No tiebreaks set up yet."
-msgstr "ჯერ არბიტრები არაა."
+msgstr "ჯერ ტაიბრეიკები მორგებული არაა."
 
 #: tournament/qml/SettingsFormatPage.qml:120
 msgctxt "@action:button"
@@ -1214,12 +1209,9 @@ msgid "Tournament name"
 msgstr "ტურნირის სახელი"
 
 #: tournament/qml/SettingsInformationPage.qml:35
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Information"
 msgctxt "@label:textbox"
 msgid "Location"
-msgstr "ინფორმაცია"
+msgstr "მდებარეობა"
 
 #: tournament/qml/SettingsInformationPage.qml:53
 msgctxt "@title:group"

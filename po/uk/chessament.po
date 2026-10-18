@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-17 00:45+0000\n"
-"PO-Revision-Date: 2026-10-08 17:57+0300\n"
+"PO-Revision-Date: 2026-10-17 17:37+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -1031,12 +1031,10 @@ msgid "The time control is Rapid."
 msgstr "Часовим регламентом є «Швидкі»."
 
 #: timecontrolmodel.cpp:42
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "The time control is Rapid."
+#, kde-format
 msgctxt "@info"
 msgid "The time control is Standard."
-msgstr "Часовим регламентом є «Швидкі»."
+msgstr "Часовим регламентом є «Стандартний»."
 
 #: tournament/event.cpp:166 tournament/event.cpp:175
 #, kde-kuit-format
@@ -1217,12 +1215,9 @@ msgid "Tiebreaks"
 msgstr "Тай-брейки"
 
 #: tournament/qml/SettingsFormatPage.qml:93
-#, fuzzy
-#| msgctxt "@info:status"
-#| msgid "No arbiters yet."
 msgctxt "@info:status"
 msgid "No tiebreaks set up yet."
-msgstr "Судей ще немає."
+msgstr "Тай-брейків ще не налаштовано."
 
 #: tournament/qml/SettingsFormatPage.qml:120
 msgctxt "@action:button"
@@ -1245,12 +1240,9 @@ msgid "Tournament name"
 msgstr "Назва турніру"
 
 #: tournament/qml/SettingsInformationPage.qml:35
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Information"
 msgctxt "@label:textbox"
 msgid "Location"
-msgstr "Відомості"
+msgstr "Місце"
 
 #: tournament/qml/SettingsInformationPage.qml:53
 msgctxt "@title:group"

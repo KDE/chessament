@@ -219,14 +219,38 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 				</listitem>
 				<listitem>
 					<para
+>Número de partidas ganadas con negras (sobre el tablero) (<acronym
+>BWG</acronym
+>)</para>
+				</listitem>
+				<listitem>
+					<para
 >Número de victorias (<acronym
 >WIN</acronym
 >)</para>
 				</listitem>
 				<listitem>
 					<para
+>Partidas un eligió jugar (<acronym
+>REP</acronym
+>)</para>
+				</listitem>
+				<listitem>
+					<para
+>Sonneborn-Berger (<acronym
+>SB</acronym
+>)</para>
+				</listitem>
+				<listitem>
+					<para
 >Puntos (<acronym
 >PTS</acronym
+>)</para>
+				</listitem>
+				<listitem>
+					<para
+>Progresivo (<acronym
+>PS</acronym
 >)</para>
 				</listitem>
 			</itemizedlist>
@@ -352,26 +376,20 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 				<title
 >El menú Ver</title>
 				<variablelist>
-					<varlistentry id="menu-view-commandbar">
+					<varlistentry id="menu-view-hide-finished-games">
 						<term>
 							<menuchoice
-><shortcut
-> <keycombo action="simul"
->&Ctrl;&Alt;<keycap
->I</keycap
-></keycombo
-> </shortcut
-> <guimenu
+><guimenu
 >Ver</guimenu
 > <guimenuitem
->Abrir barra de comandos</guimenuitem
+>Ocultar partidas terminadas</guimenuitem
 > </menuchoice>
 						</term>
 						<listitem>
 							<para
 ><action
->Abrir</action
-> la barra de comandos. </para>
+>Oculta</action
+> las partidas que tienen un resultado introducido. </para>
 						</listitem>
 					</varlistentry>
 				</variablelist>
@@ -422,6 +440,34 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 ><action
 >Abrir</action
 > la ventana de configuración de &chessament;. </para>
+						</listitem>
+					</varlistentry>
+				</variablelist>
+			</sect2>
+			<sect2 id="reference-menus-help">
+				<title
+>El menú Ayuda</title>
+				<variablelist>
+					<varlistentry id="menu-help-commandbar">
+						<term>
+							<menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;&Alt;<keycap
+>I</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Ayuda</guimenu
+> <guimenuitem
+>Buscar acción…</guimenuitem
+> </menuchoice>
+						</term>
+						<listitem>
+							<para
+><action
+>Abrir</action
+> la barra de comandos. </para>
 						</listitem>
 					</varlistentry>
 				</variablelist>

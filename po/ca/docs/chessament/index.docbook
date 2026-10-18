@@ -205,14 +205,38 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 				</listitem>
 				<listitem>
 					<para
+>Nombre de partides guanyades amb negres (sobre el tauler) (<acronym
+>BWG</acronym
+>)</para>
+				</listitem>
+				<listitem>
+					<para
 >Nombre de partides guanyades (<acronym
 >WIN</acronym
 >)</para>
 				</listitem>
 				<listitem>
 					<para
+>Rendes d'un elegit per jugar (<acronym
+>REP</acronym
+>)</para>
+				</listitem>
+				<listitem>
+					<para
+>Sonneborn-Berger (<acronym
+>SB</acronym
+>)</para>
+				</listitem>
+				<listitem>
+					<para
 >Punts (<acronym
 >PTS</acronym
+>)</para>
+				</listitem>
+				<listitem>
+					<para
+>Progressiu (<acronym
+>PS</acronym
 >)</para>
 				</listitem>
 			</itemizedlist>
