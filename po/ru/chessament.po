@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-17 00:45+0000\n"
-"PO-Revision-Date: 2026-10-08 08:05+0200\n"
+"PO-Revision-Date: 2026-10-18 19:14+0200\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -1031,12 +1031,10 @@ msgid "The time control is Rapid."
 msgstr "Контроль времени: рапид."
 
 #: timecontrolmodel.cpp:42
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "The time control is Rapid."
+#, kde-format
 msgctxt "@info"
 msgid "The time control is Standard."
-msgstr "Контроль времени: рапид."
+msgstr "Контроль времени: классика."
 
 #: tournament/event.cpp:166 tournament/event.cpp:175
 #, kde-kuit-format
@@ -1216,12 +1214,9 @@ msgid "Tiebreaks"
 msgstr "Дополнительные показатели"
 
 #: tournament/qml/SettingsFormatPage.qml:93
-#, fuzzy
-#| msgctxt "@info:status"
-#| msgid "No arbiters yet."
 msgctxt "@info:status"
 msgid "No tiebreaks set up yet."
-msgstr "Арбитров пока нет."
+msgstr "Дополнительные показатели пока не заданы."
 
 #: tournament/qml/SettingsFormatPage.qml:120
 msgctxt "@action:button"
@@ -1244,12 +1239,9 @@ msgid "Tournament name"
 msgstr "Название турнира"
 
 #: tournament/qml/SettingsInformationPage.qml:35
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Information"
 msgctxt "@label:textbox"
 msgid "Location"
-msgstr "Сведения"
+msgstr "Место проведения"
 
 #: tournament/qml/SettingsInformationPage.qml:53
 msgctxt "@title:group"
@@ -1430,17 +1422,17 @@ msgstr "Неподдерживаемый параметр дополнитель
 #, kde-format
 msgctxt "Tiebreak"
 msgid "Sonneborn-Berger"
-msgstr "Зонненборн — Бергер"
+msgstr "Зоннеборн — Бергер"
 
 #: tournament/tiebreaks/sb.h:60
 #, kde-format
 msgctxt "Tiebreak modifier, N is a number < 0"
 msgid "Sonneborn-Berger %1"
 msgid_plural "Sonneborn-Berger %1"
-msgstr[0] "Зонненборн — Бергер %1"
-msgstr[1] "Зонненборн — Бергер %1"
-msgstr[2] "Зонненборн — Бергер %1"
-msgstr[3] "Зонненборн — Бергер %1"
+msgstr[0] "Зоннеборн — Бергер %1"
+msgstr[1] "Зоннеборн — Бергер %1"
+msgstr[2] "Зоннеборн — Бергер %1"
+msgstr[3] "Зоннеборн — Бергер %1"
 
 #: tournament/tiebreaks/won.h:23 tournament/tournament.cpp:522
 #, kde-format
