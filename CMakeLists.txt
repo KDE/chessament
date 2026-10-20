@@ -3,7 +3,7 @@
 
 cmake_minimum_required(VERSION 3.16)
 
-project(chessament VERSION 1.0.0)
+project(chessament VERSION 1.0.70)
 
 set(QT6_MIN_VERSION 6.10.0)
 set(KF6_MIN_VERSION 6.28.0)
