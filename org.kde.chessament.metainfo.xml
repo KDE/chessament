@@ -213,7 +213,7 @@
     <color type="primary" scheme_preference="dark">#6e4f29</color>
   </branding>
   <releases>
-    <release version="1.0.0" date="2026-11-01">
+    <release version="1.0.0" date="2026-11-08">
       <url>https://alcarazzam.dev/posts/chessament-1.0/</url>
       <description>
         <p>Initial release.</p>
