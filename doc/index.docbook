@@ -22,8 +22,8 @@ SPDX-License-Identifier: CC-BY-SA-4.0
       <holder>&Manuel.Alcaraz.Zambrano;</holder>
     </copyright>
     <legalnotice>&CCBYSA4Notice;</legalnotice>
-    <date>2026-04-17</date>
-    <releaseinfo>0.1</releaseinfo>
+    <date>2026-11-08</date>
+    <releaseinfo>Chessament 1.0</releaseinfo>
       <abstract>
         <para>
           &chessament; is a chess tournament manager.
@@ -171,6 +171,24 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 		</sect1>
 	</chapter>
 
+	<chapter id="rating-lists">
+		<title>Rating lists</title>
+
+		<para>
+			To ease the entering of new players in a tournament, you can use rating lists. To add a new rating
+			list to &chessament;, select <menuchoice><guimenu>Settings</guimenu><guimenuitem>Configure Chessament…</guimenuitem></menuchoice>
+			and go to the <guibutton>Rating Lists</guibutton> section.
+		</para>
+		<para>
+			&chessament; supports the following rating lists:
+		</para>
+		<itemizedlist>
+			<listitem>
+				<para>International Chess Federation (<acronym>FIDE</acronym>): combined list, <acronym>TXT</acronym> format.</para>
+			</listitem>
+		</itemizedlist>
+	</chapter>
+
 	<chapter id="reference">
 		<title>Reference</title>
 
@@ -268,6 +286,24 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 						<listitem>
 							<para>
 								<action>Hides</action> the games that have a result entered.
+							</para>
+						</listitem>
+					</varlistentry>
+				</variablelist>
+			</sect2>
+			<sect2 id="reference-menus-tournament">
+				<title>The Tournament Menu</title>
+				<variablelist>
+					<varlistentry id="menu-tournament-update-ratings">
+						<term>
+							<menuchoice>
+								<guimenu>Tournament</guimenu>
+								<guimenuitem>Update ratings…</guimenuitem>
+							</menuchoice>
+						</term>
+						<listitem>
+							<para>
+								<action>Opens</action> a dialog allowing you to update the ratings of the players.
 							</para>
 						</listitem>
 					</varlistentry>
