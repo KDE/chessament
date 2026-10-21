@@ -218,8 +218,10 @@
       <description>
         <p>Initial release.</p>
         <p xml:lang="ca">Versió inicial.</p>
+        <p xml:lang="ca-valencia">Versió inicial.</p>
         <p xml:lang="cs">Úvodní vydání.</p>
         <p xml:lang="es">Versión inicial.</p>
+        <p xml:lang="fr">Version initiale.</p>
         <p xml:lang="ka">საწყისი რელიზი.</p>
         <p xml:lang="nl">Initiële uitgave.</p>
         <p xml:lang="pt-BR">Versão inicial.</p>
