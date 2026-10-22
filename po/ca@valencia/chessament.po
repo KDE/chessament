@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-17 00:45+0000\n"
-"PO-Revision-Date: 2026-10-17 08:17+0200\n"
+"PO-Revision-Date: 2026-10-21 09:01+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -792,12 +792,12 @@ msgstr "Actualitza les puntuacions"
 #: qml/UpdateRatingsDialog.qml:26
 msgctxt "@info"
 msgid "No rating lists available."
-msgstr "No hi ha cap llista de puntuació disponible."
+msgstr "No hi ha cap llista de puntuacions disponible."
 
 #: qml/UpdateRatingsDialog.qml:34
 msgctxt "@label:listbox"
 msgid "Choose a rating list:"
-msgstr "Trieu una llista de puntuació:"
+msgstr "Trieu una llista de puntuacions:"
 
 #: qml/UpdateRatingsDialog.qml:45
 msgctxt "@action:button Update players ratings"
@@ -864,17 +864,17 @@ msgstr "Continua"
 #: settings/AddRatingListDialog.qml:62
 msgctxt "@title:window"
 msgid "Importing Rating List"
-msgstr "Importació de llista de puntuació"
+msgstr "Importació de llista de puntuacions"
 
 #: settings/AddRatingListDialog.qml:65
 msgctxt "@title:window"
 msgid "Rating List Imported"
-msgstr "S'ha importat una llista de puntuació"
+msgstr "S'ha importat una llista de puntuacions"
 
 #: settings/AddRatingListDialog.qml:67
 msgctxt "@title:window"
 msgid "Add Rating List"
-msgstr "Afig una llista de puntuació"
+msgstr "Afig una llista de puntuacions"
 
 #: settings/AddRatingListDialog.qml:86
 msgctxt "@label:listbox"
@@ -889,7 +889,7 @@ msgstr "Nom"
 #: settings/AddRatingListDialog.qml:98
 msgctxt "@info:label"
 msgid "Rating list file or URL"
-msgstr "Fitxer o URL de la llista de puntuació"
+msgstr "Fitxer o URL de la llista de puntuacions"
 
 #: settings/AddRatingListDialog.qml:101
 msgctxt "@action:button"
@@ -914,17 +914,17 @@ msgstr "Comptes"
 #: settings/ChessamentConfigurationView.qml:32
 msgctxt "@action:button"
 msgid "Rating Lists"
-msgstr "Llistes de puntuació"
+msgstr "Llistes de puntuacions"
 
 #: settings/DeleteRatingListDialog.qml:24
 msgctxt "@title"
 msgid "Delete Rating List"
-msgstr "Suprimiu de llista de puntuació"
+msgstr "Suprimiu de llista de puntuacions"
 
 #: settings/DeleteRatingListDialog.qml:53
 msgctxt "@label"
 msgid "Permanently delete rating list “%1”?"
-msgstr "Voleu suprimir permanentment la llista de puntuació «%1»?"
+msgstr "Voleu suprimir permanentment la llista de puntuacions «%1»?"
 
 #: settings/DeleteRatingListDialog.qml:62
 msgctxt "@action:button Delete Rating List"
@@ -964,27 +964,27 @@ msgstr "Utilitza les tecles 1-5-0"
 #: settings/RatingListsPage.qml:19 settings/RatingListsPage.qml:22
 msgctxt "@title"
 msgid "Rating Lists"
-msgstr "Llistes de puntuació"
+msgstr "Llistes de puntuacions"
 
 #: settings/RatingListsPage.qml:27
 msgctxt "@info:status"
 msgid "No rating lists yet."
-msgstr "Encara no hi ha cap llista de puntuació."
+msgstr "Encara no hi ha cap llista de puntuacions."
 
 #: settings/RatingListsPage.qml:47
 msgctxt "@action:button"
 msgid "Delete Rating List"
-msgstr "Suprimix la llista de puntuació"
+msgstr "Suprimix la llista de puntuacions"
 
 #: settings/RatingListsPage.qml:59
 msgctxt "@action:button"
 msgid "Delete rating list"
-msgstr "Suprimix la llista de puntuació"
+msgstr "Suprimix la llista de puntuacions"
 
 #: settings/RatingListsPage.qml:69
 msgctxt "@action:button"
 msgid "Add rating list"
-msgstr "Afig una llista de puntuació"
+msgstr "Afig una llista de puntuacions"
 
 #: standingsmodel.cpp:92
 #, kde-format
@@ -1281,14 +1281,14 @@ msgstr ""
 #, kde-format
 msgctxt "@info"
 msgid "Could not download rating list: %1"
-msgstr "No s'ha pogut baixar la llista de puntuació: %1"
+msgstr "No s'ha pogut baixar la llista de puntuacions: %1"
 
 #: tournament/ratinglists/ratinglistsmanager.cpp:280
 #, kde-format
 msgctxt "@info"
 msgid "Could not download rating list from %1 (unsupported protocol)."
 msgstr ""
-"No s'ha pogut baixar la llista de puntuació des de %1 (protocol no admés)."
+"No s'ha pogut baixar la llista de puntuacions des de %1 (protocol no admés)."
 
 #: tournament/ratinglists/ratinglistsmanager.cpp:293
 #, kde-format

@@ -52,9 +52,9 @@ SPDX-License-Identifier: CC-BY-SA-4.0
     <legalnotice
 >&CCBYSA4Notice;</legalnotice>
     <date
->17 квітня 2026 року</date>
+>8 листопада 2026 року</date>
     <releaseinfo
->0.1</releaseinfo>
+>Chessament 1.0</releaseinfo>
       <abstract>
         <para
 >&chessament; — програма для керування шаховими турнірами. </para>
@@ -257,6 +257,34 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 		</sect1>
 	</chapter>
 
+	<chapter id="rating-lists">
+		<title
+>Рейтингові списки</title>
+
+		<para
+>Для полегшення введення даних нових гравців у турнірі ви можете скористатися рейтинговими списками. Щоб додати новий рейтинговий список у &chessament;, виберіть пункт меню <menuchoice
+><guimenu
+>Параметри</guimenu
+><guimenuitem
+>Налаштувати Chessament…</guimenuitem
+></menuchoice
+> і перейдіть до розділу <guibutton
+>Рейтингові списки</guibutton
+>. </para>
+		<para
+>У &chessament; передбачено підтримку таких рейтингових списків: </para>
+		<itemizedlist>
+			<listitem>
+				<para
+>Міжнародна федерація шахів (<acronym
+>FIDE</acronym
+>): з'єднаний список у форматі <acronym
+>TXT</acronym
+>.</para>
+			</listitem>
+		</itemizedlist>
+	</chapter>
+
 	<chapter id="reference">
 		<title
 >Довідник</title>
@@ -390,6 +418,28 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 ><action
 >Приховує</action
 > ігри, результат для яких введено. </para>
+						</listitem>
+					</varlistentry>
+				</variablelist>
+			</sect2>
+			<sect2 id="reference-menus-tournament">
+				<title
+>Меню «Турнір»</title>
+				<variablelist>
+					<varlistentry id="menu-tournament-update-ratings">
+						<term>
+							<menuchoice
+><guimenu
+>Турнір</guimenu
+> <guimenuitem
+>Оновити рейтинги…</guimenuitem
+> </menuchoice>
+						</term>
+						<listitem>
+							<para
+><action
+>Відкриває</action
+> вікно, за допомогою якого ви можете оновити рейтинги гравців. </para>
 						</listitem>
 					</varlistentry>
 				</variablelist>

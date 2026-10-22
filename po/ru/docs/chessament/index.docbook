@@ -52,9 +52,9 @@ SPDX-License-Identifier: CC-BY-SA-4.0
     <legalnotice
 >&CCBYSA4Notice;</legalnotice>
     <date
->17 апреля 2026 г.</date>
+>8 ноября 2026 г.</date>
     <releaseinfo
->0.1</releaseinfo>
+>Chessament 1.0</releaseinfo>
       <abstract>
         <para
 >&chessament; — приложение для управления шахматными турнирами. </para>
@@ -219,8 +219,26 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 				</listitem>
 				<listitem>
 					<para
+>Число партий, выигранных чёрными (за доской) (<acronym
+>BWG</acronym
+>)</para>
+				</listitem>
+				<listitem>
+					<para
 >Число побед (<acronym
 >WIN</acronym
+>)</para>
+				</listitem>
+				<listitem>
+					<para
+>Число туров, в которых игрок решил играть (<acronym
+>REP</acronym
+>)</para>
+				</listitem>
+				<listitem>
+					<para
+>Зоннеборн — Бергер (<acronym
+>SB</acronym
 >)</para>
 				</listitem>
 				<listitem>
@@ -229,8 +247,42 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 >PTS</acronym
 >)</para>
 				</listitem>
+				<listitem>
+					<para
+>Прогресс (<acronym
+>PS</acronym
+>)</para>
+				</listitem>
 			</itemizedlist>
 		</sect1>
+	</chapter>
+
+	<chapter id="rating-lists">
+		<title
+>Списки рейтингов</title>
+
+		<para
+>Чтобы упростить ввод новых участников турнира, можно воспользоваться списками рейтингов. Чтобы добавить в &chessament; новый список рейтингов, выберите <menuchoice
+><guimenu
+>Настройка</guimenu
+><guimenuitem
+>Настроить Chessament…</guimenuitem
+></menuchoice
+> и перейдите в раздел <guibutton
+>Списки рейтингов</guibutton
+>. </para>
+		<para
+>&chessament; поддерживает следующие списки рейтингов: </para>
+		<itemizedlist>
+			<listitem>
+				<para
+>Международная шахматная федерация (<acronym
+>FIDE</acronym
+>): объединённый список, формат <acronym
+>TXT</acronym
+>.</para>
+			</listitem>
+		</itemizedlist>
 	</chapter>
 
 	<chapter id="reference">
@@ -366,6 +418,28 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 ><action
 >Скрывает</action
 > партии, для которых введён результат. </para>
+						</listitem>
+					</varlistentry>
+				</variablelist>
+			</sect2>
+			<sect2 id="reference-menus-tournament">
+				<title
+>Меню «Турнир»</title>
+				<variablelist>
+					<varlistentry id="menu-tournament-update-ratings">
+						<term>
+							<menuchoice
+><guimenu
+>Турнир</guimenu
+> <guimenuitem
+>Обновить рейтинги…</guimenuitem
+> </menuchoice>
+						</term>
+						<listitem>
+							<para
+><action
+>Открывает</action
+> диалог обновления рейтингов участников. </para>
 						</listitem>
 					</varlistentry>
 				</variablelist>

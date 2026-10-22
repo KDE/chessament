@@ -38,9 +38,9 @@ SPDX-License-Identifier: CC-BY-SA-4.0
     <legalnotice
 >&CCBYSA4Notice;</legalnotice>
     <date
->17 d'abril de 2026</date>
+>8 de novembre de 2026</date>
     <releaseinfo
->0.1</releaseinfo>
+>Chessament 1.0</releaseinfo>
       <abstract>
         <para
 >El &chessament; és un gestor de torneigs d'escacs. </para>
@@ -243,6 +243,34 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 		</sect1>
 	</chapter>
 
+	<chapter id="rating-lists">
+		<title
+>Llistes de puntuacions</title>
+
+		<para
+>Per facilitar l'entrada de jugadors nous en un torneig, podeu utilitzar llistes de puntuacions. Per afegir una llista de puntuacions nova al &chessament;, seleccioneu <menuchoice
+><guimenu
+>Configuració</guimenu
+><guimenuitem
+>Configura el Chessament…</guimenuitem
+></menuchoice
+> i aneu a la secció <guibutton
+>Llistes de puntuacions</guibutton
+>. </para>
+		<para
+>El &chessament; permet les llistes de puntuacions següents: </para>
+		<itemizedlist>
+			<listitem>
+				<para
+>Federació internacional d'escacs (<acronym
+>FIDE</acronym
+>): llista combinada, format <acronym
+>TXT</acronym
+>.</para>
+			</listitem>
+		</itemizedlist>
+	</chapter>
+
 	<chapter id="reference">
 		<title
 >Referència</title>
@@ -376,6 +404,28 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 ><action
 >Oculta</action
 > les partides amb un resultat introduït. </para>
+						</listitem>
+					</varlistentry>
+				</variablelist>
+			</sect2>
+			<sect2 id="reference-menus-tournament">
+				<title
+>El menú Torneig</title>
+				<variablelist>
+					<varlistentry id="menu-tournament-update-ratings">
+						<term>
+							<menuchoice
+><guimenu
+>Torneig</guimenu
+> <guimenuitem
+>Actualitza les puntuacions…</guimenuitem
+> </menuchoice>
+						</term>
+						<listitem>
+							<para
+><action
+>Obre</action
+> un diàleg que permet actualitzar les puntuacions dels jugadors. </para>
 						</listitem>
 					</varlistentry>
 				</variablelist>
