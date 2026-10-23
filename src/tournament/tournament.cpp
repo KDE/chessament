@@ -191,6 +191,7 @@ std::expected<void, QString> Tournament::addPlayer(std::unique_ptr<Player> playe
     m_event->db().transaction();
 
     player->setId(QUuid::createUuid().toString(QUuid::StringFormat::WithoutBraces));
+    player->setLastModified(QDateTime::currentDateTimeUtc());
 
     QSqlQuery query(m_event->db());
     query.prepare(ADD_PLAYER_QUERY);
@@ -206,6 +207,7 @@ std::expected<void, QString> Tournament::addPlayer(std::unique_ptr<Player> playe
     query.bindValue(u":federation"_s, player->federation());
     query.bindValue(u":origin"_s, player->origin());
     query.bindValue(u":gender"_s, player->gender());
+    query.bindValue(u":lastModified"_s, player->lastModified().toUTC().toSecsSinceEpoch());
     query.bindValue(u":extra"_s, player->extraString());
     query.bindValue(u":tournament"_s, m_id);
 
@@ -287,6 +289,8 @@ std::expected<void, QString> Tournament::deletePlayer(int startingRank)
 
 void Tournament::savePlayer(Player *player)
 {
+    player->setLastModified(QDateTime::currentDateTimeUtc());
+
     QSqlQuery query(m_event->db());
     query.prepare(UPDATE_PLAYER_QUERY);
     query.bindValue(u":id"_s, player->id());
@@ -301,6 +305,7 @@ void Tournament::savePlayer(Player *player)
     query.bindValue(u":federation"_s, player->federation());
     query.bindValue(u":origin"_s, player->origin());
     query.bindValue(u":gender"_s, player->gender());
+    query.bindValue(u":lastModified"_s, player->lastModified().toUTC().toSecsSinceEpoch());
     query.bindValue(u":extra"_s, player->extraString());
     query.bindValue(u":tournament"_s, m_id);
 
@@ -672,7 +677,7 @@ std::expected<void, QString> Tournament::savePairing(Pairing *pairing, int round
     }
     query.bindValue(u":whiteResult"_s, std::to_underlying(pairing->whiteResult()));
     query.bindValue(u":blackResult"_s, std::to_underlying(pairing->blackResult()));
-    query.bindValue(u":lastModified"_s, pairing->lastModified().toSecsSinceEpoch());
+    query.bindValue(u":lastModified"_s, pairing->lastModified().toUTC().toSecsSinceEpoch());
     query.bindValue(u":extra"_s, pairing->extraString());
 
     if (!query.exec()) {
@@ -1324,6 +1329,7 @@ std::expected<void, QString> Tournament::loadPlayers()
     const int federationNo = query.record().indexOf("federation");
     const int originNo = query.record().indexOf("origin");
     const int genderNo = query.record().indexOf("gender");
+    const int lastModifiedNo = query.record().indexOf("lastModified");
     const int extraNo = query.record().indexOf("extra");
 
     while (query.next()) {
@@ -1339,6 +1345,7 @@ std::expected<void, QString> Tournament::loadPlayers()
                                                query.value(genderNo).toString());
         player->setId(query.value(idNo).toString());
         player->setNationalId(query.value(nationalIdNo).toString());
+        player->setLastModified(QDateTime::fromSecsSinceEpoch(query.value(lastModifiedNo).toLongLong()));
         player->setExtra(query.value(extraNo).toByteArray());
         m_players.push_back(std::move(player));
     }

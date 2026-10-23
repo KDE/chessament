@@ -336,7 +336,7 @@ std::expected<uint, QString> RatingListsManager::readPlayers(RatingList *list, Q
     query.prepare(ADD_RATING_LIST_QUERY);
     query.bindValue(":name"_L1, list->name());
     query.bindValue(":url"_L1, list->url());
-    query.bindValue(":lastModified"_L1, list->lastModified().toSecsSinceEpoch());
+    query.bindValue(":lastModified"_L1, list->lastModified().toUTC().toSecsSinceEpoch());
     query.bindValue(u":extra"_s, list->extraString());
 
     if (!query.exec()) {

@@ -206,6 +206,16 @@ void Player::setGender(const QString &gender)
     Q_EMIT genderChanged();
 }
 
+QDateTime Player::lastModified() const
+{
+    return m_lastModified;
+}
+
+void Player::setLastModified(const QDateTime &lastModified)
+{
+    m_lastModified = lastModified;
+}
+
 QByteArray Player::extraString() const
 {
     const auto doc = QJsonDocument{m_extra};
@@ -240,6 +250,7 @@ QJsonObject Player::toJson() const
     json[u"federation"_s] = m_federation;
     json[u"origin"_s] = m_origin;
     json[u"gender"_s] = m_gender;
+    json[u"last_modified"_s] = m_lastModified.toUTC().toString(Qt::ISODate);
 
     return json;
 }

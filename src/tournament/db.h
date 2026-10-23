@@ -65,20 +65,21 @@ const QString PLAYERS_TABLE_SCHEMA =
     u"federation TEXT,"_s
     u"origin TEXT,"_s
     u"gender TEXT,"_s
+    u"lastModified INTEGER,"_s
     u"extra BLOB,"_s
     u"tournament TEXT NOT NULL,"_s
     u"FOREIGN KEY (tournament) REFERENCES tournaments(id)"_s
     u");"_s;
 
 const QString ADD_PLAYER_QUERY =
-    u"INSERT INTO players(id, startingRank, title, name, rating, nationalRating, playerId, nationalId, birthDate, federation, origin, gender, extra, tournament) "_s
-    u"VALUES (:id, :startingRank, :title, :name, :rating, :nationalRating, :playerId, :nationalId, :birthDate, :federation, :origin, :gender, :extra, :tournament);"_s;
+    u"INSERT INTO players(id, startingRank, title, name, rating, nationalRating, playerId, nationalId, birthDate, federation, origin, gender, lastModified, extra, tournament) "_s
+    u"VALUES (:id, :startingRank, :title, :name, :rating, :nationalRating, :playerId, :nationalId, :birthDate, :federation, :origin, :gender, :lastModified, :extra, :tournament);"_s;
 
 const QString GET_PLAYERS_QUERY = u"SELECT * FROM players WHERE tournament = :tournament ORDER BY startingRank;"_s;
 
 const QString UPDATE_PLAYER_QUERY =
-    u"UPDATE players SET (startingRank, title, name, rating, nationalRating, playerId, nationalId, birthDate, federation, origin, gender, extra, tournament) = "_s
-    u"(:startingRank, :title, :name, :rating, :nationalRating, :playerId, :nationalId, :birthDate, :federation, :origin, :gender, :extra, :tournament) "_s
+    u"UPDATE players SET (startingRank, title, name, rating, nationalRating, playerId, nationalId, birthDate, federation, origin, gender, lastModified, extra, tournament) = "_s
+    u"(:startingRank, :title, :name, :rating, :nationalRating, :playerId, :nationalId, :birthDate, :federation, :origin, :gender, :lastModified, :extra, :tournament) "_s
     u"WHERE id = :id;"_s;
 
 const QString DELETE_PLAYER_QUERY = u"DELETE FROM players WHERE id = :id;"_s;
