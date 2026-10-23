@@ -244,6 +244,8 @@ public:
      */
     [[nodiscard]] QString gender() const;
 
+    [[nodiscard]] QDateTime lastModified() const;
+
     [[nodiscard]] QByteArray extraString() const;
 
     /*!
@@ -296,6 +298,7 @@ public Q_SLOTS:
     void setFederation(const QString &federation);
     void setOrigin(const QString &origin);
     void setGender(const QString &gender);
+    void setLastModified(const QDateTime &lastModified);
     void setExtra(const QByteArray &extra);
 
 Q_SIGNALS:
@@ -325,5 +328,6 @@ private:
     QString m_federation;
     QString m_origin;
     QString m_gender;
+    QDateTime m_lastModified;
     QJsonObject m_extra;
 };

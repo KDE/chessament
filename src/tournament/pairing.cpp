@@ -191,6 +191,7 @@ QJsonObject Pairing::toJson() const
         {u"board"_s, m_board},
         {u"white_player"_s, m_whitePlayer->id()},
         {u"black_player"_s, QJsonValue{}},
+        {u"last_modified"_s, m_lastModified.toUTC().toString(Qt::ISODate)},
     };
 
     if (m_blackPlayer != nullptr) {
