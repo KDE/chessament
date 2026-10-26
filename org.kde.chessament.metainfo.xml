@@ -7,99 +7,18 @@
   <id>org.kde.chessament</id>
   <metadata_license>CC0-1.0</metadata_license>
   <name>Chessament</name>
-  <name xml:lang="ar">شطرنج</name>
-  <name xml:lang="ca">Chessament</name>
-  <name xml:lang="ca-valencia">Chessament</name>
-  <name xml:lang="cs">Chessament</name>
-  <name xml:lang="de">Chessament</name>
-  <name xml:lang="es">Chessament</name>
   <name xml:lang="eu">Chessament</name>
-  <name xml:lang="fi">Chessament</name>
-  <name xml:lang="fr">Chessament</name>
   <name xml:lang="gl">Chessament</name>
   <name xml:lang="he">Chessament</name>
-  <name xml:lang="ia">Chessament</name>
-  <name xml:lang="it">Chessament</name>
-  <name xml:lang="ka">Chessament</name>
-  <name xml:lang="ko">Chessament</name>
-  <name xml:lang="lv">Chessament</name>
-  <name xml:lang="nl">Chessament</name>
-  <name xml:lang="pl">Chessament</name>
-  <name xml:lang="pt-BR">Chessament</name>
-  <name xml:lang="ru">Chessament</name>
-  <name xml:lang="sk">Chessament</name>
-  <name xml:lang="sl">Chessament</name>
-  <name xml:lang="sr">Chessament</name>
-  <name xml:lang="sr-Latn">Chessament</name>
-  <name xml:lang="sr-ijekavian">Chessament</name>
-  <name xml:lang="sr-ijekavianlatin">Chessament</name>
-  <name xml:lang="sv">Chessament</name>
-  <name xml:lang="tr">Chessament</name>
-  <name xml:lang="ug">شاھمات مۇسابىقىسى</name>
-  <name xml:lang="uk">Chessament</name>
-  <name xml:lang="zh-CN">Chessament</name>
   <summary>Chess tournament manager</summary>
-  <summary xml:lang="ar">مدير بطولة شطرنج</summary>
-  <summary xml:lang="ca">Gestor de torneigs d'escacs</summary>
-  <summary xml:lang="ca-valencia">Gestor de torneigs d'escacs</summary>
-  <summary xml:lang="cs">Správce turnajů v šachu</summary>
-  <summary xml:lang="de">Schachturniermanager</summary>
-  <summary xml:lang="es">Gestor de torneos de ajedrez</summary>
   <summary xml:lang="eu">Xake txapelketa kudeatzailea</summary>
-  <summary xml:lang="fi">Šakkiturnausten hallinta</summary>
-  <summary xml:lang="fr">Gestionnaire de tournoi d'échecs</summary>
   <summary xml:lang="gl">Xestor de torneos de xadrez</summary>
   <summary xml:lang="he">מנהל תחרויות שחמט</summary>
-  <summary xml:lang="it">Gestore di tornei di scacchi</summary>
-  <summary xml:lang="ka">ჭადრაკის ტურნირის მმართველი</summary>
-  <summary xml:lang="ko">체스 토너먼트 관리자</summary>
-  <summary xml:lang="lv">Šaha turnīru pārvaldnieks</summary>
-  <summary xml:lang="nl">Beheerder van een schaaktoernooi</summary>
-  <summary xml:lang="pl">Zarządzanie turniejami szachowymi</summary>
-  <summary xml:lang="pt-BR">Gerenciador de torneio de xadrez</summary>
-  <summary xml:lang="ru">Управление шахматными турнирами</summary>
-  <summary xml:lang="sk">Správca šachových turnajov</summary>
-  <summary xml:lang="sl">Upravljalnik šahovskih turnirjev</summary>
-  <summary xml:lang="sr">Менаџер шаховских турнира</summary>
-  <summary xml:lang="sr-Latn">Menadžer šahovskih turnira</summary>
-  <summary xml:lang="sr-ijekavian">Менаџер шаховских турнира</summary>
-  <summary xml:lang="sr-ijekavianlatin">Menadžer šahovskih turnira</summary>
-  <summary xml:lang="sv">Schackturneringshanterare</summary>
-  <summary xml:lang="tr">Satranç turnuvası yöneticisi</summary>
-  <summary xml:lang="ug">خەلقئارا شاھمات مۇسابىقە باشقۇرغۇچ</summary>
-  <summary xml:lang="uk">Керування шаховим турніром</summary>
-  <summary xml:lang="zh-CN">国际象棋赛事管理系统</summary>
   <description>
     <p>Chessament is a chess tournament manager. It currently supports individual Swiss-system tournaments.</p>
-    <p xml:lang="ar">تطبيق شطرنج هو برنامج لإدارة بطولات الشطرنج. يدعم حاليًا بطولات فردية بنظام سويسري.</p>
-    <p xml:lang="ca">El Chessament és un gestor de torneigs d'escacs. Actualment permet torneigs individuals segons el sistema suís.</p>
-    <p xml:lang="ca-valencia">Chessament és un gestor de torneigs d'escacs. Actualment permet torneigs individuals segons el sistema suís.</p>
-    <p xml:lang="cs">Chessament je program pro správu šachových turnajů. V současné době podporuje individuální turnaje hrané švýcarským systémem.</p>
-    <p xml:lang="de">Chessament ist ein Schachturniermanager. Er unterstützt derzeit individuelle Turniere nach dem Schweizer System.</p>
-    <p xml:lang="es">Chessament es un gestor de torneos de ajedrez. Actualmente soporta torneos individuales con sistema suizo.</p>
     <p xml:lang="eu">Chessament xake txapelketa kudeatzaile bat da. Gaur egun, sistema suitzarreko banakako txapelketak onartzen ditu.</p>
-    <p xml:lang="fi">Chessament on šakkiturnausten hallinta. Toistaiseksi se tukee yksittäisiä sveitsiläistyylisiä turnauksia.</p>
-    <p xml:lang="fr">Chessament est un gestionnaire de tournoi d'échecs. Il prend actuellement en charges les tournois individuels du système suisse.</p>
     <p xml:lang="gl">Chessament é un xestor de torneos de xadrez. Actualmente permite torneos individuais mediante o sistema suízo.</p>
     <p xml:lang="he">Chessament הוא מנהל תחרויות שחמט. כרגע הוא תומך בתחרויות עצמאיות בשיטה השווייצרית.</p>
-    <p xml:lang="it">Chessament è un gestore di tornei di scacchi. Attualmente supporta tornei individuali con sistema svizzero.</p>
-    <p xml:lang="ka">Chessament ჭადრაკის ტურნამენტის მმართველია. მას ამჟამად ინდივიდუალური შვეიცარიული სისტემის ტურნამენტების მხარდაჭერა გააჩნია.</p>
-    <p xml:lang="ko">Chessament는 체스 토너먼트 관리자입니다. 개인 스위스식 토너먼트를 지원합니다.</p>
-    <p xml:lang="lv">„Chessament“ ir šaha turnīru pārvaldnieks. Šī programma šobrīd atbalsta dažāda veida Šveices sistēmas turnīrus.</p>
-    <p xml:lang="nl">Chessament is een beheerder van schaaktoernooien. Het ondersteunt op dit moment individuele toernooien volgens het Zwitserse systeem.</p>
-    <p xml:lang="pl">Chessament jest programem do zarządzania turniejami szachowymi. Obecnie obsługuje pojedyncze turnieje w systemie szwajcarskim.</p>
-    <p xml:lang="pt-BR">Chessament é um gerenciador de torneios de xadrez. Atualmente, ele suporta torneios individuais no sistema suíço.</p>
-    <p xml:lang="ru">Chessament — приложение для управления шахматными турнирами. В настоящее время поддерживаются личные турниры по швейцарской системе.</p>
-    <p xml:lang="sk">Chessament je správca šachových turnajov. Momentálne podporuje individuálne turnaje švajčiarskym systémom.</p>
-    <p xml:lang="sl">Chessament je upravitelj šahovskih turnirjev. Trenutno podpira posamezne turnirje po švicarskem sistemu.</p>
-    <p xml:lang="sr">Chessament је менаџер шаховских турнира. Тренутно подржава појединачне турнире по швајцарском систему.</p>
-    <p xml:lang="sr-Latn">Chessament je menadžer šahovskih turnira. Trenutno podržava pojedinačne turnire po švajcarskom sistemu.</p>
-    <p xml:lang="sr-ijekavian">Chessament је менаџер шаховских турнира. Тренутно подржава појединачне турнире по швајцарском систему.</p>
-    <p xml:lang="sr-ijekavianlatin">Chessament je menadžer šahovskih turnira. Trenutno podržava pojedinačne turnire po švajcarskom sistemu.</p>
-    <p xml:lang="sv">Chessament är en schackturneringshanterare. Den stöder för närvarande individuella schweizerturneringar.</p>
-    <p xml:lang="tr">Chessament, bir satranç turnuvası yöneticisidir. Şu anda yalnızca İsviçre tarzı turnuvaları destekler.</p>
-    <p xml:lang="uk">Chessament — програма для керування шаховими турнірами. У поточній версії передбачено турніри за індивідуальною швейцарською системою.</p>
-    <p xml:lang="zh-CN">Chessament 是一个国际象棋赛事管理系统。目前支持举办个人瑞士制比赛。</p>
   </description>
   <icon type="stock">org.kde.chessament</icon>
   <categories>
@@ -129,83 +48,17 @@
     <screenshot type="default">
       <image width="2260" height="1716">https://cdn.kde.org/screenshots/chessament/chessament.png</image>
       <caption>Players view</caption>
-      <caption xml:lang="ar">عرض اللاعبين</caption>
-      <caption xml:lang="ca">Vista dels jugadors</caption>
-      <caption xml:lang="ca-valencia">Vista dels jugadors</caption>
-      <caption xml:lang="cs">Zobrazení hráčů</caption>
-      <caption xml:lang="de">Spieleransicht</caption>
-      <caption xml:lang="es">Vista de jugadores</caption>
-      <caption xml:lang="fi">Pelaajanäkymä</caption>
-      <caption xml:lang="fr">Affichage des joueurs</caption>
       <caption xml:lang="he">תצוגת שחקנים</caption>
-      <caption xml:lang="it">Vista giocatori</caption>
-      <caption xml:lang="ka">მოთამაშის ფერი</caption>
-      <caption xml:lang="nl">Weergave van spelers</caption>
-      <caption xml:lang="pt-BR">Visão dos jogadores</caption>
-      <caption xml:lang="ru">Список игроков</caption>
-      <caption xml:lang="sk">Pohľad na hráčov</caption>
-      <caption xml:lang="sl">Pogled igralcev</caption>
-      <caption xml:lang="sr">Приказ играча</caption>
-      <caption xml:lang="sr-Latn">Prikaz igrača</caption>
-      <caption xml:lang="sr-ijekavian">Приказ играча</caption>
-      <caption xml:lang="sr-ijekavianlatin">Prikaz igrača</caption>
-      <caption xml:lang="sv">Spelarvy</caption>
-      <caption xml:lang="tr">Oyuncular görünümü</caption>
-      <caption xml:lang="uk">Перегляд гравців</caption>
     </screenshot>
     <screenshot>
       <image width="2260" height="1716">https://cdn.kde.org/screenshots/chessament/chessament-pairings.png</image>
       <caption>Pairings view</caption>
-      <caption xml:lang="ar">عرض الأزواج</caption>
-      <caption xml:lang="ca">Vista dels aparellaments</caption>
-      <caption xml:lang="ca-valencia">Vista dels aparellaments</caption>
-      <caption xml:lang="cs">Zobrazení párů</caption>
-      <caption xml:lang="de">Paarungsansicht</caption>
-      <caption xml:lang="es">Vista de emparejamientos</caption>
-      <caption xml:lang="fi">Paritusnäkymä</caption>
-      <caption xml:lang="fr">Affichage des associations</caption>
       <caption xml:lang="he">תצוגת שיבוצים</caption>
-      <caption xml:lang="it">Vista abbinamenti</caption>
-      <caption xml:lang="ka">დაწყვილებების ხედი</caption>
-      <caption xml:lang="nl">Weergave van paren</caption>
-      <caption xml:lang="pt-BR">Visão dos pares</caption>
-      <caption xml:lang="ru">Пары</caption>
-      <caption xml:lang="sk">Pohľad na párovania</caption>
-      <caption xml:lang="sl">Pogled parov</caption>
-      <caption xml:lang="sr">Приказ парова</caption>
-      <caption xml:lang="sr-Latn">Prikaz parova</caption>
-      <caption xml:lang="sr-ijekavian">Приказ парова</caption>
-      <caption xml:lang="sr-ijekavianlatin">Prikaz parova</caption>
-      <caption xml:lang="sv">Lottningsvy</caption>
-      <caption xml:lang="tr">Eşleşmeler görünümü</caption>
-      <caption xml:lang="uk">Перегляд пар</caption>
     </screenshot>
     <screenshot>
       <image width="2260" height="1716">https://cdn.kde.org/screenshots/chessament/chessament-standings.png</image>
       <caption>Standings view</caption>
-      <caption xml:lang="ar">عرض المواقف</caption>
-      <caption xml:lang="ca">Vista de la classificació</caption>
-      <caption xml:lang="ca-valencia">Vista de la classificació</caption>
-      <caption xml:lang="cs">Zobrazení výsledků</caption>
-      <caption xml:lang="de">Spielstandansicht</caption>
-      <caption xml:lang="es">Vista de la clasificación</caption>
-      <caption xml:lang="fi">Tilannenäkymä</caption>
-      <caption xml:lang="fr">Affichage des classements</caption>
       <caption xml:lang="he">תצוגת עמדות</caption>
-      <caption xml:lang="it">Vista posizioni</caption>
-      <caption xml:lang="ka">შედეგების ხედი</caption>
-      <caption xml:lang="nl">Weergave van standen</caption>
-      <caption xml:lang="pt-BR">Visão da pontuação</caption>
-      <caption xml:lang="ru">Турнирная таблица</caption>
-      <caption xml:lang="sk">Pohľad na poradie</caption>
-      <caption xml:lang="sl">Pogled stanj</caption>
-      <caption xml:lang="sr">Приказ пласмана</caption>
-      <caption xml:lang="sr-Latn">Prikaz plasmana</caption>
-      <caption xml:lang="sr-ijekavian">Приказ пласмана</caption>
-      <caption xml:lang="sr-ijekavianlatin">Prikaz plasmana</caption>
-      <caption xml:lang="sv">Ställningsvy</caption>
-      <caption xml:lang="tr">Dereceler görünümü</caption>
-      <caption xml:lang="uk">Перегляд місць</caption>
     </screenshot>
   </screenshots>
   <branding>
@@ -217,16 +70,6 @@
       <url>https://alcarazzam.dev/posts/chessament-1.0/</url>
       <description>
         <p>Initial release.</p>
-        <p xml:lang="ca">Versió inicial.</p>
-        <p xml:lang="cs">Úvodní vydání.</p>
-        <p xml:lang="es">Versión inicial.</p>
-        <p xml:lang="ka">საწყისი რელიზი.</p>
-        <p xml:lang="nl">Initiële uitgave.</p>
-        <p xml:lang="pt-BR">Versão inicial.</p>
-        <p xml:lang="ru">Первый выпуск.</p>
-        <p xml:lang="sl">Začetna izdaja.</p>
-        <p xml:lang="tr">İlk yayım</p>
-        <p xml:lang="uk">Початковий випуск.</p>
       </description>
     </release>
   </releases>
