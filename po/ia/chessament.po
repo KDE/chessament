@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-24 00:45+0000\n"
-"PO-Revision-Date: 2026-10-09 15:47+0200\n"
+"PO-Revision-Date: 2026-10-26 16:45+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -1181,12 +1181,9 @@ msgid "Tiebreaks"
 msgstr ""
 
 #: tournament/qml/SettingsFormatPage.qml:93
-#, fuzzy
-#| msgctxt "@info:status"
-#| msgid "No arbiters yet."
 msgctxt "@info:status"
 msgid "No tiebreaks set up yet."
-msgstr "Ancora necun arbitros"
+msgstr ""
 
 #: tournament/qml/SettingsFormatPage.qml:120
 msgctxt "@action:button"
@@ -1209,12 +1206,9 @@ msgid "Tournament name"
 msgstr ""
 
 #: tournament/qml/SettingsInformationPage.qml:35
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Information"
 msgctxt "@label:textbox"
 msgid "Location"
-msgstr "Information"
+msgstr "Location"
 
 #: tournament/qml/SettingsInformationPage.qml:53
 msgctxt "@title:group"
