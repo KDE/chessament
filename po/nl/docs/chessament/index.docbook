@@ -38,9 +38,9 @@ SPDX-License-Identifier: CC-BY-SA-4.0
     <legalnotice
 >&CCBYSA4Notice;</legalnotice>
     <date
->2026-04-17</date>
+>2026-11-08</date>
     <releaseinfo
->0.1</releaseinfo>
+>Chessament 1.0</releaseinfo>
       <abstract>
         <para
 >&chessament; is een beheerprogramma van een schaaktoernooi. </para>
@@ -243,6 +243,34 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 		</sect1>
 	</chapter>
 
+	<chapter id="rating-lists">
+		<title
+>Ratinglijsten</title>
+
+		<para
+>Om het toevoegen van nieuwe spelers aan een toernooi te vergemakkelijken, kunt u gebruikmaken van ratinglijsten. Om een ​​nieuwe ratinglijst aan &chessament; toe te voegen, selecteert u <menuchoice
+><guimenu
+>Instellingen</guimenu
+><guimenuitem
+>Chessament configureren…</guimenuitem
+></menuchoice
+> en gaat u naar het gedeelte <guibutton
+>Ratinglijsten</guibutton
+>. </para>
+		<para
+>&chessament; ondersteunt de volgende ratinglijsten: </para>
+		<itemizedlist>
+			<listitem>
+				<para
+>International Chess Federation (<acronym
+>FIDE</acronym
+>): gecombineerde lijst, <acronym
+>TXT</acronym
+> format.</para>
+			</listitem>
+		</itemizedlist>
+	</chapter>
+
 	<chapter id="reference">
 		<title
 >Referentie</title>
@@ -376,6 +404,28 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 ><action
 >Verbergt</action
 > de spellen die een resultaat hebben ingevoerd. </para>
+						</listitem>
+					</varlistentry>
+				</variablelist>
+			</sect2>
+			<sect2 id="reference-menus-tournament">
+				<title
+>Het menu Toernooien</title>
+				<variablelist>
+					<varlistentry id="menu-tournament-update-ratings">
+						<term>
+							<menuchoice
+><guimenu
+>Toernooi</guimenu
+> <guimenuitem
+>Ratings bijwerken…</guimenuitem
+> </menuchoice>
+						</term>
+						<listitem>
+							<para
+><action
+>Opent</action
+> een dialoogvenster waarin u de beoordelingen van de spelers kunt bijwerken. </para>
 						</listitem>
 					</varlistentry>
 				</variablelist>
