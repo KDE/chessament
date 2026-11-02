@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-24 00:45+0000\n"
-"PO-Revision-Date: 2026-10-02 21:45+0200\n"
+"PO-Revision-Date: 2026-11-01 10:09+0100\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -944,22 +944,19 @@ msgid "Automatically open exported PDF files"
 msgstr "Öppna automatiskt exporterade PDF-filer"
 
 #: settings/GeneralPage.qml:32
-#, fuzzy
-#| msgctxt "@title:column Game Result"
-#| msgid "Result"
 msgctxt "@title:group"
 msgid "Result Entry"
-msgstr "Resultat"
+msgstr "Resultatinmatning"
 
 #: settings/GeneralPage.qml:37
 msgctxt "@option:radio"
 msgid "Use 1-2-3 keys"
-msgstr ""
+msgstr "Använd tangenterna 1-2-3"
 
 #: settings/GeneralPage.qml:48
 msgctxt "@option:radio"
 msgid "Use 1-5-0 keys"
-msgstr ""
+msgstr "Använd tangenterna 1-5-0"
 
 #: settings/RatingListsPage.qml:19 settings/RatingListsPage.qml:22
 msgctxt "@title"
@@ -1005,12 +1002,10 @@ msgid "The time control is Rapid."
 msgstr "Betänketiden är snabb."
 
 #: timecontrolmodel.cpp:42
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "The time control is Rapid."
+#, kde-format
 msgctxt "@info"
 msgid "The time control is Standard."
-msgstr "Betänketiden är snabb."
+msgstr "Betänketiden är standard."
 
 #: tournament/event.cpp:166 tournament/event.cpp:175
 #, kde-kuit-format
@@ -1189,12 +1184,9 @@ msgid "Tiebreaks"
 msgstr "Tiebreak"
 
 #: tournament/qml/SettingsFormatPage.qml:93
-#, fuzzy
-#| msgctxt "@info:status"
-#| msgid "No arbiters yet."
 msgctxt "@info:status"
 msgid "No tiebreaks set up yet."
-msgstr "Inga tävlingsdomare ännu."
+msgstr "Inga tiebreak ännu angivna."
 
 #: tournament/qml/SettingsFormatPage.qml:120
 msgctxt "@action:button"
@@ -1217,12 +1209,9 @@ msgid "Tournament name"
 msgstr "Turneringsnamn"
 
 #: tournament/qml/SettingsInformationPage.qml:35
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Information"
 msgctxt "@label:textbox"
 msgid "Location"
-msgstr "Information"
+msgstr "Plats"
 
 #: tournament/qml/SettingsInformationPage.qml:53
 msgctxt "@title:group"
@@ -1338,12 +1327,10 @@ msgstr[0] "Buchholz %1"
 msgstr[1] "Buchholz %1"
 
 #: tournament/tiebreaks/bwg.h:22 tournament/tournament.cpp:536
-#, fuzzy, kde-format
-#| msgctxt "Number of Games Played with Black (over the board) tiebreak"
-#| msgid "Number of Games Played with Black (over the board)"
+#, kde-format
 msgctxt "Tiebreak"
 msgid "Number of Games Won with Black (over the board)"
-msgstr "Antal matcher spelade med svart (över hela linjen)"
+msgstr "Antal matcher vunna med svart (över hela linjen)"
 
 #: tournament/tiebreaks/dummy.h:23
 #, kde-format
@@ -1374,13 +1361,13 @@ msgstr "Poäng"
 #, kde-format
 msgctxt "Progressive Scores tiebreak"
 msgid "Progressive"
-msgstr ""
+msgstr "Progressiva"
 
 #: tournament/tiebreaks/rep.h:22 tournament/tournament.cpp:552
 #, kde-format
 msgctxt "Tiebreak"
 msgid "Rounds one Elected to Play"
-msgstr ""
+msgstr "Matcher man valde att spela"
 
 #: tournament/tiebreaks/sb.cpp:15
 #, kde-format
@@ -1398,15 +1385,15 @@ msgstr "Alternativ för tiebreak som inte stöds “%1”"
 #, kde-format
 msgctxt "Tiebreak"
 msgid "Sonneborn-Berger"
-msgstr ""
+msgstr "Sonneborn-Berger"
 
 #: tournament/tiebreaks/sb.h:60
 #, kde-format
 msgctxt "Tiebreak modifier, N is a number < 0"
 msgid "Sonneborn-Berger %1"
 msgid_plural "Sonneborn-Berger %1"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Sonneborn-Berger %1"
+msgstr[1] "Sonneborn-Berger %1"
 
 #: tournament/tiebreaks/won.h:23 tournament/tournament.cpp:527
 #, kde-format

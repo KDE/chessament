@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-24 00:45+0000\n"
-"PO-Revision-Date: 2026-10-31 19:39+0400\n"
+"PO-Revision-Date: 2026-11-01 18:09+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -967,7 +967,7 @@ msgstr "الحسابات"
 #: settings/ChessamentConfigurationView.qml:32
 msgctxt "@action:button"
 msgid "Rating Lists"
-msgstr "قائة التقييم"
+msgstr "قائمة التقييم"
 
 #: settings/DeleteRatingListDialog.qml:24
 msgctxt "@title"
