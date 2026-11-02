@@ -217,6 +217,7 @@
       <url>https://alcarazzam.dev/posts/chessament-1.0/</url>
       <description>
         <p>Initial release.</p>
+        <p xml:lang="ar">الإصدار الأولي.</p>
         <p xml:lang="ca">Versió inicial.</p>
         <p xml:lang="ca-valencia">Versió inicial.</p>
         <p xml:lang="cs">Úvodní vydání.</p>
@@ -229,6 +230,7 @@
         <p xml:lang="ru">Первый выпуск.</p>
         <p xml:lang="sk">Prvé vydanie.</p>
         <p xml:lang="sl">Začetna izdaja.</p>
+        <p xml:lang="sv">Originalutgåva.</p>
         <p xml:lang="tr">İlk yayım</p>
         <p xml:lang="uk">Початковий випуск.</p>
       </description>
