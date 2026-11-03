@@ -137,9 +137,7 @@ msgid "Error: Can’t open more than one event"
 msgstr ""
 
 #: pairingmodel.cpp:108
-#, fuzzy, kde-format
-#| msgctxt "@title:column"
-#| msgid "Board"
+#, kde-format
 msgctxt "@title:column Board Number"
 msgid "Board"
 msgstr "Taboleiro"
@@ -159,17 +157,13 @@ msgid "White Player"
 msgstr "Brancas"
 
 #: pairingmodel.cpp:114
-#, fuzzy, kde-format
-#| msgctxt "@title:column"
-#| msgid "Result"
+#, kde-format
 msgctxt "@title:column Game Result"
 msgid "Result"
 msgstr "Resultado"
 
 #: pairingmodel.cpp:116
-#, fuzzy, kde-format
-#| msgctxt "@title:column"
-#| msgid "Black Player"
+#, kde-format
 msgctxt "@title:column Name of the Black Player"
 msgid "Black Player"
 msgstr "Negras"
@@ -618,9 +612,6 @@ msgstr[0] "Rolda %1"
 msgstr[1] "Rolda %1"
 
 #: qml/PairingsPage.qml:104
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Remove pairings of this and following rounds…"
 msgctxt "@action:intoolbar"
 msgid "Remove pairings of this and following rounds…"
 msgstr "Retirar os emparellamentos desta e de futuras roldas…"
@@ -970,8 +961,6 @@ msgid "Accounts"
 msgstr "Conta"
 
 #: settings/AccountsPage.qml:43
-#, fuzzy
-#| msgid "Logout"
 msgctxt "@action:button"
 msgid "Logout"
 msgstr "Saír"
@@ -1152,9 +1141,7 @@ msgid "Add rating list"
 msgstr ""
 
 #: standingsmodel.cpp:92
-#, fuzzy, kde-format
-#| msgctxt "@title:colunm"
-#| msgid "Rank"
+#, kde-format
 msgctxt "@title:column Player Ranking"
 msgid "Rank"
 msgstr "Posición"
