@@ -52,9 +52,9 @@ SPDX-License-Identifier: CC-BY-SA-4.0
     <legalnotice
 >&CCBYSA4Notice;</legalnotice>
     <date
->2026-04-17</date>
+>8 de noviembre de 2026</date>
     <releaseinfo
->0.1</releaseinfo>
+>Chessament 1.0</releaseinfo>
       <abstract>
         <para
 >&chessament; es un gestor de torneos de ajedrez. </para>
@@ -257,6 +257,34 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 		</sect1>
 	</chapter>
 
+	<chapter id="rating-lists">
+		<title
+>Listas de valoraciones</title>
+
+		<para
+>Para facilitar el registro de nuevos jugadores, puede utilizar listas de valoraciones. Para añadir una nueva lista de valoraciones a &chessament;, selecciona <menuchoice
+><guimenu
+>Preferencias</guimenu
+><guimenuitem
+>Configurar Chessament…</guimenuitem
+></menuchoice
+> y vaya a la sección <guibutton
+>Lista de valoración</guibutton
+>. </para>
+		<para
+>&chessament; admite las siguientes listas de valoraciones: </para>
+		<itemizedlist>
+			<listitem>
+				<para
+>Federación Internacional de Ajedrez (<acronym
+>FIDE</acronym
+>): lista combinada, formato <acronym
+>TXT</acronym
+>.</para>
+			</listitem>
+		</itemizedlist>
+	</chapter>
+
 	<chapter id="reference">
 		<title
 >Referencia</title>
@@ -390,6 +418,28 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 ><action
 >Oculta</action
 > las partidas que tienen un resultado introducido. </para>
+						</listitem>
+					</varlistentry>
+				</variablelist>
+			</sect2>
+			<sect2 id="reference-menus-tournament">
+				<title
+>El menú Torneo</title>
+				<variablelist>
+					<varlistentry id="menu-tournament-update-ratings">
+						<term>
+							<menuchoice
+><guimenu
+>Torneo</guimenu
+> <guimenuitem
+>Actualizar valoraciones…</guimenuitem
+> </menuchoice>
+						</term>
+						<listitem>
+							<para
+><action
+>Abre</action
+> un diálogo que le permite actualizar las valoraciones de los jugadores. </para>
 						</listitem>
 					</varlistentry>
 				</variablelist>
