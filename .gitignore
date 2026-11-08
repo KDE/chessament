@@ -18,4 +18,9 @@ repo/
 *.flatpak
 *.pot
 /Testing/
+/tmp-tagme/
+/chessament-*/
+*.tar.xz
+*.tar.xz.sig
+/release_data
 
