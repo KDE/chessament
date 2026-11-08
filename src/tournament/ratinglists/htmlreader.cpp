@@ -16,9 +16,16 @@ std::expected<void, QString> HtmlRatingListReader::readPlayers(QTextStream *stre
     stream->setEncoding(QStringConverter::Latin1);
 
     auto data = stream->readAll();
+    if (data.startsWith("<html><head><meta http-equiv='Content-Type' content='text/html; charset=utf-8'></head><body>"_L1)) {
+        data.slice(92);
+    }
     data.replace("<td></tr>"_L1, "</tr>"_L1);
     if (data.endsWith("<tr><td>"_L1)) {
         data.chop(8);
+        data.append(u"</table>"_s);
+    }
+    if (data.endsWith("<tr><td></body></html>"_L1)) {
+        data.chop(22);
         data.append(u"</table>"_s);
     }
 

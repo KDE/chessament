@@ -18,17 +18,28 @@ class RatingListTest : public QObject
 
 private Q_SLOTS:
 
+    void testHtmlRatingList_data();
     void testHtmlRatingList();
 
     void cleanupTestCase();
 };
 
+void RatingListTest::testHtmlRatingList_data()
+{
+    QTest::addColumn<QString>("fileName");
+
+    QTest::newRow("ratinglist.html") << u"/ratinglist.html"_s;
+    QTest::newRow("ratinglist_2.html") << u"/ratinglist_2.html"_s;
+}
+
 void RatingListTest::testHtmlRatingList()
 {
+    QFETCH(QString, fileName);
+
     const auto list = std::make_unique<RatingList>(u"Test Rating List"_s);
     auto reader = std::make_unique<HtmlRatingListReader>(list.get());
 
-    QFile file{QLatin1String(DATA_DIR) % u"/ratinglist.html"_s};
+    QFile file{QLatin1String(DATA_DIR) % fileName};
     QVERIFY(file.open(QFile::ReadOnly));
 
     QTextStream stream{&file};
@@ -64,6 +75,8 @@ void RatingListTest::testHtmlRatingList()
     QCOMPARE(katie.blitzRating(), 0);
     QCOMPARE(katie.nationalId(), u"123456789"_s);
     QCOMPARE(katie.nationalRating(), 3182);
+
+    RatingListsManager::remove(list->id());
 }
 
 void RatingListTest::cleanupTestCase()
