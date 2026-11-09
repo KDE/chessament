@@ -29,12 +29,12 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/BieremaBoyzProgramming/bbpPairings/archive/refs/tags/v6.0.0.tar.gz",
+                    "url": "https://files.kde.org/craft/sources/libs/bbppairings/bbpPairings-6.0.0.tar.gz",
                     "sha256": "b7f95c0803131e38a56e8829bd062d9ad51908322dd6fef01380b2f612f58227",
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 389407,
-                        "url-template": "https://github.com/BieremaBoyzProgramming/bbpPairings/archive/refs/tags/v$version.tar.gz"
+                        "url-template": "https://files.kde.org/craft/sources/libs/bbppairings/bbpPairings-$version.tar.gz"
                     }
                 },
                 {
