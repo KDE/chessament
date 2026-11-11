@@ -46,6 +46,19 @@ Controller::Controller(QObject *parent)
 #endif
 }
 
+void Controller::openHelp()
+{
+#if defined(Q_OS_WIN) || defined(Q_OS_MACOS)
+    QDesktopServices::openUrl(QUrl{u"https://docs.kde.org/stable_kf6/en/chessament/chessament/index.html"_s});
+#else
+    if (KSandbox::isInside()) {
+        QDesktopServices::openUrl(QUrl{u"https://docs.kde.org/stable_kf6/en/chessament/chessament/index.html"_s});
+    } else {
+        QDesktopServices::openUrl(QUrl{u"help:/"_s});
+    }
+#endif
+}
+
 constexpr bool Controller::experimental()
 {
 #ifdef BUILD_EXPERIMENTAL

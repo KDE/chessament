@@ -92,6 +92,8 @@ public:
     [[nodiscard]] PairingModel *pairingModel() const;
     [[nodiscard]] StandingsModel *standingsModel() const;
 
+    Q_INVOKABLE static void openHelp();
+
     [[nodiscard]] constexpr static bool experimental();
 
 #ifdef BUILD_EXPERIMENTAL

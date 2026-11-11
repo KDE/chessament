@@ -156,7 +156,7 @@ Controls.MenuBar {
         Kirigami.Action {
             AC.ActionCollection.action: "HelpContents"
             AC.ActionCollection.collection: "org.kde.chessament.help"
-            onTriggered: Qt.openUrlExternally("help:/")
+            onTriggered: Controller.openHelp()
         }
 
         Kirigami.Action {
