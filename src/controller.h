@@ -145,6 +145,4 @@ private:
 
     Controller::View m_currentView{Controller::View::None};
     QString m_error;
-
-    std::unique_ptr<QTemporaryFile> m_tempfile;
 };
