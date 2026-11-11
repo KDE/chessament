@@ -1,0 +1,569 @@
+<?xml version="1.0" ?>
+<!--
+SPDX-FileCopyrightText: 2026 Manuel Alcaraz Zambrano <manuel@alcarazzam.dev>
+SPDX-License-Identifier: CC-BY-SA-4.0
+-->
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+    <!ENTITY chessament "<application
+>Chessament</application
+>">
+    <!ENTITY % addindex "IGNORE">
+    <!ENTITY % Brazilian-Portuguese "INCLUDE">
+    <!ENTITY Manuel.Alcaraz.Zambrano "<personname
+><firstname
+>Manuel</firstname
+><surname
+>Alcaraz Zambrano</surname
+></personname
+>">
+    <!ENTITY Manuel.Alcaraz.Zambrano.mail "<email
+>manuel@alcarazzam.dev</email
+>">
+]>
+<book id="chessament" lang="&language;">
+  <bookinfo>
+    <title
+>O Manual do &chessament;</title>
+    <authorgroup>
+      <author
+>&Manuel.Alcaraz.Zambrano; &Manuel.Alcaraz.Zambrano.mail;</author>
+      <othercredit role="translator"
+><firstname
+>Marcus</firstname
+><surname
+>Gama</surname
+><affiliation
+><address
+><email
+>marcus.gama@kde.org</email
+></address
+></affiliation
+><contrib
+>Tradução</contrib
+></othercredit
+> 
+    </authorgroup>
+    <copyright>
+      <year
+>2026</year>
+      <holder
+>&Manuel.Alcaraz.Zambrano;</holder>
+    </copyright>
+    <legalnotice
+>&CCBYSA4Notice;</legalnotice>
+    <date
+>08/11/2026</date>
+    <releaseinfo
+>Chessament 1.0</releaseinfo>
+      <abstract>
+        <para
+>O &chessament; é um gerenciador de torneios de xadrez. </para>
+      </abstract>
+    <keywordset>
+      <keyword
+>KDE</keyword>
+      <keyword
+>Chessament</keyword>
+			<keyword
+>xadrez</keyword>
+			<keyword
+>torneio</keyword>
+    </keywordset>
+  </bookinfo>
+
+	<chapter id="introduction">
+		<title
+>Introdução</title>
+		<para
+>O &chessament; é um gerenciador de torneios de xadrez Ele suporta torneios individuais no sistema suíço. </para>
+		<para
+>Principais funcionalidades do &chessament;: </para>
+		<itemizedlist>
+			<listitem>
+				<para
+>Registro de jogadores.</para>
+			</listitem>
+			<listitem>
+				<para
+>Pareamento de rodadas.</para>
+			</listitem>
+			<listitem>
+				<para
+>Cálculo de pontuação.</para>
+			</listitem>
+		</itemizedlist>
+	</chapter>
+
+	<chapter id="basic-usage">
+		<title
+>Uso básico</title>
+		<sect1 id="opening">
+			<title
+>Criar um novo torneio</title>
+			<para
+>Para criar um novo torneio no &chessament;, selecione <menuchoice
+><guimenu
+>Arquivo</guimenu
+><guimenuitem
+>Novo…</guimenuitem
+></menuchoice
+>, insira um nome, escolha o número de rodadas e clique em <guibutton
+>Salvar</guibutton
+>. Você será solicitado a escolher um local para onde deseja salvar o torneio. </para>
+		</sect1>
+
+		<sect1 id="registering-players">
+			<title
+>Registrar jogadores</title>
+			<para
+>Para adicionar um novo jogador ao torneio, clique no botão <guibutton
+>Adicionar Jogador…</guibutton
+> na barra de ferramentas. </para>
+		</sect1>
+
+		<sect1 id="making-pairings">
+			<title
+>Pareamento &amp; Resultados</title>
+			<para
+>Após concluir o cadastro de todos os jogadores do torneio, você poderá definir os confrontos para a primeira rodada. Acesse a tela <guibutton
+>Pares</guibutton
+> e clique no botão <guibutton
+>Pares da rodada 1…</guibutton
+>. Uma caixa de diálogo será exibida, onde você poderá personalizar algumas opções para a primeira rodada. Recomenda-se manter a opção <guibutton
+>Ordenar jogadores</guibutton
+> ativada. Você pode escolher a cor das peças do jogador com a melhor classificação ou deixar que o &chessament; escolha uma cor aleatória para você. </para>
+			<para
+>Para inserir os resultados, clique em um par e escolha um dos resultados suportados na parte inferior. Você também pode inserir os resultados usando o teclado. Pressionar <keycap
+>1</keycap
+> define o resultado como vitória das brancas, <keycap
+>0</keycap
+> como vitória das pretas e <keycap
+>5</keycap
+> como empate. Após inserir um resultado, o próximo par sem resultado é selecionado automaticamente. </para>
+		</sect1>
+
+		<sect1 id="viewing-standings">
+			<title
+>Exibir a pontuação</title>
+			<para
+>Para ver a pontuação do torneio, acesse a aba <guibutton
+>Pontuação</guibutton
+>. Lá, você pode escolher entre ver a classificação final ou a classificação de uma rodada anterior. </para>
+		</sect1>
+	</chapter>
+
+	<chapter id="tournaments">
+		<title
+>Torneios</title>
+		<sect1 id="tournament-settings">
+			<title
+>Configurações</title>
+			<para
+>Para abrir a janela de configurações de um torneio, clique no botão <guibutton
+>Configurações</guibutton
+> na parte inferior da janela do &chessament;. Esta seção descreve as opções disponíveis em detalhes. </para>
+			<sect2 id="tournament-settings-information">
+				<title
+>Informações</title>
+				<para
+>Nesta seção, você pode definir algumas informações básicas, como o nome do torneio, o local e os árbitros. </para>
+			</sect2>
+			<sect2 id="tournament-settings-format">
+				<title
+>Formato</title>
+				<para
+>Nesta seção, você pode configurar o número de rodadas do torneio e os critérios de desempate usados ​​para calcular a classificação. Mais informações sobre os critérios de desempate estão disponíveis na seção <link linkend="tournament-tiebreaks"
+>Desempate</link
+>. </para>
+			</sect2>
+			<sect2 id="tournament-settings-calendar">
+				<title
+>Calendário</title>
+				<para
+>Nesta seção, você pode definir a programação do torneio. </para>
+			</sect2>
+		</sect1>
+		<sect1 id="tournament-tiebreaks">
+			<title
+>Desempates</title>
+			<para
+>O &chessament; suporta os seguintes critérios de desempate, conforme descrito no <ulink url="https://handbook.fide.com/"
+>Manual da <acronym
+>FIDE</acronym
+></ulink
+>: </para>
+			<itemizedlist>
+				<listitem>
+					<para
+>Buchholz médio dos oponentes (<acronym
+>AOB</acronym
+>)</para>
+				</listitem>
+				<listitem>
+					<para
+>Buchholz (<acronym
+>BH</acronym
+>)</para>
+				</listitem>
+				<listitem>
+					<para
+>Número de jogos jogados com o Preto (<acronym
+>BPG</acronym
+>)</para>
+				</listitem>
+				<listitem>
+					<para
+>Número de jogos vencidos (no tabuleiro) (<acronym
+>WON</acronym
+>)</para>
+				</listitem>
+				<listitem>
+					<para
+>Número de partidas vencidas com as peças pretas (no tabuleiro) (<acronym
+>BWG</acronym
+>)</para>
+				</listitem>
+				<listitem>
+					<para
+>Número de vitórias (<acronym
+>WIN</acronym
+>)</para>
+				</listitem>
+				<listitem>
+					<para
+>Rodadas em que foi eleito para jogar (<acronym
+>REP</acronym
+>)</para>
+				</listitem>
+				<listitem>
+					<para
+>Sonneborn-Berger (<acronym
+>SB</acronym
+>)</para>
+				</listitem>
+				<listitem>
+					<para
+>Pontos (<acronym
+>PTS</acronym
+>)</para>
+				</listitem>
+				<listitem>
+					<para
+>Progressivo (<acronym
+>PS</acronym
+>)</para>
+				</listitem>
+			</itemizedlist>
+		</sect1>
+	</chapter>
+
+	<chapter id="rating-lists">
+		<title
+>Listas de classificação</title>
+
+		<para
+>Para facilitar a inclusão de novos jogadores em um torneio, você pode utilizar listas de classificação. Para adicionar uma nova lista de classificação ao &chessament;, selecione <menuchoice
+><guimenu
+>Configurações</guimenu
+><guimenuitem
+>Configurar Chessament…</guimenuitem
+></menuchoice
+> e vá para a seção <guibutton
+>Listas de classificação</guibutton
+>. </para>
+		<para
+>O &chessament; oferece suporte às seguintes listas de classificação: </para>
+		<itemizedlist>
+			<listitem>
+				<para
+>Federação Internacional de Xadrez (<acronym
+>FIDE</acronym
+>): lista combinada, formato <acronym
+>TXT</acronym
+>.</para>
+			</listitem>
+		</itemizedlist>
+	</chapter>
+
+	<chapter id="reference">
+		<title
+>Referência</title>
+
+		<sect1 id="reference-menus">
+			<title
+>Barra de menus</title>
+			<sect2 id="reference-menus-file">
+				<title
+>Menu Arquivo</title>
+				<variablelist>
+					<varlistentry id="menu-file-new">
+						<term>
+							<menuchoice
+><guimenu
+>Arquivo</guimenu
+> <guimenuitem
+>Novo torneio…</guimenuitem
+> </menuchoice>
+						</term>
+						<listitem>
+							<para
+><action
+>Criar</action
+> um novo torneio. Se já houver um torneio aberto, ele será fechado. </para>
+						</listitem>
+					</varlistentry>
+					<varlistentry id="menu-file-open">
+						<term>
+							<menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;<keycap
+>O</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Arquivo</guimenu
+> <guimenuitem
+>Abrir…</guimenuitem
+> </menuchoice>
+						</term>
+						<listitem>
+							<para
+><action
+>Abre</action
+> um arquivo do &chessament;. </para>
+						</listitem>
+					</varlistentry>
+					<varlistentry id="menu-file-save-as">
+						<term>
+							<menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;&Shift;<keycap
+>S</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Arquivo</guimenu
+> <guimenuitem
+>Salvar como…</guimenuitem
+> </menuchoice>
+						</term>
+						<listitem>
+							<para
+><action
+>Salva</action
+> o torneio com um novo nome. </para>
+						</listitem>
+					</varlistentry>
+					<varlistentry id="menu-file-import-trf">
+						<term>
+							<menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;<keycap
+>I</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Arquivo</guimenu
+> <guimenuitem
+>Importar relatório do torneio…</guimenuitem
+> </menuchoice>
+						</term>
+						<listitem>
+							<para
+><action
+>Importar</action
+> um arquivo de relatório de torneio (<acronym
+>TRF</acronym
+>). Se já houver um torneio aberto, ele será fechado. </para>
+						</listitem>
+					</varlistentry>
+					<varlistentry id="menu-file-export-trf">
+						<term>
+							<menuchoice
+><guimenu
+>Arquivo</guimenu
+> <guimenuitem
+>Exportar relatório de torneio…</guimenuitem
+> </menuchoice>
+						</term>
+						<listitem>
+							<para
+><action
+>Exporta</action
+> o torneio atual para um arquivo de relatório de torneio (<acronym
+>TRF</acronym
+>). </para>
+						</listitem>
+					</varlistentry>
+				</variablelist>
+			</sect2>
+			<sect2 id="reference-menus-view">
+				<title
+>Menu Exibir</title>
+				<variablelist>
+					<varlistentry id="menu-view-hide-finished-games">
+						<term>
+							<menuchoice
+><guimenu
+>Exibir</guimenu
+> <guimenuitem
+>Ocultar jogos concluídos</guimenuitem
+> </menuchoice>
+						</term>
+						<listitem>
+							<para
+><action
+>Oculta</action
+> os jogos que possuem um resultado registrado. </para>
+						</listitem>
+					</varlistentry>
+				</variablelist>
+			</sect2>
+			<sect2 id="reference-menus-tournament">
+				<title
+>O menu de Torneio</title>
+				<variablelist>
+					<varlistentry id="menu-tournament-update-ratings">
+						<term>
+							<menuchoice
+><guimenu
+>Torneio</guimenu
+> <guimenuitem
+>Atualizar classificações…</guimenuitem
+> </menuchoice>
+						</term>
+						<listitem>
+							<para
+><action
+>Abre</action
+> uma janela de diálogo que permite atualizar as classificações dos jogadores. </para>
+						</listitem>
+					</varlistentry>
+				</variablelist>
+			</sect2>
+			<sect2 id="reference-menus-settings">
+				<title
+>Menu Configurações</title>
+				<variablelist>
+					<varlistentry id="menu-settings-keyboard-shortcuts">
+						<term>
+							<menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;&Alt;<keycap
+>,</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Configurações</guimenu
+> <guimenuitem
+>Configurar atalhos do teclado…</guimenuitem
+> </menuchoice>
+						</term>
+						<listitem>
+							<para
+><action
+>Abre</action
+> a janela de atalhos do teclado. </para>
+						</listitem>
+					</varlistentry>
+					<varlistentry id="menu-settings-chessament">
+						<term>
+							<menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;&Shift;<keycap
+>,</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Configurações</guimenu
+> <guimenuitem
+>Configurar o Chessament…</guimenuitem
+> </menuchoice>
+						</term>
+						<listitem>
+							<para
+><action
+>Abre</action
+> a janela de configurações do &chessament;. </para>
+						</listitem>
+					</varlistentry>
+				</variablelist>
+			</sect2>
+			<sect2 id="reference-menus-help">
+				<title
+>Menu Ajuda</title>
+				<variablelist>
+					<varlistentry id="menu-help-commandbar">
+						<term>
+							<menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;&Alt;<keycap
+>I</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>Ajuda</guimenu
+> <guimenuitem
+>Localizar ação…</guimenuitem
+> </menuchoice>
+						</term>
+						<listitem>
+							<para
+><action
+>Abre</action
+> a barra de comandos. </para>
+						</listitem>
+					</varlistentry>
+				</variablelist>
+			</sect2>
+		</sect1>
+
+		<sect1 id="reference-command-line-options">
+			<title
+>Opções da linha de comando</title>
+			<variablelist>
+			  <varlistentry>
+					<term>
+						<userinput
+><command
+>chessament</command
+> <option
+>--import-trf <replaceable
+>arquivo</replaceable
+></option
+> </userinput>
+					</term>
+					<listitem>
+						<para
+>Importa um arquivo de relatório de torneio (<acronym
+>TRF</acronym
+>) como um novo torneio. </para>
+					</listitem>
+			  </varlistentry>
+			</variablelist>
+		</sect1>
+	</chapter>
+
+	<chapter id="credits">
+		<title
+>Créditos e licença</title>
+		<para
+>Documentação com Copyright &copy; &Manuel.Alcaraz.Zambrano; &Manuel.Alcaraz.Zambrano.mail;</para>
+		<para
+>Tradução de Marcus Gama <email
+>marcus.gama@kde.org</email
+></para
+> &underCCBYSA4; &underGPL; </chapter>
+
+	&documentation.index;
+
+</book>
+<!--
+// vim:ts=2:sw=2:tw=78:noet
+-->
