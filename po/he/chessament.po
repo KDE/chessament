@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-26 02:56+0000\n"
+"POT-Creation-Date: 2026-11-12 03:35+0000\n"
 "PO-Revision-Date: 2026-11-03 20:22+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -24,7 +24,7 @@ msgctxt "Pieces Color · Player Name"
 msgid "%1 · %2"
 msgstr "%1 · %2"
 
-#: controller.cpp:187
+#: controller.cpp:200
 #, kde-format
 msgid "Couldn’t export tournament."
 msgstr "לא ניתן לייצא תחרות."
