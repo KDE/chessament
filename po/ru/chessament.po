@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-24 00:45+0000\n"
-"PO-Revision-Date: 2026-10-18 19:14+0200\n"
+"POT-Creation-Date: 2026-11-12 00:56+0000\n"
+"PO-Revision-Date: 2026-11-11 22:59+0200\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -24,7 +24,7 @@ msgctxt "Pieces Color · Player Name"
 msgid "%1 · %2"
 msgstr "%1 · %2"
 
-#: controller.cpp:187
+#: controller.cpp:200
 #, kde-format
 msgid "Couldn’t export tournament."
 msgstr "Не удалось экспортировать турнир."
@@ -1302,7 +1302,7 @@ msgid ""
 "%1 / %2 (%3%)"
 msgstr ""
 "Загрузка файла…\n"
-"%1 / %2 (%3%)"
+"%1 / %2 (%3 %)"
 
 #: tournament/ratinglists/ratinglistsmanager.cpp:268
 #, kde-format
