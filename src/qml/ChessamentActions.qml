@@ -45,10 +45,6 @@ Item {
             icon.name: "document-export-symbolic"
             text: KI18n.i18nc("@action:inmenu", "Export tournament report…")
         }
-
-        Actions.StandardActionData {
-            standardAction: Actions.StandardActionData.Quit
-        }
     }
 
     Actions.ActionCollection {

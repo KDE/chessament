@@ -101,8 +101,7 @@ Controls.MenuBar {
 
         Kirigami.Action {
             ActionCollection.action: "file_quit"
-            ActionCollection.collection: "org.kde.chessament.file"
-            onTriggered: Qt.exit(0)
+            ActionCollection.collection: "main"
         }
     }
 
