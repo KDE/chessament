@@ -1,0 +1,573 @@
+<?xml version="1.0" ?>
+<!--
+SPDX-FileCopyrightText: 2026 Manuel Alcaraz Zambrano <manuel@alcarazzam.dev>
+SPDX-License-Identifier: CC-BY-SA-4.0
+-->
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+    <!ENTITY chessament "<application
+>Chessament</application
+>">
+    <!ENTITY % addindex "IGNORE">
+    <!ENTITY % Arabic "INCLUDE">
+    <!ENTITY Manuel.Alcaraz.Zambrano "<personname
+><firstname
+>Manuel</firstname
+><surname
+>Alcaraz Zambrano</surname
+></personname
+>">
+    <!ENTITY Manuel.Alcaraz.Zambrano.mail "<email
+>manuel@alcarazzam.dev</email
+>">
+]>
+<book id="chessament" lang="&language;">
+  <bookinfo>
+    <title
+>دليل شطرنج</title>
+    <authorgroup>
+      <author
+>&Manuel.Alcaraz.Zambrano; &Manuel.Alcaraz.Zambrano.mail;</author>
+      <othercredit role="translator"
+><firstname
+>زايد</firstname
+><surname
+>السعيدي</surname
+><affiliation
+><address
+><email
+>zayed.alsaidi@gmail.com</email
+></address
+></affiliation
+><contrib
+>التّرجمة العربيّة</contrib
+></othercredit
+> 
+    </authorgroup>
+    <copyright>
+      <year
+>2026</year>
+      <holder
+>&Manuel.Alcaraz.Zambrano;</holder>
+    </copyright>
+    <legalnotice
+>&CCBYSA4Notice;</legalnotice>
+    <date
+>2026-11-08</date>
+    <releaseinfo
+>شطرنج 1.0</releaseinfo>
+      <abstract>
+        <para
+>تطبيق شطرنج هو مدير بطولة شطرنج </para>
+      </abstract>
+    <keywordset>
+      <keyword
+>كيدي</keyword>
+      <keyword
+>شطرنج</keyword>
+			<keyword
+>شطرنج</keyword>
+			<keyword
+>بطولة</keyword>
+    </keywordset>
+  </bookinfo>
+
+	<chapter id="introduction">
+		<title
+>مقدمة</title>
+		<para
+>شطرنج هو مدير بطولات شطرنج. يدعم البطولات الفردية بنظام الدوري السويسري. </para>
+		<para
+>الميزات الرئيسة لـ شطرنج: </para>
+		<itemizedlist>
+			<listitem>
+				<para
+>تسجيل اللاعبين.</para>
+			</listitem>
+			<listitem>
+				<para
+>مزاوجة الجولات.</para>
+			</listitem>
+			<listitem>
+				<para
+>حساب الترتيب.</para>
+			</listitem>
+		</itemizedlist>
+	</chapter>
+
+	<chapter id="basic-usage">
+		<title
+>الاستخدام الأساسي</title>
+		<sect1 id="opening">
+			<title
+>إنشاء بطولة جديدة</title>
+			<para
+>لإنشاء بطولة شطرنج جديدة، اختر <menuchoice
+><guimenu
+>ملف</guimenu
+><guimenuitem
+>جديد…</guimenuitem
+></menuchoice
+>، وأدخل اسمًا، واختر عدد الجولات، ثم انقر <guibutton
+>حفظ</guibutton
+>. سيُطلب منك اختيار موقع لحفظ البطولة. </para>
+		</sect1>
+
+		<sect1 id="registering-players">
+			<title
+>تسجيل اللاعبين</title>
+			<para
+>لإضافة لاعب جديد إلى البطولة، انقر على زر <guibutton
+>إضافة لاعب…</guibutton
+> في شريط الأدوات. </para>
+		</sect1>
+
+		<sect1 id="making-pairings">
+			<title
+>المزاوجات والنتائج</title>
+			<para
+>بعد الانتهاء من تسجيل جميع لاعبي البطولة، يمكنك الآن إجراء المزاوجات للجولة الأولى. اذهب إلى عرض <guibutton
+>المزاوجات</guibutton
+> وانقر على زر <guibutton
+>مزاوجة الجولة 1…</guibutton
+>. سيظهر حوار يمكنك من تخصيص بعض الخيارات للجولة الأولى. يُوصى بترك خيار <guibutton
+>فرز اللاعبين</guibutton
+> مفعّلًا. يمكنك اختيار لون قطع اللاعب الأعلى تصنيفًا، أو ترك شطرنج يختار لونًا عشوائيًا لك. </para>
+			<para
+>لإدخال النتائج، انقر على مزاوجة واختر إحدى النتائج المدعومة في الأسفل. يمكنك أيضًا إدخال النتائج باستخدام لوحة المفاتيح. الضغط على <keycap
+>1</keycap
+> يحدد النتيجة بفوز الأبيض، <keycap
+>0</keycap
+> بفوز الأسود، و<keycap
+>5</keycap
+> بالتعادل. بعد إدخال نتيجة، تُحدد المزاوجة التالية دون نتيجة آليًا. </para>
+		</sect1>
+
+		<sect1 id="viewing-standings">
+			<title
+>عرض الترتيب</title>
+			<para
+>لعرض ترتيب البطولة، اذهب إلى عرض <guibutton
+>الترتيب</guibutton
+>. من هناك يمكنك اختيار عرض الترتيب النهائي أو الترتيب من جولة سابقة. </para>
+		</sect1>
+	</chapter>
+
+	<chapter id="tournaments">
+		<title
+>البطولات</title>
+		<sect1 id="tournament-settings">
+			<title
+>إعدادات</title>
+			<para
+>لفتح نافذة إعدادات بطولة، انقر على زر <guibutton
+>الإعدادات</guibutton
+> في أسفل نافذة شطرنج. يصف هذا القسم الخيارات المتاحة بالتفصيل. </para>
+			<sect2 id="tournament-settings-information">
+				<title
+>معلومات</title>
+				<para
+>في هذا القسم يمكنك تعيين بعض المعلومات الأساسية مثل اسم البطولة وموقعها والحكام. </para>
+			</sect2>
+			<sect2 id="tournament-settings-format">
+				<title
+>التنسيق</title>
+				<para
+>في هذا القسم يمكنك ضبط عدد جولات البطولة وكسور التعادل المستخدمة لحساب الترتيب. مزيد من المعلومات عن كسور التعادل متوفرة في قسم <link linkend="tournament-tiebreaks"
+>كسور التعادل</link
+>. </para>
+			</sect2>
+			<sect2 id="tournament-settings-calendar">
+				<title
+>التقويم</title>
+				<para
+>في هذا القسم يمكنك تعيين جدول البطولة. </para>
+			</sect2>
+		</sect1>
+		<sect1 id="tournament-tiebreaks">
+			<title
+>كسور التعادل</title>
+			<para
+>يدعم شطرنج كسور التعادل التالية كما هو موصوف في <ulink url="https://handbook.fide.com/"
+><acronym
+>FIDE</acronym
+> دليل الاتحاد الدولي للشطرنج</ulink
+>: </para>
+			<itemizedlist>
+				<listitem>
+					<para
+>متوسط بوشهولز للخصوم (<acronym
+>AOB</acronym
+>)</para>
+				</listitem>
+				<listitem>
+					<para
+>بوشهولز (<acronym
+>BH</acronym
+>)</para>
+				</listitem>
+				<listitem>
+					<para
+>عدد المباريات التي لُعبت بالأسود (<acronym
+>BPG</acronym
+>)</para>
+				</listitem>
+				<listitem>
+					<para
+>عدد المباريات التي فاز بها (فوق الرقعة) (<acronym
+>WON</acronym
+>)</para>
+				</listitem>
+				<listitem>
+					<para
+>عدد المباريات المكسوبة بالأسود (على الرقعة) (<acronym
+>BWG</acronym
+>)</para>
+				</listitem>
+				<listitem>
+					<para
+>عدد مرات الفوز (<acronym
+>WIN</acronym
+>)</para>
+				</listitem>
+				<listitem>
+					<para
+>الجولات التي اختار اللعب فيها (<acronym
+>REP</acronym
+>)</para>
+				</listitem>
+				<listitem>
+					<para
+>سونبورن-برغر (<acronym
+>SB</acronym
+>)</para>
+				</listitem>
+				<listitem>
+					<para
+>النقاط (<acronym
+>PTS</acronym
+>)</para>
+				</listitem>
+				<listitem>
+					<para
+>تراكمي (<acronym
+>PS</acronym
+>)</para>
+				</listitem>
+			</itemizedlist>
+		</sect1>
+	</chapter>
+
+	<chapter id="rating-lists">
+		<title
+>قائمة التقييم</title>
+
+		<para
+>لتسهيل إدخال لاعبين جدد في دورة، يمكنك استخدام قوائم التصنيف. لإضافة قائمة تصنيف جديدة إلى &chessament;، اختر <menuchoice
+><guimenu
+>الإعدادات</guimenu
+><guimenuitem
+>اضبط Chessament…</guimenuitem
+></menuchoice
+> وانتقل إلى قسم <guibutton
+>قوائم التصنيف</guibutton
+>. </para>
+		<para
+>يدعم &chessament; قوائم التصنيف التالية: </para>
+		<itemizedlist>
+			<listitem>
+				<para
+>الاتحاد الدولي للشطرنج (<acronym
+>FIDE</acronym
+>): قائمة موحدة، صيغة <acronym
+>TXT</acronym
+>.</para>
+			</listitem>
+		</itemizedlist>
+	</chapter>
+
+	<chapter id="reference">
+		<title
+>المرجع</title>
+
+		<sect1 id="reference-menus">
+			<title
+>شريط القوائم</title>
+			<sect2 id="reference-menus-file">
+				<title
+>شريط القوائم</title>
+				<variablelist>
+					<varlistentry id="menu-file-new">
+						<term>
+							<menuchoice
+><guimenu
+>ملف</guimenu
+> <guimenuitem
+>بطولة جديدة…</guimenuitem
+> </menuchoice>
+						</term>
+						<listitem>
+							<para
+><action
+>أنشئ</action
+> بطولة جديدة. إذا كانت هناك بطولة مفتوحة بالفعل، ستُغلق. </para>
+						</listitem>
+					</varlistentry>
+					<varlistentry id="menu-file-open">
+						<term>
+							<menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;<keycap
+>O</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>ملف</guimenu
+> <guimenuitem
+>افتح…</guimenuitem
+> </menuchoice>
+						</term>
+						<listitem>
+							<para
+><action
+>افتح</action
+> ملف شطرنج. </para>
+						</listitem>
+					</varlistentry>
+					<varlistentry id="menu-file-save-as">
+						<term>
+							<menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;&Shift;<keycap
+>S</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>ملف</guimenu
+> <guimenuitem
+>حفظ باسم…</guimenuitem
+> </menuchoice>
+						</term>
+						<listitem>
+							<para
+><action
+>احفظ</action
+> البطولة باسم جديد. </para>
+						</listitem>
+					</varlistentry>
+					<varlistentry id="menu-file-import-trf">
+						<term>
+							<menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;<keycap
+>I</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>ملف</guimenu
+> <guimenuitem
+>استيراد تقرير البطولة…</guimenuitem
+> </menuchoice>
+						</term>
+						<listitem>
+							<para
+><action
+>استورد</action
+> ملف تقرير البطولة (<acronym
+>TRF</acronym
+>). إذا كانت هناك بطولة مفتوحة بالفعل، فستُغلق. </para>
+						</listitem>
+					</varlistentry>
+					<varlistentry id="menu-file-export-trf">
+						<term>
+							<menuchoice
+><guimenu
+>ملف</guimenu
+> <guimenuitem
+>تصدير تقرير البطولة…</guimenuitem
+> </menuchoice>
+						</term>
+						<listitem>
+							<para
+><action
+>صدّر</action
+> البطولة الحالية إلى ملف تقرير البطولة (<acronym
+>TRF</acronym
+>). </para>
+						</listitem>
+					</varlistentry>
+				</variablelist>
+			</sect2>
+			<sect2 id="reference-menus-view">
+				<title
+>قائمة عرض</title>
+				<variablelist>
+					<varlistentry id="menu-view-hide-finished-games">
+						<term>
+							<menuchoice
+><guimenu
+>عرض</guimenu
+> <guimenuitem
+>أخفِ المباريات المنتهية</guimenuitem
+> </menuchoice>
+						</term>
+						<listitem>
+							<para
+><action
+>يخفي</action
+> المباريات التي أُدخلت نتيجتها. </para>
+						</listitem>
+					</varlistentry>
+				</variablelist>
+			</sect2>
+			<sect2 id="reference-menus-tournament">
+				<title
+><guimenu
+>دورة</guimenu
+> <guimenuitem
+>حدّث التصنيفات…</guimenuitem
+></title>
+				<variablelist>
+					<varlistentry id="menu-tournament-update-ratings">
+						<term>
+							<menuchoice
+><guimenu
+>البطولة</guimenu
+> <guimenuitem
+>حدّث التقييمات…</guimenuitem
+> </menuchoice>
+						</term>
+						<listitem>
+							<para
+><action
+>يفتح</action
+> حوارًا يتيح لك تحديث تصنيفات اللاعبين. </para>
+						</listitem>
+					</varlistentry>
+				</variablelist>
+			</sect2>
+			<sect2 id="reference-menus-settings">
+				<title
+>قائمة الإعدادات</title>
+				<variablelist>
+					<varlistentry id="menu-settings-keyboard-shortcuts">
+						<term>
+							<menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;&Alt;<keycap
+>,</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>الإعدادات</guimenu
+><guimenuitem
+>اضبط اختصارات لوحة المفاتيح</guimenuitem
+> </menuchoice>
+						</term>
+						<listitem>
+							<para
+><action
+>يفتح</action
+> نافذة اختصارات لوحة المفاتيح. </para>
+						</listitem>
+					</varlistentry>
+					<varlistentry id="menu-settings-chessament">
+						<term>
+							<menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;&Shift;<keycap
+>,</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>إعدادات</guimenu
+> <guimenuitem
+>اضبط Chessament…</guimenuitem
+> </menuchoice>
+						</term>
+						<listitem>
+							<para
+><action
+>يفتح</action
+> نافذة إعدادات شطرنج. </para>
+						</listitem>
+					</varlistentry>
+				</variablelist>
+			</sect2>
+			<sect2 id="reference-menus-help">
+				<title
+>قائمة مساعدة</title>
+				<variablelist>
+					<varlistentry id="menu-help-commandbar">
+						<term>
+							<menuchoice
+><shortcut
+> <keycombo action="simul"
+>&Ctrl;&Alt;<keycap
+>I</keycap
+></keycombo
+> </shortcut
+> <guimenu
+>مساعدة</guimenu
+> <guimenuitem
+>ابحث عن إجراء…</guimenuitem
+> </menuchoice>
+						</term>
+						<listitem>
+							<para
+><action
+>يفتح</action
+> شريط الأوامر. </para>
+						</listitem>
+					</varlistentry>
+				</variablelist>
+			</sect2>
+		</sect1>
+
+		<sect1 id="reference-command-line-options">
+			<title
+>خيارات سطر الأوامر</title>
+			<variablelist>
+			  <varlistentry>
+					<term>
+						<userinput
+><command
+>chessament</command
+> <option
+>--import-trf <replaceable
+>ملف</replaceable
+></option
+> </userinput>
+					</term>
+					<listitem>
+						<para
+>استورد ملف تقرير البطولة (<acronym
+>TRF</acronym
+>) كبطولة جديدة. </para>
+					</listitem>
+			  </varlistentry>
+			</variablelist>
+		</sect1>
+	</chapter>
+
+	<chapter id="credits">
+		<title
+>الحقوق والترخيص</title>
+		<para
+>حقوق النشر للتوثيق &copy; &Manuel.Alcaraz.Zambrano; &Manuel.Alcaraz.Zambrano.mail;</para>
+		<para
+>الترجمة: زايد السعيدي <email
+>zayed.alsaidi@gmail.com</email
+></para
+> &underCCBYSA4; &underGPL; </chapter>
+
+	&documentation.index;
+
+</book>
+<!--
+// vim:ts=2:sw=2:tw=78:noet
+-->
