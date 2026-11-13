@@ -52,7 +52,6 @@ int main(int argc, char *argv[])
 
     KLocalizedString::setApplicationDomain("chessament");
 
-    QGuiApplication::setOrganizationName(u"KDE"_s);
     QGuiApplication::setDesktopFileName(u"org.kde.chessament"_s);
 
     auto aboutData = KAboutData::fromAppStreamForApplication();
