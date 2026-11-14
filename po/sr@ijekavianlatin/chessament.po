@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-12 03:35+0000\n"
+"POT-Creation-Date: 2026-11-14 03:13+0000\n"
 "PO-Revision-Date: 2026-10-09 22:30+0200\n"
 "Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -76,59 +76,59 @@ msgctxt "@title"
 msgid "Provisional Final Standings"
 msgstr "Privremeni konačni plasman"
 
-#: main.cpp:60
+#: main.cpp:59
 #, kde-format
 msgid "© 2024–2026 Manuel Alcaraz Zambrano"
 msgstr "© 2024–2026 Manuel Alcaraz Zambrano"
 
-#: main.cpp:62
+#: main.cpp:61
 #, kde-format
 msgctxt "@info:credit"
 msgid "Manuel Alcaraz Zambrano"
 msgstr "Manuel Alcaraz Zambrano"
 
-#: main.cpp:63
+#: main.cpp:62
 #, kde-format
 msgctxt "@info:credit"
 msgid "Author & Maintainer"
 msgstr "Autor i održavalac"
 
-#: main.cpp:66
+#: main.cpp:65
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "Nemanja Hiršl"
 
-#: main.cpp:66
+#: main.cpp:65
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "nemhirsl@gmail.com"
 
-#: main.cpp:68
+#: main.cpp:67
 #, kde-format
 msgid "Swiss-system chess tournament pairing engine."
 msgstr "Motor za parovanje šahovskih turnira po švajcarskom sistemu."
 
-#: main.cpp:79
+#: main.cpp:78
 #, kde-format
 msgctxt "Command line option description"
 msgid "Import Tournament Report File."
 msgstr "Uvezi fajl izvještaja o turniru."
 
-#: main.cpp:82
+#: main.cpp:81
 #, kde-format
 msgctxt "@info:shell Command line option description"
 msgid "Event to open."
 msgstr "Događaj za otvaranje."
 
-#: main.cpp:101
+#: main.cpp:100
 #, kde-format
 msgctxt "@info:shell"
 msgid "Error: Can’t open an event when importing a TRF"
 msgstr "Greška: ne mogu da otvorim događaj pri uvozu TRF fajla"
 
-#: main.cpp:110
+#: main.cpp:109
 #, kde-format
 msgctxt "@info:shell"
 msgid "Error: Can’t open more than one event"
