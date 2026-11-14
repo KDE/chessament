@@ -20,6 +20,7 @@ target_sources(tournament PRIVATE
 add_subdirectory(ratinglists)
 add_subdirectory(tiebreaks)
 add_subdirectory(trf)
+add_subdirectory(utils)
 
 if (BUILD_EXPERIMENTAL)
     add_subdirectory(sync)

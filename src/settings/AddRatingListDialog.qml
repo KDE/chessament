@@ -122,6 +122,10 @@ FormCard.FormCardDialog {
                 type: 1,
                 name: KI18n.i18nc("@item:inlistbox", "Andalusian Chess Federation")
             },
+            {
+                type: 2,
+                name: KI18n.i18nc("@item:inlistbox", "Catalan Chess Federation")
+            },
         ]
         textRole: "name"
         valueRole: "type"

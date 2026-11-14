@@ -21,6 +21,7 @@
 #include <KLocalizedString>
 #include <KZip>
 
+#include "csvreader.h"
 #include "db.h"
 #include "fidereader.h"
 #include "htmlreader.h"
@@ -286,7 +287,7 @@ std::expected<uint, QString> RatingListsManager::processFile(RatingList *list, Q
     Q_UNUSED(mimeType);
 
     switch (list->format()) {
-    case RatingList::Format::Fide: {
+    case RatingList::Format::International: {
         // QNetworkReply is sequential-access, but KZip needs random access
         auto data = device->readAll();
         auto buffer = QBuffer{&data};
@@ -317,6 +318,11 @@ std::expected<uint, QString> RatingListsManager::processFile(RatingList *list, Q
     case RatingList::Format::Andalusia: {
         QTextStream stream{device};
         auto reader = std::make_unique<HtmlRatingListReader>(list);
+        return readPlayers(list, &stream, std::move(reader));
+    }
+    case RatingList::Format::Catalonia: {
+        QTextStream stream{device};
+        auto reader = std::make_unique<CsvRatingListReader>(list);
         return readPlayers(list, &stream, std::move(reader));
     }
     default:

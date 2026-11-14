@@ -14,8 +14,9 @@ class RatingList : public QObject
 
 public:
     enum class Format {
-        Fide,
+        International,
         Andalusia,
+        Catalonia,
     };
     Q_ENUM(Format);
 

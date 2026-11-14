@@ -4,6 +4,7 @@
 target_sources(tournament PRIVATE
     ratinglist.cpp
 
+    csvreader.cpp
     fidereader.cpp
     htmlreader.cpp
     ratinglistplayer.cpp
