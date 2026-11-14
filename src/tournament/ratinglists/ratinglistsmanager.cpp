@@ -183,7 +183,7 @@ std::vector<std::unique_ptr<RatingList>> RatingListsManager::lists()
     return result;
 }
 
-QCoro::Task<std::expected<RatingList *, QString>> RatingListsManager::import(const QString &name, const QUrl &url)
+QCoro::Task<std::expected<RatingList *, QString>> RatingListsManager::import(RatingList::Format format, const QString &name, const QUrl &url)
 {
     qDebug() << "Importing rating list from" << url;
 
@@ -192,6 +192,7 @@ QCoro::Task<std::expected<RatingList *, QString>> RatingListsManager::import(con
     }
 
     auto list = new RatingList();
+    list->setFormat(format);
     list->setName(name);
     list->setUrl(url.toString());
     list->setLastModified(QDateTime::currentDateTimeUtc());
@@ -282,7 +283,10 @@ std::expected<uint, QString> RatingListsManager::readFile(RatingList *list, cons
 
 std::expected<uint, QString> RatingListsManager::processFile(RatingList *list, QIODevice *device, const QMimeType &mimeType)
 {
-    if (mimeType.inherits(u"application/zip"_s)) {
+    Q_UNUSED(mimeType);
+
+    switch (list->format()) {
+    case RatingList::Format::Fide: {
         // QNetworkReply is sequential-access, but KZip needs random access
         auto data = device->readAll();
         auto buffer = QBuffer{&data};
@@ -310,15 +314,14 @@ std::expected<uint, QString> RatingListsManager::processFile(RatingList *list, Q
         auto reader = std::make_unique<FideRatingListReader>(list);
         return readPlayers(list, &stream, std::move(reader));
     }
-
-    if (mimeType.inherits(u"application/vnd.ms-excel"_s)) {
+    case RatingList::Format::Andalusia: {
         QTextStream stream{device};
-
         auto reader = std::make_unique<HtmlRatingListReader>(list);
         return readPlayers(list, &stream, std::move(reader));
     }
-
-    return std::unexpected(i18nc("@info", "File format not supported."));
+    default:
+        return std::unexpected(i18nc("@info", "File format not supported."));
+    }
 }
 
 std::expected<uint, QString> RatingListsManager::readPlayers(RatingList *list, QTextStream *stream, std::unique_ptr<RatingListReader> reader)

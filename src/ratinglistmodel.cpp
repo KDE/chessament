@@ -57,12 +57,12 @@ void RatingListModel::setStatus(const QString &status)
     Q_EMIT statusChanged();
 }
 
-QCoro::QmlTask RatingListModel::importRatingList(const QString &name, const QString &url)
+QCoro::QmlTask RatingListModel::importRatingList(RatingList::Format format, const QString &name, const QString &url)
 {
-    return importRatingListImpl(name, url);
+    return importRatingListImpl(format, name, url);
 }
 
-QCoro::Task<QString> RatingListModel::importRatingListImpl(const QString &name, const QString &url)
+QCoro::Task<QString> RatingListModel::importRatingListImpl(RatingList::Format format, const QString &name, const QString &url)
 {
     setStatus({});
 
@@ -72,7 +72,7 @@ QCoro::Task<QString> RatingListModel::importRatingListImpl(const QString &name, 
         setStatus(status);
     });
 
-    const auto list = co_await RatingListsManager::instance().import(name, listUrl);
+    const auto list = co_await RatingListsManager::instance().import(format, name, listUrl);
 
     if (!list) {
         co_return list.error();

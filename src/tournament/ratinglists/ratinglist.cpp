@@ -20,6 +20,16 @@ void RatingList::setId(int id)
     m_id = id;
 }
 
+RatingList::Format RatingList::format() const
+{
+    return m_format;
+}
+
+void RatingList::setFormat(RatingList::Format format)
+{
+    m_format = format;
+}
+
 QString RatingList::name() const
 {
     return m_name;

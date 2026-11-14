@@ -32,6 +32,7 @@ FormCard.FormCardDialog {
                     dialog.closePolicy: Controls.Dialog.NoAutoClose
                     nameField.visible: false
                     urlField.visible: false
+                    formatField.visible: false
                     busyIndicator.visible: true
                     label {
                         visible: true
@@ -46,6 +47,7 @@ FormCard.FormCardDialog {
                 PropertyChanges {
                     nameField.visible: false
                     urlField.visible: false
+                    formatField.visible: false
                     label.visible: true
                     importButton.visible: false
                     buttonBox.standardButtons: Controls.Dialog.Close
@@ -73,7 +75,7 @@ FormCard.FormCardDialog {
     function importList(): void {
         stateGroup.state = "importing";
 
-        dialog.model.importRatingList(nameField.text, urlField.text).then(error => {
+        dialog.model.importRatingList(formatField.currentValue, nameField.text, urlField.text).then(error => {
             if (error) {
                 dialog.error = error;
             }
@@ -106,6 +108,23 @@ FormCard.FormCardDialog {
             Controls.ToolTip.visible: hovered
             Controls.ToolTip.delay: Kirigami.Units.toolTipDelay
         }
+    }
+
+    FormCard.FormComboBoxDelegate {
+        id: formatField
+        text: KI18n.i18nc("@label:listbox", "File format")
+        model: [
+            {
+                type: 0,
+                name: KI18n.i18nc("@item:inlistbox", "International Chess Federation")
+            },
+            {
+                type: 1,
+                name: KI18n.i18nc("@item:inlistbox", "Andalusian Chess Federation")
+            },
+        ]
+        textRole: "name"
+        valueRole: "type"
     }
 
     FormCard.AbstractFormDelegate {
@@ -142,7 +161,7 @@ FormCard.FormCardDialog {
             id: importButton
             text: KI18n.i18nc("@action:button", "Import")
             icon.name: "document-import-symbolic"
-            enabled: nameField.text.trim().length > 0 && dialog.model.isSupportedUrl(urlField.text)
+            enabled: nameField.text.trim().length > 0 && formatField.currentIndex >= 0 && dialog.model.isSupportedUrl(urlField.text)
             onClicked: dialog.importList()
 
             Controls.DialogButtonBox.buttonRole: Controls.DialogButtonBox.ActionRole

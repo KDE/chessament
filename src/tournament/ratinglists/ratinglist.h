@@ -13,11 +13,19 @@ class RatingList : public QObject
     Q_OBJECT
 
 public:
+    enum class Format {
+        Fide,
+        Andalusia,
+    };
+    Q_ENUM(Format);
+
     explicit RatingList() = default;
 
     explicit RatingList(QString name);
 
     [[nodiscard]] int id() const;
+
+    [[nodiscard]] RatingList::Format format() const;
 
     [[nodiscard]] QString name() const;
 
@@ -34,6 +42,8 @@ public:
 public Q_SLOTS:
     void setId(int id);
 
+    void setFormat(RatingList::Format format);
+
     void setName(const QString &name);
 
     void setUrl(const QString &url);
@@ -44,6 +54,7 @@ public Q_SLOTS:
 
 private:
     int m_id{};
+    RatingList::Format m_format;
     QString m_name;
     QString m_url;
     QDateTime m_lastModified;

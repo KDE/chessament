@@ -30,7 +30,7 @@ public:
     [[nodiscard]] QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
     [[nodiscard]] QHash<int, QByteArray> roleNames() const override;
 
-    Q_INVOKABLE QCoro::QmlTask importRatingList(const QString &name, const QString &url);
+    Q_INVOKABLE QCoro::QmlTask importRatingList(RatingList::Format format, const QString &name, const QString &url);
 
     Q_INVOKABLE QCoro::QmlTask deleteList(int row);
 
@@ -43,7 +43,7 @@ Q_SIGNALS:
     void statusChanged();
 
 private:
-    QCoro::Task<QString> importRatingListImpl(const QString &name, const QString &url);
+    QCoro::Task<QString> importRatingListImpl(RatingList::Format format, const QString &name, const QString &url);
     QCoro::Task<> remove(int row);
 
     QString m_status;

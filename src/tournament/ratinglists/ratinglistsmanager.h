@@ -88,7 +88,7 @@ public:
 
     static std::vector<std::unique_ptr<RatingList>> lists();
 
-    QCoro::Task<std::expected<RatingList *, QString>> import(const QString &name, const QUrl &url);
+    QCoro::Task<std::expected<RatingList *, QString>> import(RatingList::Format format, const QString &name, const QUrl &url);
 
     static std::expected<uint, QString> readPlayers(RatingList *list, QTextStream *stream, std::unique_ptr<RatingListReader> reader);
 
