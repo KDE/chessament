@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-12 00:56+0000\n"
+"POT-Creation-Date: 2026-11-14 01:00+0000\n"
 "PO-Revision-Date: 2026-10-09 22:30+0200\n"
 "Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -76,59 +76,59 @@ msgctxt "@title"
 msgid "Provisional Final Standings"
 msgstr "Privremeni konačni plasman"
 
-#: main.cpp:60
+#: main.cpp:59
 #, kde-format
 msgid "© 2024–2026 Manuel Alcaraz Zambrano"
 msgstr "© 2024–2026 Manuel Alcaraz Zambrano"
 
-#: main.cpp:62
+#: main.cpp:61
 #, kde-format
 msgctxt "@info:credit"
 msgid "Manuel Alcaraz Zambrano"
 msgstr "Manuel Alcaraz Zambrano"
 
-#: main.cpp:63
+#: main.cpp:62
 #, kde-format
 msgctxt "@info:credit"
 msgid "Author & Maintainer"
 msgstr "Autor i održavalac"
 
-#: main.cpp:66
+#: main.cpp:65
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "Nemanja Hiršl"
 
-#: main.cpp:66
+#: main.cpp:65
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "nemhirsl@gmail.com"
 
-#: main.cpp:68
+#: main.cpp:67
 #, kde-format
 msgid "Swiss-system chess tournament pairing engine."
 msgstr "Motor za parovanje šahovskih turnira po švajcarskom sistemu."
 
-#: main.cpp:79
+#: main.cpp:78
 #, kde-format
 msgctxt "Command line option description"
 msgid "Import Tournament Report File."
 msgstr "Uvezi fajl izvještaja o turniru."
 
-#: main.cpp:82
+#: main.cpp:81
 #, kde-format
 msgctxt "@info:shell Command line option description"
 msgid "Event to open."
 msgstr "Događaj za otvaranje."
 
-#: main.cpp:101
+#: main.cpp:100
 #, kde-format
 msgctxt "@info:shell"
 msgid "Error: Can’t open an event when importing a TRF"
 msgstr "Greška: ne mogu da otvorim događaj pri uvozu TRF fajla"
 
-#: main.cpp:110
+#: main.cpp:109
 #, kde-format
 msgctxt "@info:shell"
 msgid "Error: Can’t open more than one event"
@@ -236,61 +236,6 @@ msgctxt "@title:column Player Gender"
 msgid "Gender"
 msgstr "pol"
 
-#: qml/ActionCollection.qml:12 qml/components/MenuBar.qml:30
-msgctxt "@action:menu"
-msgid "File"
-msgstr "Fajl"
-
-#: qml/ActionCollection.qml:17
-msgctxt "@action:inmenu"
-msgid "New tournament…"
-msgstr "Novi turnir…"
-
-#: qml/ActionCollection.qml:32
-msgctxt "@action:inmenu"
-msgid "Import tournament report…"
-msgstr "Uvezi izvještaj o turniru…"
-
-#: qml/ActionCollection.qml:39
-msgctxt "@action:inmenu"
-msgid "Export tournament report…"
-msgstr "Izvezi izvještaj o turniru…"
-
-#: qml/ActionCollection.qml:49 qml/components/MenuBar.qml:120
-msgctxt "@action:menu"
-msgid "Tournament"
-msgstr "Turnir"
-
-#: qml/ActionCollection.qml:54
-msgctxt "@action:intoolbar"
-msgid "Add Player…"
-msgstr "Dodaj igrača…"
-
-#: qml/ActionCollection.qml:61
-msgctxt "@action:intoolbar"
-msgid "Print…"
-msgstr "Štampaj…"
-
-#: qml/ActionCollection.qml:68
-msgctxt "@action Update players ratings"
-msgid "Update ratings…"
-msgstr "Ažuriraj rejtinge…"
-
-#: qml/ActionCollection.qml:74
-msgctxt "@action:menu"
-msgid "Pairings"
-msgstr "Parovi"
-
-#: qml/ActionCollection.qml:78
-msgctxt "@option:check"
-msgid "Hide finished games"
-msgstr "Sakrij završene partije"
-
-#: qml/ActionCollection.qml:85 qml/components/MenuBar.qml:154
-msgctxt "@action:menu"
-msgid "Help"
-msgstr "Pomoć"
-
 #: qml/AddPlayerDialog.qml:19
 msgctxt "@title:window"
 msgid "Add player"
@@ -352,6 +297,72 @@ msgctxt "@label:textbox Player Gender"
 msgid "Gender"
 msgstr "Pol"
 
+#: qml/ChessamentActions.qml:18
+#, fuzzy
+#| msgctxt "@title:window"
+#| msgid "Chessament"
+msgctxt "@title"
+msgid "Chessament"
+msgstr "Chessament"
+
+#: qml/ChessamentActions.qml:24
+msgctxt "@action:inmenu"
+msgid "New tournament…"
+msgstr "Novi turnir…"
+
+#: qml/ChessamentActions.qml:39
+msgctxt "@action:inmenu"
+msgid "Import tournament report…"
+msgstr "Uvezi izvještaj o turniru…"
+
+#: qml/ChessamentActions.qml:46
+msgctxt "@action:inmenu"
+msgid "Export tournament report…"
+msgstr "Izvezi izvještaj o turniru…"
+
+#: qml/ChessamentActions.qml:52 qml/components/MenuBar.qml:118
+#, fuzzy
+#| msgctxt "@action:menu"
+#| msgid "Tournament"
+msgctxt "@title:menu"
+msgid "Tournament"
+msgstr "Turnir"
+
+#: qml/ChessamentActions.qml:58
+msgctxt "@action:intoolbar"
+msgid "Add Player…"
+msgstr "Dodaj igrača…"
+
+#: qml/ChessamentActions.qml:65
+msgctxt "@action:intoolbar"
+msgid "Print…"
+msgstr "Štampaj…"
+
+#: qml/ChessamentActions.qml:72
+msgctxt "@action Update players ratings"
+msgid "Update ratings…"
+msgstr "Ažuriraj rejtinge…"
+
+#: qml/ChessamentActions.qml:78
+#, fuzzy
+#| msgid "Pairings"
+msgctxt "@title:menu"
+msgid "Pairings"
+msgstr "Parovi"
+
+#: qml/ChessamentActions.qml:83
+msgctxt "@option:check"
+msgid "Hide finished games"
+msgstr "Sakrij završene partije"
+
+#: qml/ChessamentActions.qml:90 qml/components/MenuBar.qml:146
+#, fuzzy
+#| msgctxt "@action:menu"
+#| msgid "Help"
+msgctxt "@title:menu"
+msgid "Help"
+msgstr "Pomoć"
+
 #: qml/components/ArbiterDelegate.qml:34
 msgctxt "@item:inlistbox Chief Arbiter"
 msgid "Chief"
@@ -387,24 +398,38 @@ msgctxt "@action:button"
 msgid "Delete Arbiter"
 msgstr "Obriši sudiju"
 
-#: qml/components/MenuBar.qml:50 qml/components/MenuBar.qml:65
+#: qml/components/MenuBar.qml:29
+#, fuzzy
+#| msgctxt "@action:menu"
+#| msgid "File"
+msgctxt "@title:menu"
+msgid "File"
+msgstr "Fajl"
+
+#: qml/components/MenuBar.qml:49 qml/components/MenuBar.qml:64
 #: qml/NewTournamentDialog.qml:51
 msgctxt "@label:listbox"
 msgid "Chessament event (*.chessament)"
 msgstr "Događaj Chessament (*.chessament)"
 
-#: qml/components/MenuBar.qml:78 qml/components/MenuBar.qml:93
+#: qml/components/MenuBar.qml:77 qml/components/MenuBar.qml:92
 msgctxt "@label:listbox"
 msgid "TRF files (*.trf *.txt)"
 msgstr "TRF fajlovi (*.trf *.txt)"
 
-#: qml/components/MenuBar.qml:111
-msgctxt "@action:menu"
+#: qml/components/MenuBar.qml:109
+#, fuzzy
+#| msgctxt "@action:menu"
+#| msgid "View"
+msgctxt "@title:menu"
 msgid "View"
 msgstr "Prikaz"
 
-#: qml/components/MenuBar.qml:134
-msgctxt "@action:menu"
+#: qml/components/MenuBar.qml:132
+#, fuzzy
+#| msgctxt "@action:menu"
+#| msgid "Settings"
+msgctxt "@title:menu"
 msgid "Settings"
 msgstr "Podešavanje"
 
@@ -494,17 +519,17 @@ msgctxt "@action:button Delete Player"
 msgid "Delete"
 msgstr "Obriši"
 
-#: qml/Main.qml:17
+#: qml/Main.qml:20
 msgctxt "@title:window"
 msgid "%1 — Chessament"
 msgstr "%1 — Chessament"
 
-#: qml/Main.qml:17
+#: qml/Main.qml:20
 msgctxt "@title:window"
 msgid "Chessament"
 msgstr "Chessament"
 
-#: qml/Main.qml:51 settings/AddRatingListDialog.qml:59
+#: qml/Main.qml:56 settings/AddRatingListDialog.qml:59
 msgctxt "@title"
 msgid "Error"
 msgstr "Greška"
@@ -534,17 +559,17 @@ msgctxt "@label"
 msgid "Number of rounds"
 msgstr "Broj kola"
 
-#: qml/PairingsPage.qml:52 qml/PlayersPage.qml:48 qml/StandingsPage.qml:55
+#: qml/PairingsPage.qml:51 qml/PlayersPage.qml:47 qml/StandingsPage.qml:54
 msgctxt "@label:listbox"
 msgid "PDF document (*.pdf)"
 msgstr "PDF dokument (*.pdf)"
 
-#: qml/PairingsPage.qml:77 qml/PlayersPage.qml:142 qml/StandingsPage.qml:70
+#: qml/PairingsPage.qml:76 qml/PlayersPage.qml:141 qml/StandingsPage.qml:69
 msgctxt "@action:intoolbar"
 msgid "Export as PDF…"
 msgstr "Izvezi kao PDF…"
 
-#: qml/PairingsPage.qml:87 qml/PairingsPage.qml:92
+#: qml/PairingsPage.qml:86 qml/PairingsPage.qml:91
 msgid "Round %1"
 msgid_plural "Round %1"
 msgstr[0] "Kolo %1"
@@ -552,17 +577,17 @@ msgstr[1] "Kolo %1"
 msgstr[2] "Kolo %1"
 msgstr[3] "Kolo %1"
 
-#: qml/PairingsPage.qml:104
+#: qml/PairingsPage.qml:103
 msgctxt "@action:intoolbar"
 msgid "Remove pairings of this and following rounds…"
 msgstr "Ukloni parove ovog i sljedećih kola…"
 
-#: qml/PairingsPage.qml:118
+#: qml/PairingsPage.qml:117
 msgctxt "@info"
 msgid "The tournament hasn’t started yet."
 msgstr "Turnir još nije počeo."
 
-#: qml/PairingsPage.qml:118
+#: qml/PairingsPage.qml:117
 msgctxt "@info"
 msgid "Round %1 has finished."
 msgid_plural "Round %1 has finished."
@@ -571,7 +596,7 @@ msgstr[1] "%1. kolo je završeno."
 msgstr[2] "%1. kolo je završeno."
 msgstr[3] "%1. kolo je završeno."
 
-#: qml/PairingsPage.qml:122
+#: qml/PairingsPage.qml:121
 msgctxt "@action:button"
 msgid "Pair Round %1…"
 msgid_plural "Pair Round %1…"
@@ -580,7 +605,7 @@ msgstr[1] "Upari %1. kolo…"
 msgstr[2] "Upari %1. kolo…"
 msgstr[3] "Upari %1. kolo…"
 
-#: qml/PairingsPage.qml:166
+#: qml/PairingsPage.qml:165
 msgctxt "@info:placeholder"
 msgid "No pairings for Round %1 yet"
 msgid_plural "No pairings for Round %1 yet"
@@ -589,7 +614,7 @@ msgstr[1] "Još nema parova za %1. kolo"
 msgstr[2] "Još nema parova za %1. kolo"
 msgstr[3] "Još nema parova za %1. kolo"
 
-#: qml/PairingsPage.qml:168
+#: qml/PairingsPage.qml:167
 msgctxt "@info:placeholder"
 msgid "All games of Round %1 have finished"
 msgid_plural "All games of Round %1 have finished"
@@ -696,42 +721,42 @@ msgstr[1] "Kolo %1"
 msgstr[2] "Kolo %1"
 msgstr[3] "Kolo %1"
 
-#: qml/PlayersPage.qml:121
+#: qml/PlayersPage.qml:120
 msgctxt "@action:intoolbar Open player details"
 msgid "Details…"
 msgstr "Detalji…"
 
-#: qml/PlayersPage.qml:127
+#: qml/PlayersPage.qml:126
 msgctxt "@action:intoolbar"
 msgid "Sort Players…"
 msgstr "Poređaj igrače…"
 
-#: qml/PlayersPage.qml:158
+#: qml/PlayersPage.qml:157
 msgctxt "@action:inmenu"
 msgid "Open Player Details"
 msgstr "Otvori detalje igrača"
 
-#: qml/PlayersPage.qml:164
+#: qml/PlayersPage.qml:163
 msgctxt "@action:inmenu"
 msgid "Delete Player…"
 msgstr "Obriši igrača…"
 
-#: qml/PlayersPage.qml:184
+#: qml/PlayersPage.qml:183
 msgctxt "@info:placeholder"
 msgid "No players found"
 msgstr "Nema nađenih igrača"
 
-#: qml/PlayersPage.qml:184
+#: qml/PlayersPage.qml:183
 msgctxt "@info:placeholder"
 msgid "No players yet"
 msgstr "Još nema igrača"
 
-#: qml/PlayersPage.qml:188
+#: qml/PlayersPage.qml:187
 msgctxt "@action:button"
 msgid "Add Player…"
 msgstr "Dodaj igrača…"
 
-#: qml/PlayersPage.qml:207
+#: qml/PlayersPage.qml:206
 msgctxt "@info:status Number of players"
 msgid "1 player"
 msgid_plural "%1 players"
@@ -740,7 +765,7 @@ msgstr[1] "%1 igrača"
 msgstr[2] "%1 igrača"
 msgstr[3] "%1 igrač"
 
-#: qml/PlayersPage.qml:208
+#: qml/PlayersPage.qml:207
 msgctxt "@info:status Number of rated players"
 msgid "1 rated"
 msgid_plural "%1 rated"
@@ -749,7 +774,7 @@ msgstr[1] "%1 sa rejtingom"
 msgstr[2] "%1 sa rejtingom"
 msgstr[3] "%1 sa rejtingom"
 
-#: qml/PlayersPage.qml:210
+#: qml/PlayersPage.qml:209
 msgctxt "@info:status Total number of players (Number of players rated)"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
@@ -790,12 +815,12 @@ msgstr ""
 "Na zvaničnim turnirima nije dozvoljeno mijenjati početni poredak pošto je "
 "upareno četvrto kolo."
 
-#: qml/StandingsPage.qml:83 qml/StandingsPage.qml:93
+#: qml/StandingsPage.qml:82 qml/StandingsPage.qml:92
 msgctxt "@item:inlistbox"
 msgid "Final Standings"
 msgstr "konačan plasman"
 
-#: qml/StandingsPage.qml:85 qml/StandingsPage.qml:95
+#: qml/StandingsPage.qml:84 qml/StandingsPage.qml:94
 msgctxt "@item:inlistbox Standings After Round %1"
 msgid "After Round %1"
 msgid_plural "After Round %1"
@@ -804,7 +829,7 @@ msgstr[1] "poslije %1. kola"
 msgstr[2] "poslije %1. kola"
 msgstr[3] "poslije %1. kola"
 
-#: qml/StandingsPage.qml:142
+#: qml/StandingsPage.qml:141
 msgctxt "@info:placeholder"
 msgid "No standings yet"
 msgstr "Još nema plasmana"
@@ -1483,6 +1508,10 @@ msgstr "Nepoznat rezultat „%1“ u paru „%2“."
 #, kde-format
 msgid "Pairing “%1” has no opponent."
 msgstr "Par „%1“ nema protivnika."
+
+#~ msgctxt "@action:menu"
+#~ msgid "Pairings"
+#~ msgstr "Parovi"
 
 #~ msgctxt "@info"
 #~ msgid "The time control is Classical."

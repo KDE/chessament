@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-12 00:56+0000\n"
+"POT-Creation-Date: 2026-11-14 01:00+0000\n"
 "PO-Revision-Date: 2026-09-05 10:00+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -77,59 +77,59 @@ msgctxt "@title"
 msgid "Provisional Final Standings"
 msgstr "Alustavat loppusijoitukset"
 
-#: main.cpp:60
+#: main.cpp:59
 #, kde-format
 msgid "© 2024–2026 Manuel Alcaraz Zambrano"
 msgstr "© 2024–2026 Manuel Alcaraz Zambrano"
 
-#: main.cpp:62
+#: main.cpp:61
 #, kde-format
 msgctxt "@info:credit"
 msgid "Manuel Alcaraz Zambrano"
 msgstr "Manuel Alcaraz Zambrano"
 
-#: main.cpp:63
+#: main.cpp:62
 #, kde-format
 msgctxt "@info:credit"
 msgid "Author & Maintainer"
 msgstr "Tekijä ja ylläpitäjä"
 
-#: main.cpp:66
+#: main.cpp:65
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "Tommi Nieminen"
 
-#: main.cpp:66
+#: main.cpp:65
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "translator@legisign.org"
 
-#: main.cpp:68
+#: main.cpp:67
 #, kde-format
 msgid "Swiss-system chess tournament pairing engine."
 msgstr "Sveitsiläistyylisen šakkiturnauksen paritusmoottori."
 
-#: main.cpp:79
+#: main.cpp:78
 #, kde-format
 msgctxt "Command line option description"
 msgid "Import Tournament Report File."
 msgstr "Tuo turnausraporttitiedosto"
 
-#: main.cpp:82
+#: main.cpp:81
 #, kde-format
 msgctxt "@info:shell Command line option description"
 msgid "Event to open."
 msgstr "Avattava tapahtuma."
 
-#: main.cpp:101
+#: main.cpp:100
 #, kde-format
 msgctxt "@info:shell"
 msgid "Error: Can’t open an event when importing a TRF"
 msgstr ""
 
-#: main.cpp:110
+#: main.cpp:109
 #, kde-format
 msgctxt "@info:shell"
 msgid "Error: Can’t open more than one event"
@@ -238,66 +238,6 @@ msgctxt "@title:column Player Gender"
 msgid "Gender"
 msgstr "Sukupuoli"
 
-#: qml/ActionCollection.qml:12 qml/components/MenuBar.qml:30
-msgctxt "@action:menu"
-msgid "File"
-msgstr "Tiedosto"
-
-#: qml/ActionCollection.qml:17
-msgctxt "@action:inmenu"
-msgid "New tournament…"
-msgstr "Uusi turnaus…"
-
-#: qml/ActionCollection.qml:32
-msgctxt "@action:inmenu"
-msgid "Import tournament report…"
-msgstr "Tuo turnausraportti…"
-
-#: qml/ActionCollection.qml:39
-msgctxt "@action:inmenu"
-msgid "Export tournament report…"
-msgstr "Vie turnausraportti…"
-
-#: qml/ActionCollection.qml:49 qml/components/MenuBar.qml:120
-#, fuzzy
-#| msgctxt "@label:textbox"
-#| msgid "Tournament name"
-msgctxt "@action:menu"
-msgid "Tournament"
-msgstr "Turnauksen nimi"
-
-#: qml/ActionCollection.qml:54
-msgctxt "@action:intoolbar"
-msgid "Add Player…"
-msgstr "Lisää pelaaja…"
-
-#: qml/ActionCollection.qml:61
-msgctxt "@action:intoolbar"
-msgid "Print…"
-msgstr "Tulosta…"
-
-#: qml/ActionCollection.qml:68
-msgctxt "@action Update players ratings"
-msgid "Update ratings…"
-msgstr "Päivitä vahvuusluvut…"
-
-#: qml/ActionCollection.qml:74
-#, fuzzy
-#| msgid "Pairings"
-msgctxt "@action:menu"
-msgid "Pairings"
-msgstr "Paritukset"
-
-#: qml/ActionCollection.qml:78
-msgctxt "@option:check"
-msgid "Hide finished games"
-msgstr "Piilota päättyneet pelit"
-
-#: qml/ActionCollection.qml:85 qml/components/MenuBar.qml:154
-msgctxt "@action:menu"
-msgid "Help"
-msgstr "Ohje"
-
 #: qml/AddPlayerDialog.qml:19
 msgctxt "@title:window"
 msgid "Add player"
@@ -362,6 +302,69 @@ msgctxt "@label:textbox Player Gender"
 msgid "Gender"
 msgstr ""
 
+#: qml/ChessamentActions.qml:18
+msgctxt "@title"
+msgid "Chessament"
+msgstr "Chessament"
+
+#: qml/ChessamentActions.qml:24
+msgctxt "@action:inmenu"
+msgid "New tournament…"
+msgstr "Uusi turnaus…"
+
+#: qml/ChessamentActions.qml:39
+msgctxt "@action:inmenu"
+msgid "Import tournament report…"
+msgstr "Tuo turnausraportti…"
+
+#: qml/ChessamentActions.qml:46
+msgctxt "@action:inmenu"
+msgid "Export tournament report…"
+msgstr "Vie turnausraportti…"
+
+#: qml/ChessamentActions.qml:52 qml/components/MenuBar.qml:118
+#, fuzzy
+#| msgctxt "@label:textbox"
+#| msgid "Tournament name"
+msgctxt "@title:menu"
+msgid "Tournament"
+msgstr "Turnauksen nimi"
+
+#: qml/ChessamentActions.qml:58
+msgctxt "@action:intoolbar"
+msgid "Add Player…"
+msgstr "Lisää pelaaja…"
+
+#: qml/ChessamentActions.qml:65
+msgctxt "@action:intoolbar"
+msgid "Print…"
+msgstr "Tulosta…"
+
+#: qml/ChessamentActions.qml:72
+msgctxt "@action Update players ratings"
+msgid "Update ratings…"
+msgstr "Päivitä vahvuusluvut…"
+
+#: qml/ChessamentActions.qml:78
+#, fuzzy
+#| msgid "Pairings"
+msgctxt "@title:menu"
+msgid "Pairings"
+msgstr "Paritukset"
+
+#: qml/ChessamentActions.qml:83
+msgctxt "@option:check"
+msgid "Hide finished games"
+msgstr "Piilota päättyneet pelit"
+
+#: qml/ChessamentActions.qml:90 qml/components/MenuBar.qml:146
+#, fuzzy
+#| msgctxt "@action:menu"
+#| msgid "Help"
+msgctxt "@title:menu"
+msgid "Help"
+msgstr "Ohje"
+
 #: qml/components/ArbiterDelegate.qml:34
 msgctxt "@item:inlistbox Chief Arbiter"
 msgid "Chief"
@@ -397,24 +400,38 @@ msgctxt "@action:button"
 msgid "Delete Arbiter"
 msgstr "Poista tuomari"
 
-#: qml/components/MenuBar.qml:50 qml/components/MenuBar.qml:65
+#: qml/components/MenuBar.qml:29
+#, fuzzy
+#| msgctxt "@action:menu"
+#| msgid "File"
+msgctxt "@title:menu"
+msgid "File"
+msgstr "Tiedosto"
+
+#: qml/components/MenuBar.qml:49 qml/components/MenuBar.qml:64
 #: qml/NewTournamentDialog.qml:51
 msgctxt "@label:listbox"
 msgid "Chessament event (*.chessament)"
 msgstr "Chessament-tapahtuma (*.chessament)"
 
-#: qml/components/MenuBar.qml:78 qml/components/MenuBar.qml:93
+#: qml/components/MenuBar.qml:77 qml/components/MenuBar.qml:92
 msgctxt "@label:listbox"
 msgid "TRF files (*.trf *.txt)"
 msgstr "TRF-tiedostot (*.trf *.txt)"
 
-#: qml/components/MenuBar.qml:111
-msgctxt "@action:menu"
+#: qml/components/MenuBar.qml:109
+#, fuzzy
+#| msgctxt "@action:menu"
+#| msgid "View"
+msgctxt "@title:menu"
 msgid "View"
 msgstr "Näkymä"
 
-#: qml/components/MenuBar.qml:134
-msgctxt "@action:menu"
+#: qml/components/MenuBar.qml:132
+#, fuzzy
+#| msgctxt "@action:menu"
+#| msgid "Settings"
+msgctxt "@title:menu"
 msgid "Settings"
 msgstr "Asetukset"
 
@@ -507,17 +524,17 @@ msgctxt "@action:button Delete Player"
 msgid "Delete"
 msgstr "Poista"
 
-#: qml/Main.qml:17
+#: qml/Main.qml:20
 msgctxt "@title:window"
 msgid "%1 — Chessament"
 msgstr "%1 – Chessament"
 
-#: qml/Main.qml:17
+#: qml/Main.qml:20
 msgctxt "@title:window"
 msgid "Chessament"
 msgstr "Chessament"
 
-#: qml/Main.qml:51 settings/AddRatingListDialog.qml:59
+#: qml/Main.qml:56 settings/AddRatingListDialog.qml:59
 msgctxt "@title"
 msgid "Error"
 msgstr "Virhe"
@@ -547,17 +564,17 @@ msgctxt "@label"
 msgid "Number of rounds"
 msgstr "Kierrosten määrä"
 
-#: qml/PairingsPage.qml:52 qml/PlayersPage.qml:48 qml/StandingsPage.qml:55
+#: qml/PairingsPage.qml:51 qml/PlayersPage.qml:47 qml/StandingsPage.qml:54
 msgctxt "@label:listbox"
 msgid "PDF document (*.pdf)"
 msgstr "PDF-tiedostot (*.pdf)"
 
-#: qml/PairingsPage.qml:77 qml/PlayersPage.qml:142 qml/StandingsPage.qml:70
+#: qml/PairingsPage.qml:76 qml/PlayersPage.qml:141 qml/StandingsPage.qml:69
 msgctxt "@action:intoolbar"
 msgid "Export as PDF…"
 msgstr "Vie PDF:ksi…"
 
-#: qml/PairingsPage.qml:87 qml/PairingsPage.qml:92
+#: qml/PairingsPage.qml:86 qml/PairingsPage.qml:91
 #, fuzzy
 #| msgid "Round %1"
 msgid "Round %1"
@@ -565,12 +582,12 @@ msgid_plural "Round %1"
 msgstr[0] "%1. kierros"
 msgstr[1] "%1. kierros"
 
-#: qml/PairingsPage.qml:104
+#: qml/PairingsPage.qml:103
 msgctxt "@action:intoolbar"
 msgid "Remove pairings of this and following rounds…"
 msgstr "Poista tämän ja seuraavien kierrosten paritukset…"
 
-#: qml/PairingsPage.qml:118
+#: qml/PairingsPage.qml:117
 #, fuzzy
 #| msgctxt "@info"
 #| msgid "The tournament hasn't started yet."
@@ -578,7 +595,7 @@ msgctxt "@info"
 msgid "The tournament hasn’t started yet."
 msgstr "Turnaus ei ole vielä alkanut."
 
-#: qml/PairingsPage.qml:118
+#: qml/PairingsPage.qml:117
 #, fuzzy
 #| msgctxt "@info"
 #| msgid "Round %1 has finished."
@@ -588,7 +605,7 @@ msgid_plural "Round %1 has finished."
 msgstr[0] "%1. kierros on päättynyt."
 msgstr[1] "%1. kierros on päättynyt."
 
-#: qml/PairingsPage.qml:122
+#: qml/PairingsPage.qml:121
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "Pair Round %1…"
@@ -598,7 +615,7 @@ msgid_plural "Pair Round %1…"
 msgstr[0] "Parita %1. kierros…"
 msgstr[1] "Parita %1. kierros…"
 
-#: qml/PairingsPage.qml:166
+#: qml/PairingsPage.qml:165
 #, fuzzy
 #| msgctxt "@info:placeholder"
 #| msgid "No pairings for round %1 yet"
@@ -608,7 +625,7 @@ msgid_plural "No pairings for Round %1 yet"
 msgstr[0] "Kierrokselle %1 ei vielä parituksia"
 msgstr[1] "Kierrokselle %1 ei vielä parituksia"
 
-#: qml/PairingsPage.qml:168
+#: qml/PairingsPage.qml:167
 #, fuzzy
 #| msgctxt "@info:placeholder"
 #| msgid "All games of round %1 have finished"
@@ -729,56 +746,56 @@ msgid_plural "Round %1"
 msgstr[0] "%1. kierros"
 msgstr[1] "%1. kierros"
 
-#: qml/PlayersPage.qml:121
+#: qml/PlayersPage.qml:120
 msgctxt "@action:intoolbar Open player details"
 msgid "Details…"
 msgstr "Tiedot…"
 
-#: qml/PlayersPage.qml:127
+#: qml/PlayersPage.qml:126
 msgctxt "@action:intoolbar"
 msgid "Sort Players…"
 msgstr "Lajittele pelaajat…"
 
-#: qml/PlayersPage.qml:158
+#: qml/PlayersPage.qml:157
 msgctxt "@action:inmenu"
 msgid "Open Player Details"
 msgstr "Avaa pelaajan tiedot"
 
-#: qml/PlayersPage.qml:164
+#: qml/PlayersPage.qml:163
 msgctxt "@action:inmenu"
 msgid "Delete Player…"
 msgstr "Poista pelaaja…"
 
-#: qml/PlayersPage.qml:184
+#: qml/PlayersPage.qml:183
 msgctxt "@info:placeholder"
 msgid "No players found"
 msgstr "Pelaajia ei löytynyt"
 
-#: qml/PlayersPage.qml:184
+#: qml/PlayersPage.qml:183
 msgctxt "@info:placeholder"
 msgid "No players yet"
 msgstr "Ei vielä pelaajia"
 
-#: qml/PlayersPage.qml:188
+#: qml/PlayersPage.qml:187
 msgctxt "@action:button"
 msgid "Add Player…"
 msgstr "Lisää pelaaja…"
 
-#: qml/PlayersPage.qml:207
+#: qml/PlayersPage.qml:206
 msgctxt "@info:status Number of players"
 msgid "1 player"
 msgid_plural "%1 players"
 msgstr[0] "1 pelaaja"
 msgstr[1] "%1 pelaajaa"
 
-#: qml/PlayersPage.qml:208
+#: qml/PlayersPage.qml:207
 msgctxt "@info:status Number of rated players"
 msgid "1 rated"
 msgid_plural "%1 rated"
 msgstr[0] "1 sijoitettu"
 msgstr[1] "%1 sijoitettua"
 
-#: qml/PlayersPage.qml:210
+#: qml/PlayersPage.qml:209
 msgctxt "@info:status Total number of players (Number of players rated)"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
@@ -819,12 +836,12 @@ msgstr ""
 "Alkusijoituksen muuttamista neljännen kierroksen parituksen jälkeen ei "
 "sallita virallisissa turnauksissa."
 
-#: qml/StandingsPage.qml:83 qml/StandingsPage.qml:93
+#: qml/StandingsPage.qml:82 qml/StandingsPage.qml:92
 msgctxt "@item:inlistbox"
 msgid "Final Standings"
 msgstr "Loppusijoitukset"
 
-#: qml/StandingsPage.qml:85 qml/StandingsPage.qml:95
+#: qml/StandingsPage.qml:84 qml/StandingsPage.qml:94
 #, fuzzy
 #| msgctxt "@item:inlistbox Standings After Round %1"
 #| msgid "After Round %1"
@@ -834,7 +851,7 @@ msgid_plural "After Round %1"
 msgstr[0] "%1. kierroksen jälkeen"
 msgstr[1] "%1. kierroksen jälkeen"
 
-#: qml/StandingsPage.qml:142
+#: qml/StandingsPage.qml:141
 msgctxt "@info:placeholder"
 msgid "No standings yet"
 msgstr "Ei vielä sijoituksia"
@@ -1534,6 +1551,12 @@ msgstr "Tuntematon tulos ”%1” parissa ”%2”."
 msgid "Pairing “%1” has no opponent."
 msgstr "Parituksessa ”%1” ei ole vastapelaajaa."
 
+#, fuzzy
+#~| msgid "Pairings"
+#~ msgctxt "@action:menu"
+#~ msgid "Pairings"
+#~ msgstr "Paritukset"
+
 #~ msgctxt "@info"
 #~ msgid "The time control is Classical."
 #~ msgstr "Ajanhallintana on perinteinen."
@@ -1541,10 +1564,6 @@ msgstr "Parituksessa ”%1” ei ole vastapelaajaa."
 #~ msgctxt "@label:textbox"
 #~ msgid "City"
 #~ msgstr "Kaupunki"
-
-#~ msgctxt "@title"
-#~ msgid "Chessament"
-#~ msgstr "Chessament"
 
 #~ msgid "Chess Tournament Manager"
 #~ msgstr "Šakkiturnausten hallinta"

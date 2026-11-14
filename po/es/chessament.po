@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-12 00:56+0000\n"
+"POT-Creation-Date: 2026-11-14 01:00+0000\n"
 "PO-Revision-Date: 2026-10-17 22:32+0100\n"
 "Last-Translator: Manuel Alcaraz Zambrano <manuel@alcarazzam.dev>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -73,59 +73,59 @@ msgctxt "@title"
 msgid "Provisional Final Standings"
 msgstr "Clasificación final provisional"
 
-#: main.cpp:60
+#: main.cpp:59
 #, kde-format
 msgid "© 2024–2026 Manuel Alcaraz Zambrano"
 msgstr "© 2024–2026 Manuel Alcaraz Zambrano"
 
-#: main.cpp:62
+#: main.cpp:61
 #, kde-format
 msgctxt "@info:credit"
 msgid "Manuel Alcaraz Zambrano"
 msgstr "Manuel Alcaraz Zambrano"
 
-#: main.cpp:63
+#: main.cpp:62
 #, kde-format
 msgctxt "@info:credit"
 msgid "Author & Maintainer"
 msgstr "Autor y responsable"
 
-#: main.cpp:66
+#: main.cpp:65
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "Manuel Alcaraz Zambrano,Sofía Priego"
 
-#: main.cpp:66
+#: main.cpp:65
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "manuel@alcarazzam.dev,spriego@darksylvania.net"
 
-#: main.cpp:68
+#: main.cpp:67
 #, kde-format
 msgid "Swiss-system chess tournament pairing engine."
 msgstr "Motor de emparejamientos de torneos de ajedrez con sistema suizo."
 
-#: main.cpp:79
+#: main.cpp:78
 #, kde-format
 msgctxt "Command line option description"
 msgid "Import Tournament Report File."
 msgstr "Importar informe de torneo."
 
-#: main.cpp:82
+#: main.cpp:81
 #, kde-format
 msgctxt "@info:shell Command line option description"
 msgid "Event to open."
 msgstr "Evento a abrir."
 
-#: main.cpp:101
+#: main.cpp:100
 #, kde-format
 msgctxt "@info:shell"
 msgid "Error: Can’t open an event when importing a TRF"
 msgstr "Error: no se puede abrir un evento mientras se importa un TRF"
 
-#: main.cpp:110
+#: main.cpp:109
 #, kde-format
 msgctxt "@info:shell"
 msgid "Error: Can’t open more than one event"
@@ -233,61 +233,6 @@ msgctxt "@title:column Player Gender"
 msgid "Gender"
 msgstr "Género"
 
-#: qml/ActionCollection.qml:12 qml/components/MenuBar.qml:30
-msgctxt "@action:menu"
-msgid "File"
-msgstr "Archivo"
-
-#: qml/ActionCollection.qml:17
-msgctxt "@action:inmenu"
-msgid "New tournament…"
-msgstr "Nuevo torneo…"
-
-#: qml/ActionCollection.qml:32
-msgctxt "@action:inmenu"
-msgid "Import tournament report…"
-msgstr "Importar informe de torneo…"
-
-#: qml/ActionCollection.qml:39
-msgctxt "@action:inmenu"
-msgid "Export tournament report…"
-msgstr "Exportar informe de torneo…"
-
-#: qml/ActionCollection.qml:49 qml/components/MenuBar.qml:120
-msgctxt "@action:menu"
-msgid "Tournament"
-msgstr "Torneo"
-
-#: qml/ActionCollection.qml:54
-msgctxt "@action:intoolbar"
-msgid "Add Player…"
-msgstr "Añadir jugador…"
-
-#: qml/ActionCollection.qml:61
-msgctxt "@action:intoolbar"
-msgid "Print…"
-msgstr "Imprimir…"
-
-#: qml/ActionCollection.qml:68
-msgctxt "@action Update players ratings"
-msgid "Update ratings…"
-msgstr "Actualizar valoraciones…"
-
-#: qml/ActionCollection.qml:74
-msgctxt "@action:menu"
-msgid "Pairings"
-msgstr "Emparejamientos"
-
-#: qml/ActionCollection.qml:78
-msgctxt "@option:check"
-msgid "Hide finished games"
-msgstr "Ocultar partidas terminadas"
-
-#: qml/ActionCollection.qml:85 qml/components/MenuBar.qml:154
-msgctxt "@action:menu"
-msgid "Help"
-msgstr "Ayuda"
-
 #: qml/AddPlayerDialog.qml:19
 msgctxt "@title:window"
 msgid "Add player"
@@ -349,6 +294,72 @@ msgctxt "@label:textbox Player Gender"
 msgid "Gender"
 msgstr "Género"
 
+#: qml/ChessamentActions.qml:18
+#, fuzzy
+#| msgctxt "@title:window"
+#| msgid "Chessament"
+msgctxt "@title"
+msgid "Chessament"
+msgstr "Chessament"
+
+#: qml/ChessamentActions.qml:24
+msgctxt "@action:inmenu"
+msgid "New tournament…"
+msgstr "Nuevo torneo…"
+
+#: qml/ChessamentActions.qml:39
+msgctxt "@action:inmenu"
+msgid "Import tournament report…"
+msgstr "Importar informe de torneo…"
+
+#: qml/ChessamentActions.qml:46
+msgctxt "@action:inmenu"
+msgid "Export tournament report…"
+msgstr "Exportar informe de torneo…"
+
+#: qml/ChessamentActions.qml:52 qml/components/MenuBar.qml:118
+#, fuzzy
+#| msgctxt "@action:menu"
+#| msgid "Tournament"
+msgctxt "@title:menu"
+msgid "Tournament"
+msgstr "Torneo"
+
+#: qml/ChessamentActions.qml:58
+msgctxt "@action:intoolbar"
+msgid "Add Player…"
+msgstr "Añadir jugador…"
+
+#: qml/ChessamentActions.qml:65
+msgctxt "@action:intoolbar"
+msgid "Print…"
+msgstr "Imprimir…"
+
+#: qml/ChessamentActions.qml:72
+msgctxt "@action Update players ratings"
+msgid "Update ratings…"
+msgstr "Actualizar valoraciones…"
+
+#: qml/ChessamentActions.qml:78
+#, fuzzy
+#| msgid "Pairings"
+msgctxt "@title:menu"
+msgid "Pairings"
+msgstr "Emparejamientos"
+
+#: qml/ChessamentActions.qml:83
+msgctxt "@option:check"
+msgid "Hide finished games"
+msgstr "Ocultar partidas terminadas"
+
+#: qml/ChessamentActions.qml:90 qml/components/MenuBar.qml:146
+#, fuzzy
+#| msgctxt "@action:menu"
+#| msgid "Help"
+msgctxt "@title:menu"
+msgid "Help"
+msgstr "Ayuda"
+
 #: qml/components/ArbiterDelegate.qml:34
 msgctxt "@item:inlistbox Chief Arbiter"
 msgid "Chief"
@@ -384,24 +395,38 @@ msgctxt "@action:button"
 msgid "Delete Arbiter"
 msgstr "Eliminar árbitro"
 
-#: qml/components/MenuBar.qml:50 qml/components/MenuBar.qml:65
+#: qml/components/MenuBar.qml:29
+#, fuzzy
+#| msgctxt "@action:menu"
+#| msgid "File"
+msgctxt "@title:menu"
+msgid "File"
+msgstr "Archivo"
+
+#: qml/components/MenuBar.qml:49 qml/components/MenuBar.qml:64
 #: qml/NewTournamentDialog.qml:51
 msgctxt "@label:listbox"
 msgid "Chessament event (*.chessament)"
 msgstr "Evento de Chessament (*.chessament)"
 
-#: qml/components/MenuBar.qml:78 qml/components/MenuBar.qml:93
+#: qml/components/MenuBar.qml:77 qml/components/MenuBar.qml:92
 msgctxt "@label:listbox"
 msgid "TRF files (*.trf *.txt)"
 msgstr "Archivos TRF (*.trf *.txt)"
 
-#: qml/components/MenuBar.qml:111
-msgctxt "@action:menu"
+#: qml/components/MenuBar.qml:109
+#, fuzzy
+#| msgctxt "@action:menu"
+#| msgid "View"
+msgctxt "@title:menu"
 msgid "View"
 msgstr "Ver"
 
-#: qml/components/MenuBar.qml:134
-msgctxt "@action:menu"
+#: qml/components/MenuBar.qml:132
+#, fuzzy
+#| msgctxt "@action:menu"
+#| msgid "Settings"
+msgctxt "@title:menu"
 msgid "Settings"
 msgstr "Preferencias"
 
@@ -491,17 +516,17 @@ msgctxt "@action:button Delete Player"
 msgid "Delete"
 msgstr "Eliminar"
 
-#: qml/Main.qml:17
+#: qml/Main.qml:20
 msgctxt "@title:window"
 msgid "%1 — Chessament"
 msgstr "%1 — Chessament"
 
-#: qml/Main.qml:17
+#: qml/Main.qml:20
 msgctxt "@title:window"
 msgid "Chessament"
 msgstr "Chessament"
 
-#: qml/Main.qml:51 settings/AddRatingListDialog.qml:59
+#: qml/Main.qml:56 settings/AddRatingListDialog.qml:59
 msgctxt "@title"
 msgid "Error"
 msgstr "Error"
@@ -531,54 +556,54 @@ msgctxt "@label"
 msgid "Number of rounds"
 msgstr "Número de rondas"
 
-#: qml/PairingsPage.qml:52 qml/PlayersPage.qml:48 qml/StandingsPage.qml:55
+#: qml/PairingsPage.qml:51 qml/PlayersPage.qml:47 qml/StandingsPage.qml:54
 msgctxt "@label:listbox"
 msgid "PDF document (*.pdf)"
 msgstr "Documento PDF (*.pdf)"
 
-#: qml/PairingsPage.qml:77 qml/PlayersPage.qml:142 qml/StandingsPage.qml:70
+#: qml/PairingsPage.qml:76 qml/PlayersPage.qml:141 qml/StandingsPage.qml:69
 msgctxt "@action:intoolbar"
 msgid "Export as PDF…"
 msgstr "Exportar como PDF…"
 
-#: qml/PairingsPage.qml:87 qml/PairingsPage.qml:92
+#: qml/PairingsPage.qml:86 qml/PairingsPage.qml:91
 msgid "Round %1"
 msgid_plural "Round %1"
 msgstr[0] "Ronda %1"
 msgstr[1] "Ronda %1"
 
-#: qml/PairingsPage.qml:104
+#: qml/PairingsPage.qml:103
 msgctxt "@action:intoolbar"
 msgid "Remove pairings of this and following rounds…"
 msgstr "Eliminar emparejamientos de esta ronda y sucesivas…"
 
-#: qml/PairingsPage.qml:118
+#: qml/PairingsPage.qml:117
 msgctxt "@info"
 msgid "The tournament hasn’t started yet."
 msgstr "El torneo no ha comenzado aún."
 
-#: qml/PairingsPage.qml:118
+#: qml/PairingsPage.qml:117
 msgctxt "@info"
 msgid "Round %1 has finished."
 msgid_plural "Round %1 has finished."
 msgstr[0] "La ronda %1 ha terminado."
 msgstr[1] "La ronda %1 ha terminado."
 
-#: qml/PairingsPage.qml:122
+#: qml/PairingsPage.qml:121
 msgctxt "@action:button"
 msgid "Pair Round %1…"
 msgid_plural "Pair Round %1…"
 msgstr[0] "Emparejar ronda %1…"
 msgstr[1] "Emparejar ronda %1…"
 
-#: qml/PairingsPage.qml:166
+#: qml/PairingsPage.qml:165
 msgctxt "@info:placeholder"
 msgid "No pairings for Round %1 yet"
 msgid_plural "No pairings for Round %1 yet"
 msgstr[0] "Todavía no hay emparejamientos para la ronda %1"
 msgstr[1] "Todavía no hay emparejamientos para la ronda %1"
 
-#: qml/PairingsPage.qml:168
+#: qml/PairingsPage.qml:167
 msgctxt "@info:placeholder"
 msgid "All games of Round %1 have finished"
 msgid_plural "All games of Round %1 have finished"
@@ -677,56 +702,56 @@ msgid_plural "Round %1"
 msgstr[0] "Ronda %1"
 msgstr[1] "Ronda %1"
 
-#: qml/PlayersPage.qml:121
+#: qml/PlayersPage.qml:120
 msgctxt "@action:intoolbar Open player details"
 msgid "Details…"
 msgstr "Detalles…"
 
-#: qml/PlayersPage.qml:127
+#: qml/PlayersPage.qml:126
 msgctxt "@action:intoolbar"
 msgid "Sort Players…"
 msgstr "Ordenar jugadores…"
 
-#: qml/PlayersPage.qml:158
+#: qml/PlayersPage.qml:157
 msgctxt "@action:inmenu"
 msgid "Open Player Details"
 msgstr "Abrir detalles del jugador"
 
-#: qml/PlayersPage.qml:164
+#: qml/PlayersPage.qml:163
 msgctxt "@action:inmenu"
 msgid "Delete Player…"
 msgstr "Eliminar jugador…"
 
-#: qml/PlayersPage.qml:184
+#: qml/PlayersPage.qml:183
 msgctxt "@info:placeholder"
 msgid "No players found"
 msgstr "No se encontraron jugadores"
 
-#: qml/PlayersPage.qml:184
+#: qml/PlayersPage.qml:183
 msgctxt "@info:placeholder"
 msgid "No players yet"
 msgstr "Todavía no hay jugadores"
 
-#: qml/PlayersPage.qml:188
+#: qml/PlayersPage.qml:187
 msgctxt "@action:button"
 msgid "Add Player…"
 msgstr "Añadir jugador…"
 
-#: qml/PlayersPage.qml:207
+#: qml/PlayersPage.qml:206
 msgctxt "@info:status Number of players"
 msgid "1 player"
 msgid_plural "%1 players"
 msgstr[0] "1 jugador"
 msgstr[1] "%1 jugadores"
 
-#: qml/PlayersPage.qml:208
+#: qml/PlayersPage.qml:207
 msgctxt "@info:status Number of rated players"
 msgid "1 rated"
 msgid_plural "%1 rated"
 msgstr[0] "1 valorado"
 msgstr[1] "%1 valorados"
 
-#: qml/PlayersPage.qml:210
+#: qml/PlayersPage.qml:209
 msgctxt "@info:status Total number of players (Number of players rated)"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
@@ -767,19 +792,19 @@ msgstr ""
 "No está permitido cambiar el ranking inicial una vez emparejada la cuarta "
 "ronda en los torneos oficiales."
 
-#: qml/StandingsPage.qml:83 qml/StandingsPage.qml:93
+#: qml/StandingsPage.qml:82 qml/StandingsPage.qml:92
 msgctxt "@item:inlistbox"
 msgid "Final Standings"
 msgstr "Clasificación final"
 
-#: qml/StandingsPage.qml:85 qml/StandingsPage.qml:95
+#: qml/StandingsPage.qml:84 qml/StandingsPage.qml:94
 msgctxt "@item:inlistbox Standings After Round %1"
 msgid "After Round %1"
 msgid_plural "After Round %1"
 msgstr[0] "Después de la ronda %1"
 msgstr[1] "Después de la ronda %1"
 
-#: qml/StandingsPage.qml:142
+#: qml/StandingsPage.qml:141
 msgctxt "@info:placeholder"
 msgid "No standings yet"
 msgstr "Todavía no hay clasificación"
@@ -1442,3 +1467,7 @@ msgstr "Resultado «%1» desconocido en el emparejamiento «%2»."
 #, kde-format
 msgid "Pairing “%1” has no opponent."
 msgstr "El emparejamiento «%1» no tiene oponente."
+
+#~ msgctxt "@action:menu"
+#~ msgid "Pairings"
+#~ msgstr "Emparejamientos"
