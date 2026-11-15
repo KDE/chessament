@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-14 01:00+0000\n"
-"PO-Revision-Date: 2026-10-17 19:53+0300\n"
+"POT-Creation-Date: 2026-11-15 01:02+0000\n"
+"PO-Revision-Date: 2026-11-14 18:18+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 26.08.0\n"
+"X-Generator: Lokalize 26.08.2\n"
 
 #: byesmodel.cpp:85
 #, kde-format
@@ -312,9 +312,6 @@ msgid "Export tournament report…"
 msgstr "Turnuva Raporunu Dışa Aktar…"
 
 #: qml/ChessamentActions.qml:52 qml/components/MenuBar.qml:118
-#, fuzzy
-#| msgctxt "@action:menu"
-#| msgid "Tournament"
 msgctxt "@title:menu"
 msgid "Tournament"
 msgstr "Turnuva"
@@ -335,8 +332,6 @@ msgid "Update ratings…"
 msgstr "Derecelendirmelerini Güncelle…"
 
 #: qml/ChessamentActions.qml:78
-#, fuzzy
-#| msgid "Pairings"
 msgctxt "@title:menu"
 msgid "Pairings"
 msgstr "Eşleşmeler"
@@ -347,9 +342,6 @@ msgid "Hide finished games"
 msgstr "Biten oyunları gizle"
 
 #: qml/ChessamentActions.qml:90 qml/components/MenuBar.qml:146
-#, fuzzy
-#| msgctxt "@action:menu"
-#| msgid "Help"
 msgctxt "@title:menu"
 msgid "Help"
 msgstr "Yardım"
@@ -390,9 +382,6 @@ msgid "Delete Arbiter"
 msgstr "Hakemi Sil"
 
 #: qml/components/MenuBar.qml:29
-#, fuzzy
-#| msgctxt "@action:menu"
-#| msgid "File"
 msgctxt "@title:menu"
 msgid "File"
 msgstr "Dosya"
@@ -409,17 +398,11 @@ msgid "TRF files (*.trf *.txt)"
 msgstr "TRF dosyaları (*.trf, *.txt)"
 
 #: qml/components/MenuBar.qml:109
-#, fuzzy
-#| msgctxt "@action:menu"
-#| msgid "View"
 msgctxt "@title:menu"
 msgid "View"
-msgstr "Görüntüle"
+msgstr "Görünüm"
 
 #: qml/components/MenuBar.qml:132
-#, fuzzy
-#| msgctxt "@action:menu"
-#| msgid "Settings"
 msgctxt "@title:menu"
 msgid "Settings"
 msgstr "Ayarlar"
@@ -520,7 +503,7 @@ msgctxt "@title:window"
 msgid "Chessament"
 msgstr "Chessament"
 
-#: qml/Main.qml:56 settings/AddRatingListDialog.qml:59
+#: qml/Main.qml:56 settings/AddRatingListDialog.qml:61
 msgctxt "@title"
 msgid "Error"
 msgstr "Hata"
@@ -880,42 +863,65 @@ msgctxt "@action:button"
 msgid "Continue"
 msgstr "Sürdür"
 
-#: settings/AddRatingListDialog.qml:62
+#: settings/AddRatingListDialog.qml:64
 msgctxt "@title:window"
 msgid "Importing Rating List"
 msgstr "Derecelendirme Listesi İçe Aktar"
 
-#: settings/AddRatingListDialog.qml:65
+#: settings/AddRatingListDialog.qml:67
 msgctxt "@title:window"
 msgid "Rating List Imported"
 msgstr "Derecelendirme Listesi İçe Aktarıldı"
 
-#: settings/AddRatingListDialog.qml:67
+#: settings/AddRatingListDialog.qml:69
 msgctxt "@title:window"
 msgid "Add Rating List"
 msgstr "Derecelendirme Listesi Ekle"
 
-#: settings/AddRatingListDialog.qml:86
+#: settings/AddRatingListDialog.qml:88
 msgctxt "@label:listbox"
 msgid "All Supported Files (*.zip *.xls)"
 msgstr "Tüm desteklenen dosyalar (*.zip, *.xls)"
 
-#: settings/AddRatingListDialog.qml:93
+#: settings/AddRatingListDialog.qml:95
 msgctxt "@info:label"
 msgid "Name"
 msgstr "Ad"
 
-#: settings/AddRatingListDialog.qml:98
+#: settings/AddRatingListDialog.qml:100
 msgctxt "@info:label"
 msgid "Rating list file or URL"
 msgstr "Derecelendirme listesi dosyası veya URL’si"
 
-#: settings/AddRatingListDialog.qml:101
+#: settings/AddRatingListDialog.qml:103
 msgctxt "@action:button"
 msgid "Select file"
 msgstr "Dosya seç…"
 
-#: settings/AddRatingListDialog.qml:143
+#: settings/AddRatingListDialog.qml:115
+#, fuzzy
+#| msgctxt "@label"
+#| msgid "Format"
+msgctxt "@label:listbox"
+msgid "File format"
+msgstr "Biçim"
+
+#: settings/AddRatingListDialog.qml:119
+msgctxt "@item:inlistbox"
+msgid "International Chess Federation"
+msgstr ""
+
+#: settings/AddRatingListDialog.qml:123
+msgctxt "@item:inlistbox"
+msgid "Andalusian Chess Federation"
+msgstr ""
+
+#: settings/AddRatingListDialog.qml:127
+msgctxt "@item:inlistbox"
+msgid "Catalan Chess Federation"
+msgstr ""
+
+#: settings/AddRatingListDialog.qml:166
 msgctxt "@action:button"
 msgid "Import"
 msgstr "İçe Aktar"
@@ -1254,14 +1260,14 @@ msgctxt "@title:window"
 msgid "Edit Tiebreak"
 msgstr "Eşitlik Bozmayı Düzenle"
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:191
-#: tournament/ratinglists/ratinglistsmanager.cpp:224
+#: tournament/ratinglists/ratinglistsmanager.cpp:192
+#: tournament/ratinglists/ratinglistsmanager.cpp:226
 #, kde-format
 msgctxt "@info"
 msgid "Could not open file."
 msgstr "Dosya açılamadı."
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:207
+#: tournament/ratinglists/ratinglistsmanager.cpp:209
 #, kde-format
 msgctxt "@info:progress"
 msgid "Imported one player."
@@ -1269,19 +1275,19 @@ msgid_plural "Imported %1 players."
 msgstr[0] "1 oyuncu içe aktarıldı."
 msgstr[1] "%1 oyuncu içe aktarıldı."
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:219
+#: tournament/ratinglists/ratinglistsmanager.cpp:221
 #, kde-format
 msgctxt "@info"
 msgid "Could not open file: the file does not exist."
 msgstr "Dosya açılamadı: Dosya yok."
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:240
+#: tournament/ratinglists/ratinglistsmanager.cpp:242
 #, kde-format
 msgctxt "@info:progress"
 msgid "Downloading file…"
 msgstr "Dosya indiriliyor…"
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:256
+#: tournament/ratinglists/ratinglistsmanager.cpp:258
 #, kde-format
 msgctxt ""
 "@info:progress %1 & %2 are the file download progress (received / total), %3 "
@@ -1293,34 +1299,34 @@ msgstr ""
 "Dosya indiriliyor…\n"
 "%1 / %2 (%​%3)"
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:268
+#: tournament/ratinglists/ratinglistsmanager.cpp:270
 #, kde-format
 msgctxt "@info"
 msgid "Could not download rating list: %1"
 msgstr "Derecelendirme listesi indirilemedi: %1"
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:280
+#: tournament/ratinglists/ratinglistsmanager.cpp:282
 #, kde-format
 msgctxt "@info"
 msgid "Could not download rating list from %1 (unsupported protocol)."
 msgstr ""
 "%1 konumundan derecelendirme listesi indirilemedi (desteklenmeyen protokol)."
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:293
+#: tournament/ratinglists/ratinglistsmanager.cpp:298
 #, kde-format
 msgctxt "@info"
 msgid "Could not extract file."
 msgstr "Dosya çıkarılamadı."
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:298
 #: tournament/ratinglists/ratinglistsmanager.cpp:303
-#: tournament/ratinglists/ratinglistsmanager.cpp:321
+#: tournament/ratinglists/ratinglistsmanager.cpp:308
+#: tournament/ratinglists/ratinglistsmanager.cpp:329
 #, kde-format
 msgctxt "@info"
 msgid "File format not supported."
 msgstr "Dosya biçimi desteklenmiyor."
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:510
+#: tournament/ratinglists/ratinglistsmanager.cpp:519
 #, kde-format
 msgctxt "@info:progress"
 msgid "Saved 1 player."

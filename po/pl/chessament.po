@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-14 01:00+0000\n"
+"POT-Creation-Date: 2026-11-15 01:02+0000\n"
 "PO-Revision-Date: 2026-03-21 06:45+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
@@ -569,7 +569,7 @@ msgctxt "@title:window"
 msgid "Chessament"
 msgstr "Chessament"
 
-#: qml/Main.qml:56 settings/AddRatingListDialog.qml:59
+#: qml/Main.qml:56 settings/AddRatingListDialog.qml:61
 msgctxt "@title"
 msgid "Error"
 msgstr "Błąd"
@@ -1009,12 +1009,12 @@ msgctxt "@action:button"
 msgid "Continue"
 msgstr ""
 
-#: settings/AddRatingListDialog.qml:62
+#: settings/AddRatingListDialog.qml:64
 msgctxt "@title:window"
 msgid "Importing Rating List"
 msgstr "Importowanie listy wyników"
 
-#: settings/AddRatingListDialog.qml:65
+#: settings/AddRatingListDialog.qml:67
 #, fuzzy
 #| msgctxt "@action:button"
 #| msgid "Rating Lists"
@@ -1022,22 +1022,22 @@ msgctxt "@title:window"
 msgid "Rating List Imported"
 msgstr "Lista wyników"
 
-#: settings/AddRatingListDialog.qml:67
+#: settings/AddRatingListDialog.qml:69
 msgctxt "@title:window"
 msgid "Add Rating List"
 msgstr "Dodaj listę wyników"
 
-#: settings/AddRatingListDialog.qml:86
+#: settings/AddRatingListDialog.qml:88
 msgctxt "@label:listbox"
 msgid "All Supported Files (*.zip *.xls)"
 msgstr ""
 
-#: settings/AddRatingListDialog.qml:93
+#: settings/AddRatingListDialog.qml:95
 msgctxt "@info:label"
 msgid "Name"
 msgstr "Nazwa"
 
-#: settings/AddRatingListDialog.qml:98
+#: settings/AddRatingListDialog.qml:100
 #, fuzzy
 #| msgctxt "@info:label"
 #| msgid "Rating list URL"
@@ -1045,12 +1045,35 @@ msgctxt "@info:label"
 msgid "Rating list file or URL"
 msgstr "Adres URL listy wyników"
 
-#: settings/AddRatingListDialog.qml:101
+#: settings/AddRatingListDialog.qml:103
 msgctxt "@action:button"
 msgid "Select file"
 msgstr ""
 
-#: settings/AddRatingListDialog.qml:143
+#: settings/AddRatingListDialog.qml:115
+#, fuzzy
+#| msgctxt "@label"
+#| msgid "Format"
+msgctxt "@label:listbox"
+msgid "File format"
+msgstr "Format"
+
+#: settings/AddRatingListDialog.qml:119
+msgctxt "@item:inlistbox"
+msgid "International Chess Federation"
+msgstr ""
+
+#: settings/AddRatingListDialog.qml:123
+msgctxt "@item:inlistbox"
+msgid "Andalusian Chess Federation"
+msgstr ""
+
+#: settings/AddRatingListDialog.qml:127
+msgctxt "@item:inlistbox"
+msgid "Catalan Chess Federation"
+msgstr ""
+
+#: settings/AddRatingListDialog.qml:166
 msgctxt "@action:button"
 msgid "Import"
 msgstr "Zaimportuj"
@@ -1427,15 +1450,15 @@ msgctxt "@title:window"
 msgid "Edit Tiebreak"
 msgstr "Zmień przełamanie remisu"
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:191
-#: tournament/ratinglists/ratinglistsmanager.cpp:224
+#: tournament/ratinglists/ratinglistsmanager.cpp:192
+#: tournament/ratinglists/ratinglistsmanager.cpp:226
 #, fuzzy, kde-format
 #| msgid "Couldn't open file"
 msgctxt "@info"
 msgid "Could not open file."
 msgstr "Nie udało się otworzyć pliku"
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:207
+#: tournament/ratinglists/ratinglistsmanager.cpp:209
 #, kde-format
 msgctxt "@info:progress"
 msgid "Imported one player."
@@ -1444,14 +1467,14 @@ msgstr[0] "Zaimportowano jednego gracza."
 msgstr[1] "Zaimportowano %1 graczy."
 msgstr[2] "Zaimportowano %1 graczy."
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:219
+#: tournament/ratinglists/ratinglistsmanager.cpp:221
 #, fuzzy, kde-format
 #| msgid "Couldn't open file"
 msgctxt "@info"
 msgid "Could not open file: the file does not exist."
 msgstr "Nie udało się otworzyć pliku"
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:240
+#: tournament/ratinglists/ratinglistsmanager.cpp:242
 #, fuzzy, kde-format
 #| msgctxt "@info:progress"
 #| msgid "Downloading file"
@@ -1459,7 +1482,7 @@ msgctxt "@info:progress"
 msgid "Downloading file…"
 msgstr "Pobieranie pliku"
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:256
+#: tournament/ratinglists/ratinglistsmanager.cpp:258
 #, fuzzy, kde-format
 #| msgctxt "@info:progress"
 #| msgid "Downloading file (%1 %)"
@@ -1471,7 +1494,7 @@ msgid ""
 "%1 / %2 (%3%)"
 msgstr "Pobieranie pliku (%1 %)"
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:268
+#: tournament/ratinglists/ratinglistsmanager.cpp:270
 #, fuzzy, kde-format
 #| msgctxt "@info"
 #| msgid "Couldn't download rating list: %1"
@@ -1479,7 +1502,7 @@ msgctxt "@info"
 msgid "Could not download rating list: %1"
 msgstr "Nie można pobrać listy wyników: %1"
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:280
+#: tournament/ratinglists/ratinglistsmanager.cpp:282
 #, fuzzy, kde-format
 #| msgctxt "@info"
 #| msgid "Couldn't download rating list: %1"
@@ -1487,7 +1510,7 @@ msgctxt "@info"
 msgid "Could not download rating list from %1 (unsupported protocol)."
 msgstr "Nie można pobrać listy wyników: %1"
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:293
+#: tournament/ratinglists/ratinglistsmanager.cpp:298
 #, fuzzy, kde-format
 #| msgctxt "@info"
 #| msgid "Couldn't extract file."
@@ -1495,15 +1518,15 @@ msgctxt "@info"
 msgid "Could not extract file."
 msgstr "Nie udało się wypakować pliku"
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:298
 #: tournament/ratinglists/ratinglistsmanager.cpp:303
-#: tournament/ratinglists/ratinglistsmanager.cpp:321
+#: tournament/ratinglists/ratinglistsmanager.cpp:308
+#: tournament/ratinglists/ratinglistsmanager.cpp:329
 #, kde-format
 msgctxt "@info"
 msgid "File format not supported."
 msgstr "Nieobsługiwany format pliku."
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:510
+#: tournament/ratinglists/ratinglistsmanager.cpp:519
 #, kde-format
 msgctxt "@info:progress"
 msgid "Saved 1 player."

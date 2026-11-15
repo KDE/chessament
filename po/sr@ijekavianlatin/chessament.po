@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-14 01:00+0000\n"
-"PO-Revision-Date: 2026-10-09 22:30+0200\n"
+"POT-Creation-Date: 2026-11-15 01:02+0000\n"
+"PO-Revision-Date: 2026-11-14 16:15+0100\n"
 "Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
 "Language: sr@ijekavianlatin\n"
@@ -298,9 +298,6 @@ msgid "Gender"
 msgstr "Pol"
 
 #: qml/ChessamentActions.qml:18
-#, fuzzy
-#| msgctxt "@title:window"
-#| msgid "Chessament"
 msgctxt "@title"
 msgid "Chessament"
 msgstr "Chessament"
@@ -321,9 +318,6 @@ msgid "Export tournament report…"
 msgstr "Izvezi izvještaj o turniru…"
 
 #: qml/ChessamentActions.qml:52 qml/components/MenuBar.qml:118
-#, fuzzy
-#| msgctxt "@action:menu"
-#| msgid "Tournament"
 msgctxt "@title:menu"
 msgid "Tournament"
 msgstr "Turnir"
@@ -344,8 +338,6 @@ msgid "Update ratings…"
 msgstr "Ažuriraj rejtinge…"
 
 #: qml/ChessamentActions.qml:78
-#, fuzzy
-#| msgid "Pairings"
 msgctxt "@title:menu"
 msgid "Pairings"
 msgstr "Parovi"
@@ -356,9 +348,6 @@ msgid "Hide finished games"
 msgstr "Sakrij završene partije"
 
 #: qml/ChessamentActions.qml:90 qml/components/MenuBar.qml:146
-#, fuzzy
-#| msgctxt "@action:menu"
-#| msgid "Help"
 msgctxt "@title:menu"
 msgid "Help"
 msgstr "Pomoć"
@@ -399,9 +388,6 @@ msgid "Delete Arbiter"
 msgstr "Obriši sudiju"
 
 #: qml/components/MenuBar.qml:29
-#, fuzzy
-#| msgctxt "@action:menu"
-#| msgid "File"
 msgctxt "@title:menu"
 msgid "File"
 msgstr "Fajl"
@@ -418,17 +404,11 @@ msgid "TRF files (*.trf *.txt)"
 msgstr "TRF fajlovi (*.trf *.txt)"
 
 #: qml/components/MenuBar.qml:109
-#, fuzzy
-#| msgctxt "@action:menu"
-#| msgid "View"
 msgctxt "@title:menu"
 msgid "View"
 msgstr "Prikaz"
 
 #: qml/components/MenuBar.qml:132
-#, fuzzy
-#| msgctxt "@action:menu"
-#| msgid "Settings"
 msgctxt "@title:menu"
 msgid "Settings"
 msgstr "Podešavanje"
@@ -529,7 +509,7 @@ msgctxt "@title:window"
 msgid "Chessament"
 msgstr "Chessament"
 
-#: qml/Main.qml:56 settings/AddRatingListDialog.qml:59
+#: qml/Main.qml:56 settings/AddRatingListDialog.qml:61
 msgctxt "@title"
 msgid "Error"
 msgstr "Greška"
@@ -911,42 +891,65 @@ msgctxt "@action:button"
 msgid "Continue"
 msgstr "Nastavi"
 
-#: settings/AddRatingListDialog.qml:62
+#: settings/AddRatingListDialog.qml:64
 msgctxt "@title:window"
 msgid "Importing Rating List"
 msgstr "Uvoz spiska rejtinga"
 
-#: settings/AddRatingListDialog.qml:65
+#: settings/AddRatingListDialog.qml:67
 msgctxt "@title:window"
 msgid "Rating List Imported"
 msgstr "Spisak rejtinga je uvezen"
 
-#: settings/AddRatingListDialog.qml:67
+#: settings/AddRatingListDialog.qml:69
 msgctxt "@title:window"
 msgid "Add Rating List"
 msgstr "Dodavanje spiska rejtinga"
 
-#: settings/AddRatingListDialog.qml:86
+#: settings/AddRatingListDialog.qml:88
 msgctxt "@label:listbox"
 msgid "All Supported Files (*.zip *.xls)"
 msgstr "Svi podržani fajlovi (*.zip *.xls)"
 
-#: settings/AddRatingListDialog.qml:93
+#: settings/AddRatingListDialog.qml:95
 msgctxt "@info:label"
 msgid "Name"
 msgstr "Ime"
 
-#: settings/AddRatingListDialog.qml:98
+#: settings/AddRatingListDialog.qml:100
 msgctxt "@info:label"
 msgid "Rating list file or URL"
 msgstr "Fajl ili URL spiska rejtinga"
 
-#: settings/AddRatingListDialog.qml:101
+#: settings/AddRatingListDialog.qml:103
 msgctxt "@action:button"
 msgid "Select file"
 msgstr "Izaberi fajl"
 
-#: settings/AddRatingListDialog.qml:143
+#: settings/AddRatingListDialog.qml:115
+#, fuzzy
+#| msgctxt "@label"
+#| msgid "Format"
+msgctxt "@label:listbox"
+msgid "File format"
+msgstr "Format"
+
+#: settings/AddRatingListDialog.qml:119
+msgctxt "@item:inlistbox"
+msgid "International Chess Federation"
+msgstr ""
+
+#: settings/AddRatingListDialog.qml:123
+msgctxt "@item:inlistbox"
+msgid "Andalusian Chess Federation"
+msgstr ""
+
+#: settings/AddRatingListDialog.qml:127
+msgctxt "@item:inlistbox"
+msgid "Catalan Chess Federation"
+msgstr ""
+
+#: settings/AddRatingListDialog.qml:166
 msgctxt "@action:button"
 msgid "Import"
 msgstr "Uvezi"
@@ -1055,12 +1058,10 @@ msgid "The time control is Rapid."
 msgstr "Vremenska kontrola je rapid."
 
 #: timecontrolmodel.cpp:42
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "The time control is Rapid."
+#, kde-format
 msgctxt "@info"
 msgid "The time control is Standard."
-msgstr "Vremenska kontrola je rapid."
+msgstr "Vremenska kontrola je standardna."
 
 #: tournament/event.cpp:166 tournament/event.cpp:175
 #, kde-kuit-format
@@ -1240,12 +1241,9 @@ msgid "Tiebreaks"
 msgstr "Dodatni kriterijumi"
 
 #: tournament/qml/SettingsFormatPage.qml:93
-#, fuzzy
-#| msgctxt "@info:status"
-#| msgid "No arbiters yet."
 msgctxt "@info:status"
 msgid "No tiebreaks set up yet."
-msgstr "Još nema sudija."
+msgstr "Još nema postavljenih dodatnih kriterijuma."
 
 #: tournament/qml/SettingsFormatPage.qml:120
 msgctxt "@action:button"
@@ -1268,12 +1266,9 @@ msgid "Tournament name"
 msgstr "Ime turnira"
 
 #: tournament/qml/SettingsInformationPage.qml:35
-#, fuzzy
-#| msgctxt "@action:button"
-#| msgid "Information"
 msgctxt "@label:textbox"
 msgid "Location"
-msgstr "Podaci"
+msgstr "Lokacija"
 
 #: tournament/qml/SettingsInformationPage.qml:53
 msgctxt "@title:group"
@@ -1295,14 +1290,14 @@ msgctxt "@title:window"
 msgid "Edit Tiebreak"
 msgstr "Uređivanje dodatnog kriterijuma"
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:191
-#: tournament/ratinglists/ratinglistsmanager.cpp:224
+#: tournament/ratinglists/ratinglistsmanager.cpp:192
+#: tournament/ratinglists/ratinglistsmanager.cpp:226
 #, kde-format
 msgctxt "@info"
 msgid "Could not open file."
 msgstr "Ne mogu da otvorim fajl."
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:207
+#: tournament/ratinglists/ratinglistsmanager.cpp:209
 #, kde-format
 msgctxt "@info:progress"
 msgid "Imported one player."
@@ -1312,19 +1307,19 @@ msgstr[1] "Uvezena su %1 igrača."
 msgstr[2] "Uvezeno je %1 igrača."
 msgstr[3] "Uvezen je jedan igrač."
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:219
+#: tournament/ratinglists/ratinglistsmanager.cpp:221
 #, kde-format
 msgctxt "@info"
 msgid "Could not open file: the file does not exist."
 msgstr "Ne mogu da otvorim fajl: fajl ne postoji."
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:240
+#: tournament/ratinglists/ratinglistsmanager.cpp:242
 #, kde-format
 msgctxt "@info:progress"
 msgid "Downloading file…"
 msgstr "Preuzimam fajl…"
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:256
+#: tournament/ratinglists/ratinglistsmanager.cpp:258
 #, kde-format
 msgctxt ""
 "@info:progress %1 & %2 are the file download progress (received / total), %3 "
@@ -1336,33 +1331,33 @@ msgstr ""
 "Preuzimam fajl…\n"
 "%1 / %2 (%3%)"
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:268
+#: tournament/ratinglists/ratinglistsmanager.cpp:270
 #, kde-format
 msgctxt "@info"
 msgid "Could not download rating list: %1"
 msgstr "Ne mogu da preuzmem spisak rejtinga: %1"
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:280
+#: tournament/ratinglists/ratinglistsmanager.cpp:282
 #, kde-format
 msgctxt "@info"
 msgid "Could not download rating list from %1 (unsupported protocol)."
 msgstr "Ne mogu da preuzmem spisak rejtinga sa %1 (nepodržan protokol)."
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:293
+#: tournament/ratinglists/ratinglistsmanager.cpp:298
 #, kde-format
 msgctxt "@info"
 msgid "Could not extract file."
 msgstr "Ne mogu da raspakujem fajl."
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:298
 #: tournament/ratinglists/ratinglistsmanager.cpp:303
-#: tournament/ratinglists/ratinglistsmanager.cpp:321
+#: tournament/ratinglists/ratinglistsmanager.cpp:308
+#: tournament/ratinglists/ratinglistsmanager.cpp:329
 #, kde-format
 msgctxt "@info"
 msgid "File format not supported."
 msgstr "Format fajla nije podržan."
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:510
+#: tournament/ratinglists/ratinglistsmanager.cpp:519
 #, kde-format
 msgctxt "@info:progress"
 msgid "Saved 1 player."
@@ -1508,15 +1503,3 @@ msgstr "Nepoznat rezultat „%1“ u paru „%2“."
 #, kde-format
 msgid "Pairing “%1” has no opponent."
 msgstr "Par „%1“ nema protivnika."
-
-#~ msgctxt "@action:menu"
-#~ msgid "Pairings"
-#~ msgstr "Parovi"
-
-#~ msgctxt "@info"
-#~ msgid "The time control is Classical."
-#~ msgstr "Vremenska kontrola je klasična."
-
-#~ msgctxt "@label:textbox"
-#~ msgid "City"
-#~ msgstr "Grad"

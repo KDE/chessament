@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-14 01:00+0000\n"
-"PO-Revision-Date: 2026-10-21 09:01+0200\n"
+"POT-Creation-Date: 2026-11-15 01:02+0000\n"
+"PO-Revision-Date: 2026-11-14 10:50+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -295,9 +295,6 @@ msgid "Gender"
 msgstr "Gènere"
 
 #: qml/ChessamentActions.qml:18
-#, fuzzy
-#| msgctxt "@title:window"
-#| msgid "Chessament"
 msgctxt "@title"
 msgid "Chessament"
 msgstr "Chessament"
@@ -318,9 +315,6 @@ msgid "Export tournament report…"
 msgstr "Exporta un informe de torneig…"
 
 #: qml/ChessamentActions.qml:52 qml/components/MenuBar.qml:118
-#, fuzzy
-#| msgctxt "@action:menu"
-#| msgid "Tournament"
 msgctxt "@title:menu"
 msgid "Tournament"
 msgstr "Torneig"
@@ -341,8 +335,6 @@ msgid "Update ratings…"
 msgstr "Actualitza les puntuacions…"
 
 #: qml/ChessamentActions.qml:78
-#, fuzzy
-#| msgid "Pairings"
 msgctxt "@title:menu"
 msgid "Pairings"
 msgstr "Aparellaments"
@@ -353,9 +345,6 @@ msgid "Hide finished games"
 msgstr "Oculta les partides finalitzades"
 
 #: qml/ChessamentActions.qml:90 qml/components/MenuBar.qml:146
-#, fuzzy
-#| msgctxt "@action:menu"
-#| msgid "Help"
 msgctxt "@title:menu"
 msgid "Help"
 msgstr "Ajuda"
@@ -396,9 +385,6 @@ msgid "Delete Arbiter"
 msgstr "Suprimix l'àrbitre"
 
 #: qml/components/MenuBar.qml:29
-#, fuzzy
-#| msgctxt "@action:menu"
-#| msgid "File"
 msgctxt "@title:menu"
 msgid "File"
 msgstr "Fitxer"
@@ -415,17 +401,11 @@ msgid "TRF files (*.trf *.txt)"
 msgstr "Fitxers TRF (*.trf *.txt)"
 
 #: qml/components/MenuBar.qml:109
-#, fuzzy
-#| msgctxt "@action:menu"
-#| msgid "View"
 msgctxt "@title:menu"
 msgid "View"
 msgstr "Vista"
 
 #: qml/components/MenuBar.qml:132
-#, fuzzy
-#| msgctxt "@action:menu"
-#| msgid "Settings"
 msgctxt "@title:menu"
 msgid "Settings"
 msgstr "Configuració"
@@ -526,7 +506,7 @@ msgctxt "@title:window"
 msgid "Chessament"
 msgstr "Chessament"
 
-#: qml/Main.qml:56 settings/AddRatingListDialog.qml:59
+#: qml/Main.qml:56 settings/AddRatingListDialog.qml:61
 msgctxt "@title"
 msgid "Error"
 msgstr "S'ha produït un error"
@@ -886,42 +866,65 @@ msgctxt "@action:button"
 msgid "Continue"
 msgstr "Continua"
 
-#: settings/AddRatingListDialog.qml:62
+#: settings/AddRatingListDialog.qml:64
 msgctxt "@title:window"
 msgid "Importing Rating List"
 msgstr "Importació de llista de puntuacions"
 
-#: settings/AddRatingListDialog.qml:65
+#: settings/AddRatingListDialog.qml:67
 msgctxt "@title:window"
 msgid "Rating List Imported"
 msgstr "S'ha importat una llista de puntuacions"
 
-#: settings/AddRatingListDialog.qml:67
+#: settings/AddRatingListDialog.qml:69
 msgctxt "@title:window"
 msgid "Add Rating List"
 msgstr "Afig una llista de puntuacions"
 
-#: settings/AddRatingListDialog.qml:86
+#: settings/AddRatingListDialog.qml:88
 msgctxt "@label:listbox"
 msgid "All Supported Files (*.zip *.xls)"
 msgstr "Tots els fitxers admesos (*.zip *.xls)"
 
-#: settings/AddRatingListDialog.qml:93
+#: settings/AddRatingListDialog.qml:95
 msgctxt "@info:label"
 msgid "Name"
 msgstr "Nom"
 
-#: settings/AddRatingListDialog.qml:98
+#: settings/AddRatingListDialog.qml:100
 msgctxt "@info:label"
 msgid "Rating list file or URL"
 msgstr "Fitxer o URL de la llista de puntuacions"
 
-#: settings/AddRatingListDialog.qml:101
+#: settings/AddRatingListDialog.qml:103
 msgctxt "@action:button"
 msgid "Select file"
 msgstr "Trieu un fitxer"
 
-#: settings/AddRatingListDialog.qml:143
+#: settings/AddRatingListDialog.qml:115
+#, fuzzy
+#| msgctxt "@label"
+#| msgid "Format"
+msgctxt "@label:listbox"
+msgid "File format"
+msgstr "Format"
+
+#: settings/AddRatingListDialog.qml:119
+msgctxt "@item:inlistbox"
+msgid "International Chess Federation"
+msgstr ""
+
+#: settings/AddRatingListDialog.qml:123
+msgctxt "@item:inlistbox"
+msgid "Andalusian Chess Federation"
+msgstr ""
+
+#: settings/AddRatingListDialog.qml:127
+msgctxt "@item:inlistbox"
+msgid "Catalan Chess Federation"
+msgstr ""
+
+#: settings/AddRatingListDialog.qml:166
 msgctxt "@action:button"
 msgid "Import"
 msgstr "Importa"
@@ -1262,14 +1265,14 @@ msgctxt "@title:window"
 msgid "Edit Tiebreak"
 msgstr "Edició de desempat"
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:191
-#: tournament/ratinglists/ratinglistsmanager.cpp:224
+#: tournament/ratinglists/ratinglistsmanager.cpp:192
+#: tournament/ratinglists/ratinglistsmanager.cpp:226
 #, kde-format
 msgctxt "@info"
 msgid "Could not open file."
 msgstr "No s'ha pogut obrir el fitxer."
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:207
+#: tournament/ratinglists/ratinglistsmanager.cpp:209
 #, kde-format
 msgctxt "@info:progress"
 msgid "Imported one player."
@@ -1277,20 +1280,20 @@ msgid_plural "Imported %1 players."
 msgstr[0] "S'ha importat un jugador."
 msgstr[1] "S'han importat %1 jugadors."
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:219
+#: tournament/ratinglists/ratinglistsmanager.cpp:221
 #, kde-format
 msgctxt "@info"
 msgid "Could not open file: the file does not exist."
 msgstr "No s'ha pogut obrir el fitxer: el fitxer no existix."
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:240
+#: tournament/ratinglists/ratinglistsmanager.cpp:242
 #, kde-format
 msgctxt "@info:progress"
 msgid "Downloading file…"
 msgstr "S'està descarregant el fitxer…"
 
 # skip-rule: t-sp_tpc
-#: tournament/ratinglists/ratinglistsmanager.cpp:256
+#: tournament/ratinglists/ratinglistsmanager.cpp:258
 #, kde-format
 msgctxt ""
 "@info:progress %1 & %2 are the file download progress (received / total), %3 "
@@ -1302,34 +1305,34 @@ msgstr ""
 "S'està descarregant el fitxer…\n"
 "%1 / %2 (%3%)"
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:268
+#: tournament/ratinglists/ratinglistsmanager.cpp:270
 #, kde-format
 msgctxt "@info"
 msgid "Could not download rating list: %1"
 msgstr "No s'ha pogut baixar la llista de puntuacions: %1"
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:280
+#: tournament/ratinglists/ratinglistsmanager.cpp:282
 #, kde-format
 msgctxt "@info"
 msgid "Could not download rating list from %1 (unsupported protocol)."
 msgstr ""
 "No s'ha pogut baixar la llista de puntuacions des de %1 (protocol no admés)."
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:293
+#: tournament/ratinglists/ratinglistsmanager.cpp:298
 #, kde-format
 msgctxt "@info"
 msgid "Could not extract file."
 msgstr "No s'ha pogut extraure el fitxer."
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:298
 #: tournament/ratinglists/ratinglistsmanager.cpp:303
-#: tournament/ratinglists/ratinglistsmanager.cpp:321
+#: tournament/ratinglists/ratinglistsmanager.cpp:308
+#: tournament/ratinglists/ratinglistsmanager.cpp:329
 #, kde-format
 msgctxt "@info"
 msgid "File format not supported."
 msgstr "El format del fitxer no està admés."
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:510
+#: tournament/ratinglists/ratinglistsmanager.cpp:519
 #, kde-format
 msgctxt "@info:progress"
 msgid "Saved 1 player."
@@ -1469,7 +1472,3 @@ msgstr "Resultat «%1» desconegut a l'aparellament «%2»."
 #, kde-format
 msgid "Pairing “%1” has no opponent."
 msgstr "L'aparellament «%1» no té oponent."
-
-#~ msgctxt "@action:menu"
-#~ msgid "Pairings"
-#~ msgstr "Aparellaments"
