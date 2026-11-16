@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-15 01:02+0000\n"
-"PO-Revision-Date: 2026-11-14 10:50+0100\n"
+"PO-Revision-Date: 2026-11-15 09:43+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -902,27 +902,24 @@ msgid "Select file"
 msgstr "Trieu un fitxer"
 
 #: settings/AddRatingListDialog.qml:115
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "Format"
 msgctxt "@label:listbox"
 msgid "File format"
-msgstr "Format"
+msgstr "Format de fitxer"
 
 #: settings/AddRatingListDialog.qml:119
 msgctxt "@item:inlistbox"
 msgid "International Chess Federation"
-msgstr ""
+msgstr "Federació Internacional d'Escacs"
 
 #: settings/AddRatingListDialog.qml:123
 msgctxt "@item:inlistbox"
 msgid "Andalusian Chess Federation"
-msgstr ""
+msgstr "Federació Andalusa d'Escacs"
 
 #: settings/AddRatingListDialog.qml:127
 msgctxt "@item:inlistbox"
 msgid "Catalan Chess Federation"
-msgstr ""
+msgstr "Federació Catalana d'Escacs"
 
 #: settings/AddRatingListDialog.qml:166
 msgctxt "@action:button"

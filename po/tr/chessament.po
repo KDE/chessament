@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-15 01:02+0000\n"
-"PO-Revision-Date: 2026-11-14 18:18+0300\n"
+"PO-Revision-Date: 2026-11-15 17:34+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -899,27 +899,24 @@ msgid "Select file"
 msgstr "Dosya seç…"
 
 #: settings/AddRatingListDialog.qml:115
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "Format"
 msgctxt "@label:listbox"
 msgid "File format"
-msgstr "Biçim"
+msgstr "Dosya biçimi"
 
 #: settings/AddRatingListDialog.qml:119
 msgctxt "@item:inlistbox"
 msgid "International Chess Federation"
-msgstr ""
+msgstr "Uluslararası Satranç Vakfı"
 
 #: settings/AddRatingListDialog.qml:123
 msgctxt "@item:inlistbox"
 msgid "Andalusian Chess Federation"
-msgstr ""
+msgstr "Endülüs Satranç Federasyonu"
 
 #: settings/AddRatingListDialog.qml:127
 msgctxt "@item:inlistbox"
 msgid "Catalan Chess Federation"
-msgstr ""
+msgstr "Katalan Satranç Federasyonu"
 
 #: settings/AddRatingListDialog.qml:166
 msgctxt "@action:button"

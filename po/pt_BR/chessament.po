@@ -1,15 +1,15 @@
 # Copyright (C) 2025 This file is copyright:
 # This file is distributed under the same license as the chessament package.
 #
-# SPDX-FileCopyrightText: 2025-2026 Marcus Gama <marcus.gama@gmail.com>
+# SPDX-FileCopyrightText: 2025-2026 Marcus Gama <marcus.gama@kde.org>
 # SPDX-FileCopyrightText: 2026 Guilherme Marçal Silva <guimarcalsilva@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-15 01:02+0000\n"
-"PO-Revision-Date: 2026-11-14 06:20-0300\n"
-"Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
+"PO-Revision-Date: 2026-11-15 06:26-0300\n"
+"Last-Translator: Marcus Gama <marcus.gama@kde.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
@@ -98,7 +98,7 @@ msgstr "Marcus Gama"
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "marcus.gama@gmail.com"
+msgstr "marcus.gama@kde.org"
 
 #: main.cpp:67
 #, kde-format
@@ -900,27 +900,24 @@ msgid "Select file"
 msgstr "Selecionar arquivo"
 
 #: settings/AddRatingListDialog.qml:115
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "Format"
 msgctxt "@label:listbox"
 msgid "File format"
-msgstr "Formato"
+msgstr "Formato do arquivo"
 
 #: settings/AddRatingListDialog.qml:119
 msgctxt "@item:inlistbox"
 msgid "International Chess Federation"
-msgstr ""
+msgstr "Federação Internacional de Xadrez"
 
 #: settings/AddRatingListDialog.qml:123
 msgctxt "@item:inlistbox"
 msgid "Andalusian Chess Federation"
-msgstr ""
+msgstr "Federação de Xadrez da Andaluzia"
 
 #: settings/AddRatingListDialog.qml:127
 msgctxt "@item:inlistbox"
 msgid "Catalan Chess Federation"
-msgstr ""
+msgstr "Federação Catalã de Xadrez"
 
 #: settings/AddRatingListDialog.qml:166
 msgctxt "@action:button"

@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-15 01:02+0000\n"
-"PO-Revision-Date: 2026-11-11 22:59+0200\n"
+"PO-Revision-Date: 2026-11-15 09:41+0200\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -299,9 +299,6 @@ msgid "Gender"
 msgstr "Пол"
 
 #: qml/ChessamentActions.qml:18
-#, fuzzy
-#| msgctxt "@title:window"
-#| msgid "Chessament"
 msgctxt "@title"
 msgid "Chessament"
 msgstr "Chessament"
@@ -322,9 +319,6 @@ msgid "Export tournament report…"
 msgstr "Экспорт отчёта о турнире…"
 
 #: qml/ChessamentActions.qml:52 qml/components/MenuBar.qml:118
-#, fuzzy
-#| msgctxt "@action:menu"
-#| msgid "Tournament"
 msgctxt "@title:menu"
 msgid "Tournament"
 msgstr "Турнир"
@@ -345,8 +339,6 @@ msgid "Update ratings…"
 msgstr "Обновить рейтинги…"
 
 #: qml/ChessamentActions.qml:78
-#, fuzzy
-#| msgid "Pairings"
 msgctxt "@title:menu"
 msgid "Pairings"
 msgstr "Пары"
@@ -357,9 +349,6 @@ msgid "Hide finished games"
 msgstr "Скрывать завершённые партии"
 
 #: qml/ChessamentActions.qml:90 qml/components/MenuBar.qml:146
-#, fuzzy
-#| msgctxt "@action:menu"
-#| msgid "Help"
 msgctxt "@title:menu"
 msgid "Help"
 msgstr "Справка"
@@ -400,9 +389,6 @@ msgid "Delete Arbiter"
 msgstr "Удалить арбитра"
 
 #: qml/components/MenuBar.qml:29
-#, fuzzy
-#| msgctxt "@action:menu"
-#| msgid "File"
 msgctxt "@title:menu"
 msgid "File"
 msgstr "Файл"
@@ -419,17 +405,11 @@ msgid "TRF files (*.trf *.txt)"
 msgstr "Файлы TRF (*.trf *.txt)"
 
 #: qml/components/MenuBar.qml:109
-#, fuzzy
-#| msgctxt "@action:menu"
-#| msgid "View"
 msgctxt "@title:menu"
 msgid "View"
 msgstr "Вид"
 
 #: qml/components/MenuBar.qml:132
-#, fuzzy
-#| msgctxt "@action:menu"
-#| msgid "Settings"
 msgctxt "@title:menu"
 msgid "Settings"
 msgstr "Настройка"
@@ -948,27 +928,24 @@ msgid "Select file"
 msgstr "Выбрать файл"
 
 #: settings/AddRatingListDialog.qml:115
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "Format"
 msgctxt "@label:listbox"
 msgid "File format"
-msgstr "Формат"
+msgstr "Формат файла"
 
 #: settings/AddRatingListDialog.qml:119
 msgctxt "@item:inlistbox"
 msgid "International Chess Federation"
-msgstr ""
+msgstr "Международная шахматная федерация"
 
 #: settings/AddRatingListDialog.qml:123
 msgctxt "@item:inlistbox"
 msgid "Andalusian Chess Federation"
-msgstr ""
+msgstr "Андалусская шахматная федерация"
 
 #: settings/AddRatingListDialog.qml:127
 msgctxt "@item:inlistbox"
 msgid "Catalan Chess Federation"
-msgstr ""
+msgstr "Каталонская шахматная федерация"
 
 #: settings/AddRatingListDialog.qml:166
 msgctxt "@action:button"
