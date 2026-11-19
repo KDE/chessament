@@ -86,6 +86,17 @@ Item {
     }
 
     Actions.ActionCollection {
+        name: "org.kde.chessament.tools"
+        text: KI18n.i18nc("@title:menu", "Tools")
+        application: root.application
+
+        Actions.ActionData {
+            name: "rating_calculator"
+            text: KI18n.i18nc("@action:inmenu", "Rating Variation Calculator")
+        }
+    }
+
+    Actions.ActionCollection {
         name: "org.kde.chessament.help"
         text: KI18n.i18nc("@title:menu", "Help")
         application: root.application

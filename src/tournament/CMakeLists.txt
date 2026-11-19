@@ -5,6 +5,8 @@ add_library(tournament STATIC)
 
 target_sources(tournament PRIVATE
     arbiter.cpp
+    elo.cpp
+    elotables.cpp
     event.cpp
     pairing.cpp
     pairingengine.cpp

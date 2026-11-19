@@ -129,6 +129,19 @@ Controls.MenuBar {
     }
 
     Controls.Menu {
+        title: KI18n.i18nc("@title:menu", "Tools")
+
+        Kirigami.Action {
+            ActionCollection.action: "rating_calculator"
+            ActionCollection.collection: "org.kde.chessament.tools"
+            onTriggered: function (): void {
+                const component = Qt.createComponent("org.kde.chessament", "RatingCalculator");
+                (root.Controls.ApplicationWindow.window as Kirigami.ApplicationWindow).pageStack.pushDialogLayer(component);
+            }
+        }
+    }
+
+    Controls.Menu {
         title: KI18n.i18nc("@title:menu", "Settings")
 
         Kirigami.Action {
