@@ -4,7 +4,6 @@
 #pragma once
 
 #include <QJsonObject>
-#include <QMimeType>
 #include <QUrl>
 #include <qqmlregistration.h>
 

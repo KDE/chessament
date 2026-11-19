@@ -110,7 +110,7 @@ private:
 
     std::expected<uint, QString> readFile(RatingList *list, const QUrl &url);
 
-    static std::expected<uint, QString> processFile(RatingList *list, QIODevice *device, const QMimeType &mimeType);
+    static std::expected<uint, QString> processFile(RatingList *list, QIODevice *device);
 
     std::expected<void, QString> savePlayers(RatingList *list, const QList<RatingListPlayer> &players);
 

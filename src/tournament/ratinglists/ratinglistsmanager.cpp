@@ -213,9 +213,6 @@ QCoro::Task<std::expected<RatingList *, QString>> RatingListsManager::import(Rat
 
 std::expected<uint, QString> RatingListsManager::readFile(RatingList *list, const QUrl &url)
 {
-    QMimeType mimeType;
-    QMimeDatabase mimeDb;
-
     if (url.scheme() == u"file"_s) {
         if (!QFile::exists(url.toLocalFile())) {
             return std::unexpected(i18nc("@info", "Could not open file: the file does not exist."));
@@ -226,9 +223,7 @@ std::expected<uint, QString> RatingListsManager::readFile(RatingList *list, cons
             return std::unexpected(i18nc("@info", "Could not open file."));
         }
 
-        mimeType = mimeDb.mimeTypeForFile(url.toLocalFile());
-
-        const auto result = processFile(list, &file, mimeType);
+        const auto result = processFile(list, &file);
 
         file.close();
 
@@ -270,22 +265,17 @@ std::expected<uint, QString> RatingListsManager::readFile(RatingList *list, cons
             return std::unexpected(i18nc("@info", "Could not download rating list: %1", reply->errorString()));
         }
 
-        const auto contentType = QString::fromLatin1(reply->headers().value(QHttpHeaders::WellKnownHeader::ContentType));
-        mimeType = mimeDb.mimeTypeForName(contentType);
-
         list->extra()["http_etag"_L1] = QString::fromLatin1(reply->headers().value(QHttpHeaders::WellKnownHeader::ETag));
         list->extra()["http_last_modified"_L1] = QString::fromLatin1(reply->headers().value(QHttpHeaders::WellKnownHeader::LastModified));
 
-        return processFile(list, reply, mimeType);
+        return processFile(list, reply);
     }
 
     return std::unexpected(i18nc("@info", "Could not download rating list from %1 (unsupported protocol).", url.toString()));
 }
 
-std::expected<uint, QString> RatingListsManager::processFile(RatingList *list, QIODevice *device, const QMimeType &mimeType)
+std::expected<uint, QString> RatingListsManager::processFile(RatingList *list, QIODevice *device)
 {
-    Q_UNUSED(mimeType);
-
     switch (list->format()) {
     case RatingList::Format::International: {
         // QNetworkReply is sequential-access, but KZip needs random access
