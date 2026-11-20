@@ -22,6 +22,8 @@ public:
 
     explicit EloChange(double change, int ratingDifference, double expectedScore, bool isDifferenceLimited);
 
+    [[nodiscard]] double change() const;
+
 private:
     double m_change;
     int m_ratingDifference;

@@ -6,6 +6,12 @@ enable_testing()
 add_definitions(-DDATA_DIR="${CMAKE_CURRENT_SOURCE_DIR}/data" )
 
 ecm_add_test(
+    elotest.cpp
+    LINK_LIBRARIES tournament Qt::Test
+    TEST_NAME elotest
+)
+
+ecm_add_test(
     tournamenttest.cpp
     LINK_LIBRARIES tournament Qt::Test
     TEST_NAME tournamenttest

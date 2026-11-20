@@ -11,6 +11,11 @@ EloChange::EloChange(double change, int ratingDifference, double expectedScore, 
 {
 }
 
+double EloChange::change() const
+{
+    return m_change;
+}
+
 Elo::Elo(int rating, int k)
     : m_rating(rating)
     , m_k(k)
