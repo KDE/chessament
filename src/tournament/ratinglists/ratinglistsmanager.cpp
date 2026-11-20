@@ -60,6 +60,12 @@ std::expected<QSqlDatabase, QString> RatingListsManager::openDatabase(const QStr
 {
     qDebug() << "Opening ratings database" << connectionName;
     const QString dbFolder = RatingListsManager::databaseFolder();
+
+    auto oldFolder = QDir{QDir{dbFolder % u"/../KDE/chessament"_s}.absolutePath()};
+    if (oldFolder.exists() && !QDir(dbFolder).exists()) {
+        oldFolder.rename(oldFolder.path(), dbFolder);
+    }
+
     QDir().mkpath(dbFolder);
 
     const auto dbPath = databasePath();
