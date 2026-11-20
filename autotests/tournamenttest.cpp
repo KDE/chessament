@@ -31,6 +31,7 @@ private Q_SLOTS:
     void testArbiters();
     void testSetArbiter();
     void testRemoveArbiter();
+    void testVoluntaryByes();
 };
 
 void TournamentTest::testNewTournament()
@@ -329,6 +330,22 @@ void TournamentTest::testRemoveArbiter()
     QCOMPARE(arbiters.at(1)->name(), "Arbiter"_L1);
     QCOMPARE(arbiters.at(2)->name(), "Arbiter"_L1);
     QCOMPARE(arbiters.at(3)->name(), "Arbiter"_L1);
+}
+
+void TournamentTest::testVoluntaryByes()
+{
+    auto event = std::make_unique<Event>();
+    QVERIFY(event->create());
+
+    auto tournament = event->importTournament(QLatin1String(DATA_DIR) + u"/tournament_1.trf"_s);
+    QVERIFY(tournament);
+
+    const auto byes = (*tournament)->voluntaryByes(1);
+
+    QCOMPARE(byes.size(), 3);
+    QCOMPARE(byes.at(0)->startingRank(), 2);
+    QCOMPARE(byes.at(1)->startingRank(), 28);
+    QCOMPARE(byes.at(2)->startingRank(), 90);
 }
 
 QTEST_GUILESS_MAIN(TournamentTest)
