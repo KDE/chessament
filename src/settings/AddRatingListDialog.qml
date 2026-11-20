@@ -108,6 +108,8 @@ FormCard.FormCardDialog {
             Controls.ToolTip.visible: hovered
             Controls.ToolTip.delay: Kirigami.Units.toolTipDelay
         }
+        status: Kirigami.MessageType.Error
+        statusMessage: urlField.text.length > 0 && !dialog.model.isSupportedUrl(urlField.text) ? KI18n.i18nc("@info", "File not supported.") : ""
     }
 
     FormCard.FormComboBoxDelegate {
