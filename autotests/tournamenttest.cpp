@@ -29,6 +29,8 @@ private Q_SLOTS:
     void testTimeControl_data();
     void testTimeControl();
     void testArbiters();
+    void testSetArbiter();
+    void testRemoveArbiter();
 };
 
 void TournamentTest::testNewTournament()
@@ -288,6 +290,45 @@ void TournamentTest::testArbiters()
     QCOMPARE(arbiter->title(), QString{});
     QCOMPARE(arbiter->name(), "Arbiter"_L1);
     QCOMPARE(arbiter->arbiterId(), "123456"_L1);
+}
+
+void TournamentTest::testSetArbiter()
+{
+    auto event = std::make_unique<Event>();
+    QVERIFY(event->create());
+
+    auto tournament = event->importTournament(QLatin1String(DATA_DIR) + u"/arbiters.trf"_s);
+    QVERIFY(tournament);
+
+    auto arbiters = (*tournament)->arbiters();
+
+    auto arbiter = std::make_unique<Arbiter>("New Arbiter"_L1);
+    arbiters.setArbiter(1, std::move(arbiter));
+
+    QCOMPARE(arbiters.size(), 5);
+    QCOMPARE(arbiters.at(0)->name(), "Chief Arbiter"_L1);
+    QCOMPARE(arbiters.at(1)->name(), "New Arbiter"_L1);
+    QCOMPARE(arbiters.at(2)->name(), "Arbiter"_L1);
+    QCOMPARE(arbiters.at(3)->name(), "Arbiter"_L1);
+    QCOMPARE(arbiters.at(4)->name(), "Arbiter"_L1);
+}
+
+void TournamentTest::testRemoveArbiter()
+{
+    auto event = std::make_unique<Event>();
+    QVERIFY(event->create());
+
+    auto tournament = event->importTournament(QLatin1String(DATA_DIR) + u"/arbiters.trf"_s);
+    QVERIFY(tournament);
+
+    auto arbiters = (*tournament)->arbiters();
+    arbiters.removeArbiter(1);
+
+    QCOMPARE(arbiters.size(), 4);
+    QCOMPARE(arbiters.at(0)->name(), "Chief Arbiter"_L1);
+    QCOMPARE(arbiters.at(1)->name(), "Arbiter"_L1);
+    QCOMPARE(arbiters.at(2)->name(), "Arbiter"_L1);
+    QCOMPARE(arbiters.at(3)->name(), "Arbiter"_L1);
 }
 
 QTEST_GUILESS_MAIN(TournamentTest)
