@@ -4,16 +4,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-15 01:02+0000\n"
-"PO-Revision-Date: 2026-10-26 18:57+0100\n"
-"Last-Translator: Thomas Vergnaud <thomas.vergnaud@mailo.eu>\n"
-"Language-Team: French <kde-francophone@kde.org>\n"
+"POT-Creation-Date: 2026-11-20 01:05+0000\n"
+"PO-Revision-Date: 2026-11-18 20:33+0100\n"
+"Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
+"Language-Team: fr\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.12.3\n"
+"X-Generator: Lokalize 26.08.3\n"
 
 #: byesmodel.cpp:85
 #, kde-format
@@ -311,12 +311,9 @@ msgid "Export tournament report…"
 msgstr "Exporter le rapport de tournoi…"
 
 #: qml/ChessamentActions.qml:52 qml/components/MenuBar.qml:118
-#, fuzzy
-#| msgctxt "@action:menu"
-#| msgid "Tournament"
 msgctxt "@title:menu"
 msgid "Tournament"
-msgstr "Tournament"
+msgstr "Tournoi"
 
 #: qml/ChessamentActions.qml:58
 msgctxt "@action:intoolbar"
@@ -334,8 +331,6 @@ msgid "Update ratings…"
 msgstr "Mettre à jour les notations…"
 
 #: qml/ChessamentActions.qml:78
-#, fuzzy
-#| msgid "Pairings"
 msgctxt "@title:menu"
 msgid "Pairings"
 msgstr "Couplages"
@@ -345,10 +340,17 @@ msgctxt "@option:check"
 msgid "Hide finished games"
 msgstr "Masquer les parties terminées"
 
-#: qml/ChessamentActions.qml:90 qml/components/MenuBar.qml:146
-#, fuzzy
-#| msgctxt "@action:menu"
-#| msgid "Help"
+#: qml/ChessamentActions.qml:90 qml/components/MenuBar.qml:132
+msgctxt "@title:menu"
+msgid "Tools"
+msgstr ""
+
+#: qml/ChessamentActions.qml:95
+msgctxt "@action:inmenu"
+msgid "Rating Variation Calculator"
+msgstr ""
+
+#: qml/ChessamentActions.qml:101 qml/components/MenuBar.qml:159
 msgctxt "@title:menu"
 msgid "Help"
 msgstr "Aide"
@@ -389,9 +391,6 @@ msgid "Delete Arbiter"
 msgstr "Supprimer un arbitre"
 
 #: qml/components/MenuBar.qml:29
-#, fuzzy
-#| msgctxt "@action:menu"
-#| msgid "File"
 msgctxt "@title:menu"
 msgid "File"
 msgstr "Fichier"
@@ -408,17 +407,11 @@ msgid "TRF files (*.trf *.txt)"
 msgstr "Fichiers TRF (*.trf *.txt)"
 
 #: qml/components/MenuBar.qml:109
-#, fuzzy
-#| msgctxt "@action:menu"
-#| msgid "View"
 msgctxt "@title:menu"
 msgid "View"
 msgstr "Vue"
 
-#: qml/components/MenuBar.qml:132
-#, fuzzy
-#| msgctxt "@action:menu"
-#| msgid "Settings"
+#: qml/components/MenuBar.qml:145
 msgctxt "@title:menu"
 msgid "Settings"
 msgstr "Configuration"
@@ -749,6 +742,59 @@ msgctxt "@info:status Total number of players (Number of players rated)"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
+#: qml/RatingCalculator.qml:15
+msgctxt "@title:window"
+msgid "Rating Variation Calculator"
+msgstr ""
+
+#: qml/RatingCalculator.qml:22
+msgctxt "@item Game result"
+msgid "Win"
+msgstr ""
+
+#: qml/RatingCalculator.qml:26
+msgctxt "@item Game result"
+msgid "Draw"
+msgstr ""
+
+#: qml/RatingCalculator.qml:30
+msgctxt "@item Game result"
+msgid "Lost"
+msgstr ""
+
+#: qml/RatingCalculator.qml:55
+msgctxt "@label:spinbox"
+msgid "Player’s rating:"
+msgstr ""
+
+#: qml/RatingCalculator.qml:64
+msgctxt "@label:spinbox"
+msgid "Opponent’s rating:"
+msgstr ""
+
+#: qml/RatingCalculator.qml:73
+msgctxt "@label:spinbox"
+msgid "K factor:"
+msgstr ""
+
+#: qml/RatingCalculator.qml:95
+#, fuzzy
+#| msgctxt "@label:textbox"
+#| msgid "National rating"
+msgctxt "@label"
+msgid "Rating variation:"
+msgstr "Classement national"
+
+#: qml/RatingCalculator.qml:107
+msgctxt "@label"
+msgid "Expected score:"
+msgstr ""
+
+#: qml/RatingCalculator.qml:112
+msgctxt "@label"
+msgid "Rating difference:"
+msgstr ""
+
 #: qml/ResultsFooter.qml:103
 msgctxt "@action:intoolbar Other game results"
 msgid "Other"
@@ -915,27 +961,24 @@ msgid "Select file"
 msgstr "Sélectionner un fichier"
 
 #: settings/AddRatingListDialog.qml:115
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "Format"
 msgctxt "@label:listbox"
 msgid "File format"
-msgstr "Format"
+msgstr "Format de fichier"
 
 #: settings/AddRatingListDialog.qml:119
 msgctxt "@item:inlistbox"
 msgid "International Chess Federation"
-msgstr ""
+msgstr "Fédération internationale d'échecs"
 
 #: settings/AddRatingListDialog.qml:123
 msgctxt "@item:inlistbox"
 msgid "Andalusian Chess Federation"
-msgstr ""
+msgstr "Fédération d'échecs d'Andalousie"
 
 #: settings/AddRatingListDialog.qml:127
 msgctxt "@item:inlistbox"
 msgid "Catalan Chess Federation"
-msgstr ""
+msgstr "Fédération d'échecs de Catalogne"
 
 #: settings/AddRatingListDialog.qml:166
 msgctxt "@action:button"
@@ -1279,7 +1322,7 @@ msgid "Edit Tiebreak"
 msgstr "Modifier la manche décisive"
 
 #: tournament/ratinglists/ratinglistsmanager.cpp:192
-#: tournament/ratinglists/ratinglistsmanager.cpp:226
+#: tournament/ratinglists/ratinglistsmanager.cpp:223
 #, kde-format
 msgctxt "@info"
 msgid "Could not open file."
@@ -1293,19 +1336,19 @@ msgid_plural "Imported %1 players."
 msgstr[0] "Un joueur a été importé."
 msgstr[1] "%1 joueurs ont été importés."
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:221
+#: tournament/ratinglists/ratinglistsmanager.cpp:218
 #, kde-format
 msgctxt "@info"
 msgid "Could not open file: the file does not exist."
 msgstr "Impossible d'ouvrir le fichier : le fichier n'existe pas."
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:242
+#: tournament/ratinglists/ratinglistsmanager.cpp:237
 #, kde-format
 msgctxt "@info:progress"
 msgid "Downloading file…"
 msgstr "Téléchargement du fichier en cours..."
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:258
+#: tournament/ratinglists/ratinglistsmanager.cpp:253
 #, kde-format
 msgctxt ""
 "@info:progress %1 & %2 are the file download progress (received / total), %3 "
@@ -1317,13 +1360,13 @@ msgstr ""
 "Téléchargement du fichier en cours...\n"
 "%1 / %2 (%3 %)"
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:270
+#: tournament/ratinglists/ratinglistsmanager.cpp:265
 #, kde-format
 msgctxt "@info"
 msgid "Could not download rating list: %1"
 msgstr "Impossible de télécharger la liste des notations : %1"
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:282
+#: tournament/ratinglists/ratinglistsmanager.cpp:274
 #, kde-format
 msgctxt "@info"
 msgid "Could not download rating list from %1 (unsupported protocol)."
@@ -1331,21 +1374,21 @@ msgstr ""
 "Impossible de télécharger la liste des notations à partir de %1 (Protocole "
 "non pris en charge)"
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:298
+#: tournament/ratinglists/ratinglistsmanager.cpp:288
 #, kde-format
 msgctxt "@info"
 msgid "Could not extract file."
 msgstr "Impossible d'extraire le fichier."
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:303
-#: tournament/ratinglists/ratinglistsmanager.cpp:308
-#: tournament/ratinglists/ratinglistsmanager.cpp:329
+#: tournament/ratinglists/ratinglistsmanager.cpp:293
+#: tournament/ratinglists/ratinglistsmanager.cpp:298
+#: tournament/ratinglists/ratinglistsmanager.cpp:319
 #, kde-format
 msgctxt "@info"
 msgid "File format not supported."
 msgstr "Format de fichier non pris en charge."
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:519
+#: tournament/ratinglists/ratinglistsmanager.cpp:509
 #, kde-format
 msgctxt "@info:progress"
 msgid "Saved 1 player."
