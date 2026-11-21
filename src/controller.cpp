@@ -201,12 +201,12 @@ void Controller::exportTrf(const QUrl &fileUrl)
     }
 }
 
-QCoro::QmlTask Controller::pairRound(bool sort, uint color)
+QCoro::QmlTask Controller::pairRound(bool sort, uint color, bool retireForfeits)
 {
-    return makePairings(sort, color);
+    return makePairings(sort, color, retireForfeits);
 }
 
-QCoro::Task<> Controller::makePairings(bool sort, uint color)
+QCoro::Task<> Controller::makePairings(bool sort, uint color, bool retireForfeits)
 {
     if (m_tournament->currentRound() == 0 && sort) {
         sortPlayers();
@@ -221,6 +221,17 @@ QCoro::Task<> Controller::makePairings(bool sort, uint color)
         }
         m_tournament->setInitialColor(initialColor);
     }
+
+    if (m_tournament->currentRound() > 0 && retireForfeits) {
+        const auto forfeits = m_tournament->forfeits(m_tournament->currentRound());
+        for (const auto &player : forfeits) {
+            if (const auto ok = m_tournament->retire(player); !ok) {
+                setError(ok.error());
+                co_return;
+            }
+        }
+    }
+
     const auto pairings = co_await m_tournament->pairNextRound();
 
     if (!pairings.has_value()) {

@@ -761,6 +761,25 @@ std::expected<void, QString> Tournament::incorpore(Player *player)
     return {};
 }
 
+QList<Player *> Tournament::forfeits(int round) const
+{
+    Q_ASSERT(round >= 1);
+
+    QList<Player *> result{};
+
+    const auto pairs = pairings(round);
+    for (const auto p : pairs) {
+        if (p->whiteResult() == Pairing::PartialResult::LostForfeit) {
+            result << p->whitePlayer();
+        }
+        if (p->blackResult() == Pairing::PartialResult::LostForfeit) {
+            result << p->blackPlayer();
+        }
+    }
+
+    return result;
+}
+
 QList<Player *> Tournament::voluntaryByes(int round) const
 {
     Q_ASSERT(round >= 1);

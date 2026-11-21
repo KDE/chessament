@@ -16,17 +16,19 @@ FormCard.FormCardDialog {
     id: root
 
     readonly property list<Player> byes: Controller.tournament.voluntaryByes(Controller.tournament.currentRound + 1)
-    readonly property string players: "\n<ul>" + byes.map(p => "<li>" + p.safeName() + "</li>").join("\n") + "</ul>"
+    readonly property list<Player> forfeits: Controller.tournament.forfeits(Controller.tournament.currentRound)
+    readonly property list<Player> unpaired: retirePlayers.checked ? byes.concat(forfeits) : byes
+    readonly property string players: "\n<ul>" + unpaired.map(p => "<li>" + p.safeName() + "</li>").join("\n") + "</ul>"
 
     title: KI18n.i18ncp("@title %1 is a number >= 1", "Pair Round %1", "Pair Round %1", Controller.tournament.currentRound + 1)
     standardButtons: Controls.Dialog.Ok | Controls.Dialog.Cancel
 
     onAccepted: {
-        Controller.pairRound(sortPlayers.checked, initialColor.currentValue);
+        Controller.pairRound(sortPlayers.checked, initialColor.currentValue, retirePlayers.checked);
     }
 
     FormCard.FormTextDelegate {
-        text: root.byes.length === 0 ? KI18n.i18nc("@info", "All players will be paired.") : KI18n.i18ncp("@info %1 is a number", "The following player won’t be paired: %2", "The following %1 players won’t be paired: %2", root.byes.length, root.players)
+        text: root.unpaired.length === 0 ? KI18n.i18nc("@info", "All players will be paired.") : KI18n.i18ncp("@info %1 is a number", "The following player won’t be paired: %2", "The following %1 players won’t be paired: %2", root.unpaired.length, root.players)
         textItem {
             textFormat: Text.StyledText
             elide: Text.ElideNone
@@ -62,5 +64,11 @@ FormCard.FormCardDialog {
                 text: KI18n.i18nc("@item:inlistbox As in 'Black pieces'", "Black")
             }
         ]
+    }
+
+    FormCard.FormCheckDelegate {
+        id: retirePlayers
+        text: KI18n.i18nc("@option:check", "Retire players that have forfeited the previous round before pairing this round")
+        visible: Controller.tournament.currentRound > 0
     }
 }

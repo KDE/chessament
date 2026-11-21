@@ -226,6 +226,11 @@ public:
     std::expected<void, QString> incorpore(Player *player);
 
     /*!
+     * Returns a list of players that have forfeited in round \a round.
+     */
+    Q_INVOKABLE [[nodiscard]] QList<Player *> forfeits(int round) const;
+
+    /*!
      * Returns a list of players that have a voluntary bye in \a round.
      *
      * \sa Pairing::isVoluntaryBye()

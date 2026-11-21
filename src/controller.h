@@ -73,7 +73,7 @@ public:
     Q_INVOKABLE void saveEventAs(const QUrl &fileUrl);
     Q_INVOKABLE void importTrf(const QUrl &fileUrl);
     Q_INVOKABLE void exportTrf(const QUrl &fileUrl);
-    Q_INVOKABLE QCoro::QmlTask pairRound(bool sort, uint color);
+    Q_INVOKABLE QCoro::QmlTask pairRound(bool sort, uint color, bool retireForfeits);
     Q_INVOKABLE void removePairings(bool keepByes);
     Q_INVOKABLE void reloadPairings(int round);
     Q_INVOKABLE QCoro::QmlTask reloadStandings(int maxRound);
@@ -127,7 +127,7 @@ Q_SIGNALS:
 private:
     QCoro::Task<> updateStandings(int maxRound);
 
-    QCoro::Task<> makePairings(bool sort, uint color);
+    QCoro::Task<> makePairings(bool sort, uint color, bool retireForfeits);
 
     std::unique_ptr<Event> m_event;
     Tournament *m_tournament;
