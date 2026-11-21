@@ -6,17 +6,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-20 01:05+0000\n"
-"PO-Revision-Date: 2026-11-03 20:22+0200\n"
+"POT-Creation-Date: 2026-11-21 01:06+0000\n"
+"PO-Revision-Date: 2026-11-20 10:47+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
-"Language-Team: צוות התרגום של KDE ישראל\n"
+"Language-Team: Hebrew <kde-l10n-he@kde.org>\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Lokalize 26.08.1\n"
+"X-Generator: Lokalize 26.08.3\n"
 
 #: byesmodel.cpp:85
 #, kde-format
@@ -319,9 +319,6 @@ msgid "Export tournament report…"
 msgstr "ייצוא דוח תחרות…"
 
 #: qml/ChessamentActions.qml:52 qml/components/MenuBar.qml:118
-#, fuzzy
-#| msgctxt "@action:menu"
-#| msgid "Tournament"
 msgctxt "@title:menu"
 msgid "Tournament"
 msgstr "תחרות"
@@ -342,8 +339,6 @@ msgid "Update ratings…"
 msgstr "עדכון דירוגים…"
 
 #: qml/ChessamentActions.qml:78
-#, fuzzy
-#| msgid "Pairings"
 msgctxt "@title:menu"
 msgid "Pairings"
 msgstr "שיבוצים"
@@ -356,7 +351,7 @@ msgstr "הסתרת משחקים שהושלמו"
 #: qml/ChessamentActions.qml:90 qml/components/MenuBar.qml:132
 msgctxt "@title:menu"
 msgid "Tools"
-msgstr ""
+msgstr "כלים"
 
 #: qml/ChessamentActions.qml:95
 msgctxt "@action:inmenu"
@@ -364,9 +359,6 @@ msgid "Rating Variation Calculator"
 msgstr ""
 
 #: qml/ChessamentActions.qml:101 qml/components/MenuBar.qml:159
-#, fuzzy
-#| msgctxt "@action:menu"
-#| msgid "Help"
 msgctxt "@title:menu"
 msgid "Help"
 msgstr "עזרה"
@@ -407,9 +399,6 @@ msgid "Delete Arbiter"
 msgstr "מחיקת שופט/ת"
 
 #: qml/components/MenuBar.qml:29
-#, fuzzy
-#| msgctxt "@action:menu"
-#| msgid "File"
 msgctxt "@title:menu"
 msgid "File"
 msgstr "קובץ"
@@ -426,17 +415,11 @@ msgid "TRF files (*.trf *.txt)"
 msgstr "קובצי TRF ‏(‎*.trf‏ ‎*.txt)"
 
 #: qml/components/MenuBar.qml:109
-#, fuzzy
-#| msgctxt "@action:menu"
-#| msgid "View"
 msgctxt "@title:menu"
 msgid "View"
 msgstr "תצוגה"
 
 #: qml/components/MenuBar.qml:145
-#, fuzzy
-#| msgctxt "@action:menu"
-#| msgid "Settings"
 msgctxt "@title:menu"
 msgid "Settings"
 msgstr "הגדרות"
@@ -795,32 +778,32 @@ msgstr ""
 #: qml/RatingCalculator.qml:22
 msgctxt "@item Game result"
 msgid "Win"
-msgstr ""
+msgstr "ניצחון"
 
 #: qml/RatingCalculator.qml:26
 msgctxt "@item Game result"
 msgid "Draw"
-msgstr ""
+msgstr "תיקו"
 
 #: qml/RatingCalculator.qml:30
 msgctxt "@item Game result"
 msgid "Lost"
-msgstr ""
+msgstr "הפסד"
 
 #: qml/RatingCalculator.qml:55
 msgctxt "@label:spinbox"
 msgid "Player’s rating:"
-msgstr ""
+msgstr "דירוג השחקן/נית:"
 
 #: qml/RatingCalculator.qml:64
 msgctxt "@label:spinbox"
 msgid "Opponent’s rating:"
-msgstr ""
+msgstr "דירוג הריב/ה:"
 
 #: qml/RatingCalculator.qml:73
 msgctxt "@label:spinbox"
 msgid "K factor:"
-msgstr ""
+msgstr "מקדם K:"
 
 #: qml/RatingCalculator.qml:95
 #, fuzzy
@@ -833,12 +816,12 @@ msgstr "דירוג לאומי"
 #: qml/RatingCalculator.qml:107
 msgctxt "@label"
 msgid "Expected score:"
-msgstr ""
+msgstr "ניקוד צפוי:"
 
 #: qml/RatingCalculator.qml:112
 msgctxt "@label"
 msgid "Rating difference:"
-msgstr ""
+msgstr "הפרש ניקוד:"
 
 #: qml/ResultsFooter.qml:103
 msgctxt "@action:intoolbar Other game results"
@@ -1006,30 +989,35 @@ msgctxt "@action:button"
 msgid "Select file"
 msgstr "בחירת קובץ"
 
-#: settings/AddRatingListDialog.qml:115
+#: settings/AddRatingListDialog.qml:112
 #, fuzzy
-#| msgctxt "@label"
-#| msgid "Format"
+#| msgctxt "@info"
+#| msgid "File format not supported."
+msgctxt "@info"
+msgid "File not supported."
+msgstr "תבנית הקובץ אינה נתמכת."
+
+#: settings/AddRatingListDialog.qml:117
 msgctxt "@label:listbox"
 msgid "File format"
-msgstr "תצורה"
+msgstr "תסדיר קובץ"
 
-#: settings/AddRatingListDialog.qml:119
+#: settings/AddRatingListDialog.qml:121
 msgctxt "@item:inlistbox"
 msgid "International Chess Federation"
-msgstr ""
+msgstr "התאחדות השחמט העולמית"
 
-#: settings/AddRatingListDialog.qml:123
+#: settings/AddRatingListDialog.qml:125
 msgctxt "@item:inlistbox"
 msgid "Andalusian Chess Federation"
-msgstr ""
+msgstr "התאחדות השחמט האנדלוסית"
 
-#: settings/AddRatingListDialog.qml:127
+#: settings/AddRatingListDialog.qml:129
 msgctxt "@item:inlistbox"
 msgid "Catalan Chess Federation"
-msgstr ""
+msgstr "התאחדות השחמט הקטלאנית"
 
-#: settings/AddRatingListDialog.qml:166
+#: settings/AddRatingListDialog.qml:168
 msgctxt "@action:button"
 msgid "Import"
 msgstr "ייבוא"
@@ -1370,14 +1358,14 @@ msgctxt "@title:window"
 msgid "Edit Tiebreak"
 msgstr "עריכת שובר שוויון"
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:192
-#: tournament/ratinglists/ratinglistsmanager.cpp:223
+#: tournament/ratinglists/ratinglistsmanager.cpp:198
+#: tournament/ratinglists/ratinglistsmanager.cpp:229
 #, kde-format
 msgctxt "@info"
 msgid "Could not open file."
 msgstr "לא ניתן לפתוח את הקובץ."
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:209
+#: tournament/ratinglists/ratinglistsmanager.cpp:215
 #, kde-format
 msgctxt "@info:progress"
 msgid "Imported one player."
@@ -1387,19 +1375,19 @@ msgstr[1] "שני/שתי שחקנים/ות יובאו."
 msgstr[2] "%1 שחקנים/ות יובאו."
 msgstr[3] "%1 שחקנים/ות יובאו."
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:218
+#: tournament/ratinglists/ratinglistsmanager.cpp:224
 #, kde-format
 msgctxt "@info"
 msgid "Could not open file: the file does not exist."
 msgstr "לא ניתן לפתוח את הקובץ: הקובץ לא קיים."
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:237
+#: tournament/ratinglists/ratinglistsmanager.cpp:243
 #, kde-format
 msgctxt "@info:progress"
 msgid "Downloading file…"
 msgstr "קובץ יורד…"
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:253
+#: tournament/ratinglists/ratinglistsmanager.cpp:259
 #, kde-format
 msgctxt ""
 "@info:progress %1 & %2 are the file download progress (received / total), %3 "
@@ -1411,33 +1399,33 @@ msgstr ""
 "קובץ יורד…\n"
 "%1 / %2 (%3%)"
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:265
+#: tournament/ratinglists/ratinglistsmanager.cpp:271
 #, kde-format
 msgctxt "@info"
 msgid "Could not download rating list: %1"
 msgstr "לא ניתן להוריד את רשימת הדירוג‏: %1"
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:274
+#: tournament/ratinglists/ratinglistsmanager.cpp:280
 #, kde-format
 msgctxt "@info"
 msgid "Could not download rating list from %1 (unsupported protocol)."
 msgstr "לא ניתן להוריד את רשימת הדירוג‏ דרך %1 (הפרוטוקול לא נתמך)."
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:288
+#: tournament/ratinglists/ratinglistsmanager.cpp:294
 #, kde-format
 msgctxt "@info"
 msgid "Could not extract file."
 msgstr "לא ניתן לחלץ קובץ."
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:293
-#: tournament/ratinglists/ratinglistsmanager.cpp:298
-#: tournament/ratinglists/ratinglistsmanager.cpp:319
+#: tournament/ratinglists/ratinglistsmanager.cpp:299
+#: tournament/ratinglists/ratinglistsmanager.cpp:304
+#: tournament/ratinglists/ratinglistsmanager.cpp:325
 #, kde-format
 msgctxt "@info"
 msgid "File format not supported."
 msgstr "תבנית הקובץ אינה נתמכת."
 
-#: tournament/ratinglists/ratinglistsmanager.cpp:509
+#: tournament/ratinglists/ratinglistsmanager.cpp:515
 #, kde-format
 msgctxt "@info:progress"
 msgid "Saved 1 player."
