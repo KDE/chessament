@@ -23,7 +23,10 @@ private Q_SLOTS:
     void testExportTrf();
     void testImportTrf();
     void testLoadTournament();
+    void testAddPlayer();
+    void testAddLateEntry();
     void testSortPlayers();
+    void testDeletePlayer();
     void testRemovePairings_data();
     void testRemovePairings();
     void testTimeControl_data();
@@ -42,7 +45,8 @@ void TournamentTest::testNewTournament()
     auto tournament = event->createTournament();
     QVERIFY(tournament);
 
-    QCOMPARE((*tournament)->name(), u""_s);
+    QCOMPARE((*tournament)->id().size(), 36);
+    QCOMPARE((*tournament)->name(), QString{});
     QCOMPARE((*tournament)->currentRound(), 0);
 }
 
@@ -55,9 +59,10 @@ void TournamentTest::testCreateTournament()
     QVERIFY(event->create(file.fileName()));
 
     auto tournament = event->createTournament();
-
     QVERIFY(tournament);
-    QCOMPARE((*tournament)->name(), u""_s);
+
+    QCOMPARE((*tournament)->id().size(), 36);
+    QCOMPARE((*tournament)->name(), QString{});
     QCOMPARE((*tournament)->currentRound(), 0);
 }
 
@@ -109,6 +114,7 @@ void TournamentTest::testImportTrf()
 
     auto t = *tournament;
 
+    QCOMPARE(t->id().size(), 36);
     QCOMPARE(t->name(), u"Test Tournament"_s);
     QCOMPARE(t->location(), u"Place"_s);
     QCOMPARE(t->federation(), u"ESP"_s);
@@ -174,6 +180,54 @@ void TournamentTest::testLoadTournament()
     QCOMPARE(t->pairings(9).size(), 51);
 }
 
+void TournamentTest::testAddPlayer()
+{
+    auto event = std::make_unique<Event>();
+    QVERIFY(event->create());
+
+    auto tournament = event->importTournament(QLatin1String(DATA_DIR) + u"/tournament_2.trf"_s);
+    QVERIFY(tournament);
+
+    auto player = std::make_unique<Player>(9, "Player 7"_L1, 0);
+    QVERIFY((*tournament)->addPlayer(std::move(player)));
+
+    const auto players = (*tournament)->players();
+
+    QCOMPARE(players.size(), 9);
+    QCOMPARE(players[8]->name(), "Player 7"_L1);
+    QCOMPARE((*tournament)->pairings(1).size(), 0);
+}
+
+void TournamentTest::testAddLateEntry()
+{
+    auto event = std::make_unique<Event>();
+    QVERIFY(event->create());
+
+    auto tournament = event->importTournament(QLatin1String(DATA_DIR) + u"/tournament_1.trf"_s);
+    QVERIFY(tournament);
+
+    QVERIFY((*tournament)->removePairings(5, true));
+
+    auto player = std::make_unique<Player>(101, "Late Entry"_L1, 0);
+    QVERIFY((*tournament)->addPlayer(std::move(player)));
+
+    QCOMPARE((*tournament)->pairings(1).size(), 53);
+    QCOMPARE((*tournament)->pairings(2).size(), 55);
+    QCOMPARE((*tournament)->pairings(3).size(), 53);
+    QCOMPARE((*tournament)->pairings(4).size(), 52);
+    QCOMPARE((*tournament)->pairings(5).size(), 1);
+    QCOMPARE((*tournament)->pairings(6).size(), 0);
+    QCOMPARE((*tournament)->pairings(7).size(), 1);
+    QCOMPARE((*tournament)->pairings(8).size(), 2);
+    QCOMPARE((*tournament)->pairings(9).size(), 2);
+
+    const auto pairing = (*tournament)->pairings(1).last();
+
+    QCOMPARE(pairing->whitePlayer()->name(), "Late Entry"_L1);
+    QCOMPARE(pairing->whiteResult(), Pairing::PartialResult::ZeroBye);
+    QCOMPARE(pairing->blackResult(), Pairing::PartialResult::Unknown);
+}
+
 void TournamentTest::testSortPlayers()
 {
     auto event = std::make_unique<Event>();
@@ -194,6 +248,39 @@ void TournamentTest::testSortPlayers()
     QCOMPARE(players[5]->name(), "Player 6"_L1);
     QCOMPARE(players[6]->name(), "Player A"_L1);
     QCOMPARE(players[7]->name(), "Player B"_L1);
+}
+
+void TournamentTest::testDeletePlayer()
+{
+    auto event = std::make_unique<Event>();
+    QVERIFY(event->create());
+
+    auto tournament = event->importTournament(QLatin1String(DATA_DIR) + u"/tournament_2.trf"_s);
+    QVERIFY(tournament);
+
+    QCOMPARE((*tournament)->numberOfPlayers(), 8);
+
+    QVERIFY((*tournament)->deletePlayer(5));
+
+    const auto players = (*tournament)->players();
+
+    QCOMPARE(players.size(), 7);
+
+    QCOMPARE(players[0]->name(), "Player 1"_L1);
+    QCOMPARE(players[1]->name(), "Player 2"_L1);
+    QCOMPARE(players[2]->name(), "Player 3"_L1);
+    QCOMPARE(players[3]->name(), "Player 4"_L1);
+    QCOMPARE(players[4]->name(), "Player 6"_L1);
+    QCOMPARE(players[5]->name(), "Player B"_L1);
+    QCOMPARE(players[6]->name(), "Player A"_L1);
+
+    QCOMPARE(players[0]->startingRank(), 1);
+    QCOMPARE(players[1]->startingRank(), 2);
+    QCOMPARE(players[2]->startingRank(), 3);
+    QCOMPARE(players[3]->startingRank(), 4);
+    QCOMPARE(players[4]->startingRank(), 5);
+    QCOMPARE(players[5]->startingRank(), 6);
+    QCOMPARE(players[6]->startingRank(), 7);
 }
 
 void TournamentTest::testRemovePairings_data()
