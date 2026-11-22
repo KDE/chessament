@@ -551,6 +551,10 @@ QList<QVariantMap> Tournament::availableTiebreaks()
             {"id"_L1, "rep"_L1},
             {"name"_L1, i18nc("Tiebreak", "Rounds one Elected to Play")},
         },
+        {
+            {"id"_L1, "aro"_L1},
+            {"name"_L1, i18nc("Tiebreak", "Average Rating of Opponents")},
+        },
     };
 }
 

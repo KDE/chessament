@@ -6,6 +6,7 @@
 #include <QJsonArray>
 
 #include "tiebreaks/aob.h"
+#include "tiebreaks/aro.h"
 #include "tiebreaks/buchholz.h"
 #include "tiebreaks/bwg.h"
 #include "tiebreaks/dummy.h"
@@ -167,6 +168,9 @@ std::unique_ptr<Tiebreak> Tiebreaks::tiebreak(const QString &id)
     }
     if (id == "rep"_L1) {
         return std::make_unique<RoundsElectedToPlay>();
+    }
+    if (id == "aro"_L1) {
+        return std::make_unique<AverageRatingOfOpponents>();
     }
     return nullptr;
 }

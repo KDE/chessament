@@ -60,6 +60,7 @@ void TiebreaksTest::testTiebreaks_data()
     QTest::addColumn<int>("precision");
     QTest::addColumn<QString>("tiebreaks");
 
+    QTest::newRow("tournament_1.trf ARO") << u"tournament_1.trf"_s << u".aro"_s << 0 << u"pts,aro"_s;
     QTest::newRow("tournament_1.trf BH") << u"tournament_1.trf"_s << u".bh"_s << 1 << u"pts,bh"_s;
     QTest::newRow("tournament_1.trf BH/C1") << u"tournament_1.trf"_s << u".bh_c1"_s << 1 << u"pts,bh/c1"_s;
     QTest::newRow("tournament_1.trf SB") << u"tournament_1.trf"_s << u".sb"_s << 2 << u"pts,sb"_s;
