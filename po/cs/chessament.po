@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-21 01:06+0000\n"
-"PO-Revision-Date: 2026-11-21 00:43+0100\n"
+"POT-Creation-Date: 2026-11-22 01:01+0000\n"
+"PO-Revision-Date: 2026-11-21 12:03+0100\n"
 "Last-Translator: Libor Filípek <libor.filipek@gmail.com>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -608,7 +608,7 @@ msgstr[0] "Všechny hry %1 kola skončily"
 msgstr[1] "Všechny hry %1 kola skončily"
 msgstr[2] "Všechny hry %1 kola skončily"
 
-#: qml/PairRoundDialog.qml:21
+#: qml/PairRoundDialog.qml:23
 msgctxt "@title %1 is a number >= 1"
 msgid "Pair Round %1"
 msgid_plural "Pair Round %1"
@@ -616,12 +616,12 @@ msgstr[0] "Dvojice – kolo %1"
 msgstr[1] "Dvojice – kolo %1"
 msgstr[2] "Dvojice – kolo %1"
 
-#: qml/PairRoundDialog.qml:29
+#: qml/PairRoundDialog.qml:31
 msgctxt "@info"
 msgid "All players will be paired."
 msgstr "Všichni hráči budou rozděleni do párů."
 
-#: qml/PairRoundDialog.qml:29
+#: qml/PairRoundDialog.qml:31
 msgctxt "@info %1 is a number"
 msgid "The following player won’t be paired: %2"
 msgid_plural "The following %1 players won’t be paired: %2"
@@ -629,32 +629,39 @@ msgstr[0] "Následující hráč nebude zařazen do páru: %2"
 msgstr[1] "Následující %1 hráči nebudou zařazeni do páru: %2"
 msgstr[2] "Následujících %1 hráčů nebude zařazeno do páru: %2"
 
-#: qml/PairRoundDialog.qml:39
+#: qml/PairRoundDialog.qml:41
 msgctxt "@option:check"
 msgid "Sort players"
 msgstr "Řazení hráčů"
 
-#: qml/PairRoundDialog.qml:46
+#: qml/PairRoundDialog.qml:48
 msgctxt "@label:listbox"
 msgid "First player color:"
 msgstr "Barva prvního hráče:"
 
-#: qml/PairRoundDialog.qml:54
+#: qml/PairRoundDialog.qml:56
 msgctxt "@item:inlistbox As in 'Random color'"
 msgid "Random"
 msgstr "Náhodné"
 
-#: qml/PairRoundDialog.qml:58 tournament/pairing.h:78
+#: qml/PairRoundDialog.qml:60 tournament/pairing.h:78
 #, kde-format
 msgctxt "@item:inlistbox As in 'White pieces'"
 msgid "White"
 msgstr "Bílá"
 
-#: qml/PairRoundDialog.qml:62 tournament/pairing.h:80
+#: qml/PairRoundDialog.qml:64 tournament/pairing.h:80
 #, kde-format
 msgctxt "@item:inlistbox As in 'Black pieces'"
 msgid "Black"
 msgstr "Černá"
+
+#: qml/PairRoundDialog.qml:71
+msgctxt "@option:check"
+msgid ""
+"Retire players that have forfeited the previous round before pairing this "
+"round"
+msgstr ""
 
 #: qml/player/PlayerDetails.qml:17
 msgctxt "@title:window"
@@ -976,12 +983,9 @@ msgid "Select file"
 msgstr "Vyberte soubor"
 
 #: settings/AddRatingListDialog.qml:112
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "File format not supported."
 msgctxt "@info"
 msgid "File not supported."
-msgstr "Tento formát souboru není podporován."
+msgstr "Soubor není podporován."
 
 #: settings/AddRatingListDialog.qml:117
 msgctxt "@label:listbox"
@@ -1515,12 +1519,12 @@ msgctxt ""
 msgid "Number of Games Won (over the board)"
 msgstr "Počet vyhraných partií (u šachovnice)"
 
-#: tournament/tournament.cpp:977
+#: tournament/tournament.cpp:996
 #, kde-format
 msgid "An error ocurred while pairing the round: %1"
 msgstr "Při párování kola došlo k chybě: %1"
 
-#: tournament/tournament.cpp:1202
+#: tournament/tournament.cpp:1221
 #, kde-format
 msgid "Couldn’t open file"
 msgstr "Soubor nelze otevřít"

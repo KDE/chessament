@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-21 01:06+0000\n"
-"PO-Revision-Date: 2026-11-20 10:47+0200\n"
+"POT-Creation-Date: 2026-11-22 01:01+0000\n"
+"PO-Revision-Date: 2026-11-21 08:03+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <kde-l10n-he@kde.org>\n"
 "Language: he\n"
@@ -356,7 +356,7 @@ msgstr "כלים"
 #: qml/ChessamentActions.qml:95
 msgctxt "@action:inmenu"
 msgid "Rating Variation Calculator"
-msgstr ""
+msgstr "מחשבון מד כושר"
 
 #: qml/ChessamentActions.qml:101 qml/components/MenuBar.qml:159
 msgctxt "@title:menu"
@@ -614,7 +614,7 @@ msgstr[1] "כל המשחקים בסיבוב %1 הושלמו"
 msgstr[2] "כל המשחקים בסיבוב %1 הושלמו"
 msgstr[3] "כל המשחקים בסיבוב %1 הושלמו"
 
-#: qml/PairRoundDialog.qml:21
+#: qml/PairRoundDialog.qml:23
 msgctxt "@title %1 is a number >= 1"
 msgid "Pair Round %1"
 msgid_plural "Pair Round %1"
@@ -623,12 +623,12 @@ msgstr[1] "סיבוב שיבוץ %1"
 msgstr[2] "סיבוב שיבוץ %1"
 msgstr[3] "סיבוב שיבוץ %1"
 
-#: qml/PairRoundDialog.qml:29
+#: qml/PairRoundDialog.qml:31
 msgctxt "@info"
 msgid "All players will be paired."
 msgstr "כל השחקנים ישובצו."
 
-#: qml/PairRoundDialog.qml:29
+#: qml/PairRoundDialog.qml:31
 msgctxt "@info %1 is a number"
 msgid "The following player won’t be paired: %2"
 msgid_plural "The following %1 players won’t be paired: %2"
@@ -637,32 +637,39 @@ msgstr[1] "%1 השחקן/ים הבאים/ות לא ישובצו: %2"
 msgstr[2] "%1 השחקן/ים הבאים/ות לא ישובצו: %2"
 msgstr[3] "%1 השחקן/ים הבאים/ות לא ישובצו: %2"
 
-#: qml/PairRoundDialog.qml:39
+#: qml/PairRoundDialog.qml:41
 msgctxt "@option:check"
 msgid "Sort players"
 msgstr "סידור שחקנים"
 
-#: qml/PairRoundDialog.qml:46
+#: qml/PairRoundDialog.qml:48
 msgctxt "@label:listbox"
 msgid "First player color:"
 msgstr "צבע השחקן הראשון:"
 
-#: qml/PairRoundDialog.qml:54
+#: qml/PairRoundDialog.qml:56
 msgctxt "@item:inlistbox As in 'Random color'"
 msgid "Random"
 msgstr "אקראי"
 
-#: qml/PairRoundDialog.qml:58 tournament/pairing.h:78
+#: qml/PairRoundDialog.qml:60 tournament/pairing.h:78
 #, kde-format
 msgctxt "@item:inlistbox As in 'White pieces'"
 msgid "White"
 msgstr "לבן"
 
-#: qml/PairRoundDialog.qml:62 tournament/pairing.h:80
+#: qml/PairRoundDialog.qml:64 tournament/pairing.h:80
 #, kde-format
 msgctxt "@item:inlistbox As in 'Black pieces'"
 msgid "Black"
 msgstr "שחור"
+
+#: qml/PairRoundDialog.qml:71
+msgctxt "@option:check"
+msgid ""
+"Retire players that have forfeited the previous round before pairing this "
+"round"
+msgstr ""
 
 #: qml/player/PlayerDetails.qml:17
 msgctxt "@title:window"
@@ -773,7 +780,7 @@ msgstr "%1 (%2)"
 #: qml/RatingCalculator.qml:15
 msgctxt "@title:window"
 msgid "Rating Variation Calculator"
-msgstr ""
+msgstr "מחשבון מד כושר"
 
 #: qml/RatingCalculator.qml:22
 msgctxt "@item Game result"
@@ -806,12 +813,9 @@ msgid "K factor:"
 msgstr "מקדם K:"
 
 #: qml/RatingCalculator.qml:95
-#, fuzzy
-#| msgctxt "@label:textbox"
-#| msgid "National rating"
 msgctxt "@label"
 msgid "Rating variation:"
-msgstr "דירוג לאומי"
+msgstr "מד כושר:"
 
 #: qml/RatingCalculator.qml:107
 msgctxt "@label"
@@ -990,12 +994,9 @@ msgid "Select file"
 msgstr "בחירת קובץ"
 
 #: settings/AddRatingListDialog.qml:112
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "File format not supported."
 msgctxt "@info"
 msgid "File not supported."
-msgstr "תבנית הקובץ אינה נתמכת."
+msgstr "הקובץ לא נתמך."
 
 #: settings/AddRatingListDialog.qml:117
 msgctxt "@label:listbox"
@@ -1536,12 +1537,12 @@ msgctxt ""
 msgid "Number of Games Won (over the board)"
 msgstr "מספר המשחקים עם ניצחון (על גבי הלוח)"
 
-#: tournament/tournament.cpp:977
+#: tournament/tournament.cpp:996
 #, kde-format
 msgid "An error ocurred while pairing the round: %1"
 msgstr "אירעה שגיאה בעת השיבוץ לסיבוב: %1"
 
-#: tournament/tournament.cpp:1202
+#: tournament/tournament.cpp:1221
 #, kde-format
 msgid "Couldn’t open file"
 msgstr "לא ניתן לפתוח את הקובץ"

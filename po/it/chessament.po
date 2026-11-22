@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-21 01:06+0000\n"
-"PO-Revision-Date: 2026-11-15 17:58+0100\n"
+"POT-Creation-Date: 2026-11-22 01:01+0000\n"
+"PO-Revision-Date: 2026-11-21 19:35+0100\n"
 "Last-Translator: Valter Mura <valtermura@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 26.08.2\n"
+"X-Generator: Lokalize 26.08.3\n"
 
 #: byesmodel.cpp:85
 #, kde-format
@@ -345,12 +345,12 @@ msgstr "Nascondi le partite terminate"
 #: qml/ChessamentActions.qml:90 qml/components/MenuBar.qml:132
 msgctxt "@title:menu"
 msgid "Tools"
-msgstr ""
+msgstr "Strumenti"
 
 #: qml/ChessamentActions.qml:95
 msgctxt "@action:inmenu"
 msgid "Rating Variation Calculator"
-msgstr ""
+msgstr "Calcolatrice di variazione valutazione"
 
 #: qml/ChessamentActions.qml:101 qml/components/MenuBar.qml:159
 msgctxt "@title:menu"
@@ -598,51 +598,58 @@ msgid_plural "All games of Round %1 have finished"
 msgstr[0] "Tutte le partite del turno %1 sono terminate"
 msgstr[1] "Tutte le partite del turno %1 sono terminate"
 
-#: qml/PairRoundDialog.qml:21
+#: qml/PairRoundDialog.qml:23
 msgctxt "@title %1 is a number >= 1"
 msgid "Pair Round %1"
 msgid_plural "Pair Round %1"
 msgstr[0] "Abbinamento del turno %1"
 msgstr[1] "Abbinamento del turno %1"
 
-#: qml/PairRoundDialog.qml:29
+#: qml/PairRoundDialog.qml:31
 msgctxt "@info"
 msgid "All players will be paired."
 msgstr "Tutti i giocatori saranno abbinati."
 
-#: qml/PairRoundDialog.qml:29
+#: qml/PairRoundDialog.qml:31
 msgctxt "@info %1 is a number"
 msgid "The following player won’t be paired: %2"
 msgid_plural "The following %1 players won’t be paired: %2"
 msgstr[0] "Il seguente giocatore non sarà abbinato: %2"
 msgstr[1] "I seguenti %1 giocatori non saranno abbinati: %2"
 
-#: qml/PairRoundDialog.qml:39
+#: qml/PairRoundDialog.qml:41
 msgctxt "@option:check"
 msgid "Sort players"
 msgstr "Ordina giocatori"
 
-#: qml/PairRoundDialog.qml:46
+#: qml/PairRoundDialog.qml:48
 msgctxt "@label:listbox"
 msgid "First player color:"
 msgstr "Colore del primo giocatore:"
 
-#: qml/PairRoundDialog.qml:54
+#: qml/PairRoundDialog.qml:56
 msgctxt "@item:inlistbox As in 'Random color'"
 msgid "Random"
 msgstr "Casuale"
 
-#: qml/PairRoundDialog.qml:58 tournament/pairing.h:78
+#: qml/PairRoundDialog.qml:60 tournament/pairing.h:78
 #, kde-format
 msgctxt "@item:inlistbox As in 'White pieces'"
 msgid "White"
 msgstr "Bianco"
 
-#: qml/PairRoundDialog.qml:62 tournament/pairing.h:80
+#: qml/PairRoundDialog.qml:64 tournament/pairing.h:80
 #, kde-format
 msgctxt "@item:inlistbox As in 'Black pieces'"
 msgid "Black"
 msgstr "Nero"
+
+#: qml/PairRoundDialog.qml:71
+msgctxt "@option:check"
+msgid ""
+"Retire players that have forfeited the previous round before pairing this "
+"round"
+msgstr ""
 
 #: qml/player/PlayerDetails.qml:17
 msgctxt "@title:window"
@@ -747,55 +754,52 @@ msgstr "%1 (%2)"
 #: qml/RatingCalculator.qml:15
 msgctxt "@title:window"
 msgid "Rating Variation Calculator"
-msgstr ""
+msgstr "Calcolatrice di variazione valutazione"
 
 #: qml/RatingCalculator.qml:22
 msgctxt "@item Game result"
 msgid "Win"
-msgstr ""
+msgstr "Vinte"
 
 #: qml/RatingCalculator.qml:26
 msgctxt "@item Game result"
 msgid "Draw"
-msgstr ""
+msgstr "Pareggiate"
 
 #: qml/RatingCalculator.qml:30
 msgctxt "@item Game result"
 msgid "Lost"
-msgstr ""
+msgstr "Perse"
 
 #: qml/RatingCalculator.qml:55
 msgctxt "@label:spinbox"
 msgid "Player’s rating:"
-msgstr ""
+msgstr "Valutazione del giocatore:"
 
 #: qml/RatingCalculator.qml:64
 msgctxt "@label:spinbox"
 msgid "Opponent’s rating:"
-msgstr ""
+msgstr "Valutazione dell'avversario:"
 
 #: qml/RatingCalculator.qml:73
 msgctxt "@label:spinbox"
 msgid "K factor:"
-msgstr ""
+msgstr "Fattore K:"
 
 #: qml/RatingCalculator.qml:95
-#, fuzzy
-#| msgctxt "@label:textbox"
-#| msgid "National rating"
 msgctxt "@label"
 msgid "Rating variation:"
-msgstr "Valutazione nazionale"
+msgstr "Variazione valutazione:"
 
 #: qml/RatingCalculator.qml:107
 msgctxt "@label"
 msgid "Expected score:"
-msgstr ""
+msgstr "Punteggio atteso:"
 
 #: qml/RatingCalculator.qml:112
 msgctxt "@label"
 msgid "Rating difference:"
-msgstr ""
+msgstr "Differenza valutazione:"
 
 #: qml/ResultsFooter.qml:103
 msgctxt "@action:intoolbar Other game results"
@@ -963,12 +967,9 @@ msgid "Select file"
 msgstr "Seleziona file"
 
 #: settings/AddRatingListDialog.qml:112
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "File format not supported."
 msgctxt "@info"
 msgid "File not supported."
-msgstr "Formato file non supportato."
+msgstr "File non supportato."
 
 #: settings/AddRatingListDialog.qml:117
 msgctxt "@label:listbox"
@@ -1502,12 +1503,12 @@ msgctxt ""
 msgid "Number of Games Won (over the board)"
 msgstr "Numero di partite vinte (sulla scacchiera)"
 
-#: tournament/tournament.cpp:977
+#: tournament/tournament.cpp:996
 #, kde-format
 msgid "An error ocurred while pairing the round: %1"
 msgstr "Si è verificato un errore durante l'abbinamento del turno: %1"
 
-#: tournament/tournament.cpp:1202
+#: tournament/tournament.cpp:1221
 #, kde-format
 msgid "Couldn’t open file"
 msgstr "Impossibile aprire il file"
