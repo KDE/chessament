@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-22 01:01+0000\n"
-"PO-Revision-Date: 2026-11-21 12:03+0100\n"
+"POT-Creation-Date: 2026-11-23 00:59+0000\n"
+"PO-Revision-Date: 2026-11-22 12:18+0100\n"
 "Last-Translator: Libor Filípek <libor.filipek@gmail.com>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -662,6 +662,8 @@ msgid ""
 "Retire players that have forfeited the previous round before pairing this "
 "round"
 msgstr ""
+"Před losováním párů v tomto kole vyřadit hráče, kteří se vzdali účasti v "
+"předchozím kole"
 
 #: qml/player/PlayerDetails.qml:17
 msgctxt "@title:window"
@@ -1426,6 +1428,14 @@ msgctxt "Tiebreak"
 msgid "Average Buchholz of Opponents"
 msgstr "Průměrná hodnota Buchholz soupeřů"
 
+#: tournament/tiebreaks/aro.h:22 tournament/tournament.cpp:556
+#, fuzzy, kde-format
+#| msgctxt "Tiebreak"
+#| msgid "Average Buchholz of Opponents"
+msgctxt "Tiebreak"
+msgid "Average Rating of Opponents"
+msgstr "Průměrná hodnota Buchholz soupeřů"
+
 #: tournament/tiebreaks/buchholz.h:25 tournament/tournament.cpp:516
 #, kde-format
 msgctxt "Buchholz tiebreak"
@@ -1519,12 +1529,12 @@ msgctxt ""
 msgid "Number of Games Won (over the board)"
 msgstr "Počet vyhraných partií (u šachovnice)"
 
-#: tournament/tournament.cpp:996
+#: tournament/tournament.cpp:1000
 #, kde-format
 msgid "An error ocurred while pairing the round: %1"
 msgstr "Při párování kola došlo k chybě: %1"
 
-#: tournament/tournament.cpp:1221
+#: tournament/tournament.cpp:1225
 #, kde-format
 msgid "Couldn’t open file"
 msgstr "Soubor nelze otevřít"

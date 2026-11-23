@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-22 01:01+0000\n"
+"POT-Creation-Date: 2026-11-23 00:59+0000\n"
 "PO-Revision-Date: 2026-08-29 17:40+0200\n"
 "Last-Translator: Philipp Kiemle <l10n.daphipz@fastmail.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -1514,6 +1514,12 @@ msgctxt "Tiebreak"
 msgid "Average Buchholz of Opponents"
 msgstr ""
 
+#: tournament/tiebreaks/aro.h:22 tournament/tournament.cpp:556
+#, kde-format
+msgctxt "Tiebreak"
+msgid "Average Rating of Opponents"
+msgstr ""
+
 #: tournament/tiebreaks/buchholz.h:25 tournament/tournament.cpp:516
 #, kde-format
 msgctxt "Buchholz tiebreak"
@@ -1613,13 +1619,13 @@ msgctxt ""
 msgid "Number of Games Won (over the board)"
 msgstr "Anzahl der Runden"
 
-#: tournament/tournament.cpp:996
+#: tournament/tournament.cpp:1000
 #, kde-format
 msgid "An error ocurred while pairing the round: %1"
 msgstr ""
 "Beim Erstellen der Paarungen für diese Runde ist ein Fehler aufgetreten: %1"
 
-#: tournament/tournament.cpp:1221
+#: tournament/tournament.cpp:1225
 #, fuzzy, kde-format
 #| msgid "Couldn't open file"
 msgid "Couldn’t open file"

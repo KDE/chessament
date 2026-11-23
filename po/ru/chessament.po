@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-22 01:01+0000\n"
-"PO-Revision-Date: 2026-11-21 07:40+0200\n"
+"POT-Creation-Date: 2026-11-23 00:59+0000\n"
+"PO-Revision-Date: 2026-11-22 07:35+0200\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -670,6 +670,8 @@ msgid ""
 "Retire players that have forfeited the previous round before pairing this "
 "round"
 msgstr ""
+"Снимать игроков, проигравших без игры в предыдущем туре, перед жеребьёвкой "
+"этого тура"
 
 #: qml/player/PlayerDetails.qml:17
 msgctxt "@title:window"
@@ -1444,6 +1446,14 @@ msgctxt "Tiebreak"
 msgid "Average Buchholz of Opponents"
 msgstr "Средний коэффициент Бухгольца соперников"
 
+#: tournament/tiebreaks/aro.h:22 tournament/tournament.cpp:556
+#, fuzzy, kde-format
+#| msgctxt "Tiebreak"
+#| msgid "Average Buchholz of Opponents"
+msgctxt "Tiebreak"
+msgid "Average Rating of Opponents"
+msgstr "Средний коэффициент Бухгольца соперников"
+
 #: tournament/tiebreaks/buchholz.h:25 tournament/tournament.cpp:516
 #, kde-format
 msgctxt "Buchholz tiebreak"
@@ -1539,12 +1549,12 @@ msgctxt ""
 msgid "Number of Games Won (over the board)"
 msgstr "Число выигранных партий (за доской)"
 
-#: tournament/tournament.cpp:996
+#: tournament/tournament.cpp:1000
 #, kde-format
 msgid "An error ocurred while pairing the round: %1"
 msgstr "Ошибка жеребьёвки тура: %1"
 
-#: tournament/tournament.cpp:1221
+#: tournament/tournament.cpp:1225
 #, kde-format
 msgid "Couldn’t open file"
 msgstr "Не удалось открыть файл"

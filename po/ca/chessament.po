@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-22 01:01+0000\n"
-"PO-Revision-Date: 2026-11-21 09:58+0100\n"
+"POT-Creation-Date: 2026-11-23 00:59+0000\n"
+"PO-Revision-Date: 2026-11-22 09:24+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -651,6 +651,8 @@ msgid ""
 "Retire players that have forfeited the previous round before pairing this "
 "round"
 msgstr ""
+"Retira els jugadors que no hagin comparegut la ronda anterior abans "
+"d'aparellar aquesta ronda"
 
 #: qml/player/PlayerDetails.qml:17
 msgctxt "@title:window"
@@ -1414,6 +1416,14 @@ msgctxt "Tiebreak"
 msgid "Average Buchholz of Opponents"
 msgstr "Mitjana Buchholz dels oponents"
 
+#: tournament/tiebreaks/aro.h:22 tournament/tournament.cpp:556
+#, fuzzy, kde-format
+#| msgctxt "Tiebreak"
+#| msgid "Average Buchholz of Opponents"
+msgctxt "Tiebreak"
+msgid "Average Rating of Opponents"
+msgstr "Mitjana Buchholz dels oponents"
+
 #: tournament/tiebreaks/buchholz.h:25 tournament/tournament.cpp:516
 #, kde-format
 msgctxt "Buchholz tiebreak"
@@ -1505,12 +1515,12 @@ msgctxt ""
 msgid "Number of Games Won (over the board)"
 msgstr "Nombre de partides guanyades (sobre el tauler)"
 
-#: tournament/tournament.cpp:996
+#: tournament/tournament.cpp:1000
 #, kde-format
 msgid "An error ocurred while pairing the round: %1"
 msgstr "S'ha produït un error en aparellar la ronda: %1"
 
-#: tournament/tournament.cpp:1221
+#: tournament/tournament.cpp:1225
 #, kde-format
 msgid "Couldn’t open file"
 msgstr "No s'ha pogut obrir el fitxer"

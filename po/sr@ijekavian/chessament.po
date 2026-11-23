@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-22 01:01+0000\n"
+"POT-Creation-Date: 2026-11-23 00:59+0000\n"
 "PO-Revision-Date: 2026-11-15 10:40+0100\n"
 "Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -1448,6 +1448,14 @@ msgctxt "Tiebreak"
 msgid "Average Buchholz of Opponents"
 msgstr "Просјечни Бухолц противника"
 
+#: tournament/tiebreaks/aro.h:22 tournament/tournament.cpp:556
+#, fuzzy, kde-format
+#| msgctxt "Tiebreak"
+#| msgid "Average Buchholz of Opponents"
+msgctxt "Tiebreak"
+msgid "Average Rating of Opponents"
+msgstr "Просјечни Бухолц противника"
+
 #: tournament/tiebreaks/buchholz.h:25 tournament/tournament.cpp:516
 #, kde-format
 msgctxt "Buchholz tiebreak"
@@ -1543,12 +1551,12 @@ msgctxt ""
 msgid "Number of Games Won (over the board)"
 msgstr "Број добијених партија (за таблом)"
 
-#: tournament/tournament.cpp:996
+#: tournament/tournament.cpp:1000
 #, kde-format
 msgid "An error ocurred while pairing the round: %1"
 msgstr "Грешка при паровању кола: %1"
 
-#: tournament/tournament.cpp:1221
+#: tournament/tournament.cpp:1225
 #, kde-format
 msgid "Couldn’t open file"
 msgstr "Не могу да отворим фајл"
