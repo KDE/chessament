@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-23 00:59+0000\n"
-"PO-Revision-Date: 2026-11-22 19:08+0300\n"
+"PO-Revision-Date: 2026-11-23 16:56+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -1412,12 +1412,10 @@ msgid "Average Buchholz of Opponents"
 msgstr "Rakiplerin Ortalama Buchholz’u"
 
 #: tournament/tiebreaks/aro.h:22 tournament/tournament.cpp:556
-#, fuzzy, kde-format
-#| msgctxt "Tiebreak"
-#| msgid "Average Buchholz of Opponents"
+#, kde-format
 msgctxt "Tiebreak"
 msgid "Average Rating of Opponents"
-msgstr "Rakiplerin Ortalama Buchholz’u"
+msgstr "Rakiplerin Ortalama Derecelendirmesi"
 
 #: tournament/tiebreaks/buchholz.h:25 tournament/tournament.cpp:516
 #, kde-format
