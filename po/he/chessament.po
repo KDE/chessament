@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-23 00:59+0000\n"
-"PO-Revision-Date: 2026-11-21 08:03+0200\n"
+"PO-Revision-Date: 2026-11-24 08:51+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <kde-l10n-he@kde.org>\n"
 "Language: he\n"
@@ -669,7 +669,7 @@ msgctxt "@option:check"
 msgid ""
 "Retire players that have forfeited the previous round before pairing this "
 "round"
-msgstr ""
+msgstr "להפריש שחקנים שנכנעו בסיבוב הקודם לפני עריכת השיבוצים לסיבוב הזה"
 
 #: qml/player/PlayerDetails.qml:17
 msgctxt "@title:window"
@@ -1443,12 +1443,10 @@ msgid "Average Buchholz of Opponents"
 msgstr "ממוצע בוכהולץ של היריבים"
 
 #: tournament/tiebreaks/aro.h:22 tournament/tournament.cpp:556
-#, fuzzy, kde-format
-#| msgctxt "Tiebreak"
-#| msgid "Average Buchholz of Opponents"
+#, kde-format
 msgctxt "Tiebreak"
 msgid "Average Rating of Opponents"
-msgstr "ממוצע בוכהולץ של היריבים"
+msgstr "ממוצע דירוגים של היריבים"
 
 #: tournament/tiebreaks/buchholz.h:25 tournament/tournament.cpp:516
 #, kde-format
