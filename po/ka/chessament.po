@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-23 00:59+0000\n"
-"PO-Revision-Date: 2026-10-17 05:14+0200\n"
+"PO-Revision-Date: 2026-11-25 15:27+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -313,9 +313,6 @@ msgid "Export tournament report…"
 msgstr "ტურნირის ანგარიშის გატანა…"
 
 #: qml/ChessamentActions.qml:52 qml/components/MenuBar.qml:118
-#, fuzzy
-#| msgctxt "@action:menu"
-#| msgid "Tournament"
 msgctxt "@title:menu"
 msgid "Tournament"
 msgstr "ტურნირი"
@@ -336,8 +333,6 @@ msgid "Update ratings…"
 msgstr "რეიტინგების განახლება…"
 
 #: qml/ChessamentActions.qml:78
-#, fuzzy
-#| msgid "Pairings"
 msgctxt "@title:menu"
 msgid "Pairings"
 msgstr "დაწყვილებები"
@@ -350,17 +345,14 @@ msgstr "დასრულებული თამაშების დამ�
 #: qml/ChessamentActions.qml:90 qml/components/MenuBar.qml:132
 msgctxt "@title:menu"
 msgid "Tools"
-msgstr ""
+msgstr "ხელსაწყოები"
 
 #: qml/ChessamentActions.qml:95
 msgctxt "@action:inmenu"
 msgid "Rating Variation Calculator"
-msgstr ""
+msgstr "რეიტინგის ვარიაციის კალკულატორი"
 
 #: qml/ChessamentActions.qml:101 qml/components/MenuBar.qml:159
-#, fuzzy
-#| msgctxt "@action:menu"
-#| msgid "Help"
 msgctxt "@title:menu"
 msgid "Help"
 msgstr "დახმარება"
@@ -401,9 +393,6 @@ msgid "Delete Arbiter"
 msgstr "არბიტრის წაშლა"
 
 #: qml/components/MenuBar.qml:29
-#, fuzzy
-#| msgctxt "@action:menu"
-#| msgid "File"
 msgctxt "@title:menu"
 msgid "File"
 msgstr "ფაილი"
@@ -420,17 +409,11 @@ msgid "TRF files (*.trf *.txt)"
 msgstr "TRF ფაილები (*.trf *.txt)"
 
 #: qml/components/MenuBar.qml:109
-#, fuzzy
-#| msgctxt "@action:menu"
-#| msgid "View"
 msgctxt "@title:menu"
 msgid "View"
 msgstr "ხედი"
 
 #: qml/components/MenuBar.qml:145
-#, fuzzy
-#| msgctxt "@action:menu"
-#| msgid "Settings"
 msgctxt "@title:menu"
 msgid "Settings"
 msgstr "მორგება"
@@ -667,6 +650,8 @@ msgid ""
 "Retire players that have forfeited the previous round before pairing this "
 "round"
 msgstr ""
+"ამ რაუნდის დაწყვილებამდე გათავისუფლდეს მოთამაშეები, რომლებმაც დათმეს წინა "
+"რაუნდი"
 
 #: qml/player/PlayerDetails.qml:17
 msgctxt "@title:window"
@@ -771,55 +756,52 @@ msgstr "%1 (%2)"
 #: qml/RatingCalculator.qml:15
 msgctxt "@title:window"
 msgid "Rating Variation Calculator"
-msgstr ""
+msgstr "რეიტინგის ვარიაციის კალკულატორი"
 
 #: qml/RatingCalculator.qml:22
 msgctxt "@item Game result"
 msgid "Win"
-msgstr ""
+msgstr "მოგება"
 
 #: qml/RatingCalculator.qml:26
 msgctxt "@item Game result"
 msgid "Draw"
-msgstr ""
+msgstr "ფრე"
 
 #: qml/RatingCalculator.qml:30
 msgctxt "@item Game result"
 msgid "Lost"
-msgstr ""
+msgstr "წაგება"
 
 #: qml/RatingCalculator.qml:55
 msgctxt "@label:spinbox"
 msgid "Player’s rating:"
-msgstr ""
+msgstr "მოთამაშის რეიტინგი:"
 
 #: qml/RatingCalculator.qml:64
 msgctxt "@label:spinbox"
 msgid "Opponent’s rating:"
-msgstr ""
+msgstr "მეტოქის რეიტინგი:"
 
 #: qml/RatingCalculator.qml:73
 msgctxt "@label:spinbox"
 msgid "K factor:"
-msgstr ""
+msgstr "K ფაქტორი:"
 
 #: qml/RatingCalculator.qml:95
-#, fuzzy
-#| msgctxt "@label:textbox"
-#| msgid "National rating"
 msgctxt "@label"
 msgid "Rating variation:"
-msgstr "ეროვნული რეიტინგი"
+msgstr "რეიტინგის ცვალებადობა:"
 
 #: qml/RatingCalculator.qml:107
 msgctxt "@label"
 msgid "Expected score:"
-msgstr ""
+msgstr "მოსალოდნელი ქულა:"
 
 #: qml/RatingCalculator.qml:112
 msgctxt "@label"
 msgid "Rating difference:"
-msgstr ""
+msgstr "რეიტინგის სხვაობა:"
 
 #: qml/ResultsFooter.qml:103
 msgctxt "@action:intoolbar Other game results"
@@ -987,35 +969,29 @@ msgid "Select file"
 msgstr "აირჩიეთ ფაილი"
 
 #: settings/AddRatingListDialog.qml:112
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "File format not supported."
 msgctxt "@info"
 msgid "File not supported."
-msgstr "ფაილის ფორმატი მხარდაჭერილი არაა."
+msgstr "ფაილი მხარდაჭერილი არაა."
 
 #: settings/AddRatingListDialog.qml:117
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "Format"
 msgctxt "@label:listbox"
 msgid "File format"
-msgstr "ფორმატი"
+msgstr "ფაილის ფორმატი"
 
 #: settings/AddRatingListDialog.qml:121
 msgctxt "@item:inlistbox"
 msgid "International Chess Federation"
-msgstr ""
+msgstr "ჭადრაკის საერთაშორისო ფედერაცია"
 
 #: settings/AddRatingListDialog.qml:125
 msgctxt "@item:inlistbox"
 msgid "Andalusian Chess Federation"
-msgstr ""
+msgstr "ანდალუსიის ჭადრაკის ფედერაცია"
 
 #: settings/AddRatingListDialog.qml:129
 msgctxt "@item:inlistbox"
 msgid "Catalan Chess Federation"
-msgstr ""
+msgstr "კატალონიის ჭადრაკის ფედერაცია"
 
 #: settings/AddRatingListDialog.qml:168
 msgctxt "@action:button"
@@ -1436,12 +1412,10 @@ msgid "Average Buchholz of Opponents"
 msgstr "ოპონენტების საშუალო ბუხჰოლცი"
 
 #: tournament/tiebreaks/aro.h:22 tournament/tournament.cpp:556
-#, fuzzy, kde-format
-#| msgctxt "Tiebreak"
-#| msgid "Average Buchholz of Opponents"
+#, kde-format
 msgctxt "Tiebreak"
 msgid "Average Rating of Opponents"
-msgstr "ოპონენტების საშუალო ბუხჰოლცი"
+msgstr "ოპონენტების საშუალო რეიტინგი"
 
 #: tournament/tiebreaks/buchholz.h:25 tournament/tournament.cpp:516
 #, kde-format

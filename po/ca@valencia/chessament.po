@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: chessament\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-23 00:59+0000\n"
-"PO-Revision-Date: 2026-11-15 09:43+0100\n"
+"PO-Revision-Date: 2026-11-23 10:55+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -347,12 +347,12 @@ msgstr "Oculta les partides finalitzades"
 #: qml/ChessamentActions.qml:90 qml/components/MenuBar.qml:132
 msgctxt "@title:menu"
 msgid "Tools"
-msgstr ""
+msgstr "Eines"
 
 #: qml/ChessamentActions.qml:95
 msgctxt "@action:inmenu"
 msgid "Rating Variation Calculator"
-msgstr ""
+msgstr "Calculadora de variació de puntuació"
 
 #: qml/ChessamentActions.qml:101 qml/components/MenuBar.qml:159
 msgctxt "@title:menu"
@@ -494,7 +494,7 @@ msgstr "Elimina"
 #: qml/DeletePlayerDialog.qml:19
 msgctxt "@title"
 msgid "Delete Player"
-msgstr "Suprimiu de jugador"
+msgstr "Suprimiu un jugador"
 
 #: qml/DeletePlayerDialog.qml:20
 msgctxt "@label"
@@ -652,6 +652,8 @@ msgid ""
 "Retire players that have forfeited the previous round before pairing this "
 "round"
 msgstr ""
+"Retira els jugadors que no hagen comparegut la ronda anterior abans "
+"d'aparellar esta ronda"
 
 #: qml/player/PlayerDetails.qml:17
 msgctxt "@title:window"
@@ -756,55 +758,52 @@ msgstr "%1 (%2)"
 #: qml/RatingCalculator.qml:15
 msgctxt "@title:window"
 msgid "Rating Variation Calculator"
-msgstr ""
+msgstr "Calculadora de variació de puntuació"
 
 #: qml/RatingCalculator.qml:22
 msgctxt "@item Game result"
 msgid "Win"
-msgstr ""
+msgstr "Guanyat"
 
 #: qml/RatingCalculator.qml:26
 msgctxt "@item Game result"
 msgid "Draw"
-msgstr ""
+msgstr "Taules"
 
 #: qml/RatingCalculator.qml:30
 msgctxt "@item Game result"
 msgid "Lost"
-msgstr ""
+msgstr "Perdut"
 
 #: qml/RatingCalculator.qml:55
 msgctxt "@label:spinbox"
 msgid "Player’s rating:"
-msgstr ""
+msgstr "Puntuació del jugador:"
 
 #: qml/RatingCalculator.qml:64
 msgctxt "@label:spinbox"
 msgid "Opponent’s rating:"
-msgstr ""
+msgstr "Puntuació de l'adversari:"
 
 #: qml/RatingCalculator.qml:73
 msgctxt "@label:spinbox"
 msgid "K factor:"
-msgstr ""
+msgstr "Factor K:"
 
 #: qml/RatingCalculator.qml:95
-#, fuzzy
-#| msgctxt "@label:textbox"
-#| msgid "National rating"
 msgctxt "@label"
 msgid "Rating variation:"
-msgstr "Puntuació nacional"
+msgstr "Variació de la puntuació:"
 
 #: qml/RatingCalculator.qml:107
 msgctxt "@label"
 msgid "Expected score:"
-msgstr ""
+msgstr "Puntuació esperada:"
 
 #: qml/RatingCalculator.qml:112
 msgctxt "@label"
 msgid "Rating difference:"
-msgstr ""
+msgstr "Diferència de puntuació:"
 
 #: qml/ResultsFooter.qml:103
 msgctxt "@action:intoolbar Other game results"
@@ -972,12 +971,9 @@ msgid "Select file"
 msgstr "Trieu un fitxer"
 
 #: settings/AddRatingListDialog.qml:112
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "File format not supported."
 msgctxt "@info"
 msgid "File not supported."
-msgstr "El format del fitxer no està admés."
+msgstr "Fitxer no admés."
 
 #: settings/AddRatingListDialog.qml:117
 msgctxt "@label:listbox"
@@ -1022,7 +1018,7 @@ msgstr "Llistes de puntuacions"
 #: settings/DeleteRatingListDialog.qml:24
 msgctxt "@title"
 msgid "Delete Rating List"
-msgstr "Suprimiu de llista de puntuacions"
+msgstr "Suprimiu la llista de puntuacions"
 
 #: settings/DeleteRatingListDialog.qml:53
 msgctxt "@label"
@@ -1422,12 +1418,10 @@ msgid "Average Buchholz of Opponents"
 msgstr "Mitjana Buchholz dels oponents"
 
 #: tournament/tiebreaks/aro.h:22 tournament/tournament.cpp:556
-#, fuzzy, kde-format
-#| msgctxt "Tiebreak"
-#| msgid "Average Buchholz of Opponents"
+#, kde-format
 msgctxt "Tiebreak"
 msgid "Average Rating of Opponents"
-msgstr "Mitjana Buchholz dels oponents"
+msgstr "Puntuació mitjana dels oponents"
 
 #: tournament/tiebreaks/buchholz.h:25 tournament/tournament.cpp:516
 #, kde-format
