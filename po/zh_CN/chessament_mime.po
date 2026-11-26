@@ -14,8 +14,8 @@ msgstr ""
 "X-Crowdin-Project: kdeorg\n"
 "X-Crowdin-Project-ID: 269464\n"
 "X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf6-trunk/messages/chessament/chessament_mime.pot\n"
-"X-Crowdin-File-ID: 60126\n"
+"X-Crowdin-File: /kf6-stable/messages/chessament/chessament_mime.pot\n"
+"X-Crowdin-File-ID: 60609\n"
 
 #: org.kde.chessament.xml.podir/org.kde.chessament.xml.in.h:1
 msgctxt "comment"
